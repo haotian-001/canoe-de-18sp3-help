@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="CANoeDEFamily.xml" data-mc-path-to-help-system="../../../../../" data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANalyzer" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../Skins/Favicons/favicon-16x16.png" /><title> How to Manipulate LIN Signals</title>
+        <link href="../../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Resources/Stylesheets/vTableMasterPageHeader.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../../Resources/Stylesheets/vStylesheet.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../../Resources/Stylesheets/vTableSymbol.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapGlobal.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapDom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapUtilities.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapXhr.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTextEffects.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSlideshow.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMessageBus.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMessageBus.CrossFrame.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapDefault.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMediaQueries.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapAccessibility.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapHelpSystem.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapAliasFile.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopicFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapFeedbackHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSkinHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.Breadcrumbs.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.MiniToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.SideMenu.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapIndex.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapGlossary.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapParser.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSearch.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapNavigateTopics.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapLms.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapELearning.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopic.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMicroContentComponent.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSearchHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopicElements.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTriPane.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/jscript" src="../../../../Resources/vScripts/SyntaxHighlighting.js">
+        </script>
+        <script type="text/jscript" src="../../../../Resources/vScripts/TabSwitch.js">
+        </script>
+        <script type="text/javascript" src="../../../../Resources/vScripts/Vector.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../../../CANoeDEFamily.htm#Topics/CANoeCANalyzer/LIN/HowTos/LIN_Change_Signals.htm">Open topic with navigation</a>
+        </p>
+        <div class="Body">
+            <div role="main" id="mc-main-content">
+                <p class="StructurePath"><a href="../LIN.htm" class="StructurePath">LIN</a> » <a href="LIN_More_HowTos.htm" class="StructurePath">More How to's ...</a> » How to Manipulate LIN Signals</p>
+                <h1><span class="mc-variable System.Title variable"> How to Manipulate LIN Signals</span>
+                </h1>
+                <p class="MenuPath">&#160;</p>
+                <p class="ToolAvailability" data-mc-conditions="BuildProcess.ToolAvailability"><a href="../../../Shared/FeatureAvailability.htm" class="red" title="Feature availabilty for your product">Valid&#160;for</a>:&#160;&#160;<MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE<a name="aanchor25551"></a><MadCap:concept term="SFCANoeDE" />&#160;&#160;•&#160;&#160;CANoe4SW&#160;DE<a name="aanchor25552"></a><MadCap:concept term="SFCANoe4SWDE" /></MadCap:conditionalText></p>
+                <p class="AutoSearchFilterConcepts"><a name="aanchor25553"></a>
+                    <MadCap:concept term="SFCore" />
+                </p>
+                <div data-mc-conditions="Targets.CANoe-DE-Family">
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                    <p class="Table">
+                                        <img src="../../../../Resources/vImages/vStep.png" style="width: 48px;height: 45px;" title="Procedure" alt="Procedure" />
+                                    </p>
+                                </td>
+                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                    <p class="TableSymbolHead">Using CAPL signal API</p>
+                                    <ol>
+                                        <li value="1"><a href="LIN_Create_CANoeLIN-Configuration.htm">Create a LIN configuration</a>.</li>
+                                        <li value="2">In the <a href="../../Windows/SimulationSetup/SimulationSetupWindow.htm" class="MCXref xref" data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">Simulation Setup</a>, add the <span class="bold">Door.ldf</span> database from the <span class="bold">System Configuration (LIN)</span> sample configuration. In the <a href="../../Windows/SimulationSetup/SimulationSetupWindow.htm" class="MCXref xref" data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">Simulation Setup</a>, <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">your </MadCap:conditionalText><MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> adds a LIN ISC (Master), as well as several network nodes (RVM_Right, RVM_Left, DWR_Right, DWR_Left, DWF_Right, DWF_Left, GWI).</li>
+                                        <li value="3">Select a network node (e.g. <span class="bold">DWF_Left</span>) in the<a href="../../Windows/SimulationSetup/SimulationSetupWindow.htm" class="MCXref xref" data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">Simulation Setup</a> (<a href="../../Ribbon/RibbonStimulationSimulation.htm" data-mc-conditions="Targets.CANoe-DE-Family"><span class="GUI">Simulation</span> ribbon tab</a>|<a href="../../Windows/SimulationSetup/SimulationSetupWindow.htm" class="bold">Simulation Setup</a>) and choose <span class="bold">Configuration…</span> from the context menu.</li>
+                                        <li value="4">Enter a filename for your CAPL program and then press <span class="bold">[Edit]</span> to start the CAPL Browser.</li>
+                                        <li value="5">Now use the CAPL function <a href="../../../CAPLFunctions/Test/Functions/CAPLfunctionSetSignal.htm">SetSignal</a> to manipulate the LIN signal <span class="bold">FrontLeftSwitchStatus</span>.<br />To get the signal's latest value use the function <a href="../../../CAPLFunctions/Test/Functions/CAPLfunctionGetSignal.htm">GetSignal</a>.<br />Here is a simple example assuming the LDF database (e.g. <span class="bold">door.ldf</span>) defines a signal <span class="bold">DWFL_WinPos</span>:</li>
+                                    </ol>
+                                    <p class="SourceCodeIndent" data-mc-conditions="">on key ’+’<br style="mc-tag-and-class: span;" />{<br />&#160;&#160;int val;<br />&#160;&#160;val=$DWFL_WinPos;&#160;&#160;&#160;&#160;<span class="CodeComment">// reading signal</span><br />&#160;&#160;$DWFL_WinPos=val+1;&#160;&#160;<span class="CodeComment">// writing signal</span><br />}</p>
+                                    <ol data-mc-continue="true">
+                                        <li value="6">Now save and compile the CAPL program e.g. by pressing <span class="bold">&lt;F9&gt;</span> and start the measurement.</li>
+                                        <li value="7" data-mc-conditions="">Open the Trace Window (<a href="../../Ribbon/RibbonAnalysis.htm" data-mc-conditions="Targets.CANoe-DE-Family"><span class="GUI">Analysis</span> ribbon tab</a>|<a href="../../Windows/Trace/TraceWindow.htm" class="bold" data-mc-conditions="">Trace</a>) and expand the corresponding LIN frame (e.g. <span class="bold">DWFL_WinPos</span>).<br />On pressing the key <span class="bold">&lt;+&gt;</span>, the signal should now increase its value by one.</li>
+                                    </ol>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                    <p class="Table">
+                                        <img src="../../../../Resources/vImages/vStep.png" style="width: 48px;height: 45px;" title="Procedure" alt="Procedure" />
+                                    </p>
+                                </td>
+                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                    <p class="TableSymbolHead">Using the CAPL function "output()"</p>
+                                    <p>You can also update signals using the CAPL function <a href="../../../CAPLFunctions/LIN/Functions/CAPLfunctionLINOutput.htm" class="bold">output</a>. Using this method, you can update multiple frame signals simultaneously. To try out this method, add a new event handler for the key<span class="bold">&lt;-&gt;</span> to your <a href="LIN_Control_LIN-Master-Scheduler.htm">CAPL program</a> with the following code:</p>
+                                    <p class="SourceCode" data-mc-conditions="Targets.CANoe-DE-Family">on key ’-’<br />{<br />&#160;&#160;linFrame DWFL_WinPos myframe;<br />&#160;&#160;int val;<br />&#160;&#160;val=myframe.FWL_WinPos;<br />&#160;&#160;myframe.FWL_WinPos=val-1;<br />&#160;&#160;output(myframe);<br />}</p>
+                                    <p class="Table">Now save and recompile your CAPL program and start the measurement again. With key<span class="bold">&lt;-&gt;</span> you should be able to decrement the signal's value.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                    <p class="Table">
+                                        <img src="../../../../Resources/vImages/vStep.png" style="width: 48px;height: 45px;" title="Procedure" alt="Procedure" />
+                                    </p>
+                                </td>
+                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                    <p class="TableSymbolHead">Using the <a href="../../FunctionBlocks/LINInteractiveScheduler/LINisc.htm" class="MCXref xref">LIN Interactive Scheduler (LIN ISC)</a></p>
+                                    <ol>
+                                        <li value="1"><a href="LIN_Create_CANoeLIN-Configuration.htm">Create a LIN configuration</a>.</li>
+                                        <li value="2">In the <a href="../../Windows/SimulationSetup/SimulationSetupWindow.htm" class="MCXref xref" data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">Simulation Setup</a>, add the <span class="bold">Door.ldf</span> database from the <span class="bold">System Configuration (LIN)</span> sample configuration. In the <a href="../../Windows/SimulationSetup/SimulationSetupWindow.htm" class="MCXref xref" data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">Simulation Setup</a>, <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">your </MadCap:conditionalText><MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> adds a LIN ISC (Master), as well as several network nodes (RVM_Right, RVM_Left, DWR_Right, DWR_Left, DWF_Right, DWF_Left, GWI).</li>
+                                        <li value="3">Open the ISC e.g. via double click.</li>
+                                        <li value="4">To update the signals of a LIN frame, select the <span class="GUI">Frames</span> node, click on <span class="GUI">Add frame</span>  and insert a LIN frame e.g. <span class="bold" data-mc-conditions="Targets.CANoe-DE-Family">DWFL_01</span>.Select the appropriate send type.</li>
+                                        <li value="5">During the measurement, you can interactively change the frame signals, e.g. <span class="bold" data-mc-conditions="Targets.CANoe-DE-Family">DWFL_WinPos</span>, using editing buttons in the <span class="GUI">Signals</span> view of the dialog. By clicking on <span class="GUI">[Send]</span> you can send the frame.</li>
+                                    </ol>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div data-mc-conditions="Targets.CANoe-DE-Family">
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                    <p class="Table">
+                                        <img src="../../../../Resources/vImages/vStep.png" style="width: 48px;height: 45px;" title="Procedure" alt="Procedure" />
+                                    </p>
+                                </td>
+                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                    <p class="TableSymbolHead">Using Panels</p>
+                                    <p>You can also create your own panels using the Panel Designer (<a href="../../Ribbon/RibbonTools.htm"><span class="GUI">Tools</span> ribbon tab</a>|<span class="bold">Panel Designer</span>), which can also be started from the main toolbar <img src="../../../../Resources/Images/CANoeCANalyzer/ToolbarStandardPanelDesigner.png" />.</p>
+                                    <ol>
+                                        <li value="1">Select the Track Bar <img src="../../../../Resources/Images/CANoeCANalyzer/PanelDesignerControlsTrackBar.png" /> and insert it on the panel via drag and drop from the Toolbox.</li>
+                                        <li value="2">In the Properties Window of the track bar you can assign a LIN signal.</li>
+                                        <li value="3">Now save your panel <a href="../../../../../Subsystems/VectorToolsEnvironment/Content/Topics/VTE/Ribbon/VTERibbonFile.htm" class="GUI" data-mc-conditions="BuildProcess.HTML5Link">File</a>|<span class="bold">Save</span>.</li>
+                                        <li value="4">To configure <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">your </MadCap:conditionalText><MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> to use this panel, open the menu path <a href="../../Ribbon/RibbonHome.htm"><span class="GUI">Home</span> ribbon tab</a>|<a href="../../DesktopManagement/DesktopConceptPanelConfiguration.htm" class="GUI">Panel Configuration</a> and use the <span class="bold">[Add…]</span> button to add the panel to your configuration.</li>
+                                        <li value="5">To display your panel on the currently active desktop, press the button <span class="bold">[Display]</span> and then close the dialog with <span class="bold">[OK]</span>.</li>
+                                        <li value="6">After measurement start it should now be possible to change the signal’s value using the slider.</li>
+                                    </ol>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="LinkList"><a href="LIN_Create_LDF.htm" class="LinkList">How to Create a LIN Description File</a>&#160;&#160;•&#160;&#160;<a href="LIN_Show_Signals.htm" class="LinkList">How to View LIN Signals</a></p>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="FooterWhite">
+                <table class="FooterWhite" style="border-collapse: collapse;margin-left: auto;margin-right: auto;">
+                    <col style="width: 70px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col style="width: 16px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="buttons popup-container clearfix topicToolbarProxy topicToolbarProxyFooter _Skins_HTML5TopicToolbar mc-component nocontent">
+                                    <div class="button-group-container-left">
+                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo"><a href="../../../Shared/HowToUseOnlineHelp.htm" title="Tips for using the help" alt="Tips for using the help"><img src="../../../../Resources/vImages/vBackstage/vHelpInfo.png" /></a>
+                                </p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo" style="text-align: right;"><span class="mc-variable Vector.BuildTime variable">2024-04-8T20:56:42</span>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <table style="width: 100%;border-collapse: separate;border-spacing: 3px 0px;margin-left: auto;margin-right: auto;caption-side: top;">
+                <col />
+                <col />
+                <col />
+                <col data-mc-conditions="BuildProcess.HTML5Link" />
+                <tbody>
+                    <tr>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;">
+                            <p class="vec_Footer">©&#160;Vector Informatik GmbH</p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;text-align: right;">
+                            <p class="vec_FooterBold">
+                                <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE&#160;Product Families</MadCap:conditionalText> Version <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.VectorTestUnitRunner">18</MadCap:conditionalText></p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="../../../Shared/ContactCopyrightLicense.htm" class="vec_Footer MCXref xref xrefvec_Footer">Contact/Copyright/License</a>
+                            </p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="https://www.vector.com/int/en/company/get-info/privacy-policy/" target="_blank" class="vec_Footer">Data Privacy Notice</a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="" data-mc-search-type="Stem" data-mc-help-system-file-name="AsrNMCAN330.xml" data-mc-path-to-help-system="../../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../Skins/Favicons/favicon-16x16.png" /><title>CANdb Attributes</title>
+        <link href="../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Resources/Stylesheets/vTableMasterPageHeader.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../Resources/Stylesheets/vStylesheet.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../Resources/Stylesheets/vTableSymbol.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../Resources/Stylesheets/vTable.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/jscript" src="../../../Resources/vScripts/SyntaxHighlighting.js">
+        </script>
+        <script type="text/jscript" src="../../../Resources/vScripts/TabSwitch.js">
+        </script>
+        <script type="text/javascript" src="../../../Resources/vScripts/Vector.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../../AsrNMCAN330.htm#Topics/CAN330/Basics/CANdbAttributesCAN330.htm">Open topic with navigation</a>
+        </p>
+        <div class="Body">
+            <div role="main" id="mc-main-content">
+                <p class="StructurePath"><a href="../AutosarNMCAN330.htm" class="StructurePath" data-mc-conditions="AutosarNM.CAN 330 only"> AUTOSAR CAN NM 3.3.0</a> » Basics »  <span class="mc-variable System.Title variable">CANdb Attributes</span></p>
+                <h1><a name="kanchor66"></a><span class="mc-variable System.Title variable">CANdb Attributes</span>
+                </h1>
+                <p class="MenuPath">&#160;</p>
+                <p class="AutoSearchFilterConcepts"><a name="aanchor119"></a>
+                    <MadCap:concept term="SFsml" />
+                </p>
+                <div>
+                    <h2 class="SectionMain">Introduction</h2>
+                    <p>The communication matrix of a CAN network is usually described by a CANdb database. It defines the nodes present on the network, and allows specification of their behavior by <span class="bold">attributes</span>.</p>
+                    <p>Network attributes are assigned to the database as a whole, whereas node attributes define one particulate network node.</p>
+                    <p>CANdb attributes are used to define NM parameters that are belonging to a certain <span class="Product">CANoe</span> configuration. Alternatively, a specific INI file may be used. Defining attributes in the database or in such a specific INI file allows multi-bus scenarios with different parameters.</p>
+                    <div>
+                        <table style="width: 100%;mc-table-style: url('../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                            <col class="TableStyle-vTableSymbol-Column-Column1" />
+                            <col class="TableStyle-vTableSymbol-Column-Column2" />
+                            <tbody>
+                                <tr>
+                                    <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                        <img src="../../../Resources/vImages/vCaution.png" style="width: 48px;height: 45px;" title="Caution" alt="Caution" />
+                                    </td>
+                                    <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                        <p class="BoldBlue">Caution!</p>
+                                        <p>The mandatory (non-optional) attributes have to be defined and set correctly for the NM to work properly! The optional attributes may be absent, if the default values (from the INI file or computed by the DLL<MadCap:conditionalText data-mc-conditions="AutosarNM.CAN 300 not Ford,AutosarNM.FlexRay 301,AutosarNM.FlexRay 320,AutosarNM.CAN 330 only">/SO</MadCap:conditionalText>) should be used.</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div data-mc-conditions="AutosarNM.CAN 330">
+                        <table style="width: 100%;mc-table-style: url('../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                            <col class="TableStyle-vTableSymbol-Column-Column1" />
+                            <col class="TableStyle-vTableSymbol-Column-Column2" />
+                            <tbody>
+                                <tr>
+                                    <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                        <img src="../../../Resources/vImages/vCaution.png" style="width: 48px;height: 45px;" title="Caution" alt="Caution" />
+                                    </td>
+                                    <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                        <p class="BoldBlue">Caution!</p>
+                                        <p class="Table">If both a DBC database and a configuration specific INI file are used, parameters defined in the INI file override those defined in the database. Please mind the paragraph <span class="bold"><a href="INIfilesIntroductionCAN330.htm#INI">INI file Loading Sequence</a></span>.</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <table style="width: 100%;mc-table-style: url('../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                            <col class="TableStyle-vTableSymbol-Column-Column1" />
+                            <col class="TableStyle-vTableSymbol-Column-Column2" />
+                            <tbody>
+                                <tr>
+                                    <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                        <img src="../../../Resources/vImages/vCrossRef.png" />
+                                    </td>
+                                    <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                        <p class="BoldBlue">Cross&#160;Reference</p>
+                                        <p class="Table">For the usage of <a href="INIfilesIntroductionCAN330.htm" data-mc-conditions="AutosarNM.CAN 330 only">INI files</a> and specific INI files in particular, see the corresponding pages.</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="SectionMain">Required Attributes</h2>
+                    <p>The following attributes are required by the node layer <MadCap:conditionalText data-mc-conditions="AutosarNM.CAN 300 not Ford,AutosarNM.FlexRay 301,AutosarNM.FlexRay 320,AutosarNM.CAN 330 only">modeling library</MadCap:conditionalText> and not included in the INI file by default. They must be defined either in the database or in of the INI  files, or the measurement cannot be started!</p>
+                    <p>For the meaning of the <a href="INIfilesGlobalParametersCAN330.htm" data-mc-conditions="AutosarNM.CAN 330 only">global parameters</a> and <a href="INIfilesNodeSpecificParametersCAN330.htm" data-mc-conditions="AutosarNM.CAN 330 only">node specific  parameters</a>, see the corresponding pages.</p>
+                    <div>
+                        <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                            <col />
+                            <col />
+                            <col />
+                            <col />
+                            <col />
+                            <thead>
+                                <tr>
+                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Attribute Name</p>
+                                    </th>
+                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Object</p>
+                                    </th>
+                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Type</p>
+                                    </th>
+                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Corresponding INI File Parameter</p>
+                                    </th>
+                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                        <p class="TableHead">Description</p>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">NmAsrBaseAddress</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Network</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Hex</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">NM_BASE_ADDRESS</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Possible CAN ID of first NM message</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">NmAsrMessageCount</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Network</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Integer</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">NM_MESSAGE_COUNT</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Maximum number of NM nodes</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                        <p class="Table">NmAsrNodeIdentifier</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                        <p class="Table">Node</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                        <p class="Table">Hex</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                        <p class="Table">NM_NODE_IDENTIFIER</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                        <p class="Table">Node identifier</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <table style="width: 100%;mc-table-style: url('../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                            <col class="TableStyle-vTableSymbol-Column-Column1" />
+                            <col class="TableStyle-vTableSymbol-Column-Column2" />
+                            <tbody>
+                                <tr>
+                                    <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                        <img src="../../../Resources/vImages/vInfo.png" style="width: 48px;height: 45px;" title="Note" alt="Note" />
+                                    </td>
+                                    <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                        <p class="BoldBlue">Note</p>
+                                        <p>The CAN ID of the NM message a node sends is computed as<br /><MadCap:conditionalText data-mc-conditions="AutosarNM.CAN 300 not Ford,AutosarNM.CAN 330">CAN ID := NmAsrBaseAddress + NmAsrNodeIdentifier</MadCap:conditionalText><br /></p>
+                                        <p>Only CAN messages with<br />NmAsrBaseAddress &lt;= CAN ID &lt; NmAsrBaseAddress + NmAsrMessageCount<br />are considered to be NM messages.</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="SectionMain">Optional Attributes</h2>
+                    <p>The following parameters are optional both in the database and in the INI files. Missing  optional parameters will be initialized with computed default values. The INI file overwrites the values defined in the database.</p>
+                    <p>Defining these attributes in the database allows multi-bus scenarios with different parameters.</p>
+                    <p>For the meaning of the parameters, see the descriptions for <a href="INIfilesIntroductionCAN330.htm" data-mc-conditions="AutosarNM.CAN 330 only">INI file</a>.</p>
+                    <div>
+                        <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                            <col />
+                            <col />
+                            <col />
+                            <col />
+                            <thead>
+                                <tr>
+                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Attribute Name</p>
+                                    </th>
+                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Object</p>
+                                    </th>
+                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Type</p>
+                                    </th>
+                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                        <p class="TableHead">Corresponding INI File Parameter</p>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">NmAsrCanMsgCycleTime</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Network</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Integer</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">CANNM_MSG_CYCLE_TIME</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">NmAsrTimeoutTime</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Network</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Integer</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">NM_TIMEOUT_TIME</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">NmAsrWaitBusSleepTime</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Network</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Integer</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">NM_WAIT_BUS_SLEEP_TIME</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">NmAsrRepeatMessageTime</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Network</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Integer</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">NM_REPEAT_MESSAGE_TIME</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">NmAsrCanMsgCycleOffset</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Node</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Integer</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">NM_CAN_MSG_CYCLE_
+OFFSET</p>
+                                        <p class="Table">Overwriting default value computed as<br />NmAsrNodeIdentifier * NmAsrCanMsgCycleTime / NmAsrMessageCount
+</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">NmAsrCanMsgReducedTime</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Node</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Integer</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">NM_CAN_MSG_REDUCED_
+TIME</p>
+                                        <p class="Table">Overwriting default value computed as<br />(128 + NmAsrNodeIdentifier) * NmAsrCanMsgCycleTime / 256
+</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                        <p class="Table">GenNWMSleepTime</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                        <p class="Table">Network</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                        <p class="Table">Integer</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                        <p class="Table">T_SLEEPTIME</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="SectionMain">Loading the <MadCap:conditionalText data-mc-conditions="AutosarNM.CAN 300 not Ford,AutosarNM.FlexRay 301,AutosarNM.FlexRay 320,AutosarNM.CAN 330 only">modeling library</MadCap:conditionalText> via Database</h2>
+                    <p>Instead of assigning the <MadCap:conditionalText data-mc-conditions="AutosarNM.CAN 300 not Ford,AutosarNM.FlexRay 301,AutosarNM.FlexRay 320,AutosarNM.CAN 330 only">modeling library</MadCap:conditionalText> to a node in the Simulation Setup, it is possible to set the value of the string node attribute NodeLayerModules to <span class="bold"></span><span class="bold">ASRNM</span><span class="bold" data-mc-conditions="AutosarNM.CAN 330">33</span><span class="bold">.dll</span><MadCap:conditionalText data-mc-conditions="AutosarNM.CAN 300 not Ford,AutosarNM.FlexRay 301,AutosarNM.FlexRay 320,AutosarNM.CAN 330 only">/<span class="bold">AsrNM30.vmodule</span></MadCap:conditionalText>. (<a href="javascript:startCANoeLauncher('HELP:H2H_01_0001_AddOnDLLsAssigning')" class="ExecuteLink" target="_blank">See</a>)</p>
+                </div>
+                <p class="LinkList">&#160;</p>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="FooterWhite">
+                <table class="FooterWhite" style="border-collapse: collapse;margin-left: auto;margin-right: auto;">
+                    <col style="width: 70px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col style="width: 16px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col data-mc-conditions="BuildProcess.TechnicalReferenceOnly" />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="buttons popup-container clearfix topicToolbarProxy topicToolbarProxyFooter _Skins_HTML5TopicToolbar mc-component nocontent">
+                                    <div class="button-group-container-left">
+                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo"><a href="javascript:startCANoeLauncher('HELP:H2H_01_0086_HowToUseOnlineHelp')"><img src="../../../Resources/vImages/vBackstage/vHelpInfo.png" /></a>
+                                </p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo">•&#160;&#160;Technical&#160;References are only&#160;available&#160;in&#160;English</p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo" style="text-align: right;"><span class="mc-variable Vector.BuildTime variable">2024-04-8T20:57:33</span>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <table style="width: 100%;border-collapse: separate;border-spacing: 3px 0px;margin-left: auto;margin-right: auto;caption-side: top;">
+                <col />
+                <col />
+                <col />
+                <col data-mc-conditions="BuildProcess.HTML5Link" />
+                <tbody>
+                    <tr>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;">
+                            <p class="vec_Footer">©&#160;Vector Informatik GmbH</p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;text-align: right;">
+                            <p class="vec_FooterBold">Version — <span class="mc-variable ProductVariables.ProductName_CAN_short variable" data-mc-conditions="AutosarNM.CAN">AUTOSAR CAN NM</span> <span class="mc-variable ProductVariables.ProductVersion_CAN_3.3.0 variable" data-mc-conditions="AutosarNM.CAN 330 only">3.3.0</span></p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="javascript:startCANoeLauncher('HELP:H2H_01_0085_ContactCopyrightLicense')" class="ListWhite" data-mc-conditions="vConditions.HTML5Link">Contact/Copyright/Licenses</a>
+                            </p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="https://www.vector.com/int/en/company/get-info/privacy-policy/" target="_blank" class="vec_Footer">Data Privacy Notice</a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

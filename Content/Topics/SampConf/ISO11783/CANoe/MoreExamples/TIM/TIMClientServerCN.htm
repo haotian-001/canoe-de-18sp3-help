@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="CANoeDEFamily.xml" data-mc-path-to-help-system="../../../../../../../" data-mc-conditions="Targets.CANoe-DE-Family" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../../../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../../../Skins/Favicons/favicon-16x16.png" /><title>TIM Client and Server (ISO11783 Sample Configuration)</title>
+        <link href="../../../../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Resources/Stylesheets/vTableMasterPageHeader.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../../../../Resources/Stylesheets/vStylesheet.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../../../../Resources/Stylesheets/vTableSymbol.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../../Resources/Scripts/MadCapGlobal.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../../Resources/Scripts/MadCapDom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../../Resources/Scripts/MadCapUtilities.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../../Resources/Scripts/MadCapXhr.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../../Resources/Scripts/MadCapTextEffects.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../../Resources/Scripts/MadCapSlideshow.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../../Resources/Scripts/MadCapMessageBus.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../../Resources/Scripts/MadCapMessageBus.CrossFrame.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../../Resources/Scripts/MadCapDefault.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../../Resources/Scripts/MadCapMediaQueries.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../../Resources/Scripts/MadCapAccessibility.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../../Resources/Scripts/MadCapHelpSystem.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../../Resources/Scripts/MadCapAliasFile.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../../Resources/Scripts/MadCapTopicFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../../Resources/Scripts/MadCapFeedbackHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../../Resources/Scripts/MadCapSkinHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../../Resources/Scripts/MadCapToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../../Resources/Scripts/MadCapToc.Breadcrumbs.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../../Resources/Scripts/MadCapToc.MiniToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../../Resources/Scripts/MadCapToc.SideMenu.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../../Resources/Scripts/MadCapIndex.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../../Resources/Scripts/MadCapGlossary.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../../Resources/Scripts/MadCapParser.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../../Resources/Scripts/MadCapSearch.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../../Resources/Scripts/MadCapNavigateTopics.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../../Resources/Scripts/MadCapLms.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../../Resources/Scripts/MadCapELearning.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../../Resources/Scripts/MadCapTopic.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../../Resources/Scripts/MadCapFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../../Resources/Scripts/MadCapMicroContentComponent.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../../Resources/Scripts/MadCapSearchHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../../Resources/Scripts/MadCapTopicElements.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../../Resources/Scripts/MadCapTriPane.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/jscript" src="../../../../../../Resources/vScripts/SyntaxHighlighting.js">
+        </script>
+        <script type="text/jscript" src="../../../../../../Resources/vScripts/TabSwitch.js">
+        </script>
+        <script type="text/javascript" src="../../../../../../Resources/vScripts/Vector.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../../../../../CANoeDEFamily.htm#Topics/SampConf/ISO11783/CANoe/MoreExamples/TIM/TIMClientServerCN.htm">Open topic with navigation</a>
+        </p>
+        <div class="Body">
+            <div role="main" id="mc-main-content">
+                <div>
+                    <p class="StructurePath"><a href="../../../../CANoeCANalyzerSampleConfigurations.htm" class="StructurePath">Sample Configurations</a> » <a href="../../../SampConfsISO11783.htm" class="StructurePath">ISO11783</a> » TIM Client and Server</p>
+                    <h1>TIM Client and Server</h1>
+                    <p class="MenuPath">&#160;</p>
+                    <p class="ToolAvailability" data-mc-conditions="BuildProcess.ToolAvailability"><a href="../../../../../Shared/FeatureAvailability.htm" class="red" title="Feature availabilty for your product">Valid&#160;for</a>:&#160;&#160;CANoe&#160;DE<a name="aanchor14353"></a><MadCap:concept term="SFCANoeDE" /></p>
+                    <p class="AutoSearchFilterConcepts"><a name="aanchor14354"></a>
+                        <MadCap:concept term="SFSampConf" />
+                    </p>
+                    <p class="IndexConcept"><a name="kanchor4342"></a><a name="kanchor4343"></a>
+                    </p>
+                </div>
+                <div>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                    <p class="TableHead">
+                                        <img src="../../../../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                    </p>
+                                </td>
+                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                    <p class="Table">Click on the blue link to load the sample configuration in your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText>.</p>
+                                    <ul>
+                                        <li><span class="bold">TIM Client and Server</span> – <span class="bold"><a href="javascript:startCANoeLauncher('&quot;SAMPLES:\\ISO11783\\MoreExamples\\ISO11783TIMClientAndServer\\ISO11783TIMClientAndServer.cfg&quot;')" class="ExecuteLink">ISO11783TIMClientAndServer.cfg</a></span><br />Demonstrates the communication between a TIM (Tractor Implement Management) server and one or several TIM clients.</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <h2>Introduction</h2>
+                    <p>The configuration contains one TIM Server and three TIM Clients. After the measurement start, you can configure the Facilities supported by the TIM Server and the Facilities required by the TIM Client. Then you can start the TIM Server and the required TIM Clients via the <span class="GUI">Start TIM Server</span> or <span class="GUI">Start TIM Client</span> button in the respective Panel. After authentication, TIM Clients perform the action <span class="bold">Assign</span> for each of the required functions. After you confirm automation (corresponding button <span class="GUI">Operator ACK</span>, is located in the <span class="GUI">TIM Server</span> panel and is colored green as soon as authentication is successfully completed) you can control each function of the TIM Server via the corresponding TIM Client. If acknowledgment for start of motion is required (<span class="GUI">Require acknowledgment for start of motion</span> check box is activated) button <span class="GUI">ACK start of motion</span> is colored green as soon as a TIM Client wants to start motion. Then click the button to allow this procedure.</p>
+                    <p>TIM Server and TIM Clients work in demonstration mode, i.e. there is no verification of transferred certificates and other data. The demonstration mode can be deactivated via the check box in the Panel <span class="GUI">Demo Mode</span>. For successful verification, however, the Authentication Library is required. The 32-bit variant of this library must be copied to the <span class="bold">Exec32</span> directory and the 64-bit variant to the <span class="bold">Exec64</span> directory of your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> under the name <span class="bold">AuthLib.dll</span>.</p>
+                </div>
+                <div>
+                    <h2><a name="Shortcuts" id="Shortcuts"></a>Desktops</h2>
+                    <p>This configuration contains the following desktops:</p>
+                    <div>
+                        <table style="width: 100%;border-collapse: separate;border-spacing: 2px 0px;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-top-style: none;border-top-width: 1px;border-bottom-style: none;border-bottom-width: 1px;margin-left: 0;margin-right: auto;">
+                            <col style="width: 130px;">
+                            </col>
+                            <col style="width: 130px;">
+                            </col>
+                            <col style="width: 130px;">
+                            </col>
+                            <col style="width: 130px;">
+                            </col>
+                            <col style="width: 130px;">
+                            </col>
+                            <col style="width: 130px;">
+                            </col>
+                            <col style="width: 130px;">
+                            </col>
+                            <col>
+                            </col>
+                            <tbody>
+                                <tr>
+                                    <td style="background-color: #F0F5F5;vertical-align: middle;border-left-style: solid;border-left-width: 1px;border-left-color: #bebebe;border-right-style: solid;border-right-width: 1px;border-right-color: #bebebe;border-top-style: solid;border-top-width: 1px;border-top-color: #bebebe;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #00a2e8;padding-left: 2pt;padding-right: 5pt;padding-top: 1pt;padding-bottom: 1pt;">
+                                        <p class="Table"><a href="#Setup" class="Tab">Setup</a>
+                                        </p>
+                                    </td>
+                                    <td style="background-color: #F0F5F5;vertical-align: middle;border-left-style: solid;border-left-width: 1px;border-left-color: #bebebe;border-right-style: solid;border-right-width: 1px;border-right-color: #bebebe;border-top-style: solid;border-top-width: 1px;border-top-color: #bebebe;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #00a2e8;padding-left: 2pt;padding-right: 5pt;padding-top: 1pt;padding-bottom: 1pt;">
+                                        <p class="Table"><a href="#TIMClientAndServer" class="Tab">TIM Client and Server</a>
+                                        </p>
+                                    </td>
+                                    <td style="background-color: #F0F5F5;vertical-align: middle;border-left-style: solid;border-left-width: 1px;border-left-color: #bebebe;border-right-style: solid;border-right-width: 1px;border-right-color: #bebebe;border-top-style: solid;border-top-width: 1px;border-top-color: #bebebe;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #00a2e8;padding-left: 2pt;padding-right: 5pt;padding-top: 1pt;padding-bottom: 1pt;">
+                                        <p class="Table"><a href="#TIMClients" class="Tab">3 TIM Clients</a>
+                                        </p>
+                                    </td>
+                                    <td style="background-color: #F0F5F5;vertical-align: middle;border-left-style: solid;border-left-width: 1px;border-left-color: #bebebe;border-right-style: solid;border-right-width: 1px;border-right-color: #bebebe;border-top-style: solid;border-top-width: 1px;border-top-color: #bebebe;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #00a2e8;padding-left: 2pt;padding-right: 5pt;padding-top: 1pt;padding-bottom: 1pt;">
+                                        <p class="Table"><a href="#AuthenticationDetails" class="Tab">Authentication Details</a>
+                                        </p>
+                                    </td>
+                                    <td style="background-color: #F0F5F5;vertical-align: middle;border-left-style: solid;border-left-width: 1px;border-left-color: #bebebe;border-right-style: solid;border-right-width: 1px;border-right-color: #bebebe;border-top-style: solid;border-top-width: 1px;border-top-color: #bebebe;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #00a2e8;padding-left: 2pt;padding-right: 5pt;padding-top: 1pt;padding-bottom: 1pt;">
+                                        <p class="Table"><a href="#NMT" class="Tab">NMT</a>
+                                        </p>
+                                    </td>
+                                    <td style="background-color: #F0F5F5;vertical-align: middle;border-left-style: solid;border-left-width: 1px;border-left-color: #bebebe;border-right-style: solid;border-right-width: 1px;border-right-color: #bebebe;border-top-style: solid;border-top-width: 1px;border-top-color: #bebebe;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #00a2e8;padding-left: 2pt;padding-right: 5pt;padding-top: 1pt;padding-bottom: 1pt;">
+                                        <p class="Table"><a href="#TraceAll" class="Tab">Trace All</a>
+                                        </p>
+                                    </td>
+                                    <td style="background-color: #F0F5F5;vertical-align: middle;border-left-style: solid;border-left-width: 1px;border-left-color: #bebebe;border-right-style: solid;border-right-width: 1px;border-right-color: #bebebe;border-top-style: solid;border-top-width: 1px;border-top-color: #bebebe;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #00a2e8;padding-left: 2pt;padding-right: 5pt;padding-top: 1pt;padding-bottom: 1pt;">
+                                        <p class="Table"><a href="#TraceFiltered" class="Tab">Trace Filtered</a>
+                                        </p>
+                                    </td>
+                                    <td style="vertical-align: middle;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #00a2e8;padding-left: 5pt;padding-right: 5pt;padding-top: 2pt;padding-bottom: 2pt;">
+                                        <p class="Table">&#160;</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <h2 class="NavigationM"><a name="Setup" id="Setup"></a>Setup <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                        <p>The <span class="bold">Setup</span> desktop contains the Simulation Setup with six nodes: The <span class="GUI">TIMClient</span>, <span class="GUI">TIMClient2</span>, <span class="GUI">TIMClient3</span> and <span class="GUI">TIMServer</span> nodes use the ISO11783 Interaction Layer DLL to simulate three TIM clients and a TIM server. The <span class="GUI">TIMStatus</span> node supplies the <span class="GUI">TIM Status</span> panel with the current client/server status and the <span class="GUI">TIMAuthDetail</span> node controls the <span class="GUI">Authentication Details</span> panel, which is displayed on the <span class="GUI"><a href="#AuthenticationDetails">Authentication Details</a></span> desktop.</p>
+                        <p>Located before the <span class="GUI">Trace</span> window named <span class="GUI">Trace Filtered</span> in the Measurement Setup is the <span class="GUI">TraceFilter</span> CAPL node, which only allows cyclical TIM messages to pass if their content has changed. This reduces the number of displayed messages. The filter can be controlled via the <span class="GUI">TIM Trace Filter Settings</span> panel on the <span class="GUI"><a href="#TIMClientAndServer">TIM Client and Server</a></span> and <a href="#TIMClients"><span class="GUI">TIM Clients</span></a> desktops.</p>
+                    </div>
+                    <div>
+                        <h2 class="NavigationM"><a name="TIMClientAndServer" id="TIMClientAndServer"></a>TIM Client and Server <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                        <p>This desktop is used to simulate communication between a TIM Server and a TIM Client. After the measurement starts, click on the <span class="GUI">Start TIM Server</span> button in the <span class="GUI">TIM Server</span> panel to start the server. Then click on the <span class="GUI">Start TIM Client</span> button in the <span class="GUI">TIM Client</span> panel to establish communication by the client with the server</p>
+                        <p>After the initial start, the TIM client and TIM server perform a Fullweight Authentication (FwA) by exchanging their certificates and then negotiating a shared key, which can be used in the next step for a Lightweight Authentication (LwA). Following a FwA, you can decide whether FwA or LwA should be used during the next authentication. To use a Lightweight Authentication(LwA), click on the <span class="GUI">Store LwA table</span> button following successful authentication. This is then used during the next authentication for the LwA. If this key is deleted again with <span class="GUI">Clear LwA table</span>, the TIM elements again use Fullweight Authentication (FwA).</p>
+                        <div>
+                            <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                                <col class="TableStyle-vTableSymbol-Column-Column1" />
+                                <col class="TableStyle-vTableSymbol-Column-Column2" />
+                                <tbody>
+                                    <tr>
+                                        <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                            <p class="Table">
+                                                <img src="../../../../../../Resources/vImages/vInfo.png" style="width: 48px;height: 45px;" title="Note" alt="Note" />
+                                            </p>
+                                        </td>
+                                        <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                            <p class="TableSymbolHead">Note</p>
+                                            <p class="Table">Lightweight authentication is not supported in demonstration mode.</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>The <span class="GUI">TIM Server</span> panel also includes the <span class="GUI">Operator ACK</span> button which allows you to accept control of TIM functions by the client.</p>
+                        <p>The <span class="GUI">TIM Client</span> panel, on the other hand, has the <span class="GUI">Operator Enable</span> button which allows you control functions.</p>
+                        <p>Panel <span class="GUI">TIM Client</span> also has the following buttons:</p>
+                        <ul>
+                            <li><span class="GUI">Reconnect</span>
+                                <br />Reestablish a broken connection to the server.</li>
+                            <li><span class="GUI">Restart Auth.</span>
+                                <br />Repeat a failed authentication.</li>
+                        </ul>
+                        <p>Both panels also contain four TIM Server pages or five TIM Client pages for further control of the TIM client and TIM server:</p>
+                        <ul>
+                            <li>On the <span class="GUI">Settings</span> page, you can configure the properties of the client/server (<span class="GUI">Compliance Information</span> group) and specify the certificates, CRL lists and private keys to be used for authentication (<span class="GUI">Certificates</span> group):</li>
+                            <li class="Indent">For the TIM Server you can also configure <span class="bold">Supported Facilities</span> - the facilities that TIM Server lists in its <span class="bold">Functions Support Response</span>.</li>
+                            <li class="Indent">For the TIM Client, you can instead define facilities that the TIM Client absolutely needs (<span class="GUI">Required Facilities</span> group). The TIM Client will then cancel its authentication if the TIM Server does not support these facilities. If the TIM Server supports all Required Facilities and authentication is successfully completed by both sides, the TIM Client performs the <span class="GUI">Assign</span> action for each configured facility.</li>
+                            <li>On the <span class="GUI">Behavior</span> page, you can influence the behavior of the TIM Server or the TIM Client:</li>
+                            <li class="Indent"><span class="GUI">TIM Server/Client Status message</span>
+                                <br />State of TIM Server /&#160;Client.</li>
+                            <li class="Indent"><span class="GUI">Connection to selected TIM Client/Server</span>
+                                <br />Pause the internal status machine of the client/server at a certain state or skip some states.</li>
+                            <li class="IndentIndent"><span class="GUI">Current Auth. State</span>
+                                <br />State of authentication.</li>
+                            <li class="IndentIndent">If you select under <span class="GUI">Freeze State</span> a state not equal to <span class="GUI">Offline</span>, the client or server stops at this state. With <span class="GUI">Continue</span> the authentication is continued. <span class="GUI">Continue and Freeze</span> continues authentication until a new state is selected.</li>
+                            <li class="Indent"><span class="GUI">Sequence of requested certificates</span>
+                                <br />Define order in which certificates are requested.</li>
+                            <li class="Indent"><span class="GUI">Number of Certificate Requests to ignore</span>
+                                <br />Define how many certificate requests are ignored.</li>
+                            <li class="Indent"><span class="GUI">Deactivated Checks</span>
+                                <br />Here you can deactivate the following checks:</li>
+                            <li class="IndentIndent"><span class="GUI">NAME</span>
+                                <br />The ISOBUS NAME transmitted on the bus matches the corresponding certificates.</li>
+                            <li class="IndentIndent"><span class="GUI">CCID</span>
+                                <br />Conformity of the contents of the ISOBUS Compliance Certification message (CCID) with the certificates.</li>
+                            <li class="IndentIndent"><span class="GUI">Capabilities</span>
+                                <br />Checking the certification of the TIM functions when they are assigned.</li>
+                            <li class="IndentIndent"><span class="GUI">CRL</span>
+                                <br />Verification of the received certificates against the Certificate Revocation list.</li>
+                            <li class="Indent"><![CDATA[
+					]]><span class="GUI">Require acknowledgment for start of motion</span><br />If this check box is activated you have to click the <span class="bold">ACK start of motion</span> button if a client wants to start motion.</li>
+                            <li class="Indent"><![CDATA[
+					]]><span class="GUI">Freeze Client/Server Heartbeat Counter</span><br />Via this check box you can stop counting up the Heartbeat Counter.</li>
+                            <li>On the <span class="GUI">Functions</span> pages, you can control (TIM Client) or monitor (TIM Server) the functions used in automation.</li>
+                            <li class="Indent">For the TIM Client, in addition to a slider, there are also dedicated buttons available with which you can activate individual facilities. You can also use the buttons <span class="GUI">Unassign</span> and <span class="GUI">Assign</span> to end and resume control of the function.</li>
+                        </ul>
+                        <p>The status of the TIM status messages are signaled in the <span class="GUI">TIM Status Messages</span> panel with a colored LED. If a message is sent cyclically without interruptions, the LED turns green. Following successful authentication, if the AUTH server status message and AUTH client status message are no longer sent, the corresponding indicator turns gray with a green border. If the cyclical sending of one of the status messages is interrupted, the color of the LED changes to red.</p>
+                        <p>Use the <span class="GUI">TIM Trace Filter Settings</span> panel to activate or deactivate the filter conditions for the <span class="GUI">Trace</span> window named <span class="GUI">Trace Filtered</span> (with the help of the <span class="GUI">TraceFilter</span> CAPL node).</p>
+                        <p>In the <span class="GUI">Trace</span> window named <span class="GUI">Trace Filtered</span>, you can monitor communication between the TIM Server and all connected TIM clients.</p>
+                    </div>
+                    <div>
+                        <h2 class="NavigationM"><a name="TIMClients" id="TIMClients"></a>3 TIM Clients <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                        <p>This desktop is used to simulate up to three separate TIM Clients. For each simulated TIM Client you have to configure the required facilities and then start the respective TIM Client with the button <span class="GUI">Start TIM Client</span>.</p>
+                    </div>
+                    <div>
+                        <h2 class="NavigationM"><a name="AuthenticationDetails" id="AuthenticationDetails"></a>Authentication Details <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                        <p>Located on this desktop is a panel by the same name that depicts the individual steps of the authentication. Once a step has been successfully completed, the corresponding LED turns green. Otherwise, it remains red. Errors can thereby be more easily found during authentication.</p>
+                    </div>
+                    <div>
+                        <h2 class="NavigationM"><a name="NMT" id="NMT"></a>NMT <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                        <p>The <span class="GUI">J1939 Network Management</span> analysis filter is activated in the <span class="GUI">Trace</span> window named <span class="GUI">Trace NMT</span> so that only messages relevant for network management are displayed. All active devices are displayed in the <span class="GUI">J1939 Scanner</span>.</p>
+                    </div>
+                    <div>
+                        <h2 class="NavigationM"><a name="TraceAll" id="TraceAll"></a>Trace All <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                        <p>You can use this desktop to view all messages unfiltered.</p>
+                    </div>
+                    <div>
+                        <h2 class="NavigationM"><a name="TraceFiltered" id="TraceFiltered"></a>Trace Filtered <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                        <p>This desktop contains the <span class="GUI">Trace</span> window named <span class="GUI">Trace Filtered</span>, which is also used in the <span class="GUI">TIM Client and Server</span> and <span class="GUI">3 TIM Clients</span> desktops.</p>
+                    </div>
+                </div>
+                <p class="LinkList">&#160;</p>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="FooterWhite">
+                <table class="FooterWhite" style="border-collapse: collapse;margin-left: auto;margin-right: auto;">
+                    <col style="width: 70px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col style="width: 16px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="buttons popup-container clearfix topicToolbarProxy topicToolbarProxyFooter _Skins_HTML5TopicToolbar mc-component nocontent">
+                                    <div class="button-group-container-left">
+                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo"><a href="../../../../../Shared/HowToUseOnlineHelp.htm" title="Tips for using the help" alt="Tips for using the help"><img src="../../../../../../Resources/vImages/vBackstage/vHelpInfo.png" /></a>
+                                </p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo" style="text-align: right;"><span class="mc-variable Vector.BuildTime variable">2024-04-8T20:56:42</span>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <table style="width: 100%;border-collapse: separate;border-spacing: 3px 0px;margin-left: auto;margin-right: auto;caption-side: top;">
+                <col />
+                <col />
+                <col />
+                <col data-mc-conditions="BuildProcess.HTML5Link" />
+                <tbody>
+                    <tr>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;">
+                            <p class="vec_Footer">©&#160;Vector Informatik GmbH</p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;text-align: right;">
+                            <p class="vec_FooterBold">
+                                <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE&#160;Product Families</MadCap:conditionalText> Version <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.VectorTestUnitRunner">18</MadCap:conditionalText></p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="../../../../../Shared/ContactCopyrightLicense.htm" class="vec_Footer MCXref xref xrefvec_Footer">Contact/Copyright/License</a>
+                            </p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="https://www.vector.com/int/en/company/get-info/privacy-policy/" target="_blank" class="vec_Footer">Data Privacy Notice</a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

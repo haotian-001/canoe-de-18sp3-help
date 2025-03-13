@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="CANoeDEFamily.xml" data-mc-path-to-help-system="../../../../" data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.vTESTstudio" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../Skins/Favicons/favicon-16x16.png" /><title>ADAS CAPL Functions</title>
+        <link href="../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Resources/Stylesheets/vTableMasterPageHeader.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../Resources/Stylesheets/vStylesheet.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../Resources/Stylesheets/vTable.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../Resources/Stylesheets/vTablePageTOC.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapGlobal.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapDom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapUtilities.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapXhr.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTextEffects.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSlideshow.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMessageBus.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMessageBus.CrossFrame.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapDefault.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMediaQueries.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAccessibility.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapHelpSystem.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAliasFile.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopicFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapFeedbackHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSkinHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.Breadcrumbs.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.MiniToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.SideMenu.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapIndex.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapGlossary.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapParser.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSearch.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapNavigateTopics.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapLms.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapELearning.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopic.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMicroContentComponent.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSearchHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopicElements.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTriPane.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/jscript" src="../../../Resources/vScripts/SyntaxHighlighting.js">
+        </script>
+        <script type="text/jscript" src="../../../Resources/vScripts/TabSwitch.js">
+        </script>
+        <script type="text/javascript" src="../../../Resources/vScripts/Vector.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../../CANoeDEFamily.htm#Topics/CAPLFunctions/ADAS/CAPLfunctionsADASOverview.htm">Open topic with navigation</a>
+        </p>
+        <div class="Body">
+            <div role="main" id="mc-main-content">
+                <p class="StructurePath"><a href="../CAPLfunctions.htm" class="StructurePath MCXref xref xrefStructurePath">CAPL Functions</a> » <span class="mc-variable System.Title variable">ADAS CAPL Functions</span></p>
+                <h1><span class="mc-variable System.Title variable">ADAS CAPL Functions</span>
+                </h1>
+                <p class="MenuPath">&#160;</p>
+                <p class="ToolAvailability" data-mc-conditions="BuildProcess.ToolAvailability"><a href="../../Shared/FeatureAvailability.htm" class="red" title="Feature availabilty for your product">Valid&#160;for</a>:&#160;&#160;CANoe&#160;DE<a name="aanchor29341"></a><MadCap:concept term="SFCANoeDE" /></p>
+                <p class="AutoSearchFilterConcepts"><a name="aanchor29342"></a>
+                    <MadCap:concept term="SFCAPLFunctions" />
+                </p>
+                <p><a name="kanchor9524"></a>
+                </p>
+                <h2>Introduction</h2>
+                <hr class="Startpage" width="100%" size="0" align="center">
+                </hr>
+                <p class="TableCOM"><a name="Shortcuts" id="Shortcuts"></a><span class="red">ON THIS&#160;PAGE:</span>
+                </p>
+                <table style="margin-left: 0;margin-right: auto;caption-side: top;mc-table-style: url('../../../Resources/Stylesheets/vTablePageTOC.css');" class="TableStyle-vTablePageTOC" cellspacing="2">
+                    <col class="TableStyle-vTablePageTOC-Column-Column1" style="width: 50%;">
+                    </col>
+                    <col class="TableStyle-vTablePageTOC-Column-Column1" style="width: 50%;">
+                    </col>
+                    <tbody>
+                        <tr class="TableStyle-vTablePageTOC-Body-Body1">
+                            <td class="TableStyle-vTablePageTOC-BodyB-Column1-Body1">
+                                <p class="PageTOC"><a href="#FMIAPI" class="PageTOC">General ADAS API</a>
+                                </p>
+                                <p class="PageTOC"><a href="#GroundTruthAPI" class="PageTOC">Ground Truth API</a>
+                                </p>
+                                <p class="PageTOC"><a href="#ProjAPI" class="PageTOC">Proj API</a>
+                                </p>
+                                <p class="PageTOC"><a href="#ScenarioAPI" class="PageTOC">Scenario API</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle-vTablePageTOC-BodyA-Column1-Body1">
+                                <p class="PageTOC"><a href="#SensorAPI" class="PageTOC">Sensor API</a>
+                                </p>
+                                <p class="PageTOC"><a href="#TransmissionAPI" class="PageTOC">Transmission Behavior API</a>
+                                </p>
+                                <p class="PageTOC"><a href="#TFS" class="PageTOC">Test Feature Set</a>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div>
+                    <h2><a name="FMIAPI" id="FMIAPI"></a>General ADAS API <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                    <table style="width: 100%;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');margin-left: 0;margin-right: auto;caption-side: top;" class="TableStyle_vTable" cellspacing="0">
+                        <col style="width: 225px;" />
+                        <col />
+                        <thead>
+                            <tr>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                    <p class="TableHead">Functions</p>
+                                </th>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                    <p class="TableHead">Short Description</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionADASActivateFMU.htm">ADASActivateFMU </a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">This method is used to activate or deactivate a specified <a href="../../CANoeCANalyzer/Interfaces/FMIConfig.htm">FMU</a> that has been coupled via the <a href="../../CANoeCANalyzer/Interfaces/FMI.htm">FMI</a>. </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionADASSetOutputData.htm">ADASSetOutputData</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                    <p class="Table">This method is used to set a byte array as ADAS output.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <h2><a name="GroundTruthAPI" id="GroundTruthAPI"></a>Ground Truth API <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                    <table style="width: 100%;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');margin-left: 0;margin-right: auto;caption-side: top;" class="TableStyle_vTable" cellspacing="0">
+                        <col style="width: 225px;" />
+                        <col />
+                        <thead>
+                            <tr>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                    <p class="TableHead">Functions</p>
+                                </th>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                    <p class="TableHead">Short Description</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionGetGroundTruthObject.htm">GetGroundTruthObject</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Gets the name of a special ground truth object as string.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionGetGroundTruthObjects.htm">GetGroundTruthObjects</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Gets the unique names of available ground truth objects as string-array.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionGetOrCreateGroundTruthObject.htm">GetOrCreateGroundTruthObject</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Gets a ground truth object. The object is created if it does not exist.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionHasGroundTruthObject.htm">HasGroundTruthObjects</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Checks if a special ground truth object exits.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionSetHostVehicle.htm">SetHostVehicle</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                    <p class="Table">Sets the host vehicle for the ground truth.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <h2><a name="ProjAPI" id="ProjAPI"></a>Proj API <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                    <table style="mc-table-style: url('../../../Resources/Stylesheets/vTable.css');margin-left: 0;margin-right: auto;width: 100%;" class="TableStyle_vTable" cellspacing="0">
+                        <col style="width: 225px;" />
+                        <col />
+                        <thead>
+                            <tr>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                    <p class="TableHead">Functions</p>
+                                </th>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                    <p class="TableHead">Short Description</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionProjCreate.htm">Proj_Create</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Initialize
+ the Proj Access with a Proj String / Proj definition.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionProjTransformToGeo.htm">Proj_TransformToGeo</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Transforms
+ an inertial coordinate to a geodetic coordinate</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionProjTransformToInertial.htm">Proj_TransformToInertial</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                    <p class="Table">Transforms
+ a geodetic coordinate to an inertial coordinate.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <h2><a name="ScenarioAPI" id="ScenarioAPI"></a>Scenario API <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                    <table style="width: 100%;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');margin-left: 0;margin-right: auto;caption-side: top;" class="TableStyle_vTable" cellspacing="0">
+                        <col style="width: 225px;" />
+                        <col />
+                        <thead>
+                            <tr>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                    <p class="TableHead">Functions</p>
+                                </th>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                    <p class="TableHead">Short Description</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionStartScenario.htm">StartScenario</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Start the currently loaded scenario. </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionStopScenario.htm">StopScenario</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Stop a started scenario.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionIsScenarioStarted.htm">IsScenarioStarted</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Query whether the currently loaded scenario has started.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionLoadScenario.htm">LoadScenario</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Load a scenario during a running measurement via a file path.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionGetStationAttributeDouble.htm">GetStationAttributeDouble</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Query an attribute of a scenario as a value of type double at the runtime of the scenario.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionGetStationAttributeInt64.htm">GetStationAttributeInt64</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Query an attribute of a scenario as a value of type int64 at the runtime of the scenario.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionSetStationAttributeDouble.htm">SetStationAttributeDouble</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Set values for attributes based on the attribute name and keypoint (index) in the Scenario Editor timeline.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionSetStationAttributeInt64.htm">SetStationAttributeInt64</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Set values for attributes based on the attribute name and keypoint (index) in the Scenario Editor timeline.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionOnScenarioStateChange.htm">OnScenarioStateChange</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">This callback is called when the state of the scenario has changed.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionOnStationAttributeTrigger.htm">OnStationAttributeTrigger</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                    <p class="Table">This callback is called when the value of an attribute of a station has changed.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <h2><a name="SensorAPI" id="SensorAPI"></a>Sensor API <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                    <table style="width: 100%;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');margin-left: 0;margin-right: auto;caption-side: top;" class="TableStyle_vTable" cellspacing="0">
+                        <col style="width: 225px;" />
+                        <col />
+                        <thead>
+                            <tr>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                    <p class="TableHead">Functions</p>
+                                </th>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                    <p class="TableHead">Short Description</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionGetDetectedObjects.htm">GetDetectedObjects</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">This function returns the detected objects of a sensor as a string array.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionGetDetectedObjectsCondtional.htm">GetDetectedObjectsCondtional</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">This function returns the detected objects of a sensor as a string array.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionGetOrCreateDetectedObject.htm">GetOrCreateDetectedObject</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">This function gets the name of a detected object of a sensor as a string. If no object with the given trackingId exists, it will be created.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionGetDetectedObjectByTrackingId.htm">GetDetectedObjectByTrackingId</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">This function returns the name of a detected object of a sensor based on the trackingId as a string.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionGetDetectedObjectByGroundTruthId.htm">GetDetectedObjectByGroundTruthId</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">This function gets the name of a ground truth object of a sensor based on the ground truth Id as a string. If no object with the given ground truth Id is present, an empty string is returned.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionHasDetectedObject.htm">HasDetectedObject</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">This function can be used to query whether a detected object of a sensor with a specific tracking Id is present.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionRemoveDetectedObject.htm">RemoveDetectedObject</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                    <p class="Table">This function can be used to remove a detected object from a sensor with a specific tracking Id.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <h2><a name="TransmissionAPI" id="TransmissionAPI"></a>Transmission Behavior API <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                    <table style="width: 100%;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');margin-left: 0;margin-right: auto;caption-side: top;" class="TableStyle_vTable" cellspacing="0">
+                        <col style="width: 225px;" />
+                        <col />
+                        <thead>
+                            <tr>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                    <p class="TableHead">Functions</p>
+                                </th>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                    <p class="TableHead">Short Description</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionBeginUpdate.htm">BeginUpdate</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">This method is only required if data of a sensor and those of its detected objects are not to be sent directly after assignment. This can be useful if sensor data are received from different sources and at different times (e.g. CAN messages) and these are to be successively assigned to a sensor object until the data structure has been completely filled. The call of the method Update then sends all data of the sensor and the detected objects that were marked as completed.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionOnDetectedObjectUpdate.htm">OnDetectedObjectUpdate</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">A call of this method for a sensor sends all the data of the sensor and the detected objects that have been marked as completed. This method is called when a detected object has been updated. In this callback method there is a possibility to change the data before the actual update.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionReset.htm">Reset</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Calling this function resets the values of the available sensors to their default values and clears the list of objects detected by them. Furthermore, the GroundTruth objects are also set to their default values.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionSetDetectedObjectCompleted.htm">SetDetectedObjectCompleted</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">This method is used to mark that the data of a detected object of a sensor is completely available. This only has an effect if the sending of the sensor data was reset via a call to BeginUpdate. The next call of the Update method then sends all data of the sensor and the detected objects that were marked as complete.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionSetDetectedObjectsCompleted.htm">SetDetectedObjectsCompleted</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">This method is used to mark that the data of a sensor is completely available. This only has an effect if the sending of the sensor data was reset via a call to BeginUpdate. The next call of the Update method then sends all data of the sensor and its detected objects.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionUpdate.htm">Update</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                    <p class="Table">A call of this method for a sensor sends all data of the sensor and the detected objects that were marked as completed.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <h2><a name="TFS" id="TFS"></a>Test Feature Set <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                    <table style="width: 100%;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');margin-left: 0;margin-right: auto;caption-side: top;" class="TableStyle_vTable" cellspacing="0" data-mc-autosort="False">
+                        <col style="width: 225px;" data-mc-autosort-direction="ascending" data-mc-autosort-priority="0" />
+                        <col />
+                        <thead>
+                            <tr>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                    <p class="TableHead">Functions</p>
+                                </th>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                    <p class="TableHead">Short Description</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionTestGetWaitADASDetectedObject.htm" class="MCXref xref">TestGetWaitADASDetectedObject</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Retrieves the name of the Detected Object that triggered the wait function.</p>
+                                </td>
+                            </tr>
+                            <tr data-mc-conditions="">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionTestWaitForADASDetectedObjectDistance.htm" class="MCXref xref">TestWaitForADASDetectedObjectDistance</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Waits for a Detected Object for which the distance is above/below a specified value</p>
+                                </td>
+                            </tr>
+                            <tr data-mc-conditions="">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionTestWaitForADASDetectedObjectSpeed.htm" class="MCXref xref">TestWaitForADASDetectedObjectSpeed</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Waits for a Detected Object for with a speed above/below a specified value.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionTestWaitForADASDetectedObjectTimeToCollision.htm" class="MCXref xref">TestWaitForADASDetectedObjectTimeToCollision</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Waits for the occurrence of the first Detected Object matching the Time To Collision (TTC) conditions passed as arguments.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionTestWaitForADASGroundTruthObjectDistance.htm">TestWaitForADASGroundTruthObjectDistance</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Waits for the occurrence of the first Moving Object matching the distance conditions passed as arguments.</p>
+                                </td>
+                            </tr>
+                            <tr data-mc-conditions="">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionTestWaitForADASGroundTruthObjectInLane.htm" class="MCXref xref">TestWaitForADASGroundTruthObjectInLane</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Waits for a Moving Object which is completely in the given lane.</p>
+                                </td>
+                            </tr>
+                            <tr data-mc-conditions="">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionTestWaitForADASGroundTruthObjectInSameLane.htm" class="MCXref xref">TestWaitForADASGroundTruthObjectInSameLane</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Waits for a Moving Object which is completely in the lane of the ego vehicle.</p>
+                                </td>
+                            </tr>
+                            <tr data-mc-conditions="">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionTestWaitForADASGroundTruthObjectLaneSwitch.htm" class="MCXref xref">TestWaitForADASGroundTruthObjectLaneSwitch</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Waits for a Moving Object which switches lane.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionTestWaitForADASGroundTruthObjectSpeed.htm">TestWaitForADASGroundTruthObjectSpeed</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Waits for the occurrence of the first Moving Object matching the speed conditions passed as arguments.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionTestWaitForADASGroundTruthObjectTimeToCollision.htm">TestWaitForADASGroundTruthObjectTimeToCollision</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                    <p class="Table">Waits for the occurrence of the first Moving Object matching the Time To Collision (TTC) conditions passed as arguments.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <h2><a name="TSL" id="TSL"></a>Test Service Library Checks<a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                    <table style="width: 100%;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');margin-left: 0;margin-right: auto;caption-side: top;" class="TableStyle_vTable" cellspacing="0">
+                        <col style="width: 225px;" />
+                        <col />
+                        <thead>
+                            <tr>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                    <p class="TableHead"><a href="../../TestCommands/CheckDescriptions/CDADASDetObjDistanceObservation.htm" class="red">ADAS Detected Objects Distance Observation</a>
+                                    </p>
+                                </th>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                    <p class="TableHead">Short Description</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="../Test/Functions/CAPLfunctionChkCreateADASDetectedObjectsDistanceViolation.htm">ChkCreate_ADASDetectedObjectsDistanceViolation, ChkStart_ADASDetectedObjectsDistanceViolation</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Observes the distance of the Detected Moving Objects.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="TableHead"><a href="../../TestCommands/CheckDescriptions/CDADASDetectedObjectsHaveMatchingGroundTruthObjectsObservation.htm" class="red">ADAS Detected Objects Have Matching Ground Truth Objects Observation</a>
+                                    </p>
+                                </th>
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="TableHead">Short Description</p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="../Test/Functions/CAPLfunctionChkCreateADASDetectedObjectsHaveMatchingGroundTruthObjectsViolation.htm" class="MCXref xref">ChkCreate_ADASDetectedObjectsHaveMatchingGroundTruthObjectsViolation, ChkStart_ADASDetectedObjectsHaveMatchingGroundTruthObjectsViolation</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Observes if Detected Moving Objects have matching Moving Objects.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="TableHead"><a href="../../TestCommands/CheckDescriptions/CDADASDetObjSpeedObservation.htm" class="red">ADAS Detected Objects Speed Observation</a>
+                                    </p>
+                                </th>
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="TableHead">Short Description</p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="../Test/Functions/CAPLfunctionChkCreateADASDetectedObjectsSpeedViolation.htm">ChkCreate_ADASDetectedObjectsSpeedViolation, ChkStart_ADASDetectedObjectsSpeedViolation</a> </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Observes the relative speed of the Detected Moving Objects.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="TableHead"><a href="../../TestCommands/CheckDescriptions/CDADASDetObjTimeToCollisionObservation.htm" class="red">ADAS Detected Objects Time To Collision Observation</a>
+                                    </p>
+                                </th>
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="TableHead">Short Description</p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="../Test/Functions/CAPLfunctionChkCreateADASDetectedObjectsTimeToCollisionViolation.htm">ChkCreate_ADASDetectedObjectsTimeToCollisionViolation, ChkStart_ADASDetectedObjectsTimeToCollisionViolation</a> </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Observes the Time To Collision (TTC) to the Detected Moving Objects.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="TableHead"><a href="../../TestCommands/CheckDescriptions/CDADASGroundTruthObjectsDistanceObservation.htm" class="red">ADAS Ground Truth Objects Distance Observation</a>
+                                    </p>
+                                </th>
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="TableHead">Short Description</p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="../Test/Functions/CAPLfunctionChkCreateADASGroundTruthObjectsDistanceViolation.htm" class="MCXref xref">ChkCreate_ADASGroundTruthObjectsDistanceViolation, ChkStart_ADASGroundTruthObjectsDistanceViolation</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Observes the distance of the Moving Objects to the EgoVehicle.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="TableHead"><a href="../../TestCommands/CheckDescriptions/CDADASEgoVehicleLaneViolation.htm" class="red">ADAS EgoLane Observation</a>
+                                    </p>
+                                </th>
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="TableHead">Short Description</p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="../Test/Functions/CAPLfunctionChkCreateADASEgoVehicleLaneViolation.htm">chkCreate_ADASEgoVehicleLaneViolation<br />chkStart_ADASEgoVehicleLaneViolation</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Observes the lane of the EgoVehicle.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="TableHead"><a href="../../TestCommands/CheckDescriptions/CDADASGroundTruthObjectsHaveMatchingDetectedObjectsObservation.htm" class="red">ADAS Ground Truth Have Matching Detected Objects Observation</a>
+                                    </p>
+                                </th>
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="TableHead">Short Description</p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="../Test/Functions/CAPLfunctionChkCreateADASGroundTruthObjectsHaveMatchingDetectedObjectsViolation.htm">ChkCreate_ADASGroundTruthObjectsHaveMatchingDetectedObjectsViolation, ChkStart_ADASGroundTruthObjectsHaveMatchingDetectedObjectsViolation</a> </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Observes if Moving Objects have matching Detected Moving Objects.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="TableHead"><a href="../../TestCommands/CheckDescriptions/CDADASGroundTruthObjectsSpeedObservation.htm" class="red">ADAS Ground Truth Objects Speed Observation</a>
+                                    </p>
+                                </th>
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="TableHead">Short Description</p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="../Test/Functions/CAPLfunctionChkCreateADASGroundTruthObjectsSpeedViolation.htm" class="MCXref xref">ChkCreate_ADASGroundTruthObjectsSpeedViolation, chkStart_ADASGroundTruthObjectsSpeedViolation</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Observes the relative speed of the Moving Objects to the EgoVehicle.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="TableHead"><a href="../../TestCommands/CheckDescriptions/CDADASGroundTruthObjectsTimeCollisionObservation.htm" class="red">ADAS Ground Truth Objects Time To Collision Observation</a>
+                                    </p>
+                                </th>
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="TableHead">Short Description</p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="Table"><a href="../Test/Functions/CAPLfunctionChkCreateADASGroundTruthObjectsTimeToCollisionViolation.htm" class="MCXref xref">ChkCreate_ADASGroundTruthObjectsTimeToCollisionViolation, ChkStart_ADASGroundTruthObjectsTimeToCollisionViolation</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                    <p class="Table">Observes the Time To Collision (TTC) between Moving Objects and the EgoVehicle.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="LinkList"><a href="../../CANoeCANalyzer/ADAS/ADAS.htm" class="LinkList" data-mc-conditions="Targets.CANoe-DE-Family">ADAS</a>&#160;</p>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="FooterWhite">
+                <table class="FooterWhite" style="border-collapse: collapse;margin-left: auto;margin-right: auto;">
+                    <col style="width: 70px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col style="width: 16px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="buttons popup-container clearfix topicToolbarProxy topicToolbarProxyFooter _Skins_HTML5TopicToolbar mc-component nocontent">
+                                    <div class="button-group-container-left">
+                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo"><a href="../../Shared/HowToUseOnlineHelp.htm" title="Tips for using the help" alt="Tips for using the help"><img src="../../../Resources/vImages/vBackstage/vHelpInfo.png" /></a>
+                                </p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo" style="text-align: right;"><span class="mc-variable Vector.BuildTime variable">2024-04-8T20:56:42</span>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <table style="width: 100%;border-collapse: separate;border-spacing: 3px 0px;margin-left: auto;margin-right: auto;caption-side: top;">
+                <col />
+                <col />
+                <col />
+                <col data-mc-conditions="BuildProcess.HTML5Link" />
+                <tbody>
+                    <tr>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;">
+                            <p class="vec_Footer">©&#160;Vector Informatik GmbH</p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;text-align: right;">
+                            <p class="vec_FooterBold">
+                                <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE&#160;Product Families</MadCap:conditionalText> Version <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.VectorTestUnitRunner">18</MadCap:conditionalText></p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="../../Shared/ContactCopyrightLicense.htm" class="vec_Footer MCXref xref xrefvec_Footer">Contact/Copyright/License</a>
+                            </p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="https://www.vector.com/int/en/company/get-info/privacy-policy/" target="_blank" class="vec_Footer">Data Privacy Notice</a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

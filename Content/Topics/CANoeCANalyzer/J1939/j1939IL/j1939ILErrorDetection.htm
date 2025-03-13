@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="topic" data-mc-search-type="Stem" data-mc-help-system-file-name="CANoeDEFamily.xml" data-mc-path-to-help-system="../../../../../" data-mc-conditions="Targets.CANoe-DE-Family" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../Skins/Favicons/favicon-16x16.png" /><title>Error Detection</title>
+        <link href="../../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Resources/Stylesheets/vTableMasterPageHeader.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../../Resources/Stylesheets/vStylesheet.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../../Resources/Stylesheets/vTable.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../../Resources/Stylesheets/vTableSymbol.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapGlobal.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapDom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapUtilities.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapXhr.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTextEffects.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSlideshow.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMessageBus.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMessageBus.CrossFrame.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapDefault.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMediaQueries.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapAccessibility.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapHelpSystem.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapAliasFile.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopicFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapFeedbackHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSkinHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.Breadcrumbs.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.MiniToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.SideMenu.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapIndex.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapGlossary.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapParser.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSearch.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapNavigateTopics.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapLms.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapELearning.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopic.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMicroContentComponent.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSearchHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopicElements.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTriPane.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/jscript" src="../../../../Resources/vScripts/SyntaxHighlighting.js">
+        </script>
+        <script type="text/jscript" src="../../../../Resources/vScripts/TabSwitch.js">
+        </script>
+        <script type="text/javascript" src="../../../../Resources/vScripts/Vector.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../../../CANoeDEFamily.htm#Topics/CANoeCANalyzer/J1939/j1939IL/j1939ILErrorDetection.htm">Open topic with navigation</a>
+        </p>
+        <div class="Body">
+            <div role="main" id="mc-main-content">
+                <p class="StructurePath"><a href="../startpageJ1939.htm" class="StructurePath">J1939</a> » <a href="j1939ILOverview.htm" class="StructurePath">J1939 Interaction Layer</a> » <span class="mc-variable System.Title variable">Error Detection</span></p>
+                <h1><span class="mc-variable System.Title variable">Error Detection</span>
+                </h1>
+                <p class="MenuPath">&#160;</p>
+                <p class="ToolAvailability" data-mc-conditions="BuildProcess.ToolAvailability"><a href="../../../Shared/FeatureAvailability.htm" class="red" title="Feature availabilty for your product">Valid&#160;for</a>:&#160;&#160;CANoe&#160;DE<a name="aanchor16694"></a><MadCap:concept term="SFCANoeDE" /></p>
+                <p class="AutoSearchFilterConcepts"><a name="aanchor16695"></a>
+                    <MadCap:concept term="SFCore" />
+                </p>
+                <p>In some cases, it is necessary to take measures to detect interference from transmitting ECUs.</p>
+                <p>The <span class="bold">J1939 DigitalAnnex</span> defines a large number of messages that also contain a checksum and a message counter in the user data.</p>
+                <p>The J1939 Interaction Layer supports you in automatically setting the message counter and the checksum for these messages.</p>
+                <p>To use this functionality you have to configure the database.</p>
+                <ul>
+                    <li>
+                        <p class="ListItem">Make sure that the <a href="../j1939basics/j1939CanDbAttributes.htm" class="SourceCode">FsJ1939UseCrcAndCounter</a> attribute is defined correctly.</p>
+                    </li>
+                    <li>
+                        <p class="ListItem">Define the calculation formula in the form [A-E][a-f] (e.g. <span class="bold">Bc</span>) for each message that the Interaction Layer is to provide with the checksum and message counter. Take the calculation rules from the table below. You can combine (with the exception of overlaps) the calculation of the checksum and the position of the message counter as you wish.</p>
+                    </li>
+                </ul>
+                <div>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                    <p class="Table">
+                                        <img src="../../../../Resources/vImages/vInfo.png" style="width: 48px;height: 45px;" title="Note" alt="Note" />
+                                    </p>
+                                </td>
+                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                    <p class="TableSymbolHead">Note</p>
+                                    <p class="Table">Your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> has already supported the calculation of checksums in earlier versions. However, the function was only available to PGs with PGN 0, 1024, 2816, 61469 and 61483. You can still use this functionality. However, if you add the <span class="bold">FsJ1939UseCrcAndCounter</span> message attribute to your database, only the new implementation will be used. The following applies: only for those messages where the attribute has a value in the form [A-E][a-f], checksum and message counter are set.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>The following rules for calculating the checksum are available. The checksum rule is always defined with a capital letter. The bit indices (<span class="bold">Start-Bit</span> column) are specified in the form <span class="bold">[Byte].[Bit]</span>.</p>
+                <div>
+                    <table style="mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');margin-left: 0;margin-right: auto;" class="TableStyle_vTable" cellspacing="0">
+                        <col class="TableStyle-vTable-Column-Column1" />
+                        <col class="TableStyle-vTable-Column-Column1" />
+                        <col class="TableStyle-vTable-Column-Column1" />
+                        <col class="TableStyle-vTable-Column-Column1" />
+                        <thead>
+                            <tr class="TableStyle-vTable-Head-Header1">
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                    <p class="TableHead">Name</p>
+                                </th>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                    <p class="TableHead">Calculation Basis</p>
+                                </th>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                    <p class="TableHead">Start Bit</p>
+                                </th>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                    <p class="TableHead">Length</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">A</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Calculation method: CRC</p>
+                                    <p class="Table">Length: 8 Bits</p>
+                                    <p class="Table">Generator polynomial: x^8+x^5+x^3+x^2+x+1,
+							0b100101111</p>
+                                    <p class="Table">Initial value CRC:
+							0xFF</p>
+                                    <p class="Table">Input Data
+							Reflection: No</p>
+                                    <p class="Table">Result Data
+							Reflection: No</p>
+                                    <p class="Table">Final XOR Value:
+							0xFF</p>
+                                    <p class="Table">Data basis and order for the calculation (Input Byte Order): (Data Byte 1 + Data Byte 2
+								+ Data Byte 3 + Data Byte 4 + Data Byte 5 + Data Byte 6 + Data Byte 7 +
+							Source Address byte + PGN LSB + PGN second byte + PGN MSB)</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">8.1</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">8 bits</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">B</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Calculation method: CRC</p>
+                                    <p class="Table">Length: 8 Bits</p>
+                                    <p class="Table">Generator polynomial: x^8+x^5+x^3+x^2+x+1,
+							0b100101111</p>
+                                    <p class="Table">Initial value CRC:
+							0xFF</p>
+                                    <p class="Table">Input Data
+							Reflection: No</p>
+                                    <p class="Table">Result Data
+							Reflection: No</p>
+                                    <p class="Table">Final XOR Value:
+							0xFF</p>
+                                    <p class="Table">Data basis and order for the calculation (Input Byte Order): (Data Byte 2 + Data Byte 3
+								+ Data Byte 4 + Data Byte 5 + Data Byte 6 + Data Byte 7 + Data Byte 8 +
+							Source Address byte + PGN LSB + PGN second byte + PGN MSB)</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">1.1</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">8 bits</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">C</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Calculation method: Bitshift and bitmask</p>
+                                    <p class="Table">Length: 4 Bits</p>
+                                    <p class="Table">Calculation:</p>
+                                    <p class="Table">Checksum = (Byte1 +
+								Byte2 + Byte3 + Byte4 + Byte5 + Byte6 + Byte7 + (message counter &amp; 0Fh) +
+								message ID low byte + message ID mid low byte + message ID mid high byte +
+							message ID high byte)</p>
+                                    <p class="Table">Checksum = ((Checksum &gt;&gt; 4) +
+							Checksum) &amp; 0Fh</p>
+                                    <p class="Table">Affected PGs: XBR, AEBS2, SAS, CN</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">8.5</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">4 bits</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">D</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Calculation method: Bitshift and bitmask</p>
+                                    <p class="Table">Length: 8 Bits</p>
+                                    <p class="Table">Calculation:</p>
+                                    <p class="Table">Checksum = (Byte1 +
+								Byte2 + Byte3 + Byte4 + Byte5 + Byte6 + Byte7 + message ID low byte + message
+							ID mid low byte + message ID mid high byte + message ID high byte)</p>
+                                    <p class="Table">Affected PGs: ENGSC, ENGSA</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">8.1</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">8 bits</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="Table">E</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="Table">Calculation method: Bitshift and bitmask</p>
+                                    <p class="Table">Length: 4 Bits</p>
+                                    <p class="Table">Other: 0xFF stands for „Not Available“.
+							Maximum value is 7</p>
+                                    <p class="Table">Calculation:</p>
+                                    <p class="Table">Checksum = (Byte1 +
+								Byte2 + Byte3 + Byte4 + Byte5 + Byte6 + Byte7 + (message counter &amp; 0Fh) +
+								message ID low byte + message ID mid low byte + message ID mid high byte +
+							message ID high byte)</p>
+                                    <p class="Table">Checksum =
+								(((Checksum &gt;&gt; 6) &amp; 03h) + (Checksum &gt;&gt;3) + Checksum) &amp;
+							07h</p>
+                                    <p class="Table">Affected PGs: TSC1, TCI, PTODE</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="Table">8.5</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                    <p class="Table">4 bits</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>The following table describes the position and the maximum value of the message counters. The position and the maximum value are always indicated with a lower case letter.</p>
+                <div>
+                    <table style="mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');margin-left: 0;margin-right: auto;" class="TableStyle_vTable" cellspacing="0">
+                        <col class="TableStyle-vTable-Column-Column1" />
+                        <col class="TableStyle-vTable-Column-Column1" />
+                        <col class="TableStyle-vTable-Column-Column1" />
+                        <col class="TableStyle-vTable-Column-Column1" />
+                        <thead>
+                            <tr class="TableStyle-vTable-Head-Header1">
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                    <p class="TableHead">Name</p>
+                                </th>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                    <p class="TableHead">Start Bit</p>
+                                </th>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                    <p class="TableHead">Length</p>
+                                </th>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                    <p class="TableHead">Maximum Value</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">a</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">7.5</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">4 Bits</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">15 / 0xF</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">b</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">5.5</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">4 Bits</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">15 / 0xF</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">c</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">2.1</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">4 Bits</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">15 / 0xF</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">d</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">8.1</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">4 Bits</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">15 / 0xF</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">e</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">1.5</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">4 Bits</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">15 / 0xF</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="Table">f</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="Table">8.1</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="Table">4 Bits</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                    <p class="Table">7 (15/0xF = „Not Available“)</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                    <p class="Table">
+                                        <img src="../../../../Resources/vImages/vInfo.png" style="width: 48px;height: 45px;" title="Note" alt="Note" />
+                                    </p>
+                                </td>
+                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                    <p class="TableSymbolHead">Note</p>
+                                    <p class="Table">Up to and including <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> 15, five messages (0, 1024, 2816, 61469, 61483) have already been handled by the interaction layer. In the meantime, the Digital Annex contains over 200 messages that must be provided with a checksum and a message counter. For this reason, the support of the interaction layer has been changed. The messages with PGN 0, 64899 and 64932 are now provided with the calculation rule <span class="bold">Ef</span>. Messages with PG 1024, 2816, 61469 and 61483 are assigned <span class="bold">Cd</span>.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <h2 class="SectionMain">Fault Injection</h2>
+                    <p>For fault injection you have two possibilities. With the function <a href="../../../CAPLFunctions/J1939/J1939InteractionLayer/Functions/CAPLfunctionJ1939ILManipulateMessage.htm" class="SourceCode">J1939ILManipulateMessage</a> you can overwrite the checksum and the message counter of the interaction layer. This function is also available in the test environment. If you do not depend on the test environment and only want to manipulate messages in the simulation node, you can use the <a href="../../../CAPLFunctions/J1939/J1939InteractionLayer/Functions/CAPLfunctionJ1939ILOnTxPrepare.htm" class="SourceCode">J1939ILOnTxPrepare</a> function as a second option, which offers you more flexibility than the first variant.</p>
+                    <div>
+                        <h2 class="SectionSub">Manipulation of Data with J1939ILManipulateMessage</h2>
+                        <p>The fault injection by means of <a href="../../../CAPLFunctions/J1939/J1939InteractionLayer/Functions/CAPLfunctionJ1939ILManipulateMessage.htm" class="SourceCode">J1939ILManipulateMessage</a> has the advantage that you can use it in the test environment.</p>
+                        <p class="SourceCode">// Manipulate the message with PGN=0xF123 (DCDC40S)<br />// Checksum is located in the byte 7, counter is located in the 4 highest bits of the byte 6<br />on start<br />{<br />&#160;&#160;qword filterMask, filterValue, dataMask,  dataValue;<br /><br />&#160;&#160;//Apply filter to bytes 0, 1, 2, 3<br />&#160;&#160;filterMask  = 0x00000000FFFFFFFFLL;<br />&#160;&#160;//Expected values are 0x01, 0x02, 0x03, 0x04<br />&#160;&#160;filterValue = 0x0000000004030201LL;<br />&#160;&#160;//Manipulate bytes 6 (only 4 highest bits) and 7<br />&#160;&#160;dataMask    = 0xFFF0000000000000LL;<br />&#160;&#160;//Set 4 highest bits of the byte 6 to 0x4 (wrong counter) and byte 7 to 0xFA (wrong checksum)<br />&#160;&#160;dataValue   = 0xFA40000000000000LL;<br />&#160;&#160;//Manipulate data if the values of bytes 0, 1, 2, 3 meet the criteria<br />&#160;&#160;J1939ILManipulateMessage( 0xF123, 0xFF, filterMask, filterValue, dataMask, dataValue);<br />}</p>
+                    </div>
+                    <div>
+                        <h2 class="SectionSub">Manipulation of Data with J1939ILOnTxPrepare</h2>
+                        <p class="SourceCode">Long J1939ILOnTxPrepare(pg * txPG)<br />{<br />&#160;&#160;byte msgCounter;<br />&#160;&#160;switch(txPG.pgn)<br />&#160;&#160;{<br />&#160;&#160;&#160;&#160;// Manipulate PG DCDC40S (PGN=0xF123)<br />&#160;&#160;&#160;&#160;// Checksum is located in the byte 7, counter is located in the 4 highest bits of the byte 6<br />&#160;&#160;&#160;&#160;case 0xF123:                           // PG has validation scheme 'Aa'<br />&#160;&#160;&#160;&#160;&#160;&#160;msgCounter = txPG.byte(6) &gt;&gt; 4;     // read current message counter value<br />&#160;&#160;&#160;&#160;&#160;&#160;msgCounter = msgCounter &lt;&lt; 1;       // manipulate counter<br />&#160;&#160;&#160;&#160;&#160;&#160;txPG.byte(6) &amp;= ~(0xF0);            // clear old message counter bits<br />&#160;&#160;&#160;&#160;&#160;&#160;txPG.byte(6) |= (msgCounter &lt;&lt; 4);  // set new message counter bits<br />&#160;&#160;&#160;&#160;&#160;&#160;txPG.byte(7) = txPG.byte(7) &gt;&gt; 1;   // manipulate checksum value<br />&#160;&#160;&#160;&#160;&#160;&#160;break;<br />&#160;&#160;&#160;default:<br />&#160;&#160;&#160;&#160;break;<br />&#160;&#160;}<br />&#160;&#160;return 1;<br />}</p>
+                    </div>
+                </div>
+                <p class="LinkList">&#160;</p>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="FooterWhite">
+                <table class="FooterWhite" style="border-collapse: collapse;margin-left: auto;margin-right: auto;">
+                    <col style="width: 70px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col style="width: 16px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="buttons popup-container clearfix topicToolbarProxy topicToolbarProxyFooter _Skins_HTML5TopicToolbar mc-component nocontent">
+                                    <div class="button-group-container-left">
+                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo"><a href="../../../Shared/HowToUseOnlineHelp.htm" title="Tips for using the help" alt="Tips for using the help"><img src="../../../../Resources/vImages/vBackstage/vHelpInfo.png" /></a>
+                                </p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo" style="text-align: right;"><span class="mc-variable Vector.BuildTime variable">2024-04-8T20:56:42</span>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <table style="width: 100%;border-collapse: separate;border-spacing: 3px 0px;margin-left: auto;margin-right: auto;caption-side: top;">
+                <col />
+                <col />
+                <col />
+                <col data-mc-conditions="BuildProcess.HTML5Link" />
+                <tbody>
+                    <tr>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;">
+                            <p class="vec_Footer">©&#160;Vector Informatik GmbH</p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;text-align: right;">
+                            <p class="vec_FooterBold">
+                                <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE&#160;Product Families</MadCap:conditionalText> Version <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.VectorTestUnitRunner">18</MadCap:conditionalText></p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="../../../Shared/ContactCopyrightLicense.htm" class="vec_Footer MCXref xref xrefvec_Footer">Contact/Copyright/License</a>
+                            </p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="https://www.vector.com/int/en/company/get-info/privacy-policy/" target="_blank" class="vec_Footer">Data Privacy Notice</a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

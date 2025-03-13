@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="CANoeDEFamily.xml" data-mc-path-to-help-system="../../../../../" data-mc-conditions="Targets.CANalyzer,Targets.vTESTstudio,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../Skins/Favicons/favicon-16x16.png" /><title>Data Types for Variables</title>
+        <link href="../../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Resources/Stylesheets/vTableMasterPageHeader.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../../Resources/Stylesheets/vStylesheet.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../../Resources/Stylesheets/vTable.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../../Resources/Stylesheets/vTableSymbol.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapGlobal.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapDom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapUtilities.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapXhr.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTextEffects.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSlideshow.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMessageBus.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMessageBus.CrossFrame.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapDefault.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMediaQueries.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapAccessibility.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapHelpSystem.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapAliasFile.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopicFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapFeedbackHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSkinHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.Breadcrumbs.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.MiniToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.SideMenu.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapIndex.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapGlossary.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapParser.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSearch.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapNavigateTopics.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapLms.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapELearning.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopic.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMicroContentComponent.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSearchHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopicElements.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTriPane.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/jscript" src="../../../../Resources/vScripts/SyntaxHighlighting.js">
+        </script>
+        <script type="text/jscript" src="../../../../Resources/vScripts/TabSwitch.js">
+        </script>
+        <script type="text/javascript" src="../../../../Resources/vScripts/Vector.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../../../CANoeDEFamily.htm#Topics/Shared/CAPL/General/DataTypesForVariables.htm">Open topic with navigation</a>
+        </p>
+        <div class="Body">
+            <div role="main" id="mc-main-content">
+                <div>
+                    <p class="StructurePath"><a href="../CAPLIntroduction.htm" class="StructurePath">CAPL Introduction</a> » <span class="mc-variable System.Title variable">Data Types for Variables</span></p>
+                    <h1><span class="mc-variable System.Title variable">Data Types for Variables</span>
+                    </h1>
+                    <p class="MenuPath">&#160;</p>
+                    <p class="ToolAvailability" data-mc-conditions="BuildProcess.ToolAvailability"><a href="../../FeatureAvailability.htm" class="red" title="Feature availabilty for your product">Valid&#160;for</a>:&#160;&#160;CANoe&#160;DE<a name="aanchor9085"></a><MadCap:concept term="SFCANoeDE" />&#160;&#160;•&#160;&#160;CANoe:lite&#160;DE<a name="aanchor9086"></a><MadCap:concept term="SFCANoeLiteDE" />&#160;&#160;•&#160;&#160;CANoe4SW&#160;DE<a name="aanchor9087"></a><MadCap:concept term="SFCANoe4SWDE" />&#160;&#160;•&#160;&#160;CANoe4SW:lite&#160;DE<a name="aanchor9088"></a><MadCap:concept term="SFCANoe4SWLiteDE" /></p>
+                    <p class="AutoSearchFilterConcepts"><a name="aanchor9089"></a>
+                        <MadCap:concept term="SFCore" />
+                    </p>
+                    <p class="IndexConcept"><a name="kanchor2802"></a>
+                    </p>
+                </div>
+                <p>A CAPL <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">program</MadCap:conditionalText> consists of two parts:</p>
+                <ul>
+                    <li><a href="VariablesDeclarationInitialization.htm">Declaration of global variables</a>
+                    </li>
+                    <li><a href="Functions.htm">Declaration of user-defined functions</a> and <a href="EventProceduresOverview.htm">event procedures</a></li>
+                </ul>
+                <p>The following data types for variables are available. They can already be initialized in the declaration.</p>
+                <p>Integers and floating point numbers are used as in other programming languages. They are compatible with one another, and arithmetic is performed with 32 bit resolution for integers and 80 bit resolution for floating point numbers.</p>
+                <div>
+                    <table style="width: 100%;mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                        <col />
+                        <thead>
+                            <tr>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                    <p class="TableHead">Scalar Data Types</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <ul>
+                                        <li>Integers in form of<br /><span class="SourceCode">byte&#160;(unsigned, 1 Byte)</span><br /><span class="SourceCode">word&#160;(unsigned, 2 Byte)</span><br /><span class="SourceCode">dword&#160;(unsigned, 4 Byte)</span><br /><span class="SourceCode">int&#160;(signed, 2 Byte)</span><br /><span class="SourceCode">long&#160;(signed, 4 Byte)</span><br /><a href="64BitDatatypes.htm" class="SourceCode">int64</a> <span class="SourceCode">(signed, 8 Byte)</span><br /><a href="64BitDatatypes.htm" class="SourceCode">qword</a> <span class="SourceCode">(unsigned, 8 Byte)</span></li>
+                                        <li>Individual character<br /><span class="SourceCode">char&#160;(1 Byte)</span></li>
+                                        <li>Floating point numbers<br /><span class="SourceCode">float&#160;(8 Byte)</span><br /><span class="SourceCode">double&#160;(8 Byte)</span></li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="TableHead"><a href="Structures.htm" class="red">Self Defined Structures</a>
+                                    </p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <ul>
+                                        <li><span class="SourceCode">struct</span>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="TableHead"><a href="EnumerationTypes.htm" class="red">Enumeration Types</a>
+                                    </p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <ul>
+                                        <li><span class="SourceCode">enum</span>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="TableHead"><a href="AssociativeFields.htm" class="red">Associative Fields</a>
+                                    </p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <ul>
+                                        <li><span class="SourceCode">int m[float]</span>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="TableHead"><a name="Objects" id="Objects"></a>Objects</p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p>The following objects are <a href="Keywords.htm">keywords</a>.</p>
+                                    <ul>
+                                        <li class="Bold">A429</li>
+                                        <li class="Indent"><a href="../../../CAPLFunctions/A429/CAPLfunctionsA429DefineARINCword.htm">a429word</a>
+                                        </li>
+                                        <li class="Indent"><a href="../../../CAPLFunctions/A429/CAPLfunctionsA429ChannelReconfig.htm">a429settings</a>
+                                        </li>
+                                        <li class="Bold">AFDX</li>
+                                        <li class="Indent"><a href="../../../CANoeCANalyzer/AFDX/capl/afdxDefineAFDXmessage.htm#CreateAFDXMessageObject">a664Message</a>
+                                        </li>
+                                        <li class="Indent"><a href="../../../CANoeCANalyzer/AFDX/capl/afdxDefineAFDXframe.htm">a664Frame</a>
+                                        </li>
+                                        <li><span class="bold">CAN/LIN messages</span>
+                                            <br />CAN messages to be transmitted on the bus by the CAPL <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">program</MadCap:conditionalText> are declared with <a href="DeclarationOfMessages.htm" class="bold">message</a>.</li>
+                                        <li class="Indent"><a href="../../../CAPLFunctions/CAN/CAPLfunctionMessageSelectors.htm">message</a>
+                                        </li>
+                                        <li class="Indent"><a href="DataTypesForVariablesMultiplexedMessage.htm">multiplexed_message</a>
+                                        </li>
+                                        <li class="Indent"><a href="../../../CAPLFunctions/LIN/Selectors/CAPLfunctionLINMessage.htm">linFrame</a>
+                                        </li>
+                                        <li><a name="Database" id="Database"></a><span class="bold">Database definition</span>
+                                        </li>
+                                        <p>Definitions are no concrete objects with values, but simply descriptions. To pass the variable to a function, it must first refer to a database object. This can be done by an assignment (e.g., a test unit parameter) or a <span class="bold">lookup</span> function call.</p>
+                                        <p class="Bold">Example:</p>
+                                        <p class="SourceCode">void function1(dbMsg * msgDef)<br />{<br />&#160;&#160;...<br />}<br /><br />void function2()<br />{<br />&#160;&#160;dbMsg * msgDefinition; // variable of database definition type<br />&#160;&#160;msgDefinition = ABSdata; // assign message definition to variable<br />&#160;&#160;function1(msgDefinition); // commit variable to function1<br /><br />&#160;&#160;// lookup function call<br />&#160;&#160;msgDefinition = lookupMessage("EngineData"); // pass message definition to variable<br />&#160;&#160;function1(msgDefinition); // commit variable to function1<br />}</p>
+                                    </ul>
+                                    <ul>
+                                        <li class="Indent"><a href="../../../CAPLFunctions/Other/Functions/CAPLfunctionlookupMessage.htm">dbMsg *</a>
+                                        </li>
+                                        <li class="Indent"><a href="../../../CAPLFunctions/Other/Functions/CAPLfunctionlookupNode.htm">dbNode *</a>
+                                        </li>
+                                        <li class="Indent"><a href="../../../CAPLFunctions/Other/Functions/CAPLfunctionlookupPdu.htm">dbPdu *</a>
+                                        </li>
+                                        <li class="Indent"><a href="../../../CAPLFunctions/Other/Functions/CAPLfunctionlookupFrFrame.htm">dbFrFrame *</a>
+                                        </li>
+                                        <li class="Indent"><a href="../../../CAPLFunctions/Other/Functions/CAPLfunctionlookupFrPDU.htm">dbFrPdu *</a>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li><a href="../../../CANoeCANalyzer/Diagnostics/Analysis/DiagnosticsDiagnosticsObjectsInCAPL.htm" class="bold">Diagnostics messages</a>
+                                        </li>
+                                        <li class="Indent"><a href="../../../CAPLFunctions/ObjectOrientedProg/CAPLfunctionsOOPDiagRequest.htm">diagRequest</a>
+                                        </li>
+                                        <li class="Indent">
+                                            <p><a href="../../../CAPLFunctions/ObjectOrientedProg/CAPLfunctionsOOPDiagResponse.htm">diagResponse</a>
+                                            </p>
+                                        </li>
+                                        <div data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">
+                                            <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                                                <col class="TableStyle-vTableSymbol-Column-Column1" />
+                                                <col class="TableStyle-vTableSymbol-Column-Column2" />
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                                            <p class="Table">
+                                                                <img src="../../../../Resources/vImages/vInfo.png" style="width: 48px;height: 45px;" title="Note" alt="Note" />
+                                                            </p>
+                                                        </td>
+                                                        <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                                            <p class="TableSymbolHead">Note</p>
+                                                            <p class="Table">When editing CAPL files containing variables of type <span class="bold">diagRequest </span>or <span class="bold">diagResponse</span>, you have to note the following regarding the service qualifiers:</p>
+                                                            <ul>
+                                                                <li>if <span class="bold">CAPL <a href="Keywords.htm">keywords</a></span> occur, you have  to put the service qualifiers <span class="bold">always</span> in quotation marks:<br />E.G. <span class="SourceCode">"START_SESSION::DEFAULT_SESSION::Start"</span></li>
+                                                                <li>up to <span class="Product">CANoe</span> <span class="bold">&lt; 7.0</span> you have to put service qualifiers longer than <span class="bold">50</span> characters generally in quotation marks.</li>
+                                                                <li>since <span class="Product">CANoe</span> <span class="bold">7.0</span> you have to put service qualifiers longer than <span class="bold">128</span> characters generally in quotation marks.</li>
+                                                            </ul>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </ul>
+                                    <ul>
+                                        <li data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family"><span class="bold">FlexRay</span>
+                                        </li>
+                                        <li class="Indent" data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family"><a href="../../../CAPLFunctions/FlexRay/Objects/CAPLfunctionFRFrame.htm">FRFrame</a>
+                                        </li>
+                                        <li class="Indent" data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family"><a href="../../../CAPLFunctions/FlexRay/Objects/CAPLfunctionFrPDU.htm">FRPDU</a>
+                                        </li>
+                                        <li class="Indent" data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family"><a href="../../../CAPLFunctions/FlexRay/Objects/CAPLfunctionFRConfiguration.htm">FRConfiguration</a>
+                                        </li>
+                                        <li data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family"><span class="bold">MOST messages</span>
+                                        </li>
+                                        <li class="Indent" data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family"><a href="../../../CAPLFunctions/MOST/Selectors/CAPLfunctionMOSTSelectors.htm">mostMessage</a>
+                                        </li>
+                                        <li class="Indent" data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family"><a href="../../../CAPLFunctions/MOST/Selectors/CAPLfunctionMOSTSelectors.htm">mostAmsMessage</a>
+                                        </li>
+                                        <li class="Indent" data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family"><a href="../../../CAPLFunctions/MOST/Selectors/CAPLfunctionMOSTSelectors.htm">mostRawMessage</a>
+                                        </li>
+                                        <li><a href="../../../CAPLFunctions/Other/Objects/CAPLfunctionPDU.htm" class="bold">PDUs</a>
+                                        </li>
+                                        <li><span class="bold">Signals from databases</span>
+                                        </li>
+                                        <li class="Indent"><a href="../../../CAPLFunctions/Other/Functions/CAPLfunctionlookupSignal.htm">Signal *</a>
+                                        </li>
+                                        <li><a href="../../../CANoeCANalyzer/Ethernet/ILSomeIP/ILSomeIPServiceSignals.htm" class="bold">SOME/IP Service Signals</a>
+                                        </li>
+                                        <li class="Indent"><a href="../../../CAPLFunctions/Other/Functions/CAPLfunctionlookupServiceSignal.htm">serviceSignal *</a>
+                                        </li>
+                                        <li class="Indent"><a href="../../../CAPLFunctions/Other/Functions/CAPLfunctionlookupServiceSignalData.htm">serviceSignalData *</a>
+                                        </li>
+                                        <li class="Indent"><a href="../../../CAPLFunctions/Other/Functions/CAPLfunctionlookupServiceSignalNumber.htm">serviceSignalNumber *</a>
+                                        </li>
+                                        <li class="Indent"><a href="../../../CAPLFunctions/Other/Functions/CAPLfunctionlookupServiceSignalString.htm">serviceSignalString *</a>
+                                        </li>
+                                        <li><span class="bold">System Variable Types</span><a name="SysVarType" id="SysVarType"></a>
+                                        </li>
+                                        <p class="Table">A variable with a system variable type as their data type, can refer to any system variable of this type.<br />They can be handed over to functions.</p>
+                                        <div>
+                                            <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                                                <col />
+                                                <col />
+                                                <thead>
+                                                    <tr>
+                                                        <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                                            <p class="TableHead">System Variable Type</p>
+                                                        </th>
+                                                        <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                                            <p class="TableHead">Function</p>
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                            <p class="Table">sysvar *</p>
+                                                        </td>
+                                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                            <p class="Table"><a href="../../../CAPLFunctions/SystemVariables/Functions/CAPLfunctionSysGetVariableTimeNS.htm">sysGetVariableTimeNS</a>
+                                                            </p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                            <p class="Table">sysvarInt *</p>
+                                                        </td>
+                                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                            <p class="Table"><a href="../../../CAPLFunctions/SystemVariables/Functions/CAPLfunctionSysGetVariableInt.htm">sysGetVariableInt</a>, <a href="../../../CAPLFunctions/SystemVariables/Functions/CAPLfunctionSysSetVariableInt.htm">sysSetVariableInt</a></p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                            <p class="Table">sysvarLongLong *</p>
+                                                        </td>
+                                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                            <p class="Table"><a href="../../../CAPLFunctions/SystemVariables/Functions/CAPLfunctionSysGetVariableLongLong.htm">sysGetVariableLongLong</a>, <a href="../../../CAPLFunctions/SystemVariables/Functions/CAPLfunctionSysSetVariableLongLong.htm">sysSetVariableLongLong</a></p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                            <p class="Table">sysvarFloat *</p>
+                                                        </td>
+                                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                            <p class="Table"><a href="../../../CAPLFunctions/SystemVariables/Functions/CAPLfunctionSysGetVariableFloat.htm">sysGetVariableFloat</a>, <a href="../../../CAPLFunctions/SystemVariables/Functions/CAPLfunctionSysSetVariableFloat.htm">sysSetVariableFloat</a></p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                            <p class="Table">sysvarString *</p>
+                                                        </td>
+                                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                            <p class="Table"><a href="../../../CAPLFunctions/SystemVariables/Functions/CAPLfunctionSysGetVariableString.htm">sysGetVariableString</a>, <a href="../../../CAPLFunctions/SystemVariables/Functions/CAPLfunctionSysSetVariableString.htm">sysSetVariableString</a></p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                            <p class="Table">sysvarIntArray *</p>
+                                                        </td>
+                                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                            <p class="Table"><a href="../../../CAPLFunctions/SystemVariables/Functions/CAPLfunctionSysGetVariableLongArray.htm">sysGetVariableLongArray</a>, <a href="../../../CAPLFunctions/SystemVariables/Functions/CAPLfunctionSysSetVariableLongArray.htm">sysSetVariableLongArray</a></p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                            <p class="Table">sysvarFloatArray *</p>
+                                                        </td>
+                                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                            <p class="Table"><a href="../../../CAPLFunctions/SystemVariables/Functions/CAPLfunctionSysGetVariableFloatArray.htm">sysGetVariableFloatArray</a>, <a href="../../../CAPLFunctions/SystemVariables/Functions/CAPLfunctionSysSetVariableFloatArray.htm">sysSetVariableFloatArray</a></p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                                            <p class="Table">sysvarData *</p>
+                                                        </td>
+                                                        <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                                            <p class="Table"><a href="../../../CAPLFunctions/SystemVariables/Functions/CAPLfunctionSysGetVariableData.htm">sysGetVariableData</a>, <a href="../../../CAPLFunctions/SystemVariables/Functions/CAPLfunctionSysSetVariableData.htm">sysSetVariableData</a></p>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <p class="Table"><a href="../../SystemVariables/SysVarProgramming.htm">Example for a use case within a test execution.</a>
+                                            </p>
+                                        </div>
+                                    </ul>
+                                    <ul>
+                                        <li><span class="bold">Timer</span>
+                                            <br />Variables of the type <span class="bold">timer </span>or <span class="bold">msTimer </span>are used to create time events.</li>
+                                        <li class="Indent"><a href="../../../CAPLFunctions/Other/EventProcedures/CAPLfunctionOnTimer.htm">timer (s)</a>
+                                        </li>
+                                        <li class="Indent"><a href="../../../CAPLFunctions/Other/EventProcedures/CAPLfunctionOnTimer.htm">msTimer (ms)</a>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="TableHead">Data Types for the <a href="../../../CANoeCANalyzer/CommunicationConcept/CC.htm" class="red">Communication Concept</a></p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                    <ul>
+                                        <li><a href="Structures.htm">Structures</a> and arrays that are defined in the communication description</li>
+                                        <li><a href="EnumerationTypes.htm">Enumeration types</a> that are defined in the communication description</li>
+                                        <li><a href="../../../CAPLFunctions/CommunicationObjects/Objects/CAPLfunctionCallContext.htm">callContext</a>
+                                        </li>
+                                        <li>References to endpoints, e.g. <a href="../../../CAPLFunctions/CommunicationObjects/Objects/CAPLfunctionServiceProviderRef.htm">serviceProviderRef</a>, <a href="../../../CAPLFunctions/CommunicationObjects/Objects/CAPLfunctionServiceConsumerRef.htm">serviceConsumerRef</a>, <a href="../../../CAPLFunctions/CommunicationObjects/Objects/CAPLfunctionEventProviderRef.htm">eventProviderRef</a>, <a href="../../../CAPLFunctions/CommunicationObjects/Objects/CAPLfunctionEventConsumerRef.htm">eventConsumerRef</a> (see also <span class="bold">Objects</span> on <a href="../../../CAPLFunctions/CommunicationObjects/CAPLfunctionsCOOverview.htm" class="MCXref xref">Communication Objects CAPL Functions</a>)</li>
+                                        <li>References to connections between endpoints, e.g. <a href="../../../CAPLFunctions/CommunicationObjects/Objects/CAPLfunctionProvidedServiceRef.htm">providedServiceRef</a>, <a href="../../../CAPLFunctions/CommunicationObjects/Objects/CAPLfunctionConsumedServiceRef.htm">consumedServiceRef</a>, <a href="../../../CAPLFunctions/CommunicationObjects/Objects/CAPLfunctionProvidedEventRef.htm">providedEventRef</a>, <a href="../../../CAPLFunctions/CommunicationObjects/Objects/CAPLfunctionConsumedEventRef.htm">consumedEventRef</a>, <a href="../../../CAPLFunctions/CommunicationObjects/Objects/CAPLfunctionTxSignalRef.htm">txSignalRef</a> (see also <span class="bold">Objects</span> on <a href="../../../CAPLFunctions/CommunicationObjects/CAPLfunctionsCOOverview.htm" class="MCXref xref">Communication Objects CAPL Functions</a>)</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="LinkList"><a href="DataTypeLimitations.htm" class="LinkList">Limitations of the Data Types</a>
+                </p>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="FooterWhite">
+                <table class="FooterWhite" style="border-collapse: collapse;margin-left: auto;margin-right: auto;">
+                    <col style="width: 70px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col style="width: 16px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="buttons popup-container clearfix topicToolbarProxy topicToolbarProxyFooter _Skins_HTML5TopicToolbar mc-component nocontent">
+                                    <div class="button-group-container-left">
+                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo"><a href="../../HowToUseOnlineHelp.htm" title="Tips for using the help" alt="Tips for using the help"><img src="../../../../Resources/vImages/vBackstage/vHelpInfo.png" /></a>
+                                </p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo" style="text-align: right;"><span class="mc-variable Vector.BuildTime variable">2024-04-8T20:56:42</span>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <table style="width: 100%;border-collapse: separate;border-spacing: 3px 0px;margin-left: auto;margin-right: auto;caption-side: top;">
+                <col />
+                <col />
+                <col />
+                <col data-mc-conditions="BuildProcess.HTML5Link" />
+                <tbody>
+                    <tr>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;">
+                            <p class="vec_Footer">©&#160;Vector Informatik GmbH</p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;text-align: right;">
+                            <p class="vec_FooterBold">
+                                <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE&#160;Product Families</MadCap:conditionalText> Version <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.VectorTestUnitRunner">18</MadCap:conditionalText></p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="../../ContactCopyrightLicense.htm" class="vec_Footer MCXref xref xrefvec_Footer">Contact/Copyright/License</a>
+                            </p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="https://www.vector.com/int/en/company/get-info/privacy-policy/" target="_blank" class="vec_Footer">Data Privacy Notice</a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

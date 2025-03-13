@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="" data-mc-search-type="Stem" data-mc-help-system-file-name="CANoeDEFamily.xml" data-mc-path-to-help-system="../../../../" data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../Skins/Favicons/favicon-16x16.png" /><title>FIBEX Database Formats</title>
+        <link href="../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Resources/Stylesheets/vTableMasterPageHeader.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../Resources/Stylesheets/vStylesheet.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../Resources/Stylesheets/vTable.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapGlobal.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapDom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapUtilities.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapXhr.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTextEffects.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSlideshow.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMessageBus.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMessageBus.CrossFrame.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapDefault.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMediaQueries.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAccessibility.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapHelpSystem.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAliasFile.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopicFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapFeedbackHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSkinHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.Breadcrumbs.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.MiniToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.SideMenu.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapIndex.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapGlossary.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapParser.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSearch.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapNavigateTopics.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapLms.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapELearning.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopic.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMicroContentComponent.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSearchHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopicElements.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTriPane.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/jscript" src="../../../Resources/vScripts/SyntaxHighlighting.js">
+        </script>
+        <script type="text/jscript" src="../../../Resources/vScripts/TabSwitch.js">
+        </script>
+        <script type="text/javascript" src="../../../Resources/vScripts/Vector.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../../CANoeDEFamily.htm#Topics/CANoeCANalyzer/FlexRay/FlexRayFIBEXdbFormats.htm">Open topic with navigation</a>
+        </p>
+        <div class="Body">
+            <div role="main" id="mc-main-content">
+                <div>
+                    <p class="StructurePath"><a href="FlexRay.htm" class="StructurePath">FlexRay</a> » <a href="FlexRayFIBEX.htm" class="StructurePath">FIBEX Support</a> » FIBEX Database Formats</p>
+                    <h1>FIBEX Database Formats</h1>
+                    <p class="MenuPath">&#160;</p>
+                    <p class="ToolAvailability" data-mc-conditions="BuildProcess.ToolAvailability"><a href="../../Shared/FeatureAvailability.htm" class="red" title="Feature availabilty for your product">Valid&#160;for</a>:&#160;&#160;CANoe&#160;DE<a name="aanchor13472"></a><MadCap:concept term="SFCANoeDE" />&#160;&#160;•&#160;&#160;CANoe4SW&#160;DE<a name="aanchor13473"></a><MadCap:concept term="SFCANoe4SWDE" /></p>
+                    <p class="AutoSearchFilterConcepts"><a name="aanchor13474"></a>
+                        <MadCap:concept term="SFCore" />
+                    </p>
+                    <p class="IndexConcept"><a name="kanchor4075"></a>
+                    </p>
+                </div>
+                <table style="mc-table-style: url('../../../Resources/Stylesheets/vTable.css');margin-left: 0;margin-right: auto;" class="TableStyle_vTable" cellspacing="0">
+                    <col />
+                    <col />
+                    <col />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <th colspan="4" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="TableHead">Supported Databases</p>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="TableHead">File Type</p>
+                            </th>
+                            <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="TableHead">Format Version</p>
+                            </th>
+                            <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="TableHead">Supported Protocols</p>
+                            </th>
+                            <th class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="TableHead">Note</p>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">DBC</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">—</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">CAN, J1939, AFDX...</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">PDU are not supported</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">LDF</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">1.3, 2.0, 2.1, 2.2, J2602, ISO17987:2015</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">LIN</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">—</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">NCF</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">1.3, 2.0, 2.1, 2.2, J2602, ISO17987:2015</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">LIN</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">—</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">FIBEX (XML)</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">1.1 - 2.x</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">CAN, FlexRay</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">PDU are not supported (Signal access via Frames)</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">FIBEX+ (XML)</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">—</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">FlexRay</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Legacy format, support of PDU</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">FIBEX (XML)</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">3.x - 4.x</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">CAN, CAN-FD, FlexRay, Ethernet</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">CAN/CAN-FD: PDU are not supported (Signal access via Frames)</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">ASNV (XML)</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">—</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">C2X</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">—</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">AUTOSAR (ARXML)</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">3.x</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">CAN, FlexRay</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Legacy support via internal converter</p>
+                                <p class="Table">CAN/CAN-FD: PDU are not supported (Signal access via Frames)</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">AUTOSAR (ARXML)</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">4.0.x, 4.1.x</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">CAN, CAN-FD, FlexRay, Ethernet, J1939</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">CAN/CAN-FD: PDU are not supported by default</p>
+                                <p class="Table">J1939: PDU are not supported</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">AUTOSAR Classic 4.2 and higher (ARXML)</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">4.2 - R20-11</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">CAN, CAN-FD, FlexRay, Ethernet, J1939</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">CAN/CAN-FD: PDU are supported by default</p>
+                                <p class="Table">J1939: PDU are not supported</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">AUTOSAR Classic</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">4.0.3 - R20-11</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">Ethernet</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Service-oriented communication (SOA)</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">AUTOSAR Adaptive</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">R19-03 - R20-11</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">Ethernet</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Service-oriented communication (SOA)</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                <p class="Table">FIBEX (XML)</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                <p class="Table">3.x - 4.x</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                <p class="Table">Ethernet</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                <p class="Table">Service-oriented communication (SOA)</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>&#160;</p>
+                <table style="mc-table-style: url('../../../Resources/Stylesheets/vTable.css');margin-left: 0;margin-right: auto;" class="TableStyle_vTable" cellspacing="0">
+                    <col />
+                    <col />
+                    <col />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <th colspan="4" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Native Support in Vector Tooling</p>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">Format</p>
+                            </th>
+                            <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">Bus</p>
+                            </th>
+                            <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p>
+                                    <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText>
+                                </p>
+                            </th>
+                            <th class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Note</p>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">FIBEX 2.0</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">CAN</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">Since version 8.0</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">—</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">FIBEX 3.1</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">CAN</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">Since version 8.0 SP2</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Support of CAN Frames with one PDUs.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">FIBEX 3.1</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">CAN</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">Since version 8.1 SP4</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Support of CAN Frames with several PDU.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">FIBEX 3.1</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">FR</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">Since version 7.5 SP2</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">—</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">FIBEX 4.0.1</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <ul>
+                                    <li>CAN</li>
+                                    <li>FR</li>
+                                    <li>Eth</li>
+                                </ul>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">Since version 8.0</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Only native support but no authoring tool.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">FIBEX 4.1.1</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">FR</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">Since version 8.5 SP4</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">—</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">AUTOSAR System Description 3.0.2</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <ul>
+                                    <li>CAN</li>
+                                    <li>FR</li>
+                                </ul>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">Since version 7.2 SP3</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">—</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">AUTOSAR System Description 3.1.4</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <ul>
+                                    <li>CAN</li>
+                                    <li>FR</li>
+                                </ul>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">Since version 7.5 SP1</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">—</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">AUTOSAR System Description 3.2</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <ul>
+                                    <li>CAN</li>
+                                    <li>FR</li>
+                                </ul>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">Since version 7.6 SP2</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">—</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">AUTOSAR System Description 4.0</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <ul>
+                                    <li>CAN</li>
+                                    <li>FR</li>
+                                </ul>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">Since version 8.0</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">—</p>
+                            </td>
+                        </tr>
+                        <tr data-mc-conditions="Targets.CANoe-DE-Family">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">AUTOSAR System Description 4.2.1</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <ul>
+                                    <li>CAN</li>
+                                    <li>FR</li>
+                                    <li>Eth</li>
+                                </ul>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">Since 8.5</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            </td>
+                        </tr>
+                        <tr data-mc-conditions="Targets.CANoe-DE-Family">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">AUTOSAR System Description 4.2.x</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <ul>
+                                    <li>CAN</li>
+                                    <li>FR</li>
+                                    <li>Eth</li>
+                                </ul>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">Since 9.0</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">—</p>
+                            </td>
+                        </tr>
+                        <tr data-mc-conditions="Targets.CANoe-DE-Family">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">AUTOSAR System Description 4.3</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <ul>
+                                    <li>CAN</li>
+                                    <li>FR</li>
+                                    <li>Eth</li>
+                                </ul>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">Since 10.0 SP3</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">—</p>
+                            </td>
+                        </tr>
+                        <tr data-mc-conditions="Targets.CANoe-DE-Family">
+                            <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                <p class="Table">AUTOSAR System Description 4.3.x</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                <ul>
+                                    <li>CAN</li>
+                                    <li>FR</li>
+                                    <li>Eth</li>
+                                </ul>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                <p class="Table">Since 10.0</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                <p class="Table">—</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>&#160;</p>
+                <table style="mc-table-style: url('../../../Resources/Stylesheets/vTable.css');margin-left: 0;margin-right: auto;" class="TableStyle_vTable" cellspacing="0">
+                    <col />
+                    <col />
+                    <col />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <th colspan="4" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="TableHead">Vector Database Authoring Tools</p>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="TableHead">Format</p>
+                            </th>
+                            <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="TableHead">Bus</p>
+                            </th>
+                            <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="TableHead">Tool</p>
+                            </th>
+                            <th class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="TableHead">Note</p>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">FIBEX 1.2.0a, 2.0.1, 3.0</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">FR</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">FIBEX Explorer Pro; part of CANoe since version 7.1</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">—</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">FIBEX 3.1</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">FR</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">FIBEX Explorer Pro; since CANoe 7.5 SP2</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">—</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">FIBEX 3.1</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">CAN</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">—</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">currently no authoring tool available.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">FIBEX 4.0.1</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">Eth</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">—</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">There is no editor / authoring tool for FIBEX 4.0/4.0.1 in planning.</p>
+                                <p class="Table">We will probably support AUTOSAR System Description files once they are specified for Ethernet.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">FIBEX 4.1.1</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">FR</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">FIBEX Explorer since CANoe 8.5 SP4 </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">—</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">FIBEX 1.1, 1.2, 2.0.0, 2.0.1</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">FR</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">Network Designer</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">*)</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">FIBEX 1.1, 1.2, 2.0.0</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">CAN</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">Network Designer</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">*)</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">FIBEX 1.1, 1.5, 2.0.0</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">LIN</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">Network Designer</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">*)</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">AUTOSAR System Description v3.0 (3.0.2, 3.14, 3.2)</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <ul>
+                                    <li>CAN</li>
+                                    <li>FR</li>
+                                </ul>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">AUTOSAR System Description Network Explorer of CANoe 7.6</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Schema version <span class="bold">3.1.4</span> and <span class="bold">3.2</span> are <span class="bold">fully supported</span>, other versions based on schema version <span class="bold">3.1.4</span> are partly supported, which means the explorer tries to read the files but may not support all aspects in the files.</p>
+                                <p class="Table">Versions based on <span class="bold">3.0.2 are read only</span>.</p>
+                                <p class="Table">Saving an existing AUTOSAR system description file will perform a loss-less save of all data, also non-communication related data.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">AUTOSAR System Description 2.0, 2.1, 3.0</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <ul>
+                                    <li>CAN</li>
+                                    <li>LIN</li>
+                                    <li>FR</li>
+                                </ul>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">Network Designer</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Only export to AUTOSAR ECU System Description 3.0 possible</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">AUTOSAR System Description 4.0</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <ul>
+                                    <li>CAN</li>
+                                    <li>FR</li>
+                                </ul>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">AUTOSAR System Description Network Explorer of CANoe 8.0SP3</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">—</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">AUTOSAR System Description 4.2.1</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <ul>
+                                    <li>CAN</li>
+                                    <li>FR</li>
+                                </ul>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">AUTOSAR System Description Explorer of CANoe 8.5</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">—</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">AUTOSAR System Description 4.2.x</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <ul>
+                                    <li>CAN</li>
+                                    <li>FR</li>
+                                    <li>Eth</li>
+                                </ul>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">AUTOSAR System Description Explorer 2 of CANoe 9.0</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <ul>
+                                    <li>PDU container support</li>
+                                    <li>For Eth the communication part is supported only.</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">AUTOSAR System Description 4.3</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <ul>
+                                    <li>CAN</li>
+                                    <li>FR</li>
+                                </ul>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">AUTOSAR System Description Explorer 2</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">—</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                <p class="Table">AUTOSAR System Description 4.3.x</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                <ul>
+                                    <li>CAN</li>
+                                    <li>FR</li>
+                                    <li>Eth</li>
+                                </ul>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                <p class="Table">AUTOSAR System Description Explorer 2 of CANoe 10.0</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                <p class="Table">—</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>*) NW Designer is no real editor like e.g. <span class="Product">FIBEX Explorer Pro</span>. Internally the NW Designer works with an own format. Only import/export is possible. When importing a file and exporting it again there may be modifications! FIBEX 2.0.0 is the standard defined by ASAM.</p>
+                <p class="LinkList">&#160;</p>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="FooterWhite">
+                <table class="FooterWhite" style="border-collapse: collapse;margin-left: auto;margin-right: auto;">
+                    <col style="width: 70px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col style="width: 16px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="buttons popup-container clearfix topicToolbarProxy topicToolbarProxyFooter _Skins_HTML5TopicToolbar mc-component nocontent">
+                                    <div class="button-group-container-left">
+                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo"><a href="../../Shared/HowToUseOnlineHelp.htm" title="Tips for using the help" alt="Tips for using the help"><img src="../../../Resources/vImages/vBackstage/vHelpInfo.png" /></a>
+                                </p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo" style="text-align: right;"><span class="mc-variable Vector.BuildTime variable">2024-04-8T20:56:42</span>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <table style="width: 100%;border-collapse: separate;border-spacing: 3px 0px;margin-left: auto;margin-right: auto;caption-side: top;">
+                <col />
+                <col />
+                <col />
+                <col data-mc-conditions="BuildProcess.HTML5Link" />
+                <tbody>
+                    <tr>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;">
+                            <p class="vec_Footer">©&#160;Vector Informatik GmbH</p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;text-align: right;">
+                            <p class="vec_FooterBold">
+                                <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE&#160;Product Families</MadCap:conditionalText> Version <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.VectorTestUnitRunner">18</MadCap:conditionalText></p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="../../Shared/ContactCopyrightLicense.htm" class="vec_Footer MCXref xref xrefvec_Footer">Contact/Copyright/License</a>
+                            </p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="https://www.vector.com/int/en/company/get-info/privacy-policy/" target="_blank" class="vec_Footer">Data Privacy Notice</a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

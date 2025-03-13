@@ -1,0 +1,3995 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Python.xml" data-mc-path-to-help-system="../../" data-mc-toc-path="Python" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../Skins/Favicons/browserconfig.xml" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../Skins/Favicons/favicon-16x16.png" /><title>
+   vector.canoe.tfs — Python API  documentation
+  </title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Resources/Stylesheets/vTableMasterPageHeader.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../Resources/Stylesheets/vStylesheet.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.needs-pie
+{
+	behavior: url('../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <style>/*&lt;meta /&gt;*/
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.needs-pie
+{
+	behavior: url('../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="_static/pygments.css" rel="stylesheet" type="text/css" />
+        <link href="_static/alabaster.css" rel="stylesheet" type="text/css" />
+        <link href="_static/custom.css" rel="stylesheet" type="text/css" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../Skins/Favicons/favicon-16x16.png" />
+        <link href="vector_canoe_measurement.html" rel="next" title="vector.canoe.measurement" />
+        <link href="vector_canoe_threading.html" rel="prev" title="vector.canoe.threading" />
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js">
+        </script>
+        <script src="_static/jquery.js">
+        </script>
+        <script src="_static/underscore.js">
+        </script>
+        <script src="_static/doctools.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapGlobal.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapDom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapUtilities.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapXhr.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapTextEffects.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapSlideshow.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapMessageBus.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapMessageBus.CrossFrame.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapDefault.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapMediaQueries.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAccessibility.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapHelpSystem.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAliasFile.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapTopicFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapFeedbackHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapSkinHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapToc.Breadcrumbs.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapToc.MiniToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapToc.SideMenu.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapIndex.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapGlossary.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapParser.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapSearch.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapNavigateTopics.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapLms.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapELearning.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapTopic.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapMicroContentComponent.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapSearchHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapTopicElements.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapTriPane.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/jscript" src="../Resources/vScripts/SyntaxHighlighting.js">
+        </script>
+        <script type="text/jscript" src="../Resources/vScripts/TabSwitch.js">
+        </script>
+        <script type="text/javascript" src="../Resources/vScripts/Vector.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../Python.htm#html/vector_canoe_tfs.html">Open topic with navigation</a>
+        </p>
+        <div class="Body">
+            <table style="mc-table-style: url('../Resources/Stylesheets/vTableMasterPageHeader.css');margin-left: auto;margin-right: 0;" class="TableStyle-vTableMasterPageHeader" cellspacing="0" data-mc-conditions="BuildProcess.CHMLink">
+                <col />
+                <tbody>
+                    <tr class="TableStyle-vTableMasterPageHeader-Body-Body1" style="height: 26px;">
+                        <td class="TableStyle-vTableMasterPageHeader-BodyA--Body1" style="background-color: #ffffff;padding-left: 0px;padding-right: 3px;padding-top: 0px;padding-bottom: 0px;">
+                            <div class="buttons popup-container clearfix topicToolbarProxy _Skins_HTML5TopicToolbar mc-component nocontent" style="text-align: right; mc-topic-toolbar-items: ExpandAll CollapseAll Print Back Forward Home QuickSearch RemoveHighlight;">
+                                <div class="button-group-container-left">
+                                    <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                        <div>
+                                            <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                <div class="button-icon"> </div>
+                                            </div>
+                                        </div>
+                                    </button>
+                                    <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                        <div>
+                                            <div role="img" class="button-icon-wrapper">
+                                                <div class="button-icon"> </div>
+                                            </div>
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div role="main" id="mc-main-content"><a name="aanchor3"></a>
+                <MadCap:concept term="SFApiPython" />
+                <div class="document">
+                    <div class="documentwrapper">
+                        <div class="body" role="main">
+                            <div class="section" id="vector-canoe-tfs">
+                                <h1>
+       vector.canoe.tfs
+       <a class="headerlink" href="#vector-canoe-tfs" title="Permalink to this headline">
+        ¶
+       </a></h1><span class="target" id="module-vector.canoe.tfs"></span>
+                                <p>
+       The package vector.canoe.tfs contains the Test Feature Set Python API.
+      </p>
+                                <dl class="py exception">
+                                    <dt class="sig sig-object py" id="vector.canoe.tfs.BreakOnFailException"><em class="property"><span class="pre">
+          exception
+         </span></em><span class="sig-name descname"><span class="pre">
+          BreakOnFailException
+         </span></span><a class="headerlink" href="#vector.canoe.tfs.BreakOnFailException" title="Permalink to this definition">
+         ¶
+        </a>
+                                    </dt>
+                                    <dd>
+                                        <p>
+         Bases:
+         <code class="xref py py-class docutils literal notranslate"><span class="pre">
+           Exception
+          </span></code></p>
+                                        <p>
+         Exception that breaks the test execution
+after a failed verdict.
+        </p>
+                                    </dd>
+                                </dl>
+                                <dl class="py exception">
+                                    <dt class="sig sig-object py" id="vector.canoe.tfs.TestAbortException"><em class="property"><span class="pre">
+          exception
+         </span></em><span class="sig-name descname"><span class="pre">
+          TestAbortException
+         </span></span><a class="headerlink" href="#vector.canoe.tfs.TestAbortException" title="Permalink to this definition">
+         ¶
+        </a>
+                                    </dt>
+                                    <dd>
+                                        <p>
+         Bases:
+         <code class="xref py py-class docutils literal notranslate"><span class="pre">
+           Exception
+          </span></code></p>
+                                        <p>
+         Exception that breaks the test execution
+after an error.
+        </p>
+                                    </dd>
+                                </dl>
+                                <dl class="py exception">
+                                    <dt class="sig sig-object py" id="vector.canoe.tfs.WaitAbortExceptionByMeasurementStop"><em class="property"><span class="pre">
+          exception
+         </span></em><span class="sig-name descname"><span class="pre">
+          WaitAbortExceptionByMeasurementStop
+         </span></span><a class="headerlink" href="#vector.canoe.tfs.WaitAbortExceptionByMeasurementStop" title="Permalink to this definition">
+         ¶
+        </a>
+                                    </dt>
+                                    <dd>
+                                        <p>
+         Bases:
+         <code class="xref py py-class docutils literal notranslate"><span class="pre">
+           Exception
+          </span></code></p>
+                                        <p>
+         Exception that breaks the test execution
+on measurement stop.
+        </p>
+                                    </dd>
+                                </dl>
+                                <dl class="py class">
+                                    <dt class="sig sig-object py" id="vector.canoe.tfs.Precondition"><em class="property"><span class="pre">
+          class
+         </span></em><span class="sig-name descname"><span class="pre">
+          Precondition
+         </span></span><a class="headerlink" href="#vector.canoe.tfs.Precondition" title="Permalink to this definition">
+         ¶
+        </a>
+                                    </dt>
+                                    <dd>
+                                        <p>
+         Bases:
+         <code class="xref py py-class docutils literal notranslate"><span class="pre">
+           object
+          </span></code></p>
+                                        <dl class="py method">
+                                            <dt class="sig sig-object py" id="vector.canoe.tfs.Precondition.test_case_precondition"><em class="property"><span class="pre">
+            static
+           </span></em><span class="sig-name descname"><span class="pre">
+            test_case_precondition
+           </span></span><span class="sig-paren">
+           (
+          </span><em class="sig-param"><span class="n"><span class="pre">
+             callback
+            </span></span><span class="p"><span class="pre">
+             :
+            </span></span><span class="n"><span class="pre">
+             Callable
+            </span><span class="p"><span class="pre">
+              [
+             </span></span><span class="p"><span class="pre">
+              ]
+             </span></span><span class="p"><span class="pre">
+              ,
+             </span></span><span class="pre">
+             bool
+            </span><span class="p"><span class="pre">
+              ]
+             </span></span></span></em><span class="sig-paren">
+           )
+          </span><a class="headerlink" href="#vector.canoe.tfs.Precondition.test_case_precondition" title="Permalink to this definition">
+           ¶
+          </a>
+                                            </dt>
+                                            <dd>
+                                                <p>
+           Sets a precondition to be fulfilled. This must be passed as a callback function with a Bool as return value. 
+The precondition must not set a verdict and the function must be called at the beginning of the test case.
+          </p>
+                                                <dl class="field-list simple">
+                                                    <dt class="field-odd">
+            Parameters
+           </dt>
+                                                    <dd class="field-odd">
+                                                        <p><strong>
+              callback
+             </strong>
+             (
+             <em>
+              Callable
+             </em><em>
+              [
+             </em><em>
+              [
+             </em><em>
+              ]
+             </em><em>
+              ,
+             </em><em>
+              bool
+             </em><em>
+              ]
+             </em>
+             ) – Callback function to execute the precondition. The return value type of the function must be int and returns a True for the positive case or a False for the negative case.
+            </p>
+                                                    </dd>
+                                                </dl>
+                                            </dd>
+                                        </dl>
+                                        <dl class="py method">
+                                            <dt class="sig sig-object py" id="vector.canoe.tfs.Precondition.test_sequence_precondition"><em class="property"><span class="pre">
+            static
+           </span></em><span class="sig-name descname"><span class="pre">
+            test_sequence_precondition
+           </span></span><span class="sig-paren">
+           (
+          </span><em class="sig-param"><span class="n"><span class="pre">
+             callback
+            </span></span><span class="p"><span class="pre">
+             :
+            </span></span><span class="n"><span class="pre">
+             Callable
+            </span><span class="p"><span class="pre">
+              [
+             </span></span><span class="p"><span class="pre">
+              ]
+             </span></span><span class="p"><span class="pre">
+              ,
+             </span></span><span class="pre">
+             bool
+            </span><span class="p"><span class="pre">
+              ]
+             </span></span></span></em><span class="sig-paren">
+           )
+          </span><a class="headerlink" href="#vector.canoe.tfs.Precondition.test_sequence_precondition" title="Permalink to this definition">
+           ¶
+          </a>
+                                            </dt>
+                                            <dd>
+                                                <p>
+           Sets a precondition to be fulfilled. This must be passed as a callback function with a Bool as return value.
+The precondition must not set a verdict and the function must be called at the beginning of the test sequence.
+          </p>
+                                                <dl class="field-list simple">
+                                                    <dt class="field-odd">
+            Parameters
+           </dt>
+                                                    <dd class="field-odd">
+                                                        <p><strong>
+              callback
+             </strong>
+             (
+             <em>
+              Callable
+             </em><em>
+              [
+             </em><em>
+              [
+             </em><em>
+              ]
+             </em><em>
+              ,
+             </em><em>
+              bool
+             </em><em>
+              ]
+             </em>
+             ) – Callback function to execute the precondition. The return value type of the function must be int and returns a True for the positive case or a False for the negative case.
+            </p>
+                                                    </dd>
+                                                </dl>
+                                            </dd>
+                                        </dl>
+                                    </dd>
+                                </dl>
+                                <dl class="py class">
+                                    <dt class="sig sig-object py" id="vector.canoe.tfs.Report"><em class="property"><span class="pre">
+          class
+         </span></em><span class="sig-name descname"><span class="pre">
+          Report
+         </span></span><a class="headerlink" href="#vector.canoe.tfs.Report" title="Permalink to this definition">
+         ¶
+        </a>
+                                    </dt>
+                                    <dd>
+                                        <p>
+         Bases:
+         <code class="xref py py-class docutils literal notranslate"><span class="pre">
+           object
+          </span></code></p>
+                                        <dl class="py class">
+                                            <dt class="sig sig-object py" id="vector.canoe.tfs.Report.MiscInfoList"><em class="property"><span class="pre">
+            class
+           </span></em><span class="sig-name descname"><span class="pre">
+            MiscInfoList
+           </span></span><a class="headerlink" href="#vector.canoe.tfs.Report.MiscInfoList" title="Permalink to this definition">
+           ¶
+          </a>
+                                            </dt>
+                                            <dd>
+                                                <p>
+           Bases:
+           <code class="xref py py-class docutils literal notranslate"><span class="pre">
+             object
+            </span></code></p>
+                                                <p>
+           A list of key value pairs, used by
+           <code class="xref py py-func docutils literal notranslate"><span class="pre">
+             add_misc_info_block()
+            </span></code>
+           .
+Contains the information of the information block.
+          </p>
+                                                <dl class="py method">
+                                                    <dt class="sig sig-object py" id="vector.canoe.tfs.Report.MiscInfoList.append"><span class="sig-name descname"><span class="pre">
+              append
+             </span></span><span class="sig-paren">
+             (
+            </span><em class="sig-param"><span class="n"><span class="pre">
+               name
+              </span></span><span class="p"><span class="pre">
+               :
+              </span></span><span class="n"><span class="pre">
+               str
+              </span></span></em>
+            ,
+            <em class="sig-param"><span class="n"><span class="pre">
+               description
+              </span></span><span class="p"><span class="pre">
+               :
+              </span></span><span class="n"><span class="pre">
+               str
+              </span></span></em><span class="sig-paren">
+             )
+            </span><a class="headerlink" href="#vector.canoe.tfs.Report.MiscInfoList.append" title="Permalink to this definition">
+             ¶
+            </a></dt>
+                                                    <dd>
+                                                        <p>
+             Append an entry to the info list.
+            </p>
+                                                        <dl class="field-list simple">
+                                                            <dt class="field-odd">
+              Parameters
+             </dt>
+                                                            <dd class="field-odd">
+                                                                <ul class="simple">
+                                                                    <li>
+                                                                        <p><strong>
+                  name
+                 </strong>
+                 (
+                 <em>
+                  str
+                 </em>
+                 ) – identifier
+                </p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p><strong>
+                  description
+                 </strong>
+                 (
+                 <em>
+                  str
+                 </em>
+                 ) – value
+                </p>
+                                                                    </li>
+                                                                </ul>
+                                                            </dd>
+                                                        </dl>
+                                                    </dd>
+                                                </dl>
+                                            </dd>
+                                        </dl>
+                                        <dl class="py method">
+                                            <dt class="sig sig-object py" id="vector.canoe.tfs.Report.add_comment"><em class="property"><span class="pre">
+            static
+           </span></em><span class="sig-name descname"><span class="pre">
+            add_comment
+           </span></span><span class="sig-paren">
+           (
+          </span><em class="sig-param"><span class="n"><span class="pre">
+             comment
+            </span></span><span class="p"><span class="pre">
+             :
+            </span></span><span class="n"><span class="pre">
+             str
+            </span></span></em><span class="sig-paren">
+           )
+          </span><a class="headerlink" href="#vector.canoe.tfs.Report.add_comment" title="Permalink to this definition">
+           ¶
+          </a>
+                                            </dt>
+                                            <dd>
+                                                <p>
+           With this function within a test case a commentary can be taken over into the report.
+This comment can relate to a message that can also be output in the report.
+The verdict of the test case is not influenced.
+          </p>
+                                                <dl class="field-list simple">
+                                                    <dt class="field-odd">
+            Parameters
+           </dt>
+                                                    <dd class="field-odd">
+                                                        <p><strong>
+              comment
+             </strong>
+             (
+             <em>
+              str
+             </em>
+             ) – Commentary to be taken over into the report.
+            </p>
+                                                    </dd>
+                                                </dl>
+                                            </dd>
+                                        </dl>
+                                        <dl class="py method">
+                                            <dt class="sig sig-object py" id="vector.canoe.tfs.Report.add_engineer_info"><em class="property"><span class="pre">
+            static
+           </span></em><span class="sig-name descname"><span class="pre">
+            add_engineer_info
+           </span></span><span class="sig-paren">
+           (
+          </span><em class="sig-param"><span class="n"><span class="pre">
+             name
+            </span></span><span class="p"><span class="pre">
+             :
+            </span></span><span class="n"><span class="pre">
+             str
+            </span></span></em>
+          ,
+          <em class="sig-param"><span class="n"><span class="pre">
+             description
+            </span></span><span class="p"><span class="pre">
+             :
+            </span></span><span class="n"><span class="pre">
+             str
+            </span></span></em><span class="sig-paren">
+           )
+          </span><a class="headerlink" href="#vector.canoe.tfs.Report.add_engineer_info" title="Permalink to this definition">
+           ¶
+          </a></dt>
+                                            <dd>
+                                                <p>
+           With this function, information pairs of name and description can be taken up into the report in the area TestEngineer.
+The area does not need to be created; it is automatically available in the report.
+          </p>
+                                                <dl class="field-list simple">
+                                                    <dt class="field-odd">
+            Parameters
+           </dt>
+                                                    <dd class="field-odd">
+                                                        <ul class="simple">
+                                                            <li>
+                                                                <p><strong>
+                name
+               </strong>
+               (
+               <em>
+                str
+               </em>
+               ) – Name of the engineer information
+              </p>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>
+                description
+               </strong>
+               (
+               <em>
+                str
+               </em>
+               ) – Description of the engineer information
+              </p>
+                                                            </li>
+                                                        </ul>
+                                                    </dd>
+                                                </dl>
+                                            </dd>
+                                        </dl>
+                                        <dl class="py method">
+                                            <dt class="sig sig-object py" id="vector.canoe.tfs.Report.add_extended_info"><em class="property"><span class="pre">
+            static
+           </span></em><span class="sig-name descname"><span class="pre">
+            add_extended_info
+           </span></span><span class="sig-paren">
+           (
+          </span><em class="sig-param"><span class="n"><span class="pre">
+             text_type
+            </span></span><span class="p"><span class="pre">
+             :
+            </span></span><span class="n"><span class="pre">
+             str
+            </span></span></em>
+          ,
+          <em class="sig-param"><span class="n"><span class="pre">
+             text
+            </span></span><span class="p"><span class="pre">
+             :
+            </span></span><span class="n"><span class="pre">
+             str
+            </span></span></em><span class="sig-paren">
+           )
+          </span><a class="headerlink" href="#vector.canoe.tfs.Report.add_extended_info" title="Permalink to this definition">
+           ¶
+          </a></dt>
+                                            <dd>
+                                                <p>
+           Function takes over information into the protocol that is not subject to processing by CANoe.
+          </p>
+                                                <dl class="field-list simple">
+                                                    <dt class="field-odd">
+            Parameters
+           </dt>
+                                                    <dd class="field-odd">
+                                                        <ul class="simple">
+                                                            <li>
+                                                                <p><strong>
+                text_type
+               </strong>
+               (
+               <em>
+                str
+               </em>
+               ) – may be “html” or “text”. Different types are ignored.
+              </p>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>
+                text
+               </strong>
+               (
+               <em>
+                str
+               </em>
+               ) – must be XML or XHTML if the type is “html”
+              </p>
+                                                            </li>
+                                                        </ul>
+                                                    </dd>
+                                                </dl>
+                                            </dd>
+                                        </dl>
+                                        <dl class="py method">
+                                            <dt class="sig sig-object py" id="vector.canoe.tfs.Report.add_external_reference"><em class="property"><span class="pre">
+            static
+           </span></em><span class="sig-name descname"><span class="pre">
+            add_external_reference
+           </span></span><span class="sig-paren">
+           (
+          </span><em class="sig-param"><span class="n"><span class="pre">
+             reference_type
+            </span></span><span class="p"><span class="pre">
+             :
+            </span></span><span class="n"><span class="pre">
+             str
+            </span></span></em>
+          ,
+          <em class="sig-param"><span class="n"><span class="pre">
+             title
+            </span></span><span class="p"><span class="pre">
+             :
+            </span></span><span class="n"><span class="pre">
+             str
+            </span></span></em>
+          ,
+          <em class="sig-param"><span class="n"><span class="pre">
+             reference
+            </span></span><span class="p"><span class="pre">
+             :
+            </span></span><span class="n"><span class="pre">
+             str
+            </span></span></em>
+          ,
+          <em class="sig-param"><span class="n"><span class="pre">
+             owner
+            </span></span><span class="p"><span class="pre">
+             :
+            </span></span><span class="n"><span class="pre">
+             Optional
+            </span><span class="p"><span class="pre">
+              [
+             </span></span><span class="pre">
+             str
+            </span><span class="p"><span class="pre">
+              ]
+             </span></span></span><span class="o"><span class="pre">
+             =
+            </span></span><span class="default_value"><span class="pre">
+             None
+            </span></span></em><span class="sig-paren">
+           )
+          </span><a class="headerlink" href="#vector.canoe.tfs.Report.add_external_reference" title="Permalink to this definition">
+           ¶
+          </a></dt>
+                                            <dd>
+                                                <p>
+           Function adds an external reference to the report.
+          </p>
+                                                <dl class="field-list simple">
+                                                    <dt class="field-odd">
+            Parameters
+           </dt>
+                                                    <dd class="field-odd">
+                                                        <ul class="simple">
+                                                            <li>
+                                                                <p><strong>
+                reference_type
+               </strong>
+               (
+               <em>
+                str
+               </em>
+               ) – may be “url” for any kinds of URLs, “doors” for links to DOORS, “easee” for links to eASEE
+              </p>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>
+                title
+               </strong>
+               (
+               <em>
+                str
+               </em>
+               ) – Text with which the link generated in the test report is displayed. If not indicated the URL indicated in reference is used
+              </p>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>
+                reference
+               </strong>
+               (
+               <em>
+                str
+               </em>
+               ) – The URL of the external resource, which is referenced.
+              </p>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>
+                owner
+               </strong>
+               (
+               <em>
+                str
+               </em><em>
+                ,
+               </em><em>
+                optional
+               </em>
+               ) – This attribute is intended to be used by applications which maintain links to external resources automatically so they can identify their external reference elements. E.g. the Test Automation Editor DOORS Extension marks its DOORS references with a specific value of this attribute., defaults to None
+              </p>
+                                                            </li>
+                                                        </ul>
+                                                    </dd>
+                                                </dl>
+                                            </dd>
+                                        </dl>
+                                        <dl class="py method">
+                                            <dt class="sig sig-object py" id="vector.canoe.tfs.Report.add_image"><em class="property"><span class="pre">
+            static
+           </span></em><span class="sig-name descname"><span class="pre">
+            add_image
+           </span></span><span class="sig-paren">
+           (
+          </span><em class="sig-param"><span class="n"><span class="pre">
+             description
+            </span></span><span class="p"><span class="pre">
+             :
+            </span></span><span class="n"><span class="pre">
+             str
+            </span></span></em>
+          ,
+          <em class="sig-param"><span class="n"><span class="pre">
+             file_name
+            </span></span><span class="p"><span class="pre">
+             :
+            </span></span><span class="n"><span class="pre">
+             str
+            </span></span></em><span class="sig-paren">
+           )
+          </span><a class="headerlink" href="#vector.canoe.tfs.Report.add_image" title="Permalink to this definition">
+           ¶
+          </a></dt>
+                                            <dt class="sig sig-object py"><em class="property"><span class="pre">
+            static
+           </span></em><span class="sig-name descname"><span class="pre">
+            add_image
+           </span></span><span class="sig-paren">
+           (
+          </span><em class="sig-param"><span class="n"><span class="pre">
+             description
+            </span></span><span class="p"><span class="pre">
+             :
+            </span></span><span class="n"><span class="pre">
+             str
+            </span></span></em>
+          ,
+          <em class="sig-param"><span class="n"><span class="pre">
+             file_name
+            </span></span><span class="p"><span class="pre">
+             :
+            </span></span><span class="n"><span class="pre">
+             str
+            </span></span></em>
+          ,
+          <em class="sig-param"><span class="n"><span class="pre">
+             width
+            </span></span><span class="p"><span class="pre">
+             :
+            </span></span><span class="n"><span class="pre">
+             str
+            </span></span></em>
+          ,
+          <em class="sig-param"><span class="n"><span class="pre">
+             height
+            </span></span><span class="p"><span class="pre">
+             :
+            </span></span><span class="n"><span class="pre">
+             str
+            </span></span></em><span class="sig-paren">
+           )
+          </span></dt>
+                                            <dd>
+                                            </dd>
+                                        </dl>
+                                        <dl class="py method">
+                                            <dt class="sig sig-object py" id="vector.canoe.tfs.Report.add_misc_info_block"><em class="property"><span class="pre">
+            static
+           </span></em><span class="sig-name descname"><span class="pre">
+            add_misc_info_block
+           </span></span><span class="sig-paren">
+           (
+          </span><em class="sig-param"><span class="n"><span class="pre">
+             title
+            </span></span><span class="p"><span class="pre">
+             :
+            </span></span><span class="n"><span class="pre">
+             str
+            </span></span></em>
+          ,
+          <em class="sig-param"><span class="n"><span class="pre">
+             info_list
+            </span></span><span class="p"><span class="pre">
+             :
+            </span></span><span class="n"><a class="reference internal" href="#vector.canoe.tfs.Report.MiscInfoList" title="vector.canoe.tfs.Report.MiscInfoList"><span class="pre">
+              vector.canoe.tfs.Report.MiscInfoList
+             </span></a></span></em><span class="sig-paren">
+           )
+          </span><a class="headerlink" href="#vector.canoe.tfs.Report.add_misc_info_block" title="Permalink to this definition">
+           ¶
+          </a></dt>
+                                            <dd>
+                                                <p>
+           Function generates a new information block for additional information pairs in the report.
+          </p>
+                                                <dl class="field-list simple">
+                                                    <dt class="field-odd">
+            Parameters
+           </dt>
+                                                    <dd class="field-odd">
+                                                        <ul class="simple">
+                                                            <li>
+                                                                <p><strong>
+                title
+               </strong>
+               (
+               <em>
+                str
+               </em>
+               ) – Title of the information block
+              </p>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>
+                info_list
+               </strong>
+               (
+               <a class="reference internal" href="#vector.canoe.tfs.Report.MiscInfoList" title="vector.canoe.tfs.Report.MiscInfoList"><em>
+                 MiscInfoList
+                </em></a>
+               ) – A
+               <a class="reference internal" href="#vector.canoe.tfs.Report.MiscInfoList" title="vector.canoe.tfs.Report.MiscInfoList"><code class="xref py py-class docutils literal notranslate"><span class="pre">
+                  MiscInfoList
+                 </span></code></a>
+               object containing key value pairs.
+              </p>
+                                                            </li>
+                                                        </ul>
+                                                    </dd>
+                                                </dl>
+                                            </dd>
+                                        </dl>
+                                        <dl class="py method">
+                                            <dt class="sig sig-object py" id="vector.canoe.tfs.Report.add_setup_info"><em class="property"><span class="pre">
+            static
+           </span></em><span class="sig-name descname"><span class="pre">
+            add_setup_info
+           </span></span><span class="sig-paren">
+           (
+          </span><em class="sig-param"><span class="n"><span class="pre">
+             name
+            </span></span><span class="p"><span class="pre">
+             :
+            </span></span><span class="n"><span class="pre">
+             str
+            </span></span></em>
+          ,
+          <em class="sig-param"><span class="n"><span class="pre">
+             description
+            </span></span><span class="p"><span class="pre">
+             :
+            </span></span><span class="n"><span class="pre">
+             str
+            </span></span></em><span class="sig-paren">
+           )
+          </span><a class="headerlink" href="#vector.canoe.tfs.Report.add_setup_info" title="Permalink to this definition">
+           ¶
+          </a></dt>
+                                            <dd>
+                                                <p>
+           With this function, information pairs of name and description can be taken up into the report in the area TestSetUp.
+The area does not need to be created; it is automatically available in the report.
+          </p>
+                                                <dl class="field-list simple">
+                                                    <dt class="field-odd">
+            Parameters
+           </dt>
+                                                    <dd class="field-odd">
+                                                        <ul class="simple">
+                                                            <li>
+                                                                <p><strong>
+                name
+               </strong>
+               (
+               <em>
+                str
+               </em>
+               ) – Name of the setup information
+              </p>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>
+                description
+               </strong>
+               (
+               <em>
+                str
+               </em>
+               ) – Description of the setup information
+              </p>
+                                                            </li>
+                                                        </ul>
+                                                    </dd>
+                                                </dl>
+                                            </dd>
+                                        </dl>
+                                        <dl class="py method">
+                                            <dt class="sig sig-object py" id="vector.canoe.tfs.Report.add_sut_info"><em class="property"><span class="pre">
+            static
+           </span></em><span class="sig-name descname"><span class="pre">
+            add_sut_info
+           </span></span><span class="sig-paren">
+           (
+          </span><em class="sig-param"><span class="n"><span class="pre">
+             name
+            </span></span><span class="p"><span class="pre">
+             :
+            </span></span><span class="n"><span class="pre">
+             str
+            </span></span></em>
+          ,
+          <em class="sig-param"><span class="n"><span class="pre">
+             description
+            </span></span><span class="p"><span class="pre">
+             :
+            </span></span><span class="n"><span class="pre">
+             str
+            </span></span></em><span class="sig-paren">
+           )
+          </span><a class="headerlink" href="#vector.canoe.tfs.Report.add_sut_info" title="Permalink to this definition">
+           ¶
+          </a></dt>
+                                            <dd>
+                                                <p>
+           With this function, information pairs of name and description can be taken up into the report in the area device to be tested (SUT).
+The area does not need to be created; it is automatically available in the report.
+          </p>
+                                                <dl class="field-list simple">
+                                                    <dt class="field-odd">
+            Parameters
+           </dt>
+                                                    <dd class="field-odd">
+                                                        <ul class="simple">
+                                                            <li>
+                                                                <p><strong>
+                name
+               </strong>
+               (
+               <em>
+                str
+               </em>
+               ) – Name of the SUT information
+              </p>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>
+                description
+               </strong>
+               (
+               <em>
+                str
+               </em>
+               ) – Description of the SUT information
+              </p>
+                                                            </li>
+                                                        </ul>
+                                                    </dd>
+                                                </dl>
+                                            </dd>
+                                        </dl>
+                                        <dl class="py method">
+                                            <dt class="sig sig-object py" id="vector.canoe.tfs.Report.add_window_capture"><em class="property"><span class="pre">
+            static
+           </span></em><span class="sig-name descname"><span class="pre">
+            add_window_capture
+           </span></span><span class="sig-paren">
+           (
+          </span><em class="sig-param"><span class="n"><span class="pre">
+             window
+            </span></span><span class="p"><span class="pre">
+             :
+            </span></span><span class="n"><span class="pre">
+             str
+            </span></span></em>
+          ,
+          <em class="sig-param"><span class="n"><span class="pre">
+             title
+            </span></span><span class="p"><span class="pre">
+             :
+            </span></span><span class="n"><span class="pre">
+             str
+            </span></span></em>
+          ,
+          <em class="sig-param"><span class="n"><span class="pre">
+             data
+            </span></span><span class="p"><span class="pre">
+             :
+            </span></span><span class="n"><span class="pre">
+             str
+            </span></span><span class="o"><span class="pre">
+             =
+            </span></span><span class="default_value"><span class="pre">
+             ''
+            </span></span></em>
+          ,
+          <em class="sig-param"><span class="n"><span class="pre">
+             file
+            </span></span><span class="p"><span class="pre">
+             :
+            </span></span><span class="n"><span class="pre">
+             str
+            </span></span><span class="o"><span class="pre">
+             =
+            </span></span><span class="default_value"><span class="pre">
+             ''
+            </span></span></em><span class="sig-paren">
+           )
+          </span><a class="headerlink" href="#vector.canoe.tfs.Report.add_window_capture" title="Permalink to this definition">
+           ¶
+          </a></dt>
+                                            <dd>
+                                                <p>
+           Function creates a screen capture of a Graphics, Statistics, Data, Trace or Panel window.
+The test case verdict is not affected.
+Window capture is not allowed in standalone mode.
+Errors on creating the window capture are reported as a warning in the test report.
+          </p>
+                                                <dl class="field-list simple">
+                                                    <dt class="field-odd">
+            Parameters
+           </dt>
+                                                    <dd class="field-odd">
+                                                        <ul class="simple">
+                                                            <li>
+                                                                <p><strong>
+                window
+               </strong>
+               (
+               <em>
+                str
+               </em>
+               ) – Name of the window to be captured (corresponds to the name of the corresponding node in the test setup)
+              </p>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>
+                title
+               </strong>
+               (
+               <em>
+                str
+               </em>
+               ) – Text heading that precedes the captured window image in the test report.
+              </p>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>
+                data
+               </strong>
+               – optional, defaults to “”. Applies only for the following windows:
+              </p>
+                                                            </li>
+                                                        </ul>
+                                                    </dd>
+                                                </dl>
+                                                <p>
+           Graphics Window
+List of signal, variable or diagnostic parameter names to be enabled for the sceen capture. If no name is defined, all currently visible curves are captured. Names must be separated with a semicolon. The following syntax is supported:
+Signals: [network::][node::][message::]SignalName
+Environment Variables: EnvVarName
+System Variables: sysvar::Namespace::SysVarName
+Diagnostic Parameter: [ecu::][service::][(reqest | response)::]ParameterName
+          </p>
+                                                <p>
+           It is possible to provide the name only. The first matching signal, variable or diagnostic parameter will be used. The test case verdict is not affected. Errors on creating the window capture are reported as a warning in the test report. Tip: Please refer to the “More object info” column in the Graphics Window to determine the full name.
+          </p>
+                                                <p>
+           Statistics Window
+Defines the tab page of the Statistics Window. If no page is not defined, the currently active page is captured.
+:type data: str, optional
+:param file: Name of the file into which the captured image is to be saved. If you do not specify a name, an automatic filename is generated. Existing files with the same name will be overwritten without confirmation., defaults to “”
+:type file: str, optional
+          </p>
+                                            </dd>
+                                        </dl>
+                                        <dl class="py method">
+                                            <dt class="sig sig-object py" id="vector.canoe.tfs.Report.file_name"><em class="property"><span class="pre">
+            static
+           </span></em><span class="sig-name descname"><span class="pre">
+            file_name
+           </span></span><span class="sig-paren">
+           (
+          </span><em class="sig-param"><span class="n"><span class="pre">
+             path
+            </span></span><span class="p"><span class="pre">
+             :
+            </span></span><span class="n"><span class="pre">
+             str
+            </span></span></em><span class="sig-paren">
+           )
+          </span>
+          →
+          <span class="pre">
+           None
+          </span><a class="headerlink" href="#vector.canoe.tfs.Report.file_name" title="Permalink to this definition">
+           ¶
+          </a></dt>
+                                            <dd>
+                                                <p>
+           Function sets the name of the report file using the user interface.
+To be effective, the function must be called in a test module/test unit before every other function that relates to the report and executed before every test case.
+If the report file name is modified, it is not be possible to open it via the CANoe user interface (test run dialog).
+          </p>
+                                                <dl class="field-list simple">
+                                                    <dt class="field-odd">
+            Parameters
+           </dt>
+                                                    <dd class="field-odd">
+                                                        <p><strong>
+              path
+             </strong>
+             (
+             <em>
+              str
+             </em>
+             ) – Name of the output file, possibly with path. Without path specification, the directory is used in which the configuration file is found. The extension .xml, .html, or .vtestreport is added automatically.
+            </p>
+                                                    </dd>
+                                                </dl>
+                                            </dd>
+                                        </dl>
+                                        <dl class="py method">
+                                            <dt class="sig sig-object py" id="vector.canoe.tfs.Report.test_case_description"><em class="property"><span class="pre">
+            static
+           </span></em><span class="sig-name descname"><span class="pre">
+            test_case_description
+           </span></span><span class="sig-paren">
+           (
+          </span><em class="sig-param"><span class="n"><span class="pre">
+             new_description
+            </span></span><span class="p"><span class="pre">
+             :
+            </span></span><span class="n"><span class="pre">
+             str
+            </span></span></em><span class="sig-paren">
+           )
+          </span><a class="headerlink" href="#vector.canoe.tfs.Report.test_case_description" title="Permalink to this definition">
+           ¶
+          </a>
+                                            </dt>
+                                            <dd>
+                                                <p>
+           The description of a test case is written into the test report.
+          </p>
+                                                <dl class="field-list simple">
+                                                    <dt class="field-odd">
+            Parameters
+           </dt>
+                                                    <dd class="field-odd">
+                                                        <p><strong>
+              new_description
+             </strong>
+             (
+             <em>
+              str
+             </em>
+             ) – The test case description.
+            </p>
+                                                    </dd>
+                                                </dl>
+                                            </dd>
+                                        </dl>
+                                        <dl class="py method">
+                                            <dt class="sig sig-object py" id="vector.canoe.tfs.Report.test_case_measured_value"><em class="property"><span class="pre">
+            static
+           </span></em><span class="sig-name descname"><span class="pre">
+            test_case_measured_value
+           </span></span><span class="sig-paren">
+           (
+          </span><em class="sig-param"><span class="n"><span class="pre">
+             semantic_name
+            </span></span><span class="p"><span class="pre">
+             :
+            </span></span><span class="n"><span class="pre">
+             str
+            </span></span></em>
+          ,
+          <em class="sig-param"><span class="n"><span class="pre">
+             value
+            </span></span><span class="p"><span class="pre">
+             :
+            </span></span><span class="n"><span class="pre">
+             Union
+            </span><span class="p"><span class="pre">
+              [
+             </span></span><span class="pre">
+             float
+            </span><span class="p"><span class="pre">
+              ,
+             </span></span><span class="pre">
+             int
+            </span><span class="p"><span class="pre">
+              ,
+             </span></span><span class="pre">
+             str
+            </span><span class="p"><span class="pre">
+              ]
+             </span></span></span></em>
+          ,
+          <em class="sig-param"><span class="n"><span class="pre">
+             unit
+            </span></span><span class="p"><span class="pre">
+             :
+            </span></span><span class="n"><span class="pre">
+             str
+            </span></span><span class="o"><span class="pre">
+             =
+            </span></span><span class="default_value"><span class="pre">
+             ''
+            </span></span></em><span class="sig-paren">
+           )
+          </span><a class="headerlink" href="#vector.canoe.tfs.Report.test_case_measured_value" title="Permalink to this definition">
+           ¶
+          </a></dt>
+                                            <dd>
+                                                <p>
+           Adds an entry in the measured values table for the specified parameter.
+          </p>
+                                                <dl class="field-list simple">
+                                                    <dt class="field-odd">
+            Parameters
+           </dt>
+                                                    <dd class="field-odd">
+                                                        <ul class="simple">
+                                                            <li>
+                                                                <p><strong>
+                semantic_name
+               </strong>
+               (
+               <em>
+                str
+               </em>
+               ) – Name of the measured value
+              </p>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>
+                value
+               </strong>
+               (
+               <em>
+                Union
+               </em><em>
+                [
+               </em><em>
+                float
+               </em><em>
+                ,
+               </em><em>
+                int
+               </em><em>
+                ,
+               </em><em>
+                str
+               </em><em>
+                ]
+               </em>
+               ) – The measured value
+              </p>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>
+                unit
+               </strong>
+               (
+               <em>
+                str
+               </em><em>
+                ,
+               </em><em>
+                optional
+               </em>
+               ) – The unit of the measured value
+              </p>
+                                                            </li>
+                                                        </ul>
+                                                    </dd>
+                                                </dl>
+                                            </dd>
+                                        </dl>
+                                        <dl class="py method">
+                                            <dt class="sig sig-object py" id="vector.canoe.tfs.Report.test_case_title"><em class="property"><span class="pre">
+            static
+           </span></em><span class="sig-name descname"><span class="pre">
+            test_case_title
+           </span></span><span class="sig-paren">
+           (
+          </span><em class="sig-param"><span class="n"><span class="pre">
+             new_title
+            </span></span><span class="p"><span class="pre">
+             :
+            </span></span><span class="n"><span class="pre">
+             str
+            </span></span></em><span class="sig-paren">
+           )
+          </span><a class="headerlink" href="#vector.canoe.tfs.Report.test_case_title" title="Permalink to this definition">
+           ¶
+          </a>
+                                            </dt>
+                                            <dd>
+                                                <p>
+           The title of a test case is written into the test report.
+          </p>
+                                                <dl class="field-list simple">
+                                                    <dt class="field-odd">
+            Parameters
+           </dt>
+                                                    <dd class="field-odd">
+                                                        <p><strong>
+              new_title
+             </strong>
+             (
+             <em>
+              str
+             </em>
+             ) – The test case title
+            </p>
+                                                    </dd>
+                                                </dl>
+                                            </dd>
+                                        </dl>
+                                        <dl class="py method">
+                                            <dt class="sig sig-object py" id="vector.canoe.tfs.Report.test_step"><em class="property"><span class="pre">
+            static
+           </span></em><span class="sig-name descname"><span class="pre">
+            test_step
+           </span></span><span class="sig-paren">
+           (
+          </span><em class="sig-param"><span class="n"><span class="pre">
+             step
+            </span></span><span class="p"><span class="pre">
+             :
+            </span></span><span class="n"><span class="pre">
+             str
+            </span></span><span class="o"><span class="pre">
+             =
+            </span></span><span class="default_value"><span class="pre">
+             ''
+            </span></span></em>
+          ,
+          <em class="sig-param"><span class="n"><span class="pre">
+             description
+            </span></span><span class="p"><span class="pre">
+             :
+            </span></span><span class="n"><span class="pre">
+             str
+            </span></span><span class="o"><span class="pre">
+             =
+            </span></span><span class="default_value"><span class="pre">
+             ''
+            </span></span></em>
+          ,
+          <em class="sig-param"><span class="n"><span class="pre">
+             level
+            </span></span><span class="p"><span class="pre">
+             :
+            </span></span><span class="n"><span class="pre">
+             int
+            </span></span><span class="o"><span class="pre">
+             =
+            </span></span><span class="default_value"><span class="pre">
+             0
+            </span></span></em>
+          ,
+          <em class="sig-param"><span class="n"><span class="pre">
+             table
+            </span></span><span class="p"><span class="pre">
+             :
+            </span></span><span class="n"><span class="pre">
+             Optional
+            </span><span class="p"><span class="pre">
+              [
+             </span></span><a class="reference internal" href="#vector.canoe.tfs.TestInfoTable" title="vector.canoe.tfs.TestInfoTable"><span class="pre">
+              vector.canoe.tfs.TestInfoTable
+             </span></a><span class="p"><span class="pre">
+              ]
+             </span></span></span><span class="o"><span class="pre">
+             =
+            </span></span><span class="default_value"><span class="pre">
+             None
+            </span></span></em><span class="sig-paren">
+           )
+          </span><a class="headerlink" href="#vector.canoe.tfs.Report.test_step" title="Permalink to this definition">
+           ¶
+          </a></dt>
+                                            <dd>
+                                                <p>
+           Writes a test step with a description into the report.
+The level can be used in combination with the report filter of the test configuration dialog to suppress test steps in the report.
+The default report level is 0.
+          </p>
+                                                <dl class="field-list simple">
+                                                    <dt class="field-odd">
+            Parameters
+           </dt>
+                                                    <dd class="field-odd">
+                                                        <ul class="simple">
+                                                            <li>
+                                                                <p><strong>
+                step
+               </strong>
+               (
+               <em>
+                str
+               </em><em>
+                ,
+               </em><em>
+                optional
+               </em>
+               ) – Identifier for the test step, defaults to “”
+              </p>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>
+                description
+               </strong>
+               (
+               <em>
+                str
+               </em><em>
+                ,
+               </em><em>
+                optional
+               </em>
+               ) – Description of the test step, defaults to “”
+              </p>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>
+                level
+               </strong>
+               (
+               <em>
+                int
+               </em><em>
+                ,
+               </em><em>
+                optional
+               </em>
+               ) – The test step level for the report filter, defaults to 0
+              </p>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>
+                table
+               </strong>
+               (
+               <a class="reference internal" href="#vector.canoe.tfs.TestInfoTable" title="vector.canoe.tfs.TestInfoTable"><em>
+                 TestInfoTable
+                </em></a><em>
+                ,
+               </em><em>
+                optional
+               </em>
+               ) – a table to present structured data in the test step description, defaults to None
+              </p>
+                                                            </li>
+                                                        </ul>
+                                                    </dd>
+                                                </dl>
+                                            </dd>
+                                        </dl>
+                                        <dl class="py method">
+                                            <dt class="sig sig-object py" id="vector.canoe.tfs.Report.test_step_error_in_test_system"><em class="property"><span class="pre">
+            static
+           </span></em><span class="sig-name descname"><span class="pre">
+            test_step_error_in_test_system
+           </span></span><span class="sig-paren">
+           (
+          </span><em class="sig-param"><span class="n"><span class="pre">
+             step
+            </span></span><span class="p"><span class="pre">
+             :
+            </span></span><span class="n"><span class="pre">
+             str
+            </span></span><span class="o"><span class="pre">
+             =
+            </span></span><span class="default_value"><span class="pre">
+             ''
+            </span></span></em>
+          ,
+          <em class="sig-param"><span class="n"><span class="pre">
+             description
+            </span></span><span class="p"><span class="pre">
+             :
+            </span></span><span class="n"><span class="pre">
+             str
+            </span></span><span class="o"><span class="pre">
+             =
+            </span></span><span class="default_value"><span class="pre">
+             ''
+            </span></span></em>
+          ,
+          <em class="sig-param"><span class="n"><span class="pre">
+             level
+            </span></span><span class="p"><span class="pre">
+             :
+            </span></span><span class="n"><span class="pre">
+             int
+            </span></span><span class="o"><span class="pre">
+             =
+            </span></span><span class="default_value"><span class="pre">
+             0
+            </span></span></em>
+          ,
+          <em class="sig-param"><span class="n"><span class="pre">
+             table
+            </span></span><span class="p"><span class="pre">
+             :
+            </span></span><span class="n"><span class="pre">
+             Optional
+            </span><span class="p"><span class="pre">
+              [
+             </span></span><a class="reference internal" href="#vector.canoe.tfs.TestInfoTable" title="vector.canoe.tfs.TestInfoTable"><span class="pre">
+              vector.canoe.tfs.TestInfoTable
+             </span></a><span class="p"><span class="pre">
+              ]
+             </span></span></span><span class="o"><span class="pre">
+             =
+            </span></span><span class="default_value"><span class="pre">
+             None
+            </span></span></em><span class="sig-paren">
+           )
+          </span><a class="headerlink" href="#vector.canoe.tfs.Report.test_step_error_in_test_system" title="Permalink to this definition">
+           ¶
+          </a></dt>
+                                            <dd>
+                                                <p>
+           Writes a test step with a description into the report.
+The level can be used in combination with the report filter of the test configuration dialog to suppress test steps in the report.
+The test is marked as errored in the testsystem.
+The default report level is 0.
+          </p>
+                                                <dl class="field-list simple">
+                                                    <dt class="field-odd">
+            Parameters
+           </dt>
+                                                    <dd class="field-odd">
+                                                        <ul class="simple">
+                                                            <li>
+                                                                <p><strong>
+                step
+               </strong>
+               (
+               <em>
+                str
+               </em><em>
+                ,
+               </em><em>
+                optional
+               </em>
+               ) – Identifier for the test step, defaults to “”
+              </p>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>
+                description
+               </strong>
+               (
+               <em>
+                str
+               </em><em>
+                ,
+               </em><em>
+                optional
+               </em>
+               ) – Description of the test step, defaults to “”
+              </p>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>
+                level
+               </strong>
+               (
+               <em>
+                int
+               </em><em>
+                ,
+               </em><em>
+                optional
+               </em>
+               ) – The test step level for the report filter, defaults to 0
+              </p>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>
+                table
+               </strong>
+               (
+               <a class="reference internal" href="#vector.canoe.tfs.TestInfoTable" title="vector.canoe.tfs.TestInfoTable"><em>
+                 TestInfoTable
+                </em></a><em>
+                ,
+               </em><em>
+                optional
+               </em>
+               ) – a table to present structured data in the test step description, defaults to None
+              </p>
+                                                            </li>
+                                                        </ul>
+                                                    </dd>
+                                                </dl>
+                                            </dd>
+                                        </dl>
+                                        <dl class="py method">
+                                            <dt class="sig sig-object py" id="vector.canoe.tfs.Report.test_step_fail"><em class="property"><span class="pre">
+            static
+           </span></em><span class="sig-name descname"><span class="pre">
+            test_step_fail
+           </span></span><span class="sig-paren">
+           (
+          </span><em class="sig-param"><span class="n"><span class="pre">
+             step
+            </span></span><span class="p"><span class="pre">
+             :
+            </span></span><span class="n"><span class="pre">
+             str
+            </span></span><span class="o"><span class="pre">
+             =
+            </span></span><span class="default_value"><span class="pre">
+             ''
+            </span></span></em>
+          ,
+          <em class="sig-param"><span class="n"><span class="pre">
+             description
+            </span></span><span class="p"><span class="pre">
+             :
+            </span></span><span class="n"><span class="pre">
+             str
+            </span></span><span class="o"><span class="pre">
+             =
+            </span></span><span class="default_value"><span class="pre">
+             ''
+            </span></span></em>
+          ,
+          <em class="sig-param"><span class="n"><span class="pre">
+             level
+            </span></span><span class="p"><span class="pre">
+             :
+            </span></span><span class="n"><span class="pre">
+             int
+            </span></span><span class="o"><span class="pre">
+             =
+            </span></span><span class="default_value"><span class="pre">
+             0
+            </span></span></em>
+          ,
+          <em class="sig-param"><span class="n"><span class="pre">
+             table
+            </span></span><span class="p"><span class="pre">
+             :
+            </span></span><span class="n"><span class="pre">
+             Optional
+            </span><span class="p"><span class="pre">
+              [
+             </span></span><a class="reference internal" href="#vector.canoe.tfs.TestInfoTable" title="vector.canoe.tfs.TestInfoTable"><span class="pre">
+              vector.canoe.tfs.TestInfoTable
+             </span></a><span class="p"><span class="pre">
+              ]
+             </span></span></span><span class="o"><span class="pre">
+             =
+            </span></span><span class="default_value"><span class="pre">
+             None
+            </span></span></em><span class="sig-paren">
+           )
+          </span><a class="headerlink" href="#vector.canoe.tfs.Report.test_step_fail" title="Permalink to this definition">
+           ¶
+          </a></dt>
+                                            <dd>
+                                                <p>
+           Writes a test step with a description into the report.
+The level can be used in combination with the report filter of the test configuration dialog to suppress test steps in the report.
+The test is marked as failed.
+The default report level is 0.
+          </p>
+                                                <dl class="field-list simple">
+                                                    <dt class="field-odd">
+            Parameters
+           </dt>
+                                                    <dd class="field-odd">
+                                                        <ul class="simple">
+                                                            <li>
+                                                                <p><strong>
+                step
+               </strong>
+               (
+               <em>
+                str
+               </em><em>
+                ,
+               </em><em>
+                optional
+               </em>
+               ) – Identifier for the test step, defaults to “”
+              </p>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>
+                description
+               </strong>
+               (
+               <em>
+                str
+               </em><em>
+                ,
+               </em><em>
+                optional
+               </em>
+               ) – Description of the test step, defaults to “”
+              </p>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>
+                level
+               </strong>
+               (
+               <em>
+                int
+               </em><em>
+                ,
+               </em><em>
+                optional
+               </em>
+               ) – The test step level for the report filter, defaults to 0
+              </p>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>
+                table
+               </strong>
+               (
+               <a class="reference internal" href="#vector.canoe.tfs.TestInfoTable" title="vector.canoe.tfs.TestInfoTable"><em>
+                 TestInfoTable
+                </em></a><em>
+                ,
+               </em><em>
+                optional
+               </em>
+               ) – a table to present structured data in the test step description, defaults to None
+              </p>
+                                                            </li>
+                                                        </ul>
+                                                    </dd>
+                                                </dl>
+                                            </dd>
+                                        </dl>
+                                        <dl class="py method">
+                                            <dt class="sig sig-object py" id="vector.canoe.tfs.Report.test_step_inconclusive"><em class="property"><span class="pre">
+            static
+           </span></em><span class="sig-name descname"><span class="pre">
+            test_step_inconclusive
+           </span></span><span class="sig-paren">
+           (
+          </span><em class="sig-param"><span class="n"><span class="pre">
+             step
+            </span></span><span class="p"><span class="pre">
+             :
+            </span></span><span class="n"><span class="pre">
+             str
+            </span></span><span class="o"><span class="pre">
+             =
+            </span></span><span class="default_value"><span class="pre">
+             ''
+            </span></span></em>
+          ,
+          <em class="sig-param"><span class="n"><span class="pre">
+             description
+            </span></span><span class="p"><span class="pre">
+             :
+            </span></span><span class="n"><span class="pre">
+             str
+            </span></span><span class="o"><span class="pre">
+             =
+            </span></span><span class="default_value"><span class="pre">
+             ''
+            </span></span></em>
+          ,
+          <em class="sig-param"><span class="n"><span class="pre">
+             level
+            </span></span><span class="p"><span class="pre">
+             :
+            </span></span><span class="n"><span class="pre">
+             int
+            </span></span><span class="o"><span class="pre">
+             =
+            </span></span><span class="default_value"><span class="pre">
+             0
+            </span></span></em>
+          ,
+          <em class="sig-param"><span class="n"><span class="pre">
+             table
+            </span></span><span class="p"><span class="pre">
+             :
+            </span></span><span class="n"><span class="pre">
+             Optional
+            </span><span class="p"><span class="pre">
+              [
+             </span></span><a class="reference internal" href="#vector.canoe.tfs.TestInfoTable" title="vector.canoe.tfs.TestInfoTable"><span class="pre">
+              vector.canoe.tfs.TestInfoTable
+             </span></a><span class="p"><span class="pre">
+              ]
+             </span></span></span><span class="o"><span class="pre">
+             =
+            </span></span><span class="default_value"><span class="pre">
+             None
+            </span></span></em><span class="sig-paren">
+           )
+          </span><a class="headerlink" href="#vector.canoe.tfs.Report.test_step_inconclusive" title="Permalink to this definition">
+           ¶
+          </a></dt>
+                                            <dd>
+                                                <p>
+           Writes a test step with a description into the report.
+The level can be used in combination with the report filter of the test configuration dialog to suppress test steps in the report.
+The test is marked as inconclusive.
+The default report level is 0.
+          </p>
+                                                <dl class="field-list simple">
+                                                    <dt class="field-odd">
+            Parameters
+           </dt>
+                                                    <dd class="field-odd">
+                                                        <ul class="simple">
+                                                            <li>
+                                                                <p><strong>
+                step
+               </strong>
+               (
+               <em>
+                str
+               </em><em>
+                ,
+               </em><em>
+                optional
+               </em>
+               ) – Identifier for the test step, defaults to “”
+              </p>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>
+                description
+               </strong>
+               (
+               <em>
+                str
+               </em><em>
+                ,
+               </em><em>
+                optional
+               </em>
+               ) – Description of the test step, defaults to “”
+              </p>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>
+                level
+               </strong>
+               (
+               <em>
+                int
+               </em><em>
+                ,
+               </em><em>
+                optional
+               </em>
+               ) – The test step level for the report filter, defaults to 0
+              </p>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>
+                table
+               </strong>
+               (
+               <a class="reference internal" href="#vector.canoe.tfs.TestInfoTable" title="vector.canoe.tfs.TestInfoTable"><em>
+                 TestInfoTable
+                </em></a><em>
+                ,
+               </em><em>
+                optional
+               </em>
+               ) – a table to present structured data in the test step description, defaults to None
+              </p>
+                                                            </li>
+                                                        </ul>
+                                                    </dd>
+                                                </dl>
+                                            </dd>
+                                        </dl>
+                                        <dl class="py method">
+                                            <dt class="sig sig-object py" id="vector.canoe.tfs.Report.test_step_pass"><em class="property"><span class="pre">
+            static
+           </span></em><span class="sig-name descname"><span class="pre">
+            test_step_pass
+           </span></span><span class="sig-paren">
+           (
+          </span><em class="sig-param"><span class="n"><span class="pre">
+             step
+            </span></span><span class="p"><span class="pre">
+             :
+            </span></span><span class="n"><span class="pre">
+             str
+            </span></span><span class="o"><span class="pre">
+             =
+            </span></span><span class="default_value"><span class="pre">
+             ''
+            </span></span></em>
+          ,
+          <em class="sig-param"><span class="n"><span class="pre">
+             description
+            </span></span><span class="p"><span class="pre">
+             :
+            </span></span><span class="n"><span class="pre">
+             str
+            </span></span><span class="o"><span class="pre">
+             =
+            </span></span><span class="default_value"><span class="pre">
+             ''
+            </span></span></em>
+          ,
+          <em class="sig-param"><span class="n"><span class="pre">
+             level
+            </span></span><span class="p"><span class="pre">
+             :
+            </span></span><span class="n"><span class="pre">
+             int
+            </span></span><span class="o"><span class="pre">
+             =
+            </span></span><span class="default_value"><span class="pre">
+             0
+            </span></span></em>
+          ,
+          <em class="sig-param"><span class="n"><span class="pre">
+             table
+            </span></span><span class="p"><span class="pre">
+             :
+            </span></span><span class="n"><span class="pre">
+             Optional
+            </span><span class="p"><span class="pre">
+              [
+             </span></span><a class="reference internal" href="#vector.canoe.tfs.TestInfoTable" title="vector.canoe.tfs.TestInfoTable"><span class="pre">
+              vector.canoe.tfs.TestInfoTable
+             </span></a><span class="p"><span class="pre">
+              ]
+             </span></span></span><span class="o"><span class="pre">
+             =
+            </span></span><span class="default_value"><span class="pre">
+             None
+            </span></span></em><span class="sig-paren">
+           )
+          </span><a class="headerlink" href="#vector.canoe.tfs.Report.test_step_pass" title="Permalink to this definition">
+           ¶
+          </a></dt>
+                                            <dd>
+                                                <p>
+           Writes a test step with a description into the report.
+The level can be used in combination with the report filter of the test configuration dialog to suppress test steps in the report. 
+The test is marked as passed.
+The default report level is 0.
+          </p>
+                                                <dl class="field-list simple">
+                                                    <dt class="field-odd">
+            Parameters
+           </dt>
+                                                    <dd class="field-odd">
+                                                        <ul class="simple">
+                                                            <li>
+                                                                <p><strong>
+                step
+               </strong>
+               (
+               <em>
+                str
+               </em><em>
+                ,
+               </em><em>
+                optional
+               </em>
+               ) – Identifier for the test step, defaults to “”
+              </p>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>
+                description
+               </strong>
+               (
+               <em>
+                str
+               </em><em>
+                ,
+               </em><em>
+                optional
+               </em>
+               ) – Description of the test step, defaults to “”
+              </p>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>
+                level
+               </strong>
+               (
+               <em>
+                int
+               </em><em>
+                ,
+               </em><em>
+                optional
+               </em>
+               ) – The test step level for the report filter, defaults to 0
+              </p>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>
+                table
+               </strong>
+               (
+               <a class="reference internal" href="#vector.canoe.tfs.TestInfoTable" title="vector.canoe.tfs.TestInfoTable"><em>
+                 TestInfoTable
+                </em></a><em>
+                ,
+               </em><em>
+                optional
+               </em>
+               ) – a table to present structured data in the test step description, defaults to None
+              </p>
+                                                            </li>
+                                                        </ul>
+                                                    </dd>
+                                                </dl>
+                                            </dd>
+                                        </dl>
+                                        <dl class="py method">
+                                            <dt class="sig sig-object py" id="vector.canoe.tfs.Report.test_step_warning"><em class="property"><span class="pre">
+            static
+           </span></em><span class="sig-name descname"><span class="pre">
+            test_step_warning
+           </span></span><span class="sig-paren">
+           (
+          </span><em class="sig-param"><span class="n"><span class="pre">
+             step
+            </span></span><span class="p"><span class="pre">
+             :
+            </span></span><span class="n"><span class="pre">
+             str
+            </span></span><span class="o"><span class="pre">
+             =
+            </span></span><span class="default_value"><span class="pre">
+             ''
+            </span></span></em>
+          ,
+          <em class="sig-param"><span class="n"><span class="pre">
+             description
+            </span></span><span class="p"><span class="pre">
+             :
+            </span></span><span class="n"><span class="pre">
+             str
+            </span></span><span class="o"><span class="pre">
+             =
+            </span></span><span class="default_value"><span class="pre">
+             ''
+            </span></span></em>
+          ,
+          <em class="sig-param"><span class="n"><span class="pre">
+             level
+            </span></span><span class="p"><span class="pre">
+             :
+            </span></span><span class="n"><span class="pre">
+             int
+            </span></span><span class="o"><span class="pre">
+             =
+            </span></span><span class="default_value"><span class="pre">
+             0
+            </span></span></em>
+          ,
+          <em class="sig-param"><span class="n"><span class="pre">
+             table
+            </span></span><span class="p"><span class="pre">
+             :
+            </span></span><span class="n"><span class="pre">
+             Optional
+            </span><span class="p"><span class="pre">
+              [
+             </span></span><a class="reference internal" href="#vector.canoe.tfs.TestInfoTable" title="vector.canoe.tfs.TestInfoTable"><span class="pre">
+              vector.canoe.tfs.TestInfoTable
+             </span></a><span class="p"><span class="pre">
+              ]
+             </span></span></span><span class="o"><span class="pre">
+             =
+            </span></span><span class="default_value"><span class="pre">
+             None
+            </span></span></em><span class="sig-paren">
+           )
+          </span><a class="headerlink" href="#vector.canoe.tfs.Report.test_step_warning" title="Permalink to this definition">
+           ¶
+          </a></dt>
+                                            <dd>
+                                                <p>
+           Writes a test step with a description into the report.
+The level can be used in combination with the report filter of the test configuration dialog to suppress test steps in the report.
+The test is marked as warning.
+The default report level is 0.
+          </p>
+                                                <dl class="field-list simple">
+                                                    <dt class="field-odd">
+            Parameters
+           </dt>
+                                                    <dd class="field-odd">
+                                                        <ul class="simple">
+                                                            <li>
+                                                                <p><strong>
+                step
+               </strong>
+               (
+               <em>
+                str
+               </em><em>
+                ,
+               </em><em>
+                optional
+               </em>
+               ) – Identifier for the test step, defaults to “”
+              </p>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>
+                description
+               </strong>
+               (
+               <em>
+                str
+               </em><em>
+                ,
+               </em><em>
+                optional
+               </em>
+               ) – Description of the test step, defaults to “”
+              </p>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>
+                level
+               </strong>
+               (
+               <em>
+                int
+               </em><em>
+                ,
+               </em><em>
+                optional
+               </em>
+               ) – The test step level for the report filter, defaults to 0
+              </p>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>
+                table
+               </strong>
+               (
+               <a class="reference internal" href="#vector.canoe.tfs.TestInfoTable" title="vector.canoe.tfs.TestInfoTable"><em>
+                 TestInfoTable
+                </em></a><em>
+                ,
+               </em><em>
+                optional
+               </em>
+               ) – a table to present structured data in the test step description, defaults to None
+              </p>
+                                                            </li>
+                                                        </ul>
+                                                    </dd>
+                                                </dl>
+                                            </dd>
+                                        </dl>
+                                    </dd>
+                                </dl>
+                                <dl class="py class">
+                                    <dt class="sig sig-object py" id="vector.canoe.tfs.TestCaseWrapper"><em class="property"><span class="pre">
+          class
+         </span></em><span class="sig-name descname"><span class="pre">
+          TestCaseWrapper
+         </span></span><span class="sig-paren">
+         (
+        </span><em class="sig-param"><span class="n"><span class="pre">
+           test_case
+          </span></span><span class="p"><span class="pre">
+           :
+          </span></span><span class="n"><span class="pre">
+           Callable
+          </span><span class="p"><span class="pre">
+            [
+           </span></span><span class="p"><span class="pre">
+            [
+           </span></span><span class="p"><span class="pre">
+            ...
+           </span></span><span class="p"><span class="pre">
+            ]
+           </span></span><span class="p"><span class="pre">
+            ,
+           </span></span><span class="pre">
+           Any
+          </span><span class="p"><span class="pre">
+            ]
+           </span></span></span></em><span class="sig-paren">
+         )
+        </span><a class="headerlink" href="#vector.canoe.tfs.TestCaseWrapper" title="Permalink to this definition">
+         ¶
+        </a>
+                                    </dt>
+                                    <dd>
+                                        <p>
+         Bases:
+         <code class="xref py py-class docutils literal notranslate"><span class="pre">
+           object
+          </span></code></p>
+                                    </dd>
+                                </dl>
+                                <dl class="py class">
+                                    <dt class="sig sig-object py" id="vector.canoe.tfs.TestInfoCell"><em class="property"><span class="pre">
+          class
+         </span></em><span class="sig-name descname"><span class="pre">
+          TestInfoCell
+         </span></span><span class="sig-paren">
+         (
+        </span><em class="sig-param"><span class="n"><span class="pre">
+           text
+          </span></span><span class="p"><span class="pre">
+           :
+          </span></span><span class="n"><span class="pre">
+           str
+          </span></span></em>
+        ,
+        <em class="sig-param"><span class="n"><span class="pre">
+           span
+          </span></span><span class="p"><span class="pre">
+           :
+          </span></span><span class="n"><span class="pre">
+           int
+          </span></span><span class="o"><span class="pre">
+           =
+          </span></span><span class="default_value"><span class="pre">
+           1
+          </span></span></em><span class="sig-paren">
+         )
+        </span><a class="headerlink" href="#vector.canoe.tfs.TestInfoCell" title="Permalink to this definition">
+         ¶
+        </a></dt>
+                                    <dd>
+                                        <p>
+         Bases:
+         <code class="xref py py-class docutils literal notranslate"><span class="pre">
+           object
+          </span></code></p>
+                                        <dl class="py property">
+                                            <dt class="sig sig-object py" id="vector.canoe.tfs.TestInfoCell.span"><em class="property"><span class="pre">
+            property
+           </span></em><span class="sig-name descname"><span class="pre">
+            span
+           </span></span><em class="property"><span class="pre">
+            :
+           </span><span class="pre">
+            int
+           </span></em><a class="headerlink" href="#vector.canoe.tfs.TestInfoCell.span" title="Permalink to this definition">
+           ¶
+          </a>
+                                            </dt>
+                                            <dd>
+                                                <p>
+           Gets the number of columns the cell should span.
+          </p>
+                                                <dl class="field-list simple">
+                                                    <dt class="field-odd">
+            Returns
+           </dt>
+                                                    <dd class="field-odd">
+                                                        <p>
+             The number of columns the cell should span.
+            </p>
+                                                    </dd>
+                                                    <dt class="field-even">
+            Return type
+           </dt>
+                                                    <dd class="field-even">
+                                                        <p>
+             int
+            </p>
+                                                    </dd>
+                                                </dl>
+                                            </dd>
+                                        </dl>
+                                        <dl class="py property">
+                                            <dt class="sig sig-object py" id="vector.canoe.tfs.TestInfoCell.text"><em class="property"><span class="pre">
+            property
+           </span></em><span class="sig-name descname"><span class="pre">
+            text
+           </span></span><em class="property"><span class="pre">
+            :
+           </span><span class="pre">
+            str
+           </span></em><a class="headerlink" href="#vector.canoe.tfs.TestInfoCell.text" title="Permalink to this definition">
+           ¶
+          </a>
+                                            </dt>
+                                            <dd>
+                                                <p>
+           Gets the text to be displayed in the cell.
+          </p>
+                                                <dl class="field-list simple">
+                                                    <dt class="field-odd">
+            Returns
+           </dt>
+                                                    <dd class="field-odd">
+                                                        <p>
+             The text to be displayed in the cell.
+            </p>
+                                                    </dd>
+                                                    <dt class="field-even">
+            Return type
+           </dt>
+                                                    <dd class="field-even">
+                                                        <p>
+             str
+            </p>
+                                                    </dd>
+                                                </dl>
+                                            </dd>
+                                        </dl>
+                                    </dd>
+                                </dl>
+                                <dl class="py class">
+                                    <dt class="sig sig-object py" id="vector.canoe.tfs.TestInfoHeading"><em class="property"><span class="pre">
+          class
+         </span></em><span class="sig-name descname"><span class="pre">
+          TestInfoHeading
+         </span></span><span class="sig-paren">
+         (
+        </span><em class="sig-param"><span class="n"><span class="pre">
+           indent
+          </span></span><span class="p"><span class="pre">
+           :
+          </span></span><span class="n"><span class="pre">
+           int
+          </span></span></em><span class="sig-paren">
+         )
+        </span><a class="headerlink" href="#vector.canoe.tfs.TestInfoHeading" title="Permalink to this definition">
+         ¶
+        </a>
+                                    </dt>
+                                    <dd>
+                                        <p>
+         Bases:
+         <code class="xref py py-class docutils literal notranslate"><span class="pre">
+           vector.canoe.tfs._TestInfoRowBase
+          </span></code></p>
+                                        <p>
+         A header row to be displayed in a TestInfoTable.
+It can be divided into multiple TestInfoCells.
+        </p>
+                                        <dl class="py property">
+                                            <dt class="sig sig-object py" id="vector.canoe.tfs.TestInfoHeading.cells"><em class="property"><span class="pre">
+            property
+           </span></em><span class="sig-name descname"><span class="pre">
+            cells
+           </span></span><em class="property"><span class="pre">
+            :
+           </span><span class="pre">
+            list
+           </span></em><a class="headerlink" href="#vector.canoe.tfs.TestInfoHeading.cells" title="Permalink to this definition">
+           ¶
+          </a>
+                                            </dt>
+                                            <dd>
+                                                <p>
+           Gets a list of all cells in this heading.
+          </p>
+                                                <dl class="field-list simple">
+                                                    <dt class="field-odd">
+            Returns
+           </dt>
+                                                    <dd class="field-odd">
+                                                        <p>
+             A list of cells in this heading.
+            </p>
+                                                    </dd>
+                                                    <dt class="field-even">
+            Return type
+           </dt>
+                                                    <dd class="field-even">
+                                                        <p>
+             List[
+             <a class="reference internal" href="#vector.canoe.tfs.TestInfoCell" title="vector.canoe.tfs.TestInfoCell">
+              TestInfoCell
+             </a>
+             ]
+            </p>
+                                                    </dd>
+                                                </dl>
+                                            </dd>
+                                        </dl>
+                                        <dl class="py property">
+                                            <dt class="sig sig-object py" id="vector.canoe.tfs.TestInfoHeading.indentation_level"><em class="property"><span class="pre">
+            property
+           </span></em><span class="sig-name descname"><span class="pre">
+            indentation_level
+           </span></span><em class="property"><span class="pre">
+            :
+           </span><span class="pre">
+            int
+           </span></em><a class="headerlink" href="#vector.canoe.tfs.TestInfoHeading.indentation_level" title="Permalink to this definition">
+           ¶
+          </a>
+                                            </dt>
+                                            <dd>
+                                                <p>
+           Gets the indentation level.
+:return: The indentation level
+:rtype: int
+          </p>
+                                            </dd>
+                                        </dl>
+                                    </dd>
+                                </dl>
+                                <dl class="py class">
+                                    <dt class="sig sig-object py" id="vector.canoe.tfs.TestInfoRow"><em class="property"><span class="pre">
+          class
+         </span></em><span class="sig-name descname"><span class="pre">
+          TestInfoRow
+         </span></span><span class="sig-paren">
+         (
+        </span><em class="sig-param"><span class="n"><span class="pre">
+           indent
+          </span></span><span class="p"><span class="pre">
+           :
+          </span></span><span class="n"><span class="pre">
+           int
+          </span></span></em>
+        ,
+        <em class="sig-param"><span class="n"><span class="pre">
+           text
+          </span></span><span class="p"><span class="pre">
+           :
+          </span></span><span class="n"><span class="pre">
+           str
+          </span></span><span class="o"><span class="pre">
+           =
+          </span></span><span class="default_value"><span class="pre">
+           ''
+          </span></span></em><span class="sig-paren">
+         )
+        </span><a class="headerlink" href="#vector.canoe.tfs.TestInfoRow" title="Permalink to this definition">
+         ¶
+        </a></dt>
+                                    <dd>
+                                        <p>
+         Bases:
+         <code class="xref py py-class docutils literal notranslate"><span class="pre">
+           vector.canoe.tfs._TestInfoRowBase
+          </span></code></p>
+                                        <p>
+         A row in an TestInfoTable.
+It can be divided into multiple TestInfoCells.
+        </p>
+                                        <dl class="py property">
+                                            <dt class="sig sig-object py" id="vector.canoe.tfs.TestInfoRow.cells"><em class="property"><span class="pre">
+            property
+           </span></em><span class="sig-name descname"><span class="pre">
+            cells
+           </span></span><em class="property"><span class="pre">
+            :
+           </span><span class="pre">
+            list
+           </span></em><a class="headerlink" href="#vector.canoe.tfs.TestInfoRow.cells" title="Permalink to this definition">
+           ¶
+          </a>
+                                            </dt>
+                                            <dd>
+                                                <p>
+           Gets a list of all cells in this heading.
+          </p>
+                                                <dl class="field-list simple">
+                                                    <dt class="field-odd">
+            Returns
+           </dt>
+                                                    <dd class="field-odd">
+                                                        <p>
+             A list of cells in this heading.
+            </p>
+                                                    </dd>
+                                                    <dt class="field-even">
+            Return type
+           </dt>
+                                                    <dd class="field-even">
+                                                        <p>
+             list[
+             <a class="reference internal" href="#vector.canoe.tfs.TestInfoCell" title="vector.canoe.tfs.TestInfoCell">
+              TestInfoCell
+             </a>
+             ]
+            </p>
+                                                    </dd>
+                                                </dl>
+                                            </dd>
+                                        </dl>
+                                        <dl class="py property">
+                                            <dt class="sig sig-object py" id="vector.canoe.tfs.TestInfoRow.indentation_level"><em class="property"><span class="pre">
+            property
+           </span></em><span class="sig-name descname"><span class="pre">
+            indentation_level
+           </span></span><em class="property"><span class="pre">
+            :
+           </span><span class="pre">
+            int
+           </span></em><a class="headerlink" href="#vector.canoe.tfs.TestInfoRow.indentation_level" title="Permalink to this definition">
+           ¶
+          </a>
+                                            </dt>
+                                            <dd>
+                                                <p>
+           Gets the indentation level.
+          </p>
+                                                <dl class="field-list simple">
+                                                    <dt class="field-odd">
+            Returns
+           </dt>
+                                                    <dd class="field-odd">
+                                                        <p>
+             The indentation level.
+            </p>
+                                                    </dd>
+                                                    <dt class="field-even">
+            Return type
+           </dt>
+                                                    <dd class="field-even">
+                                                        <p>
+             int
+            </p>
+                                                    </dd>
+                                                </dl>
+                                            </dd>
+                                        </dl>
+                                        <dl class="py property">
+                                            <dt class="sig sig-object py" id="vector.canoe.tfs.TestInfoRow.text"><em class="property"><span class="pre">
+            property
+           </span></em><span class="sig-name descname"><span class="pre">
+            text
+           </span></span><em class="property"><span class="pre">
+            :
+           </span><span class="pre">
+            str
+           </span></em><a class="headerlink" href="#vector.canoe.tfs.TestInfoRow.text" title="Permalink to this definition">
+           ¶
+          </a>
+                                            </dt>
+                                            <dd>
+                                                <p>
+           Gets the text to be displayed in the row.
+          </p>
+                                                <dl class="field-list simple">
+                                                    <dt class="field-odd">
+            Returns
+           </dt>
+                                                    <dd class="field-odd">
+                                                        <p>
+             The text to be displayed in the row.
+            </p>
+                                                    </dd>
+                                                    <dt class="field-even">
+            Return type
+           </dt>
+                                                    <dd class="field-even">
+                                                        <p>
+             str
+            </p>
+                                                    </dd>
+                                                </dl>
+                                            </dd>
+                                        </dl>
+                                    </dd>
+                                </dl>
+                                <dl class="py class">
+                                    <dt class="sig sig-object py" id="vector.canoe.tfs.TestInfoTable"><em class="property"><span class="pre">
+          class
+         </span></em><span class="sig-name descname"><span class="pre">
+          TestInfoTable
+         </span></span><span class="sig-paren">
+         (
+        </span><em class="sig-param"><span class="n"><span class="pre">
+           description
+          </span></span><span class="p"><span class="pre">
+           :
+          </span></span><span class="n"><span class="pre">
+           str
+          </span></span></em><span class="sig-paren">
+         )
+        </span><a class="headerlink" href="#vector.canoe.tfs.TestInfoTable" title="Permalink to this definition">
+         ¶
+        </a>
+                                    </dt>
+                                    <dd>
+                                        <p>
+         Bases:
+         <code class="xref py py-class docutils literal notranslate"><span class="pre">
+           object
+          </span></code></p>
+                                        <p>
+         A table to display structured data in the report.
+        </p>
+                                        <dl class="py method">
+                                            <dt class="sig sig-object py" id="vector.canoe.tfs.TestInfoTable.add_heading"><span class="sig-name descname"><span class="pre">
+            add_heading
+           </span></span><span class="sig-paren">
+           (
+          </span><em class="sig-param"><span class="n"><span class="pre">
+             heading
+            </span></span><span class="p"><span class="pre">
+             :
+            </span></span><span class="n"><a class="reference internal" href="#vector.canoe.tfs.TestInfoHeading" title="vector.canoe.tfs.TestInfoHeading"><span class="pre">
+              vector.canoe.tfs.TestInfoHeading
+             </span></a></span></em><span class="sig-paren">
+           )
+          </span><a class="headerlink" href="#vector.canoe.tfs.TestInfoTable.add_heading" title="Permalink to this definition">
+           ¶
+          </a>
+                                            </dt>
+                                            <dd>
+                                                <p>
+           Adds a header row to the info table.
+          </p>
+                                                <dl class="field-list simple">
+                                                    <dt class="field-odd">
+            Parameters
+           </dt>
+                                                    <dd class="field-odd">
+                                                        <p><strong>
+              heading
+             </strong>
+             (
+             <a class="reference internal" href="#vector.canoe.tfs.TestInfoHeading" title="vector.canoe.tfs.TestInfoHeading"><em>
+               TestInfoHeading
+              </em></a>
+             ) – The header row to add to the info table.
+            </p>
+                                                    </dd>
+                                                </dl>
+                                            </dd>
+                                        </dl>
+                                        <dl class="py method">
+                                            <dt class="sig sig-object py" id="vector.canoe.tfs.TestInfoTable.add_row"><span class="sig-name descname"><span class="pre">
+            add_row
+           </span></span><span class="sig-paren">
+           (
+          </span><em class="sig-param"><span class="n"><span class="pre">
+             row
+            </span></span><span class="p"><span class="pre">
+             :
+            </span></span><span class="n"><a class="reference internal" href="#vector.canoe.tfs.TestInfoRow" title="vector.canoe.tfs.TestInfoRow"><span class="pre">
+              vector.canoe.tfs.TestInfoRow
+             </span></a></span></em><span class="sig-paren">
+           )
+          </span><a class="headerlink" href="#vector.canoe.tfs.TestInfoTable.add_row" title="Permalink to this definition">
+           ¶
+          </a>
+                                            </dt>
+                                            <dd>
+                                                <p>
+           Adds a row to the info table.
+          </p>
+                                                <dl class="field-list simple">
+                                                    <dt class="field-odd">
+            Parameters
+           </dt>
+                                                    <dd class="field-odd">
+                                                        <p><strong>
+              row
+             </strong>
+             (
+             <a class="reference internal" href="#vector.canoe.tfs.TestInfoRow" title="vector.canoe.tfs.TestInfoRow"><em>
+               TestInfoRow
+              </em></a>
+             ) – The row to add to the info table.
+            </p>
+                                                    </dd>
+                                                </dl>
+                                            </dd>
+                                        </dl>
+                                    </dd>
+                                </dl>
+                                <dl class="py class">
+                                    <dt class="sig sig-object py" id="vector.canoe.tfs.ValidationErrorCode"><em class="property"><span class="pre">
+          class
+         </span></em><span class="sig-name descname"><span class="pre">
+          ValidationErrorCode
+         </span></span><span class="sig-paren">
+         (
+        </span><em class="sig-param"><span class="n"><span class="pre">
+           value
+          </span></span></em><span class="sig-paren">
+         )
+        </span><a class="headerlink" href="#vector.canoe.tfs.ValidationErrorCode" title="Permalink to this definition">
+         ¶
+        </a>
+                                    </dt>
+                                    <dd>
+                                        <p>
+         Bases:
+         <code class="xref py py-class docutils literal notranslate"><span class="pre">
+           enum.IntEnum
+          </span></code></p>
+                                        <p>
+         Return codes of validation functions of this module.
+        </p>
+                                        <dl class="simple">
+                                            <dt>
+          The following values are possible:
+         </dt>
+                                            <dd>
+                                                <ul class="simple">
+                                                    <li>
+                                                        <p>
+             TYPE_NOT_VALID, Type of value entity is not valid.
+            </p>
+                                                    </li>
+                                                    <li>
+                                                        <p>
+             GENERAL_ERROR, General error, for example, functionality is not available
+            </p>
+                                                    </li>
+                                                    <li>
+                                                        <p>
+             CORRECT_FUNCTIONALITY, Correct functionality
+            </p>
+                                                    </li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                        <dl class="py attribute">
+                                            <dt class="sig sig-object py" id="vector.canoe.tfs.ValidationErrorCode.CORRECT_FUNCTIONALITY"><span class="sig-name descname"><span class="pre">
+            CORRECT_FUNCTIONALITY
+           </span></span><em class="property"><span class="pre">
+            =
+           </span><span class="pre">
+            0
+           </span></em><a class="headerlink" href="#vector.canoe.tfs.ValidationErrorCode.CORRECT_FUNCTIONALITY" title="Permalink to this definition">
+           ¶
+          </a>
+                                            </dt>
+                                            <dd>
+                                            </dd>
+                                        </dl>
+                                        <dl class="py attribute">
+                                            <dt class="sig sig-object py" id="vector.canoe.tfs.ValidationErrorCode.GENERAL_ERROR"><span class="sig-name descname"><span class="pre">
+            GENERAL_ERROR
+           </span></span><em class="property"><span class="pre">
+            =
+           </span><span class="pre">
+            -1
+           </span></em><a class="headerlink" href="#vector.canoe.tfs.ValidationErrorCode.GENERAL_ERROR" title="Permalink to this definition">
+           ¶
+          </a>
+                                            </dt>
+                                            <dd>
+                                            </dd>
+                                        </dl>
+                                        <dl class="py attribute">
+                                            <dt class="sig sig-object py" id="vector.canoe.tfs.ValidationErrorCode.TYPE_NOT_VALID"><span class="sig-name descname"><span class="pre">
+            TYPE_NOT_VALID
+           </span></span><em class="property"><span class="pre">
+            =
+           </span><span class="pre">
+            -2
+           </span></em><a class="headerlink" href="#vector.canoe.tfs.ValidationErrorCode.TYPE_NOT_VALID" title="Permalink to this definition">
+           ¶
+          </a>
+                                            </dt>
+                                            <dd>
+                                            </dd>
+                                        </dl>
+                                    </dd>
+                                </dl>
+                                <dl class="py function">
+                                    <dt class="sig sig-object py" id="vector.canoe.tfs.export"><span class="sig-name descname"><span class="pre">
+          export
+         </span></span><span class="sig-paren">
+         (
+        </span><em class="sig-param"><span class="n"><span class="pre">
+           fct
+          </span></span></em><span class="sig-paren">
+         )
+        </span><a class="headerlink" href="#vector.canoe.tfs.export" title="Permalink to this definition">
+         ¶
+        </a>
+                                    </dt>
+                                    <dd>
+                                        <p>
+         Decorator that flags a function as an exported function.
+That is it may be called from other languages of a test unit.
+        </p>
+                                    </dd>
+                                </dl>
+                                <dl class="py function">
+                                    <dt class="sig sig-object py" id="vector.canoe.tfs.test_case"><span class="sig-name descname"><span class="pre">
+          test_case
+         </span></span><span class="sig-paren">
+         (
+        </span><em class="sig-param"><span class="o"><span class="pre">
+           *
+          </span></span><span class="n"><span class="pre">
+           args
+          </span></span></em>
+        ,
+        <em class="sig-param"><span class="n"><span class="pre">
+           break_on_fail
+          </span></span><span class="p"><span class="pre">
+           :
+          </span></span><span class="n"><span class="pre">
+           bool
+          </span></span><span class="o"><span class="pre">
+           =
+          </span></span><span class="default_value"><span class="pre">
+           True
+          </span></span></em><span class="sig-paren">
+         )
+        </span><a class="headerlink" href="#vector.canoe.tfs.test_case" title="Permalink to this definition">
+         ¶
+        </a></dt>
+                                    <dd>
+                                        <p>
+         Decorator that flags a function as a test case.
+After its execution the verdict will be part of the test report.
+        </p>
+                                        <dl class="field-list simple">
+                                            <dt class="field-odd">
+          Parameters
+         </dt>
+                                            <dd class="field-odd">
+                                                <p><strong>
+            break_on_fail
+           </strong>
+           (
+           <em>
+            bool
+           </em><em>
+            ,
+           </em><em>
+            optional
+           </em>
+           ) – Whether the test case should break on verdict fail, defaults to True
+          </p>
+                                            </dd>
+                                        </dl>
+                                    </dd>
+                                </dl>
+                                <dl class="py function">
+                                    <dt class="sig sig-object py" id="vector.canoe.tfs.test_function"><span class="sig-name descname"><span class="pre">
+          test_function
+         </span></span><span class="sig-paren">
+         (
+        </span><em class="sig-param"><span class="o"><span class="pre">
+           *
+          </span></span><span class="n"><span class="pre">
+           args
+          </span></span></em><span class="sig-paren">
+         )
+        </span><a class="headerlink" href="#vector.canoe.tfs.test_function" title="Permalink to this definition">
+         ¶
+        </a>
+                                    </dt>
+                                    <dd>
+                                        <p>
+         Decorator that flags a function as a test function. 
+Its execution will be part of the test report.
+        </p>
+                                    </dd>
+                                </dl>
+                                <dl class="py function">
+                                    <dt class="sig sig-object py" id="vector.canoe.tfs.test_sequence"><span class="sig-name descname"><span class="pre">
+          test_sequence
+         </span></span><span class="sig-paren">
+         (
+        </span><em class="sig-param"><span class="o"><span class="pre">
+           *
+          </span></span><span class="n"><span class="pre">
+           args
+          </span></span></em>
+        ,
+        <em class="sig-param"><span class="n"><span class="pre">
+           break_on_fail
+          </span></span><span class="p"><span class="pre">
+           :
+          </span></span><span class="n"><span class="pre">
+           bool
+          </span></span><span class="o"><span class="pre">
+           =
+          </span></span><span class="default_value"><span class="pre">
+           True
+          </span></span></em><span class="sig-paren">
+         )
+        </span><a class="headerlink" href="#vector.canoe.tfs.test_sequence" title="Permalink to this definition">
+         ¶
+        </a></dt>
+                                    <dd>
+                                        <p>
+         Decorator that flags a function as a test sequence.
+It contains multiple test cases.
+        </p>
+                                        <dl class="field-list simple">
+                                            <dt class="field-odd">
+          Parameters
+         </dt>
+                                            <dd class="field-odd">
+                                                <p><strong>
+            break_on_fail
+           </strong>
+           (
+           <em>
+            bool
+           </em><em>
+            ,
+           </em><em>
+            optional
+           </em>
+           ) – Whether the test sequence should break on verdict fail, defaults to True
+          </p>
+                                            </dd>
+                                        </dl>
+                                    </dd>
+                                </dl>
+                                <dl class="py function">
+                                    <dt class="sig sig-object py" id="vector.canoe.tfs.test_validate_impl_value"><span class="sig-name descname"><span class="pre">
+          test_validate_impl_value
+         </span></span><span class="sig-paren">
+         (
+        </span><em class="sig-param"><span class="n"><span class="pre">
+           test_step
+          </span></span><span class="p"><span class="pre">
+           :
+          </span></span><span class="n"><span class="pre">
+           str
+          </span></span></em>
+        ,
+        <em class="sig-param"><span class="n"><span class="pre">
+           value_entity
+          </span></span></em>
+        ,
+        <em class="sig-param"><span class="n"><span class="pre">
+           compare_value
+          </span></span></em><span class="sig-paren">
+         )
+        </span>
+        →
+        <span class="pre">
+         int
+        </span><a class="headerlink" href="#vector.canoe.tfs.test_validate_impl_value" title="Permalink to this definition">
+         ¶
+        </a></dt>
+                                    <dd>
+                                        <p>
+         Checks the impl encoding of a value entity against a given value.
+The test step is evaluated as either passed or failed depending on the results.
+        </p>
+                                        <dl class="field-list simple">
+                                            <dt class="field-odd">
+          Parameters
+         </dt>
+                                            <dd class="field-odd">
+                                                <ul class="simple">
+                                                    <li>
+                                                        <p><strong>
+              test_step
+             </strong>
+             (
+             <em>
+              string
+             </em>
+             ) – Name of the test step for the test report.
+            </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>
+              value_entity
+             </strong>
+             – Value entity of a distributed object.
+            </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>
+              compare_value
+             </strong>
+             – Value which is compared to. Its datatype must match the value entity’s datatype.
+            </p>
+                                                    </li>
+                                                </ul>
+                                            </dd>
+                                            <dt class="field-even">
+          Returns
+         </dt>
+                                            <dd class="field-even">
+                                                <p>
+           a
+           <a class="reference internal" href="#vector.canoe.tfs.ValidationErrorCode" title="vector.canoe.tfs.ValidationErrorCode"><code class="xref py py-class docutils literal notranslate"><span class="pre">
+              ValidationErrorCode
+             </span></code></a>
+           return code
+          </p>
+                                            </dd>
+                                            <dt class="field-odd">
+          Return type
+         </dt>
+                                            <dd class="field-odd">
+                                                <p><a class="reference internal" href="#vector.canoe.tfs.ValidationErrorCode" title="vector.canoe.tfs.ValidationErrorCode">
+            ValidationErrorCode
+           </a>
+                                                </p>
+                                            </dd>
+                                        </dl>
+                                    </dd>
+                                </dl>
+                                <dl class="py function">
+                                    <dt class="sig sig-object py" id="vector.canoe.tfs.test_validate_impl_value_in_range"><span class="sig-name descname"><span class="pre">
+          test_validate_impl_value_in_range
+         </span></span><span class="sig-paren">
+         (
+        </span><em class="sig-param"><span class="n"><span class="pre">
+           test_step
+          </span></span><span class="p"><span class="pre">
+           :
+          </span></span><span class="n"><span class="pre">
+           str
+          </span></span></em>
+        ,
+        <em class="sig-param"><span class="n"><span class="pre">
+           value_entity
+          </span></span></em>
+        ,
+        <em class="sig-param"><span class="n"><span class="pre">
+           low_limit
+          </span></span><span class="p"><span class="pre">
+           :
+          </span></span><span class="n"><span class="pre">
+           Union
+          </span><span class="p"><span class="pre">
+            [
+           </span></span><span class="pre">
+           int
+          </span><span class="p"><span class="pre">
+            ,
+           </span></span><span class="pre">
+           float
+          </span><span class="p"><span class="pre">
+            ]
+           </span></span></span></em>
+        ,
+        <em class="sig-param"><span class="n"><span class="pre">
+           high_limit
+          </span></span><span class="p"><span class="pre">
+           :
+          </span></span><span class="n"><span class="pre">
+           Union
+          </span><span class="p"><span class="pre">
+            [
+           </span></span><span class="pre">
+           int
+          </span><span class="p"><span class="pre">
+            ,
+           </span></span><span class="pre">
+           float
+          </span><span class="p"><span class="pre">
+            ]
+           </span></span></span></em><span class="sig-paren">
+         )
+        </span>
+        →
+        <span class="pre">
+         int
+        </span><a class="headerlink" href="#vector.canoe.tfs.test_validate_impl_value_in_range" title="Permalink to this definition">
+         ¶
+        </a></dt>
+                                    <dd>
+                                        <p>
+         Checks the impl encoding of a value entity to be inside a certain range of values.
+The test step is evaluated as either passed or failed depending on the results.
+        </p>
+                                        <dl class="field-list simple">
+                                            <dt class="field-odd">
+          Parameters
+         </dt>
+                                            <dd class="field-odd">
+                                                <ul class="simple">
+                                                    <li>
+                                                        <p><strong>
+              test_step
+             </strong>
+             (
+             <em>
+              string
+             </em>
+             ) – Name of the test step for the test report.
+            </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>
+              value_entity
+             </strong>
+             – Value entity of a distributed object.
+            </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>
+              low_limit
+             </strong>
+             (
+             <em>
+              Union
+             </em><em>
+              [
+             </em><em>
+              int
+             </em><em>
+              ,
+             </em><em>
+              float
+             </em><em>
+              ]
+             </em>
+             ) – Lower limit of the value. Its datatype must match the value entity’s datatype.
+            </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>
+              high_limit
+             </strong>
+             (
+             <em>
+              Union
+             </em><em>
+              [
+             </em><em>
+              int
+             </em><em>
+              ,
+             </em><em>
+              float
+             </em><em>
+              ]
+             </em>
+             ) – Upper limit of the value. Its datatype must match the value entity’s datatype.
+            </p>
+                                                    </li>
+                                                </ul>
+                                            </dd>
+                                            <dt class="field-even">
+          Returns
+         </dt>
+                                            <dd class="field-even">
+                                                <p>
+           a
+           <a class="reference internal" href="#vector.canoe.tfs.ValidationErrorCode" title="vector.canoe.tfs.ValidationErrorCode"><code class="xref py py-class docutils literal notranslate"><span class="pre">
+              ValidationErrorCode
+             </span></code></a>
+           return code
+          </p>
+                                            </dd>
+                                            <dt class="field-odd">
+          Return type
+         </dt>
+                                            <dd class="field-odd">
+                                                <p><a class="reference internal" href="#vector.canoe.tfs.ValidationErrorCode" title="vector.canoe.tfs.ValidationErrorCode">
+            ValidationErrorCode
+           </a>
+                                                </p>
+                                            </dd>
+                                        </dl>
+                                    </dd>
+                                </dl>
+                                <dl class="py function">
+                                    <dt class="sig sig-object py" id="vector.canoe.tfs.test_validate_impl_value_outside_range"><span class="sig-name descname"><span class="pre">
+          test_validate_impl_value_outside_range
+         </span></span><span class="sig-paren">
+         (
+        </span><em class="sig-param"><span class="n"><span class="pre">
+           test_step
+          </span></span><span class="p"><span class="pre">
+           :
+          </span></span><span class="n"><span class="pre">
+           str
+          </span></span></em>
+        ,
+        <em class="sig-param"><span class="n"><span class="pre">
+           value_entity
+          </span></span></em>
+        ,
+        <em class="sig-param"><span class="n"><span class="pre">
+           low_limit
+          </span></span><span class="p"><span class="pre">
+           :
+          </span></span><span class="n"><span class="pre">
+           Union
+          </span><span class="p"><span class="pre">
+            [
+           </span></span><span class="pre">
+           int
+          </span><span class="p"><span class="pre">
+            ,
+           </span></span><span class="pre">
+           float
+          </span><span class="p"><span class="pre">
+            ]
+           </span></span></span></em>
+        ,
+        <em class="sig-param"><span class="n"><span class="pre">
+           high_limit
+          </span></span><span class="p"><span class="pre">
+           :
+          </span></span><span class="n"><span class="pre">
+           Union
+          </span><span class="p"><span class="pre">
+            [
+           </span></span><span class="pre">
+           int
+          </span><span class="p"><span class="pre">
+            ,
+           </span></span><span class="pre">
+           float
+          </span><span class="p"><span class="pre">
+            ]
+           </span></span></span></em><span class="sig-paren">
+         )
+        </span>
+        →
+        <span class="pre">
+         int
+        </span><a class="headerlink" href="#vector.canoe.tfs.test_validate_impl_value_outside_range" title="Permalink to this definition">
+         ¶
+        </a></dt>
+                                    <dd>
+                                        <p>
+         Checks the impl encoding of a value entity to be outside a certain range of values.
+The test step is evaluated as either passed or failed depending on the results.
+        </p>
+                                        <dl class="field-list simple">
+                                            <dt class="field-odd">
+          Parameters
+         </dt>
+                                            <dd class="field-odd">
+                                                <ul class="simple">
+                                                    <li>
+                                                        <p><strong>
+              test_step
+             </strong>
+             (
+             <em>
+              string
+             </em>
+             ) – Name of the test step for the test report.
+            </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>
+              value_entity
+             </strong>
+             – Value entity of a distributed object.
+            </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>
+              low_limit
+             </strong>
+             (
+             <em>
+              Union
+             </em><em>
+              [
+             </em><em>
+              int
+             </em><em>
+              ,
+             </em><em>
+              float
+             </em><em>
+              ]
+             </em>
+             ) – Lower limit of the value. Its datatype must match the value entity’s datatype.
+            </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>
+              high_limit
+             </strong>
+             (
+             <em>
+              Union
+             </em><em>
+              [
+             </em><em>
+              int
+             </em><em>
+              ,
+             </em><em>
+              float
+             </em><em>
+              ]
+             </em>
+             ) – Upper limit of the value. Its datatype must match the value entity’s datatype.
+            </p>
+                                                    </li>
+                                                </ul>
+                                            </dd>
+                                            <dt class="field-even">
+          Returns
+         </dt>
+                                            <dd class="field-even">
+                                                <p>
+           a
+           <a class="reference internal" href="#vector.canoe.tfs.ValidationErrorCode" title="vector.canoe.tfs.ValidationErrorCode"><code class="xref py py-class docutils literal notranslate"><span class="pre">
+              ValidationErrorCode
+             </span></code></a>
+           return code
+          </p>
+                                            </dd>
+                                            <dt class="field-odd">
+          Return type
+         </dt>
+                                            <dd class="field-odd">
+                                                <p><a class="reference internal" href="#vector.canoe.tfs.ValidationErrorCode" title="vector.canoe.tfs.ValidationErrorCode">
+            ValidationErrorCode
+           </a>
+                                                </p>
+                                            </dd>
+                                        </dl>
+                                    </dd>
+                                </dl>
+                                <dl class="py function">
+                                    <dt class="sig sig-object py" id="vector.canoe.tfs.test_validate_phys_value"><span class="sig-name descname"><span class="pre">
+          test_validate_phys_value
+         </span></span><span class="sig-paren">
+         (
+        </span><em class="sig-param"><span class="n"><span class="pre">
+           test_step
+          </span></span><span class="p"><span class="pre">
+           :
+          </span></span><span class="n"><span class="pre">
+           str
+          </span></span></em>
+        ,
+        <em class="sig-param"><span class="n"><span class="pre">
+           value_entity
+          </span></span></em>
+        ,
+        <em class="sig-param"><span class="n"><span class="pre">
+           compare_value
+          </span></span><span class="p"><span class="pre">
+           :
+          </span></span><span class="n"><span class="pre">
+           Union
+          </span><span class="p"><span class="pre">
+            [
+           </span></span><span class="pre">
+           int
+          </span><span class="p"><span class="pre">
+            ,
+           </span></span><span class="pre">
+           float
+          </span><span class="p"><span class="pre">
+            ]
+           </span></span></span></em><span class="sig-paren">
+         )
+        </span>
+        →
+        <span class="pre">
+         int
+        </span><a class="headerlink" href="#vector.canoe.tfs.test_validate_phys_value" title="Permalink to this definition">
+         ¶
+        </a></dt>
+                                    <dd>
+                                        <p>
+         Checks the impl encoding of a value entity against a given value.
+The test step is evaluated as either passed or failed depending on the results.
+        </p>
+                                        <dl class="field-list simple">
+                                            <dt class="field-odd">
+          Parameters
+         </dt>
+                                            <dd class="field-odd">
+                                                <ul class="simple">
+                                                    <li>
+                                                        <p><strong>
+              test_step
+             </strong>
+             (
+             <em>
+              string
+             </em>
+             ) – Name of the test step for the test report.
+            </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>
+              value_entity
+             </strong>
+             – Value entity of a distributed object.
+            </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>
+              compare_value
+             </strong>
+             (
+             <em>
+              Union
+             </em><em>
+              [
+             </em><em>
+              int
+             </em><em>
+              ,
+             </em><em>
+              float
+             </em><em>
+              ]
+             </em>
+             ) – Value which is compared to. Its datatype must match the value entity’s datatype.
+            </p>
+                                                    </li>
+                                                </ul>
+                                            </dd>
+                                            <dt class="field-even">
+          Returns
+         </dt>
+                                            <dd class="field-even">
+                                                <p>
+           a
+           <a class="reference internal" href="#vector.canoe.tfs.ValidationErrorCode" title="vector.canoe.tfs.ValidationErrorCode"><code class="xref py py-class docutils literal notranslate"><span class="pre">
+              ValidationErrorCode
+             </span></code></a>
+           return code
+          </p>
+                                            </dd>
+                                            <dt class="field-odd">
+          Return type
+         </dt>
+                                            <dd class="field-odd">
+                                                <p><a class="reference internal" href="#vector.canoe.tfs.ValidationErrorCode" title="vector.canoe.tfs.ValidationErrorCode">
+            ValidationErrorCode
+           </a>
+                                                </p>
+                                            </dd>
+                                        </dl>
+                                    </dd>
+                                </dl>
+                                <dl class="py function">
+                                    <dt class="sig sig-object py" id="vector.canoe.tfs.test_validate_phys_value_in_range"><span class="sig-name descname"><span class="pre">
+          test_validate_phys_value_in_range
+         </span></span><span class="sig-paren">
+         (
+        </span><em class="sig-param"><span class="n"><span class="pre">
+           test_step
+          </span></span><span class="p"><span class="pre">
+           :
+          </span></span><span class="n"><span class="pre">
+           str
+          </span></span></em>
+        ,
+        <em class="sig-param"><span class="n"><span class="pre">
+           value_entity
+          </span></span></em>
+        ,
+        <em class="sig-param"><span class="n"><span class="pre">
+           low_limit
+          </span></span><span class="p"><span class="pre">
+           :
+          </span></span><span class="n"><span class="pre">
+           Union
+          </span><span class="p"><span class="pre">
+            [
+           </span></span><span class="pre">
+           int
+          </span><span class="p"><span class="pre">
+            ,
+           </span></span><span class="pre">
+           float
+          </span><span class="p"><span class="pre">
+            ]
+           </span></span></span></em>
+        ,
+        <em class="sig-param"><span class="n"><span class="pre">
+           high_limit
+          </span></span><span class="p"><span class="pre">
+           :
+          </span></span><span class="n"><span class="pre">
+           Union
+          </span><span class="p"><span class="pre">
+            [
+           </span></span><span class="pre">
+           int
+          </span><span class="p"><span class="pre">
+            ,
+           </span></span><span class="pre">
+           float
+          </span><span class="p"><span class="pre">
+            ]
+           </span></span></span></em><span class="sig-paren">
+         )
+        </span>
+        →
+        <span class="pre">
+         int
+        </span><a class="headerlink" href="#vector.canoe.tfs.test_validate_phys_value_in_range" title="Permalink to this definition">
+         ¶
+        </a></dt>
+                                    <dd>
+                                        <p>
+         Checks the impl encoding of a value entity to be inside a certain range of values.
+The test step is evaluated as either passed or failed depending on the results.
+        </p>
+                                        <dl class="field-list simple">
+                                            <dt class="field-odd">
+          Parameters
+         </dt>
+                                            <dd class="field-odd">
+                                                <ul class="simple">
+                                                    <li>
+                                                        <p><strong>
+              test_step
+             </strong>
+             (
+             <em>
+              string
+             </em>
+             ) – Name of the test step for the test report.
+            </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>
+              value_entity
+             </strong>
+             – Value entity of a distributed object.
+            </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>
+              low_limit
+             </strong>
+             (
+             <em>
+              Union
+             </em><em>
+              [
+             </em><em>
+              int
+             </em><em>
+              ,
+             </em><em>
+              float
+             </em><em>
+              ]
+             </em>
+             ) – Lower limit of the value. Its datatype must match the value entity’s datatype.
+            </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>
+              high_limit
+             </strong>
+             (
+             <em>
+              Union
+             </em><em>
+              [
+             </em><em>
+              int
+             </em><em>
+              ,
+             </em><em>
+              float
+             </em><em>
+              ]
+             </em>
+             ) – Upper limit of the value. Its datatype must match the value entity’s datatype.
+            </p>
+                                                    </li>
+                                                </ul>
+                                            </dd>
+                                            <dt class="field-even">
+          Returns
+         </dt>
+                                            <dd class="field-even">
+                                                <p>
+           a
+           <a class="reference internal" href="#vector.canoe.tfs.ValidationErrorCode" title="vector.canoe.tfs.ValidationErrorCode"><code class="xref py py-class docutils literal notranslate"><span class="pre">
+              ValidationErrorCode
+             </span></code></a>
+           return code
+          </p>
+                                            </dd>
+                                            <dt class="field-odd">
+          Return type
+         </dt>
+                                            <dd class="field-odd">
+                                                <p><a class="reference internal" href="#vector.canoe.tfs.ValidationErrorCode" title="vector.canoe.tfs.ValidationErrorCode">
+            ValidationErrorCode
+           </a>
+                                                </p>
+                                            </dd>
+                                        </dl>
+                                    </dd>
+                                </dl>
+                                <dl class="py function">
+                                    <dt class="sig sig-object py" id="vector.canoe.tfs.test_validate_phys_value_outside_range"><span class="sig-name descname"><span class="pre">
+          test_validate_phys_value_outside_range
+         </span></span><span class="sig-paren">
+         (
+        </span><em class="sig-param"><span class="n"><span class="pre">
+           test_step
+          </span></span><span class="p"><span class="pre">
+           :
+          </span></span><span class="n"><span class="pre">
+           str
+          </span></span></em>
+        ,
+        <em class="sig-param"><span class="n"><span class="pre">
+           value_entity
+          </span></span></em>
+        ,
+        <em class="sig-param"><span class="n"><span class="pre">
+           low_limit
+          </span></span><span class="p"><span class="pre">
+           :
+          </span></span><span class="n"><span class="pre">
+           Union
+          </span><span class="p"><span class="pre">
+            [
+           </span></span><span class="pre">
+           int
+          </span><span class="p"><span class="pre">
+            ,
+           </span></span><span class="pre">
+           float
+          </span><span class="p"><span class="pre">
+            ]
+           </span></span></span></em>
+        ,
+        <em class="sig-param"><span class="n"><span class="pre">
+           high_limit
+          </span></span><span class="p"><span class="pre">
+           :
+          </span></span><span class="n"><span class="pre">
+           Union
+          </span><span class="p"><span class="pre">
+            [
+           </span></span><span class="pre">
+           int
+          </span><span class="p"><span class="pre">
+            ,
+           </span></span><span class="pre">
+           float
+          </span><span class="p"><span class="pre">
+            ]
+           </span></span></span></em><span class="sig-paren">
+         )
+        </span>
+        →
+        <span class="pre">
+         int
+        </span><a class="headerlink" href="#vector.canoe.tfs.test_validate_phys_value_outside_range" title="Permalink to this definition">
+         ¶
+        </a></dt>
+                                    <dd>
+                                        <p>
+         Checks the phys encoding of a value entity to be outside a certain range of values.
+The test step is evaluated as either passed or failed depending on the results.
+        </p>
+                                        <dl class="field-list simple">
+                                            <dt class="field-odd">
+          Parameters
+         </dt>
+                                            <dd class="field-odd">
+                                                <ul class="simple">
+                                                    <li>
+                                                        <p><strong>
+              test_step
+             </strong>
+             (
+             <em>
+              string
+             </em>
+             ) – Name of the test step for the test report.
+            </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>
+              value_entity
+             </strong>
+             – Value entity of a distributed object.
+            </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>
+              low_limit
+             </strong>
+             (
+             <em>
+              Union
+             </em><em>
+              [
+             </em><em>
+              int
+             </em><em>
+              ,
+             </em><em>
+              float
+             </em><em>
+              ]
+             </em>
+             ) – Lower limit of the value. Its datatype must match the value entity’s datatype.
+            </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>
+              high_limit
+             </strong>
+             (
+             <em>
+              Union
+             </em><em>
+              [
+             </em><em>
+              int
+             </em><em>
+              ,
+             </em><em>
+              float
+             </em><em>
+              ]
+             </em>
+             ) – Upper limit of the value. Its datatype must match the value entity’s datatype.
+            </p>
+                                                    </li>
+                                                </ul>
+                                            </dd>
+                                            <dt class="field-even">
+          Returns
+         </dt>
+                                            <dd class="field-even">
+                                                <p>
+           a
+           <a class="reference internal" href="#vector.canoe.tfs.ValidationErrorCode" title="vector.canoe.tfs.ValidationErrorCode"><code class="xref py py-class docutils literal notranslate"><span class="pre">
+              ValidationErrorCode
+             </span></code></a>
+           return code
+          </p>
+                                            </dd>
+                                            <dt class="field-odd">
+          Return type
+         </dt>
+                                            <dd class="field-odd">
+                                                <p><a class="reference internal" href="#vector.canoe.tfs.ValidationErrorCode" title="vector.canoe.tfs.ValidationErrorCode">
+            ValidationErrorCode
+           </a>
+                                                </p>
+                                            </dd>
+                                        </dl>
+                                    </dd>
+                                </dl>
+                                <dl class="py function">
+                                    <dt class="sig sig-object py" id="vector.canoe.tfs.trace_item"><span class="sig-name descname"><span class="pre">
+          trace_item
+         </span></span><span class="sig-paren">
+         (
+        </span><em class="sig-param"><span class="n"><span class="pre">
+           trace_item_id
+          </span></span><span class="p"><span class="pre">
+           :
+          </span></span><span class="n"><span class="pre">
+           str
+          </span></span></em><span class="sig-paren">
+         )
+        </span><a class="headerlink" href="#vector.canoe.tfs.trace_item" title="Permalink to this definition">
+         ¶
+        </a>
+                                    </dt>
+                                    <dd>
+                                        <p>
+         Decorator that flags a function with trace item.
+After its execution the trace item will be part of the test report.
+        </p>
+                                        <dl class="field-list simple">
+                                            <dt class="field-odd">
+          Parameters
+         </dt>
+                                            <dd class="field-odd">
+                                                <p><strong>
+            trace_item_id
+           </strong>
+           (
+           <em>
+            str
+           </em>
+           ) – unique trace item ID
+          </p>
+                                            </dd>
+                                        </dl>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearer">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="FooterWhite">
+                <table class="FooterWhite" style="border-collapse: collapse;margin-left: auto;margin-right: auto;">
+                    <col style="width: 70px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col style="width: 16px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col data-mc-conditions="" />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="buttons popup-container clearfix topicToolbarProxy topicToolbarProxyFooter _Skins_HTML5TopicToolbar mc-component nocontent">
+                                    <div class="button-group-container-left">
+                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo"><a href="javascript:startCANoe4SWLauncher ('HELP:H2H_01_0086_HowToUseOnlineHelp')" title="Tips for using the help" alt="Tips for using the help"><img class="vec_Footer" src="../Resources/vImages/vBackstage/vHelpInfo.png" /></a>
+                                </p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo">•&#160;&#160;Technical&#160;References are only&#160;available&#160;in&#160;English</p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo" style="text-align: right;"><span class="mc-variable Vector.BuildTime variable">2024-04-8T21:03:39</span>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <table style="width: 100%;border-collapse: separate;border-spacing: 3px 0px;margin-left: auto;margin-right: auto;caption-side: top;">
+                <col />
+                <col />
+                <col />
+                <col data-mc-conditions="BuildProcess.HTML5Link" />
+                <tbody>
+                    <tr>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;">
+                            <p class="vec_Footer">©&#160;Vector Informatik GmbH</p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;text-align: right;">
+                            <p class="vec_FooterBold">CANoe Version <span class="bold">18</span>&#160;&#160;•&#160;&#160;Powered by Sphinx 4.0.3 &amp; Alabaster 0.7.12</p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="../../../../Content/Topics/Shared/ContactCopyrightLicense.htm" class="vec_Footer" data-mc-conditions="vConditions.HTML5Link">Contact/Copyright/License</a>
+                            </p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="https://www.vector.com/int/en/company/get-info/privacy-policy/" target="_blank" class="vec_Footer">Data Privacy Notice</a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,1604 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="topic" data-mc-search-type="Stem" data-mc-help-system-file-name="CANoeDEFamily.xml" data-mc-path-to-help-system="../../../../../" data-mc-conditions="Targets.CANoe-DE-Family,Targets.vTESTstudio" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../Skins/Favicons/favicon-16x16.png" /><title>AUTOSAR Ethernet Interaction Layer</title>
+        <link href="../../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Resources/Stylesheets/vTableMasterPageHeader.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../../Resources/Stylesheets/vStylesheet.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../../Resources/Stylesheets/vTablePageTOC.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../../Resources/Stylesheets/vTable.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapGlobal.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapDom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapUtilities.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapXhr.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTextEffects.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSlideshow.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMessageBus.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMessageBus.CrossFrame.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapDefault.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMediaQueries.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapAccessibility.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapHelpSystem.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapAliasFile.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopicFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapFeedbackHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSkinHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.Breadcrumbs.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.MiniToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.SideMenu.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapIndex.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapGlossary.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapParser.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSearch.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapNavigateTopics.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapLms.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapELearning.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopic.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMicroContentComponent.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSearchHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopicElements.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTriPane.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/jscript" src="../../../../Resources/vScripts/SyntaxHighlighting.js">
+        </script>
+        <script type="text/jscript" src="../../../../Resources/vScripts/TabSwitch.js">
+        </script>
+        <script type="text/javascript" src="../../../../Resources/vScripts/Vector.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../../../CANoeDEFamily.htm#Topics/CAPLFunctions/IP/AUTOSARethIL/CAPLfunctionsAREthILOverview.htm">Open topic with navigation</a>
+        </p>
+        <div class="Body">
+            <div role="main" id="mc-main-content">
+                <p class="StructurePath"><a href="../../CAPLfunctions.htm" class="StructurePath MCXref xref xrefStructurePath">CAPL Functions</a> » <a href="../CAPLEthernetStartPage.htm" class="StructurePath">Ethernet</a> » <span class="mc-variable System.Title variable">AUTOSAR Ethernet Interaction Layer</span></p>
+                <h1><a name="kanchor3134"></a><a name="aanchor10231"></a>
+                    <MadCap:concept term="AUTOSARethIL" /><a name="kanchor3135"></a><span class="mc-variable System.Title variable">AUTOSAR Ethernet Interaction Layer</span>
+                </h1>
+                <p class="MenuPath">&#160;</p>
+                <p class="ToolAvailability" data-mc-conditions="BuildProcess.ToolAvailability"><a href="../../../Shared/FeatureAvailability.htm" class="red" title="Feature availabilty for your product">Valid&#160;for</a>:&#160;&#160;CANoe&#160;DE<a name="aanchor10232"></a><MadCap:concept term="SFCANoeDE" />&#160;&#160;•&#160;&#160;CANoe4SW&#160;DE<a name="aanchor10233"></a><MadCap:concept term="SFCANoe4SWDE" /></p>
+                <p class="AutoSearchFilterConcepts"><a name="aanchor10234"></a>
+                    <MadCap:concept term="SFCAPLFunctions" />
+                </p>
+                <div data-mc-conditions="Targets.CANoe-DE-Family">
+                    <table style="margin-left: 0;margin-right: auto;width: 100%;">
+                        <col style="width: 60px;" />
+                        <col />
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <p>
+                                        <img src="../../../../Resources/vImages/vFunction.png" />
+                                    </p>
+                                </td>
+                                <td>
+                                    <p class="TableSymbolHead">Ethernet</p>
+                                    <p class="Table">Only available with Option&#160;Ethernet.</p>
+                                    <p class="Table">To use the CAPL functions the <a href="../../../CANoeCANalyzer/Ethernet/ILAUTOSAREth/ILAUTOSAREth.htm">CANoeILNL_AUTOSAR_ETH.vmodule</a> must be <a href="../../../CANoeCANalyzer/Ethernet/ILSomeIP/ILSomeIPInclude.htm">included</a>.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <hr class="Startpage" width="100%" size="0" align="center" data-mc-conditions="Targets.CANoe-DE-Family" />
+                <p class="TableCOM"><a name="Shortcuts" id="Shortcuts"></a><span class="red">ON THIS&#160;PAGE:</span>
+                </p>
+                <table style="margin-left: 0;margin-right: auto;caption-side: top;mc-table-style: url('../../../../Resources/Stylesheets/vTablePageTOC.css');" class="TableStyle-vTablePageTOC" cellspacing="2">
+                    <col class="TableStyle-vTablePageTOC-Column-Column1" style="width: 33%;" />
+                    <col class="TableStyle-vTablePageTOC-Column-Column1" style="width: 33%;" />
+                    <col class="TableStyle-vTablePageTOC-Column-Column1" style="width: 33%;" />
+                    <tbody>
+                        <tr class="TableStyle-vTablePageTOC-Body-Body1">
+                            <td class="TableStyle-vTablePageTOC-BodyB-Column1-Body1">
+                                <p class="PageTOC"><a href="#Callback" class="PageTOC">Callback Functions</a>
+                                </p>
+                                <p class="PageTOC"><a href="#ClientSideAPI" class="PageTOC">Client-Side API</a>
+                                </p>
+                                <p class="PageTOC"><a href="#ControlAPI" class="PageTOC">Control API</a>
+                                </p>
+                                <p class="PageTOC"><a href="#Endpoints" class="PageTOC">Endpoints</a>
+                                </p>
+                                <p class="PageTOC"><a href="#General" class="PageTOC">General Functions</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle-vTablePageTOC-BodyB-Column1-Body1">
+                                <p class="PageTOC"><a href="#LowLevelAPI" class="PageTOC">Low-level API</a>
+                                </p>
+                                <p class="PageTOC"><a href="#RawDataAccess" class="PageTOC">Raw Data Access</a>
+                                </p>
+                                <p class="PageTOC"><a href="#ServerSideAPI" class="PageTOC">Server-Side API</a>
+                                </p>
+                                <p class="PageTOC"><a href="#ServiceDiscovery" class="PageTOC">Service Discovery</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle-vTablePageTOC-BodyA-Column1-Body1">
+                                <p class="PageTOC"><a href="../SOMEIPIL/CAPLfunctionsSomeIPILOverview.htm#Static" class="PageTOC">Static Configuration</a>
+                                </p>
+                                <p class="PageTOC"><a href="#SymDataAccess" class="PageTOC">Symbolic Database Access</a>
+                                </p>
+                                <p class="PageTOC"><a href="../SOMEIPIL/CAPLfunctionsSomeIPILOverview.htm#TCP" class="PageTOC">TCP Handling</a>
+                                </p>
+                                <p class="PageTOC"><a href="#ValueAccess" class="PageTOC">Value Access</a>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h2><a name="Callback" id="Callback"></a>Callback Functions <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                <table style="width: 100%;margin-left: 0;margin-right: auto;caption-side: top;mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                    <col style="width: 280px;" />
+                    <col />
+                    <thead>
+                        <tr>
+                            <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                <p class="TableHead">Functions</p>
+                            </th>
+                            <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                <p class="TableHead">Short Description</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionOnAREthEventReceived.htm">&lt;OnAREthEventReceived&gt;</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">CAPL handler to receive events.</td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionOnAREthFieldNotification.htm">&lt;OnAREthFieldNotification&gt;</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table"> CAPL handler to receive field change notifications.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p><a href="Functions/CAPLfunctionOnAREthMethodError.htm" class="MCXref xref">&lt;OnAREthMethodError&gt;</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">A callback function with this signature must be passed to the CAPL function <a href="Functions/CAPLfunctionAREthCreateMethodCall.htm" class="SourceCode">AREthCreateMethodCall</a>.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionOnAREthMethodRequest.htm">&lt;OnAREthMethodRequest&gt;</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">CAPL handler to request a method.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionOnAREthMethodResponse.htm">&lt;OnAREthMethodResponse&gt;</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">CAPL handler to response a method.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionOnAREthPrepareEvent.htm">&lt;OnAREthPrepareEvent&gt;</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">CAPL handler to prepare an event before sending.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p><a href="Functions/CAPLfunctionOnAREthClosedIPv6TCPConnection.htm">OnAREthClosedIPv6TCPConnection</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">CAPL handler to be called after a IL’s TCP connection has been closed.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p><a href="Functions/CAPLfunctionOnAREthEstablishedIPv6TCPConnection.htm">OnAREthEstablishedIPv6TCPConnection</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">CAPL handler to be called after an incoming or outgoing TCP connection.</p>
+                            </td>
+                        </tr>
+                        <tr data-mc-conditions="Targets.CANoe-DE-Family">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLFunctionOnAREthClientAepConnected.htm" class="MCXref xref">OnAREthClientAepConnected</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">This callback gets called when a server-side SOME/IP Application Endpoint gets opened.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionOnAREthClosedTLSConnection.htm" class="MCXref xref">OnAREthClosedTLSConnection</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">This callback will be called after a (D)TLS connection between the local endpoint and remote endpoint has been closed and it indicates whether the connection was closed by peer.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionOnAREthEstablishedTLSConnection.htm" class="MCXref xref">OnAREthEstablishedTLSConnection</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">This callback will be called after a (D)TLS connection between the local endpoint and remote endpoint has been established.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionOnAREthMessage.htm">OnAREthMessage</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">CAPL handler to receive SOME/IP messages.</p>
+                            </td>
+                        </tr>
+                        <tr data-mc-conditions="Targets.CANoe-DE-Family">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLFunctionOnAREthNewServerAep.htm" class="MCXref xref">OnAREthNewServerAep</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">This callback gets called when a client-side SOME/IP Application Endpoint gets connected to a remote peer.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionOnAREthProcessRxMessage.htm">OnAREthProcessRxMessage</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">CAPL handler to be called  when the IL has received a SOME/IP message.</td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionOnAREthProcessTxARPDU.htm">OnAREthProcessTxARPDU</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Is called by the interaction layer before sending an AUTOSAR&#160;PDU.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionOnAREthProcessTxMessage.htm">OnAREthProcessTxMessage</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">CAPL handler to be called  when the IL wants to send a SOME/IP message.</td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionOnAREthSDClientEventGroupStatusChanged.htm">OnAREthSDClientEventGroupStatusChanged</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">CAPL handler to be called when the status of an Event Group changes.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionOnAREthSDClientServiceStatusChanged.htm">OnAREthSDClientServiceStatusChanged</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">CAPL handler to be called when the status of a service changes.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionOnAREthSDServerEventGroupStatusChanged.htm">OnAREthSDServerEventGroupStatusChanged</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">CAPL handler to be called when a Client executes the Require Service or Release Service.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionOnAREthSDServerEventGroupStatusChangedIPv6.htm" class="MCXref xref">OnAREthSDServerEventGroupStatusChangedIPv6</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                <p class="Table">CAPL handler to be called when a Client executes the Require Service or Release Service.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h2><a name="ClientSideAPI" id="ClientSideAPI"></a>Client-Side API <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                <table style="width: 100%;margin-left: 0;margin-right: auto;caption-side: top;mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                    <col style="width: 280px;" />
+                    <col />
+                    <thead>
+                        <tr>
+                            <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                <p class="TableHead">Functions</p>
+                            </th>
+                            <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                <p class="TableHead">Short Description</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionAREthAddConsumedEventGroup.htm">AREthAddConsumedEventGroup</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Adds an Event Group to a Consumed Service Instance</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionAREthCallMethod.htm">AREthCallMethod</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Sends a request to the server.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionAREthCreateConsumedServiceInstance.htm">AREthCreateConsumedServiceInstance</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Creates a Consumed Service Instance.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionAREthCreateEventConsumer.htm">AREthCreateEventConsumer</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Adds an Event Consumer to a Consumed Service Instance.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionAREthCreateFieldConsumer.htm">AREthCreateFieldConsumer</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Adds a Field Consumer to a Consumed Service Instance.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionAREthCreateMethodCall.htm">AREthCreateMethodCall</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Creates a method call.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionAREthReleaseConsumedServiceInstance.htm">AREthReleaseConsumedServiceInstance</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Deletes a Consumed Service Instance.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionAREthRemoveConsumedEventGroup.htm">AREthRemoveConsumedEventGroup</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Removes an Event Group.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionAREthRemoveEventConsumer.htm">AREthRemoveEventConsumer</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Deletes an Event Consumer.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionAREthRemoveFieldConsumer.htm">AREthRemoveFieldConsumer</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Deletes a Field Consumer.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionAREthRemoveMethodCall.htm">AREthRemoveMethodCall</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                <p class="Table">Deletes a method call.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h2><a name="ControlAPI" id="ControlAPI"></a>Control API <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                <table style="width: 100%;margin-left: 0;margin-right: auto;caption-side: top;mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                    <col style="width: 280px;" />
+                    <col />
+                    <thead>
+                        <tr>
+                            <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                <p class="TableHead">Functions</p>
+                            </th>
+                            <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                <p class="TableHead">Short Description</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionAREthILControlGetStatus.htm" class="MCXref xref">AREthILControlGetStatus</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p>Returns current status of AUTOSAR Eth IL.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionAREthILControlInit.htm">AREthILControlInit</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">Initializes the AUTOSAR Eth IL.</td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionAREthILControlResume.htm">AREthILControlResume</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Starts to send periodic messages</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionAREthILControlStart.htm">AREthILControlStart</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Starts the AUTOSAR Eth IL.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionAREthILControlStop.htm">AREthILControlStop</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Stops the AUTOSAR Eth IL.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionAREthILControlWait.htm">AREthILControlWait</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                <p class="Table">Stops sending cyclic messages.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h2><a name="Endpoints" id="Endpoints"></a>Endpoints <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                <table style="width: 100%;margin-left: 0;margin-right: auto;caption-side: top;mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                    <col style="width: 280px;" />
+                    <col />
+                    <thead>
+                        <tr>
+                            <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                <p class="TableHead">Functions</p>
+                            </th>
+                            <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                <p class="TableHead">Short Description</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionAREthCloseLocalApplicationEndpoint.htm">AREthCloseLocalApplicationEndpoint</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Closes an application endpoint.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionAREthOpenLocalApplicationEndpoint.htm">AREthOpenLocalApplicationEndpoint</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Opens an application endpoint.</p>
+                            </td>
+                        </tr>
+                        <tr data-mc-conditions="Targets.CANoe-DE-Family">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLFunctionAREthTlsAuthenticateAsClientWithConfiguration.htm" class="MCXref xref">AREthTlsAuthenticateAsClientWithConfiguration</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p>Starts the (D)TLS authentication handshake as client.</p>
+                            </td>
+                        </tr>
+                        <tr data-mc-conditions="Targets.CANoe-DE-Family">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLFunctionAREthTlsAuthenticateAsServerWithConfiguration.htm" class="MCXref xref">AREthTlsAuthenticateAsServerWithConfiguration</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p>Starts the (D)TLS authentication handshake as server.</p>
+                            </td>
+                        </tr>
+                        <tr data-mc-conditions="Targets.CANoe-DE-Family">
+                            <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionAREthPreConfigureTlsConnection.htm" class="MCXref xref">AREthPreConfigureTlsConnection</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                <p class="Table">Preconfigures (D)TLS connection between localAEP and remoteAEP at measurement start.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h2><a name="General" id="General"></a>General Functions <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                <table style="width: 100%;margin-left: 0;margin-right: auto;caption-side: top;mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                    <col style="width: 280px;" />
+                    <col />
+                    <thead>
+                        <tr>
+                            <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                <p class="TableHead">Functions</p>
+                            </th>
+                            <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                <p class="TableHead">Short Description</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionAREthGetLastError.htm">AREthGetLastError</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Interface to retrieve the last error which occurs in the AUTOSAR Eth IL.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionAREthGetLastErrorText.htm">AREthGetLastErrorText</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Interface to retrieve the last error that occurred in the AUTOSAR Eth IL as string.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep"><a href="Functions/CAPLfunctionAREthGetSecurityValidationState.htm">AREthGetSecurityValidationState</a>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p>Returns the Security-Validation-State of a received SOME/IP message.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionAREthSetProperty.htm">AREthSetProperty</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Sets a property of the AUTOSAR Eth IL.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionAREthSetVerbosity.htm">AREthSetVerbosity</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                <p class="Table">Sets the verbosity level of the AUTOSAR Eth IL.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h2><a name="LowLevelAPI" id="LowLevelAPI"></a>Low-level API <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                <table style="width: 100%;margin-left: 0;margin-right: auto;caption-side: top;mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                    <col style="width: 280px;" />
+                    <col />
+                    <thead>
+                        <tr>
+                            <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                <p class="TableHead">Functions</p>
+                            </th>
+                            <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                <p class="TableHead">Short Description</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionAREthCreateMessage.htm">AREthCreateMessage</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Creates a SOME/IP message.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionAREthOutputMessage.htm">AREthOutputMessage</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Sends a SOME/IP message.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionAREthPostMessage.htm">AREthPostMessage</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Posts a SOME/IP message.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionAREthReleaseMessage.htm">AREthReleaseMessage</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Deletes a SOME/IP message.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionAREthSendARPDUTo.htm">AREthSendARPDUTo</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                <p class="Table">Sends data as AUTOSAR&#160;PDU via a connection.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h2><a name="RawDataAccess" id="RawDataAccess"></a>Raw Data Access <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                <table style="width: 100%;margin-left: 0;margin-right: auto;caption-side: top;mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                    <col style="width: 280px;" />
+                    <col />
+                    <thead>
+                        <tr>
+                            <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                <p class="TableHead">Functions</p>
+                            </th>
+                            <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                <p class="TableHead">Short Description</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionAREthGetData.htm">AREthGetData</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Queries the raw data of a SOME/IP message.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionAREthSerializeMessage.htm">AREthSerializeMessage</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Serializes the SOME/IP message including the header into a buffer.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionAREthSetData.htm">AREthSetData</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                <p class="Table">Sets the raw data of a SOME/IP message.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h2><a name="ServerSideAPI" id="ServerSideAPI"></a>Server-Side API <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                <table style="width: 100%;margin-left: 0;margin-right: auto;caption-side: top;mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                    <col style="width: 280px;" />
+                    <col />
+                    <thead>
+                        <tr>
+                            <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                <p class="TableHead">Functions</p>
+                            </th>
+                            <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                <p class="TableHead">Short Description</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionAREthAddEvent.htm">AREthAddEvent</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Adds an event to a Provided Service Instance.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionAREthAddEventToEventgroup.htm">AREthAddEventToEventgroup</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Assigns an event to an Event Group.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionAREthAddField.htm">AREthAddField</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table"> Adds a Field to a Provided Service Instance.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionAREthAddFieldToEventgroup.htm">AREthAddFieldToEventgroup</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Assigns a Field to an Event Group.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionAREthAddMethod.htm">AREthAddMethod</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Adds a method to a Provided Service Instance.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionAREthAddProvidedEventGroup.htm">AREthAddProvidedEventGroup</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Adds an Event Group to a Provided Service Instance.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionAREthCommitField.htm">AREthCommitField</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Commit field changes and send a field notification.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionAREthCreateProvidedServiceInstance.htm">AREthCreateProvidedServiceInstance</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Creates a Provided Service Instance.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionAREthReleaseProvidedServiceInstance.htm">AREthReleaseProvidedServiceInstance</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Deletes a Provided Service Instance.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionAREthRemoveEvent.htm">AREthRemoveEvent</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Removes an event from a Provided Service Instance.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionAREthRemoveEventFromEventgroup.htm">AREthRemoveEventFromEventgroup</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Removes an event from an Event Group.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionAREthRemoveField.htm">AREthRemoveField</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table"> Removes a field from a Provided Service Instance.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionAREthRemoveFieldFromEventgroup.htm">AREthRemoveFieldFromEventgroup</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Removes a Field from an Event Group.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionAREthRemoveMethod.htm">AREthRemoveMethod</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Removes a method from a Provided Service Instance.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionAREthRemoveProvidedEventGroup.htm">AREthRemoveProvidedEventGroup</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Removes an Event Group from a Provided Service Instance.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionAREthTriggerEvent.htm">AREthTriggerEvent</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                <p class="Table">Triggers sending of an event.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h2 colspan="2"><a name="ServiceDiscovery" id="ServiceDiscovery"></a>Service Discovery <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                <table style="width: 100%;margin-left: 0;margin-right: auto;caption-side: top;mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                    <col style="width: 280px;" />
+                    <col />
+                    <thead>
+                        <tr>
+                            <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                <p class="TableHead">Functions</p>
+                            </th>
+                            <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                <p class="TableHead">Short Description</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionAREthSDDesubscribeEventGroup.htm">AREthSDDesubscribeEventGroup</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Informs the Remote-SD that Event Group is no longer needed.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionAREthSDReleaseService.htm">AREthSDReleaseService</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Informs the local SD that the Remote Service is no longer needed.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionAREthSDRequireService.htm">AREthSDRequireService</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Informs the local SD that the Remote Service is needed.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionAREthSDSetServiceStatus.htm">AREthSDSetServiceStatus</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Informs the Service Discovery of the current status of a provided Service Instance.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionAREthSDSubscribeEventGroup.htm">AREthSDSubscribeEventGroup</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                <p class="Table">Sends a Subscribe message.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h2><a name="Static" id="Static"></a>Static Configuration <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                <table style="width: 100%;margin-left: 0;margin-right: auto;caption-side: top;mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                    <col style="width: 280px;" />
+                    <col />
+                    <thead>
+                        <tr>
+                            <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                <p class="TableHead">Functions</p>
+                            </th>
+                            <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                <p class="TableHead">Short Description</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p><a href="Functions/CAPLfunctionAREthProvidedEventGroupAddConsumer.htm">AREthProvidedEventGroupAddConsumer</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p>Adds a consumer to a provided event group</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p><a href="../SOMEIPIL/Functions/CAPLfunctionSomeIpProvidedEventGroupRemoveConsumer.htm">AREthProvidedEventGroupRemoveConsumer</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p>Removes a consumer from a provided event group</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p><a href="Functions/CAPLfunctionAREthProvidedEventsAndFieldsAddConsumer.htm">AREthProvidedEventsAndFieldsAddConsumer</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p>Adds a consumer to a provided service instance</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p><a href="Functions/CAPLfunctionAREthProvidedEventsAndFieldsRemoveConsumer.htm">AREthProvidedEventsAndFieldsRemoveConsumer</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p>Removes a consumer from a provided service instance</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p><a href="Functions/CAPLfunctionAREthProvidedEventAddConsumer.htm">AREthProvidedEventAddConsumer</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p>Adds a consumer to a provided event</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p><a href="Functions/CAPLfunctionAREthProvidedEventRemoveConsumer.htm">AREthProvidedEventRemoveConsumer</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p>Removes a consumer from a provided event</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p><a href="Functions/CAPLfunctionAREthProvidedFieldAddConsumer.htm">AREthProvidedFieldAddConsumer</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p>Adds a consumer to a provided field</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p><a href="Functions/CAPLfunctionAREthProvidedFieldRemoveConsumer.htm">AREthProvidedFieldRemoveConsumer</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p>Removes a consumer from a provided field</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p><a href="Functions/CAPLfunctionAREthSetMulticastReceiverEndpoints.htm">AREthSetMulticastReceiverEndpoints</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p>Sets the multicast endpoint of a consumed event group</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                <p><a href="Functions/CAPLfunctionAREthSetProviderEndpoints.htm">AREthSetProviderEndpoints</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                <p>Sets the remote endpoints of a consumed service instance</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h2><a name="SymDataAccess" id="SymDataAccess"></a>Symbolic Database Access <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                <table style="width: 100%;margin-left: 0;margin-right: auto;caption-side: top;mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                    <col style="width: 280px;" />
+                    <col />
+                    <thead>
+                        <tr>
+                            <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                <p class="TableHead">Functions</p>
+                            </th>
+                            <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                <p class="TableHead">Short Description</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr data-mc-conditions="">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionAREthGetConsumedObjectHandle.htm">AREthGetConsumedObjectHandle</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Enables to search for a consumed object which has been created separately.</p>
+                            </td>
+                        </tr>
+                        <tr data-mc-conditions="">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionAREthGetProvidedObjectHandle.htm">AREthGetProvidedObjectHandle</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Enables to search for a provided object which has been created separately.</p>
+                            </td>
+                        </tr>
+                        <tr data-mc-conditions="">
+                            <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionAREthRegisterCallback.htm">AREthRegisterCallback</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                <p class="Table">Enables to register/unregister a CAPL callback function for an object which has been created separately.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h2><a name="TCPHandling" id="TCPHandling"></a>TCP Handling <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                <table style="width: 100%;margin-left: 0;margin-right: auto;caption-side: top;mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                    <col style="width: 280px;" />
+                    <col />
+                    <thead>
+                        <tr>
+                            <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                <p class="TableHead">Functions</p>
+                            </th>
+                            <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                <p class="TableHead">Short Description</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionAREthCloseEstablishedTCPConnection.htm" class="MCXref xref">AREthCloseEstablishedTCPConnection</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Closes on eor multiple database defined TCP connection(s).</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionAREthEstablishTCPConnection.htm" class="MCXref xref">AREthEstablishTCPConnection</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Establishes one or multiple database defined TCP connection(s).</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                <p><a href="Functions/CAPLfunctionAREthTCPListen.htm">AREthTCPListen</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                <p>Listen on application endpoint</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h2><a name="ValueAccess" id="ValueAccess"></a>Value Access <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                <table style="width: 100%;margin-left: 0;margin-right: auto;caption-side: top;mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                    <col style="width: 280px;" />
+                    <col />
+                    <thead>
+                        <tr>
+                            <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                <p class="TableHead">Functions</p>
+                            </th>
+                            <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                <p class="TableHead">Short Description</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionAREthFillValues.htm" class="MCXref xref">AREthFillValues</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Fills the fields of SOME/IP events, methods and fields with increasing values for test purposes.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionAREthGetDestinationAddress.htm">AREthGetDestinationAddress</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Returns the IPv4 destination address.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionAREthGetDestinationPort.htm">AREthGetDestinationPort</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">Returns the destination port (UDP/TCP).</td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionAREthGetInterfaceVersion.htm">AREthGetInterfaceVersion</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Returns the Interface Version from the SOME/IP header.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionAREthGetLength.htm">AREthGetLength</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Returns the length in bytes that is in the SOME/IP header.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionAREthGetMessageId.htm">AREthGetMessageId</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Returns the Message ID from the SOME/IP header.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionAREthGetMessageType.htm">AREthGetMessageType</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Returns the Message Type from the SOME/IP header.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionAREthGetProtocol.htm">AREthGetProtocol</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Returns the protocol (UDP/TCP) the SOME/IP message was transmitted with.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionAREthGetProtocolVersion.htm">AREthGetProtocolVersion</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Returns the Protocol Version from the SOME/IP header.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionAREthGetRequestId.htm">AREthGetRequestId</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Returns the Request ID from the SOME/IP header.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionAREthGetReturnCode.htm">AREthGetReturnCode</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Returns the Return Code from the SOME/IP header.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionAREthGetSourceAddress.htm">AREthGetSourceAddress</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Returns the IPv4 sender address.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionAREthGetSourcePort.htm">AREthGetSourcePort</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Returns the Source Port (UDP/TCP).</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionAREthGetValueDWord.htm">AREthGetValueDWord</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Gets the parameters of a SOME/IP message.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionAREthGetValueFloat.htm">AREthGetValueFloat</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Gets the parameters of a SOME/IP message.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionAREthGetValueInt64.htm">AREthGetValueInt64</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Gets the parameters of a SOME/IP message.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionAREthGetValueLong.htm">AREthGetValueLong</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Gets the parameters of a SOME/IP message.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionAREthGetValuePhys.htm">AREthGetValuePhys</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Gets the physical parameters of a SOME/IP message.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionAREthGetValueQWord.htm">AREthGetValueQWord</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Gets the parameters of a SOME/IP message.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionAREthGetValueString.htm">AREthGetValueString</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Gets the string parameters of a SOME/IP message.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionAREthIsOptional.htm" class="MCXref xref">AREthIsOptional</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Reads out if a parameter or member of the object is optional or mandatory.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionAREthRemoveValue.htm" class="MCXref xref">AREthRemoveValue</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Removes the parameters of a SOME/IP message.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionAREthSetRequestId.htm">AREthSetRequestId</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Sets the Request ID.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionAREthSetReturnCode.htm">AREthSetReturnCode</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">Sets the return code.</td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionAREthSetValueDWord.htm">AREthSetValueDWord</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Sets the parameters of a SOME/IP message.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionAREthSetValueFloat.htm">AREthSetValueFloat</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Sets the parameters of a SOME/IP message.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionAREthSetValueInt64.htm">AREthSetValueInt64</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Sets the parameters of a SOME/IP message.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionAREthSetValueLong.htm">AREthSetValueLong</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Sets the parameters of a SOME/IP message.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionAREthSetValuePhys.htm">AREthSetValuePhys</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Sets the physical parameters of a SOME/IP message.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionAREthSetValueQWord.htm">AREthSetValueQWord</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Sets the parameters of a SOME/IP message.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionAREthSetValueString.htm">AREthSetValueString</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                <p class="Table">Sets the string parameters of a SOME/IP message.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="LinkList">&#160;</p>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="FooterWhite">
+                <table class="FooterWhite" style="border-collapse: collapse;margin-left: auto;margin-right: auto;">
+                    <col style="width: 70px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col style="width: 16px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col data-mc-conditions="" />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="buttons popup-container clearfix topicToolbarProxy topicToolbarProxyFooter _Skins_HTML5TopicToolbar mc-component nocontent">
+                                    <div class="button-group-container-left">
+                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo"><a href="../../../Shared/HowToUseOnlineHelp.htm" title="Tips for using the help" alt="Tips for using the help"><img src="../../../../Resources/vImages/vBackstage/vHelpInfo.png" /></a>
+                                </p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo">•&#160;&#160;Technical&#160;References are only&#160;available&#160;in&#160;English</p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo" style="text-align: right;"><span class="mc-variable Vector.BuildTime variable">2024-04-8T20:56:42</span>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <table style="width: 100%;border-collapse: separate;border-spacing: 3px 0px;margin-left: auto;margin-right: auto;caption-side: top;">
+                <col />
+                <col />
+                <col />
+                <col data-mc-conditions="BuildProcess.HTML5Link" />
+                <tbody>
+                    <tr>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;">
+                            <p class="vec_Footer">©&#160;Vector Informatik GmbH</p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;text-align: right;">
+                            <p class="vec_FooterBold">
+                                <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE&#160;Product Families</MadCap:conditionalText> Version <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.VectorTestUnitRunner">18</MadCap:conditionalText></p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="../../../Shared/ContactCopyrightLicense.htm" class="vec_Footer MCXref xref xrefvec_Footer">Contact/Copyright/License</a>
+                            </p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="https://www.vector.com/int/en/company/get-info/privacy-policy/" target="_blank" class="vec_Footer">Data Privacy Notice</a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

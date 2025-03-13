@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="" data-mc-search-type="Stem" data-mc-help-system-file-name="CANoeDEFamily.xml" data-mc-path-to-help-system="../../../../" data-mc-conditions="Targets.CANoe-DE-Family" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../Skins/Favicons/favicon-16x16.png" /><title>Dynamic Objects and References</title>
+        <link href="../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Resources/Stylesheets/vTableMasterPageHeader.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../Resources/Stylesheets/vStylesheet.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../Resources/Stylesheets/vTableSymbol.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapGlobal.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapDom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapUtilities.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapXhr.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTextEffects.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSlideshow.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMessageBus.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMessageBus.CrossFrame.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapDefault.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMediaQueries.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAccessibility.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapHelpSystem.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAliasFile.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopicFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapFeedbackHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSkinHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.Breadcrumbs.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.MiniToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.SideMenu.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapIndex.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapGlossary.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapParser.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSearch.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapNavigateTopics.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapLms.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapELearning.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopic.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMicroContentComponent.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSearchHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopicElements.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTriPane.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/jscript" src="../../../Resources/vScripts/SyntaxHighlighting.js">
+        </script>
+        <script type="text/jscript" src="../../../Resources/vScripts/TabSwitch.js">
+        </script>
+        <script type="text/javascript" src="../../../Resources/vScripts/Vector.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../../CANoeDEFamily.htm#Topics/CANoeCANalyzer/CommunicationConcept/CCDODynamicObjectReferences.htm">Open topic with navigation</a>
+        </p>
+        <div class="Body">
+            <div role="main" id="mc-main-content">
+                <div>
+                    <p class="StructurePath"><a href="../CANoeDEFamily.htm" class="StructurePath" data-mc-conditions="Targets.CANoe-DE-Family"><img src="../../../Resources/vImages/vToolIcons/CANoeDEFamily_Icon16_15x15.png" alt="" style="width: 15;height: 15;" />&#160;CANoe&#160;DE&#160;Product&#160;Families</a> » <a href="CC.htm" class="StructurePath MCXref xref xrefStructurePath">Communication Concept</a> » <a href="CCDistributedObjects.htm" class="StructurePath">Distributed Objects</a> » <span class="mc-variable System.Title variable">Dynamic Objects and References</span></p>
+                    <h1><span class="mc-variable System.Title variable">Dynamic Objects and References</span>
+                    </h1>
+                    <p class="MenuPath">&#160;</p>
+                    <p class="ToolAvailability" data-mc-conditions="BuildProcess.ToolAvailability"><a href="../../Shared/FeatureAvailability.htm" class="red" title="Feature availabilty for your product">Valid&#160;for</a>:&#160;&#160;CANoe&#160;DE<a name="aanchor6610"></a><MadCap:concept term="SFCANoeDE" />&#160;&#160;•&#160;&#160;CANoe:lite&#160;DE<a name="aanchor6611"></a><MadCap:concept term="SFCANoeLiteDE" />&#160;&#160;•&#160;&#160;CANoe4SW&#160;DE<a name="aanchor6612"></a><MadCap:concept term="SFCANoe4SWDE" />&#160;&#160;•&#160;&#160;CANoe4SW:lite&#160;DE<a name="aanchor6613"></a><MadCap:concept term="SFCANoe4SWLiteDE" /></p>
+                    <p class="AutoSearchFilterConcepts"><a name="aanchor6614"></a>
+                        <MadCap:concept term="SFCore" />
+                    </p>
+                    <p class="IndexConcept"><a name="kanchor2009"></a>
+                    </p>
+                </div>
+                <p>Another feature of the communication concept are dynamically generated distributed objects. These can be generated at runtime via C# or CAPL, for which examples are shown below. To allow you to parameterize the generated objects before use, blueprints of dynamic objects are introduced. These provide methods and properties to set attribute values or configure virtual networks before they are used at object generation.</p>
+                <h2 class="SectionMain">Creating Dynamic Objects in CAPL</h2>
+                <p>In CAPL there are singleton types for each vCDL interface (<span class="SourceCode"><a href="../../CAPLFunctions/DistributedObjects/Objects/CAPLfunctiondistObjInterface.htm">distObjInterface</a> &lt;Interface Name&gt;</span>), which are used to create and destroy dynamic objects that implement the respective interface or its reversal. The blueprint types (<span class="SourceCode"><a href="../../CAPLFunctions/DistributedObjects/Objects/CAPLfunctiondistObjBlueprint.htm">distObjBlueprint</a> &lt;Interface Name&gt;</span>) are also created at the interface singletons.</p>
+                <div>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                    <p class="Table">
+                                        <img src="../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                    </p>
+                                </td>
+                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                    <p class="TableSymbolHead">Example</p>
+                                    <p class="TableSourceCode">//&#160;Example.vcdl<br />version 1.3;<br />namespace SomeNamespace {<br />&#160;&#160;interface SomeInterface {<br />&#160;&#160;&#160;&#160;consumed data int32 SomeMember;<br />&#160;&#160;}<br />&#160;&#160;virtualnetwork SomeNetwork;<br />}</p>
+                                    <p class="TableSourceCode">//&#160;Example.can<br />variables {<br />&#160;&#160;using namespace _SystemAttributes;<br />}<br />on start {<br />&#160;&#160;// Create object blueprints<br />&#160;&#160;stack distObjBlueprint SomeInterface blueprint1 = SomeInterface.CreateObjectBlueprint();<br />&#160;&#160;stack distObjBlueprint reverse&lt;SomeInterface&gt; blueprint2 = SomeInterface.CreateReverseObjectBlueprint();<br /><br />&#160;&#160;// Set attributes and virtual networks<br />&#160;&#160;blueprint1.SetAttribute("_SystemAttributes::Binding", "Abstract");<br />&#160;&#160;blueprint1.SomeMember.SetAttribute("_SystemAttributes::CommunicationPattern", (long)PublishSubscribe);<br />&#160;&#160;blueprint1.SomeMember.SetVirtualNetwork(SomeNamespace::SomeNetwork);<br />&#160;&#160;blueprint2.SetAttribute("_SystemAttributes::Binding", "Abstract");<br />&#160;&#160;blueprint2.SomeMember.SetAttribute("_SystemAttributes::CommunicationPattern", (long)PublishSubscribe);<br />&#160;&#160;blueprint2.SomeMember.SetVirtualNetwork(SomeNamespace::SomeNetwork);<br />&#160;&#160;{<br />&#160;&#160;&#160;&#160;// Create a dynamic objects<br />&#160;&#160;&#160;&#160;stack distObjRef SomeInterface distObj1 = SomeInterface.CreateObject(blueprint1, "SomeNamespace::MyDynamicObject1");<br />&#160;&#160;&#160;&#160;stack distObjRef reverse&lt;SomeInterface&gt; distObj2 = blueprint2.CreateObject("SomeNamespace::MyDynamicObject2");<br /><br />&#160;&#160;&#160;&#160;// Destroy a dynamic objects<br />&#160;&#160;&#160;&#160;stack long success1 = SomeNamespace::SomeInterface.DestroyObject(distObj1);<br />&#160;&#160;&#160;&#160;stack long success2 = SomeNamespace::SomeInterface.DestroyObject(distObj2);<br />&#160;&#160;}<br />}</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h2 class="SectionMain">Creating Dynamic Objects in C#</h2>
+                <p>Similar to statically declared objects, dynamic objects are representing the implementation of an interface. Therefore, the object factory is located at the static class representing the user-given interface. The factory provides methods to create blueprints and dynamic objects and to destroy dynamic objects. Another way to create a dynamic object is to call the corresponding method at the blueprint.</p>
+                <p>Blueprints can either be created from scratch, or they can copy the configuration of an existing distributed object. To do so, just pass an existing distributed object as a parameter into the blueprint creation method. The type of parameter must be of the same interface as the interface represented by the class the object factory was addressed.</p>
+                <div>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                    <p class="Table">
+                                        <img src="../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                    </p>
+                                </td>
+                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                    <p class="TableSymbolHead">Example</p>
+                                    <p class="TableSourceCode">// Example.vcdl<br />version 1.3;<br />namespace SomeNamespace {<br />&#160;&#160;interface SomeInterface {<br />&#160;&#160;&#160;&#160;consumed data int32 SomeMember;<br />&#160;&#160;}<br />&#160;&#160;object SomeObject : SomeInterface {}<br />&#160;&#160;virtualnetwork SomeNetwork;<br />}</p>
+                                    <p class="TableSourceCode">//&#160;Example.cs<br />public override void Main(){<br />&#160;&#160;// Create an object blueprint<br />&#160;&#160;var blueprint = SomeNamespace.SomeInterface.ObjectFactory.CreateObjectBlueprint();<br /><br />&#160;&#160;// Create an object blueprint with copied configuration<br />&#160;&#160;var blueprint2 = SomeNamespace.SomeInterface.ObjectFactory.CreateObjectBlueprint(SomeObject.Instance);<br /><br />&#160;&#160;// Change an attribute configuration<br />&#160;&#160;var actionResult = blueprint.SetAttributeValue("_SystemAttributes::Binding", "Abstract");<br /><br />&#160;&#160;// Change a network configuration<br />&#160;&#160;var actionResult2 = blueprint2.AddVirtualNetwork("SomeNamespace::SomeNetwork");<br /><br />&#160;&#160;// Create a dynamic object<br />&#160;&#160;var distObj = SomeNamespace.SomeInterface.ObjectFactory.CreateDistributedObject(blueprint, "SomeNamespace::MyDynamicObject");<br /><br />&#160;&#160;// Create a dynamic object at the blueprint<br />&#160;&#160;var distObj2 = blueprint2.CreateObject("SomeNamespace::MyDynamicObject2");<br /><br />&#160;&#160;// Destroy a dynamic object<br />&#160;&#160;var success = SomeNamespace.SomeInterface.ObjectFactory.DestroyObject(distObj);<br />}</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h2 class="SectionMain">References in C#</h2>
+                <p>As it can come in handy to hold a reference to a (dynamic) distributed object, reference objects have been introduced. In C# you can access them like statically declared distributed objects, either via their fully qualified name, or, in case there is no top-level conflict, via their name from top-level. As references have also a user-defined interface type, they provide the same member structure as a distributed object.</p>
+                <p>To set the target of a reference object, you can either call the <span class="SourceCode">bool <a href="../../CAPLFunctions/DistributedObjects/Methods/CAPLfunctiondistObjReferenceRefSetTarget.htm">SetTarget</a>(ITargetInterface)</span> or the <span class="SourceCode">bool <a href="../../CAPLFunctions/DistributedObjects/Methods/CAPLfunctiondistObjReferenceRefSetTargetByPath.htm">SetTargetByPath</a>(string)</span> method. The first method accepts objects of the target type, the second one takes the path to an object as an argument. Both methods return a Boolean indicating the success of the operation.</p>
+                <p>If you want to know whether a reference object has a valid target, you can use the <span class="SourceCode">bool HasTarget {get;}</span> property, or simply check the <span class="SourceCode">ITargetInterface Target {get;}</span> property for <span class="SourceCode">null</span>.</p>
+                <p>In case you want to reset the target, either use the <span class="SourceCode">void <a href="../../CAPLFunctions/DistributedObjects/Methods/CAPLfunctiondistObjReferenceRefResetTarget.htm">ResetTarget</a>()</span> method, or pass <span class="SourceCode">null</span> as parameter to the <span class="SourceCode">bool <a href="../../CAPLFunctions/DistributedObjects/Methods/CAPLfunctiondistObjReferenceRefSetTarget.htm">SetTarget</a>(ITargetInterface)</span> method.</p>
+                <p>Members and their respective values can be accessed directly at the reference, or you can use the <span class="SourceCode">ITargetInterface Target {get;}</span> property.</p>
+                <p>In snippets, test modules (available for<span class="Product">CANoe&#160;DE</span>, <span class="Product">CANoe:lite&#160;DE</span>) and Waiting handler, the <span class="SourceCode">Execution.WaitForNextCall&lt;T, U&gt;()</span> method can not be used with reference method members. Doing so will result in a runtime exception. In order to use the function, dereference the target with the <span class="SourceCode">.Target</span> property and use the method member there, as shown in the example below.</p>
+                <div>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                    <p class="Table">
+                                        <img src="../../../Resources/vImages/vInfo.png" style="width: 48px;height: 45px;" title="Note" alt="Note" />
+                                    </p>
+                                </td>
+                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                    <p class="TableSymbolHead">Note</p>
+                                    <p class="Table">Please note that in case the referenced target is invalid or <span class="SourceCode">null</span>, the last value of the member can still be read at the reference object member but write access will throw an exception.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                    <p class="Table">
+                                        <img src="../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                    </p>
+                                </td>
+                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                    <p class="TableSymbolHead">Example</p>
+                                    <p class="TableSourceCode">// Example.vcdl<br />version 1.3;<br />namespace SomeNamespace {<br />&#160;&#160;interface SomeInterface {<br />&#160;&#160;&#160;&#160;internal data int32 SomeMember;<br />&#160;&#160;&#160;&#160;provided method void SomeMethod(int32 param);<br />&#160;&#160;}<br />&#160;&#160;object SomeObject : SomeInterface {}<br />&#160;&#160;reference&lt;SomeInterface&gt; SomeReference;<br />}</p>
+                                    <p class="TableSourceCode">// Example.cs<br />public override void Main(){<br />&#160;&#160;// Create an object blueprint<br />&#160;&#160;var blueprint = SomeNamespace.SomeInterface.ObjectFactory.CreateObjectBlueprint();<br /><br />&#160;&#160;// Create a dynamic object<br />&#160;&#160;var distObj = SomeNamespace.SomeInterface.ObjectFactory.CreateDistributedObject(blueprint, “SomeNamespace::MyDynamicObject”);<br /><br />&#160;&#160;// Set the target of the reference to the dynamic object<br />&#160;&#160;var success = SomeReference.SetTarget(distObj);<br /><br />&#160;&#160;// Do an operation on the reference<br />&#160;&#160;SomeReference.SomeMember.Value = 42;<br /><br />&#160;&#160;// Set the reference back to null<br />&#160;&#160;SomeReference.SetTarget(null);<br /><br />&#160;&#160;// Read the last known value from the reference member<br />&#160;&#160;var lastValue = SomeReference.SomeMember.Value;<br /><br />&#160;&#160;// Wait for the next call of SomeMethod(), note the dereferencing via .Target<br />&#160;&#160;var result = Execution.WaitForNextCall(SomeReference.Target.SomeMethod, SomeNamespace.SomeInterface_Types.SomeMethod.CallContext, 100);<br /><br />}</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="LinkList">&#160;</p>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="FooterWhite">
+                <table class="FooterWhite" style="border-collapse: collapse;margin-left: auto;margin-right: auto;">
+                    <col style="width: 70px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col style="width: 16px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="buttons popup-container clearfix topicToolbarProxy topicToolbarProxyFooter _Skins_HTML5TopicToolbar mc-component nocontent">
+                                    <div class="button-group-container-left">
+                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo"><a href="../../Shared/HowToUseOnlineHelp.htm" title="Tips for using the help" alt="Tips for using the help"><img src="../../../Resources/vImages/vBackstage/vHelpInfo.png" /></a>
+                                </p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo" style="text-align: right;"><span class="mc-variable Vector.BuildTime variable">2024-04-8T20:56:42</span>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <table style="width: 100%;border-collapse: separate;border-spacing: 3px 0px;margin-left: auto;margin-right: auto;caption-side: top;">
+                <col />
+                <col />
+                <col />
+                <col data-mc-conditions="BuildProcess.HTML5Link" />
+                <tbody>
+                    <tr>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;">
+                            <p class="vec_Footer">©&#160;Vector Informatik GmbH</p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;text-align: right;">
+                            <p class="vec_FooterBold">
+                                <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE&#160;Product Families</MadCap:conditionalText> Version <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.VectorTestUnitRunner">18</MadCap:conditionalText></p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="../../Shared/ContactCopyrightLicense.htm" class="vec_Footer MCXref xref xrefvec_Footer">Contact/Copyright/License</a>
+                            </p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="https://www.vector.com/int/en/company/get-info/privacy-policy/" target="_blank" class="vec_Footer">Data Privacy Notice</a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

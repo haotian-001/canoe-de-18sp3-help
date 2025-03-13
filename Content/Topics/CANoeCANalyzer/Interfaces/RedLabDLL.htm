@@ -1,0 +1,1488 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="" data-mc-search-type="Stem" data-mc-help-system-file-name="CANoeDEFamily.xml" data-mc-path-to-help-system="../../../../" data-mc-toc-path="Hardware Interfaces" data-mc-conditions="Targets.CANoe-DE-Family" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../Skins/Favicons/favicon-16x16.png" /><title>RedLab DLL</title>
+        <link href="../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Resources/Stylesheets/vTableMasterPageHeader.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../Resources/Stylesheets/vStylesheet.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../Resources/Stylesheets/vTable.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../Resources/Stylesheets/vTableSymbol.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapGlobal.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapDom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapUtilities.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapXhr.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTextEffects.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSlideshow.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMessageBus.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMessageBus.CrossFrame.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapDefault.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMediaQueries.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAccessibility.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapHelpSystem.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAliasFile.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopicFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapFeedbackHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSkinHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.Breadcrumbs.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.MiniToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.SideMenu.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapIndex.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapGlossary.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapParser.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSearch.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapNavigateTopics.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapLms.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapELearning.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopic.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMicroContentComponent.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSearchHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopicElements.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTriPane.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/jscript" src="../../../Resources/vScripts/SyntaxHighlighting.js">
+        </script>
+        <script type="text/jscript" src="../../../Resources/vScripts/TabSwitch.js">
+        </script>
+        <script type="text/javascript" src="../../../Resources/vScripts/Vector.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../../CANoeDEFamily.htm#Topics/CANoeCANalyzer/Interfaces/RedLabDLL.htm">Open topic with navigation</a>
+        </p>
+        <div class="Body">
+            <div role="main" id="mc-main-content">
+                <div>
+                    <p class="StructurePath"><a href="../CANoeDEFamily.htm" class="StructurePath" data-mc-conditions="Targets.CANoe-DE-Family"><img src="../../../Resources/vImages/vToolIcons/CANoeDEFamily_Icon16_15x15.png" alt="" style="width: 15;height: 15;" />&#160;CANoe&#160;DE&#160;Product&#160;Families</a> » <a href="ExternalHardware.htm" class="StructurePath">External Hardware</a> » <span class="mc-variable System.Title variable">RedLab DLL</span></p>
+                    <h1><span class="mc-variable System.Title variable">RedLab DLL</span>
+                    </h1>
+                    <p class="MenuPath">&#160;</p>
+                    <p class="ToolAvailability" data-mc-conditions="BuildProcess.ToolAvailability"><a href="../../Shared/FeatureAvailability.htm" class="red" title="Feature availabilty for your product">Valid&#160;for</a>:&#160;&#160;CANoe&#160;DE<a name="aanchor2532"></a><MadCap:concept term="SFCANoeDE" />&#160;&#160;•&#160;&#160;CANoe:lite&#160;DE<a name="aanchor2533"></a><MadCap:concept term="SFCANoeLiteDE" /></p>
+                    <p class="AutoSearchFilterConcepts"><a name="aanchor2534"></a>
+                        <MadCap:concept term="SFInterfaces" />
+                    </p>
+                    <p class="IndexConcept"><a name="kanchor768"></a>
+                    </p>
+                </div>
+                <div>
+                    <h2>Supported Devices and Functions</h2>
+                    <p class="StartList">Most devices of the <span class="Product">Meilhaus-RedLab</span> device family are supported by this DLL, including the following:</p>
+                    <ul>
+                        <li><span class="Product">RedLab</span> 1008</li>
+                        <li><span class="Product">RedLab</span> 1208 LS and FS</li>
+                        <li><span class="Product">RedLab</span> 1208 HS – 4AO</li>
+                        <li><span class="Product">RedLab</span> 1608 FS</li>
+                        <li><span class="Product">RedLab</span> 1024 LS</li>
+                    </ul>
+                    <p>Access to the analog and digital inputs/outputs as well as the counters of these devices is provided in your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText>.</p>
+                    <div>
+                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                            <col class="TableStyle-vTableSymbol-Column-Column1" />
+                            <col class="TableStyle-vTableSymbol-Column-Column2" />
+                            <tbody>
+                                <tr>
+                                    <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                        <p class="Table">
+                                            <img src="../../../Resources/vImages/vInfo.png" style="width: 48px;height: 45px;" title="Note" alt="Note" />
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                        <p class="TableSymbolHead">Note</p>
+                                        <p class="Table">In order to make use of the <span class="Product">RedLab</span> devices, you need to have installed the <span class="Product">Instacal</span> software delivered with the devices.</p>
+                                        <p class="Table">You can also download the software from <a href="https://www.meilhaus.de/en/" class="ExternalLink" target="_blank">https://www.meilhaus.de/en/</a>.</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div>
+                    <h2>Configuration</h2>
+                    <p>In order to access the <span class="Product">RedLab</span> devices in your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> you need to first connect them to the computer via USB. You can then configure the devices using the <span class="Product">Instacal</span> software.</p>
+                    <div>
+                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                            <col class="TableStyle-vTableSymbol-Column-Column1" />
+                            <col class="TableStyle-vTableSymbol-Column-Column2" />
+                            <tbody>
+                                <tr>
+                                    <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                        <p class="Table">
+                                            <img src="../../../Resources/vImages/vStep.png" style="width: 48px;height: 45px;" title="Procedure" alt="Procedure" />
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                        <p class="TableSymbolHead">Automatic Configuration</p>
+                                        <ol>
+                                            <li value="1">Now open your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText>. Make sure that there is no <span class="bold">pl_redlab.ini</span> file in the application data folder. To open this folder you can use the <span class="bold">[Open]</span> button on the <span class="bold">Program Settings|Locations</span> page in the <a href="../Ribbon/File/Options.htm" class="GUI">Options</a> dialog.<br />This step is necessary as your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> will automatically generate a configuration file only if no such file is already present.</li>
+                                            <li value="2">Once you have ensured that there is no <span class="bold">pl_redlab.ini</span> file in the application data folder, open the I/O hardware dialog by choosing the <a href="../Ribbon/RibbonHardware.htm"><span class="GUI">Hardware</span> ribbon tab</a>|<a href="PortLink/PortLink.htm" class="GUI">Other</a>.</li>
+                                            <li value="3">Click on the <span class="bold">[I/O Device Drivers…]</span> button and activate the DLL <span class="bold">pl_redlab.dll</span>.</li>
+                                            <li value="4">A configuration file <span class="bold">pl_redlab.ini</span> is then created, with settings adapted to the connected <span class="Product">RedLab</span> devices. Additionally, the corresponding system variables are created in the <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText>.</li>
+                                        </ol>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <h3>Manual Configuration</h3>
+                        <p>You can modify the configuration by editing the <span class="bold">pl_redlab.INI</span> file, which is made up of the following elements:</p>
+                        <div>
+                            <table style="margin-left: 0;margin-right: auto;caption-side: top;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                                <col />
+                                <col />
+                                <col />
+                                <thead>
+                                    <tr>
+                                        <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                            <p class="TableHead">Keyword</p>
+                                        </th>
+                                        <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                            <p class="TableHead">Meaning</p>
+                                        </th>
+                                        <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                            <p class="TableHead">Example</p>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="TableBold">[Boardx]</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table"><span class="bold">[Boardx]</span>	Determines which <span class="Product">RedLab</span> device the following parameters refer to.<br />The related index refers to the board ID assigned in <span class="Product">Instacal</span>.</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table"><span class="SourceCode">[Board0]</span>
+                                                <br />The following parameters refer to the first device configured in <span class="Product">Instcal</span>.</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="TableBold"><span class="bold">AI_NAME_x</span> and<br /><span class="bold">AO_NAME_x</span></p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">	Determines the name of the analog input/output.<br />The channel index is specified by the <span class="bold">x</span> parameter. If there is no name set for a channel (i.e. the line is missing in the configuration file) the corresponding channel is not used in your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText>.</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table"><span class="SourceCode">AI_NAME_3=AnalogInput3</span>
+                                                <br />This creates a system variable in the <span class="Product"><MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText></span> named <span class="bold">AnalogInput3</span> containing the data measured at analog input <span class="bold">3</span> of the <span class="Product">RedLab</span> device.</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="TableBold"><span class="bold">AI_RANGE_x</span> and<br /><span class="bold">AO_RANGE_x</span></p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">Determines the scaling for the measurement value of an analog input/output.<br />The possible scalings are described in the Universal Library documentation (also available on the Meilhaus website).</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table"><span class="SourceCode">AO_RANGE_0=101</span>
+                                                <br />The analog output with index <span class="bold">0</span> is set to scaling <span class="bold">101</span> (=UNI5VOLTS); this means that the output values are scaled to a range of 0&#160;V…5&#160;V.</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="TableBold">DIO_NAME_x_y</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">Determines the name of a digital input/output.<br />The <span class="bold">x</span> parameter stands for the port at which the channel is located, and the <span class="bold">y</span> parameter for the channel index.<br /></p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table"><span class="SourceCode">DIO_NAME_10_5=DigitalIn</span>
+                                                <br />The name of channel <span class="bold">0</span> at port <span class="bold">10</span> (=FIRSTPORTA) of the <span class="Product">RedLab</span> device is set to<span class="bold">DigitalIn</span> and a corresponding system variable is created in the <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText>.</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="TableBold">DIO_DIRECTION_x</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">Specifies the direction of all pins at digital port <span class="bold">x</span>.<br />A <span class="bold">1</span> stands for ouputs and a <span class="bold">2</span> for inputs.</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table"><span class="SourceCode">DIO_DIRECTION_10=2</span>
+                                                <br />All digital channels at port <span class="bold">10</span> (=FIRSTPORTA) of the <span class="Product">RedLab</span> device are configured as outputs.</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="TableBold">COUNTER_NAME_x</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">Specifies the name of a counter.<br />The counter index is specified by the <span class="bold">x</span> parameter.</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table"><span class="SourceCode">COUNTER_NAME_0=Counter0</span>
+                                                <br />The name of the first counter is set to <span class="bold">Counter0</span> and a corresponding system variable is created in the <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText>.</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="TableBold">TRIGGER_MODE</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">Specifies which trigger mode is to be used.<br />A value of <span class="bold">0</span> stands for cyclical capture (i.e. no triggering), <span class="bold">1</span> for digital triggering and <span class="bold">2</span> for analog triggering.</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table"><span class="SourceCode">TRIGGER_MODE=2</span>
+                                                <br />An analog trigger is used, i.e. measurement values are only captured when the trigger condition is met.</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="TableBold">TRIGGER_TYPE</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">Specifies the trigger type.<br />With value <span class="bold">0</span> the trigger reacts to rising edges, with <span class="bold">1</span> to falling and with <span class="bold">2</span> to both edge types.</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table"><span class="SourceCode">TRIGGER_MODE=2</span>
+                                                <br />The trigger is set off both by a rising and by a falling signal edge.</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="TableBold">TRIGGER_CYCLE_TIME</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">Cycle time in ms used for the capture of measurement values when cyclical trigger mode is selected.</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table"><span class="SourceCode">TRIGGER_CYCLE_TIME=100</span>
+                                                <br />Measurement values are captured every 100 ms.</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="TableBold">TRIGGER_PIN</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">Index of the pins to be used for triggering.</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table"><span class="SourceCode">TRIGGER_PIN=0</span>
+                                                <br />If an analog trigger is selected, the first analog input is used as the trigger pin.</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="TableBold">TRIGGER_PORT</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">Port of the pins to be used for triggering.<br />This value is only required when a digital trigger is used.</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table"><span class="SourceCode">TRIGGER_PORT=10</span>
+                                                <br />The digital pin at port <span class="bold">10 </span>(=FIRSTPORTA) is used for triggering.</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                            <p class="TableBold">TRIGGER_VOLTAGE</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                            <p class="Table">Voltage threshold at which the analog trigger is set off.</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                            <p class="Table"><span class="SourceCode">TRIGGER_VOLTAGE=2.5</span>
+                                                <br />The analog trigger is set off when the measured voltage goes above or below a value of 2.5 V (depending on the trigger type configuration).</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div>
+                            <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                                <col class="TableStyle-vTableSymbol-Column-Column1" />
+                                <col class="TableStyle-vTableSymbol-Column-Column2" />
+                                <tbody>
+                                    <tr>
+                                        <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                            <p class="Table">
+                                                <img src="../../../Resources/vImages/vInfo.png" style="width: 48px;height: 45px;" title="Note" alt="Note" />
+                                            </p>
+                                        </td>
+                                        <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                            <p class="TableSymbolHead">Note</p>
+                                            <p>The documentation of the Universal Library is part of the <span class="Product">RedLab</span> software package. It can be downloaded from the Meilhaus website <a href="http://www.meilhaus.de/" class="ExternalLink">http://www.meilhaus.de</a>. This documentation includes scaling details for the various <span class="Product">RedLab</span> devices.</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div>
+                        <h3>Triggers</h3>
+                        <p>The capture of measurement values can be cyclical or trigger-controlled. Cyclical capture is used by default. To activate a trigger, you need to insert additional lines in the configuration file <span class="bold">pl_redlab.INI</span>. The trigger configured here is independent of the settings in <span class="Product">Instacal</span>, which allows a much more flexible trigger configuration.</p>
+                        <ul>
+                            <li><span class="bold">Cyclical capture (no trigger)</span>
+                                <br />This mode is activated by default. It corresponds to the configuration <span class="SourceCode">TRIGGER_MODE=0</span>. In this mode, the measurement values are transmitted to the <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> cyclically. The cycle time can be specified using the <span class="bold">TRIGGER_CYCLE_TIME</span> keyword. Please note, however, that if the specified cycle time is too short it may not be possible to maintain it consistently due to hardware constraints. </li>
+                            <li><span class="bold">Digital trigger</span>
+                                <br />This mode is activated with the configuration line <span class="SourceCode">TRIGGER_MODE=1</span>. In addition, you need to specify the trigger type to be used by means of the keyword <span class="bold">TRIGGER_TYPE</span>.</li>
+                            <li class="Indent"><span class="SourceCode">TRIGGER_TYPE=0</span>: The trigger is set off by a rising signal edge.</li>
+                            <li class="Indent"><span class="SourceCode">TRIGGER_TYPE=1</span>: The trigger is set off by a falling signal edge.</li>
+                            <li class="Indent"><span class="SourceCode">TRIGGER_TYPE=2</span>: The trigger is set off by a rising and by a falling signal edge.</li>
+                        </ul>
+                        <p class="Result">The pin to be used for signal monitoring also has to be specified. This is done using the keywords <span class="bold">TRIGGER_PIN</span> and <span class="bold">TRIGGER_PORT</span>.</p>
+                        <ul>
+                            <li><span class="bold">Analog trigger</span>
+                                <br />This mode is activated with the configuration line <span class="SourceCode">TRIGGER_MODE=2</span>. In addition, you need to specify the trigger type to be used by means of the keyword <span class="bold">TRIGGER_TYPE</span>.</li>
+                            <li class="Indent"><span class="SourceCode">TRIGGER_TYPE=0</span>: The trigger is set off when the signal value rises above the threshold value.</li>
+                            <li class="Indent"><span class="SourceCode">TRIGGER_TYPE=1</span>: The trigger is set off when the signal value falls below the threshold value.</li>
+                            <li class="Indent"><span class="SourceCode">TRIGGER_TYPE=2</span>: The trigger is set off when the signal value goes above or below the threshold value.</li>
+                        </ul>
+                        <p class="Result">The threshold value is specified using the keyword <span class="bold">TRIGGER_VOLTAGE</span>. The unit of measure for this value is Volt. With <span class="bold">TRIGGER_PIN</span> you specify which analog input is to serve as the trigger.</p>
+                    </div>
+                </div>
+                <div>
+                    <h3>Counter</h3>
+                    <p>For every counter of the connected <span class="Product">RedLab</span> devices two system variables are created. While the first one holds the current value of the counter the second one can be used to reset the counter. It has the same name as the first variable but is enhanced with the suffix "<span class="bold">_reset</span>". To reset the counter it suffices to change the value of this variable.</p>
+                </div>
+                <div>
+                    <h3>Performance</h3>
+                    <p>The rate at which measurement values of the <span class="Product">RedLab</span> device can be captured and transmitted to your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> depends heavily on the number of channels used. The fewer channels you define in the <span class="bold">pl_redlab.INI</span> configuration file, the faster the transmission speed for the defined channels will be. It is advisable, therefore, to specify only the channels that you actually require in the configuration file. You can temporarily deactivate channels that you don't need by commenting out the corresponding settings with a semicolon.</p>
+                </div>
+                <div>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                    <p class="Table">
+                                        <img src="../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                    </p>
+                                </td>
+                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                    <p class="TableSymbolHead">Example RedLab 1008</p>
+                                    <p>The <span class="Product">RedLab 1008</span> measurement device provides 8 analog inputs, 2 analog outputs, 28 digital I/O channels and an event counter.</p>
+                                    <div>
+                                        <h3>Analog channels</h3>
+                                        <p>The eight analog inputs of the <span class="Product">RedLab 1008</span> are addressed via indexes <span class="bold">0</span> to <span class="bold">7</span> The two analog outputs are assigned to the corresponding indexes <span class="bold">0</span> and <span class="bold">1</span>. According to the documentation for this device in the Universal Library, the following scalings are supported for the analog inputs and outputs:</p>
+                                        <div class="Indent">
+                                            <table style="margin-left: 0;margin-right: auto;caption-side: top;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                                                <col style="width: 98px;" />
+                                                <col />
+                                                <col />
+                                                <thead>
+                                                    <tr>
+                                                        <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                                            <p class="TableHead">Identifier</p>
+                                                        </th>
+                                                        <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                                            <p class="TableHead">ID</p>
+                                                        </th>
+                                                        <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                                            <p class="TableHead">Value Range</p>
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                            <p class="Table">BIP20VOLTS</p>
+                                                        </td>
+                                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                            <p class="Table">15</p>
+                                                        </td>
+                                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                            <p class="Table">-20&#160;V…+20&#160;V</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                            <p class="Table">BIP10VOLTS</p>
+                                                        </td>
+                                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                            <p class="Table">1</p>
+                                                        </td>
+                                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                            <p class="Table">-10 V…+10 V</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                            <p class="Table">BIP5VOLTS</p>
+                                                        </td>
+                                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                            <p class="Table">0</p>
+                                                        </td>
+                                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                            <p class="Table">-5 V…+5 V</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                            <p class="Table">BIP4VOLTS</p>
+                                                        </td>
+                                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                            <p class="Table">16</p>
+                                                        </td>
+                                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                            <p class="Table">-4 V…+4 V</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                            <p class="Table">BIP2PT5VOLTS</p>
+                                                        </td>
+                                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                            <p class="Table">2</p>
+                                                        </td>
+                                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                            <p class="Table">-2.5 V…+2.5 V</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                            <p class="Table">BIP2VOLTS</p>
+                                                        </td>
+                                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                            <p class="Table">14</p>
+                                                        </td>
+                                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                            <p class="Table">-2 V…+2 V</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                            <p class="Table">BIP1PT25VOLTS</p>
+                                                        </td>
+                                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                            <p class="Table">3</p>
+                                                        </td>
+                                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                            <p class="Table">-1.25 V…+1.25 V</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                            <p class="Table">BIP1VOLTS</p>
+                                                        </td>
+                                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                            <p class="Table">4</p>
+                                                        </td>
+                                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                            <p class="Table">-1 V…+1 V</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                                            <p class="Table">UNI5VOLTS</p>
+                                                        </td>
+                                                        <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                                            <p class="Table">101</p>
+                                                        </td>
+                                                        <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                                            <p class="Table">0 V…5 V</p>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h3>Digital channels</h3>
+                                        <p>The 28 digital I/O channels are distributed among the device ports as follows:</p>
+                                        <div class="Indent">
+                                            <table style="margin-left: 0;margin-right: auto;caption-side: top;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                                                <col />
+                                                <col />
+                                                <col />
+                                                <col />
+                                                <thead>
+                                                    <tr>
+                                                        <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                                            <p class="TableHead">Port</p>
+                                                        </th>
+                                                        <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                                            <p class="TableHead">ID</p>
+                                                        </th>
+                                                        <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                                            <p class="TableHead">Channels</p>
+                                                        </th>
+                                                        <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                                            <p class="TableHead">Channel Indexes</p>
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                            <p class="Table">FIRSTPORTA</p>
+                                                        </td>
+                                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                            <p class="Table">10</p>
+                                                        </td>
+                                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                            <p class="Table">8</p>
+                                                        </td>
+                                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                            <p class="Table">0…7</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                            <p class="Table">FIRSTPORTB</p>
+                                                        </td>
+                                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                            <p class="Table">11</p>
+                                                        </td>
+                                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                            <p class="Table">8</p>
+                                                        </td>
+                                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                            <p class="Table">0…7</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                            <p class="Table">AUXPORT</p>
+                                                        </td>
+                                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                            <p class="Table">1</p>
+                                                        </td>
+                                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                            <p class="Table">4</p>
+                                                        </td>
+                                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                            <p class="Table">0…3</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                            <p class="Table">FIRSTPORTCL</p>
+                                                        </td>
+                                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                            <p class="Table">12</p>
+                                                        </td>
+                                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                            <p class="Table">4</p>
+                                                        </td>
+                                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                            <p class="Table">0…3</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                                            <p class="Table">FIRSTPORTCH</p>
+                                                        </td>
+                                                        <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                                            <p class="Table">13</p>
+                                                        </td>
+                                                        <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                                            <p class="Table">4</p>
+                                                        </td>
+                                                        <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                                            <p class="Table">0…3</p>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <h3>Counter</h3>
+                    <p>The counters of the <span class="Product">RedLab</span> measurement devices are addressed using their corresponding index (beginning with <span class="bold">0</span>). The <span class="Product">RedLab 1008</span> only has one counter, which is address via index <span class="bold">0</span>.</p>
+                    <div>
+                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                            <col class="TableStyle-vTableSymbol-Column-Column1" />
+                            <col class="TableStyle-vTableSymbol-Column-Column2" />
+                            <tbody>
+                                <tr>
+                                    <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                        <p class="Table">
+                                            <img src="../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                        <p class="TableSymbolHead">Sample Configuration</p>
+                                        <p>This sample shows a simple configuration of a <span class="Product">RedLab 1008</span>. You need to have set up the device in <span class="Product">Instacal</span> beforehand and assigned ID <span class="bold">0</span> to it.</p>
+                                        <p>Two analog outputs with a scaling of 0 V...5 V are created. These are linked with system variables <span class="bold">AnalogOutput1</span> and <span class="bold">AnalogOutput2</span> in your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText>. Two analog inputs with a scaling of ±10&#160;V and system variables <span class="bold">AnalogInput1</span> and <span class="bold">AnalogInput2</span> are also created. In addition, two digital inputs and two digital outputs are configured at ports <span class="bold">AUXPORT</span> and <span class="bold">FIRSTPORTA</span>. The event counter of the <span class="Product">RedLab 1008</span> is also part of the configuration. It is represented in your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> by system variable <span class="bold">Counter</span>.</p>
+                                        <div>
+                                            <p class="SourceCode">[Board0]</p>
+                                            <p class="SourceCode">; Names and ranges of the analog inputs. See Universal Library for possible range values.<br />AI_NAME_0=AnalogInput1<br />AI_RANGE_0=1<br />AI_NAME_1=AnalogInput2<br />AI_RANGE_1=1</p>
+                                            <p class="SourceCode">; Names and ranges of the analog outputs. See Universal Library for possible range values.<br />AO_NAME_0=AnalogOutput1<br />AO_RANGE_0=101<br />AO_NAME_1=AnalogOutput2<br />AO_RANGE_1=101</p>
+                                            <p class="SourceCode">; Names of the digital channels. Note: directions of the ports are specified later.<br />DIO_NAME_1_0=DigitalOutput1<br />DIO_NAME_1_1=DigitalOutput2<br />DIO_NAME_10_0=DigitalInput1<br />DIO_NAME_10_1=DigitalInput2</p>
+                                            <p class="SourceCode">; Directions of the digital I/O ports. Use 1 for output, 2 for input.<br />DIO_DIRECTION_1=1<br />DIO_DIRECTION_10=2</p>
+                                            <p class="SourceCode">; Names of the counters.<br />COUNTER_NAME_0=Counter</p>
+                                            <p class="SourceCode">; Trigger configuration.<br />TRIGGER_MODE=0<br />TRIGGER_CYCLE_TIME=100</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div>
+                    <h2>Reference of common RedLab indices</h2>
+                    <p>The following tables show the indices that can be used for selecting an A/D range or identifying digital ports in the .INI files.<br />Please note that these tables are based on the UniversalLibrary documentation of 2011.<br />Please check the latest documentation for changes.</p>
+                    <div>
+                        <h3>Selectable A/D range codes</h3>
+                        <div>
+                            <table style="margin-left: 0;margin-right: auto;caption-side: top;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                                <col />
+                                <col />
+                                <col />
+                                <thead>
+                                    <tr>
+                                        <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                            <p class="TableHead">Name</p>
+                                        </th>
+                                        <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                            <p class="TableHead">Description</p>
+                                        </th>
+                                        <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                            <p class="TableHead">INI Index</p>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">BIP5VOLTS</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">-5…+5&#160;V</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">0</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">BIP10VOLTS</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">-10…+10&#160;V</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">1</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">BIP2PT5VOLTS</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">-1.25…+1.25&#160;V</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">2</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">BIP1PT25VOLTS</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">-2.5…+2.5&#160;V</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">3</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">BIP1VOLTS</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">-1…+1&#160;V</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">4</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">BIPPT625VOLTS</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">-0.625…+0.625&#160;V</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">5</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">BIPPT5VOLTS</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">-0.5…+0.5&#160;V</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">6</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">BIPPT1VOLTS</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">-0.1…+0.1&#160;V</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">7</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">BIPPT05VOLTS</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">-0.05…+0.05&#160;V</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">8</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">BIPPT01VOLTS</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">-0.01…+0.01&#160;V</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">9</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">BIPPT005VOLTS</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">-0.005…+0.005&#160;V</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">10</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">BIP1PT67VOLTS</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">-1.67…+1.67&#160;V</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">11</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">BIPPT25VOLTS</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">-0.25…+0.25&#160;V</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">12</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">BIPPT2VOLTS</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">-0.2…+0.2&#160;V</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">13</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">BIP2VOLTS</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">-2.0…+2.0&#160;V</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">14</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">BIP20VOLTS</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">-20…+20&#160;V</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">15</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">BIP4VOLTS</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">-4…+4&#160;V</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">16</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">BIPPT312VOLTS</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">-0.312…+0.312&#160;V</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">17</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">BIPPT156VOLTS</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">-0.156…+0.156&#160;V</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">18</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">BIPPT078VOLTS</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">-0.078…+0.078&#160;V</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">19</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">BIP60VOLTS</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">-60…+60&#160;V</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">20</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">BIP15VOLTS</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">-15…+15&#160;V</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">21</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">UNI10VOLTS</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">0…+10&#160;V</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">100</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">UNI5VOLTS</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">0…+5&#160;V</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">101</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">UNI2PT5VOLTS</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">0…+2.5&#160;V</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">102</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">UNI2VOLTS</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">0…+2&#160;V</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">103</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">UNI1PT25VOLTS</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">0…+1.25&#160;V</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">104</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">UNI1VOLTS</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">0…+1&#160;V</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">105</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">UNIPT1VOLTS</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">0…+0.1&#160;V</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">106</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">UNIPT01VOLTS</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">0…+0.01&#160;V</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">107</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">UNIPT02VOLTS</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">0…+0.02&#160;V</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">108</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">UNI1PT67VOLTS</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">0…+1.67&#160;V</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">109</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">UNIPT5VOLTS</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">0…+0.5&#160;V</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">110</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">UNIPT25VOLTS</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">0…+0.25&#160;V</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">111</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                            <p class="Table">UNIPT2VOLTS</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                            <p class="Table">0…+0.2&#160;V</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                            <p class="Table">112</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div>
+                        <h3>Types of digital I/O Ports</h3>
+                        <div>
+                            <table style="margin-left: 0;margin-right: auto;caption-side: top;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                                <col />
+                                <col />
+                                <thead>
+                                    <tr>
+                                        <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                            <p class="TableHead">Port</p>
+                                        </th>
+                                        <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                            <p class="TableHead">INI Index</p>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">AUXPORT</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">1</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">FIRSTPORTA</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">10</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">FIRSTPORTB</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">11</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">FIRSTPORTCL</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">12</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">FIRSTPORTC</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">12</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">FIRSTPORTCH</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">13</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">SECONDPORTA</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">14</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">SECONDPORTB</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">15</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">SECONDPORTCL</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">16</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">SECONDPORTCH</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">17</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">THIRDPORTA</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">18</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">THIRDPORTB</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">19</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">THIRDPORTCL</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">20</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">THIRDPORTCH</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">21</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">FOURTHPORTA</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">22</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">FOURTHPORTB</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">23</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">FOURTHPORTCL</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">24</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">FOURTHPORTCH</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">25</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">FIFTHPORTA</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">26</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">FIFTHPORTB</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">27</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">FIFTHPORTCL</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">28</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">FIFTHPORTCH</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">29</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">SIXTHPORTA</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">30</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">SIXTHPORTB</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">31</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">SIXTHPORTCL</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">32</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">SIXTHPORTCH</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">33</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">SEVENTHPORTA</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">34</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">SEVENTHPORTB</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">35</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">SEVENTHPORTCL</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">36</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">SEVENTHPORTCH</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">37</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">EIGHTHPORTA</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">38</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">EIGHTHPORTB</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">39</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">EIGHTHPORTCL</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">40</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                            <p class="Table">EIGHTHPORTCH</p>
+                                        </td>
+                                        <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                            <p class="Table">41</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <p class="LinkList">&#160;</p>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="FooterWhite">
+                <table class="FooterWhite" style="border-collapse: collapse;margin-left: auto;margin-right: auto;">
+                    <col style="width: 70px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col style="width: 16px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="buttons popup-container clearfix topicToolbarProxy topicToolbarProxyFooter _Skins_HTML5TopicToolbar mc-component nocontent">
+                                    <div class="button-group-container-left">
+                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo"><a href="../../Shared/HowToUseOnlineHelp.htm" title="Tips for using the help" alt="Tips for using the help"><img src="../../../Resources/vImages/vBackstage/vHelpInfo.png" /></a>
+                                </p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo" style="text-align: right;"><span class="mc-variable Vector.BuildTime variable">2024-04-8T20:56:42</span>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <table style="width: 100%;border-collapse: separate;border-spacing: 3px 0px;margin-left: auto;margin-right: auto;caption-side: top;">
+                <col />
+                <col />
+                <col />
+                <col data-mc-conditions="BuildProcess.HTML5Link" />
+                <tbody>
+                    <tr>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;">
+                            <p class="vec_Footer">©&#160;Vector Informatik GmbH</p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;text-align: right;">
+                            <p class="vec_FooterBold">
+                                <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE&#160;Product Families</MadCap:conditionalText> Version <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.VectorTestUnitRunner">18</MadCap:conditionalText></p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="../../Shared/ContactCopyrightLicense.htm" class="vec_Footer MCXref xref xrefvec_Footer">Contact/Copyright/License</a>
+                            </p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="https://www.vector.com/int/en/company/get-info/privacy-policy/" target="_blank" class="vec_Footer">Data Privacy Notice</a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="" data-mc-search-type="Stem" data-mc-help-system-file-name="CANoeDEFamily.xml" data-mc-path-to-help-system="../../../../" data-mc-conditions="Targets.CANoe-DE-Family" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../Skins/Favicons/favicon-16x16.png" /><title>MQTT Security - TLS (Connectivity)</title>
+        <link href="../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Resources/Stylesheets/vTableMasterPageHeader.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../Resources/Stylesheets/vStylesheet.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../Resources/Stylesheets/vTableSymbol.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapGlobal.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapDom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapUtilities.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapXhr.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTextEffects.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSlideshow.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMessageBus.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMessageBus.CrossFrame.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapDefault.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMediaQueries.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAccessibility.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapHelpSystem.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAliasFile.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopicFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapFeedbackHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSkinHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.Breadcrumbs.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.MiniToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.SideMenu.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapIndex.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapGlossary.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapParser.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSearch.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapNavigateTopics.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapLms.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapELearning.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopic.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMicroContentComponent.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSearchHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopicElements.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTriPane.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/jscript" src="../../../Resources/vScripts/SyntaxHighlighting.js">
+        </script>
+        <script type="text/jscript" src="../../../Resources/vScripts/TabSwitch.js">
+        </script>
+        <script type="text/javascript" src="../../../Resources/vScripts/Vector.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../../CANoeDEFamily.htm#Topics/CANoeCANalyzer/Connectivity/MQTTSecurityTLS.htm">Open topic with navigation</a>
+        </p>
+        <div class="Body">
+            <div role="main" id="mc-main-content">
+                <div>
+                    <p class="StructurePath"><a href="../CANoeDEFamily.htm" class="StructurePath" data-mc-conditions="Targets.CANoe-DE-Family"><img src="../../../Resources/vImages/vToolIcons/CANoeDEFamily_Icon16_15x15.png" alt="" style="width: 15;height: 15;" />&#160;CANoe&#160;DE&#160;Product&#160;Families</a> » <a href="Connectivity.htm" class="StructurePath">Connectivity</a> » MQTT Security - TLS</p>
+                    <h1>MQTT Security - TLS</h1>
+                    <p class="MenuPath">&#160;</p>
+                    <p class="ToolAvailability" data-mc-conditions="BuildProcess.ToolAvailability"><a href="../../Shared/FeatureAvailability.htm" class="red" title="Feature availabilty for your product">Valid&#160;for</a>:&#160;&#160;CANoe&#160;DE<a name="aanchor27154"></a><MadCap:concept term="SFCANoeDE" />&#160;&#160;•&#160;&#160;CANoe:lite&#160;DE<a name="aanchor27155"></a><MadCap:concept term="SFCANoeLiteDE" />&#160;&#160;•&#160;&#160;CANoe4SW&#160;DE<a name="aanchor27156"></a><MadCap:concept term="SFCANoe4SWDE" />&#160;&#160;•&#160;&#160;CANoe4SW:lite&#160;DE<a name="aanchor27157"></a><MadCap:concept term="SFCANoe4SWLiteDE" /></p>
+                    <p class="AutoSearchFilterConcepts"><a name="aanchor27158"></a>
+                        <MadCap:concept term="SFCore" />
+                    </p>
+                    <p class="IndexConcept"><a name="kanchor8867"></a>
+                    </p>
+                </div>
+                <div>
+                    <h2 class="SectionMain">Introduction</h2>
+                    <p>MQTT with TLS enables encrypted data transmission. When using TLS, the certificates must be imported into and configured in the <a href="../Security/VectorSecurityManager/VectorSecurityManager.htm">Vector Security Manager</a>.</p>
+                    <p>The required changes are described below using the sample configuration <a href="../../SampConf/Connectivity/CANoe/MQTTConnectivityBasic/MQTTConnectivityBasic.htm">Basic MQTT Connectivity</a> and the external broker <span class="bold">Eclipse Mosquitto</span>.</p>
+                    <div>
+                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                            <col class="TableStyle-vTableSymbol-Column-Column1" />
+                            <col class="TableStyle-vTableSymbol-Column-Column2" />
+                            <tbody>
+                                <tr>
+                                    <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                        <p class="Table">
+                                            <img src="../../../Resources/vImages/vInfo.png" style="width: 48px;height: 45px;" title="Note" alt="Note" />
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                        <p class="TableSymbolHead">Note</p>
+                                        <p>It is assumed that a functional MQTT configuration, a broker (Eclipse Mosquitto) and the TLS certificates for the broker, client and CA are available.</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="SectionMain">Vector Security Manager</h2>
+                    <p>The certificates are stored in security profiles in the <a href="../Security/VectorSecurityManager/VectorSecurityManager.htm">Vector Security Manager</a> so that your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> can access them via a vCDL. How to create such a profile is described below, using the build for a profile for TLS 1.2 as an example.</p>
+                    <h3 class="SectionSub">Setup of the Security Profile Structure</h3>
+                    <ol>
+                        <li value="1">In the Vector Security Manager, on the <span class="GUI">Home</span> page, in the <span class="GUI">Security Profile</span> section, click <span class="GUI">Add</span>.<br />This creates a profile with the initial structure.</li>
+                        <li value="2">Expand the selected profile with a TLS 1.2 configuration:</li>
+                    </ol>
+                    <ul>
+                        <li class="Indent">Click on <span class="GUI">Add</span> on page <span class="GUI">Home</span> in the <span class="GUI">Parameters</span> area.</li>
+                        <li class="Indent">In the <span class="GUI">Add Parameter</span> dialog that then opens, set the topmost list to <span class="GUI">TLS 1.2</span>.</li>
+                        <li class="Indent">Customize the name in the <span class="GUI">Add parameter</span> dialog. This name will be used by your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> in the vCDL.</li>
+                        <li class="Indent">Close the dialog with <span class="GUI">OK</span>.</li>
+                    </ul>
+                    <ol start="3">
+                        <li value="3">In the central window, expand all folders with the <span class="GUI">TLS Configuration</span> button.</li>
+                        <li value="4">Select the third folder that contains the previously defined name under the <span class="GUI">Value</span> column.</li>
+                        <li value="5">In the <span class="GUI">Parameters</span> area, click on <span class="GUI">Add</span>.</li>
+                        <li value="6">Open the first list in the dialog that then appears and select <span class="GUI">TLS Client</span>.</li>
+                        <li value="7">Confirm the dialog with <span class="GUI">OK</span>.</li>
+                    </ol>
+                    <h3 class="SectionSub">Maintain Certificates</h3>
+                    <ol>
+                        <li value="1">If the certificate for the client has not yet been converted into a PFX file, you should do so, as this format makes it easier to import the client certificate with the Vector Security Manager.</li>
+                        <li value="2">To import the certificates into the security profile, open the list <span class="GUI">Secrets &amp; Keys Confrigurations</span>.</li>
+                        <li value="3">Select the folder <span class="GUI">X509 Certificates</span>.</li>
+                        <li value="4">In the <span class="GUI">Parameters</span> area, click <span class="GUI">Add</span>.</li>
+                        <li value="5">In the dialog for the import, click on the buttons with the three dots.</li>
+                        <li value="6">Enter the path to the <span class="bold">CA.crt</span> and to the client certificate <span class="bold">*.pfx</span>.</li>
+                        <li value="7">Select the new folder <span class="GUI">TLS Client</span>.</li>
+                        <li value="8">Click on the <span class="GUI">Add parameters</span> button.</li>
+                        <li value="9">In the dialog that then appears, the client certificate that you previously stored under <span class="GUI">Secrets &amp; Keys Configurations</span> should be preselected. If not, customize the selection via the drop-down list.</li>
+                        <li value="10">Confirm the dialog with <span class="GUI">OK</span>.</li>
+                    </ol>
+                    <p>The Vector Security Manager profile can now be used with your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText>.</p>
+                </div>
+                <div>
+                    <h2 class="SectionMain">
+                        <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText>
+                    </h2>
+                    <p>In a functioning <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> configuration, such as the sample configuration <a href="../... /SampConf/Connectivity/CANoe/MQTTConnectivityBasic/MQTTConnectivityBasic.htm">Basic MQTT Connectivity</a>, the security profile must be transferred to the binding and the URI to the broker must be changed to TLS.</p>
+                    <ul>
+                        <li>In the vCDL, the following attributes must be added to the MQTT Binding DO and set. To set the values, see the description of the <a href="MQTTModelingDOs.htm">attributes</a>:</li>
+                        <li class="Indent">SecurityManager::SecurityProfile</li>
+                        <li class="Indent">MQTTBinding::Authorization::AuthParamName</li>
+                        <li>In addition, the URI must be customized for an external broker, e.g. Mosquitto. This URI is located under <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> <span class="GUI">Options/Extensions /Connectivity/Mode:WAN Settings</span>. In this window, change the URI from TCP to TLS and change the port if necessary.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="SectionMain">Broker</h2>
+                    <p>The Mosquitto broker used must be switched to TLS; to do this, the mosquitto.conf must contain the following lines:</p>
+                    <ul>
+                        <li>A port must be defined to which the broker listens: <span class="bold">listener 8883</span></li>
+                        <li>The path to the Certificate Authority(CA), Certificate Broker and Broker Key must be specified with the following lines:</li>
+                        <li class="Indent">Path to the CA: <span class="bold">cafile path/to/your/CA.crt</span></li>
+                        <li class="Indent">Path to the broker certificate: <span class="bold">certfile path/to/your/broker.crt</span></li>
+                        <li class="Indent">Path to the broker key: <span class="bold">keyfile path/to/your/broker.key</span></li>
+                        <li>The authentication used must be defined (with password or without): <span class="bold">allow_anonymous true</span>.</li>
+                    </ul>
+                </div>
+                <p class="LinkList">&#160;</p>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="FooterWhite">
+                <table class="FooterWhite" style="border-collapse: collapse;margin-left: auto;margin-right: auto;">
+                    <col style="width: 70px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col style="width: 16px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="buttons popup-container clearfix topicToolbarProxy topicToolbarProxyFooter _Skins_HTML5TopicToolbar mc-component nocontent">
+                                    <div class="button-group-container-left">
+                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo"><a href="../../Shared/HowToUseOnlineHelp.htm" title="Tips for using the help" alt="Tips for using the help"><img src="../../../Resources/vImages/vBackstage/vHelpInfo.png" /></a>
+                                </p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo" style="text-align: right;"><span class="mc-variable Vector.BuildTime variable">2024-04-8T20:56:42</span>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <table style="width: 100%;border-collapse: separate;border-spacing: 3px 0px;margin-left: auto;margin-right: auto;caption-side: top;">
+                <col />
+                <col />
+                <col />
+                <col data-mc-conditions="BuildProcess.HTML5Link" />
+                <tbody>
+                    <tr>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;">
+                            <p class="vec_Footer">©&#160;Vector Informatik GmbH</p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;text-align: right;">
+                            <p class="vec_FooterBold">
+                                <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE&#160;Product Families</MadCap:conditionalText> Version <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.VectorTestUnitRunner">18</MadCap:conditionalText></p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="../../Shared/ContactCopyrightLicense.htm" class="vec_Footer MCXref xref xrefvec_Footer">Contact/Copyright/License</a>
+                            </p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="https://www.vector.com/int/en/company/get-info/privacy-policy/" target="_blank" class="vec_Footer">Data Privacy Notice</a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

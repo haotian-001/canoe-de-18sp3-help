@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="VectorCANoeNETAPI.xml" data-mc-path-to-help-system="../../" data-mc-toc-path="Vector.CANoe.Threading|Execution Class|Execution Methods" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../Skins/Favicons/browserconfig.xml" />
+        <meta name="Language" content="en-us" />
+        <meta name="System.Keywords" content="Execution.WaitForTask method" />
+        <meta name="Microsoft.Help.F1" content="Vector.CANoe.Threading.Execution.WaitForTask" />
+        <meta name="Microsoft.Help.Id" content="M:Vector.CANoe.Threading.Execution.WaitForTask(Vector.CANoe.Threading.TaskAction,System.Int32)" />
+        <meta name="Description" content="Executes a task in a separate thread. During the wait, the measurement and simulation are not blocked. Optionally returns failure after a certain timespan." />
+        <meta name="Microsoft.Help.ContentType" content="Reference" />
+        <meta name="BrandingAware" content="true" />
+        <meta name="container" content="Vector.CANoe.Threading" />
+        <meta name="file" content="a3471c96-e7dd-86a0-77cd-22c79e1dfc37" />
+        <meta name="guid" content="a3471c96-e7dd-86a0-77cd-22c79e1dfc37" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../Skins/Favicons/favicon-16x16.png" /><title>Execution.WaitForTask Method </title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link rel="stylesheet" type="text/css" href="../styles/branding.css" />
+        <link rel="stylesheet" type="text/css" href="../styles/branding-en-US.css" />
+        <link type="text/css" rel="stylesheet" href="../styles/highlight.css" />
+        <link rel="stylesheet" type="text/css" href="../styles/branding-Help1.css" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../Skins/Favicons/favicon-16x16.png" />
+        <link rel="shortcut icon" href="..\icons\favicon.ico" />
+        <script type="text/javascript" src="../scripts/branding.js">/*<![CDATA[*/
+ 
+/*]]>*/</script>
+        <script type="text/javascript" src="../scripts/highlight.js">/*<![CDATA[*/
+ 
+/*]]>*/</script>
+        <script src="../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+    </head>
+    <body onload="OnLoad('cs')">
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../VectorCANoeNETAPI.htm#html/a3471c96-e7dd-86a0-77cd-22c79e1dfc37.htm">Open topic with navigation</a>
+        </p>
+        <div role="main" id="mc-main-content">
+            <input type="hidden" id="userDataCache" class="userDataStyle" />
+            <div class="pageHeader" id="PageHeader"><a name="kanchor6709"></a><a name="aanchor6708"></a>
+                <MadCap:concept term="SFApiVectorCANoeThreading" />Vector CANoe .NET API</div>
+            <div class="pageBody">
+                <div class="topicContent" id="TopicContent">
+                    <table class="titleTable">
+                        <tr>
+                            <td class="titleColumn">
+                                <h1>Execution<span id="LST49245DA5_0"></span><script type="text/javascript">/*<![CDATA[*/
+AddLanguageSpecificTextSet("LST49245DA5_0?cpp=::|nu=.");
+/*]]>*/</script>WaitForTask Method </h1>
+                            </td>
+                        </tr>
+                    </table><span class="introStyle"></span>
+                    <div class="summary">
+            Executes a task in a separate thread. During the wait, the measurement and simulation are not blocked. 
+            Optionally returns failure after a certain timespan.
+            </div>
+                    <p /><strong>Namespace:</strong>   
+  &#160;<a href="e7d5c6fb-401a-1c07-6b8c-75f91a582049.htm">Vector.CANoe.Threading</a><br /><strong>Assembly:</strong>
+  &#160;Vector.CANoe.Threading.dll<div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('ID1RB')" onkeypress="SectionExpandCollapse_CheckKey('ID1RB', event)" tabindex="0"><img id="ID1RBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Syntax</span></div><div id="ID1RBSection" class="collapsibleSection"><div class="codeSnippetContainer"><div class="codeSnippetContainerTabs"><div id="ID0EACA_tab1" class="codeSnippetContainerTabSingle">C#</div></div><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="ID0EACA_copyCode" href="#" class="copyCodeSnippet" onclick="javascript:CopyToClipboard('ID0EACA');return false;" title="Copy">Copy</a></div></div><div id="ID0EACA_code_Div1" class="codeSnippetContainerCode" style="display: block;"><pre xml:space="preserve"><span class="keyword">public</span> <span class="keyword">static</span> <span class="identifier">int</span> <span class="identifier">WaitForTask</span>(
+	<span class="identifier">TaskAction</span> <span class="parameter">taskAction</span>,
+	<span class="identifier">int</span> <span class="parameter">maxTime</span> = 0
+)</pre></div></div></div><script type="text/javascript">/*<![CDATA[*/
+AddLanguageTabSet("ID0EACA");
+/*]]>*/</script><h4 class="subHeading">Parameters</h4><dl><dt><span class="parameter">taskAction</span></dt><dd>Type:&#160;<a href="442e06f6-e285-8d59-e117-10835106ebdd.htm">Vector.CANoe.Threading<span id="LST49245DA5_1"></span><script type="text/javascript">/*<![CDATA[*/
+AddLanguageSpecificTextSet("LST49245DA5_1?cs=.|vb=.|cpp=::|nu=.|fs=.");
+/*]]>*/</script>TaskAction</a><br />A delegate function to execute in a separate task</dd><dt><span class="parameter">maxTime</span> (Optional)</dt><dd>Type:&#160;<a href="https://learn.microsoft.com/dotnet/api/system.int32" target="_blank">System<span id="LST49245DA5_2"></span><script type="text/javascript">/*<![CDATA[*/
+AddLanguageSpecificTextSet("LST49245DA5_2?cs=.|vb=.|cpp=::|nu=.|fs=.");
+/*]]>*/</script>Int32</a><br />Optional: maximum time to wait, in milliseconds. </dd></dl><h4 class="subHeading">Return Value</h4>Type:&#160;<a href="https://learn.microsoft.com/dotnet/api/system.int32" target="_blank">Int32</a><br /><br>WAIT_TIMEOUT: if an maxTime was defined and the task did not return within maxTime milliseconds</br><br>WAIT_ABORTED: if the measurement was stopped during task execution</br><br>WAIT_EXCEPTION: if an exception occurred in the taskAction delegate</br><br>WAIT_ILLEGAL_RESULTVALUE: the result provided by the task is &lt;= 0 </br><br> &gt; 0 any positive result provided by the taskAction delegate (only use numbers &gt; 0 as return values)</br></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('ID2RB')" onkeypress="SectionExpandCollapse_CheckKey('ID2RB', event)" tabindex="0"><img id="ID2RBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Remarks</span></div><div id="ID2RBSection" class="collapsibleSection"><br>Be careful: You may not use most of the CANoe API functions in the taskAction.</br><br>Allowed is:</br><br>Modifying SystemVariables</br><br>Using Output.* functions</br><br>IsCancellationRequested of the TaskCancelToken is set to <span class="keyword"><span id="LST49245DA5_3"></span><script type="text/javascript">/*<![CDATA[*/
+AddLanguageSpecificTextSet("LST49245DA5_3?vb=True|nu=true");
+/*]]>*/</script></span> if maxTime is is exceeded. 
+            The affected task should then terminate by itself. See example below. Neither the task will be terminated automatically if maxTime has elapsed, 
+            nor does WaitForTask return before the task has been terminated by itself.</br></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('ID3RB')" onkeypress="SectionExpandCollapse_CheckKey('ID3RB', event)" tabindex="0"><img id="ID3RBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Examples</span></div><div id="ID3RBSection" class="collapsibleSection"><div class="codeSnippetContainer"><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="ID0EACABA_copyCode" href="#" class="copyCodeSnippet" onclick="javascript:CopyToClipboard('ID0EACABA');return false;" title="Copy">Copy</a></div></div><div id="ID0EACABA_code_Div1" class="codeSnippetContainerCode" style="display: block;"><pre xml:space="preserve"><span class="highlight-lineno"> 1</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>[TestCase]
+<span class="highlight-lineno"> 2</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span><span class="highlight-keyword">public</span> <span class="highlight-keyword">static</span> <span class="highlight-keyword">void</span> SimpleTest()
+<span class="highlight-lineno"> 3</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>{
+<span class="highlight-lineno"> 4</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>  String testname = System.Reflection.MethodBase.GetCurrentMethod().Name;
+<span class="highlight-lineno"> 5</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>  Output.WriteLine(testname + <span class="highlight-literal">" ["</span> + Thread.CurrentThread.GetHashCode() + <span class="highlight-literal">"]"</span>); <span class="highlight-comment">// we are in main thread here</span>
+<span class="highlight-lineno"> 6</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>
+<span class="highlight-lineno"> 7</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>  Report.TestStep(<span class="highlight-literal">"Starting "</span> + testname);
+<span class="highlight-lineno"> 8</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>
+<span class="highlight-lineno"> 9</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>  <span class="highlight-comment">// assign system variables at least once before using it in a task (implicit initialization must not be done in task)</span>
+<span class="highlight-lineno">10</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>  SVs.IntSV.Value = <span class="highlight-number">0</span>;  
+<span class="highlight-lineno">11</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>
+<span class="highlight-lineno">12</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>  Int32 result = Execution.WaitForTask(SimpleTask);
+<span class="highlight-lineno">13</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>
+<span class="highlight-lineno">14</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>  <span class="highlight-keyword">if</span> (result &gt; <span class="highlight-number">0</span>)
+<span class="highlight-lineno">15</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>    Report.TestStepPass(testname + <span class="highlight-literal">" returned: "</span> + result);
+<span class="highlight-lineno">16</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>  <span class="highlight-keyword">else</span>
+<span class="highlight-lineno">17</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>    Report.TestStepFail(testname + <span class="highlight-literal">" returned: "</span> + result);
+<span class="highlight-lineno">18</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>
+<span class="highlight-lineno">19</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>  Output.WriteLine(testname + <span class="highlight-literal">" ["</span> + Thread.CurrentThread.GetHashCode() + <span class="highlight-literal">"]"</span>); <span class="highlight-comment">// back in main thread here</span>
+<span class="highlight-lineno">20</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>}
+<span class="highlight-lineno">21</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>
+<span class="highlight-lineno">22</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>
+<span class="highlight-lineno">23</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span><span class="highlight-comment">// this function is executed in a separate thread.</span>
+<span class="highlight-lineno">24</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span><span class="highlight-keyword">public</span> <span class="highlight-keyword">static</span> <span class="highlight-keyword">int</span> SimpleTask(TaskCancelToken tct)
+<span class="highlight-lineno">25</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>{
+<span class="highlight-lineno">26</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>  String taskname = System.Reflection.MethodBase.GetCurrentMethod().Name;
+<span class="highlight-lineno">27</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>  Output.WriteLine(taskname + <span class="highlight-literal">" ["</span> + Thread.CurrentThread.GetHashCode() + <span class="highlight-literal">"] ENTER"</span>); <span class="highlight-comment">// this is the tasks thread      </span>
+<span class="highlight-lineno">28</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>
+<span class="highlight-lineno">29</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>  <span class="highlight-keyword">int</span> i = <span class="highlight-number">100</span>;
+<span class="highlight-lineno">30</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>  <span class="highlight-keyword">while</span> (i &gt; <span class="highlight-number">0</span>)
+<span class="highlight-lineno">31</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>  {
+<span class="highlight-lineno">32</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>    <span class="highlight-comment">// log into logging files using CANoe API</span>
+<span class="highlight-lineno">33</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>    Output.LogLine(taskname + <span class="highlight-literal">" - still waiting"</span>);
+<span class="highlight-lineno">34</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>
+<span class="highlight-lineno">35</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>    <span class="highlight-comment">// wait for some time, you may not use CANoe Execution-API here, CANoe is already waiting for this task.</span>
+<span class="highlight-lineno">36</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>    Thread.Sleep(<span class="highlight-number">100</span>);
+<span class="highlight-lineno">37</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>
+<span class="highlight-lineno">38</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>    <span class="highlight-comment">// change system variable value (but: do not read system variable values)</span>
+<span class="highlight-lineno">39</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>    SVs.IntSV.Value = i;
+<span class="highlight-lineno">40</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>    i--;
+<span class="highlight-lineno">41</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>
+<span class="highlight-lineno">42</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>    <span class="highlight-keyword">if</span> (tct.IsCancellationRequested) <span class="highlight-comment">// will set by CANoe on measurement stop / timeout</span>
+<span class="highlight-lineno">43</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>    {
+<span class="highlight-lineno">44</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>      Output.WriteLine(<span class="highlight-literal">"Task is canceled. Exit."</span>);
+<span class="highlight-lineno">45</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>      <span class="highlight-keyword">return</span> <span class="highlight-number">2</span>;  <span class="highlight-comment">// doesn't matter, will be ignored. System will return the reason for the cancellation</span>
+<span class="highlight-lineno">46</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>    }
+<span class="highlight-lineno">47</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>  }
+<span class="highlight-lineno">48</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>
+<span class="highlight-lineno">49</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>  Output.WriteLine(taskname + <span class="highlight-literal">" ["</span> + Thread.CurrentThread.GetHashCode() + <span class="highlight-literal">"] EXIT"</span>); 
+<span class="highlight-lineno">50</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>  <span class="highlight-keyword">return</span> <span class="highlight-keyword">new</span> Random((<span class="highlight-keyword">int</span>)DateTime.Now.Ticks &amp; <span class="highlight-number">0x0000FFFF</span>).Next(<span class="highlight-number">1</span>, <span class="highlight-number">100</span>);   <span class="highlight-comment">// do not return values &lt; 1      </span>
+<span class="highlight-lineno">51</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>}</pre></div></div></div><script type="text/javascript">/*<![CDATA[*/
+AddLanguageTabSet("ID0EACABA");
+/*]]>*/</script><div class="codeSnippetContainer"><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="ID0EABABA_copyCode" href="#" class="copyCodeSnippet" onclick="javascript:CopyToClipboard('ID0EABABA');return false;" title="Copy">Copy</a></div></div><div id="ID0EABABA_code_Div1" class="codeSnippetContainerCode" style="display: block;"><pre xml:space="preserve"><span class="highlight-lineno"> 1</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>[TestCase]
+<span class="highlight-lineno"> 2</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span><span class="highlight-keyword">public</span> <span class="highlight-keyword">static</span> <span class="highlight-keyword">void</span> MinimalistTask()
+<span class="highlight-lineno"> 3</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>{
+<span class="highlight-lineno"> 4</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>  <span class="highlight-keyword">int</span> param = <span class="highlight-number">7</span>;
+<span class="highlight-lineno"> 5</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>  <span class="highlight-comment">// the int parameter param is passed to the thread. The parameter value is then returned to the test case and compared for success evaluation:</span>
+<span class="highlight-lineno"> 6</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>  <span class="highlight-keyword">if</span> (Execution.WaitForTask((canceltoken) =&gt; { Thread.Sleep(<span class="highlight-number">500</span>);  <span class="highlight-keyword">return</span> (<span class="highlight-keyword">int</span>)param <span class="highlight-number">+1</span>; }, <span class="highlight-number">1000</span>) == param <span class="highlight-number">+1</span>)
+<span class="highlight-lineno"> 7</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>    Report.TestStepPass(<span class="highlight-literal">" succeeded"</span>);
+<span class="highlight-lineno"> 8</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>  <span class="highlight-keyword">else</span>
+<span class="highlight-lineno"> 9</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>    Report.TestStepFail(<span class="highlight-literal">" failed"</span>);   <span class="highlight-comment">// occurs on measurement stop, timeout, or exception</span>
+<span class="highlight-lineno">10</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>}</pre></div></div></div><script type="text/javascript">/*<![CDATA[*/
+AddLanguageTabSet("ID0EABABA");
+/*]]>*/</script><div class="codeSnippetContainer"><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="ID0EAAABA_copyCode" href="#" class="copyCodeSnippet" onclick="javascript:CopyToClipboard('ID0EAAABA');return false;" title="Copy">Copy</a></div></div><div id="ID0EAAABA_code_Div1" class="codeSnippetContainerCode" style="display: block;"><pre xml:space="preserve"><span class="highlight-lineno"> 1</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span><span class="highlight-keyword">public</span> <span class="highlight-keyword">class</span> MyTaskParameters
+<span class="highlight-lineno"> 2</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>{
+<span class="highlight-lineno"> 3</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>  <span class="highlight-keyword">public</span> DynamicSystemVariable sysVar = <span class="highlight-keyword">new</span> DynamicSystemVariable(<span class="highlight-literal">"SVs"</span>, <span class="highlight-literal">"IntSV"</span>);
+<span class="highlight-lineno"> 4</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>  <span class="highlight-keyword">public</span> <span class="highlight-keyword">int</span> Iterations = <span class="highlight-number">100</span>;
+<span class="highlight-lineno"> 5</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>  <span class="highlight-keyword">public</span> List&lt;<span class="highlight-keyword">int</span>&gt; Results = <span class="highlight-keyword">new</span> List&lt;<span class="highlight-keyword">int</span>&gt;();
+<span class="highlight-lineno"> 6</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>}
+<span class="highlight-lineno"> 7</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>
+<span class="highlight-lineno"> 8</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>[TestCase]
+<span class="highlight-lineno"> 9</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span><span class="highlight-keyword">public</span> <span class="highlight-keyword">static</span> <span class="highlight-keyword">void</span> TestWithInOutParameters()
+<span class="highlight-lineno">10</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>{
+<span class="highlight-lineno">11</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>  <span class="highlight-keyword">var</span> param = <span class="highlight-keyword">new</span> MyTaskParameters();
+<span class="highlight-lineno">12</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>  Int32 result = Execution.WaitForTask((canceltoken) =&gt; { <span class="highlight-keyword">return</span> TaskWithInOutParams(canceltoken, param); });
+<span class="highlight-lineno">13</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>  <span class="highlight-keyword">if</span> (result &gt; <span class="highlight-number">0</span>)
+<span class="highlight-lineno">14</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>  {
+<span class="highlight-lineno">15</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>    <span class="highlight-keyword">if</span> (param.Results.Count == param.Iterations)
+<span class="highlight-lineno">16</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>      Report.TestStepPass(<span class="highlight-literal">" returned: "</span> + result);
+<span class="highlight-lineno">17</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>    <span class="highlight-keyword">else</span>
+<span class="highlight-lineno">18</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>      Report.TestStepFail(<span class="highlight-literal">"Result list does not match number of iterations requested"</span>);
+<span class="highlight-lineno">19</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>  }
+<span class="highlight-lineno">20</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>  <span class="highlight-keyword">else</span>
+<span class="highlight-lineno">21</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>    Report.TestStepFail(<span class="highlight-literal">" returned: "</span> + result);
+<span class="highlight-lineno">22</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>}
+<span class="highlight-lineno">23</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>
+<span class="highlight-lineno">24</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span><span class="highlight-comment">// this function is executed in a separate thread.</span>
+<span class="highlight-lineno">25</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span><span class="highlight-keyword">public</span> <span class="highlight-keyword">static</span> <span class="highlight-keyword">int</span> TaskWithInOutParams(TaskCancelToken tct, MyTaskParameters param)
+<span class="highlight-lineno">26</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>{
+<span class="highlight-lineno">27</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>  <span class="highlight-keyword">for</span> (<span class="highlight-keyword">int</span> i = <span class="highlight-number">0</span>; i &lt; param.Iterations; i++)
+<span class="highlight-lineno">28</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>  {
+<span class="highlight-lineno">29</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>    param.sysVar.Value = i;
+<span class="highlight-lineno">30</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>    param.Results.Add(i);
+<span class="highlight-lineno">31</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>
+<span class="highlight-lineno">32</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>    <span class="highlight-keyword">if</span> (tct.IsCancellationRequested)
+<span class="highlight-lineno">33</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>      <span class="highlight-keyword">return</span> <span class="highlight-number">9</span>;  <span class="highlight-comment">// value will be ignored.</span>
+<span class="highlight-lineno">34</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>
+<span class="highlight-lineno">35</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>    Thread.Sleep(<span class="highlight-number">10</span>);
+<span class="highlight-lineno">36</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>  }
+<span class="highlight-lineno">37</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>  <span class="highlight-keyword">return</span> <span class="highlight-number">1</span>;
+<span class="highlight-lineno">38</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>}</pre></div></div></div><script type="text/javascript">/*<![CDATA[*/
+AddLanguageTabSet("ID0EAAABA");
+/*]]>*/</script></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('ID4RB')" onkeypress="SectionExpandCollapse_CheckKey('ID4RB', event)" tabindex="0"><img id="ID4RBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Version Information</span></div><div id="ID4RBSection" class="collapsibleSection"><h4 class="subHeading" />Supported from: 8.5<br /></div><div class="collapsibleAreaRegion" id="seeAlsoSection"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('ID5RB')" onkeypress="SectionExpandCollapse_CheckKey('ID5RB', event)" tabindex="0"><img id="ID5RBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />See Also</span></div><div id="ID5RBSection" class="collapsibleSection"><h4 class="subHeading">Reference</h4><div class="seeAlsoStyle"><a href="7838ac0c-32e0-a31e-5225-2b82eec4c788.htm">Execution Class</a></div><div class="seeAlsoStyle"><a href="e7d5c6fb-401a-1c07-6b8c-75f91a582049.htm">Vector.CANoe.Threading Namespace</a></div></div></div>
+            </div>
+        </div>
+        <div id="pageFooter" class="pageFooter"> © Vector Informatik GmbH — <span class="mc-variable Vector.BuildTime variable">2024-04-8T18:25:13</span></div>
+    </body>
+</html>

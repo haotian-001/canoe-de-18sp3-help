@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="CANoeDEFamily.xml" data-mc-path-to-help-system="../../../../../" data-mc-conditions="Targets.CANoe-DE-Family" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../Skins/Favicons/favicon-16x16.png" /><title>Map Window API .NET</title>
+        <link href="../../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Resources/Stylesheets/vTableMasterPageHeader.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../../Resources/Stylesheets/vStylesheet.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../../Resources/Stylesheets/vTableSymbol.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../../Resources/Stylesheets/vTable.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapGlobal.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapDom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapUtilities.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapXhr.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTextEffects.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSlideshow.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMessageBus.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMessageBus.CrossFrame.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapDefault.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMediaQueries.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapAccessibility.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapHelpSystem.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapAliasFile.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopicFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapFeedbackHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSkinHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.Breadcrumbs.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.MiniToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.SideMenu.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapIndex.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapGlossary.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapParser.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSearch.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapNavigateTopics.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapLms.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapELearning.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopic.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMicroContentComponent.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSearchHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopicElements.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTriPane.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/jscript" src="../../../../Resources/vScripts/SyntaxHighlighting.js">
+        </script>
+        <script type="text/jscript" src="../../../../Resources/vScripts/TabSwitch.js">
+        </script>
+        <script type="text/javascript" src="../../../../Resources/vScripts/Vector.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../../../CANoeDEFamily.htm#Topics/CANoeCANalyzer/Windows/Map/MapWindowAPIdotNET.htm">Open topic with navigation</a>
+        </p>
+        <div class="Body">
+            <div role="main" id="mc-main-content">
+                <div>
+                    <p class="StructurePath"><a href="../../CANoeDEFamily.htm" class="StructurePath" data-mc-conditions="Targets.CANoe-DE-Family"><img src="../../../../Resources/vImages/vToolIcons/CANoeDEFamily_Icon16_15x15.png" alt="" style="width: 15;height: 15;" />&#160;CANoe&#160;DE&#160;Product&#160;Families</a> » <a href="../WindowsAnalysis.htm" class="StructurePath">Analysis Windows</a> » <a href="MapWindow.htm" class="StructurePath">Map</a> » <span class="mc-variable System.Title variable">Map Window API .NET</span></p>
+                    <h1><span class="mc-variable System.Title variable">Map Window API .NET</span>
+                    </h1>
+                    <p class="MenuPath">&#160;</p>
+                    <p class="ToolAvailability" data-mc-conditions="BuildProcess.ToolAvailability"><a href="../../../Shared/FeatureAvailability.htm" class="red" title="Feature availabilty for your product">Valid&#160;for</a>:&#160;&#160;CANoe&#160;DE<a name="aanchor19099"></a><MadCap:concept term="SFCANoeDE" />&#160;&#160;•&#160;&#160;CANoe:lite&#160;DE<a name="aanchor19100"></a><MadCap:concept term="SFCANoeLiteDE" />&#160;&#160;•&#160;&#160;CANoe4SW&#160;DE<a name="aanchor19101"></a><MadCap:concept term="SFCANoe4SWDE" />&#160;&#160;•&#160;&#160;CANoe4SW:lite&#160;DE<a name="aanchor19102"></a><MadCap:concept term="SFCANoe4SWLiteDE" /></p>
+                    <p class="AutoSearchFilterConcepts"><a name="aanchor19103"></a>
+                        <MadCap:concept term="SFCore" />
+                    </p>
+                    <p class="IndexConcept"><a name="kanchor6382"></a>
+                    </p>
+                </div>
+                <p>With the Map Window API for .NET you can draw into a <span class="GUI">Map</span> window during measurement. On this help page a C# MeasurementScript is used as an example.</p>
+                <p><a targets="Configuration" href="javascript:void(0)" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Configuration"><img class="MCToggler_Image_Icon" src="../../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />CANoe Configuration</a>
+                </p>
+                <div style="display: none;" data-mc-target-name="Configuration">
+                    <p>To use the Map Window API, a <span class="GUI">Map</span> window must first be inserted into the Measurement Setup of the configuration.</p>
+                    <p>A .NET MeasurementScript can then be added to either a network node or the Communication Setup.</p>
+                    <p>It is recommended to use Visual Studio as .NET file editor. You can specify this in the <span class="GUI">Options</span> dialog|tab <span class="GUI">External Programs</span>|page <span class="GUI">Tools</span>|area <span class="GUI">List of Tools</span>.</p>
+                    <p>For the .NET File Editor, select the appropriate script from the <span class="GUI">{CANoe_Exec64}/Scripts</span> directory that matches your installed version of Visual Studio:</p>
+                    <ul>
+                        <li>Edit_NET_Source_with_VS_2005.vbs</li>
+                        <li>Edit_NET_Source_with_VS_2008.vbs</li>
+                        <li>Edit_NET_Source_with_VS_2010.vbs</li>
+                        <li>Edit_NET_Source_with_VS_2012.vbs</li>
+                        <li>Edit_NET_Source_with_VS_2013.vbs</li>
+                        <li>Edit_NET_Source_with_VS_2015.vbs</li>
+                        <li>Edit_NET_Source_with_VS_2017.vbs</li>
+                        <li>Edit_NET_Source_with_VS_2019.vbs</li>
+                    </ul>
+                    <p>You can then, for example, add a new C# file (.cs) to a node in the Simulation Setup via <span class="GUI">Configuration</span> in the context menu of the node.</p>
+                </div>
+                <div>
+                    <p><a targets="Classes" href="javascript:void(0)" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Classes"><img class="MCToggler_Image_Icon" src="../../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Classes</a>
+                    </p>
+                    <div style="display: none;" data-mc-target-name="Classes">
+                        <p>The following classes are available in the Map Window API:</p>
+                        <table style="mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                            <col />
+                            <col />
+                            <thead>
+                                <tr>
+                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                        <p>Class</p>
+                                    </th>
+                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                        <p class="TableHead">Description</p>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">MapWindowAPI</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p>Central class with methods to create, delete and draw map objects.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">MapRectangle</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p>Object for displaying rectangles.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">MapEllipse</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Object for displaying ellipses.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">MapLine</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Object for displaying lines.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">MapTriangle</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Object for displaying triangles.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">MapText</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Object for displaying text.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">MapCross</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Object for displaying a cross.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">MapBitmap</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Object for displaying bitmaps (e.g. in the formats bmp, jpg, png)</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                        <p class="Table">MapVehicle</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                        <p class="Table">Object for displaying vehicles (Default display of vehicles in the <span class="GUI">Map</span> window)</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>The individual methods and properties are described in an API reference.</p>
+                    </div>
+                </div>
+                <p><a targets="Procedure" href="javascript:void(0)" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Procedure"><img class="MCToggler_Image_Icon" src="../../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />General Procedure</a>
+                </p>
+                <div style="display: none;" data-mc-target-name="Procedure">
+                    <div>
+                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                            <col class="TableStyle-vTableSymbol-Column-Column1" />
+                            <col class="TableStyle-vTableSymbol-Column-Column2" />
+                            <tbody>
+                                <tr>
+                                    <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                        <p class="Table">
+                                            <img src="../../../../Resources/vImages/vStep.png" style="width: 48px;height: 45px;" title="Procedure" alt="Procedure" />
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                        <p class="TableSymbolHead">Step by Step Procedure</p>
+                                        <div class="Procedure">
+                                            <ol>
+                                                <li value="1">The objects to be drawn can be defined as member variables in the MeasurementScript:</li>
+                                            </ol>
+                                            <div class="Indent">
+                                                <p class="TableSourceCode">using Vector.Tools;<br />using Vector.CANoe.Runtime;<br />using System.Drawing;<br /><br />public class Map_API_Demo : MeasurementScript<br />{<br />&#160;&#160;private MapRectangle mRect = null;<br />}</p>
+                                            </div>
+                                            <ol start="2">
+                                                <li value="2">
+                                                    <p>In the Start method they are created once:</p>
+                                                </li>
+                                            </ol>
+                                            <div class="Indent">
+                                                <p class="TableSourceCode">public override void Start()<br />{<br />&#160;&#160;mRect = new MapRectangle(new GeoPosition(48.825095, 9.09604));<br />&#160;&#160;mRect.LineColor = Color.DarkBlue;<br />&#160;&#160;mRect.LineWidth = 2;<br />&#160;&#160;mRect.FillColor = Color.CornflowerBlue;<br />}</p>
+                                            </div>
+                                            <ol start="3">
+                                                <li value="3">
+                                                    <p>If the objects are to be drawn periodically and moved, for example, a timer can be used:</p>
+                                                </li>
+                                            </ol>
+                                            <div class="Indent">
+                                                <p class="TableSourceCode">[OnTimer(100)]<br />public void DrawObjects()<br />{<br />&#160;&#160;mRect.Offset = new GeoPosition(0.0000005, 0);<br />&#160;&#160;MapWindowAPI.DrawObject(mRect);<br />}</p>
+                                            </div>
+                                            <p>If you have changed properties of map objects via the API (e.g. Position or FillColor), these changes become visible after the DrawObject method is called for the respective object.</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <p><a targets="Examples" href="javascript:void(0)" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Examples"><img class="MCToggler_Image_Icon" src="../../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Examples</a>
+                </p>
+                <div style="display: none;" data-mc-target-name="Examples">
+                    <ul>
+                        <li><a href="#MapObject">Create a map object dynamically</a>
+                        </li>
+                        <li><a href="#Bitmap">Draw a bitmap</a>
+                        </li>
+                        <li><a href="#ObjectDelete">Delete Map Objects</a>
+                        </li>
+                        <li><a href="#PositionNavigate">Navigate to a position on the map</a>
+                        </li>
+                    </ul>
+                    <div>
+                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                            <col class="TableStyle-vTableSymbol-Column-Column1" />
+                            <col class="TableStyle-vTableSymbol-Column-Column2" />
+                            <tbody>
+                                <tr>
+                                    <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                        <p class="Table">
+                                            <img src="../../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                        <p class="TableSymbolHead"><a name="MapObject" id="MapObject"></a>Create a map object dynamically</p>
+                                        <p class="Table">After pressing the C key, a new rectangle is created at position 48.825095, 9.09204 and drawn with DrawObject.</p>
+                                        <p class="SourceCodeIndent">private MapRectangle mDynRect = null;<br /><br />[OnKey('c')]<br />public void CreateObjectOnKeyDown(char key)<br />{<br />&#160;&#160;if (mDynRect == null)<br />&#160;&#160;{<br />&#160;&#160;&#160;&#160;mDynRect = new MapRectangle(new GeoPosition(48.825095, 9.09204));<br />&#160;&#160;&#160;&#160;mDynRect.LineColor = Color.Black;<br />&#160;&#160;&#160;&#160;mDynRect.LineWidth = 2;<br />&#160;&#160;&#160;&#160;mDynRect.FillColor = Color.Red;<br />&#160;&#160;&#160;&#160;mDynRect.Width = 40;<br />&#160;&#160;&#160;&#160;mDynRect.Height = 40;<br />&#160;&#160;}<br />&#160;&#160;MapWindowAPI.DrawObject(mDynRect);<br />}</p>
+                                        <p class="Table">The name of the method is variable, but the signature must contain a parameter of type char.</p>
+                                        <p class="Table">The query mDynRect == null can be used to prevent the object from being created again when the key is pressed again.</p>
+                                        <p class="Table">With a slight modification, an object could either be recreated or, if already existing, moved to the right:</p>
+                                        <p class="TableSourceCodeIndent">[OnKey('c')]<br />public void CreateOrMoveOnKeyDown(char key)<br />{<br />&#160;&#160;if (mDynRect == null)<br />&#160;&#160;{<br />&#160;&#160;&#160;&#160;mDynRect = new MapRectangle(new GeoPosition(48.825095, 9.09204));<br />&#160;&#160;&#160;&#160;mDynRect.LineColor = Color.Black;<br />&#160;&#160;&#160;&#160;mDynRect.LineWidth = 2;<br /><br />&#160;&#160;&#160;&#160;mDynRect.FillColor = Color.Red;<br />&#160;&#160;&#160;&#160;mDynRect.Width = 40;<br />&#160;&#160;&#160;&#160;mDynRect.Height = 40;<br />&#160;&#160;}<br />&#160;&#160;else<br />&#160;&#160;{<br />&#160;&#160;&#160;&#160;mDynRect.Offset = new GeoPosition(0, 0.00005);<br />&#160;&#160;}<br /><br />&#160;&#160;MapWindowAPI.DrawObject(mDynRect);<br /><br />}</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                            <col class="TableStyle-vTableSymbol-Column-Column1" />
+                            <col class="TableStyle-vTableSymbol-Column-Column2" />
+                            <tbody>
+                                <tr>
+                                    <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                        <p class="Table">
+                                            <img src="../../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                        <p class="TableSymbolHead"><a name="Bitmap" id="Bitmap"></a>Draw a bitmap</p>
+                                        <p class="Table">After pressing the B key, a new bitmap is created at position 48.825095, 9.09204 and drawn with DrawObject. The bitmap car.png is located parallel to the CANoe configuration in the images directory.</p>
+                                        <p class="SourceCodeIndent">private MapRectangle mBitmap = null;<br /><br />[OnKey('b')]<br />public void CreateBitmapOnKeyDown(char key)<br />{<br />&#160;&#160;if (mBitmap == null)<br />&#160;&#160;{<br />&#160;&#160;&#160;&#160;mBitmap = new MapBitmap(new GeoPosition(48.827095, 9.09404));<br />&#160;&#160;&#160;&#160;mBitmap.Filepath = @"images\car.png";<br />&#160;&#160;&#160;&#160;mBitmap.Width = 40;<br />&#160;&#160;&#160;&#160;mBitmap.Height = 60;<br />&#160;&#160;}<br />&#160;&#160;MapWindowAPI.DrawObject(mBitmap);<br /><br />}</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                            <col class="TableStyle-vTableSymbol-Column-Column1" />
+                            <col class="TableStyle-vTableSymbol-Column-Column2" />
+                            <tbody>
+                                <tr>
+                                    <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                        <p class="Table">
+                                            <img src="../../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                        <p class="TableSymbolHead"><a name="ObjectDelete" id="ObjectDelete"></a>Delete Map Objects</p>
+                                        <p class="Table">If map objects are no longer needed, they can be deleted using the DeleteObject method. In this code example, an object is dynamically created or deleted by pressing the T key.</p>
+                                        <p class="SourceCodeIndent">[OnKey('t')]<br />public void ToggleCreateOnKeyDown(char key)<br />{<br />&#160;&#160;if (mDynRect == null)<br />&#160;&#160;{<br />&#160;&#160;&#160;&#160;mDynRect = new MapRectangle(new GeoPosition(48.825095, 9.09204));<br />&#160;&#160;&#160;&#160;mDynRect.LineColor = Color.Black;<br />&#160;&#160;&#160;&#160;mDynRect.LineWidth = 2;<br /><br />&#160;&#160;&#160;&#160;mDynRect.FillColor = Color.Red;<br />&#160;&#160;&#160;&#160;mDynRect.Width = 40;<br />&#160;&#160;&#160;&#160;mDynRect.Height = 40;<br />&#160;&#160;&#160;&#160;MapWindowAPI.DrawObject(mDynRect);<br />&#160;&#160;}<br />&#160;&#160;else<br />&#160;&#160;{<br />&#160;&#160;&#160;&#160;MapWindowAPI.DeleteObject(mDynRect);<br />&#160;&#160;mDynRect = null;<br />&#160;&#160;}<br />}</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                            <col class="TableStyle-vTableSymbol-Column-Column1" />
+                            <col class="TableStyle-vTableSymbol-Column-Column2" />
+                            <tbody>
+                                <tr>
+                                    <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                        <p class="Table">
+                                            <img src="../../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                        <p class="TableSymbolHead"><a name="PositionNavigate" id="PositionNavigate"></a>Navigate to a position on the map</p>
+                                        <p class="Table">This code is used to navigate to a position (latitude, longitude) on the map by pressing the N button:</p>
+                                        <p class="SourceCodeIndent">[OnKey('n')]<br />public void NavigateOnKeyDown(char key)<br />{<br />&#160;&#160;MapWindowAPI.SetMapPosition(48.825095, 9.09204);<br />}</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <p class="LinkList">&#160;</p>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="FooterWhite">
+                <table class="FooterWhite" style="border-collapse: collapse;margin-left: auto;margin-right: auto;">
+                    <col style="width: 70px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col style="width: 16px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="buttons popup-container clearfix topicToolbarProxy topicToolbarProxyFooter _Skins_HTML5TopicToolbar mc-component nocontent">
+                                    <div class="button-group-container-left">
+                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo"><a href="../../../Shared/HowToUseOnlineHelp.htm" title="Tips for using the help" alt="Tips for using the help"><img src="../../../../Resources/vImages/vBackstage/vHelpInfo.png" /></a>
+                                </p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo" style="text-align: right;"><span class="mc-variable Vector.BuildTime variable">2024-04-8T20:56:42</span>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <table style="width: 100%;border-collapse: separate;border-spacing: 3px 0px;margin-left: auto;margin-right: auto;caption-side: top;">
+                <col />
+                <col />
+                <col />
+                <col data-mc-conditions="BuildProcess.HTML5Link" />
+                <tbody>
+                    <tr>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;">
+                            <p class="vec_Footer">©&#160;Vector Informatik GmbH</p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;text-align: right;">
+                            <p class="vec_FooterBold">
+                                <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE&#160;Product Families</MadCap:conditionalText> Version <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.VectorTestUnitRunner">18</MadCap:conditionalText></p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="../../../Shared/ContactCopyrightLicense.htm" class="vec_Footer MCXref xref xrefvec_Footer">Contact/Copyright/License</a>
+                            </p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="https://www.vector.com/int/en/company/get-info/privacy-policy/" target="_blank" class="vec_Footer">Data Privacy Notice</a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

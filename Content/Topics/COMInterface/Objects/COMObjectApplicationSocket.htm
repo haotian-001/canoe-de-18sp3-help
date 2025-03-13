@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="CANoeDEFamily.xml" data-mc-path-to-help-system="../../../../" data-mc-conditions="Targets.CANoe-DE-Family" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../Skins/Favicons/favicon-16x16.png" /><title>ApplicationSocket (COM Object)</title>
+        <link href="../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Resources/Stylesheets/vTableMasterPageHeader.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../Resources/Stylesheets/vStylesheet.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../Resources/Stylesheets/vTableSymbol.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../Resources/Stylesheets/vTableLight.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapGlobal.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapDom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapUtilities.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapXhr.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTextEffects.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSlideshow.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMessageBus.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMessageBus.CrossFrame.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapDefault.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMediaQueries.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAccessibility.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapHelpSystem.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAliasFile.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopicFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapFeedbackHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSkinHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.Breadcrumbs.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.MiniToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.SideMenu.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapIndex.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapGlossary.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapParser.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSearch.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapNavigateTopics.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapLms.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapELearning.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopic.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMicroContentComponent.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSearchHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopicElements.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTriPane.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/jscript" src="../../../Resources/vScripts/SyntaxHighlighting.js">
+        </script>
+        <script type="text/jscript" src="../../../Resources/vScripts/TabSwitch.js">
+        </script>
+        <script type="text/javascript" src="../../../Resources/vScripts/Vector.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../../CANoeDEFamily.htm#Topics/COMInterface/Objects/COMObjectApplicationSocket.htm">Open topic with navigation</a>
+        </p>
+        <div class="Body">
+            <div role="main" id="mc-main-content">
+                <div>
+                    <p class="AutoSearchFilterConcepts"><a name="aanchor23337"></a>
+                        <MadCap:concept term="SFCOMInterface" />
+                    </p>
+                    <p class="IndexConcept"><a name="kanchor7716"></a>
+                    </p>
+                    <p class="StructurePath"><a href="../../CANoeCANalyzer/CANoeDEFamily.htm" class="StructurePath" data-mc-conditions="Targets.CANoe-DE-Family"><img src="../../../Resources/vImages/vToolIcons/CANoeDEFamily_Icon16_15x15.png" alt="" style="width: 15;height: 15;" />&#160;CANoe&#160;DE&#160;Product&#160;Families</a> » <a href="../COMInterface.htm" class="StructurePath MCXref xref xrefStructurePath">COM Interface</a> » <a href="../COMObjectHierarchy.htm" class="StructurePath">Objects</a> » ApplicationSocket</p>
+                    <h1>ApplicationSocket</h1>
+                    <p class="MenuPath"><a href="COMObjectApplication.htm" class="MenuPath">Application</a>&#160;» <a href="COMObjectNetworks.htm" class="MenuPath">Networks</a>&#160;» <a href="COMObjectNetwork.htm" class="MenuPath">Network</a>&#160;» <a href="COMObjectDevices.htm" class="MenuPath">Devices</a>&#160;» <a href="COMObjectDevice.htm" class="MenuPath">Device</a>&#160;» ApplicationSocket</p>
+                    <p class="ToolAvailability" data-mc-conditions="BuildProcess.ToolAvailability"><a href="../../Shared/FeatureAvailability.htm" class="red" title="Feature availabilty for your product">Valid&#160;for</a>:&#160;&#160;CANoe&#160;DE<a name="aanchor23338"></a><MadCap:concept term="SFCANoeDE" /></p>
+                </div>
+                <div>
+                    <h2 class="CommandPage">Description</h2>
+                    <p>The <span class="bold">ApplicationSocket</span> object represents the MOST Network Management Layer.</p>
+                </div>
+                <div>
+                    <h2 class="CommandPage">Properties</h2>
+                    <table style="mc-table-style: url('../../../Resources/Stylesheets/vTableLight.css');margin-left: 0;margin-right: auto;width: 100%;" class="TableStyle-vTableLight" cellspacing="0">
+                        <col class="TableStyle-vTableLight-Column-Column1" style="width: 20%;" />
+                        <col class="TableStyle-vTableLight-Column-Column1" style="width: 5%;" />
+                        <col class="TableStyle-vTableLight-Column-Column1" style="width: 5%;" />
+                        <col class="TableStyle-vTableLight-Column-Column1" style="width: 45%;" />
+                        <col class="TableStyle-vTableLight-Column-Column1" style="width: 25%;" />
+                        <thead>
+                            <tr class="TableStyle-vTableLight-Head-Header1">
+                                <th class="TableStyle-vTableLight-HeadE-Column1-Header1">
+                                    <p class="TableHead">Name</p>
+                                </th>
+                                <th class="TableStyle-vTableLight-HeadE-Column1-Header1">
+                                    <p class="TableTextSmall">Introduced<br />in version</p>
+                                </th>
+                                <th class="TableStyle-vTableLight-HeadE-Column1-Header1">
+                                    <p class="TableTextSmall">Available for</p>
+                                </th>
+                                <th class="TableStyle-vTableLight-HeadE-Column1-Header1">
+                                    <p class="TableHead">Property Value/Type</p>
+                                </th>
+                                <th class="TableStyle-vTableLight-HeadD-Column1-Header1">
+                                    <p class="TableHead">Property Value Element</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <p class="TableBold"><a name="kanchor7717"></a><a name="BMBusRegistry" id="BMBusRegistry"></a><a targets="TOGBusRegistry" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler togglerBoldBlackUnderline MCTogglerHotSpot_ MCTogglerHotSpot_BoldBlackUnderline MCHotSpotImage" href="javascript:void(0)" data-mc-targets="TOGBusRegistry"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />BusRegistry</a>
+                                    </p>
+                                    <div style="display: none;" data-mc-target-name="TOGBusRegistry">
+                                        <p class="Table">This property determines the current bus registry.</p>
+                                        <p class="Table">The bus registry is a central list in which all function blocks of the complete MOST ring are stored with their according node address and InstanceID.</p>
+                                        <p class="Table">The bus registry is only valid if the OnNetState event has the value <span class="bold">configOk</span>.</p>
+                                        <p class="Table">Outside a measurement the determination of the bus registry returns the last valid table (before measurement stop).</p>
+                                        <p class="Table">If no measurement has been started, so far, an empty array will be returned.</p>
+                                        <p class="Table"><span class="bold">Syntax</span>: <span class="SourceCode">object.BusRegistry</span></p>
+                                    </div>
+                                    <p class="TableTextSmall">(read-only)</p>
+                                    <p class="TableTextSmall">(see example below)</p>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <p class="Table">✔</p>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <div>
+                                        <p class="TableTextSmall"><span class="Product">CANoe&#160;DE</span>
+                                        </p>
+                                    </div>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <p class="Table">Type: BYTE&#160;ARRAY</p>
+                                    <p class="Table">The bus registry as a byte array with dynamic length.</p>
+                                    <p class="Table"><a class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler togglerBlackUnderline MCTogglerHotSpot_ MCTogglerHotSpot_BlackUnderline MCHotSpotImage" targets="TOGBusRegistry" href="javascript:void(0)" data-mc-targets="TOGBusRegistry"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Return values:</a>
+                                    </p>
+                                    <div style="display: none;" data-mc-target-name="TOGBusRegistry">
+                                        <p class="Table">A byte array of the following length: <span class="SourceCode">4 * Number of entries</span>, that contains the current Bus Registry.</p>
+                                        <p class="Table">Each entry is represented in the byte array as follows:</p>
+                                        <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableLight.css');" class="TableStyle-vTableLight" cellspacing="0">
+                                            <col class="TableStyle-vTableLight-Column-Column1" />
+                                            <col class="TableStyle-vTableLight-Column-Column1" />
+                                            <tbody>
+                                                <tr class="TableStyle-vTableLight-Body-Body1">
+                                                    <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                        <p class="TableBold">byte 1</p>
+                                                    </td>
+                                                    <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                        <p class="Table">The high order byte of the node address.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-vTableLight-Body-Body1">
+                                                    <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                        <p class="TableBold">byte 2</p>
+                                                    </td>
+                                                    <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                        <p class="Table">The low order byte of the node address.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-vTableLight-Body-Body1">
+                                                    <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                        <p class="TableBold">byte 3</p>
+                                                    </td>
+                                                    <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                        <p class="Table">The Function Block ID.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-vTableLight-Body-Body1">
+                                                    <td class="TableStyle-vTableLight-BodyB-Column1-Body1">
+                                                        <p class="TableBold">byte 4</p>
+                                                    </td>
+                                                    <td class="TableStyle-vTableLight-BodyA-Column1-Body1">
+                                                        <p class="Table">The Instance ID.</p>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                    <p class="Table">—</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                <td class="TableStyle-vTableLight-BodyB-Column1-Body1">
+                                    <p class="TableBold"><a name="kanchor7718"></a><a name="BMFBlockList" id="BMFBlockList"></a><a class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler togglerBoldBlackUnderline MCTogglerHotSpot_ MCTogglerHotSpot_BoldBlackUnderline MCHotSpotImage" targets="TOGFBlockList" href="javascript:void(0)" data-mc-targets="TOGFBlockList"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />FBlockList</a>
+                                    </p>
+                                    <div style="display: none;" data-mc-target-name="TOGFBlockList">
+                                        <p class="Table">This property returns the FBlock list as a byte arrays with dynamic length.</p>
+                                        <p class="Table">Outside a measurement the determination of the FBlock list returns the last valid table (before measurement stop).</p>
+                                        <p class="Table">If no measurement has been started, so far, an empty array will be returned.</p>
+                                        <p class="Table"><span class="bold">Syntax</span>: <span class="SourceCode">object.FBlockList</span></p>
+                                    </div>
+                                    <p class="TableTextSmall">(read-only)</p>
+                                    <p class="TableTextSmall">(see example below)</p>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyB-Column1-Body1">
+                                    <p class="Table">✔</p>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyB-Column1-Body1">
+                                    <div>
+                                        <p class="TableTextSmall"><span class="Product">CANoe&#160;DE</span>
+                                        </p>
+                                    </div>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyB-Column1-Body1">
+                                    <p class="Table">Type: BYTE&#160;ARRAY</p>
+                                    <p class="Table">The FBlock list as a byte array with dynamic length.</p>
+                                    <p class="Table"><a class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler togglerBlackUnderline MCTogglerHotSpot_ MCTogglerHotSpot_BlackUnderline MCHotSpotImage" targets="TOGFBlockList" href="javascript:void(0)" data-mc-targets="TOGFBlockList"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Return values:</a>
+                                    </p>
+                                    <div style="display: none;" data-mc-target-name="TOGFBlockList">
+                                        <p class="Table">The FBlock list as a byte array with dynamic length (<span class="SourceCode">Length= 2 * Number of entries of the current FBlock list</span>).</p>
+                                        <p class="Table">Each entry is represented in the byte array in the following way:</p>
+                                        <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableLight.css');" class="TableStyle-vTableLight" cellspacing="0">
+                                            <col class="TableStyle-vTableLight-Column-Column1" />
+                                            <col class="TableStyle-vTableLight-Column-Column1" />
+                                            <tbody>
+                                                <tr class="TableStyle-vTableLight-Body-Body1">
+                                                    <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                        <p class="TableBold">byte 1</p>
+                                                    </td>
+                                                    <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                        <p class="Table">The Function Block ID.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-vTableLight-Body-Body1">
+                                                    <td class="TableStyle-vTableLight-BodyB-Column1-Body1">
+                                                        <p class="TableBold">byte 2</p>
+                                                    </td>
+                                                    <td class="TableStyle-vTableLight-BodyA-Column1-Body1">
+                                                        <p class="Table">The Instance ID.</p>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyA-Column1-Body1">
+                                    <p class="Table">—</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <h2 class="CommandPage">Methods</h2>
+                    <p>—</p>
+                </div>
+                <div>
+                    <h2 class="CommandPage">Events</h2>
+                    <table style="mc-table-style: url('../../../Resources/Stylesheets/vTableLight.css');margin-left: 0;margin-right: auto;width: 100%;" class="TableStyle-vTableLight" cellspacing="0">
+                        <col class="TableStyle-vTableLight-Column-Column1" style="width: 20%;" />
+                        <col class="TableStyle-vTableLight-Column-Column1" style="width: 5%;" />
+                        <col class="TableStyle-vTableLight-Column-Column1" style="width: 5%;" />
+                        <col class="TableStyle-vTableLight-Column-Column1" style="width: 45%;" />
+                        <col class="TableStyle-vTableLight-Column-Column1" style="width: 25%;" />
+                        <thead>
+                            <tr class="TableStyle-vTableLight-Head-Header1">
+                                <th class="TableStyle-vTableLight-HeadE-Column1-Header1">
+                                    <p class="TableBold">Name</p>
+                                </th>
+                                <th class="TableStyle-vTableLight-HeadE-Column1-Header1">
+                                    <p class="TableTextSmall">Introduced<br />in version</p>
+                                </th>
+                                <th class="TableStyle-vTableLight-HeadE-Column1-Header1">
+                                    <p class="TableTextSmall">Available for</p>
+                                </th>
+                                <th class="TableStyle-vTableLight-HeadE-Column1-Header1">
+                                    <p class="TableBold">Parameters</p>
+                                </th>
+                                <th class="TableStyle-vTableLight-HeadD-Column1-Header1">
+                                    <p class="TableBold">&#160;</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <p class="TableBold"><a name="kanchor7719"></a><a name="BMOnBusRegistry" id="BMOnBusRegistry"></a><a class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler togglerBoldBlackUnderline MCTogglerHotSpot_ MCTogglerHotSpot_BoldBlackUnderline MCHotSpotImage" targets="TOGOnBusRegistry" href="javascript:void(0)" data-mc-targets="TOGOnBusRegistry"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />OnBusRegistry</a>
+                                    </p>
+                                    <div style="display: none;" data-mc-target-name="TOGOnBusRegistry">
+                                        <p class="Table">This event occurs when the Bus Registry has changed or has been queried.</p>
+                                        <p class="Table">The current Bus Registry will only be responded during measurement.</p>
+                                        <p class="Table">To assure that the current registry is available in every situation after measurement start, the <span class="bold">Poll Configuration status after measurement start</span> option should be activated in the hardware settings of all channels.</p>
+                                        <p class="Table">High time stamps require a special treatment.</p>
+                                        <p class="Table"><span class="bold">Syntax</span>: <span class="SourceCode">object_OnBusRegistry( timeHigh, time, dataArray )</span></p>
+                                    </div>
+                                    <p class="TableTextSmall">(see example below)</p>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <p class="Table">✔</p>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <div>
+                                        <p class="TableTextSmall"><span class="Product">CANoe&#160;DE</span>
+                                        </p>
+                                    </div>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <p class="Table"><a class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler togglerBlackUnderline MCTogglerHotSpot_ MCTogglerHotSpot_BlackUnderline MCHotSpotImage" targets="TOGOnBusRegistry" href="javascript:void(0)" data-mc-targets="TOGOnBusRegistry"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />timeHigh, time, dataArray</a>
+                                    </p>
+                                    <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableLight.css');display: none;" class="TableStyle-vTableLight" cellspacing="0" data-mc-target-name="TOGOnBusRegistry">
+                                        <col class="TableStyle-vTableLight-Column-Column1" />
+                                        <col class="TableStyle-vTableLight-Column-Column1" />
+                                        <tbody>
+                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="TableBold">object</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                    <p class="Table">Type: ApplicationSocket</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="TableBold">timeHigh</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                    <p class="Table">The high order 32 bit of the time stamp (in 10&#160;µs).</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="TableBold">time</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                    <p class="Table">The low order 32 bit of the time stamp (in 10&#160;µs).</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                <td class="TableStyle-vTableLight-BodyB-Column1-Body1">
+                                                    <p class="TableBold">dataArray</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyA-Column1-Body1">
+                                                    <p class="Table">A byte array of the following length: <span class="SourceCode">4 * Number of entries</span>, that contains the current Bus Registry.</p>
+                                                    <p class="Table">Each entry is represented in the byte array as follows:</p>
+                                                    <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableLight.css');" class="TableStyle-vTableLight" cellspacing="0">
+                                                        <col class="TableStyle-vTableLight-Column-Column1" />
+                                                        <col class="TableStyle-vTableLight-Column-Column1" />
+                                                        <tbody>
+                                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                                    <p class="TableBold">byte 1</p>
+                                                                </td>
+                                                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                                    <p class="Table">The high order byte of the node address.</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                                    <p class="TableBold">byte 2</p>
+                                                                </td>
+                                                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                                    <p class="Table">The low order byte of the node address.</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                                    <p class="TableBold">byte 3</p>
+                                                                </td>
+                                                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                                    <p class="Table">The Function Block ID.</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                                <td class="TableStyle-vTableLight-BodyB-Column1-Body1">
+                                                                    <p class="TableBold">byte 4</p>
+                                                                </td>
+                                                                <td class="TableStyle-vTableLight-BodyA-Column1-Body1">
+                                                                    <p class="Table">The Instance ID.</p>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                    <p class="TableHead">&#160;</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                <td class="TableStyle-vTableLight-BodyB-Column1-Body1">
+                                    <p class="TableBold"><a name="kanchor7720"></a><a name="BMOnFBlockList" id="BMOnFBlockList"></a><a class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler togglerBoldBlackUnderline MCTogglerHotSpot_ MCTogglerHotSpot_BoldBlackUnderline MCHotSpotImage" targets="TOGOnFBlockList" href="javascript:void(0)" data-mc-targets="TOGOnFBlockList"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />OnFBlockList</a>
+                                    </p>
+                                    <div style="display: none;" data-mc-target-name="TOGOnFBlockList">
+                                        <p class="Table">This event occurs if the local FBlock List has changed or has been queried.</p>
+                                        <p class="Table">The FBlock List is a local list, in which all function blocks of the simulated node of the connected network interface are stored with their according InstanceIDs.</p>
+                                        <p class="Table">The local FBlock List will only be responded during measurement.<br />High time stamps require a special treatment.</p>
+                                        <p class="Table"><span class="bold">Syntax</span>: <span class="SourceCode">object_OnFBlockList( timeHigh, time, dataArray )</span></p>
+                                    </div>
+                                    <p class="TableTextSmall">(see example below)</p>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyB-Column1-Body1">
+                                    <p class="Table">✔</p>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyB-Column1-Body1">
+                                    <div>
+                                        <p class="TableTextSmall"><span class="Product">CANoe&#160;DE</span>
+                                        </p>
+                                    </div>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyB-Column1-Body1">
+                                    <p class="Table"><a class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler togglerBlackUnderline MCTogglerHotSpot_ MCTogglerHotSpot_BlackUnderline MCHotSpotImage" targets="TOGOnFBlockList" href="javascript:void(0)" data-mc-targets="TOGOnFBlockList"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />timeHigh, time, dataArray</a>
+                                    </p>
+                                    <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableLight.css');display: none;" class="TableStyle-vTableLight" cellspacing="0" data-mc-target-name="TOGOnFBlockList">
+                                        <col class="TableStyle-vTableLight-Column-Column1" />
+                                        <col class="TableStyle-vTableLight-Column-Column1" />
+                                        <tbody>
+                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="TableBold">object</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                    <p class="Table">Type: ApplicationSocket</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="TableBold">timeHigh</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                    <p class="Table">The high order 32 bit of the time stamp (in 10&#160;µs).</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="TableBold">time</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                    <p class="Table">The low order 32 bit of the time stamp (in 10&#160;µs).</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                <td class="TableStyle-vTableLight-BodyB-Column1-Body1">
+                                                    <p class="TableBold">dataArray</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyA-Column1-Body1">
+                                                    <p class="Table">A byte array of the following length: <span class="SourceCode">Length= 2 * Number of entries of the current FBlock list</span>, that contains the current FBlockList.</p>
+                                                    <p class="Table">Each entry is represented in the byte array as follows:</p>
+                                                    <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableLight.css');" class="TableStyle-vTableLight" cellspacing="0">
+                                                        <col class="TableStyle-vTableLight-Column-Column1" />
+                                                        <col class="TableStyle-vTableLight-Column-Column1" />
+                                                        <tbody>
+                                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                                    <p class="TableBold">byte 1</p>
+                                                                </td>
+                                                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                                    <p class="Table">The Function Block ID.</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                                <td class="TableStyle-vTableLight-BodyB-Column1-Body1">
+                                                                    <p class="TableBold">byte 2</p>
+                                                                </td>
+                                                                <td class="TableStyle-vTableLight-BodyA-Column1-Body1">
+                                                                    <p class="Table">The Instance ID.</p>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyA-Column1-Body1">
+                                    <p class="Table">&#160;</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <h2 class="CommandPage">Example</h2>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                    <p class="Table">
+                                        <img src="../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                    </p>
+                                </td>
+                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                    <p class="TableSymbolHead">Example — <a class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler togglerBoldBlackUnderline MCTogglerHotSpot_ MCTogglerHotSpot_BoldBlackUnderline MCHotSpotImage" targets="TOGEXBusRegistry" href="javascript:void(0)" data-mc-targets="TOGEXBusRegistry"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />BusRegistry property</a></p>
+                                    <div style="display: none;" data-mc-target-name="TOGEXBusRegistry">
+                                        <p>The following example determines the current bus registry:</p>
+                                        <p class="TableSourceCode">Dim myRegistry As Variant<br />myRegistry = <a href="#" class="SourceCode selected">myApplicationSocketInterface</a>.BusRegistry</p>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                    <p class="Table">
+                                        <img src="../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                    </p>
+                                </td>
+                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                    <p class="TableSymbolHead">Example — <a class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler togglerBoldBlackUnderline MCTogglerHotSpot_ MCTogglerHotSpot_BoldBlackUnderline MCHotSpotImage" targets="TOGEXFBlockList" href="javascript:void(0)" data-mc-targets="TOGEXFBlockList"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />FBlockList property</a></p>
+                                    <div style="display: none;" data-mc-target-name="TOGEXFBlockList">
+                                        <p>The following example determines the current FBlock list:</p>
+                                        <p class="TableSourceCode">Dim myFBlockList As Variant<br />myFBlockList = myApplicationSocketInterface.FBlockList</p>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                    <p class="Table">
+                                        <img src="../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                    </p>
+                                </td>
+                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                    <p class="TableSymbolHead">Example — <a class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler togglerBoldBlackUnderline MCTogglerHotSpot_ MCTogglerHotSpot_BoldBlackUnderline MCHotSpotImage" targets="TOGEXOnBusRegistry" href="javascript:void(0)" data-mc-targets="TOGEXOnBusRegistry"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />OnBusRegistry event</a></p>
+                                    <div style="display: none;" data-mc-target-name="TOGEXOnBusRegistry">
+                                        <p>The following example displays the first entry of the Bus Registry in a MessageBox:</p>
+                                        <p class="TableSourceCode">Sub myApplicationSocketInterface_OnBusRegistry( ByVal timeHigh As Long, ByVal time As Long, ByVal dataArray As Variant )<br />&#160;&#160;Dim adr As Long<br />&#160;&#160;Set adr = dataArray(0) * &amp;H100<br />&#160;&#160;adr = adr + dataArray(1)<br />&#160;&#160;MsgBox "RxTxLog: 0x" &amp; Hex(adr) &amp; ", FBlockID: " &amp; dataArray(2) &amp; ", InstanceID: " &amp; dataArray(3)<br />End Sub</p>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                    <p class="Table">
+                                        <img src="../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                    </p>
+                                </td>
+                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                    <p class="TableSymbolHead">Example — <a class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler togglerBoldBlackUnderline MCTogglerHotSpot_ MCTogglerHotSpot_BoldBlackUnderline MCHotSpotImage" targets="TOGEXOnFBlockList" href="javascript:void(0)" data-mc-targets="TOGEXOnFBlockList"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />OnFBlockList event</a></p>
+                                    <div style="display: none;" data-mc-target-name="TOGEXOnFBlockList">
+                                        <p>The following example displays the first entry of the local FBlock List in a MessageBox:</p>
+                                        <p class="TableSourceCode">Sub myApplicationSocketInterface_OnFBlockList( ByVal timeHigh As Long, ByVal time As Long, ByVal dataArray As Variant )<br />&#160;&#160;MsgBox FBlockID: " &amp; dataArray(2) &amp; ", InstanceID: " &amp; dataArray(3)<br />End Sub</p>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <h2 class="CommandPage">Object Availability</h2>
+                    <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableLight.css');" class="TableStyle-vTableLight" cellspacing="0">
+                        <col class="TableStyle-vTableLight-Column-Column1" />
+                        <col class="TableStyle-vTableLight-Column-Column1" data-mc-conditions="" />
+                        <col class="TableStyle-vTableLight-Column-Column1" data-mc-conditions="" />
+                        <col class="TableStyle-vTableLight-Column-Column1" data-mc-conditions="" />
+                        <col class="TableStyle-vTableLight-Column-Column1" data-mc-conditions="" />
+                        <col class="TableStyle-vTableLight-Column-Column1" data-mc-conditions="" />
+                        <tbody>
+                            <tr class="TableStyle-vTableLight-Body-Body1" data-mc-conditions="">
+                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <p class="TableHead">&#160;</p>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <p class="TableHead">CANalyzer</p>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <p class="TableHead">CANoe&#160;DE</p>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <p class="TableHead">CANoe4SW&#160;DE</p>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <p class="TableHead">CANoe:lite&#160;DE</p>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                    <p class="TableHead">CANoe4SW:lite&#160;DE</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                <td class="TableStyle-vTableLight-BodyB-Column1-Body1">
+                                    <p class="TableHead">Introduced<br />in version</p>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyB-Column1-Body1">
+                                    <p class="Table">—</p>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyB-Column1-Body1">
+                                    <p class="Table">✔</p>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyB-Column1-Body1">
+                                    <p>—</p>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyB-Column1-Body1">
+                                    <p class="Table">—</p>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyA-Column1-Body1">
+                                    <p class="Table">—</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="LinkList"><a href="../COMObjectHierarchy.htm" class="LinkList MCXref xref xrefLinkList">COM Object Hierarchy</a>&#160;&#160;•&#160;&#160;<a href="../../CAPLFunctions/MOST/EventProcedures/CAPLfunctionOnMOSTAsRegistry.htm" class="LinkList MCXref xref xrefLinkList">OnMostAsRegistry</a> (CAPL event procedure)&#160;&#160;•&#160;&#160;<a href="../../CAPLFunctions/MOST/Functions/CAPLfunctionMOSTAsRgGetFBlockID.htm" class="LinkList MCXref xref xrefLinkList">mostAsRgGetFBlockID</a> (CAPL function)&#160;&#160;•&#160;&#160;<a href="../../CAPLFunctions/MOST/Functions/CAPLfunctionMOSTAsRgGetInstID.htm" class="LinkList MCXref xref xrefLinkList">mostAsRgGetInstID</a> (CAPL function)&#160;&#160;•&#160;&#160;<a href="../../CAPLFunctions/MOST/Functions/CAPLfunctionMOSTAsRgGetRxTxLog.htm" class="LinkList MCXref xref xrefLinkList">mostAsRgGetRxTxLog</a> (CAPL function)&#160;&#160;•&#160;&#160;<a href="../../CAPLFunctions/MOST/Functions/CAPLfunctionMOSTAsRgGetSize.htm" class="LinkList MCXref xref xrefLinkList">mostAsRgGetSize</a> (CAPL function)</p>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="FooterWhite">
+                <table class="FooterWhite" style="border-collapse: collapse;margin-left: auto;margin-right: auto;">
+                    <col style="width: 70px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col style="width: 16px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col data-mc-conditions="" />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="buttons popup-container clearfix topicToolbarProxy topicToolbarProxyFooter _Skins_HTML5TopicToolbar mc-component nocontent">
+                                    <div class="button-group-container-left">
+                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo"><a href="../../Shared/HowToUseOnlineHelp.htm" title="Tips for using the help" alt="Tips for using the help"><img src="../../../Resources/vImages/vBackstage/vHelpInfo.png" /></a>
+                                </p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo">•&#160;&#160;Technical&#160;References are only&#160;available&#160;in&#160;English</p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo" style="text-align: right;"><span class="mc-variable Vector.BuildTime variable">2024-04-8T20:56:42</span>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <table style="width: 100%;border-collapse: separate;border-spacing: 3px 0px;margin-left: auto;margin-right: auto;caption-side: top;">
+                <col />
+                <col />
+                <col />
+                <col data-mc-conditions="BuildProcess.HTML5Link" />
+                <tbody>
+                    <tr>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;">
+                            <p class="vec_Footer">©&#160;Vector Informatik GmbH</p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;text-align: right;">
+                            <p class="vec_FooterBold">
+                                <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE&#160;Product Families</MadCap:conditionalText> Version <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.VectorTestUnitRunner">18</MadCap:conditionalText></p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="../../Shared/ContactCopyrightLicense.htm" class="vec_Footer MCXref xref xrefvec_Footer">Contact/Copyright/License</a>
+                            </p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="https://www.vector.com/int/en/company/get-info/privacy-policy/" target="_blank" class="vec_Footer">Data Privacy Notice</a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

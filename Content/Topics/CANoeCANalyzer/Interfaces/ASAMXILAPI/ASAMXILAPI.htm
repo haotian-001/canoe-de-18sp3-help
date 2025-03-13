@@ -1,0 +1,1710 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="" data-mc-search-type="Stem" data-mc-help-system-file-name="CANoeDEFamily.xml" data-mc-path-to-help-system="../../../../../" data-mc-toc-path="Software Interfaces" data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.VectorTestUnitRunner" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../Skins/Favicons/favicon-16x16.png" /><title>ASAM XIL API</title>
+        <link href="../../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Resources/Stylesheets/vTableMasterPageHeader.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../../Resources/Stylesheets/vStylesheet.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../../Resources/Stylesheets/vTable.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../../Resources/Stylesheets/vTableSymbol.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapGlobal.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapDom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapUtilities.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapXhr.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTextEffects.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSlideshow.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMessageBus.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMessageBus.CrossFrame.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapDefault.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMediaQueries.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapAccessibility.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapHelpSystem.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapAliasFile.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopicFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapFeedbackHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSkinHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.Breadcrumbs.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.MiniToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.SideMenu.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapIndex.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapGlossary.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapParser.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSearch.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapNavigateTopics.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapLms.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapELearning.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopic.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMicroContentComponent.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSearchHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopicElements.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTriPane.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/jscript" src="../../../../Resources/vScripts/SyntaxHighlighting.js">
+        </script>
+        <script type="text/jscript" src="../../../../Resources/vScripts/TabSwitch.js">
+        </script>
+        <script type="text/javascript" src="../../../../Resources/vScripts/Vector.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../../../CANoeDEFamily.htm#Topics/CANoeCANalyzer/Interfaces/ASAMXILAPI/ASAMXILAPI.htm">Open topic with navigation</a>
+        </p>
+        <div class="Body">
+            <div role="main" id="mc-main-content">
+                <div>
+                    <p class="StructurePath"><a href="../../CANoeDEFamily.htm" class="StructurePath" data-mc-conditions="Targets.CANoe-DE-Family"><img src="../../../../Resources/vImages/vToolIcons/CANoeDEFamily_Icon16_15x15.png" alt="" style="width: 15;height: 15;" />&#160;CANoe&#160;DE&#160;Product&#160;Families</a> » <a href="../ExtensionsInterfaces.htm" class="StructurePath" data-mc-conditions="Targets.CANoe-DE-Family">Extensions and Interfaces</a> » <span class="mc-variable System.Title variable">ASAM XIL API</span></p>
+                    <h1><span class="mc-variable System.Title variable">ASAM XIL API</span>
+                    </h1>
+                    <p class="MenuPath"><a href="../../Ribbon/Ribbon.htm" class="MenuPath">Ribbon</a>: <a href="../../Ribbon/RibbonEnvironment.htm" class="MenuPath">Environment Tab</a>|Tool Couplings|XIL API/FDX</p>
+                    <p class="ToolAvailability" data-mc-conditions="BuildProcess.ToolAvailability"><a href="../../../Shared/FeatureAvailability.htm" class="red" title="Feature availabilty for your product">Valid&#160;for</a>:&#160;&#160;CANoe&#160;DE<a name="aanchor9276"></a><MadCap:concept term="SFCANoeDE" />&#160;&#160;•&#160;&#160;CANoe:lite&#160;DE<a name="aanchor9277"></a><MadCap:concept term="SFCANoeLiteDE" />&#160;&#160;•&#160;&#160;CANoe4SW&#160;DE<a name="aanchor9278"></a><MadCap:concept term="SFCANoe4SWDE" />&#160;&#160;•&#160;&#160;CANoe4SW:lite&#160;DE<a name="aanchor9279"></a><MadCap:concept term="SFCANoe4SWLiteDE" /></p>
+                    <p class="AutoSearchFilterConcepts"><a name="aanchor9280"></a>
+                        <MadCap:concept term="SFInterfaces" />
+                    </p>
+                    <p class="IndexConcept"><a name="kanchor2852"></a>
+                    </p>
+                </div>
+                <div>
+                    <p>The <span class="Product">ASAM XIL API</span> is a standard that specifies software interfaces for access to test systems. This API allows different test systems to be programmed in a standardized manner. Furthermore, investments in test scripts remain protected even when a change is made from one test system to another.</p>
+                    <p>The API separates the test automation tool (client) from the testbench (server). The client can program against this API and the server must implement the API. Vector supports both use cases.</p>
+                    <table style="width: 689px;border-spacing: 10px 0px;margin-left: 0;margin-right: auto;">
+                        <col data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family" />
+                        <col />
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <h2>Server Use Case</h2>
+                                    <p class="TableTextSmall">&#160;</p>
+                                </td>
+                                <td>
+                                    <h2>Client Use Case</h2>
+                                    <p class="TableTextSmall">&#160;</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="background-color: #565c5e;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;">
+                                    <p class="White">3rd Party Test Automation Tool</p>
+                                    <table style="width: 170px;border-left-style: solid;border-left-width: 2px;border-left-color: #ffffff;border-right-style: solid;border-right-width: 2px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 2px;border-top-color: #ffffff;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #ffffff;margin-left: 0;margin-right: auto;">
+                                        <col />
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <p class="White">Test Cases</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                                <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;">
+                                    <p class="White">Vector Test Automation Tool</p>
+                                    <table style="width: 170px;border-left-style: solid;border-left-width: 2px;border-left-color: #ffffff;border-right-style: solid;border-right-width: 2px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 2px;border-top-color: #ffffff;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #ffffff;margin-left: 0;margin-right: auto;">
+                                        <col />
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <p class="White">Test Cases</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p class="White">
+                                        <img src="../../../../Resources/vImages/vIconsFlat/UpDown_Icon32.png" />
+                                    </p>
+                                </td>
+                                <td>
+                                    <p class="White">
+                                        <img src="../../../../Resources/vImages/vIconsFlat/UpDown_Icon32.png" />
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="background-color: #565c5e;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;">
+                                    <p class="White">XIL API</p>
+                                    <p class="White">&#160;</p>
+                                </td>
+                                <td style="background-color: #565c5e;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;">
+                                    <p class="White">XIL API</p>
+                                    <p class="White">&#160;</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p class="White">
+                                        <img src="../../../../Resources/vImages/vIconsFlat/UpDown_Icon32.png" />
+                                    </p>
+                                </td>
+                                <td>
+                                    <p class="White">
+                                        <img src="../../../../Resources/vImages/vIconsFlat/UpDown_Icon32.png" />
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;">
+                                    <p class="White">Vector Test Bench</p>
+                                    <p class="White">&#160;</p>
+                                </td>
+                                <td style="background-color: #565c5e;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;">
+                                    <p class="White">3rd Party Test Bench</p>
+                                    <p class="White">&#160;</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">
+                    <h2 class="SectionMain">Server Use Case</h2>
+                    <h2 class="SectionSub">General</h2>
+                    <p>The following XIL API standard versions are supported by your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText>:</p>
+                    <ul>
+                        <li>XIL API 2.0.1:</li>
+                        <li class="Indent">Supported with version 8.5 - 15 SP2 (inclusive).</li>
+                        <li>XIL API 2.1.0:</li>
+                        <li class="Indent">Supported starting with version 11.0 SP3</li>
+                        <li>XIL API 2.2.0:</li>
+                        <li class="Indent">Supported starting with version 15 SP3</li>
+                    </ul>
+                    <h2 class="SectionSub">Function Overview</h2>
+                    <p>The following table provides an overview of which parts of the standard are available in which <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> version. Functions that are not available may be implemented in future versions:</p>
+                    <p>Your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> supports <span class="Product">ASAM XIL API</span> version 2.1.0. The following table provides an overview of the parts of the standard that are supported.</p>
+                    <div>
+                        <table style="margin-left: 0;margin-right: auto;caption-side: top;mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                            <col />
+                            <col />
+                            <col data-mc-conditions="Targets.CANoe-DE-Family" />
+                            <col data-mc-conditions="Targets.CANoe-DE-Family" />
+                            <col data-mc-conditions="Targets.CANoe-DE-Family" />
+                            <col data-mc-conditions="Targets.CANoe-DE-Family" />
+                            <thead>
+                                <tr>
+                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                        <p class="TableHead">&#160;</p>
+                                    </th>
+                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                        <p class="TableHead">&#160;</p>
+                                    </th>
+                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd" colspan="4">
+                                        <p class="TableBold" style="text-align: center;">Supported in</p>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                        <p class="TableHead">ASAM XIL API Port</p>
+                                    </th>
+                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Function of the Ports</p>
+                                    </th>
+                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                        <p class="TableHead">CANoe&#160;DE</p>
+                                    </th>
+                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                        <p class="TableHead">CANoe4SW&#160;DE</p>
+                                    </th>
+                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                        <p class="TableHead">CANoe:lite&#160;DE</p>
+                                    </th>
+                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                        <p class="TableHead">CANoe4SW:lite&#160;DE</p>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">MA Port</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Reading and writing of variables</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">✔</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">✔</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">✔</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">✔</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">MA Port</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Signal generators</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">✔</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">✔</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">✔</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">✔</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">MA Port</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Capturing</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">✔</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">✔</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">✔</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">✔</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Diagnostic Port</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Access diagnostic functionality of the ECUs</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">—</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">ECU M Port</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">—</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">ECU C Port</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">—</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">EES Port</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Electric error stimulation</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">✔</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">✔</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">—</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                        <p class="Table">Network Port</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                        <p class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                        <p class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                        <p class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                        <p class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                        <p class="Table">—</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="StartList">Information regarding the mode of functioning and commissioning of the respective ports can be found on the corresponding help page:</p>
+                    <ul>
+                        <li>
+                            <p class="Table"><a href="ASAMXILAPIModelAccessPort.htm">ASAM XIL API – Model Access  Port <span class="bold">MA Port</span></a>
+                            </p>
+                        </li>
+                        <li>
+                            <p class="Table"><a href="ASAMXILAPIEESPort.htm">ASAM XIL API – Electric Error Stimulation - <span class="bold">EES Port</span></a>
+                            </p>
+                        </li>
+                    </ul>
+                    <h2 class="SectionSub">Architecture</h2>
+                    <p>A Vector XIL test system with XIL API interface is structured as follows:</p>
+                    <div>
+                        <table style="width: 782px;border-spacing: 2px 5px;margin-left: 0;margin-right: auto;">
+                            <col />
+                            <col />
+                            <col />
+                            <col />
+                            <tbody>
+                                <tr>
+                                    <td colspan="2" style="background-color: #028fc3;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;">
+                                        <p class="White">Testing Application</p>
+                                    </td>
+                                    <td>
+                                        <p class="Table">&#160;</p>
+                                    </td>
+                                    <td>
+                                        <p class="Table">&#160;</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" style="background-color: #565c5e;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;">
+                                        <p class="White">ASAM XIL API Interfaces</p>
+                                    </td>
+                                    <td>
+                                        <p class="Table">&#160;</p>
+                                    </td>
+                                    <td>
+                                        <p class="Table">&#160;</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;">
+                                        <p class="White">Vector XIL API Implemetation for your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family,Targets.vTESTstudio">CANoe&#160;DE product</MadCap:conditionalText></p>
+                                    </td>
+                                    <td>
+                                        <p class="Table">
+                                            <img src="../../../../Resources/vImages/vIconsFlat/Back_Icon32.png" />
+                                        </p>
+                                    </td>
+                                    <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;">
+                                        <p class="White">Configuration Files</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;">
+                                        <p class="White">Vector <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family,Targets.vTESTstudio">CANoe&#160;DE product</MadCap:conditionalText></p>
+                                    </td>
+                                    <td>
+                                        <p class="Table">&#160;</p>
+                                    </td>
+                                    <td>
+                                        <p class="Table">&#160;</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;">
+                                        <p class="White">Vector Hardware</p>
+                                    </td>
+                                    <td style="background-color: #565c5e;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;">
+                                        <p class="White">3rd Party Hardware</p>
+                                    </td>
+                                    <td>
+                                        <p class="Table">&#160;</p>
+                                    </td>
+                                    <td>
+                                        <p class="Table">&#160;</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" style="background-color: #028fc3;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;">
+                                        <p class="White">System Under Test</p>
+                                    </td>
+                                    <td>
+                                        <p class="Table">&#160;</p>
+                                    </td>
+                                    <td>
+                                        <p class="Table">&#160;</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="StartList">It consists of the following components:</p>
+                    <ul>
+                        <li>A test application provided by the user.<br />This performs tests that are implemented against the official ASAM XIL API interfaces.</li>
+                        <li>The implementation of the XIL API interfaces provided by Vector.<br />This can be configured using simple configuration files.</li>
+                        <li>Vector <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText><br />That enables access to the hardware and provides comprehensive simulation possibilities.</li>
+                        <li>Hardware for interaction with the system to be tested.<br />Besides the Vector hardware, many interfaces of third-party providers are supported.</li>
+                        <li>The system to be tested.</li>
+                    </ul>
+                    <h2 class="SectionSub">XIL API Installation</h2>
+                    <p>The components of the XIL API consist of </p>
+                    <ul>
+                        <li>the ASAM AE XIL API standard assemblies form ASAM e.V.</li>
+                        <li>the XIL API Implementation for your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText>. This implementation is made available in the form of a .NET component by Vector Informatik GmbH. It contains all implementations of the XIL API ports currently supported by your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> (e.g., the Model Access port).</li>
+                    </ul>
+                    <p>With the execution of the Vector XIL API setup both components are installed.</p>
+                    <div>
+                        <h2>Installing the XIL API</h2>
+                    </div>
+                    <p>In order to use the XIL API implementation for your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText>, you need to install the required assemblies on your computer. To do so execute the setup: <a href="javascript:startDemoLoader('VectorCANoeXILAPI')" class="ExecuteLink">Start Setup</a></p>
+                    <p>During installation the following file will be created:</p>
+                    <p class="SyntaxIndent">C:\ProgramData\ASAM\XIL\Implementation\Vector.CANoe.imf</p>
+                    <p>This file is required by the XIL API test bench. It is used to locate and instantiate the XIL API at runtime.</p>
+                    <div>
+                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                            <col class="TableStyle-vTableSymbol-Column-Column1" />
+                            <col class="TableStyle-vTableSymbol-Column-Column2" />
+                            <tbody>
+                                <tr>
+                                    <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                        <p class="Table">
+                                            <img src="../../../../Resources/vImages/vCrossRef.png" style="width: 48px;height: 45px;" alt="Cross Reference" title="Cross Reference" />
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                        <p class="TableSymbolHead">Cross&#160;Reference</p>
+                                        <p class="Table">A detailed description of the XIL API interfaces is available as part of the XIL API standard and can be ordered directly from the official <a href="https://www.asam.net/" class="ExternalLink" target="_blank">ASAM website</a>.</p>
+                                        <p class="StartList">Information regarding the mode of functioning and commissioning of the respective ports can be found on the corresponding help page:</p>
+                                        <ul>
+                                            <li>
+                                                <p class="Table"><a href="ASAMXILAPIModelAccessPort.htm">ASAM XIL API – Model Access  Port <span class="bold">MA Port</span></a>
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p class="Table"><a href="ASAMXILAPIEESPort.htm">ASAM XIL API – Electric Error Stimulation - <span class="bold">EES Port</span></a>
+                                                </p>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <h2 class="SectionSub">Test Bench Initialization</h2>
+                    <p>XIL API test benches are instantiated by calling <span class="bold">ITestBench.CreateVendorSpecificTestbench</span>.<br></br>To create the <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> test bench you have to use the following parameters:</p>
+                    <ul>
+                        <li><span class="bold">vendorName</span>: must be set to <span class="bold">Vector</span></li>
+                        <li><span class="bold">productName</span>: can be either <span class="bold">&lt;product name&gt;32</span> or <span class="bold">&lt;product name&gt;64</span>.<br></br>This settings depends on what architecture your XIL API client application is using.<br></br><span class="bold">It does not correspond to the <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> version being used.</span></li>
+                        <li><span class="bold">productVersion</span>: the version of  the XIL API interface to use (<span class="bold">2.1.0</span> or <span class="bold">2.2.0</span>).</li>
+                    </ul>
+                    <h2 class="SectionSub">Backend Selection</h2>
+                    <p>Your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> offers two different backends for its XIL API implementation: <span class="bold">FDX</span> and <span class="bold">LightRPC</span>. You can choose between these backends implicitly via the port configuration files. Whenever a FDX configuration block is found in the file, FDX is used as the backend. If you omit the FDX configuration block, LightRPC will be used by default.</p>
+                    <div>
+                        <h2>LightRPC Backend</h2>
+                        <p>LightRPC is a proprietary network-based protocol. It allows for a fast data exchange between your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> and a client application. The main benefit of the LightRPC backend is that requires much less configuration effort compared to the FDX backend. You do not need to specify the exchanged variables and signals beforehand. All information will be retrieved automatically during the runtime.</p>
+                        <p>Using the LightRPC backend is recommended for most users. It is easy to set up and provides high data throughput and low latencies.</p>
+                    </div>
+                    <div>
+                        <h2>FDX Backend</h2>
+                        <p><a href="../FDXProtocol.htm" class="bold">CANoe FDX (Fast data eXchange)</a> is an open network protocol for fast data exchange with your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText>. The main benefit of the FDX backend is that it provides even higher data throughput than the LightRPC backend. It produces less communication overhead and can thus read/write more values per second. Also the FDX backend supports advanced data types (e.g. maps) that are not available when using the LightRPC backend.</p>
+                        <p>Using the FDX backend is recommended when you want to transfer huge amounts of data between your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> and your XIL API client.</p>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="SectionMain"><a name="BMXILBinding" id="BMXILBinding"></a>Client Use Case (XIL Binding)</h2>
+                    <h2 class="SectionSub">General</h2>
+                    <p>There are two ways in which you can connect third-party testbenches via the XIL API interface.</p>
+                    <ul>
+                        <li>For use cases that only use the MA port to read and write variables, there is a solution based on the so-called <span class="bold">XIL Binding</span>. This solution is described here.</li>
+                        <li>The C# ASAM XIL standard assemblies can be used directly in .NET based application models, network nodes or via .NET code in test units. Here you can use all ports of the interface. You can find more information on this in the official ASAM XIL documentation, which also contains code examples for C#.</li>
+                    </ul>
+                    <h2 class="SectionSub">Requirements</h2>
+                    <p>Make sure that the following conditions are met:</p>
+                    <ul>
+                        <li>The XIL API Server used supports ASAM XIL API version 2.1.0 and has been compiled for the .NET Framework.</li>
+                        <li>The XIL API Server supports the ASAM XIL Test Bench API for the MA port.</li>
+                        <li>The IMF file of the XIL API Server is available.</li>
+                        <li>The ASAM XIL Standard Assembly Interfaces are installed either in the Global Assembly Cache or in the ASAM XIL standard directory on the client system.</li>
+                        <li>The server-specific configuration file for the MA port is available.</li>
+                    </ul>
+                    <h2 class="SectionSub">Technical Concept</h2>
+                    <p>In order to implement convenient read and write access to testbench variables, the variables are modeled using abstract variables, so-called <a href="../../CommunicationConcept/CCDistributedObjects.htm">distributed objects</a> (DO). The modeling is initially independent of the transmission channel, but you can set this via a <a href="../../CommunicationConcept/CCDistributedObjects.htm#BMBindings">so-called binding</a>. The binding is set to <span class="bold">XIL</span> here. Modeling is carried out in the programming language-independent description language <a href="../../../vCDL/vCDLStartpage.htm">vCDL</a>. Not only the testbench variables and the binding are described in the vCDL file, but also all XIL-specific settings, such as configuration files and manufacturer name. You can use the command line tool <span class="Product">xil-vcdl-generator</span> to read testbench variables and generate a suitable vCDL file.</p>
+                    <p>
+                        <img src="../../../../Resources/Images/CANoeCANalyzer/ASAMXILAPI/ASAMxilAPITechnicalConcept_668x343.png" style="width: 668;height: 343;" />
+                    </p>
+                    <h2 class="SectionSub">vCDL Modeling</h2>
+                    <p>The vCDL file is the central element in XIL binding. As soon as you have created it and loaded it in the <a href="../../Windows/CommunicationSetup/CommunicationSetup.htm">Communication Setup</a>, you can stimulate testbench variables via DO members and read them out cyclically.</p>
+                    <h2>	XIL-Client Modeling with Distributed Objects</h2>
+                    <div>
+                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                            <col class="TableStyle-vTableSymbol-Column-Column1" />
+                            <col class="TableStyle-vTableSymbol-Column-Column2" />
+                            <tbody>
+                                <tr>
+                                    <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                        <p class="Table">
+                                            <img src="../../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                        <p class="TableSymbolHead">Example</p>
+                                        <p class="Table">Work with virtual networks to encapsulate all shared settings and inherit them on to the individual interfaces.</p>
+                                        <p class="TableSourceCode">version 2.0;<br />import module "XIL";<br />namespace RoomTemperatureControl<br />{<br />&#160;&#160;[Binding="XIL"]<br />&#160;&#160;[XILBinding::VendorName="XILTestBenchVendor"]<br />&#160;&#160;[XILBinding::ProductName="XILTestbench"]<br />&#160;&#160;[XILBinding::ProductVersion="1.2.3"]<br />&#160;&#160;[XILBinding::MAPortConfigPath="C:/path/to/my/PortConfig.xml"]<br />&#160;&#160;[XILBinding::SampleTimeMs=100]<br />&#160;&#160;[XILBinding::MAPortName="MAPort"]<br />&#160;&#160;[XILBinding::ImplementationManifestFolder="C:/ProgramData/ASAM/XIL/Implementation"]<br />&#160;&#160;virtualnetwork MAPortNetwork;<br />&#160;&#160;[VirtualNetwork=MAPortNetwork]<br />&#160;&#160;interface IHeating<br />&#160;&#160;{<br />&#160;&#160;&#160;&#160;[XILBinding::VariableName="RoomTemperatureControl/Heating.State"]<br />&#160;&#160;&#160;&#160;consumed data uint64 State;<br />&#160;&#160;}<br />&#160;&#160;IHeating Heating;<br />&#160;&#160;[VirtualNetwork=MAPortNetwork]<br />&#160;&#160;interface ISensor<br />&#160;&#160;{<br />&#160;&#160;&#160;&#160;[XILBinding::VariableName="RoomTemperatureControl/Sensor1.Temperature"]<br />&#160;&#160;&#160;&#160;provided data double Temperature;<br />&#160;&#160;}<br />&#160;&#160;ISensor Sensor;<br />}</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p>The elements used for modeling are listed in the following table:</p>
+                    <table style="mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                    <p class="TableHead">Name</p>
+                                </th>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                    <p class="TableHead">Possible Values</p>
+                                </th>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                    <p class="TableHead">Description</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Member types</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Data member</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Only this member type is supported.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Data types</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">uint, int, double, float, string, array, list, bool</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">The vCDL data types are mapped to the corresponding XIL data types:</p>
+                                    <div>
+                                        <table style="mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                                            <col />
+                                            <col />
+                                            <thead>
+                                                <tr>
+                                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                                        <p class="TableHead">vCDL Data Type</p>
+                                                    </th>
+                                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                                        <p class="TableHead">XIL Data Type</p>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                        <p class="Table">bool</p>
+                                                    </td>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                        <p class="Table">Boolean</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                        <p class="Table">string</p>
+                                                    </td>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                        <p class="Table">String</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                        <p class="Table">int64</p>
+                                                    </td>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                        <p class="Table">Int</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                        <p class="Table">uint64</p>
+                                                    </td>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                        <p class="Table">UInt</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                        <p class="Table">double</p>
+                                                    </td>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                        <p class="Table">Float</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                        <p class="Table">list&lt;bool&gt; (or array&lt;bool,x&gt;)</p>
+                                                    </td>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                        <p class="Table">BooleanVector</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                        <p class="Table">list&lt;string&gt; (or array&lt;string,x&gt;)</p>
+                                                    </td>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                        <p class="Table">StringVector</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                        <p class="Table">list&lt;int64&gt; (or array&lt;int64,x&gt;)</p>
+                                                    </td>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                        <p class="Table">IntVector</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                        <p class="Table">list&lt;uint64&gt; (or array&lt;uint64,x&gt;)</p>
+                                                    </td>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                        <p class="Table">UIntVector</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                        <p class="Table">list&lt;double&gt; (or array&lt;double,x&gt;)</p>
+                                                    </td>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                        <p class="Table">FloatVector</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                        <p class="Table">list&lt;list&lt;bool&gt;&gt; (or array&lt;array&lt;bool,x&gt;,y&gt;)</p>
+                                                    </td>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                        <p class="Table">BooleanMatrix</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                        <p class="Table">list&lt;list&lt;string&gt;&gt; (or
+												array&lt;array&lt;string,x&gt;,y&gt;)</p>
+                                                    </td>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                        <p class="Table">StringMatrix</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                        <p class="Table">list&lt;list&lt;int64&gt;&gt; (or
+												array&lt;array&lt;int64,x&gt;,y&gt;)</p>
+                                                    </td>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                        <p class="Table">IntMatrix</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                        <p class="Table">list&lt;list&lt;uint64&gt;&gt; (or
+												array&lt;array&lt;uint64,x&gt;,y&gt;)</p>
+                                                    </td>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                        <p class="Table">UIntMatrix</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                                        <p class="Table">list&lt;list&lt;double&gt;&gt; (or
+												array&lt;array&lt;double,x&gt;,y&gt;)</p>
+                                                    </td>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                                        <p class="Table">FloatMatrix</p>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Attribut</p>
+                                    <p class="Table">[Binding=&lt;0&gt;]</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">XIL</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Binds members via the XIL binding.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Attribut</p>
+                                    <p class="Table">[XILBinding::VendorName=&lt;0&gt;]</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">String</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Manufacturer name of the testbench implementation.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Attribut</p>
+                                    <p class="Table">[XILBinding::ProductName=&lt;0&gt;]</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">String</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Product name of the testbench implementation.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Attribut</p>
+                                    <p class="Table">[XILBinding::ProductVersion=&lt;0&gt;]</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">String</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Version of the testbench implementation.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Attribut</p>
+                                    <p class="Table">[XILBinding::ImplementationManifestFolder=&lt;0&gt;]</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">String</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Folder path to the IMF files; absolute and relative paths are permitted (relative <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">to the CFG file</MadCap:conditionalText>).</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Attribut</p>
+                                    <p class="Table">[XILBinding::MAPortName=&lt;0&gt;]</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">String</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Name of the MA port.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Attribut</p>
+                                    <p class="Table">[XILBinding::MAPortConfigPath=&lt;0&gt;]</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">String</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Path to the MA port configuration file; absolute and relative paths are permitted (relative <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">to the CFG file</MadCap:conditionalText>).</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Attribut</p>
+                                    <p class="Table">[XILBinding::ForceConfig=&lt;0&gt;]</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Bool</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Defines the behavior if the port has already been configured (see <a href="https://www.asam.net/standards/detail/xil/" target="_blank" class="ExternalLink">Programmers Guide</a>).</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Attribut</p>
+                                    <p class="Table">[XILBinding::SampleTimeMs=&lt;0&gt;]</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Int64</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Update interval for consumed data member.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="Table">Attribut</p>
+                                    <p class="Table">[XILBinding::VariableName=&lt;0&gt;]</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="Table">String</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                    <p class="Table">Name of the testbench variable assigned to the DO data member.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h2>Generating the vCDL File via the xil-vcdl-generator</h2>
+                    <p>The command line tool <span class="Product">xil-vcdl-generator</span> uses the ASAM XIL MA port to read out all testbench variables and generate the corresponding vCDL file. All settings can be made in a configuration file. The configuration file has the extension <span class="SourceCode">.xil-vcdl.yaml</span>.</p>
+                    <h2>	Configuration File</h2>
+                    <div>
+                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                            <col class="TableStyle-vTableSymbol-Column-Column1" />
+                            <col class="TableStyle-vTableSymbol-Column-Column2" />
+                            <tbody>
+                                <tr>
+                                    <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                        <p class="Table">
+                                            <img src="../../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                        <p class="TableSymbolHead">Example of minimal configuration file (*.xil-vcdl.yaml)</p>
+                                        <p class="Table">The following example shows a simple configuration file in which all testbench variables are read and a corresponding vCDL file is generated.</p>
+                                        <p class="TableSourceCode">version: "1.0.0"<br />testbench:<br />&#160;&#160;vendor-name: " XILTestBenchVendor"<br />&#160;&#160;product-name: " XILTestBench"<br />&#160;&#160;product-version: "1.2.3"<br />ma-port:<br />&#160;&#160;config-file-path: "path/to/my/PortConfig.xml"</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <h2>Overview of all required and optional keys</h2>
+                    <div class="Indent">
+                        <h2>Structure</h2>
+                        <p class="Table"><span class="bold">version</span>: 1.0.0</p>
+                        <p class="Table"><span class="bold">general-settings</span>:</p>
+                        <p class="Table">&#160;&#160;- …<br /><span class="bold">testbench</span>:</p>
+                        <p class="Table">&#160;&#160;- ...<br /><span class="bold">ma-por</span>t:</p>
+                        <p class="Table">&#160;&#160;- …<br /><span class="bold">variables</span>:</p>
+                        <p class="Table">&#160;&#160;- …</p>
+                    </div>
+                    <p>You can find a schema description here: <span class="SourceCode">&lt;Installation directory&gt;\Exec64\Schemas\xil-vcdl.yaml-schemas</span></p>
+                    <div>
+                        <table style="mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                        <p>Key</p>
+                                    </th>
+                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                        <p>Standard</p>
+                                    </th>
+                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                        <p>Description</p>
+                                    </th>
+                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                        <p>&#160;</p>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd" colspan="4" style="background-color: #f0f5f5;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #909090;">
+                                        <p class="TableBold">version (mandatory)</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">&#160;</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">&#160;</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">&#160;</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Mandatory</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd" colspan="4" style="background-color: #f0f5f5;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #909090;">
+                                        <p class="TableBold">general-settings (optional)</p>
+                                        <p class="Table">Lists global and general settings and is a structure of key-value pairs.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableSyntax">root-namespace-name</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">&lt;MA Port Name&gt;</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Name of the generated root namespace.</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Optional</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableSyntax">variable-sample-time-ms</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">100</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Update interval for readable testbench variables.</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Optional</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd" colspan="4" style="background-color: #f0f5f5;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #909090;">
+                                        <p class="TableBold">testbench (mandatory)</p>
+                                        <p>Lists settings for the testbench and is a structure of key-value pairs.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableSyntax">vendor-name</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Manufacturer name of the testbench implementation.</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Mandatory</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableSyntax">product-name</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Product name of the testbench implementation.</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Mandatory</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableSyntax">product-version</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Version of the testbench implementation.</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Mandatory</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableSyntax">implementation-manifest-folder</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">%PROGRAMDATA%\ASAM\XIL\Implementation</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Folder path to the IMF files; absolute and relative paths are permitted (relative to *.xil-vcdl.yaml).</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Optional</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableSyntax">runtime-implementation-manifest-folder</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Folder path to the IMF files in the generated vCDL file, i.e. search path at runtime (relative <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">to the CFG file</MadCap:conditionalText>).</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Optional</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd" colspan="4" style="background-color: #f0f5f5;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #909090;">
+                                        <p class="TableBold">ma-port (mandatory)</p>
+                                        <p class="Table">Lists settings for the MA port and is a structure of key-value pairs.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableSyntax">config-file-path</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Path to the MA port configuration file; absolute and relative paths are permitted (relative to *.xil-vcdl.yaml).</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Mandatory</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableSyntax">runtime-config-file-path</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Path to the MA port configuration file in the generated vCDL file, i.e. search path at runtime (relative <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">to the CFG file</MadCap:conditionalText>).</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Optional</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableSyntax">name</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">MAPort</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Name of the MA port.</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Optional</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableSyntax">force-config</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">false</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Defines the behavior if the port has already been configured (see <a href="https://www.asam.net/standards/detail/xil/" target="_blank" class="ExternalLink">Programmers Guide</a>)</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Optional</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd" colspan="4" style="background-color: #f0f5f5;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #909090;">
+                                        <p class="TableBold">variables (optional)</p>
+                                        <p class="Table">Can be used if only a subset of testbench variables is required and/or the structuring (namespace, interface, object) of the generated DOs is to be adapted. <span class="SourceCode">variables</span> is a list of structures that contain key-value pairs. If no structures are defined, all testbench variables are processed.</p>
+                                        <p class="Table">You can use the <span class="SourceCode">filter</span> key to select specific testbench variables that are to be filtered during generation. You can define what the structure or naming (namespace, DO, member) should look like for the DOs generated for this purpose. As soon as you have defined a filter, all testbench variables that do not correspond to the filter are skipped. The first matching filter and its mapping rules are always applied.</p>
+                                        <p class="Table">The mapping rule from testbench variables to DOs is carried out using the keys <span class="SourceCode">format</span>, <span class="SourceCode">nested-namespaces</span> and <span class="SourceCode">communication-direction</span>, which always belong to a filter.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableSyntax">filter</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">All testbench variables</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Regular expression (RegEx) to make a selection of testbench variables.</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Optional</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableSyntax">format</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">%m</p>
+                                        <p class="Table">A default namespace and default DO object are created and the complete testbench variable name is used as the member name.</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Format string that determines the resulting DO structure.</p>
+                                        <ul>
+                                            <li><span class="SourceCode">&lt;characters to be skipped&gt;%&lt;number of separators&gt;n&lt;separator&gt;</span>
+                                                <br />Namespace Name (optional)</li>
+                                            <li><span class="SourceCode">&lt;characters to be skipped&gt;%&lt;number of separators&gt;n&lt;separator&gt;</span>
+                                                <br />Object/interface name(optional)</li>
+                                            <li><span class="SourceCode">&lt;characters to be skipped&gt;%m</span>
+                                                <br />Member name (mandatory)</li>
+                                        </ul>
+                                        <p class="Table">The separators can consist of one or more characters.</p>
+                                        <p class="Table">The namespace separator can only consist of one character, is optional and is not compatible with <span class="SourceCode">&lt;number of separators&gt;</span>. Here is <span class="SourceCode">&lt;separator&gt;</span>=<span class="SourceCode">&lt;Namespace-separator&gt;</span></p>
+                                        <div>
+                                            <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                                                <col class="TableStyle-vTableSymbol-Column-Column1" />
+                                                <col class="TableStyle-vTableSymbol-Column-Column2" />
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                                            <p class="Table">
+                                                                <img src="../../../../Resources/vImages/vInfo.png" style="width: 48px;height: 45px;" title="Note" alt="Note" />
+                                                            </p>
+                                                        </td>
+                                                        <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                                            <p class="TableSymbolHead">Note</p>
+                                                            <p class="Table">vCDL does not support special characters, these are removed by the generator.</p>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Optional</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableSyntax">namespaces</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><span class="SourceCode">namespaces</span> is a structure and contains the elements <span class="SourceCode">nested</span> and <span class="SourceCode">separator</span>.</p>
+                                        <ul>
+                                            <li><span class="SourceCode">nested</span>: Defines whether nested namespaces should be created or not. The default value is <span class="bold">true</span>.</li>
+                                            <li><span class="SourceCode">separator</span>: If <span class="SourceCode">nested</span> is set to <span class="bold">true</span>, a separator can also be specified to split the namespaces. If no separator is specified, the separator of the namespace format string is used.</li>
+                                        </ul>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Optional</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                        <p class="TableSyntax">communication-direction</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                        <p class="Table">provided</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                        <p class="Table">Defines the <a href="../../CommunicationConcept/CCDistributedObjects.htm#BMCommunicationDirection">DO communication direction</a> (consumed or provided), if the testbench variable is marked as readable and writable.</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                        <p class="Table">Optional</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div>
+                            <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                                <col class="TableStyle-vTableSymbol-Column-Column1" />
+                                <col class="TableStyle-vTableSymbol-Column-Column2" />
+                                <tbody>
+                                    <tr>
+                                        <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                            <p class="Table">
+                                                <img src="../../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                            </p>
+                                        </td>
+                                        <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                            <p class="TableSymbolHead">Example of possible filter/format string use cases</p>
+                                            <table style="mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');border-left-style: solid;border-left-width: 1px;border-left-color: #909090;border-right-style: solid;border-right-width: 1px;border-right-color: #909090;border-top-style: solid;border-top-width: 1px;border-top-color: #909090;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #909090;margin-left: 0;margin-right: auto;" class="TableStyle_vTable" cellspacing="0">
+                                                <col />
+                                                <col />
+                                                <col />
+                                                <col />
+                                                <thead>
+                                                    <tr>
+                                                        <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                                            <p class="TableHead">Testbench Variable Name</p>
+                                                        </th>
+                                                        <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                                            <p class="TableHead">Filter String</p>
+                                                        </th>
+                                                        <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                                            <p class="TableHead">Format String</p>
+                                                        </th>
+                                                        <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                                            <p class="TableHead">Resulting vCDL Structur</p>
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                            <p class="TableSyntax">Car/Seat.xPos</p>
+                                                        </td>
+                                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                            <p class="TableSyntax">Car</p>
+                                                        </td>
+                                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                            <p class="TableSyntax">%n/%o.%m</p>
+                                                        </td>
+                                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                            <p class="Table">Namespace: Car</p>
+                                                            <p class="Table">Object: Seat</p>
+                                                            <p class="Table">Interface: ISeat</p>
+                                                            <p class="Table">Member: xPos</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                            <p class="TableSyntax">Bus:Upper/Deck/Seat/xPos</p>
+                                                        </td>
+                                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                            <p class="TableSyntax">Bus:</p>
+                                                        </td>
+                                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                            <p class="TableSyntax">%n:%o/%m</p>
+                                                        </td>
+                                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                            <p class="Table">Namespace: Bus</p>
+                                                            <p class="Table">Object: Upper_Deck_Seat</p>
+                                                            <p class="Table">Interface: IUpper_Deck_Seat</p>
+                                                            <p class="Table">Member: xPos</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                            <p class="TableSyntax">Bus/Lower/Deck/Seat/xPos</p>
+                                                        </td>
+                                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                            <p class="TableSyntax">Lower</p>
+                                                        </td>
+                                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                            <p class="TableSyntax">%n/%o/%m  </p>
+                                                        </td>
+                                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                            <p class="Table">Namespace: Bus_Lower_Deck</p>
+                                                            <p class="Table">Object: Seat</p>
+                                                            <p class="Table">Interface: ISeat</p>
+                                                            <p class="Table">Member: xPos</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                            <p class="TableSyntax">Bus/Upper/Deck/Seat/xPos</p>
+                                                        </td>
+                                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                            <p class="TableSyntax">Bus/Upper</p>
+                                                        </td>
+                                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                            <p class="TableSyntax">%2n/%o/%m</p>
+                                                        </td>
+                                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                            <p class="Table">Namespace: Bus_Upper</p>
+                                                            <p class="Table">Object: Deck_Seat</p>
+                                                            <p class="Table">Interface: IDeck_Seat</p>
+                                                            <p class="Table">Member: xPos</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                                            <p class="TableSyntax">Company:Bus/Upper/Deck/Seat/xPos</p>
+                                                        </td>
+                                                        <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                                            <p class="TableSyntax">Company</p>
+                                                        </td>
+                                                        <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                                            <p class="TableSyntax">Company:%2n/%o/%m</p>
+                                                        </td>
+                                                        <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                                            <p class="Table">Namespace: Bus_Upper</p>
+                                                            <p class="Table">Object: Deck_Seat</p>
+                                                            <p class="Table">Interface: IDeck_Seat</p>
+                                                            <p class="Table">Member: xPos</p>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div>
+                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                            <col class="TableStyle-vTableSymbol-Column-Column1" />
+                            <col class="TableStyle-vTableSymbol-Column-Column2" />
+                            <tbody>
+                                <tr>
+                                    <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                        <p class="Table">
+                                            <img src="../../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                        <p class="TableSymbolHead">Example of a complex configuration file (*.xil-vcdl.yaml)</p>
+                                        <p class="Table">The following example shows a more complex configuration file in which only certain testbench variables are generated. In addition, some default values are overwritten.</p>
+                                        <p class="TableSourceCode">version: 1.0.0<br />general-settings:<br />&#160;&#160;root-namespace-name: "CustomNamespace"<br />&#160;&#160;variable-sample-time-ms: 250<br />testbench:<br />&#160;&#160;vendor-name: "XILTestBenchVendor"<br />&#160;&#160;product-name: "XILTestBench"<br />&#160;&#160;product-version : "1.2.3"<br />&#160;&#160;implementation-manifest-folder : "."<br />ma-port :<br />&#160;&#160;config-file-path : "MAPortConfig.xml"<br />&#160;&#160;name: "MAPort123"<br />&#160;&#160;runtime-config-file-path: "C:/dev/MAPortConfig.xml"<br />&#160;&#160;force-config: true<br />variables:<br />&#160;&#160;- filter: "Seat"<br />&#160;&#160;&#160;&#160;format: "n/%o.%m"<br />&#160;&#160;- filter: "Engine"<br />&#160;&#160;&#160;&#160;nested-namespaces: false<br />&#160;&#160;&#160;&#160;communication-direction: consumed<br />&#160;&#160;- filter: "."<br />&#160;&#160;&#160;&#160;format: "%n/%o.%m"</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <h2>Command xil-vcdl-generator</h2>
+                    <p><span class="SourceCode">xil-vcdl-generator &lt;config file path&gt; [options]</span>
+                    </p>
+                    <h2>Available Arguments and CLI Options for the xil-vcdl-generator</h2>
+                    <table style="mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                    <p class="TableHead">Arguments</p>
+                                </th>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                    <p class="TableHead">Default</p>
+                                </th>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                    <p class="TableHead">Description</p>
+                                </th>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                    <p class="TableHead">&#160;</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="TableSyntax">config file path</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="Table">—</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="Table">Path to the configuration file of the generator; absolute and relative paths are permitted.</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                    <p class="Table">Mandatory</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table style="mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                    <p class="TableHead">Options</p>
+                                </th>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                    <p class="TableHead">Default</p>
+                                </th>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                    <p class="TableHead">Description</p>
+                                </th>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                    <p class="TableHead">&#160;</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="TableSyntax">-o [--output-file-path]</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">&lt;working directory&gt;/&lt;MAPort name&gt;.vcdl</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Output directory and name for the vCDL file.</p>
+                                    <p class="Table">Only one vCDL file is generated per call.</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Optional</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="TableSyntax">-v [--verbosity-level]</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">2</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Information level of the command line output:</p>
+                                    <ul>
+                                        <li>   0: Only errors</li>
+                                        <li>1: Errors and warnings</li>
+                                        <li>  2: Additional status information</li>
+                                        <li>3: Additional debug information</li>
+                                    </ul>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Optional</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="TableSyntax">-l [--list-variables]</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">—</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Displays all available testbench variables with data type and read/write flag.</p>
+                                    <p class="Table">It is still necessary to specify the configuration file.</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Optional</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="TableSyntax">--version</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">—</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Displays the version of the command line tool.</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Optional</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="TableSyntax">--help</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="Table">—</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="Table">Displays the help of the command line tool.</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                    <p class="Table">Optional</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h2>	Exit Codes</h2>
+                    <table style="mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                    <p class="TableHead">Exit Code</p>
+                                </th>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                    <p class="TableHead">Description</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">0</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">The vCDL file was successfully generated.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="Table">1</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                    <p class="Table">The vCDL file could not be generated due to an error (see command line output).</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="LinkList">&#160;</p>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="FooterWhite">
+                <table class="FooterWhite" style="border-collapse: collapse;margin-left: auto;margin-right: auto;">
+                    <col style="width: 70px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col style="width: 16px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="buttons popup-container clearfix topicToolbarProxy topicToolbarProxyFooter _Skins_HTML5TopicToolbar mc-component nocontent">
+                                    <div class="button-group-container-left">
+                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo"><a href="../../../Shared/HowToUseOnlineHelp.htm" title="Tips for using the help" alt="Tips for using the help"><img src="../../../../Resources/vImages/vBackstage/vHelpInfo.png" /></a>
+                                </p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo" style="text-align: right;"><span class="mc-variable Vector.BuildTime variable">2024-04-8T20:56:42</span>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <table style="width: 100%;border-collapse: separate;border-spacing: 3px 0px;margin-left: auto;margin-right: auto;caption-side: top;">
+                <col />
+                <col />
+                <col />
+                <col data-mc-conditions="BuildProcess.HTML5Link" />
+                <tbody>
+                    <tr>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;">
+                            <p class="vec_Footer">©&#160;Vector Informatik GmbH</p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;text-align: right;">
+                            <p class="vec_FooterBold">
+                                <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE&#160;Product Families</MadCap:conditionalText> Version <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.VectorTestUnitRunner">18</MadCap:conditionalText></p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="../../../Shared/ContactCopyrightLicense.htm" class="vec_Footer MCXref xref xrefvec_Footer">Contact/Copyright/License</a>
+                            </p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="https://www.vector.com/int/en/company/get-info/privacy-policy/" target="_blank" class="vec_Footer">Data Privacy Notice</a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

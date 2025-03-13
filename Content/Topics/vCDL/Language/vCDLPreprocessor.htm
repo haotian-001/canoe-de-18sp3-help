@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="CANoeDEFamily.xml" data-mc-path-to-help-system="../../../../" data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../Skins/Favicons/favicon-16x16.png" /><title>Preprocessor (vCDL 1.4)</title>
+        <link href="../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Resources/Stylesheets/vTableMasterPageHeader.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../Resources/Stylesheets/vStylesheet.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../Resources/Stylesheets/vTable.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapGlobal.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapDom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapUtilities.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapXhr.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTextEffects.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSlideshow.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMessageBus.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMessageBus.CrossFrame.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapDefault.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMediaQueries.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAccessibility.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapHelpSystem.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAliasFile.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopicFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapFeedbackHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSkinHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.Breadcrumbs.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.MiniToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.SideMenu.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapIndex.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapGlossary.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapParser.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSearch.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapNavigateTopics.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapLms.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapELearning.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopic.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMicroContentComponent.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSearchHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopicElements.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTriPane.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/jscript" src="../../../Resources/vScripts/SyntaxHighlighting.js">
+        </script>
+        <script type="text/jscript" src="../../../Resources/vScripts/TabSwitch.js">
+        </script>
+        <script type="text/javascript" src="../../../Resources/vScripts/Vector.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../../CANoeDEFamily.htm#Topics/vCDL/Language/vCDLPreprocessor.htm">Open topic with navigation</a>
+        </p>
+        <div class="Body">
+            <div role="main" id="mc-main-content">
+                <div>
+                    <p class="StructurePath"><a href="../../CANoeCANalyzer/CANoeDEFamily.htm" class="StructurePath" data-mc-conditions="Targets.CANoe-DE-Family"><img src="../../../Resources/vImages/vToolIcons/CANoeDEFamily_Icon16_15x15.png" alt="" style="width: 15;height: 15;" />&#160;CANoe&#160;DE&#160;Product&#160;Families</a> » <a href="../vCDLStartpage.htm" class="StructurePath">vCDL</a> » vCDL 1.4 (deprecated) » <a href="vCDLLanguage.htm" class="StructurePath">Language</a> » Preprocessor</p>
+                    <h1>Preprocessor</h1>
+                    <p class="MenuPath">&#160;</p>
+                    <p class="ToolAvailability" data-mc-conditions="BuildProcess.ToolAvailability"><a href="../../Shared/FeatureAvailability.htm" class="red" title="Feature availabilty for your product">Valid&#160;for</a>:&#160;&#160;CANoe&#160;DE<a name="aanchor25874"></a><MadCap:concept term="SFCANoeDE" />&#160;&#160;•&#160;&#160;CANoe:lite&#160;DE<a name="aanchor25875"></a><MadCap:concept term="SFCANoeLiteDE" />&#160;&#160;•&#160;&#160;CANoe4SW&#160;DE<a name="aanchor25876"></a><MadCap:concept term="SFCANoe4SWDE" />&#160;&#160;•&#160;&#160;CANoe4SW:lite&#160;DE<a name="aanchor25877"></a><MadCap:concept term="SFCANoe4SWLiteDE" /></p>
+                    <p class="AutoSearchFilterConcepts"><a name="aanchor25878"></a>
+                        <MadCap:concept term="SFvCDL" />
+                    </p>
+                    <p class="IndexConcept"><a name="kanchor8506"></a>
+                    </p>
+                </div>
+                <p>vCDL comes with an integrated preprocessor like those used in C/C++ and C#, but with a reduced feature set consisting of conditional parsing, regions, and pragmas. It does not support macros and include directives. However, the latter are supported through the import statements in vCDL. Every preprocessor directive starts with the #-symbol followed by the name of the directive. Any whitespace may  precede the directive , e.g. for indentation purposes. As a result, a single line can contain only a single directive. As its name suggests the preprocessor is executed prior to the vCDL parser. Thus, preprocessor directives are not restricted to any syntactic vCDL structures like scopes and statements. It is even possible to break block comments with preprocessor directives. However, preprocessor constructs themselves must be properly nested, e.g. a region starting inside a conditional scope may not expand outside this scope. The introductory example shows some practical use cases for preprocessor directives.</p>
+                <p class="SourceCode"><span class="CodeAttributeKey_Namespace">#pragma encoding UTF-7<br /><br />#define CANOE_VERSION 15<br />#define DEBUG<br /><br />#if CANOE_VERSION == 15</span>
+                    <br /><span class="CodeKeyword">version</span> <span class="CodeNumericalLiteral">1</span>.<span class="CodeNumericalLiteral">4</span>;<br /><span class="CodeAttributeKey_Namespace">#elif CANOE_VERSION == 14</span><br /><span class="CodeKeyword">version</span> <span class="CodeNumericalLiteral">1</span>.<span class="CodeNumericalLiteral">3</span>;<br /><span class="CodeAttributeKey_Namespace">#else</span><br /><span class="CodeKeyword">version</span> <span class="CodeNumericalLiteral">1</span>.<span class="CodeNumericalLiteral">2</span>;<br /><span class="CodeAttributeKey_Namespace">#endif</span><br /><br /><span class="CodeKeyword">namespace</span> Content<br />{<br />&#160;&#160;<span class="CodeComment">// Regions can be collapsed in the editor</span><br />&#160;&#160;<span class="CodeAttributeKey_Namespace">#region Data Types</span><br /><br />&#160;&#160;<span class="CodeKeyword">typedef</span> IntType&#160;&#160;&#160;= <span class="CodeDataType">int16</span>;<br />&#160;&#160;<span class="CodeKeyword">typedef</span> FloatType&#160;= <span class="CodeDataType">float</span>;<br /><br />&#160;&#160;<span class="CodeAttributeKey_Namespace">#endregion</span><br /><br />&#160;&#160;<span class="CodeKeyword">interface</span> DOInterface<br />&#160;&#160;{<br />&#160;&#160;&#160;&#160;<span class="CodeKeyword">provided data</span> IntType Member;<br />&#160;&#160;}<br />}</p>
+                <h2 class="SectionMain">Conditional Parsing</h2>
+                <p>Conditional parsing can be used to activate or deactivate portions of the code based on previously defined constants. Those constants must be defined within the same file as they are used. They can then be used directly or as part of more complex expressions. If constants are not valid throughout the whole file, they can be undefined again. In contrast to the actual vCDL language where several objects like data types can be defined anywhere to become usable, the preprocessor works sequentially on the file starting at the first line  . Thus, constants need to be defined prior to their first usage. The following table gives an overview of the preprocessor directives that can be used to control parsing.</p>
+                <div>
+                    <table style="mc-table-style: url('../../../Resources/Stylesheets/vTable.css');margin-left: 0;margin-right: auto;" class="TableStyle_vTable" cellspacing="0">
+                        <col class="TableStyle-vTable-Column-Column1" />
+                        <col class="TableStyle-vTable-Column-Column1" />
+                        <col class="TableStyle-vTable-Column-Column1" />
+                        <thead>
+                            <tr class="TableStyle-vTable-Head-Header1">
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                    <p class="TableHead">Directive</p>
+                                </th>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                    <p class="TableHead">Example</p>
+                                </th>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                    <p class="TableHead">Description</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><span class="CodeAttributeKey_Namespace">#define</span>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><span class="CodeAttributeKey_Namespace">#define CANOE_VERSION 15
+</span>
+                                    </p>
+                                    <p class="Table"><span class="CodeAttributeKey_Namespace">#define DEBUG 
+</span>
+                                    </p>
+                                    <p class="Table"><span class="CodeAttributeKey_Namespace">#define CONST2 (CONST1 + 1)
+</span>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Defines a new constant and sets it to a specific value or 0 if no value is given.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><span class="CodeAttributeKey_Namespace">#undef</span>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><span class="CodeAttributeKey_Namespace">#undef CANOE_VERSION</span>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Removes a constant’s definition if it has been defined earlier, otherwise it has no effect.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><span class="CodeAttributeKey_Namespace">#if</span>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><span class="CodeAttributeKey_Namespace">#if CANOE_VERSION &gt; 13</span><span class="CodeAttributeKey_Namespace">#if DEBUG || RELEASE</span>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Opens a new conditional scope. If the condition evaluates to true, the following code is passed to the vCDL parser. Otherwise subsequent conditions are evaluated (see below).</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><span class="CodeAttributeKey_Namespace">#ifdef</span>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><span class="CodeAttributeKey_Namespace">#ifdef DEBUG</span>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Shortcut for <span class="CodeAttributeKey_Namespace">#if defined(DEBUG)</span></p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><span class="CodeAttributeKey_Namespace">#ifndef</span>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><span class="CodeAttributeKey_Namespace">#ifndef RELEASE</span>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Shortcut for <span class="CodeAttributeKey_Namespace">#if !defined(RELEASE)</span></p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><span class="CodeAttributeKey_Namespace">#elif</span>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><span class="CodeAttributeKey_Namespace">#elif DEBUG != 0</span>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Like <span class="CodeAttributeKey_Namespace">#if</span> but gets only evaluated if all previous conditions evaluated to false. If the condition evaluates to true, the following code is passed to the vCDL parser.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><span class="CodeAttributeKey_Namespace">#elifdef</span>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><span class="CodeAttributeKey_Namespace">#elifdef CANOE_VERSION</span>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Shortcut for <span class="CodeAttributeKey_Namespace">#elif defined(CANOE_VERSION)</span></p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><span class="CodeAttributeKey_Namespace">#elifndef</span>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><span class="CodeAttributeKey_Namespace">#elifndef RELEASE</span>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Shortcut for <span class="CodeAttributeKey_Namespace">#elif !defined(RELEASE)</span></p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><span class="CodeAttributeKey_Namespace">#else</span>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><span class="CodeAttributeKey_Namespace">#else</span>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Opens the else-block and is entered if none of the previous conditions evaluated to true.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="Table"><span class="CodeAttributeKey_Namespace">#endif</span>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="Table"><span class="CodeAttributeKey_Namespace">#endif</span>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                    <p class="Table">Closes a conditional block and is always required at the end.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>The preprocessor supports boolean and integer arithmetic where integer and boolean values can be used interchangeably. The preprocessor uses following conversion rules implicitly: An integer is <span class="CodeAttributeKey_Namespace">true</span> if it is not <span class="CodeAttributeKey_Namespace">0</span>, <span class="CodeAttributeKey_Namespace">false</span> otherwise. Having the opposite direction <span class="CodeAttributeKey_Namespace">true</span> always evaluates to <span class="CodeAttributeKey_Namespace">1</span> and <span class="CodeAttributeKey_Namespace">false</span> to <span class="CodeAttributeKey_Namespace">0</span>. It is therefore possible, though not recommended, to apply arithmetic operators to logical expressions and logical operators to arithmetic expressions. Because of these implicit conversions there is a difference between testing a constant’s value, e.g. using <span class="CodeAttributeKey_Namespace">#if</span>, and just testing whether a constant is defined, e.g. using <span class="CodeAttributeKey_Namespace">#ifdef</span>. If a constant is defined and its value has been implicitly or explicitly set to <span class="CodeAttributeKey_Namespace">0</span>, <span class="CodeAttributeKey_Namespace">#ifdef</span> will nevertheless evaluate to true whereas <span class="CodeAttributeKey_Namespace">#if</span>  will be <span class="CodeAttributeKey_Namespace">false</span>. Using an undefined constant in any expression will be equivalent to using <span class="CodeAttributeKey_Namespace">0</span> instead. The following table lists all operators in descending precedence.</p>
+                <div>
+                    <table style="mc-table-style: url('../../../Resources/Stylesheets/vTable.css');margin-left: 0;margin-right: auto;" class="TableStyle_vTable" cellspacing="0">
+                        <col class="TableStyle-vTable-Column-Column1" />
+                        <col class="TableStyle-vTable-Column-Column1" />
+                        <thead>
+                            <tr class="TableStyle-vTable-Head-Header1">
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                    <p class="TableHead">Operators</p>
+                                </th>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                    <p class="TableHead">Association</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><span class="CodeAttributeKey_Namespace">(x)</span>, <span class="CodeAttributeKey_Namespace">defined(c)</span>, <span class="CodeAttributeKey_Namespace">defined c</span></p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">inner to outer</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><span class="CodeAttributeKey_Namespace">+x</span>, <span class="CodeAttributeKey_Namespace">-x</span>, <span class="CodeAttributeKey_Namespace">!x</span></p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">right to left</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><span class="CodeAttributeKey_Namespace">x*y</span>, <span class="CodeAttributeKey_Namespace">x/y</span>, <span class="CodeAttributeKey_Namespace">x%y</span></p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd" rowspan="6">
+                                    <p class="Table">left to right</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><span class="CodeAttributeKey_Namespace">x+y</span>, <span class="CodeAttributeKey_Namespace">x-y</span></p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><span class="CodeAttributeKey_Namespace">x&lt;y</span>, <span class="CodeAttributeKey_Namespace">x&lt;=y</span>, <span class="CodeAttributeKey_Namespace">x&gt;=y</span>, <span class="CodeAttributeKey_Namespace">x&gt;y</span></p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><span class="CodeAttributeKey_Namespace">x==y</span>, <span class="CodeAttributeKey_Namespace">x!=y</span></p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><span class="CodeAttributeKey_Namespace">x&amp;&amp;y</span>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="Table"><span class="CodeAttributeKey_Namespace">x||y</span>
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p><span class="CodeAttributeKey_Namespace">#define</span> and <span class="CodeAttributeKey_Namespace">#undef</span> directives may appear within conditional scopes and are then only evaluated if the surrounding conditions hold true. As this construct impairs readability it should be avoided whenever possible.</p>
+                <h2 class="SectionMain">Regions</h2>
+                <p>Regions can be used to further structure the code as they can be collapsed in the vCDL editor to hide portions of the code that are not currently in focus. They can also be nested. Each region always consists of the following two directives.</p>
+                <div>
+                    <table style="mc-table-style: url('../../../Resources/Stylesheets/vTable.css');margin-left: 0;margin-right: auto;" class="TableStyle_vTable" cellspacing="0">
+                        <col class="TableStyle-vTable-Column-Column1" />
+                        <col class="TableStyle-vTable-Column-Column1" />
+                        <col class="TableStyle-vTable-Column-Column1" />
+                        <thead>
+                            <tr class="TableStyle-vTable-Head-Header1">
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                    <p class="TableHead">Directive</p>
+                                </th>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                    <p class="TableHead">Example</p>
+                                </th>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                    <p class="TableHead">Description</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><span class="CodeAttributeKey_Namespace">#region</span>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><span class="CodeAttributeKey_Namespace">#region Data Types</span>
+                                    </p>
+                                    <p class="Table"><span class="CodeAttributeKey_Namespace">#region</span>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Starts a new region, optionally assigning it a name. There are no limitations for the name, it is always the remaining line.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="Table"><span class="CodeAttributeKey_Namespace">#endregion</span>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="Table"><span class="CodeAttributeKey_Namespace">#endregion</span>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                    <p class="Table">Closes a region.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h2 class="SectionMain">Pragmas</h2>
+                <p>Pragmas provide additional context information to the parser. They are currently only used to specify the <a href="vCDLCharacterSet.htm">encoding</a> . Thus, this directive needs to be the first in the file without any indentation or empty lines preceding it and is an exception of the general rule explained above.</p>
+                <div>
+                    <table style="mc-table-style: url('../../../Resources/Stylesheets/vTable.css');margin-left: 0;margin-right: auto;" class="TableStyle_vTable" cellspacing="0">
+                        <col class="TableStyle-vTable-Column-Column1" />
+                        <col class="TableStyle-vTable-Column-Column1" />
+                        <col class="TableStyle-vTable-Column-Column1" />
+                        <thead>
+                            <tr class="TableStyle-vTable-Head-Header1">
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                    <p class="TableHead">Directive</p>
+                                </th>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                    <p class="TableHead">Example</p>
+                                </th>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                    <p class="TableHead">Description</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="Table"><span class="CodeAttributeKey_Namespace">#pragma</span>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="Table"><span class="CodeAttributeKey_Namespace">#pragma encoding UTF-7</span>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                    <p class="Table">Provides additional information to the parser.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="LinkList"><a href="vCDLConventions.htm" class="LinkList">Language Conventions</a>
+                </p>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="FooterWhite">
+                <table class="FooterWhite" style="border-collapse: collapse;margin-left: auto;margin-right: auto;">
+                    <col style="width: 70px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col style="width: 16px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col data-mc-conditions="" />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="buttons popup-container clearfix topicToolbarProxy topicToolbarProxyFooter _Skins_HTML5TopicToolbar mc-component nocontent">
+                                    <div class="button-group-container-left">
+                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo"><a href="../../Shared/HowToUseOnlineHelp.htm" title="Tips for using the help" alt="Tips for using the help"><img src="../../../Resources/vImages/vBackstage/vHelpInfo.png" /></a>
+                                </p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo">•&#160;&#160;Technical&#160;References are only&#160;available&#160;in&#160;English</p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo" style="text-align: right;"><span class="mc-variable Vector.BuildTime variable">2024-04-8T20:56:42</span>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <table style="width: 100%;border-collapse: separate;border-spacing: 3px 0px;margin-left: auto;margin-right: auto;caption-side: top;">
+                <col />
+                <col />
+                <col />
+                <col data-mc-conditions="BuildProcess.HTML5Link" />
+                <tbody>
+                    <tr>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;">
+                            <p class="vec_Footer">©&#160;Vector Informatik GmbH</p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;text-align: right;">
+                            <p class="vec_FooterBold">
+                                <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE&#160;Product Families</MadCap:conditionalText> Version <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.VectorTestUnitRunner">18</MadCap:conditionalText></p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="../../Shared/ContactCopyrightLicense.htm" class="vec_Footer MCXref xref xrefvec_Footer">Contact/Copyright/License</a>
+                            </p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="https://www.vector.com/int/en/company/get-info/privacy-policy/" target="_blank" class="vec_Footer">Data Privacy Notice</a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

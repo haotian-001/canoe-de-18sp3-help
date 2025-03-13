@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="" data-mc-search-type="Stem" data-mc-help-system-file-name="CANoeDEFamily.xml" data-mc-path-to-help-system="../../../../" data-mc-conditions="Targets.CANoe-DE-Family" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../Skins/Favicons/favicon-16x16.png" /><title>Simulate Distributed Systems in CANoe</title>
+        <link href="../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Resources/Stylesheets/vTableMasterPageHeader.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../Resources/Stylesheets/vStylesheet.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../Resources/Stylesheets/vTableSymbol.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapGlobal.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapDom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapUtilities.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapXhr.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTextEffects.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSlideshow.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMessageBus.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMessageBus.CrossFrame.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapDefault.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMediaQueries.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAccessibility.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapHelpSystem.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAliasFile.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopicFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapFeedbackHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSkinHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.Breadcrumbs.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.MiniToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.SideMenu.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapIndex.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapGlossary.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapParser.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSearch.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapNavigateTopics.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapLms.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapELearning.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopic.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMicroContentComponent.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSearchHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopicElements.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTriPane.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/jscript" src="../../../Resources/vScripts/SyntaxHighlighting.js">
+        </script>
+        <script type="text/jscript" src="../../../Resources/vScripts/TabSwitch.js">
+        </script>
+        <script type="text/javascript" src="../../../Resources/vScripts/Vector.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../../CANoeDEFamily.htm#Topics/QuickStartGuide/12SimulationDistributedSystems/12SimulationDistributedSystems.htm">Open topic with navigation</a>
+        </p>
+        <div class="Body">
+            <div role="main" id="mc-main-content">
+                <p class="StructurePath" data-mc-conditions="BuildProcess.PrintExcluded"><a href="../01Introduction/01Overview.htm" class="StructurePath">Quick Start Guide</a> » <span class="mc-variable System.Title variable">Simulate Distributed Systems in CANoe</span></p>
+                <h1><span class="mc-variable System.Title variable">Simulate Distributed Systems in CANoe</span>
+                </h1>
+                <div data-mc-conditions="BuildProcess.PrintExcluded">
+                    <p class="MenuPath">&#160;</p>
+                    <p class="ToolAvailability" data-mc-conditions="BuildProcess.ToolAvailability"><a href="../../Shared/FeatureAvailability.htm" class="red" title="Feature availabilty for your product">Valid&#160;for</a>:&#160;&#160;CANoe&#160;DE<a name="aanchor4305"></a><MadCap:concept term="SFCANoeDE" /></p>
+                    <p class="AutoSearchFilterConcepts"><a name="aanchor4306"></a>
+                        <MadCap:concept term="SFCore" />
+                    </p>
+                </div>
+                <h2 class="SectionMain" data-mc-conditions="BuildProcess.PrintExcluded">Working With System Variables</h2>
+                <p>
+                    <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE</MadCap:conditionalText> provides system variables to model the functional bus behavior of network nodes. These system variables are described by events and states of the system environment (external pressure, temperature, switch positions, etc.). You can observe and intentionally change these states - i.e. the values of the system variables - on user-definable panels.</p>
+                <p>To work with system variables in CAPL you use the event procedure type<span class="Syntax"> on sysvar </span>(React to change in system variable). The CAPL functions <span class="Syntax">SysGetVariableInt</span> and <span class="Syntax">SysSetVariableInt</span> are used to read and write system variables.</p>
+                <p>These language tools and symbolic access to the various variables defined in the database make it possible to create simple prototypical network node models.</p>
+                <h2 class="SectionMain" data-mc-conditions="BuildProcess.PrintExcluded">Unit 8: Create a Complete Configuration</h2>
+                <div>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                    <p class="Table">
+                                        <img src="../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                    </p>
+                                </td>
+                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                    <p class="TableSymbolHead">Task</p>
+                                    <p>Create a complete <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE</MadCap:conditionalText> configuration with two network node models and associated periphery, i.e. panels. This should only involve implementation of distributed functions: After the user activates a switch pressing the left mouse button, the first node informs the second node of this action. The second node then activates an indicator lamp in its periphery.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>
+                    <img src="../../../Resources/Images/QuickStartGuide/DistributedSystems.gif" />
+                </p>
+                <p>A model for distributed systems can be created efficiently in <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE</MadCap:conditionalText> in three steps:</p>
+                <ul>
+                    <li>Create the database with messages, signals and environment variables</li>
+                    <li>Create the network node periphery, i.e. the panels</li>
+                    <li>Create the network node models in CAPL</li>
+                </ul>
+                <p>To prepare this task, select the <span class="bold">CAN_500kBaud_2ch.tcn</span> template via the <span class="GUI">File </span>ribbon tab|<span class="GUI">New </span>and click on <span class="GUI">Create Configuration From Template</span>.</p>
+                <h3 class="SectionSub" data-mc-conditions="BuildProcess.PrintExcluded">Create the Database</h3>
+                <p>The first step involves creating a database which describes a significant aspect of the system: The exchange of information between the two network nodes via the communication medium, i.e. the CAN bus.</p>
+                <p>The database message and signal objects are available for describing the exchange of information over the CAN bus. The simple functionality of the example can be handled by a 1-bit signal which describes the state of the switch at the first node. This signal is packed in a CAN message and is only transmitted if the switch state changes (spontaneous transmission).</p>
+                <p>Now create a new database with message <span class="bold">Msg1</span> and signal <span class="bold">bsSwitch</span>.</p>
+                <div>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                    <p class="Table">
+                                        <img src="../../../Resources/vImages/vStep.png" style="width: 48px;height: 45px;" title="Procedure" alt="Procedure" />
+                                    </p>
+                                </td>
+                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                    <p class="TableSymbolHead">Step by Step Procedures</p>
+                                    <p class="Headline">Create a New Database</p>
+                                    <div class="Procedure">
+                                        <ol>
+                                            <li value="1">
+                                                <p class="ListItem">Open with the <img src="../../../Resources/vImages/vIconsFlat/CANdb_Icon16.png" /> symbol on the Tools ribbon tab the <span class="Product">CANdb++ Editor</span>.</p>
+                                            </li>
+                                            <li value="2">
+                                                <p class="ListItem">Open the <span class="GUI">Template</span> dialog via <span class="GUI">File</span>|<span class="GUI">Create Database…</span>.</p>
+                                            </li>
+                                            <li value="3">
+                                                <p class="ListItem">Select the <span class="GUI">CANoeTemplate.dbc</span> template.</p>
+                                            </li>
+                                            <li value="4">
+                                                <p class="ListItem">With <span class="bold">[OK]</span> you open the <span class="GUI">New Database File</span> dialog.<br />Enter here the name of the new database (e.g. Database).</p>
+                                            </li>
+                                            <li value="5">
+                                                <p class="ListItem">Close the dialog with <span class="bold">[Save]</span>.<br />The new database is opened in the <span class="Product">CANdb++ Editor</span>.</p>
+                                            </li>
+                                        </ol>
+                                        <p class="Headline">Create a Message</p>
+                                        <p>Now create the message <span class="bold">Msg1</span> with the identifier 100, which is to be transmitted by the first node.</p>
+                                        <ol>
+                                            <li value="1">
+                                                <p class="ListItem">Select <span class="GUI">Messages</span> and open with the context menu command <span class="GUI">New…</span> the configuration dialog for the new message.</p>
+                                            </li>
+                                            <li value="2">
+                                                <p class="ListItem">Enter the following values in the <span class="GUI">Definition</span> page:</p>
+                                                <ul>
+                                                    <li>
+                                                        <p class="ListItem"><span class="bold">Name</span>: Msg1</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="ListItem"><span class="bold">Typ</span>: CAN Standard</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="ListItem"><span class="bold">ID</span>: 0x100</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="ListItem"><span class="bold">DLC</span>: 8</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li value="3">
+                                                <p class="ListItem">Close the dialog with <span class="bold">[OK]</span>.</p>
+                                            </li>
+                                        </ol>
+                                        <p class="Headline">Create a Signal</p>
+                                        <p>Create the signal <span class="bold">bsSwitch</span> to describe the switch position and assign it to the message <span class="bold">Msg1</span>.</p>
+                                        <ol>
+                                            <li value="1">
+                                                <p class="ListItem">Select <span class="GUI">Signals</span> and open with the context menu command <span class="GUI">New…</span> the configuration dialog for the new signal.</p>
+                                            </li>
+                                            <li value="2">
+                                                <p class="ListItem">Enter the following values in the <span class="GUI">Definition</span> page:</p>
+                                                <ul>
+                                                    <li>
+                                                        <p class="ListItem"><span class="bold">Name</span>: bsSwitch</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="ListItem"><span class="bold">Length [Bit]</span>: 1 (for the transmission of the states on=1 and out=0)</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="ListItem"><span class="bold">Byte Order</span>: Intel</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="ListItem"><span class="bold">Value Type</span>: Unsigned</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="ListItem"><span class="bold">Factor</span>: 1</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="ListItem"><span class="bold">Offset</span>: 0</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="ListItem"><span class="bold">Minimum</span>: 0</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="ListItem"><span class="bold">Maximum</span>: 1</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li value="3">
+                                                <p class="ListItem">Close the dialog with <span class="bold">[OK]</span>.</p>
+                                            </li>
+                                        </ol>
+                                        <p class="Headline">Assign Signal to Message</p>
+                                        <ol>
+                                            <li value="1">
+                                                <p class="ListItem">You can assign the signal <span class="bold">bsSwitch</span> to the message <span class="bold">Msg1</span> via drag and drop.</p>
+                                                <p class="ListItem">
+                                                    <img src="../../../Resources/Images/QuickStartGuide/PanelDatabase_546x214.png" style="width: 546;height: 214;" />
+                                                </p>
+                                            </li>
+                                            <li value="2">
+                                                <p class="ListItem">Save the database and close <span class="Product">CANdb++ Editor</span>.</p>
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h3 class="SectionSub" data-mc-conditions="BuildProcess.PrintExcluded">Add the Database to the Configuration</h3>
+                <p>In the <span class="bold">Simulation Setup</span> you can add the database. If you move the mouse pointer to <span class="GUI">Databases </span>in the tree view of the current configuration and press the right mouse button, you can run the context menu command <span class="GUI">Add</span>.</p>
+                <h3 class="SectionSub" data-mc-conditions="BuildProcess.PrintExcluded">Define System Variables</h3>
+                <p>With the second step you have to describe the I/O interface between the nodes and their peripheries. For this <span class="Product">CANoe</span> provides system variables. Each peripheral element (Switch, indicator lamp, slider, etc.) is <span class="bold">wired</span> to a system variable, i.e. it is connected to the CAPL program for the network node.</p>
+                <p>In this example there are exactly two peripheral elements: A switch at the first node and an indicator lamp at the second node. For this, two system variables must be created in the database, e.g. <span class="bold">svLight</span> and <span class="bold">svSwitch</span>.</p>
+                <div>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                    <p class="Table">
+                                        <img src="../../../Resources/vImages/vStep.png" style="width: 48px;height: 45px;" title="Procedure" alt="Procedure" />
+                                    </p>
+                                </td>
+                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                    <p class="TableSymbolHead">Step by Step Procedure</p>
+                                    <div class="Procedure">
+                                        <ol>
+                                            <li value="1">
+                                                <p class="ListItem">Create the two system variables in the <span class="bold">System Variable Configuration</span> dialog. Open this dialog via the <span class="GUI">Environment</span> ribbon tab|<span class="GUI">System Variables</span>.</p>
+                                            </li>
+                                            <li value="2">
+                                                <p class="ListItem">Open the <span class="GUI">New System Variable</span> dialog with <img src="../../../Resources/vImages/vIconsFlat/NewSystemVariable_Icon16.png" />.<br />Each system variable belongs to one particular namespace and is uniquely defined therein (upper and lower case letters are distinguished).</p>
+                                            </li>
+                                            <li value="3">
+                                                <p class="ListItem">Enter the following values for the system variable <span class="bold">svLight</span>:</p>
+                                                <ul>
+                                                    <li>
+                                                        <p class="ListItem"><span class="bold">Namespace</span>: MyNamespace</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="ListItem"><span class="bold">Name</span>: svLight</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="ListItem"><span class="bold">Data type</span>: Integer</p>
+                                                    </li>
+                                                </ul>
+                                                <p class="ListItem">
+                                                    <img src="../../../Resources/Images/QuickStartGuide/SystemVariablesSvLight.png" />
+                                                </p>
+                                            </li>
+                                            <li value="4">
+                                                <p class="ListItem">Close the dialog with <span class="GUI">[OK]</span>.<br /></p>
+                                                <p class="ListItem">
+                                                    <img src="../../../Resources/Images/QuickStartGuide/SystemVariables_540x388.png" style="width: 540;height: 388;" />
+                                                </p>
+                                            </li>
+                                            <li value="5">
+                                                <p class="ListItem">Open the New System Variable dialog via <img src="../../../Resources/vImages/vIconsFlat/NewSystemVariable_Icon16.png" /> again and define the second system variable svSwitch. Enter the following values:</p>
+                                                <ul>
+                                                    <li>
+                                                        <p class="ListItem"><span class="bold">Namespace</span>: MyNamespace</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="ListItem"><span class="bold">Name</span>: svSwitch</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="ListItem"><span class="bold">Data type</span>: Integer</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li value="6">
+                                                <p class="ListItem">Close the dialog with <span class="GUI">[OK]</span>.<br />Now you can see that both system variables are assigned to the namespace <span class="GUI">MyNamespace</span>.</p>
+                                            </li>
+                                            <li value="7">
+                                                <p class="ListItem">Close the dialog with <span class="GUI">[OK]</span>.</p>
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                    <p class="Table">
+                                        <img src="../../../Resources/vImages/vCrossRef.png" style="width: 48px;height: 45px;" alt="Cross Reference" title="Cross Reference" />
+                                    </p>
+                                </td>
+                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                    <p class="TableSymbolHead">Cross&#160;Reference</p>
+                                    <p>You can find detailed information about system variables in the help of <span class="Product">CANoe</span>.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h3 class="SectionSub" data-mc-conditions="BuildProcess.PrintExcluded">Create Panels</h3>
+                <p>A separate application, the <span class="Product">Panel Designer</span>, is provided with <span class="Product">CANoe</span> for creating the node periphery. In the current configuration, one separate panel must be created for each of the two nodes.</p>
+                <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                    <col class="TableStyle-vTableSymbol-Column-Column1" />
+                    <col class="TableStyle-vTableSymbol-Column-Column2" />
+                    <tbody>
+                        <tr>
+                            <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                <p class="Table">
+                                    <img src="../../../Resources/vImages/vCrossRef.png" style="width: 48px;height: 45px;" alt="Cross Reference" title="Cross Reference" />
+                                </p>
+                            </td>
+                            <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                <p class="TableSymbolHead">Cross&#160;Reference</p>
+                                <p>Please refer to the help of <span class="Product">CANoe </span>for a detailed introduction into the <span class="Product">Panel Designer</span>.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="Headline">Create the First Panel</p>
+                <p>The first panel has a single control, a switch.</p>
+                <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                    <col class="TableStyle-vTableSymbol-Column-Column1" />
+                    <col class="TableStyle-vTableSymbol-Column-Column2" />
+                    <tbody>
+                        <tr>
+                            <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                <p class="Table">
+                                    <img src="../../../Resources/vImages/vStep.png" style="width: 48px;height: 45px;" title="Procedure" alt="Procedure" />
+                                </p>
+                            </td>
+                            <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                <p class="TableSymbolHead">Step by Step Procedure</p>
+                                <div class="Procedure">
+                                    <ol>
+                                        <li value="1">
+                                            <p class="ListItem">You can start the <span class="Product">Panel Designer</span> with <img src="../../../Resources/vImages/vIconsFlat/VTEPanel_Icon16.png" /> on the <span class="bold">Tools</span> ribbon tab of <span class="Product">CANoe</span>. This ensures that the database is available.<br />A new panel will be opened automatically.</p>
+                                        </li>
+                                        <li value="2">
+                                            <p class="ListItem">Enter in the Properties grid under <span class="GUI">Panel</span>|<span class="GUI">Panel Name</span> the name of the panel <span class="GUI">SWITCH</span>. After saving the panel this name will be displayed on the opened panel top left.</p>
+                                        </li>
+                                        <li value="3">
+                                            <p class="ListItem">Select a Switch <img src="../../../Resources/vImages/vIconsFlat/SwitchIndicatorControl_Icon16.png" /> from the Toolbox of the <span class="Product">Panel Designer</span> and place it on the panel, e.g. via drag and drop.</p>
+                                        </li>
+                                        <li value="4">
+                                            <p class="ListItem">Configure the Switch in the Properties grid under <span class="GUI">Switch Values</span>|<span class="GUI">State Count</span> as a control with 2 states.</p>
+                                        </li>
+                                        <li value="5">
+                                            <p class="ListItem">Assign the Switch in the Properties grid under <span class="GUI">Settings</span>|<span class="GUI">Mouse Activation Type</span> the Left mouse button.</p>
+                                        </li>
+                                        <li value="6">
+                                            <p class="ListItem">Assign the Switch in the Properties grid under <span class="GUI">Appearance</span>|<span class="GUI">Image File</span> the image file <span class="Syntax">IOrgPushButton_2.bmp from <span class="Product">CANoe </span>directory CANoe Sample Configurations\Programming\Bitmap_Library\Global\Switches_2States</span>.</p>
+                                        </li>
+                                        <li value="7">
+                                            <p class="ListItem">To display system variable in the <span class="bold">Symbol Explorer</span> you have to open the <span class="GUI">Filtered by</span> list and select <span class="GUI">Variables</span>. Then drag the environment variable <span class="bold">svSwitch</span> from the <span class="GUI">Symbol Explorer</span> to the Switch on the panel.</p>
+                                        </li>
+                                        <li value="8">
+                                            <p class="ListItem">Label the switch by selecting the Static Text <img src="../../../Resources/vImages/vIconsFlat/StaticTextControl_Icon16_15x15.png" style="width: 15;height: 15;" /> display element from the Toolbox and place it on the panel to the right of the Switch. Enter the label in the Properties grid of the Static Text under <span class="GUI">General</span>|<span class="GUI">Text</span>.</p>
+                                        </li>
+                                        <li value="9">
+                                            <p class="ListItem">You can change the size of the panel by clicking the panel border and dragging it. Try not to size panels any larger than necessary, since available screen space is usually a very limited and hence valuable resource.</p>
+                                        </li>
+                                        <li value="10">
+                                            <p class="ListItem">Save the panel under the name <span class="Syntax">SWITCH.xvp</span>.<br />Add the panel in the <span class="GUI">Add to Project</span> dialog to the <span class="Product">CANoe</span> configuration.</p>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="HeadlinePageBreak">Create the Second Panel</p>
+                <p>The second panel has a small simple lamp as an indicating element.</p>
+                <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                    <col class="TableStyle-vTableSymbol-Column-Column1" />
+                    <col class="TableStyle-vTableSymbol-Column-Column2" />
+                    <tbody>
+                        <tr>
+                            <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                <p class="Table">
+                                    <img src="../../../Resources/vImages/vStep.png" style="width: 48px;height: 45px;" title="Procedure" alt="Procedure" />
+                                </p>
+                            </td>
+                            <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                <p class="TableSymbolHead">Step by Step Procedure</p>
+                                <div class="Procedure">
+                                    <ol>
+                                        <li value="1">
+                                            <p class="ListItem">Open a new panel with the menu path <span class="GUI">File</span>|<span class="GUI">New Panel</span> and select as panel name <span class="GUI">LIGHT</span>.</p>
+                                        </li>
+                                        <li value="2">
+                                            <p class="ListItem">Select a LED Control <img src="../../../Resources/vImages/vIconsFlat/LEDControl_Icon16.png" /> from the Toolbox (<span class="GUI">All</span>) of the <span class="Product">Panel Designer</span> and place it on the panel, e.g. via drag and drop.</p>
+                                        </li>
+                                        <li value="3">
+                                            <p class="ListItem">Configure the LED Control in the Properties grid under <span class="GUI">Switch Values</span>|<span class="GUI">State Count</span> as a display element with 2 states.</p>
+                                        </li>
+                                        <li value="4">
+                                            <p class="ListItem">Assign the system variable <span class="GUI">svLight</span> to the LED Control via drag and drop from the Symbol Explorer.</p>
+                                        </li>
+                                        <li value="5">
+                                            <p class="ListItem">Label the LED Control by selecting the Static Text <img src="../../../Resources/vImages/vIconsFlat/StaticTextControl_Icon16_15x15.png" style="width: 15;height: 15;" /> display element from the Toolbox (<span class="GUI">All</span>) and place it on the panel to the right of the Switch. Enter the label in the Properties grid of the Static Text under <span class="GUI">General</span>|<span class="GUI">Text</span>.</p>
+                                        </li>
+                                        <li value="6">
+                                            <p class="ListItem">Save the panel under the name <span class="Syntax">LIGHT.xvp</span>.<br />Add the panel in the <span class="GUI">Add to Project</span> dialog to the <span class="Product">CANoe</span> configuration.</p>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h3 class="SectionSub" data-mc-conditions="BuildProcess.PrintExcluded">Add the Panels to the Configuration</h3>
+                <p>
+                    <img src="../../../Resources/Images/QuickStartGuide/Panels.png" />
+                </p>
+                <h3 class="SectionSub" data-mc-conditions="BuildProcess.PrintExcluded">Save the Configuration</h3>
+                <p>Before creating the network node models, you should save the configuration you just created with <img src="../../../Resources/vImages/vIconsFlat/Save_Icon16.png" /> on the <span class="GUI">Home </span>ribbon tab of <span class="Product">CANoe</span>.</p>
+                <h3 class="SectionSub" data-mc-conditions="BuildProcess.PrintExcluded">Create Network Node Models</h3>
+                <p>You create the network node models in the <span class="GUI">Simulation Setup</span>. At the least, the model for the first node must send a message when the switch is activated, and therefore it may not be inserted in the <span class="GUI">Measurement Setup</span>.</p>
+                <p class="Headline">Insert Two Network Nodes</p>
+                <p>In this example you need two network nodes in the <span class="GUI">Simulation Setup</span>: The first node supplies the switch position, and the second reacts to this by activating or deactivating a small lamp.</p>
+                <p>In the <span class="GUI">Simulation Setup</span> click the bus lines to insert new network node models.</p>
+                <p>
+                    <img src="../../../Resources/Images/QuickStartGuide/ContextMenuInsertNode.png" />
+                </p>
+                <p class="Headline">Configure the Nodes</p>
+                <p>You open the configuration dialog of the nodes with the context menu command <span class="GUI">Configuration…</span>. Enter here the node name (e.g. <span class="bold">ECU 1</span> or <span class="bold">ECU 2</span>).</p>
+                <p>Open with <span class="GUI">[File…]</span> the <span class="GUI">Open </span>dialog. Enter here the name of the CAPL program that simulates the functionality of the network node (e.g. <span class="bold">ECU1</span>.can or <span class="bold">ECU2.can</span>).</p>
+                <p>
+                    <img src="../../../Resources/Images/QuickStartGuide/NodeConfiguration.png" />
+                </p>
+                <p class="Headline">Create the Used CAPL Programs</p>
+                <p>Double click on each node to open the <span class="Product">CAPL Browser</span> for the particular CAPL program. The first CAPL program belongs to a node at whose periphery there is a switch. When the switch position changes, the program acquires the new switch value and immediately outputs it on the bus:</p>
+                <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                    <col class="TableStyle-vTableSymbol-Column-Column1" />
+                    <col class="TableStyle-vTableSymbol-Column-Column2" />
+                    <tbody>
+                        <tr>
+                            <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                <p class="Table">
+                                    <img src="../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                </p>
+                            </td>
+                            <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                <p class="TableSymbolHead">Example</p>
+                                <p class="TableSyntax">// Reaction to change of system variable svSwitch<br />on sysvar sysvar::MyNamespace::svSwitch {<br />&#160;&#160;// Declare a CAN message to be transmitted<br />&#160;&#160;message Msg1 msg;<br />&#160;&#160;// Read out the value of the light switch,<br />&#160;&#160;// Assign to the bus signal bsSwitch<br />&#160;&#160;msg.bsSwitch = SysGetVariableInt(sysvar::MyNamespace::svSwitch);<br />&#160;&#160;// Output message on bus (spontaneous transmission)<br />&#160;&#160;output(msg);<br />}</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>The second network node reacts to this message. The CAPL program reads the value of the bus signal for the switch position and then activates or deactivates the indicator lamp at its periphery. Please note that the switch value is only acquired via the signal value on the bus. The value of the environment variable <span class="bold">svSwitch</span> is not known to this CAPL program. That is, the communication between the two nodes occurs via the bus:</p>
+                <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                    <col class="TableStyle-vTableSymbol-Column-Column1" />
+                    <col class="TableStyle-vTableSymbol-Column-Column2" />
+                    <tbody>
+                        <tr>
+                            <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                <p class="Table">
+                                    <img src="../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                </p>
+                            </td>
+                            <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                <p class="TableSymbolHead">Example</p>
+                                <p class="TableSyntax">// Reaction to receipt of the CAN message M1<br />on message Msg1 {<br />&#160;&#160;// Read out a bus signal and<br />&#160;&#160;// set the system variable<br />&#160;&#160;SysSetVariableInt(sysvar::MyNamespace::svLight, this.bsSwitch);<br />}</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h3 class="SectionSub" data-mc-conditions="BuildProcess.PrintExcluded">Start the Measurement</h3>
+                <p>Now start the measurement in <span class="Product">CANoe</span>. Whenever you activate the switch on <span class="bold">Panel 1</span> the indicator lamp illuminates. Whenever you turn the switch off, the indicator lamp goes off. The Trace Window shows you both the bus communication (Spontaneous transmission of message <span class="bold">Msg1</span> when the switch position changes) and the values of system variables <span class="GUI">svSwitch</span> and <span class="GUI">svLight</span>.</p>
+                <p>
+                    <img src="../../../Resources/Images/QuickStartGuide/PanelTraceWindow_540x172.png" style="width: 540;height: 172;" />
+                </p>
+                <div>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                    <p class="Table">
+                                        <img src="../../../Resources/vImages/vCrossRef.png" style="width: 48px;height: 45px;" alt="Cross Reference" title="Cross Reference" />
+                                    </p>
+                                </td>
+                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                    <p class="TableSymbolHead">Cross&#160;Reference</p>
+                                    <p class="Table">An introduction to CAPL programming and a detailed description of the programming language can be found in the help of <span class="Product">CANoe</span>.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="LinkList" data-mc-conditions="BuildProcess.PrintExcluded"><a href="javascript:startDemoLoader('CANoe_QuickStartExport_EN.pdf')" class="ExecuteLink" data-mc-conditions="Targets.CANoe-DE-Family">CANoe Quick Start Guide (PDF Version)</a>
+                </p>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="FooterWhite">
+                <table class="FooterWhite" style="border-collapse: collapse;margin-left: auto;margin-right: auto;">
+                    <col style="width: 70px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col style="width: 16px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="buttons popup-container clearfix topicToolbarProxy topicToolbarProxyFooter _Skins_HTML5TopicToolbar mc-component nocontent">
+                                    <div class="button-group-container-left">
+                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo"><a href="../../Shared/HowToUseOnlineHelp.htm" title="Tips for using the help" alt="Tips for using the help"><img src="../../../Resources/vImages/vBackstage/vHelpInfo.png" /></a>
+                                </p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo" style="text-align: right;"><span class="mc-variable Vector.BuildTime variable">2024-04-8T20:56:42</span>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <table style="width: 100%;border-collapse: separate;border-spacing: 3px 0px;margin-left: auto;margin-right: auto;caption-side: top;">
+                <col />
+                <col />
+                <col />
+                <col data-mc-conditions="BuildProcess.HTML5Link" />
+                <tbody>
+                    <tr>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;">
+                            <p class="vec_Footer">©&#160;Vector Informatik GmbH</p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;text-align: right;">
+                            <p class="vec_FooterBold">
+                                <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE&#160;Product Families</MadCap:conditionalText> Version <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.VectorTestUnitRunner">18</MadCap:conditionalText></p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="../../Shared/ContactCopyrightLicense.htm" class="vec_Footer MCXref xref xrefvec_Footer">Contact/Copyright/License</a>
+                            </p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="https://www.vector.com/int/en/company/get-info/privacy-policy/" target="_blank" class="vec_Footer">Data Privacy Notice</a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

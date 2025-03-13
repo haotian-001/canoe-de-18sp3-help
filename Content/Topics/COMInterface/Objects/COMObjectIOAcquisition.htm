@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="CANoeDEFamily.xml" data-mc-path-to-help-system="../../../../" data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../Skins/Favicons/favicon-16x16.png" /><title>IOAcquisition (COM Object)</title>
+        <link href="../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Resources/Stylesheets/vTableMasterPageHeader.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../Resources/Stylesheets/vStylesheet.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../Resources/Stylesheets/vTableSymbol.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../Resources/Stylesheets/vTableLight.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapGlobal.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapDom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapUtilities.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapXhr.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTextEffects.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSlideshow.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMessageBus.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMessageBus.CrossFrame.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapDefault.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMediaQueries.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAccessibility.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapHelpSystem.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAliasFile.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopicFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapFeedbackHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSkinHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.Breadcrumbs.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.MiniToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.SideMenu.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapIndex.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapGlossary.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapParser.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSearch.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapNavigateTopics.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapLms.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapELearning.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopic.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMicroContentComponent.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSearchHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopicElements.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTriPane.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/jscript" src="../../../Resources/vScripts/SyntaxHighlighting.js">
+        </script>
+        <script type="text/jscript" src="../../../Resources/vScripts/TabSwitch.js">
+        </script>
+        <script type="text/javascript" src="../../../Resources/vScripts/Vector.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../../CANoeDEFamily.htm#Topics/COMInterface/Objects/COMObjectIOAcquisition.htm">Open topic with navigation</a>
+        </p>
+        <div class="Body">
+            <div role="main" id="mc-main-content">
+                <div>
+                    <p class="AutoSearchFilterConcepts"><a name="aanchor2343"></a>
+                        <MadCap:concept term="SFCOMInterface" />
+                    </p>
+                    <p class="IndexConcept"><a name="kanchor663"></a>
+                    </p>
+                    <p class="StructurePath"><a href="../../CANoeCANalyzer/CANoeDEFamily.htm" class="StructurePath" data-mc-conditions="Targets.CANoe-DE-Family"><img src="../../../Resources/vImages/vToolIcons/CANoeDEFamily_Icon16_15x15.png" alt="" style="width: 15;height: 15;" />&#160;CANoe&#160;DE&#160;Product&#160;Families</a> » <a href="../COMInterface.htm" class="StructurePath MCXref xref xrefStructurePath">COM Interface</a> » <a href="../COMObjectHierarchy.htm" class="StructurePath">Objects</a> » IOAcquisition</p>
+                    <h1>IOAcquisition</h1>
+                    <p class="MenuPath"><a href="COMObjectApplication.htm" class="MenuPath">Application</a>&#160;» <a href="COMObjectConfiguration.htm" class="MenuPath">Configuration</a>&#160;» <a href="COMObjectIOHardware.htm" class="MenuPath">IOHardware</a>&#160;» <a href="COMObjectVectorIO.htm" class="MenuPath">VectorIO</a>&#160;» <a href="COMObjectIODevices.htm" class="MenuPath">IODevices</a>&#160;» <a href="COMObjectIODevice.htm" class="MenuPath">IODevice</a>&#160;» IOAcquisition</p>
+                    <p class="ToolAvailability" data-mc-conditions="BuildProcess.ToolAvailability"><a href="../../Shared/FeatureAvailability.htm" class="red" title="Feature availabilty for your product">Valid&#160;for</a>:&#160;&#160;CANoe&#160;DE<a name="aanchor2344"></a><MadCap:concept term="SFCANoeDE" />&#160;&#160;•&#160;&#160;CANoe4SW&#160;DE<a name="aanchor2345"></a><MadCap:concept term="SFCANoe4SWDE" /></p>
+                </div>
+                <div>
+                    <h2 class="CommandPage">Description</h2>
+                    <p>The <span class="bold">IOAcquisition</span> object represents the acquisition configuration of a Vector I/O device.</p>
+                </div>
+                <div>
+                    <h2 class="CommandPage">Properties</h2>
+                    <table style="mc-table-style: url('../../../Resources/Stylesheets/vTableLight.css');margin-left: 0;margin-right: auto;width: 100%;" class="TableStyle-vTableLight" cellspacing="0">
+                        <col class="TableStyle-vTableLight-Column-Column1" style="width: 20%;" />
+                        <col class="TableStyle-vTableLight-Column-Column1" style="width: 5%;" />
+                        <col class="TableStyle-vTableLight-Column-Column1" style="width: 5%;" />
+                        <col class="TableStyle-vTableLight-Column-Column1" style="width: 45%;" />
+                        <col class="TableStyle-vTableLight-Column-Column1" style="width: 25%;" />
+                        <thead>
+                            <tr class="TableStyle-vTableLight-Head-Header1">
+                                <th class="TableStyle-vTableLight-HeadE-Column1-Header1">
+                                    <p class="TableHead">Name</p>
+                                </th>
+                                <th class="TableStyle-vTableLight-HeadE-Column1-Header1">
+                                    <p class="TableTextSmall">Introduced<br />in version</p>
+                                </th>
+                                <th class="TableStyle-vTableLight-HeadE-Column1-Header1">
+                                    <p class="TableTextSmall">Available for</p>
+                                </th>
+                                <th class="TableStyle-vTableLight-HeadE-Column1-Header1">
+                                    <p class="TableHead">Property Value/Type</p>
+                                </th>
+                                <th class="TableStyle-vTableLight-HeadD-Column1-Header1">
+                                    <p class="TableHead">Property Value Element</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <p class="TableBold"><a name="kanchor664"></a><a name="BMAnalogAcquisitionMode" id="BMAnalogAcquisitionMode"></a><a class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler togglerBoldBlackUnderline MCTogglerHotSpot_ MCTogglerHotSpot_BoldBlackUnderline MCHotSpotImage" targets="TOGAnalogAcquisitionMode" href="javascript:void(0)" data-mc-targets="TOGAnalogAcquisitionMode"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />AnalogAcquisitionMode</a>
+                                    </p>
+                                    <div style="display: none;" data-mc-target-name="TOGAnalogAcquisitionMode">
+                                        <p class="Table">Gets or sets the mode used for analog input acquisition.</p>
+                                        <p class="Table"><span class="bold">Syntax</span>: <span class="SourceCode">object.AnalogAcquisitionMode</span></p>
+                                    </div>
+                                    <p class="TableTextSmall"><span class="bold">For IOpiggy devices only!</span>
+                                    </p>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <p class="Table">15 SP2</p>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <div>
+                                        <p class="TableTextSmall"><span class="Product">CANalyzer</span>
+                                        </p>
+                                        <p class="TableTextSmall"><span class="Product">CANoe&#160;DE</span>
+                                        </p>
+                                        <p class="TableTextSmall"><span class="Product">CANoe4SW&#160;DE</span>
+                                        </p>
+                                    </div>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <p class="Table">Type: ENUM</p>
+                                    <p class="Table">eIOAcquisitionTypes; <a class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler togglerBlackUnderline MCTogglerHotSpot_ MCTogglerHotSpot_BlackUnderline MCHotSpotImage" targets="TOGAnalogAcquisitionMode" href="javascript:void(0)" data-mc-targets="TOGAnalogAcquisitionMode"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />possible values</a>:</p>
+                                    <div style="display: none;" data-mc-target-name="TOGAnalogAcquisitionMode">
+                                        <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableLight.css');" class="TableStyle-vTableLight" cellspacing="0">
+                                            <col class="TableStyle-vTableLight-Column-Column1" />
+                                            <col class="TableStyle-vTableLight-Column-Column1" />
+                                            <tbody>
+                                                <tr class="TableStyle-vTableLight-Body-Body1">
+                                                    <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                        <p class="TableBold">cAcquisitionCyclic (0)</p>
+                                                    </td>
+                                                    <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                        <p class="Table">Values are acquired cyclically.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-vTableLight-Body-Body1">
+                                                    <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                        <p class="TableBold">cAcquisitionDigitalTrigger (1)</p>
+                                                    </td>
+                                                    <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                        <p class="Table">Values are acquired via the digital trigger.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-vTableLight-Body-Body1">
+                                                    <td class="TableStyle-vTableLight-BodyB-Column1-Body1">
+                                                        <p class="TableBold">cAcquisitionAnalogTrigger (2)</p>
+                                                    </td>
+                                                    <td class="TableStyle-vTableLight-BodyA-Column1-Body1">
+                                                        <p class="Table">Values are acquired via the analog trigger.</p>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                    <p class="Table">—</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <p class="TableBold"><a name="kanchor665"></a><a name="BMAnalogTriggerEdge" id="BMAnalogTriggerEdge"></a><a class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler togglerBoldBlackUnderline MCTogglerHotSpot_ MCTogglerHotSpot_BoldBlackUnderline MCHotSpotImage" targets="TOGAnalogTriggerEdge" href="javascript:void(0)" data-mc-targets="TOGAnalogTriggerEdge"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />AnalogTriggerEdge</a>
+                                    </p>
+                                    <div style="display: none;" data-mc-target-name="TOGAnalogTriggerEdge">
+                                        <p class="Table">Gets or sets the types of edges that trigger an analog acquisition.</p>
+                                        <p class="Table"><span class="bold">Syntax</span>: <span class="SourceCode">object.AnalogTriggerEdge</span></p>
+                                    </div>
+                                    <p class="TableTextSmall"><span class="bold">For IOpiggy devices only!</span>
+                                    </p>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <p class="Table">15 SP2</p>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <div>
+                                        <p class="TableTextSmall"><span class="Product">CANalyzer</span>
+                                        </p>
+                                        <p class="TableTextSmall"><span class="Product">CANoe&#160;DE</span>
+                                        </p>
+                                        <p class="TableTextSmall"><span class="Product">CANoe4SW&#160;DE</span>
+                                        </p>
+                                    </div>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <p class="Table">Type: ENUM</p>
+                                    <p class="Table">eIOAcquisitionTypes; <a class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler togglerBlackUnderline MCTogglerHotSpot_ MCTogglerHotSpot_BlackUnderline MCHotSpotImage" targets="TOGAnalogTriggerEdge" href="javascript:void(0)" data-mc-targets="TOGAnalogTriggerEdge"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />possible values</a>:</p>
+                                    <div style="display: none;" data-mc-target-name="TOGAnalogTriggerEdge">
+                                        <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableLight.css');" class="TableStyle-vTableLight" cellspacing="0">
+                                            <col class="TableStyle-vTableLight-Column-Column1" />
+                                            <col class="TableStyle-vTableLight-Column-Column1" />
+                                            <tbody>
+                                                <tr class="TableStyle-vTableLight-Body-Body1">
+                                                    <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                        <p class="TableBold">cEdgeRising (0)</p>
+                                                    </td>
+                                                    <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                        <p class="Table">A rising edge triggers the acquisition.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-vTableLight-Body-Body1">
+                                                    <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                        <p class="TableBold">cEdgeFalling (1)</p>
+                                                    </td>
+                                                    <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                        <p class="Table">A falling edge triggers the acquisition.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-vTableLight-Body-Body1">
+                                                    <td class="TableStyle-vTableLight-BodyB-Column1-Body1">
+                                                        <p class="TableBold">cEdgeBoth (2)</p>
+                                                    </td>
+                                                    <td class="TableStyle-vTableLight-BodyA-Column1-Body1">
+                                                        <p class="Table">Both edges trigger the acquisition.</p>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                    <p class="Table">—</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <p class="TableBold"><a name="kanchor666"></a><a name="BMAnalogTriggerLevel" id="BMAnalogTriggerLevel"></a><a class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler togglerBoldBlackUnderline MCTogglerHotSpot_ MCTogglerHotSpot_BoldBlackUnderline MCHotSpotImage" targets="TOGAnalogTriggerLevel" href="javascript:void(0)" data-mc-targets="TOGAnalogTriggerLevel"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />AnalogTriggerLevel</a>
+                                    </p>
+                                    <div style="display: none;" data-mc-target-name="TOGAnalogTriggerLevel">
+                                        <p class="Table">The trigger level in volts for analog acquisition.</p>
+                                        <p class="Table"><span class="bold">Syntax</span>: <span class="SourceCode">object.AnalogTriggerLevel</span></p>
+                                    </div>
+                                    <p class="TableTextSmall"><span class="bold">For IOpiggy devices only!</span>
+                                    </p>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <p class="Table">15 SP2</p>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <div>
+                                        <p class="TableTextSmall"><span class="Product">CANalyzer</span>
+                                        </p>
+                                        <p class="TableTextSmall"><span class="Product">CANoe&#160;DE</span>
+                                        </p>
+                                        <p class="TableTextSmall"><span class="Product">CANoe4SW&#160;DE</span>
+                                        </p>
+                                    </div>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <p class="Table">Type: DOUBLE</p>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                    <p class="Table">—</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <p class="TableBold"><a name="kanchor667"></a><a name="BMCycleTime" id="BMCycleTime"></a><a class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler togglerBoldBlackUnderline MCTogglerHotSpot_ MCTogglerHotSpot_BoldBlackUnderline MCHotSpotImage" targets="TOGCycleTime" href="javascript:void(0)" data-mc-targets="TOGCycleTime"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />CycleTime</a>
+                                    </p>
+                                    <div style="display: none;" data-mc-target-name="TOGCycleTime">
+                                        <p class="Table">The cycle time of the measurement value acquisition in seconds.</p>
+                                        <p class="Table"><span class="bold">Syntax</span>: <span class="SourceCode">object.CycleTime</span></p>
+                                    </div>
+                                    <p class="TableTextSmall">(see example below)</p>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <p class="Table">15 SP2</p>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <div>
+                                        <p class="TableTextSmall"><span class="Product">CANalyzer</span>
+                                        </p>
+                                        <p class="TableTextSmall"><span class="Product">CANoe&#160;DE</span>
+                                        </p>
+                                        <p class="TableTextSmall"><span class="Product">CANoe4SW&#160;DE</span>
+                                        </p>
+                                    </div>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <p class="Table">Type: DOUBLE</p>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                    <p class="Table">—</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <p class="TableBold"><a name="kanchor668"></a><a name="BMDigitalAcquisitionMode" id="BMDigitalAcquisitionMode"></a><a class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler togglerBoldBlackUnderline MCTogglerHotSpot_ MCTogglerHotSpot_BoldBlackUnderline MCHotSpotImage" targets="TOGDigitalAcquisitionMode" href="javascript:void(0)" data-mc-targets="TOGDigitalAcquisitionMode"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />DigitalAcquisitionMode</a>
+                                    </p>
+                                    <div style="display: none;" data-mc-target-name="TOGDigitalAcquisitionMode">
+                                        <p class="Table">Gets or sets the mode used for digital input acquisition.</p>
+                                        <p class="Table"><span class="bold">Syntax</span>: <span class="SourceCode">object.DigitalAcquisitionMode</span></p>
+                                    </div>
+                                    <p class="TableTextSmall"><span class="bold">For IOpiggy devices only!</span>
+                                    </p>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <p class="Table">15 SP2</p>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <div>
+                                        <p class="TableTextSmall"><span class="Product">CANalyzer</span>
+                                        </p>
+                                        <p class="TableTextSmall"><span class="Product">CANoe&#160;DE</span>
+                                        </p>
+                                        <p class="TableTextSmall"><span class="Product">CANoe4SW&#160;DE</span>
+                                        </p>
+                                    </div>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <p class="Table">Type: ENUM</p>
+                                    <p class="Table">eIOAcquisitionTypes; <a class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler togglerBlackUnderline MCTogglerHotSpot_ MCTogglerHotSpot_BlackUnderline MCHotSpotImage" targets="TOGDigitalAcquisitionMode" href="javascript:void(0)" data-mc-targets="TOGDigitalAcquisitionMode"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />possible values</a>:</p>
+                                    <div style="display: none;" data-mc-target-name="TOGDigitalAcquisitionMode">
+                                        <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableLight.css');" class="TableStyle-vTableLight" cellspacing="0">
+                                            <col class="TableStyle-vTableLight-Column-Column1" />
+                                            <col class="TableStyle-vTableLight-Column-Column1" />
+                                            <tbody>
+                                                <tr class="TableStyle-vTableLight-Body-Body1">
+                                                    <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                        <p class="TableBold">cAcquisitionCyclic (0)</p>
+                                                    </td>
+                                                    <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                        <p class="Table">Values are acquired cyclically.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-vTableLight-Body-Body1">
+                                                    <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                        <p class="TableBold">cAcquisitionDigitalTrigger (1)</p>
+                                                    </td>
+                                                    <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                        <p class="Table">Values are acquired via the digital trigger.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-vTableLight-Body-Body1">
+                                                    <td class="TableStyle-vTableLight-BodyB-Column1-Body1">
+                                                        <p class="TableBold">cAcquisitionAnalogTrigger (2)</p>
+                                                    </td>
+                                                    <td class="TableStyle-vTableLight-BodyA-Column1-Body1">
+                                                        <p class="Table">Values are acquired via the analog trigger.</p>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                    <p class="Table">—</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <p class="TableBold"><a name="kanchor669"></a><a name="BMDigitalTriggerEdge" id="BMDigitalTriggerEdge"></a><a class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler togglerBoldBlackUnderline MCTogglerHotSpot_ MCTogglerHotSpot_BoldBlackUnderline MCHotSpotImage" targets="TOGDigitalTriggerEdge" href="javascript:void(0)" data-mc-targets="TOGDigitalTriggerEdge"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />DigitalTriggerEdge</a>
+                                    </p>
+                                    <div style="display: none;" data-mc-target-name="TOGDigitalTriggerEdge">
+                                        <p class="Table">Gets or sets the types of edges that trigger an digital acquisition.</p>
+                                        <p class="Table"><span class="bold">Syntax</span>: <span class="SourceCode">object.DigitalTriggerEdge</span></p>
+                                    </div>
+                                    <p class="TableTextSmall"><span class="bold">For IOpiggy devices only!</span>
+                                    </p>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <p class="Table">15 SP2</p>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <div>
+                                        <p class="TableTextSmall"><span class="Product">CANalyzer</span>
+                                        </p>
+                                        <p class="TableTextSmall"><span class="Product">CANoe&#160;DE</span>
+                                        </p>
+                                        <p class="TableTextSmall"><span class="Product">CANoe4SW&#160;DE</span>
+                                        </p>
+                                    </div>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <p class="Table">Type: ENUM</p>
+                                    <p class="Table">eIOAcquisitionTypes; <a class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler togglerBlackUnderline MCTogglerHotSpot_ MCTogglerHotSpot_BlackUnderline MCHotSpotImage" targets="TOGDigitalTriggerEdge" href="javascript:void(0)" data-mc-targets="TOGDigitalTriggerEdge"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />possible values</a>:</p>
+                                    <div style="display: none;" data-mc-target-name="TOGDigitalTriggerEdge">
+                                        <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableLight.css');" class="TableStyle-vTableLight" cellspacing="0">
+                                            <col class="TableStyle-vTableLight-Column-Column1" />
+                                            <col class="TableStyle-vTableLight-Column-Column1" />
+                                            <tbody>
+                                                <tr class="TableStyle-vTableLight-Body-Body1">
+                                                    <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                        <p class="TableBold">cEdgeRising (0)</p>
+                                                    </td>
+                                                    <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                        <p class="Table">A rising edge triggers the acquisition.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-vTableLight-Body-Body1">
+                                                    <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                        <p class="TableBold">cEdgeFalling (1)</p>
+                                                    </td>
+                                                    <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                        <p class="Table">A falling edge triggers the acquisition.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-vTableLight-Body-Body1">
+                                                    <td class="TableStyle-vTableLight-BodyB-Column1-Body1">
+                                                        <p class="TableBold">cEdgeBoth (2)</p>
+                                                    </td>
+                                                    <td class="TableStyle-vTableLight-BodyA-Column1-Body1">
+                                                        <p class="Table">Both edges trigger the acquisition.</p>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                    <p class="Table">—</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <p class="TableBold"><a name="kanchor670"></a><a name="BMDigitalTriggerOnPin1" id="BMDigitalTriggerOnPin1"></a><a class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler togglerBoldBlackUnderline MCTogglerHotSpot_ MCTogglerHotSpot_BoldBlackUnderline MCHotSpotImage" targets="TOGDigitalTriggerOnPin1" href="javascript:void(0)" data-mc-targets="TOGDigitalTriggerOnPin1"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />DigitalTriggerOnPin1</a>
+                                    </p>
+                                    <div style="display: none;" data-mc-target-name="TOGDigitalTriggerOnPin1">
+                                        <p class="Table">If enabled, pin 1 will be used as a digital trigger source.</p>
+                                        <p class="Table"><span class="bold">Syntax</span>: <span class="SourceCode">object.DigitalTriggerOnPin1</span></p>
+                                    </div>
+                                    <p class="TableTextSmall"><span class="bold">For IOpiggy devices only!</span>
+                                    </p>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <p class="Table">15 SP2</p>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <div>
+                                        <p class="TableTextSmall"><span class="Product">CANalyzer</span>
+                                        </p>
+                                        <p class="TableTextSmall"><span class="Product">CANoe&#160;DE</span>
+                                        </p>
+                                        <p class="TableTextSmall"><span class="Product">CANoe4SW&#160;DE</span>
+                                        </p>
+                                    </div>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <p class="Table">Type: BOOL</p>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                    <p class="Table">—</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <p class="TableBold"><a name="kanchor671"></a><a name="BMDigitalTriggerOnPin2" id="BMDigitalTriggerOnPin2"></a><a class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler togglerBoldBlackUnderline MCTogglerHotSpot_ MCTogglerHotSpot_BoldBlackUnderline MCHotSpotImage" targets="TOGDigitalTriggerOnPin2" href="javascript:void(0)" data-mc-targets="TOGDigitalTriggerOnPin2"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />DigitalTriggerOnPin2</a>
+                                    </p>
+                                    <div style="display: none;" data-mc-target-name="TOGDigitalTriggerOnPin2">
+                                        <p class="Table">If enabled, pin 2 will be used as a digital trigger source.</p>
+                                        <p class="Table"><span class="bold">Syntax</span>: <span class="SourceCode">object.DigitalTriggerOnPin2</span></p>
+                                    </div>
+                                    <p class="TableTextSmall"><span class="bold">For IOpiggy devices only!</span>
+                                    </p>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <p class="Table">15 SP2</p>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <div>
+                                        <p class="TableTextSmall"><span class="Product">CANalyzer</span>
+                                        </p>
+                                        <p class="TableTextSmall"><span class="Product">CANoe&#160;DE</span>
+                                        </p>
+                                        <p class="TableTextSmall"><span class="Product">CANoe4SW&#160;DE</span>
+                                        </p>
+                                    </div>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <p class="Table">Type: BOOL</p>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                    <p class="Table">—</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <p class="TableBold"><a name="kanchor672"></a><a name="BMDigitalTriggerOnPin3" id="BMDigitalTriggerOnPin3"></a><a class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler togglerBoldBlackUnderline MCTogglerHotSpot_ MCTogglerHotSpot_BoldBlackUnderline MCHotSpotImage" targets="TOGDigitalTriggerOnPin3" href="javascript:void(0)" data-mc-targets="TOGDigitalTriggerOnPin3"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />DigitalTriggerOnPin3</a>
+                                    </p>
+                                    <div style="display: none;" data-mc-target-name="TOGDigitalTriggerOnPin3">
+                                        <p class="Table">If enabled, pin 3 will be used as a digital trigger source.</p>
+                                        <p class="Table"><span class="bold">Syntax</span>: <span class="SourceCode">object.DigitalTriggerOnPin3</span></p>
+                                    </div>
+                                    <p class="TableTextSmall"><span class="bold">For IOpiggy devices only!</span>
+                                    </p>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <p class="Table">15 SP2</p>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <div>
+                                        <p class="TableTextSmall"><span class="Product">CANalyzer</span>
+                                        </p>
+                                        <p class="TableTextSmall"><span class="Product">CANoe&#160;DE</span>
+                                        </p>
+                                        <p class="TableTextSmall"><span class="Product">CANoe4SW&#160;DE</span>
+                                        </p>
+                                    </div>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <p class="Table">Type: BOOL</p>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                    <p class="Table">—</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <p class="TableBold"><a name="kanchor673"></a><a name="BMDigitalTriggerOnPin4" id="BMDigitalTriggerOnPin4"></a><a class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler togglerBoldBlackUnderline MCTogglerHotSpot_ MCTogglerHotSpot_BoldBlackUnderline MCHotSpotImage" targets="TOGDigitalTriggerOnPin4" href="javascript:void(0)" data-mc-targets="TOGDigitalTriggerOnPin4"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />DigitalTriggerOnPin4</a>
+                                    </p>
+                                    <div style="display: none;" data-mc-target-name="TOGDigitalTriggerOnPin4">
+                                        <p class="Table">If enabled, pin 4 will be used as a digital trigger source.</p>
+                                        <p class="Table"><span class="bold">Syntax</span>: <span class="SourceCode">object.DigitalTriggerOnPin4</span></p>
+                                    </div>
+                                    <p class="TableTextSmall"><span class="bold">For IOpiggy devices only!</span>
+                                    </p>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <p class="Table">15 SP2</p>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <div>
+                                        <p class="TableTextSmall"><span class="Product">CANalyzer</span>
+                                        </p>
+                                        <p class="TableTextSmall"><span class="Product">CANoe&#160;DE</span>
+                                        </p>
+                                        <p class="TableTextSmall"><span class="Product">CANoe4SW&#160;DE</span>
+                                        </p>
+                                    </div>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <p class="Table">Type: BOOL</p>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                    <p class="Table">—</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <p class="TableBold"><a name="kanchor674"></a><a name="BMDigitalTriggerOnPin9" id="BMDigitalTriggerOnPin9"></a><a class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler togglerBoldBlackUnderline MCTogglerHotSpot_ MCTogglerHotSpot_BoldBlackUnderline MCHotSpotImage" targets="TOGDigitalTriggerOnPin9" href="javascript:void(0)" data-mc-targets="TOGDigitalTriggerOnPin9"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />DigitalTriggerOnPin9</a>
+                                    </p>
+                                    <div style="display: none;" data-mc-target-name="TOGDigitalTriggerOnPin9">
+                                        <p class="Table">If enabled, pin 9 will be used as a digital trigger source.</p>
+                                        <p class="Table"><span class="bold">Syntax</span>: <span class="SourceCode">object.DigitalTriggerOnPin9</span></p>
+                                    </div>
+                                    <p class="TableTextSmall"><span class="bold">For IOpiggy devices only!</span>
+                                    </p>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <p class="Table">15 SP2</p>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <div>
+                                        <p class="TableTextSmall"><span class="Product">CANalyzer</span>
+                                        </p>
+                                        <p class="TableTextSmall"><span class="Product">CANoe&#160;DE</span>
+                                        </p>
+                                        <p class="TableTextSmall"><span class="Product">CANoe4SW&#160;DE</span>
+                                        </p>
+                                    </div>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <p class="Table">Type: BOOL</p>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                    <p class="Table">—</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <p class="TableBold"><a name="kanchor675"></a><a name="BMDigitalTriggerOnPin10" id="BMDigitalTriggerOnPin10"></a><a class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler togglerBoldBlackUnderline MCTogglerHotSpot_ MCTogglerHotSpot_BoldBlackUnderline MCHotSpotImage" targets="TOGDigitalTriggerOnPin10" href="javascript:void(0)" data-mc-targets="TOGDigitalTriggerOnPin10"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />DigitalTriggerOnPin10</a>
+                                    </p>
+                                    <div style="display: none;" data-mc-target-name="TOGDigitalTriggerOnPin10">
+                                        <p class="Table">If enabled, pin 10 will be used as a digital trigger source.</p>
+                                        <p class="Table"><span class="bold">Syntax</span>: <span class="SourceCode">object.DigitalTriggerOnPin10</span></p>
+                                    </div>
+                                    <p class="TableTextSmall"><span class="bold">For IOpiggy devices only!</span>
+                                    </p>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <p class="Table">15 SP2</p>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <div>
+                                        <p class="TableTextSmall"><span class="Product">CANalyzer</span>
+                                        </p>
+                                        <p class="TableTextSmall"><span class="Product">CANoe&#160;DE</span>
+                                        </p>
+                                        <p class="TableTextSmall"><span class="Product">CANoe4SW&#160;DE</span>
+                                        </p>
+                                    </div>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <p class="Table">Type: BOOL</p>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                    <p class="Table">—</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <p class="TableBold"><a name="kanchor676"></a><a name="BMDigitalTriggerOnPin11" id="BMDigitalTriggerOnPin11"></a><a class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler togglerBoldBlackUnderline MCTogglerHotSpot_ MCTogglerHotSpot_BoldBlackUnderline MCHotSpotImage" targets="TOGDigitalTriggerOnPin11" href="javascript:void(0)" data-mc-targets="TOGDigitalTriggerOnPin11"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />DigitalTriggerOnPin11</a>
+                                    </p>
+                                    <div style="display: none;" data-mc-target-name="TOGDigitalTriggerOnPin11">
+                                        <p class="Table">If enabled, pin 11 will be used as a digital trigger source.</p>
+                                        <p class="Table"><span class="bold">Syntax</span>: <span class="SourceCode">object.DigitalTriggerOnPin11</span></p>
+                                    </div>
+                                    <p class="TableTextSmall"><span class="bold">For IOpiggy devices only!</span>
+                                    </p>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <p class="Table">15 SP2</p>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <div>
+                                        <p class="TableTextSmall"><span class="Product">CANalyzer</span>
+                                        </p>
+                                        <p class="TableTextSmall"><span class="Product">CANoe&#160;DE</span>
+                                        </p>
+                                        <p class="TableTextSmall"><span class="Product">CANoe4SW&#160;DE</span>
+                                        </p>
+                                    </div>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <p class="Table">Type: BOOL</p>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                    <p class="Table">—</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <p class="TableBold"><a name="kanchor677"></a><a name="BMDigitalTriggerOnPin12" id="BMDigitalTriggerOnPin12"></a><a class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler togglerBoldBlackUnderline MCTogglerHotSpot_ MCTogglerHotSpot_BoldBlackUnderline MCHotSpotImage" targets="TOGDigitalTriggerOnPin12" href="javascript:void(0)" data-mc-targets="TOGDigitalTriggerOnPin12"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />DigitalTriggerOnPin12</a>
+                                    </p>
+                                    <div style="display: none;" data-mc-target-name="TOGDigitalTriggerOnPin12">
+                                        <p class="Table">If enabled, pin 12 will be used as a digital trigger source.</p>
+                                        <p class="Table"><span class="bold">Syntax</span>: <span class="SourceCode">object.DigitalTriggerOnPin12</span></p>
+                                    </div>
+                                    <p class="TableTextSmall"><span class="bold">For IOpiggy devices only!</span>
+                                    </p>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <p class="Table">15 SP2</p>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <div>
+                                        <p class="TableTextSmall"><span class="Product">CANalyzer</span>
+                                        </p>
+                                        <p class="TableTextSmall"><span class="Product">CANoe&#160;DE</span>
+                                        </p>
+                                        <p class="TableTextSmall"><span class="Product">CANoe4SW&#160;DE</span>
+                                        </p>
+                                    </div>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <p class="Table">Type: BOOL</p>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                    <p class="Table">—</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <p class="TableBold"><a name="kanchor678"></a><a name="BMPWMAcquisitionMode" id="BMPWMAcquisitionMode"></a><a class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler togglerBoldBlackUnderline MCTogglerHotSpot_ MCTogglerHotSpot_BoldBlackUnderline MCHotSpotImage" targets="TOGPWMAcquisitionMode" href="javascript:void(0)" data-mc-targets="TOGPWMAcquisitionMode"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />PWMAcquisitionMode</a>
+                                    </p>
+                                    <div style="display: none;" data-mc-target-name="TOGPWMAcquisitionMode">
+                                        <p class="Table">Gets or sets the mode used for PWM acquisition.</p>
+                                        <p class="Table"><span class="bold">Syntax</span>: <span class="SourceCode">object.PWMAcquisitionMode</span></p>
+                                    </div>
+                                    <p class="TableTextSmall"><span class="bold">For IOpiggy devices only!</span>
+                                    </p>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <p class="Table">15 SP2</p>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <div>
+                                        <p class="TableTextSmall"><span class="Product">CANalyzer</span>
+                                        </p>
+                                        <p class="TableTextSmall"><span class="Product">CANoe&#160;DE</span>
+                                        </p>
+                                        <p class="TableTextSmall"><span class="Product">CANoe4SW&#160;DE</span>
+                                        </p>
+                                    </div>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <p class="Table">Type: ENUM</p>
+                                    <p class="Table">eIOAcquisitionTypes; <a class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler togglerBlackUnderline MCTogglerHotSpot_ MCTogglerHotSpot_BlackUnderline MCHotSpotImage" targets="TOGPWMAcquisitionMode" href="javascript:void(0)" data-mc-targets="TOGPWMAcquisitionMode"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />possible values</a>:</p>
+                                    <div style="display: none;" data-mc-target-name="TOGPWMAcquisitionMode">
+                                        <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableLight.css');" class="TableStyle-vTableLight" cellspacing="0">
+                                            <col class="TableStyle-vTableLight-Column-Column1" />
+                                            <col class="TableStyle-vTableLight-Column-Column1" />
+                                            <tbody>
+                                                <tr class="TableStyle-vTableLight-Body-Body1">
+                                                    <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                        <p class="TableBold">cAcquisitionCyclic (0)</p>
+                                                    </td>
+                                                    <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                        <p class="Table">Values are acquired cyclically.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-vTableLight-Body-Body1">
+                                                    <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                        <p class="TableBold">cAcquisitionDigitalTrigger (1)</p>
+                                                    </td>
+                                                    <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                        <p class="Table">Values are acquired via the digital trigger.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-vTableLight-Body-Body1">
+                                                    <td class="TableStyle-vTableLight-BodyB-Column1-Body1">
+                                                        <p class="TableBold">cAcquisitionAnalogTrigger (2)</p>
+                                                    </td>
+                                                    <td class="TableStyle-vTableLight-BodyA-Column1-Body1">
+                                                        <p class="Table">Values are acquired via the analog trigger.</p>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                    <p class="Table">—</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                <td class="TableStyle-vTableLight-BodyB-Column1-Body1">
+                                    <p class="TableBold"><a name="kanchor679"></a><a name="BMUpdateOnValueChange" id="BMUpdateOnValueChange"></a><a class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler togglerBoldBlackUnderline MCTogglerHotSpot_ MCTogglerHotSpot_BoldBlackUnderline MCHotSpotImage" targets="TOGUpdateOnValueChange" href="javascript:void(0)" data-mc-targets="TOGUpdateOnValueChange"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />UpdateOnValueChange</a>
+                                    </p>
+                                    <div style="display: none;" data-mc-target-name="TOGUpdateOnValueChange">
+                                        <p class="Table">When this flag is set additional measurement values will be captured whenever the inputs change.</p>
+                                        <p class="Table"><span class="bold">Syntax</span>: <span class="SourceCode">object.UpdateOnValueChange</span></p>
+                                    </div>
+                                    <p class="TableTextSmall">(see example below)</p>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyB-Column1-Body1">
+                                    <p class="Table">15 SP2</p>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyB-Column1-Body1">
+                                    <div>
+                                        <p class="TableTextSmall"><span class="Product">CANalyzer</span>
+                                        </p>
+                                        <p class="TableTextSmall"><span class="Product">CANoe&#160;DE</span>
+                                        </p>
+                                        <p class="TableTextSmall"><span class="Product">CANoe4SW&#160;DE</span>
+                                        </p>
+                                    </div>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyB-Column1-Body1">
+                                    <p class="Table">Type: BOOL</p>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyA-Column1-Body1">
+                                    <p class="Table">—</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <h2 class="CommandPage">Methods</h2>
+                    <p>—</p>
+                </div>
+                <div>
+                    <h2 class="CommandPage">Events</h2>
+                    <p>—</p>
+                </div>
+                <div>
+                    <h2 class="CommandPage">Example</h2>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                    <p class="Table">
+                                        <img src="../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                    </p>
+                                </td>
+                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                    <p class="TableSymbolHead">Example — General</p>
+                                    <div class="codeSnippet"><a class="codeSnippetCopyButton" role="button" href="javascript:void(0);">Copy</a>
+                                        <div class="codeSnippetCaption">
+                                            <p>The following example written in <span class="Product">PowerShell</span> shows how to configure the acquisition a Vector I/O device:</p>
+                                        </div>
+                                        <div style="mc-code-lang: PowerShell;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code><span style="color: #969896; "># Get the Vector I/O configuration instance</span><br /><span style="font-weight: bold; ">$App</span>&#160;&#160;&#160;&#160;&#160;&#160;= <span style="color: #a71d5d; font-weight: bold; ">New-Object</span> -ComObject &lt;product COM name&gt;.Application<br /><span style="font-weight: bold; ">$vectorIO</span> = App.Configuration.IOHardware.VectorIO<br /><br /><span style="color: #969896; "># Add an VN1630 I/O to the configuration and put it in custom mode</span><br /><span style="font-weight: bold; ">$vn1630io</span> = <span style="font-weight: bold; ">$vectorIO</span>.Devices.Add(<span style="color: #333333; ">3</span>)<br /><span style="font-weight: bold; ">$vn1630io</span>.Mode = <span style="color: #333333; ">2</span> <span style="color: #969896; "># Custom</span><br /><br /><span style="color: #969896; "># Configure the acquisition</span><br /><span style="font-weight: bold; ">$vn1630io</span>.Acquisition.CycleTime = <span style="color: #333333; ">0.01</span> <span style="color: #969896; "># 10ms</span><br /><span style="font-weight: bold; ">$vn1630io</span>.Acquisition.UpdateOnValueChange = <span style="font-weight: bold; ">$true</span></code></pre>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <h2 class="CommandPage">Object Availability</h2>
+                    <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableLight.css');" class="TableStyle-vTableLight" cellspacing="0">
+                        <col class="TableStyle-vTableLight-Column-Column1" />
+                        <col class="TableStyle-vTableLight-Column-Column1" data-mc-conditions="" />
+                        <col class="TableStyle-vTableLight-Column-Column1" data-mc-conditions="" />
+                        <col class="TableStyle-vTableLight-Column-Column1" data-mc-conditions="" />
+                        <col class="TableStyle-vTableLight-Column-Column1" data-mc-conditions="" />
+                        <col class="TableStyle-vTableLight-Column-Column1" data-mc-conditions="" />
+                        <tbody>
+                            <tr class="TableStyle-vTableLight-Body-Body1" data-mc-conditions="">
+                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <p class="TableHead">&#160;</p>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <p class="TableHead">CANalyzer</p>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <p class="TableHead">CANoe&#160;DE</p>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <p class="TableHead">CANoe4SW&#160;DE</p>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <p class="TableHead">CANoe:lite&#160;DE</p>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                    <p class="TableHead">CANoe4SW:lite&#160;DE</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                <td class="TableStyle-vTableLight-BodyB-Column1-Body1">
+                                    <p class="TableHead">Introduced<br />in version</p>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyB-Column1-Body1">
+                                    <p class="Table">15 SP2</p>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyB-Column1-Body1">
+                                    <p class="Table">15 SP2</p>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyB-Column1-Body1">
+                                    <p class="Table">18</p>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyB-Column1-Body1">
+                                    <p class="Table">—</p>
+                                </td>
+                                <td class="TableStyle-vTableLight-BodyA-Column1-Body1">
+                                    <p class="Table">—</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="LinkList"><a href="../COMObjectHierarchy.htm" class="LinkList MCXref xref xrefLinkList">COM Object Hierarchy</a>
+                </p>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="FooterWhite">
+                <table class="FooterWhite" style="border-collapse: collapse;margin-left: auto;margin-right: auto;">
+                    <col style="width: 70px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col style="width: 16px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col data-mc-conditions="" />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="buttons popup-container clearfix topicToolbarProxy topicToolbarProxyFooter _Skins_HTML5TopicToolbar mc-component nocontent">
+                                    <div class="button-group-container-left">
+                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo"><a href="../../Shared/HowToUseOnlineHelp.htm" title="Tips for using the help" alt="Tips for using the help"><img src="../../../Resources/vImages/vBackstage/vHelpInfo.png" /></a>
+                                </p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo">•&#160;&#160;Technical&#160;References are only&#160;available&#160;in&#160;English</p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo" style="text-align: right;"><span class="mc-variable Vector.BuildTime variable">2024-04-8T20:56:42</span>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <table style="width: 100%;border-collapse: separate;border-spacing: 3px 0px;margin-left: auto;margin-right: auto;caption-side: top;">
+                <col />
+                <col />
+                <col />
+                <col data-mc-conditions="BuildProcess.HTML5Link" />
+                <tbody>
+                    <tr>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;">
+                            <p class="vec_Footer">©&#160;Vector Informatik GmbH</p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;text-align: right;">
+                            <p class="vec_FooterBold">
+                                <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE&#160;Product Families</MadCap:conditionalText> Version <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.VectorTestUnitRunner">18</MadCap:conditionalText></p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="../../Shared/ContactCopyrightLicense.htm" class="vec_Footer MCXref xref xrefvec_Footer">Contact/Copyright/License</a>
+                            </p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="https://www.vector.com/int/en/company/get-info/privacy-policy/" target="_blank" class="vec_Footer">Data Privacy Notice</a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

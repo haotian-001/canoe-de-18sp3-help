@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="" data-mc-search-type="Stem" data-mc-help-system-file-name="CANoeDEFamily.xml" data-mc-path-to-help-system="../../../../" data-mc-conditions="Targets.CANoe-SE-Family,Targets.CANoe-DE-Family" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../Skins/Favicons/favicon-16x16.png" /><title>Basic Concepts (vCDL 2.0)</title>
+        <link href="../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Resources/Stylesheets/vTableMasterPageHeader.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../Resources/Stylesheets/vStylesheet.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../Resources/Stylesheets/vTableSymbol.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../Resources/Stylesheets/vTablePageTOC.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../Resources/Stylesheets/vTable.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../Resources/Stylesheets/vTableLight.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapGlobal.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapDom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapUtilities.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapXhr.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTextEffects.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSlideshow.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMessageBus.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMessageBus.CrossFrame.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapDefault.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMediaQueries.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAccessibility.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapHelpSystem.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAliasFile.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopicFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapFeedbackHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSkinHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.Breadcrumbs.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.MiniToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.SideMenu.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapIndex.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapGlossary.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapParser.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSearch.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapNavigateTopics.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapLms.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapELearning.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopic.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMicroContentComponent.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSearchHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopicElements.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTriPane.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/jscript" src="../../../Resources/vScripts/SyntaxHighlighting.js">
+        </script>
+        <script type="text/jscript" src="../../../Resources/vScripts/TabSwitch.js">
+        </script>
+        <script type="text/javascript" src="../../../Resources/vScripts/Vector.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../../CANoeDEFamily.htm#Topics/vCDL20/Concept/vCDLConcept.htm">Open topic with navigation</a>
+        </p>
+        <div class="Body">
+            <div role="main" id="mc-main-content">
+                <div>
+                    <p class="StructurePath"><a href="../../CANoeCANalyzer/CANoeDEFamily.htm" class="StructurePath" data-mc-conditions="Targets.CANoe-DE-Family"><img src="../../../Resources/vImages/vToolIcons/CANoeDEFamily_Icon16_15x15.png" alt="" style="width: 15;height: 15;" />&#160;CANoe&#160;DE&#160;Product&#160;Families</a> » <a href="../../vCDL/vCDLStartpage.htm" class="StructurePath">vCDL</a> » vCDL 2.0 » Basic Concepts</p>
+                    <h1>Basic Concepts</h1>
+                    <p class="MenuPath">&#160;</p>
+                    <p class="ToolAvailability" data-mc-conditions="BuildProcess.ToolAvailability"><a href="../../Shared/FeatureAvailability.htm" class="red" title="Feature availabilty for your product">Valid&#160;for</a>:&#160;&#160;CANoe&#160;DE<a name="aanchor31068"></a><MadCap:concept term="SFCANoeDE" />&#160;&#160;•&#160;&#160;CANoe:lite&#160;DE<a name="aanchor31069"></a><MadCap:concept term="SFCANoeLiteDE" />&#160;&#160;•&#160;&#160;CANoe4SW&#160;DE<a name="aanchor31070"></a><MadCap:concept term="SFCANoe4SWDE" />&#160;&#160;•&#160;&#160;CANoe4SW:lite&#160;DE<a name="aanchor31071"></a><MadCap:concept term="SFCANoe4SWLiteDE" /></p>
+                    <p class="AutoSearchFilterConcepts"><a name="aanchor31072"></a>
+                        <MadCap:concept term="SFvCDL" />
+                    </p>
+                    <p class="IndexConcept"><a name="kanchor10010"></a>
+                    </p>
+                </div>
+                <div class="NavTop" data-mc-conditions="BuildProcess.HTML5Link"><a href="../Language/vCDLAttributes.htm"><img src="../../../Resources/vImages/vBackstage/Next_Icon32.png" title="Nächstes Thema" /></a><a href="vCDLComparison.htm"><img src="../../../Resources/vImages/vBackstage/Previous_Icon32.png" title="Vorheriges Thema" /></a>
+                </div>
+                <p>This page covers concepts of vCDL that are either required to understand and write vCDL files in general or that appear repeatedly in various locations within vCDL. Some examples use syntactic elements that are covered in more detail in subsequent sections but are required for the example to function as such.</p>
+                <div>
+                    <p class="TableCOM"><a name="Shortcuts" id="Shortcuts"></a><span class="red">ON THIS&#160;PAGE:</span>
+                    </p>
+                    <table style="mc-table-style: url('../../../Resources/Stylesheets/vTablePageTOC.css');" class="TableStyle-vTablePageTOC" cellspacing="2">
+                        <col class="TableStyle-vTablePageTOC-Column-Column1" />
+                        <col class="TableStyle-vTablePageTOC-Column-Column1" />
+                        <tbody>
+                            <tr class="TableStyle-vTablePageTOC-Body-Body1">
+                                <td class="TableStyle-vTablePageTOC-BodyB-Column1-Body1">
+                                    <p class="PageTOC"><a href="#BMFileStructure" class="PageTOC">File Structure</a>
+                                    </p>
+                                    <p class="PageTOC"><a href="#BMIdentifiers" class="PageTOC">Identifiers</a>
+                                    </p>
+                                    <p class="PageTOC"><a href="#BMLiterals" class="PageTOC">Literals</a>
+                                    </p>
+                                    <p class="PageTOC"><a href="#BMNamespaces" class="PageTOC">Namespaces</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle-vTablePageTOC-BodyA-Column1-Body1">
+                                    <p class="PageTOC"><a href="#BMReferences" class="PageTOC">References</a>
+                                    </p>
+                                    <p class="PageTOC"><a href="#BMDirectives" class="PageTOC">Using Directives</a>
+                                    </p>
+                                    <p class="PageTOC"><a href="#BMExpressions" class="PageTOC">Expressions and Constant</a>s</p>
+                                    <p class="PageTOC"><a href="#BMOperator" class="PageTOC">Operator Precedence</a>
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h2 class="SectionMain"><a name="BMFileStructure" id="BMFileStructure"></a>File Structure <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                <p>Every vCDL file has the same basic structure consisting of a mandatory language version (currently always 2.0), optional import statements and optional content.</p>
+                <h2 class="SectionSub">Example</h2>
+                <p class="SourceCode"><span class="CodeComment">// Mandatory: The language version</span>
+                    <br /><span class="CodeKeyword">version</span> <span class="CodeNumericalLiteral">2</span>.<span class="CodeNumericalLiteral">0</span>;<br /><br /><span class="CodeComment">// Optional: Importing other files</span><br /><span class="CodeKeyword">import</span> <span class="CodeStringLiteral">"../Path/To/OtherFile.vcdl"</span>;<br /><br /><span class="CodeComment">// Optional: Importing a module (binding)</span><br /><span class="CodeKeyword">import module</span> <span class="CodeStringLiteral">"MQTT"</span>;<br /><br /><span class="CodeComment">// Optional: Top level namespace to host any artifacts</span><br /><span class="CodeKeyword">namespace</span> MyNamespace<br />{<br />&#160;&#160;<span class="CodeComment">// ...</span><br />}<br /><br /><span class="CodeComment">// Optional: Refinements</span><br />[<span class="CodeAttributeKey_Namespace">Binding</span>=<span class="CodeStringLiteral">"MQTT"</span>]<br /><span class="CodeKeyword">refine defaultnetwork</span>;</p>
+                <p>Both vCDL files and modules, a.k.a. bindings, can be imported. In contrast to the copy semantics of C/C++ preprocessor include directives, vCDL import statements just link source files together, meaning it is perfectly fine to have circular dependencies. Paths to imported files are always relative to the vCDL file that contains the import statement. Writing the imported filename without any path assumes that the file is in the same directory. We recommend using slashes as separator which are the default on Linux systems and work on Windows systems as well.</p>
+                <h2 class="SectionSub">Syntax</h2>
+                <table style="width: 100%;mc-table-style: url('../../../Resources/Stylesheets/vTableLight.css');" class="TableStyle-vTableLight" cellspacing="0">
+                    <col class="TableStyle-vTableLight-Column-Column1" style="width: 165px;" />
+                    <col class="TableStyle-vTableLight-Column-Column1" />
+                    <tbody>
+                        <tr class="TableStyle-vTableLight-Body-Body1">
+                            <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                <p class="TableSyntax">file:</p>
+                            </td>
+                            <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                <p class="TableSyntax">lang-version imports ( namespace | refinement | using-directive )*</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-vTableLight-Body-Body1">
+                            <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                <p class="TableSyntax">lang-version:</p>
+                            </td>
+                            <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                <p class="TableSyntax"><span class="Keyword">version</span> <span class="Keyword">2.0</span> <span class="Keyword">;</span></p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-vTableLight-Body-Body1">
+                            <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                <p class="TableSyntax">imports:</p>
+                            </td>
+                            <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                <p class="TableSyntax">import-stmt*</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-vTableLight-Body-Body1">
+                            <td class="TableStyle-vTableLight-BodyB-Column1-Body1">
+                                <p class="TableSyntax">import-stmt:</p>
+                            </td>
+                            <td class="TableStyle-vTableLight-BodyA-Column1-Body1">
+                                <p class="TableSyntax"><span class="Keyword">import</span> <span class="Keyword">module</span>? string-literal <span class="Keyword">;</span></p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h2 class="SectionMain"><a name="BMIdentifiers" id="BMIdentifiers"></a>Identifiers <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                <p>Identifiers appear very often within a vCDL file. They consist of one or more alphanumerical characters and/or underscores. A regular identifier may start only with a letter or an underscore. If an identifier shall start with a digit or a vCDL keyword shall be used as identifier, verbatim identifiers starting with the @-sign must be used.</p>
+                <div>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                    <p class="Table">
+                                        <img src="../../../Resources/vImages/vInfo.png" style="width: 48px;height: 45px;" title="Note" alt="Note" />
+                                    </p>
+                                </td>
+                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                    <p class="TableSymbolHead">Note</p>
+                                    <p class="Table">Upcoming vCDL 2.x versions may introduce new keywords which can cause conflicts with identifiers in existing vCDL files. If you encounter such problems, check the respective help for new features and use the replace function of your editor to put an @-sign in front of those identifiers.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h2 class="SectionSub">Example</h2>
+                <p class="SourceCode">MyName &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<span class="CodeComment">// Identifier with only letters</span><br />_My_Underscore_Name_5 <span class="CodeComment">// Identifier using letters, digits, and underscores</span><br />@42 &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<span class="CodeComment">// Verbatim identifier consisting only of digits (not allowed in CANoe)</span><br />@interface &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<span class="CodeComment">// Verbatim identifier to avoid conflicting a keyword</span></p>
+                <h2 class="SectionMain"><a name="BMLiterals" id="BMLiterals"></a>Literals <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                <p>Literals are used in many places within vCDL, e.g., for indexing elements in containers or to specify initial values for elements in the distributed object context. Literals can be specified for boolean, integer, float, time, string, container, and composite types.</p>
+                <h2 class="SectionSub">Example</h2>
+                <p class="SourceCode"><span class="CodeKeyword">false</span>
+                    <br /><span class="CodeKeyword">true</span>
+                    <br />
+                    <br /><span class="CodeNumericalLiteral">141</span>
+                    <br /><span class="CodeNumericalLiteral">0x8D</span> &#160;&#160;&#160;&#160;&#160;&#160;<span class="CodeComment">// 141 in hexadecimal representation</span><br /><span class="CodeNumericalLiteral">0b10001101</span> <span class="CodeComment">// 141 in binary representation</span><br /><span class="CodeNumericalLiteral">141E6</span> &#160;&#160;&#160;&#160;&#160;<span class="CodeComment">// 141000000</span><br /><br /><span class="CodeNumericalLiteral">23.6591796875</span><br /><span class="CodeNumericalLiteral">0.236591796875e2</span><br /><span class="CodeNumericalLiteral">0x5e.a3P-2</span> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<span class="CodeComment">// 23.6591796875 in hexadecimal representation</span><br /><span class="CodeNumericalLiteral">0b1011110.10100011p-2</span> <span class="CodeComment">// 23.6591796875 in binary representation</span><br /><br /><span class="CodeComment">// Allowed time units: h, min, s, ms, us, ns</span><br /><span class="CodeNumericalLiteral">6s</span><br /><span class="CodeNumericalLiteral">4.56e6 ns</span><br /><br /><span class="CodeStringLiteral">"A simple string"</span><br /><span class="CodeStringLiteral">"Escaped chars \0\a\b\f\n\r\t\v\\"</span><br /><span class="CodeStringLiteral">"Escaped unicode \u03A3"</span> <span class="CodeComment">// Unicode escape for Σ</span><br /><span class="CodeStringLiteral">"Escaped \"quotes\""</span><br />@<span class="CodeStringLiteral">"Verbatim\with\backslashes"</span><br /><br />{ <span class="CodeStringLiteral">"v1"</span>, <span class="CodeStringLiteral">"v2"</span>, <span class="CodeStringLiteral">"v3"</span> } &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<span class="CodeComment">// Full array/list literal</span><br />{ <span class="CodeNumericalLiteral">8</span>: <span class="CodeStringLiteral">"value"</span>, <span class="CodeNumericalLiteral">4</span>: <span class="CodeStringLiteral">"other value"</span> } <span class="CodeComment">// Sparse array/list literal</span><br />{ <span class="CodeStringLiteral">"StringValue"</span>, <span class="CodeKeyword">true</span>, <span class="CodeNumericalLiteral">8.5</span> } &#160;&#160;&#160;&#160;<span class="CodeComment">// Full struct literal</span><br />{ Member1: <span class="CodeKeyword">true</span>, Member3: <span class="CodeNumericalLiteral">5.6</span> } &#160;<span class="CodeComment">// Sparse struct literal</span><br />{ { <span class="CodeNumericalLiteral">1</span>, <span class="CodeNumericalLiteral">5</span> }, { <span class="CodeNumericalLiteral">3</span>, -<span class="CodeNumericalLiteral">6</span> } } &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<span class="CodeComment">// 2D full array/list literal</span><br />{ Member1: none, Member2: null } <span class="CodeComment">// Non-existing optional Member1 and null Member2</span></p>
+                <p>Integer and float literals are very similar and can be specified in either decimal, hexadecimal, or binary form. The exponent in scientific notation has base 10 (decimal) or base 2 (hexadecimal, binary). When the exponent is larger than there are fractional digits after the comma, the literal is considered an integer. By placing a time unit behind any numerical literal (with or without spacing) the literal becomes a time literal which is internally converted into nano seconds.</p>
+                <p>String literals may contain the well-known escape sequences including Unicode escapes for any UTF-16 symbol. Consequently, backslashes must be escaped using a double backslash. As strings are bounded by double quotes these need to be escaped as well to be used within a string literal. Verbatim string literals starting with the @-sign do not contain escape sequences and single backslashes stay single backslashes.</p>
+                <p>Complex literals are used to assign values to array, list, and struct typed elements. There are two variants: Full and sparse. Full literals must match the respective data type exactly meaning the array or list must be able to hold as many elements as specified in the literal. For structs a correctly typed value must be specified for each member including any optional members in the order they are defined within the struct type. Sparse literals allow assigning only some values where each value is proceeded by either the element’s index or the struct member’s name. According to the data type complex literals must be nested, e.g., when having array members in a struct type or a multidimensional array as shown in the example. Sparse and full literals can be nested in any combination.</p>
+                <p>Use <span class="SourceCode">none</span> to designate non-existence of an optional member and use <span class="SourceCode">null</span> for nullable types.</p>
+                <h2 class="SectionSub">Syntax</h2>
+                <table style="width: 100%;mc-table-style: url('../../../Resources/Stylesheets/vTableLight.css');" class="TableStyle-vTableLight" cellspacing="0">
+                    <col class="TableStyle-vTableLight-Column-Column1" style="width: 165px;" />
+                    <col class="TableStyle-vTableLight-Column-Column1" />
+                    <tbody>
+                        <tr class="TableStyle-vTableLight-Body-Body1">
+                            <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                <p class="TableSyntax">literal:</p>
+                            </td>
+                            <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                <p class="TableSyntax">bool-literal | number-literal | time-literal | string-literal| null-literal | none-literal</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-vTableLight-Body-Body1">
+                            <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                <p class="TableSyntax">bool-literal:</p>
+                            </td>
+                            <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                <p class="TableSyntax"><span class="Keyword">false</span> | <span class="Keyword">true</span></p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-vTableLight-Body-Body1">
+                            <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                <p class="TableSyntax">null-literal:</p>
+                            </td>
+                            <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                <p class="TableSyntax"><span class="Keyword">null</span>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-vTableLight-Body-Body1">
+                            <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                <p class="TableSyntax">none-literal:</p>
+                            </td>
+                            <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                <p class="TableSyntax"><span class="Keyword">none</span>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-vTableLight-Body-Body1">
+                            <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                <p class="TableSyntax">time-literal:</p>
+                            </td>
+                            <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                <p class="TableSyntax">number-literal ( <span class="Keyword">h</span> | <span class="Keyword">min</span> | <span class="Keyword">s</span> | <span class="Keyword">ms</span> | <span class="Keyword">us</span> | <span class="Keyword">ns</span> )</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-vTableLight-Body-Body1">
+                            <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                <p class="TableSyntax">number-literal:</p>
+                            </td>
+                            <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                <p class="TableSyntax">int-literal | float-literal</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-vTableLight-Body-Body1">
+                            <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                <p class="TableSyntax">int-literal:</p>
+                            </td>
+                            <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                <p class="TableSyntax">int-literal-bin | int-literal-dec | int-literal-hex</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-vTableLight-Body-Body1">
+                            <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                <p class="TableSyntax">int-literal-bin:</p>
+                            </td>
+                            <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                <p class="TableSyntax"><span class="Keyword">0b</span>(bin-digit)+((<span class="Keyword">p</span>|<span class="Keyword">P</span>)dec-digit+)?</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-vTableLight-Body-Body1">
+                            <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                <p class="TableSyntax">int-literal-dec:</p>
+                            </td>
+                            <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                <p class="TableSyntax">&#160;&#160;&#160;(dec-digit)+((<span class="Keyword">e</span>|<span class="Keyword">E</span>) dec-digit)?</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-vTableLight-Body-Body1">
+                            <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                <p class="TableSyntax">int-literal-hex:</p>
+                            </td>
+                            <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                <p class="TableSyntax"><span class="Keyword">0x</span>(hex-digit)+((<span class="Keyword">p</span>|<span class="Keyword">P</span>)dec-digit+)?</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-vTableLight-Body-Body1">
+                            <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                <p class="TableSyntax">float-literal:</p>
+                            </td>
+                            <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                <p class="TableSyntax">float-literal-bin | float-literal-dec | float-literal-hex</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-vTableLight-Body-Body1">
+                            <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                <p class="TableSyntax">float-literal-bin:</p>
+                            </td>
+                            <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                <p class="TableSyntax"><span class="Keyword">0b</span>(bin-digit)*.bin-digit+((<span class="Keyword">p</span>|<span class="Keyword">P</span>)(<span class="Keyword">+</span>|<span class="Keyword">-</span>)dec-digit+)?</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-vTableLight-Body-Body1">
+                            <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                <p class="TableSyntax">float-literal-dec:</p>
+                            </td>
+                            <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                <p class="TableSyntax">&#160;&#160;&#160;(dec-digit)*.dec-digit+((<span class="Keyword">e</span>|<span class="Keyword">E</span>)(<span class="Keyword">+</span>|<span class="Keyword">-</span>)dec-digit+)?</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-vTableLight-Body-Body1">
+                            <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                <p class="TableSyntax">float-literal-hex:</p>
+                            </td>
+                            <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                <p class="TableSyntax"><span class="Keyword">0x</span>(hex-digit)*.hex-digit+((<span class="Keyword">p</span>|<span class="Keyword">P</span>)(<span class="Keyword">+</span>|<span class="Keyword">-</span>)dec-digit+)?</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-vTableLight-Body-Body1">
+                            <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                <p class="TableSyntax">string-literal:</p>
+                            </td>
+                            <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                <p class="TableSyntax">string-literal-normal | string-literal-verbatim</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-vTableLight-Body-Body1">
+                            <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                <p class="TableSyntax">string-literal-normal:</p>
+                            </td>
+                            <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                <p class="Table"><span class="SourceCode"><span class="Keyword">"</span>(escape-sequence|</span>(any other symbol)<sup><a href="javascript:void(0)" class="MCTextPopup popup popupHead">1<span class="MCTextPopupBody MCTextPopupBody_Closed needs-pie popupBody" aria-hidden="true"><span class="MCTextPopupArrow"> </span>except line breaks</span></a></sup>)<span class="SourceCode">*<span class="Keyword">"</span></span></p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-vTableLight-Body-Body1">
+                            <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                <p class="TableSyntax">string-literal-verbatim:</p>
+                            </td>
+                            <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                <p class="Table"><span class="SourceCode"><span class="Keyword">@"</span></span>(any symbol)<sup><a href="javascript:void(0)" class="MCTextPopup popup popupHead">2<span class="MCTextPopupBody MCTextPopupBody_Closed needs-pie popupBody" aria-hidden="true"><span class="MCTextPopupArrow"> </span>except line breaks and double quotes</span></a></sup><span class="SourceCode">*<span class="Keyword">"</span></span></p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-vTableLight-Body-Body1">
+                            <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                <p class="TableSyntax">escape-sequence:</p>
+                            </td>
+                            <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                <p class="TableSyntax"><span class="Keyword">\0</span> | <span class="Keyword">\a</span> | <span class="Keyword">\b</span> | <span class="Keyword">\f</span> | <span class="Keyword">\n</span> | <span class="Keyword">\r</span> | <span class="Keyword">\t</span> | <span class="Keyword">\v</span> | <span class="Keyword">\"</span> | <span class="Keyword">\\</span> | <span class="Keyword">\u</span>(hex-digit){4}</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-vTableLight-Body-Body1">
+                            <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                <p class="TableSyntax">&#160;</p>
+                            </td>
+                            <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                <p class="TableSyntax">&#160;</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-vTableLight-Body-Body1">
+                            <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                <p class="TableSyntax">complex-literal:</p>
+                            </td>
+                            <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                <p class="TableSyntax">complex-literal-full | complex-literal-sparse</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-vTableLight-Body-Body1">
+                            <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                <p class="TableSyntax">complex-literal-full:</p>
+                            </td>
+                            <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                <p class="TableSyntax"><span class="Keyword">{</span> ( expression ( <span class="Keyword">,</span> expression )* <span class="Keyword">,</span>? )? <span class="Keyword">}</span></p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-vTableLight-Body-Body1">
+                            <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                <p class="TableSyntax">complex-literal-sparse:</p>
+                            </td>
+                            <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                <p class="TableSyntax"><span class="Keyword">{</span> ( key-value-pair ( <span class="Keyword">,</span> key-value-pair )* <span class="Keyword">,</span>? )? <span class="Keyword">}</span></p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-vTableLight-Body-Body1">
+                            <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                <p class="TableSyntax">key-value-pair:</p>
+                            </td>
+                            <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                <p class="TableSyntax">( identifier | expression[uint-value] ) : expression</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-vTableLight-Body-Body1">
+                            <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                <p class="TableSyntax">hex-digit:</p>
+                            </td>
+                            <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                <p class="TableSyntax">dec-digit | <span class="Keyword">a</span> | <span class="Keyword">b</span> | <span class="Keyword">c</span> | <span class="Keyword">d</span> | <span class="Keyword">e</span> | <span class="Keyword">f</span> | <span class="Keyword">A</span> | <span class="Keyword">B</span> | <span class="Keyword">C</span> | <span class="Keyword">D</span> | <span class="Keyword">E</span> | <span class="Keyword">F</span></p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-vTableLight-Body-Body1">
+                            <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                <p class="TableSyntax">dec-digit:</p>
+                            </td>
+                            <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                <p class="TableSyntax"><span class="Keyword">0</span> | <span class="Keyword">1</span> | <span class="Keyword">2</span> | <span class="Keyword">3</span> | <span class="Keyword">4</span> | <span class="Keyword">5</span> | <span class="Keyword">6</span> | <span class="Keyword">7</span> | <span class="Keyword">8</span> | <span class="Keyword">9</span></p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-vTableLight-Body-Body1">
+                            <td class="TableStyle-vTableLight-BodyB-Column1-Body1">
+                                <p class="TableSyntax">bin-digit:</p>
+                            </td>
+                            <td class="TableStyle-vTableLight-BodyA-Column1-Body1">
+                                <p class="TableSyntax"><span class="Keyword">0</span> | <span class="Keyword">1</span></p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h2 class="SectionMain"><a name="BMNamespaces" id="BMNamespaces"></a>Namespaces <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                <p>Namespaces help grouping artifacts and help at avoiding naming conflicts between artifacts with the same name. Also, every artifact (data type, DO interface, etc.) needs to be placed within a namespace.</p>
+                <h2 class="SectionSub">Example</h2>
+                <p class="SourceCode"><span class="CodeComment">// Top-level namespace with nested namespaces</span>
+                    <br /><span class="CodeKeyword">namespace</span> MyNamespace<br />{<br />&#160;&#160;<span class="CodeKeyword">namespace</span> NestedNamespace { <span class="CodeComment">/* ... */</span> }<br /><br />&#160;&#160;<span class="CodeKeyword">namespace</span> OtherNamespace { <span class="CodeComment">/* ... */</span> }<br /><br />&#160;&#160;<span class="CodeComment">// ...</span><br />}<br /><br /><span class="CodeComment">// Open a nested namespace a second time with shortcut syntax</span><br /><span class="CodeKeyword">namespace</span> MyNamespace::NestedNamespace<br />{<br />&#160;&#160;<span class="CodeComment">// ...</span><br />}</p>
+                <p>If multiple namespaces need to be nested it can be done so in a single line by separating their names with the scope operator. A namespace can be “opened” multiple times, also in different source files. The order in which artifacts are declared within a namespace is irrelevant regarding the behavior of your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> during measurement. Nevertheless, changing the order of artifacts in vCDL might change their presentation in your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> as well.</p>
+                <div>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                    <p class="Table">
+                                        <img src="../../../Resources/vImages/vInfo.png" style="width: 48px;height: 45px;" title="Note" alt="Note" />
+                                    </p>
+                                </td>
+                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                    <p class="TableSymbolHead">Note</p>
+                                    <p class="Table">All top-level artifacts in a file are part of an anonymous root namespace which is automatically opened once per source file. This becomes relevant when directives are placed on top-level, since they affect only this part of the root namespace and thus only this file and not all imported files.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h2 class="SectionSub">Syntax</h2>
+                <table style="width: 100%;mc-table-style: url('../../../Resources/Stylesheets/vTableLight.css');" class="TableStyle-vTableLight" cellspacing="0">
+                    <col class="TableStyle-vTableLight-Column-Column1" style="width: 165px;" />
+                    <col class="TableStyle-vTableLight-Column-Column1" />
+                    <tbody>
+                        <tr class="TableStyle-vTableLight-Body-Body1">
+                            <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                <p class="TableSyntax">namespace:</p>
+                            </td>
+                            <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                <p class="TableSyntax">attributes <span class="Keyword">namespace</span> namespace-names <span class="Keyword">{</span> namespace-element* <span class="Keyword">}</span></p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-vTableLight-Body-Body1">
+                            <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                <p class="TableSyntax">namespace-names:</p>
+                            </td>
+                            <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                <p class="TableSyntax">identifier ( <span class="Keyword">::</span> identifier )*</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-vTableLight-Body-Body1">
+                            <td class="TableStyle-vTableLight-BodyB-Column1-Body1">
+                                <p class="TableSyntax">namespace-element:</p>
+                            </td>
+                            <td class="TableStyle-vTableLight-BodyA-Column1-Body1">
+                                <p class="TableSyntax">attribute-def | bit-fields | constant | dist-obj | do-container | do-reference | do-ref-container | encoding | enumeration | interface | namespace | refinement | struct-type | system-variable | typedef | union-type | using-directive | virtual-network</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h2 class="SectionMain"><a name="BMReferences" id="BMReferences"></a>References <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                <p>Any named artifact in vCDL can be referenced. In contrast to vCDL 1.4 it is possible to reference elements within DO (reference-)containers using the well-known index notation from other languages.</p>
+                <h2 class="SectionSub">Example</h2>
+                <p class="SourceCode"><span class="CodeKeyword">namespace</span> DataTypes<br />{<br />&#160;&#160;<span class="CodeKeyword">typedef</span> MyInt = <span class="CodeDataType">int32</span>;<br /><br />&#160;&#160;<span class="CodeKeyword">struct</span> MyStruct<br />&#160;&#160;{<br />&#160;&#160;&#160;&#160;<span class="CodeComment">// All members use the same data type</span><br />&#160;&#160;&#160;&#160;MyInt &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Member1;<br />&#160;&#160;&#160;&#160;DataTypes::MyInt &#160;&#160;Member2;<br />&#160;&#160;&#160;&#160;::DataTypes::MyInt Member3;<br />&#160;&#160;}<br />}<br /><br /><span class="CodeKeyword">namespace</span> Interfaces<br />{<br />&#160;&#160;<span class="CodeKeyword">interface</span> DOInterface<br />&#160;&#160;{<br />&#160;&#160;&#160;&#160;<span class="CodeKeyword">embedded</span> <span class="CodeDataType">list</span>&lt;<span class="CodeDataType">list</span>&lt;NestedInterface&gt;&gt; MemberContainer;<br />&#160;&#160;}<br /><br />&#160;&#160;<span class="CodeKeyword">interface</span> NestedInterface<br />&#160;&#160;{<br />&#160;&#160;&#160;&#160;<span class="CodeKeyword">provided data</span> DataTypes::MyStruct DataMember;<br />&#160;&#160;}<br />}<br /><br /><span class="CodeKeyword">namespace</span> Containers<br />{<br />&#160;&#160;list&lt;Interfaces::DOInterface&gt; DOContainer;<br />}<br /><br /><span class="CodeComment">// A reference that contains all possible elements at once</span><br />[<span class="CodeAttributeKey_Namespace">Binding</span>=<span class="CodeStringLiteral">"Abstract"</span>]<br /><span class="CodeKeyword">refine</span> ::Containers::DOContainer.blueprint.MemberContainer[<span class="CodeNumericalLiteral">3</span>][<span class="CodeNumericalLiteral">9</span>].DataMember;</p>
+                <p>Usually, a reference contains the name of an artifact which is preceded by an optional namespace path and followed by an optional sub member path. Those references can be marked as absolute by placing the scope operator (::) in front, meaning all namespaces must be specified in the namespace path. When references are used in the context of another artifact, e.g., a DO, members of this DO can be referenced directly without placing the DO’s name in front. Therefore, there is a special form of reference which is allowed to start with an index in square brackets. Those references may only be used in the context of a DO (reference-)container. For multidimensional DO (reference-)containers each index is placed in separate square brackets.</p>
+                <h2 class="SectionSub">Additional Information</h2>
+                <p>You may encounter ambiguous references meaning the compiler can resolve the reference in multiple ways. To detect and fix these errors it is helpful to know how references are resolved: If the reference is relative (no scope operator in front) and the namespace path is empty, the compiler tries to resolve the reference within the context it is specified. If this attempt fails, the compiler moves to the next context in direction of the root namespace and tries again. Once it has reached the root namespace and still cannot resolve the reference an error is generated. If the reference is relative but contains a non-empty namespace path, the compiler skips the first contexts until it reaches a namespace. For absolute references resolving is tried only on root level of the file. A namespace may contain using directives which "pull" artifacts from other namespaces into this namespace. Thus, when trying to resolve a reference within a namespace, it is also tried to be resolved within any namespace referred to by an using directive. Herein lies one of the main reasons for ambiguous references as it is perfectly fine for different namespaces to contain artifacts with the same name.</p>
+                <h2 class="SectionSub">Syntax</h2>
+                <table style="width: 100%;mc-table-style: url('../../../Resources/Stylesheets/vTableLight.css');" class="TableStyle-vTableLight" cellspacing="0">
+                    <col class="TableStyle-vTableLight-Column-Column1" style="width: 165px;" />
+                    <col class="TableStyle-vTableLight-Column-Column1" />
+                    <tbody>
+                        <tr class="TableStyle-vTableLight-Body-Body1">
+                            <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                <p class="TableSyntax">reference:</p>
+                            </td>
+                            <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                <p class="TableSyntax">generic-ref | key-first-ref</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-vTableLight-Body-Body1">
+                            <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                <p class="TableSyntax">generic-ref:</p>
+                            </td>
+                            <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                <p class="TableSyntax"><span class="Keyword">::</span>? namespace-path identifier sub-member-path</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-vTableLight-Body-Body1">
+                            <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                <p class="TableSyntax">key-first-ref:</p>
+                            </td>
+                            <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                <p class="TableSyntax">member-key sub-member-path</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-vTableLight-Body-Body1">
+                            <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                <p class="TableSyntax">namespace-path:</p>
+                            </td>
+                            <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                <p class="TableSyntax"> ( identifier <span class="Keyword">::</span> )*</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-vTableLight-Body-Body1">
+                            <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                <p class="TableSyntax">sub-member-path:</p>
+                            </td>
+                            <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                <p class="TableSyntax">sub-member*</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-vTableLight-Body-Body1">
+                            <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                <p class="TableSyntax">sub-member:</p>
+                            </td>
+                            <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                <p class="TableSyntax">member-name | member-index</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-vTableLight-Body-Body1">
+                            <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                <p class="TableSyntax">member-name:</p>
+                            </td>
+                            <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                <p class="TableSyntax"><span class="Keyword">.</span> ( identifier | <span class="Keyword">blueprint</span> )</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-vTableLight-Body-Body1">
+                            <td class="TableStyle-vTableLight-BodyB-Column1-Body1">
+                                <p class="TableSyntax">member-index:</p>
+                            </td>
+                            <td class="TableStyle-vTableLight-BodyA-Column1-Body1">
+                                <p class="TableSyntax"><span class="Keyword">[</span> expression[uint-value] <span class="Keyword">]</span></p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h2 class="SectionMain"><a name="BMDirectives" id="BMDirectives"></a>Using Directives <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                <p>Using directives can be used to either specify a namespace whose artifacts are “pulled” into this namespace or to assign an alias to a data type.</p>
+                <h2 class="SectionSub">Example</h2>
+                <p class="SourceCode"><span class="CodeKeyword">namespace</span> DataTypes<br />{<br />&#160;&#160;<span class="CodeKeyword">typedef</span> MyInt = <span class="CodeDataType">int32</span>;<br />}<br /><br /><span class="CodeKeyword">namespace</span> MyNamespace<br />{<br />&#160;&#160;<span class="CodeKeyword">using</span> DataTypes;<br />&#160;&#160;<span class="CodeKeyword">using</span> SpecialInt = DataTypes.MyInt;<br /><br />&#160;&#160;<span class="CodeKeyword">struct</span> FirstStruct<br />&#160;&#160;{<br />&#160;&#160;&#160;&#160;<span class="CodeComment">// All members use the same data type</span><br />&#160;&#160;&#160;&#160;MyInt &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Member1;<br />&#160;&#160;&#160;&#160;SpecialInt &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Member2;<br />&#160;&#160;&#160;&#160;::DataTypes::MyInt Member3;<br />&#160;&#160;}<br />}<br /><br /><span class="CodeKeyword">namespace</span> MyNamespace<br />{<br />&#160;&#160;<span class="CodeKeyword">struct</span> SecondStruct<br />&#160;&#160;{<br />&#160;&#160;&#160;&#160;SpecialInt Member; <span class="CodeComment">// Wrong: The usings from above have no effect here</span><br />&#160;&#160;}<br />}<br /><br /><span class="CodeKeyword">namespace</span> OtherNamespace<br />{<br />&#160;&#160;<span class="CodeKeyword">using</span> DataTypes;<br /><br />&#160;&#160;<span class="CodeKeyword">typedef</span> MyInt = <span class="CodeDataType">int64</span>;<br /><br />&#160;&#160;<span class="CodeKeyword">struct</span> ThirdStruct<br />&#160;&#160;{<br />&#160;&#160;&#160;&#160;MyInt Member; <span class="CodeComment">// Wrong: 'MyInt' is ambiguous</span><br />&#160;&#160;}<br />}</p>
+                <p>Although being placed within a namespace using directives are only valid within the current scope. This means if a namespace is opened multiple times, a using directive in one scope does not affect reference resolving within another scope of the same namespace. Type aliases are not to be confused with typedefs. While the latter are converted into a data type visible within <span class="Product">CANoe</span>, type aliases are completely transparent and can be considered syntactic sugar. Thus, it is also not possible to attach attributes to type aliases. The example above also demonstrates how using directives can cause ambiguous references.</p>
+                <h2 class="SectionSub">Syntax</h2>
+                <table style="width: 100%;mc-table-style: url('../../../Resources/Stylesheets/vTableLight.css');" class="TableStyle-vTableLight" cellspacing="0">
+                    <col class="TableStyle-vTableLight-Column-Column1" style="width: 165px;" />
+                    <col class="TableStyle-vTableLight-Column-Column1" />
+                    <tbody>
+                        <tr class="TableStyle-vTableLight-Body-Body1">
+                            <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                <p class="TableSyntax">using-directive:</p>
+                            </td>
+                            <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                <p class="TableSyntax">namespace-ref | type-alias</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-vTableLight-Body-Body1">
+                            <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                <p class="TableSyntax">namespace-ref:</p>
+                            </td>
+                            <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                <p class="TableSyntax"><span class="Keyword">using</span> reference <span class="Keyword">;</span></p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-vTableLight-Body-Body1">
+                            <td class="TableStyle-vTableLight-BodyB-Column1-Body1">
+                                <p class="TableSyntax">type-alias:</p>
+                            </td>
+                            <td class="TableStyle-vTableLight-BodyA-Column1-Body1">
+                                <p class="TableSyntax"><span class="Keyword">using</span> identifier <span class="Keyword">=</span> data-type <span class="Keyword">;</span></p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h2 class="SectionMain"><a name="BMExpressions" id="BMExpressions"></a>Expressions and Constants <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                <p>Expressions are evaluated at compile time and thus are syntactic sugar. Nevertheless, they can improve readability by showing where a specific value originated. The result can be stored in constants which may be defined only on namespace level. Expressions have no restrictions and can be used at any place where a value of any kind is required.</p>
+                <h2 class="SectionSub">Example</h2>
+                <p class="SourceCode"><span class="CodeKeyword">const</span> <span class="CodeDataType">int32</span> &#160;IntValue1 = <span class="CodeNumericalLiteral">6</span>;<br /><span class="CodeKeyword">const</span> <span class="CodeDataType">int32</span> &#160;IntValue2 = IntValue1 - (<span class="CodeNumericalLiteral">3</span> + <span class="CodeNumericalLiteral">8</span>); <span class="CodeComment">// -5</span><br /><span class="CodeKeyword">const</span> <span class="CodeDataType">uint32</span> IntValue3 = ((<span class="CodeNumericalLiteral">1</span> &lt;&lt; <span class="CodeNumericalLiteral">8</span>) - <span class="CodeNumericalLiteral">1</span>);&#160;&#160;&#160;&#160;&#160;&#160;<span class="CodeComment">// 255</span><br /><span class="CodeKeyword">const</span> <span class="CodeDataType">uint32</span> IntValue4 = <span class="CodeNumericalLiteral">0xA0</span> | <span class="CodeNumericalLiteral">0x03</span>;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="CodeComment">// 0xA3 = 163</span><br /><span class="CodeKeyword">const</span> <span class="CodeDataType">uint32</span> IntValue5 = <span class="CodeNumericalLiteral">0xA8</span> &amp; <span class="CodeNumericalLiteral">0x0F</span>; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<span class="CodeComment">// 0x08 = 8</span><br /><br /><span class="CodeKeyword">const</span> <span class="CodeDataType">float</span> FloatValue = <span class="CodeNumericalLiteral">38</span>.<span class="CodeNumericalLiteral">5</span> % (<span class="CodeNumericalLiteral">2</span> * <span class="CodeNumericalLiteral">5</span>); <span class="CodeComment">// 8.5</span><br /><br /><span class="CodeKeyword">const</span> <span class="CodeDataType">string</span> StringValue1 = <span class="CodeStringLiteral">"Hello World!"</span>;<br /><span class="CodeKeyword">const</span> <span class="CodeDataType">string</span> StringValue2 = StringValue + <span class="CodeStringLiteral">"_suffix"</span>;<br /><br /><span class="CodeKeyword">const</span> <span class="CodeDataType">time</span> TimeValue = IntValue1 * <span class="CodeNumericalLiteral">5s</span> + <span class="CodeNumericalLiteral">30ms</span>; <span class="CodeComment">// 30030 ms</span><br /><br /><span class="CodeKeyword">const</span> <span class="CodeDataType">bool</span> BoolValue1 = FloatValue &gt; IntValue1; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<span class="CodeComment">// true</span><br /><span class="CodeKeyword">const</span> <span class="CodeDataType">bool</span> BoolValue2 = StringValue1 == StringValue2;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<span class="CodeComment">// false</span><br /><span class="CodeKeyword">const</span> <span class="CodeDataType">bool</span> BoolValue3 = BoolValue1 &amp;&amp; BoolValue2 || TimeValue &lt;= <span class="CodeNumericalLiteral">10s</span>;&#160;<span class="CodeComment">// true</span><br /><br /><span class="CodeKeyword">const</span> <span class="CodeDataType">array</span>&lt;<span class="CodeDataType">float</span>, <span class="CodeNumericalLiteral">4</span>&gt; ArrayValue = { <span class="CodeNumericalLiteral">4</span>.<span class="CodeNumericalLiteral">5</span>, -FloatValue, <span class="CodeNumericalLiteral">0</span>.<span class="CodeNumericalLiteral">6e-3</span>, IntValue1 };<br /><br /><span class="CodeKeyword">const</span> MyStruct StructValue = {<br />&#160;&#160;StringMember: <span class="CodeStringLiteral">"Value"</span>,<br />&#160;&#160;BoolMember:&#160;&#160;&#160;!BoolValue2 || BoolValue3,<br />};</p>
+                <p>All common arithmetic, boolean, and bitwise operators are supported except for the bitwise inversion. Operands must match according to the operator, meaning it is perfectly fine to multiply a float value with a time value, but these values cannot be added. For strings addition works differently as strings are concatenated. Integer and float values usually can be used mixed within expressions yielding a float value then.</p>
+                <h2 class="SectionMain"><a name="BMOperator" id="BMOperator"></a>Operator Precedence <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                <p>There are different groups of operators with different precedence meaning that if operators from different precedence groups are used in the same expression, operators are evaluated from higher to lower precedence. Operators with the same precedence are evaluated left to right. Both precedence and evaluation order can be overridden by grouping expressions in parentheses as shown in the example for <span class="bold">IntValue2</span> which would have the value <span class="CodeNumericalLiteral">11</span> otherwise. The following table shows all operators grouped by precedence:</p>
+                <table style="mc-table-style: url('../../../Resources/Stylesheets/vTable.css');margin-left: 0;margin-right: auto;" class="TableStyle_vTable" cellspacing="0">
+                    <col />
+                    <col />
+                    <col />
+                    <thead>
+                        <tr>
+                            <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                <p class="TableHead">Precedence</p>
+                            </th>
+                            <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                <p class="TableHead">Category</p>
+                            </th>
+                            <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                <p class="TableHead">Operators</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">9  </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">Arithmetic point</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="TableSyntax">* / %</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">8  </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">Arithmetic line</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="TableSyntax">+ -</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">7  </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">Comparison</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="TableSyntax">&lt; &lt;= &gt;= &gt;</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">6  </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">(In-)Equality</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="TableSyntax">== !=</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">5  </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">Bitwise AND</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="TableSyntax">&amp;</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">4  </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">Bitwise XOR</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="TableSyntax">^</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">3  </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">Bitwise OR</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="TableSyntax">|</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">2  </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">Logic AND</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="TableSyntax">&amp;&amp;</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                <p class="Table">1  </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                <p class="Table">Logic OR</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                <p class="TableSyntax">||</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h2 class="SectionSub">Syntax</h2>
+                <table style="width: 100%;mc-table-style: url('../../../Resources/Stylesheets/vTableLight.css');" class="TableStyle-vTableLight" cellspacing="0">
+                    <col class="TableStyle-vTableLight-Column-Column1" style="width: 165px;" />
+                    <col class="TableStyle-vTableLight-Column-Column1" />
+                    <tbody>
+                        <tr class="TableStyle-vTableLight-Body-Body1">
+                            <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                <p class="TableSyntax">complex-expr:</p>
+                            </td>
+                            <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                <p class="TableSyntax">expression | complex-literal</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-vTableLight-Body-Body1">
+                            <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                <p class="TableSyntax">expression:</p>
+                            </td>
+                            <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                <p class="TableSyntax">conditional</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-vTableLight-Body-Body1">
+                            <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                <p class="TableSyntax">conditional:</p>
+                            </td>
+                            <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                <p class="TableSyntax">binary-expr ( <span class="Keyword">?</span> expression <span class="Keyword">:</span> expression )?</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-vTableLight-Body-Body1">
+                            <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                <p class="TableSyntax">binary-expr:</p>
+                            </td>
+                            <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                <p class="TableSyntax">unary-expr ( binary-op unary-expr )*</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-vTableLight-Body-Body1">
+                            <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                <p class="TableSyntax">unary-expr:</p>
+                            </td>
+                            <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                <p class="TableSyntax">unary-op? atomic-expr</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-vTableLight-Body-Body1">
+                            <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                <p class="TableSyntax">atomic-expr:</p>
+                            </td>
+                            <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                <p class="TableSyntax">literal | nameof-expr | reference | grouped-expr</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-vTableLight-Body-Body1">
+                            <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                <p class="TableSyntax">nameof-expr:</p>
+                            </td>
+                            <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                <p class="TableSyntax"><span class="Keyword">nameof</span> <span class="Keyword">(</span> reference <span class="Keyword">)</span></p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-vTableLight-Body-Body1">
+                            <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                <p class="TableSyntax">grouped-expr:</p>
+                            </td>
+                            <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                <p class="TableSyntax"><span class="Keyword">(</span> expression <span class="Keyword">)</span></p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-vTableLight-Body-Body1">
+                            <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                <p class="TableSyntax">binary-op:</p>
+                            </td>
+                            <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                <p class="TableSyntax"><span class="Keyword">+</span> | <span class="Keyword">-</span> | <span class="Keyword">*</span> | <span class="Keyword">/</span> | <span class="Keyword">%</span> | <span class="Keyword">&lt;</span> | <span class="Keyword">&lt;=</span> | <span class="Keyword">==</span> | <span class="Keyword">!=</span> | <span class="Keyword">&gt;=</span> | <span class="Keyword">&gt;</span> | <span class="Keyword">&amp;&amp;</span> | <span class="Keyword">||</span> | <span class="Keyword">&lt;&lt;</span> | <span class="Keyword">&gt;&gt;</span> | <span class="Keyword">&amp;</span> | <span class="Keyword">|</span> | <span class="Keyword">^</span></p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-vTableLight-Body-Body1">
+                            <td class="TableStyle-vTableLight-BodyB-Column1-Body1">
+                                <p class="TableSyntax">unary-op:</p>
+                            </td>
+                            <td class="TableStyle-vTableLight-BodyA-Column1-Body1">
+                                <p class="TableSyntax"><span class="Keyword">+</span> | <span class="Keyword">-</span> | <span class="Keyword">!</span></p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="LinkList">&#160;</p>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="FooterWhite">
+                <table class="FooterWhite" style="border-collapse: collapse;margin-left: auto;margin-right: auto;">
+                    <col style="width: 70px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col style="width: 16px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="buttons popup-container clearfix topicToolbarProxy topicToolbarProxyFooter _Skins_HTML5TopicToolbar mc-component nocontent">
+                                    <div class="button-group-container-left">
+                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo"><a href="../../Shared/HowToUseOnlineHelp.htm" title="Tips for using the help" alt="Tips for using the help"><img src="../../../Resources/vImages/vBackstage/vHelpInfo.png" /></a>
+                                </p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo" style="text-align: right;"><span class="mc-variable Vector.BuildTime variable">2024-04-8T20:56:42</span>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <table style="width: 100%;border-collapse: separate;border-spacing: 3px 0px;margin-left: auto;margin-right: auto;caption-side: top;">
+                <col />
+                <col />
+                <col />
+                <col data-mc-conditions="BuildProcess.HTML5Link" />
+                <tbody>
+                    <tr>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;">
+                            <p class="vec_Footer">©&#160;Vector Informatik GmbH</p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;text-align: right;">
+                            <p class="vec_FooterBold">
+                                <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE&#160;Product Families</MadCap:conditionalText> Version <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.VectorTestUnitRunner">18</MadCap:conditionalText></p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="../../Shared/ContactCopyrightLicense.htm" class="vec_Footer MCXref xref xrefvec_Footer">Contact/Copyright/License</a>
+                            </p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="https://www.vector.com/int/en/company/get-info/privacy-policy/" target="_blank" class="vec_Footer">Data Privacy Notice</a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

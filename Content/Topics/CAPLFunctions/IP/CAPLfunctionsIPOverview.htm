@@ -1,0 +1,1398 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="topic" data-mc-search-type="Stem" data-mc-help-system-file-name="CANoeDEFamily.xml" data-mc-path-to-help-system="../../../../" data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.vTESTstudio" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../Skins/Favicons/favicon-16x16.png" /><title>Ethernet CAPL Functions</title>
+        <link href="../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Resources/Stylesheets/vTableMasterPageHeader.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../Resources/Stylesheets/vStylesheet.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../Resources/Stylesheets/vTablePageTOC.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../Resources/Stylesheets/vTable.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapGlobal.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapDom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapUtilities.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapXhr.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTextEffects.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSlideshow.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMessageBus.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMessageBus.CrossFrame.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapDefault.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMediaQueries.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAccessibility.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapHelpSystem.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAliasFile.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopicFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapFeedbackHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSkinHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.Breadcrumbs.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.MiniToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.SideMenu.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapIndex.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapGlossary.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapParser.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSearch.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapNavigateTopics.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapLms.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapELearning.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopic.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMicroContentComponent.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSearchHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopicElements.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTriPane.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/jscript" src="../../../Resources/vScripts/SyntaxHighlighting.js">
+        </script>
+        <script type="text/jscript" src="../../../Resources/vScripts/TabSwitch.js">
+        </script>
+        <script type="text/javascript" src="../../../Resources/vScripts/Vector.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../../CANoeDEFamily.htm#Topics/CAPLFunctions/IP/CAPLfunctionsIPOverview.htm">Open topic with navigation</a>
+        </p>
+        <div class="Body">
+            <div role="main" id="mc-main-content">
+                <p class="StructurePath"><a href="../CAPLfunctions.htm" class="StructurePath MCXref xref xrefStructurePath">CAPL Functions</a> » <a href="CAPLEthernetStartPage.htm" class="StructurePath">Ethernet</a> » <span class="mc-variable System.Title variable">Ethernet CAPL Functions</span></p>
+                <h1><a name="aanchor7566"></a>
+                    <MadCap:concept term="CAPLIP" /><a name="kanchor2349"></a><span class="mc-variable System.Title variable">Ethernet CAPL Functions</span>
+                </h1>
+                <p class="MenuPath">&#160;</p>
+                <p class="ToolAvailability" data-mc-conditions="BuildProcess.ToolAvailability"><a href="../../Shared/FeatureAvailability.htm" class="red" title="Feature availabilty for your product">Valid&#160;for</a>:&#160;&#160;CANoe&#160;DE<a name="aanchor7567"></a><MadCap:concept term="SFCANoeDE" />&#160;&#160;•&#160;&#160;CANoe4SW&#160;DE<a name="aanchor7568"></a><MadCap:concept term="SFCANoe4SWDE" /></p>
+                <p class="AutoSearchFilterConcepts"><a name="aanchor7569"></a>
+                    <MadCap:concept term="SFCAPLFunctions" />
+                </p>
+                <div data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">
+                    <table style="margin-left: 0;margin-right: auto;width: 100%;">
+                        <col style="width: 60px;" />
+                        <col />
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <p>
+                                        <img src="../../../Resources/vImages/vFunction.png" />
+                                    </p>
+                                </td>
+                                <td>
+                                    <p class="TableSymbolHead">Ethernet</p>
+                                    <p class="Table">Only available with Option&#160;Ethernet.</p>
+                                    <p class="Table">With Option&#160;Ethernet several APIs are provided for receiving and transmitting Ethernet packets.</p>
+                                    <p class="Table">These CAPL&#160;functions are supported by <span class="Product">Windows</span> and <span class="Product">Linux</span>. The functionality under <span class="Product">Linux</span> has not been fully tested yet.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <hr class="Startpage" width="100%" size="0" align="center" data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family" />
+                <p class="TableCOM"><a name="Shortcuts" id="Shortcuts"></a><span class="red">ON THIS&#160;PAGE:</span>
+                </p>
+                <table style="margin-left: 0;margin-right: auto;caption-side: top;mc-table-style: url('../../../Resources/Stylesheets/vTablePageTOC.css');" class="TableStyle-vTablePageTOC" cellspacing="2">
+                    <col class="TableStyle-vTablePageTOC-Column-Column1" style="width: 50%;" />
+                    <col class="TableStyle-vTablePageTOC-Column-Column1" style="width: 50%;" />
+                    <tbody>
+                        <tr class="TableStyle-vTablePageTOC-Body-Body1">
+                            <td class="TableStyle-vTablePageTOC-BodyB-Column1-Body1">
+                                <p class="PageTOC"><a href="#EventProcedures" class="PageTOC">Event Procedures</a>
+                                </p>
+                                <p class="PageTOC"><a href="#GeneralFunctions" class="PageTOC">General Functions</a>
+                                </p>
+                                <p class="PageTOC"><a href="#Methods" class="PageTOC">Methods</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle-vTablePageTOC-BodyA-Column1-Body1">
+                                <p class="PageTOC"><a href="#Objects" class="PageTOC">Objects</a>
+                                </p>
+                                <p class="PageTOC" data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.vTESTstudio"><a href="#StressGenerator" class="PageTOC">Stress Generator</a>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div>
+                    <h2><a name="EventProcedures" id="EventProcedures"></a>Event Procedures <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                    <table style="width: 100%;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                        <col style="width: 225px;" />
+                        <col />
+                        <thead>
+                            <tr>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                    <p class="TableHead">Functions</p>
+                                </th>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                    <p class="TableHead">Short Description</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="EventProcedures/CAPLfunctionOnEthernetErrorPacket.htm">on ethernetErrorPacket</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Is called if an erroneous Ethernet packet is received.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="EventProcedures/CAPLfunctionOnethernetMacsecStatus.htm" class="MCXref xref">on ethernetMacsecStatus</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Is called when the Ethernet MACsec connection state of a physical port has changed.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="EventProcedures/CAPLfunctionOnEthernetPacket.htm">on ethernetPacket</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Is called up after an Ethernet packet has been received.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="EventProcedures/CAPLfunctionOnEthernetPacketForwarded.htm">on ethernetPacketForwarded</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Is called up after a the network interface has forwarded a received Ethernet packet.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="EventProcedures/CAPLfunctionOnEthernetPhyState.htm" class="MCXref xref">on ethernetPhyState</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Is called when the state of an ethernet PHY has changed or any relevant activity has been triggered.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="EventProcedures/CAPLfunctionOnEthernetStatus.htm">on ethernetStatus</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Is called if the status of an Ethernet link is changed.</p>
+                                </td>
+                            </tr>
+                            <tr data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.vTESTstudio">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="EventProcedures/CAPLfunctionOnServiceSignal.htm">on serviceSignal</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Is called if value of received Service Signal has changed.</p>
+                                </td>
+                            </tr>
+                            <tr data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.vTESTstudio">
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="Table"><a href="EventProcedures/CAPLfunctionOnServiceSignalUpdate.htm">on serviceSignal_update</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                    <p class="Table">Is called if Service Signal is received.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <h2><a name="GeneralFunctions" id="GeneralFunctions"></a>General Functions <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                    <table style="width: 100%;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                        <col style="width: 225px;" />
+                        <col />
+                        <thead>
+                            <tr>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                    <p class="TableHead">Functions</p>
+                                </th>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                    <p class="TableHead">Short Description</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.vTESTstudio">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionSomeIpGetServiceSignal.htm">GetServiceSignal</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Reads the value of a Service Signal.</p>
+                                </td>
+                            </tr>
+                            <tr data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.vTESTstudio">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionSomeIpGetServiceSignalData.htm">GetServiceSignalData</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Reads the data of a Service Signal.</p>
+                                </td>
+                            </tr>
+                            <tr data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.vTESTstudio">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionSomeIpGetServiceSignalString.htm">GetServiceSignalString</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Reads the string value of a Service Signal.</p>
+                                </td>
+                            </tr>
+                            <tr data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.vTESTstudio">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionSomeIpSetServiceSignal.htm">SetServiceSignal</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Sets the value of a Service Signal.</p>
+                                </td>
+                            </tr>
+                            <tr data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.vTESTstudio">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionSomeIpSetServiceSignalData.htm">SetServiceSignalData</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Sets the data of a Service Signal.</p>
+                                </td>
+                            </tr>
+                            <tr data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.vTESTstudio">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionSomeIpSetServiceSignalString.htm">SetServiceSignalString</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Sets the string value of a Service Signal.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionEthClearMacAddressTable.htm" class="MCXref xref">ethClearMacAddressTable</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Clears MAC address table of network interface.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionEthGetLinkStatus.htm">ethGetLinkStatus</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Returns the link status of the channel.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionEthSetLinkStatus.htm">ethSetLinkStatus</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Configures the channel of the Vector hardware to establish or destablish a link.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionEthGetMacAddressAsNumber.htm">ethGetMacAddressAsNumber</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Converts a MAC address from string to a number.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionEthGetMacAddressAsString.htm">ethGetMacAddressAsString</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Converts a MAC address to a string.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionEthGetPhyState.htm" class="MCXref xref">ethGetPhyState</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Gets the PHY&#160;state.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionEthSetPhyState.htm" class="MCXref xref">ethSetPhyState</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Sets the PHY&#160;state.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep"><a href="Functions/CAPLfunctionEthResetStatistics.htm">ethResetStatistics</a>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">Rest the statistics values of Eth&lt;channel&gt; object</td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionOutputEthernet.htm">output</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Outputs an Ethernet packet.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd" colspan="2" style="background-color: #f0f5f5;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;">
+                                    <p class="TableHead"><a href="../../CANoeCANalyzer/Ethernet/EthernetPortBasedNetworkAccess.htm">Network-based</a>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionethGetEthernetPort.htm" class="MCXref xref">ethGetEthernetPort</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Gets the Ethernet port for the current simulation node.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionEthGetEthernetPortInfos.htm" class="MCXref xref">ethGetEthernetPortInfos</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Retrieves port related information of all connected network-based Ethernet devices.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionEthInjectPacket.htm" class="MCXref xref">ethInjectPacket</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Transmits an Ethernet packet by a specific Ethernet port.
+</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p><a href="Functions/CAPLfunctionLookupEthernetPort.htm" class="MCXref xref">lookupEthernetPort</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Gets the Ethernet port for a port qualification string.</p>
+                                </td>
+                            </tr>
+                            <tr data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.vTESTstudio">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionEthDisableStatisticsOfAllNetworks.htm" class="MCXref xref">ethDisableStatisticsOfAllNetworks</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Disables or enables the processing of the RT statistic values for all ports on all Ethernet networks.</p>
+                                </td>
+                            </tr>
+                            <tr data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.vTESTstudio">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionEthDisableStatisticsOfNetwork.htm" class="MCXref xref">ethDisableStatisticsOfNetwork</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Disables or enables the processing of the RT statistic values for all ports of the Ethernet network on which the passed port exists.</p>
+                                </td>
+                            </tr>
+                            <tr data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.vTESTstudio">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionEthDisableStatisticsOfPort.htm" class="MCXref xref">ethDisableStatisticsOfPort</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Disables or enables the processing of the RT statistic values for one port.</p>
+                                </td>
+                            </tr>
+                            <tr data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.vTESTstudio">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionEthGetLinkSpeed.htm" class="MCXref xref">ethGetLinkSpeed</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Returns the link speed of the specified port.</p>
+                                </td>
+                            </tr>
+                            <tr data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.vTESTstudio">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionEthGetRxBitRate.htm" class="MCXref xref">ethGetRxBitRate</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Returns the RX bitrate of the specified port.</p>
+                                </td>
+                            </tr>
+                            <tr data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.vTESTstudio">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionEthGetRxBytesTotalCount.htm" class="MCXref xref">ethGetRxBytesTotalCount</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Returns the number of received bytes of the specified port.</p>
+                                </td>
+                            </tr>
+                            <tr data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.vTESTstudio">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionEthGetRxErrorPacketsTotalCount.htm" class="MCXref xref">ethGetRxErrorPacketsTotalCount</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Returns the number of received error packets of the specified port.</p>
+                                </td>
+                            </tr>
+                            <tr data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.vTESTstudio">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionEthGetRxPacketRate.htm" class="MCXref xref">ethGetRxPacketRate</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Returns the RX packet rate of the specified port. </p>
+                                </td>
+                            </tr>
+                            <tr data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.vTESTstudio">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionEthGetRxPacketsTotalCount.htm" class="MCXref xref">ethGetRxPacketsTotalCount</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Returns the number of received packets of the specified port.</p>
+                                </td>
+                            </tr>
+                            <tr data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.vTESTstudio">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionEthGetSQI.htm" class="MCXref xref">ethGetSQI</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Returns the SQI (Signal Quality Indicator) of the specified port. </p>
+                                </td>
+                            </tr>
+                            <tr data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.vTESTstudio">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionEthGetTxBitRate.htm" class="MCXref xref">ethGetTxBitRate</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Returns the TX bitrate of the specified port. </p>
+                                </td>
+                            </tr>
+                            <tr data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.vTESTstudio">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionEthGetTxBytesTotalCount.htm" class="MCXref xref">ethGetTxBytesTotalCount</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Returns the number of transmitted bytes of the specified port.</p>
+                                </td>
+                            </tr>
+                            <tr data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.vTESTstudio">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionEthGetTxErrorPacketsTotalCount.htm" class="MCXref xref">ethGetTxErrorPacketsTotalCount</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Returns the number of transmitted error packets of the specified port.</p>
+                                </td>
+                            </tr>
+                            <tr data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.vTESTstudio">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionEthGetTxPacketRate.htm" class="MCXref xref">ethGetTxPacketRate</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Returns the TX packet rate of the specified port. </p>
+                                </td>
+                            </tr>
+                            <tr data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.vTESTstudio">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionEthGetTxPacketsTotalCount.htm" class="MCXref xref">ethGetTxPacketsTotalCount</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Returns the number of transmitted packets of the specified port.</p>
+                                </td>
+                            </tr>
+                            <tr data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.vTESTstudio">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionEthResetStatisticsOfAllNetworks.htm" class="MCXref xref">ethResetStatisticsOfAllNetworks</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Resets the RT statistic values of all ports of all Ethernet networks. </p>
+                                </td>
+                            </tr>
+                            <tr data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.vTESTstudio">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionEthResetStatisticsOfNetwork.htm" class="MCXref xref">ethResetStatisticsOfNetwork</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Resets the RT statistic values of all ports of the Ethernet network on which the passed port exists. </p>
+                                </td>
+                            </tr>
+                            <tr data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.vTESTstudio">
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionEthResetStatisticsOfPort.htm" class="MCXref xref">ethResetStatisticsOfPort</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                    <p class="Table">Resets the RT statistic values of the port.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <h2><a name="Methods" id="Methods"></a>Methods <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                    <p>Information on the protocol and field designators can be found on the&#160;<a href="../../CANoeCANalyzer/Ethernet/Protocols/Protocol.htm">protocol’s help page</a>.</p>
+                    <table style="width: 100%;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                        <col style="width: 225px;" />
+                        <col />
+                        <thead>
+                            <tr>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                    <p class="TableHead">Functions</p>
+                                </th>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                    <p class="TableHead">Short Description</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p><a href="Methods/CAPLfunctionClear.htm" class="MCXref xref">ethernetPacket::Clear</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Clears data and reset length.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Methods/CAPLfunctionCompletePacket.htm" class="MCXref xref">ethernetPacket::CompletePacket</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Calculates the checksum and length field for all protocols contained in the packet.</p>
+                                </td>
+                            </tr>
+                            <tr data-mc-conditions="">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Methods/CAPLfunctionFaultInjectDisableLengthPadding.htm" class="MCXref xref">ethernetPacket::FaultInjectDisableLengthPadding</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Sends Ethernet packet, which is smaller than minimal allowed length.</p>
+                                </td>
+                            </tr>
+                            <tr data-mc-conditions="">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Methods/CAPLfunctionFaultInjectFCS.htm" class="MCXref xref">ethernetPacket::FaultInjectFCS</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Sends Ethernet packet with invalid frame checksum.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Methods/CAPLfunctionGetData.htm" class="MCXref xref">ethernetPacket::GetData</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Copies the data of an <a href="Objects/CAPLfunctionEthernetPacket.htm">ethernetPacket</a> to a byte array, char array, CAPL struct or system variable struct.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Methods/CAPLfunctionGetBitLength.htm" class="MCXref xref">ethernetPacket::GetBitLength</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Returns the number of bits of the specified field as <span class="bold">dword</span>.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Methods/CAPLfunctionGetInt.htm" class="MCXref xref">ethernetPacket::GetInt</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Returns the value of the specified field as <span class="bold">int</span>.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Methods/CAPLfunctionGetInt64.htm" class="MCXref xref">ethernetPacket::GetInt64</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Returns the value of the specified field as <span class="bold">int64</span>.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Methods/CAPLfunctionIsAvailable.htm" class="MCXref xref">ethernetPacket::IsAvailable</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Checks whether the protocol and the <span class="bold">protocol</span> field are present in the Ethernet packet.</p>
+                                </td>
+                            </tr>
+                            <tr data-mc-conditions="">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Methods/CAPLfunctionGetDestinationIPAddress.htm" class="MCXref xref">ethernetPacket::GetDestinationIPAddress</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Returns the destination IP address as IP_Address.</p>
+                                </td>
+                            </tr>
+                            <tr data-mc-conditions="">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Methods/CAPLfunctionGetDestinationIPEndpoint.htm" class="MCXref xref">ethernetPacket::GetDestinationIPEndpoint</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Returns the destination IP address and UDP/TCP port as IP_Endoint.</p>
+                                </td>
+                            </tr>
+                            <tr data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.vTESTstudio">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Methods/CAPLfunctionGetPDU.htm">ethernetPacket::GetPDU</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Retrieves the PDU with index <span class="bold">n</span> in this packet.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Methods/CAPLfunctionGetProtocolErrorText.htm" class="MCXref xref">ethernetPacket::GetProtocolErrorText</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Copies an error text to the buffer for invalid Ethernet packets.</p>
+                                </td>
+                            </tr>
+                            <tr data-mc-conditions="">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Methods/CAPLfunctionGetSourceIPAddress.htm" class="MCXref xref">ethernetPacket::GetSourceIPAddress</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Returns the source IP address as IP_Address.</p>
+                                </td>
+                            </tr>
+                            <tr data-mc-conditions="">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Methods/CAPLfunctionGetSourceIPEndpoint.htm" class="MCXref xref">ethernetPacket::GetSourceEndpoint</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Returns the source IP address and UDP/TCP port as IP_Endoint.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Methods/CAPLfunctionGetVlan.htm" class="MCXref xref">ethernetPacket::GetVlan</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Returns the VLAN tag, if the Ethernet packet contains a VLAN tag.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Methods/CAPLfunctionGetVlanId.htm" class="MCXref xref">ethernetPacket::GetVlanId</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Returns the VLAN ID, if the Ethernet packet contains a VLAN tag.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Methods/CAPLfunctionGetVlanPriority.htm" class="MCXref xref">ethernetPacket::GetVlanPriority</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Returns the VLAN priority, if the Ethernet packet contains a VLAN tag.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Methods/CAPLfunctionHasProtocolError.htm" class="MCXref xref">ethernetPacket::HasProtocolError</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Checks protocol errors.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Methods/CAPLfunctionHasVlan.htm" class="MCXref xref">ethernetPacket::HasVlan</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Returns number of VLAN tags.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Methods/CAPLfunctionPDUCount.htm">ethernetPacket::PDUCount</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Returns the number of all PDUs in this message.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Methods/CAPLfunctionPDUOffset.htm">ethernetPacket::PDUOffset</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Returns the byte offset of the start of the PDU.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Methods/CAPLfunctionProtocolFieldGetData.htm" class="MCXref xref">ethernetPacket::protocol::field::GetData</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Gets data of a protocol field within an Ethernet packet.
+</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Methods/CAPLfunctionProtocolFieldIsAvailable.htm" class="MCXref xref">ethernetPacket::protocol::field::IsAvailable</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Returns if a protocol field is available in the Ethernet packet. </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Methods/CAPLfunctionProtocolFieldParseAddress.htm" class="MCXref xref">ethernetPacket::protocol::field::ParseAddress</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Sets the protocol field, which has type IPv4 or IPv6 address.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Methods/CAPLfunctionProtocolFieldSetData.htm" class="MCXref xref">ethernetPacket::protocol::field::SetData</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Sets payload data of a protocol within an Ethernet packet.
+</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Methods/CAPLfunctionProtocolGetData.htm" class="MCXref xref">ethernetPacket::protocol::GetData</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Gets payload data of a protocol within an Ethernet packet.
+</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p><a href="Methods/CAPLfunctionProtocolInit.htm" class="MCXref xref">ethernetPacket::protocol::Init</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Initializes the protocol within a ethernetPacket.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Methods/CAPLfunctionProtocolIsAvailable.htm" class="MCXref xref">ethernetPacket::protocol::IsAvailable</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Returns 1, if the ethernetPacket contains the protocol.
+</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Methods/CAPLfunctionProtocolOptionalStructureClear.htm" class="MCXref xref">ethernetPacket::protocol::optional-structure::Clear</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Removes a protocol option from the Ethernet packet.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Methods/CAPLfunctionProtocolOptionalStructureInit.htm" class="MCXref xref">ethernetPacket::protocol::optional-structure::Init</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">
+Adds a protocol option for a specific protocol to the Ethernet packet.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Methods/CAPLfunctionProtocolResizeData.htm" class="MCXref xref">ethernetPacket::protocol::ResizeData</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p>Resizes the payload of a protocol within a ethernetPacket.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Methods/CAPLfunctionProtocolSetData.htm" class="MCXref xref">ethernetPacket::protocol::SetData</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Sets payload data of a protocol within an Ethernet packet.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Methods/CAPLfunctionRemoveVlan.htm" class="MCXref xref">ethernetPacket::RemoveVlan</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Remove a VLAN tag from an <a href="Objects/CAPLfunctionEthernetPacket.htm">ethernetPacket</a>.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Methods/CAPLfunctionSetData.htm" class="MCXref xref">ethernetPacket::SetData</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Copies bytes from a char array, byte array, CAPL struct or system variable struct to the data of an <a href="Objects/CAPLfunctionEthernetPacket.htm">ethernetPacket</a>.</p>
+                                </td>
+                            </tr>
+                            <tr data-mc-conditions="">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Methods/CAPLfunctionSetDestinationIPAddress.htm" class="MCXref xref">ethernetPacket::SetDestinationIPAddress</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Sets the destination IP address.</p>
+                                </td>
+                            </tr>
+                            <tr data-mc-conditions="">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep"><a href="Methods/CAPLfunctionSetDestinationIPEndpoint.htm" class="MCXref xref">ethernetPacket::SetDestinationIPEndpoint</a>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Sets the destination IP address an the UDP/TCP port.</p>
+                                </td>
+                            </tr>
+                            <tr data-mc-conditions="">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Methods/CAPLfunctionSetSourceIPAddress.htm" class="MCXref xref">ethernetPacket::SetSourceIPAddress</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Sets the source IP address.</p>
+                                </td>
+                            </tr>
+                            <tr data-mc-conditions="">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Methods/CAPLfunctionSetSourceIPEndpoint.htm" class="MCXref xref">ethernetPacket::SetSourceIPEndpoint</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Sets the source IP address an the UDP/TCP port.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Methods/CAPLfunctionSetVlan.htm" class="MCXref xref">ethernetPacket::SetVlan</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Sets the VLAN tag of an <a href="Objects/CAPLfunctionEthernetPacket.htm">ethernetPacket</a>.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Methods/CAPLfunctionSetVlanId.htm" class="MCXref xref">ethernetPacket::SetVlanId</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Sets the VLAN ID of an <a href="Objects/CAPLfunctionEthernetPacket.htm">ethernetPacket</a>.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Methods/CAPLfunctionSetVlanPriority.htm" class="MCXref xref">ethernetPacket::SetVlanPriority</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Sets the VLAN priority of an <a href="Objects/CAPLfunctionEthernetPacket.htm">ethernetPacket</a>.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Methods/CAPLfunctionSourceParseAddress.htm" class="MCXref xref">ethernetPacket::source::ParseAddress</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Sets the source or destination MAC address.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Methods/CAPLfunctionIsIPv4Address.htm" class="MCXref xref">IP_Address::IsIPv4Address</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Checks if the current address is an IPv4 address.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Methods/CAPLfunctionIsIPv6Address.htm" class="MCXref xref">IP_Address::IsIPv6Address</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Checks if the current address is an IPv6 address</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Methods/CAPLfunctionIsBroadcast.htm" class="MCXref xref">IP_Address::IsBroadcast</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Checks if the current address is a broadcast address.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Methods/CAPLfunctionIsMulticast.htm" class="MCXref xref">IP_Address::IsMulticast</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Checks if the current address is a multicast address.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Methods/CAPLfunctionGetAddressAsArray.htm" class="MCXref xref">IP_Address::GetAddressAsArray</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Copies the current IP address to the byte.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Methods/CAPLfunctionMatchesAddress.htm" class="MCXref xref">IP_Address::MatchesAddress</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Compares two addresses.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Methods/CAPLfunctionParseAddressFromString.htm" class="MCXref xref">IP_Address::ParseAddressFromString</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Converts the character string to an IPv4 or IPv6 address and sets this address to the IP address value.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Methods/CAPLfunctionPrintAddressToString.htm" class="MCXref xref">IP_Address::PrintAddressToString</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Converts the IP address to a character string.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Methods/CAPLfunctionSetAddressAsArray.htm" class="MCXref xref">IP_Address::SetAddressAsArray</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Copies the byte array to the IP address value.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Methods/CAPLfunctionIsTCP.htm" class="MCXref xref">IP_Endpoint::IsTCP</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Checks if the current transport protocol of this endpoint is TCP.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Methods/CAPLfunctionIsUDP.htm" class="MCXref xref">IP_Endpoint::IsUDP</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Checks if the current transport protocol of this endpoint is UDP.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Methods/CAPLfunctionMatchesEndpoint.htm" class="MCXref xref">IP_Endpoint::MatchesEndpoint</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Compares two endpoints.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Methods/CAPLfunctionParseEndpointFromString.htm" class="MCXref xref">IP_Endpoint::ParseEndpointFromString</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Converts the character string to an endpoint.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Methods/CAPLfunctionPrintEndpointToString.htm" class="MCXref xref">IP_Endpoint::PrintEndpointToString</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Converts the endpoint to a character string.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Methods/CAPLfunctionSetToTCP.htm" class="MCXref xref">IP_Endpoint::SetToTCP</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Sets the transport protocol to TCP.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Methods/CAPLfunctionSetToUDP.htm" class="MCXref xref">IP_Endpoint::SetToUDP</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Sets the transport protocol to UDP.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="Table"><a href="Methods/CAPLfunctionSetTransportProtocolToUnknown.htm" class="MCXref xref">IP_Endpoint::SetTransportProtocolToUnknown</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                    <p class="Table">Invalidates the transport protocol.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <h2><a name="Objects" id="Objects"></a>Objects <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                    <table style="width: 100%;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                        <col style="width: 225px;" />
+                        <col />
+                        <thead>
+                            <tr>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                    <p class="TableHead">Functions</p>
+                                </th>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                    <p class="TableHead">Short Description</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Objects/CAPLfunctionEthernetErrorPacket.htm">ethernetErrorPacket</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Access information in <a href="EventProcedures/CAPLfunctionOnEthernetErrorPacket.htm">on ethernetErrorPacket</a>.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Objects/CAPLfunctionEthernetPacket.htm">ethernetPacket</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Creates an Ethernet packet object.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Objects/CAPLfunctionEth.htm">Eth</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Access to Ethernet link status and statistics.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Objects/CAPLfunctionIPAdredress.htm" class="MCXref xref">IP_Address</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Variable type for IPv4 and IPv6 address.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Objects/CAPLfunctionIPEndpoint.htm" class="MCXref xref">IP_Endpoint</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Variable type for IP endpoints.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd" colspan="2" style="background-color: #f0f5f5;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;">
+                                    <p class="TableHead"><a href="../../CANoeCANalyzer/Ethernet/EthernetPortBasedNetworkAccess.htm">Network-based</a>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p><a href="Objects/CAPLfunctionEthernetPort.htm">ethernetPort</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                    <p class="Table">Basic type used for port qualification.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.vTESTstudio">
+                    <h2><a name="StressGenerator" id="StressGenerator"></a>Stress Generator <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                    <p>Functions for Ethernet Stress Generator are only available with Vector Ethernet network interfaces.</p>
+                    <table style="width: 100%;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                        <col style="width: 225px;" />
+                        <col />
+                        <thead>
+                            <tr>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                    <p class="TableHead">Functions</p>
+                                </th>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                    <p class="TableHead">Short Description</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionEthStartPacketGenerator.htm">ethStartPacketGenerator</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Starts Ethernet Stress Generator.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionEthStopPacketGenerator.htm">ethStopPacketGenerator</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                    <p class="Table">Stops Ethernet Stress Generator.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="LinkList">&#160;</p>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="FooterWhite">
+                <table class="FooterWhite" style="border-collapse: collapse;margin-left: auto;margin-right: auto;">
+                    <col style="width: 70px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col style="width: 16px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col data-mc-conditions="" />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="buttons popup-container clearfix topicToolbarProxy topicToolbarProxyFooter _Skins_HTML5TopicToolbar mc-component nocontent">
+                                    <div class="button-group-container-left">
+                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo"><a href="../../Shared/HowToUseOnlineHelp.htm" title="Tips for using the help" alt="Tips for using the help"><img src="../../../Resources/vImages/vBackstage/vHelpInfo.png" /></a>
+                                </p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo">•&#160;&#160;Technical&#160;References are only&#160;available&#160;in&#160;English</p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo" style="text-align: right;"><span class="mc-variable Vector.BuildTime variable">2024-04-8T20:56:42</span>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <table style="width: 100%;border-collapse: separate;border-spacing: 3px 0px;margin-left: auto;margin-right: auto;caption-side: top;">
+                <col />
+                <col />
+                <col />
+                <col data-mc-conditions="BuildProcess.HTML5Link" />
+                <tbody>
+                    <tr>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;">
+                            <p class="vec_Footer">©&#160;Vector Informatik GmbH</p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;text-align: right;">
+                            <p class="vec_FooterBold">
+                                <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE&#160;Product Families</MadCap:conditionalText> Version <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.VectorTestUnitRunner">18</MadCap:conditionalText></p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="../../Shared/ContactCopyrightLicense.htm" class="vec_Footer MCXref xref xrefvec_Footer">Contact/Copyright/License</a>
+                            </p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="https://www.vector.com/int/en/company/get-info/privacy-policy/" target="_blank" class="vec_Footer">Data Privacy Notice</a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

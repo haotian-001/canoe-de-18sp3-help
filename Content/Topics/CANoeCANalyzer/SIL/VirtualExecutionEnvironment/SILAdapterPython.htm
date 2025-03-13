@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="" data-mc-search-type="Stem" data-mc-help-system-file-name="CANoeDEFamily.xml" data-mc-path-to-help-system="../../../../../" data-mc-conditions="Targets.CANoe-DE-Family" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../Skins/Favicons/favicon-16x16.png" /><title>Python SIL Adapter</title>
+        <link href="../../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Resources/Stylesheets/vTableMasterPageHeader.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../../Resources/Stylesheets/vStylesheet.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../../Resources/Stylesheets/vTableSymbol.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapGlobal.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapDom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapUtilities.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapXhr.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTextEffects.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSlideshow.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMessageBus.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMessageBus.CrossFrame.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapDefault.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMediaQueries.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapAccessibility.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapHelpSystem.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapAliasFile.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopicFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapFeedbackHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSkinHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.Breadcrumbs.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.MiniToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.SideMenu.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapIndex.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapGlossary.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapParser.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSearch.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapNavigateTopics.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapLms.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapELearning.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopic.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMicroContentComponent.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSearchHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopicElements.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTriPane.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/jscript" src="../../../../Resources/vScripts/SyntaxHighlighting.js">
+        </script>
+        <script type="text/jscript" src="../../../../Resources/vScripts/TabSwitch.js">
+        </script>
+        <script type="text/javascript" src="../../../../Resources/vScripts/Vector.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../../../CANoeDEFamily.htm#Topics/CANoeCANalyzer/SIL/VirtualExecutionEnvironment/SILAdapterPython.htm">Open topic with navigation</a>
+        </p>
+        <div class="Body">
+            <div role="main" id="mc-main-content">
+                <div>
+                    <p class="StructurePath"><a href="../../CANoeDEFamily.htm" class="StructurePath" data-mc-conditions="Targets.CANoe-DE-Family"><img src="../../../../Resources/vImages/vToolIcons/CANoeDEFamily_Icon16_15x15.png" alt="" style="width: 15;height: 15;" />&#160;CANoe&#160;DE&#160;Product&#160;Families</a> » <a href="../SIL.htm" class="StructurePath MCXref xref xrefStructurePath">Software-in-the-Loop</a> » <a href="VirtualExecutionEnvironment.htm" class="StructurePath MCXref xref xrefStructurePath">Virtual Execution Environment</a> » <span class="mc-variable System.Title variable">Python SIL Adapter</span></p>
+                    <h1><span class="mc-variable System.Title variable">Python SIL Adapter</span>
+                    </h1>
+                    <p class="MenuPath">&#160;</p>
+                    <p class="ToolAvailability" data-mc-conditions="BuildProcess.ToolAvailability"><a href="../../../Shared/FeatureAvailability.htm" class="red" title="Feature availabilty for your product">Valid&#160;for</a>:&#160;&#160;CANoe&#160;DE<a name="aanchor1140"></a><MadCap:concept term="SFCANoeDE" />&#160;&#160;•&#160;&#160;CANoe:lite&#160;DE<a name="aanchor1141"></a><MadCap:concept term="SFCANoeLiteDE" />&#160;&#160;•&#160;&#160;CANoe4SW&#160;DE<a name="aanchor1142"></a><MadCap:concept term="SFCANoe4SWDE" />&#160;&#160;•&#160;&#160;CANoe4SW:lite&#160;DE<a name="aanchor1143"></a><MadCap:concept term="SFCANoe4SWLiteDE" /></p>
+                    <p class="AutoSearchFilterConcepts"><a name="aanchor1144"></a>
+                        <MadCap:concept term="SFCore" />
+                    </p>
+                    <p class="IndexConcept"><a name="kanchor314"></a>
+                    </p>
+                </div>
+                <div>
+                    <h2 class="SectionMain">General</h2>
+                    <p>When the Python SIL Adapter is created, it is generated in the form of a Python package in a <a href="SILAdapter.htm#BMSILAdapterGeneration">selected directory</a>. This package can be used in a Python application.<br />For this, the following conditions must be met:</p>
+                    <ul>
+                        <li>The software was created with Python version 3.8 or 3.9</li>
+                        <li>The <a href="SILAdapter.htm#BMSilAdapterRuntime">SIL Adapter runtime environment</a> for Python must be installed. </li>
+                    </ul>
+                    <p>For clarification, you can find a Python application with SIL Adapter in the <a href="../../../SampConf/SIL/SILAdapterBasic/SILAdapterBasicCpp.htm" class="MCXref xref">SIL Adapter Basic (C++)</a> sample configuration.</p>
+                </div>
+                <div>
+                    <h2 class="SectionMain"><a targets="TOGPythonQuickStart" href="javascript:void(0)" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="TOGPythonQuickStart"><img class="MCToggler_Image_Icon" src="../../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Python Quick Start: Hello World!</a>
+                    </h2>
+                    <div style="display: none;" data-mc-target-name="TOGPythonQuickStart">
+                        <p>In the following, a simple example will be created in which a <span class="SourceCode">"Hello World!"</span> string is sent to your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> using the Python SIL Adapter.</p>
+                        <p>The example includes both the creation of a new configuration in your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> and a Python application with SIL Adapter. The final folder structure of the example could have the following structure:</p>
+                        <div>
+                            <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                                <col class="TableStyle-vTableSymbol-Column-Column1" />
+                                <col class="TableStyle-vTableSymbol-Column-Column2" />
+                                <tbody>
+                                    <tr>
+                                        <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                            <p class="Table">
+                                                <img src="../../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                            </p>
+                                        </td>
+                                        <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                            <p class="TableSymbolHead">Folder structure "<span class="SourceCode">Hello World!</span>" example</p>
+                                            <p class="TableSourceCodeIndent">HelloWorldTest<br />+--CANoeConfig<br />|&#160;&#160;|<br />|&#160;&#160;+--HelloWorldTest.cfg<br />|&#160;&#160;+--Interface.vCDL<br />|<br />+--SUT<br />|&#160;&#160;|<br />|&#160;&#160;+--SilAdapter<br />|&#160;&#160;+--main.py</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>The folder <span class="GUI">CANoeConfig</span> contains all files of the configuration and the folder <span class="GUI">SUT</span> contains the source code of the Software SUT (<span class="bold">main.py</span>), including the SIL Adapter (<span class="GUI">SilAdapter</span>).</p>
+                        <div>
+                            <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                                <col class="TableStyle-vTableSymbol-Column-Column1" />
+                                <col class="TableStyle-vTableSymbol-Column-Column2" />
+                                <tbody>
+                                    <tr>
+                                        <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                            <p class="Table">
+                                                <img src="../../../../Resources/vImages/vStep.png" style="width: 48px;height: 45px;" title="Procedure" alt="Procedure" />
+                                            </p>
+                                        </td>
+                                        <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                            <p class="TableSymbolHead">Step by Step Procedure</p>
+                                            <div class="Procedure">
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>Install the <a href="SILAdapter.htm#BMSilAdapterRuntime">SIL Adapter runtime environment for Python</a>.</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p class="StartList"><span class="bold">Create</span> a new configuration via <a href="../../Ribbon/RibbonFile.htm"><span class="GUI">File</span> ribbon tab</a>|<span class="GUI">New</span> using the template:</p>
+                                                        <ul>
+                                                            <li>
+                                                                <p class="ListItem">CANoe&#160;DE, CANoe:lite&#160;DE: <span class="GUI">Application Layer</span>|<span class="GUI">Distributed Objects</span>.</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>CANoe4SW&#160;SE, CANoe4SW:lite&#160;DE: <span class="GUI">General</span>|<span class="GUI">Default</span></p>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p>For CANoe&#160;DE, CANoe:lite&#160;DE: Select for the measurement on the <a href="../../Ribbon/RibbonHome.htm"><span class="GUI">Home</span> ribbon tab</a> the working mode <span class="bold">Simulated Bus</span>.</p>
+                                                    </li>
+                                                    <li value="4">
+                                                        <p>Save the new configuration as <span class="bold">HelloWorldTest.cfg</span>.</p>
+                                                    </li>
+                                                    <li value="5">
+                                                        <p class="Table"><span class="bold">Create</span> the file <span class="GUI">Interface.vCDL</span> to describe the functional system interface between your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> and the Software SUT with the following content:</p>
+                                                        <div>
+                                                            <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                                                                <col class="TableStyle-vTableSymbol-Column-Column1" />
+                                                                <col class="TableStyle-vTableSymbol-Column-Column2" />
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                                                            <p class="Table">
+                                                                                <img src="../../../../Resources/vImages/vEdit.png" style="width: 48px;height: 45px;" title="Editing Allowed" alt="Editing Allowed" />
+                                                                            </p>
+                                                                        </td>
+                                                                        <td class="TableStyle-vTableSymbol-BodyA-Column2-"><pre xml:space="preserve"><code class="language-cpp">version 2.0;
+
+import module "SilKit";
+
+namespace HelloWorldTest
+{
+&#160;&#160;[Binding="SilKit"]
+&#160;&#160;interface IDisplay {
+&#160;&#160;&#160;&#160;consumed data string Text;
+&#160;&#160;}
+
+&#160;&#160;IDisplay Display;
+}</code></pre>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                        <p>The Python application should be able to set the value of the consumed data member <span class="GUI">Text</span> on the distributed object <span class="GUI">Display</span> by using the SIL Adapter.</p>
+                                                    </li>
+                                                    <li value="6">
+                                                        <p>Import the <span class="GUI">Interface.vCDL</span> in the <a href="../../Windows/CommunicationSetup/CommunicationSetup.htm" class="MCXref xref">Communication Setup</a> as a data source.</p>
+                                                    </li>
+                                                    <li value="7">
+                                                        <p class="Table"><span class="bold">Follow</span> the steps to <a href="SILAdapter.htm#BMSILAdapterGeneration">generate a SIL Adapter</a>.</p>
+                                                        <p><span class="bold">Select</span> Python  as the language of the SIL Adapter and an empty directory named <span class="GUI">SilAdapter</span> as the output directory.</p>
+                                                    </li>
+                                                    <li value="8">
+                                                        <p class="Table"><span class="bold">Create</span> a <span class="bold">main.py</span> file for thePython  application with the following content:</p>
+                                                        <div>
+                                                            <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                                                                <col class="TableStyle-vTableSymbol-Column-Column1" />
+                                                                <col class="TableStyle-vTableSymbol-Column-Column2" />
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                                                            <p class="Table">
+                                                                                <img src="../../../../Resources/vImages/vEdit.png" style="width: 48px;height: 45px;" title="Editing Allowed" alt="Editing Allowed" />
+                                                                            </p>
+                                                                        </td>
+                                                                        <td class="TableStyle-vTableSymbol-BodyA-Column2-"><pre xml:space="preserve"><code class="language-python">from SilAdapter import HelloWorldTest, connect, disconnect
+connect()
+HelloWorldTest.Display.Text = "Hello World!"
+print("Press return to exit")
+input()
+disconnect()</code></pre>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                        <p class="Table">In the Python application, the SIL Adapter is included by importing the generated <span class="GUI">SilAdapter</span> package.</p>
+                                                        <div>
+                                                            <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                                                                <col class="TableStyle-vTableSymbol-Column-Column1" />
+                                                                <col class="TableStyle-vTableSymbol-Column-Column2" />
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                                                            <p class="Table">
+                                                                                <img src="../../../../Resources/vImages/vInfo.png" style="width: 48px;height: 45px;" title="Note" alt="Note" />
+                                                                            </p>
+                                                                        </td>
+                                                                        <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                                                            <p class="TableSymbolHead">Note</p>
+                                                                            <p class="Table">The SIL Adapter is initialized during import. A connection to your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> is established by calling <span class="SourceCode">connect</span>. Then the value of the data member <span class="bold">Text</span> on the distributed object <span class="bold">Display</span> is set to "<span class="SourceCode">Hello World!</span>". Before exiting the application, the connection to the <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> should be terminated with <span class="SourceCode">disconnect</span>.</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </li>
+                                                    <li value="9">
+                                                        <p><span class="bold">Start</span> the measurement in your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> with the configuration from step <span class="bold">2</span>.</p>
+                                                    </li>
+                                                    <li value="10">
+                                                        <p><span class="bold">Start</span> the Python application on the same system on which your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> is running.</p>
+                                                    </li>
+                                                </ol>
+                                                <p class="Table">In the <a href="../../Windows/Trace/TraceWindow.htm" class="MCXref xref">Trace Window</a> of your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText>, the <span class="GUI">Display.Text</span> object should receive a "<span class="SourceCode">Hello World!</span>".</p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="SectionMain"><a targets="TOGPythonAPI" href="javascript:void(0)" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="TOGPythonAPI"><img class="MCToggler_Image_Icon" src="../../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Python API</a>
+                    </h2>
+                    <div style="display: none;" data-mc-target-name="TOGPythonAPI">
+                        <div>
+                            <h2 class="SectionSub">SIL Adapter Namespaces</h2>
+                            <p>The entire SIL Adapter can be included as a package. The package name corresponds to the folder name that was specified when <a href="SILAdapter.htm#BMSILAdapterGeneration">the SIL Adapter was generated</a>. It is possible to import the entire SIL Adapter package or only individual subpackages. The subpackage names correspond to the namespace names from the interface description:</p>
+                            <div>
+                                <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                                    <col class="TableStyle-vTableSymbol-Column-Column1" />
+                                    <col class="TableStyle-vTableSymbol-Column-Column2" />
+                                    <tbody>
+                                        <tr>
+                                            <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                                <p class="Table">
+                                                    <img src="../../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                                </p>
+                                            </td>
+                                            <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                                <p class="TableSymbolHead">Example: Import of the SIL Adapter</p><pre xml:space="preserve"><code class="language-python"># Complete adapter
+import SilAdapter
+
+# Single namespaces
+from SilAdapter import myNS1
+from SilAdapter import myNS2</code></pre>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div>
+                            <h2 class="SectionSub">Runtime Environment</h2>
+                            <p>Functions to configure the runtime environment can be used by importing the <span class="bold">canoe_sil_adapter_runtime</span> package.</p>
+                            <p>Python exceptions that occur in member callback functions cause the program to terminate. To respond appropriately to errors, the <span class="SourceCode">set_exception_handler</span> function is provided. The function takes a Python function with a Python exception as a passing parameter and a <span class="SourceCode">bool</span> data type as a return value, as seen in <span class="bold">option 1</span> in the following example. If the return value is <span class="bold">True</span>, the exception is ignored, otherwise the application terminates. The stack trace is not automatically output to the console here. Furthermore, the default implementation <span class="SourceCode">default_exception_handler</span> can be used as a transfer function, as can be seen in <span class="bold">option 2</span> in the example. This will output the stacktrace to the console and return <span class="bold">False</span> to terminate the application.</p>
+                            <div>
+                                <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                                    <col class="TableStyle-vTableSymbol-Column-Column1" />
+                                    <col class="TableStyle-vTableSymbol-Column-Column2" />
+                                    <tbody>
+                                        <tr>
+                                            <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                                <p class="Table">
+                                                    <img src="../../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                                </p>
+                                            </td>
+                                            <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                                <p class="TableSymbolHead">Example: Exception handler</p><pre xml:space="preserve"><code class="language-python"># Option 1
+def exception_handler(exception : Exception)-&gt; bool:
+&#160;&#160;&#160;&#160;# my custom implementation
+&#160;&#160;&#160;&#160;return True
+
+canoe_sil_adapter_runtime.set_exception_handler(exception_handler)
+
+# Option 2
+canoe_sil_adapter_runtime.set_exception_handler(canoe_sil_adapter_runtime.default_exception_handler)</code></pre>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div>
+                            <h2 class="SectionSub"><a name="BMInit" id="BMInit"></a>SIL Adapter Connection Establishment</h2>
+                            <p>The SIL Adapter must be connected to your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> before it is used for the first time, and it must be disconnected correctly before the application is terminated. This is done by the two functions <span class="SourceCode">connect</span> and <span class="SourceCode">disconnect</span>. Before connecting, callback functions can be registered.</p>
+                            <div>
+                                <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                                    <col class="TableStyle-vTableSymbol-Column-Column1" />
+                                    <col class="TableStyle-vTableSymbol-Column-Column2" />
+                                    <tbody>
+                                        <tr>
+                                            <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                                <p class="Table">
+                                                    <img src="../../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                                </p>
+                                            </td>
+                                            <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                                <p class="TableSymbolHead">Example: Initializing the SIL Adapter</p><pre xml:space="preserve"><code class="language-python">from SilAdapter import connect, disconnect
+
+# Register Handler
+
+connect()
+
+# Application Code
+
+disconnect()</code></pre>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div>
+                            <h2 class="SectionSub">Distributed Objects</h2>
+                            <p>The distributed objects are located in the subpackages of the SIL Adapter corresponding to the namespaces of the interface description and are mapped as follows:</p>
+                            <ul>
+                                <li>Python objects with the same name are created for distributed objects defined before the measurement.</li>
+                                <li>Creating dynamic distributed objects is not currently supported.</li>
+                                <li>For data members, events, methods, and fields, properties of the same name are created on the Python object.</li>
+                            </ul>
+                            <p>In the following example, the data member <span class="GUI">Text</span> of the distributed object <span class="GUI">Display</span> is set, which is located in the namespace <span class="GUI">HelloWorldTest</span>.</p>
+                            <div>
+                                <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                                    <col class="TableStyle-vTableSymbol-Column-Column1" />
+                                    <col class="TableStyle-vTableSymbol-Column-Column2" />
+                                    <tbody>
+                                        <tr>
+                                            <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                                <p class="Table">
+                                                    <img src="../../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                                </p>
+                                            </td>
+                                            <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                                <p class="TableSymbolHead">vCDL Example: Distributed objects</p><pre xml:space="preserve"><code class="language-cpp">version 2.0;
+
+import module "SilKit";
+
+namespace HelloWorldTest
+{
+&#160;&#160;[Binding="SilKit"]
+&#160;&#160;interface IObject
+&#160;&#160;{
+&#160;&#160;&#160;&#160;provided data string Text;
+&#160;&#160;}
+
+&#160;&#160;IObject Display;
+}</code></pre>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div>
+                                <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                                    <col class="TableStyle-vTableSymbol-Column-Column1" />
+                                    <col class="TableStyle-vTableSymbol-Column-Column2" />
+                                    <tbody>
+                                        <tr>
+                                            <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                                <p class="Table">
+                                                    <img src="../../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                                </p>
+                                            </td>
+                                            <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                                <p class="TableSymbolHead">Python Example: Access to distributed objects</p><pre xml:space="preserve"><code class="language-python">from SilAdapter import HelloWorldTest
+
+HelloWorldTest.Display.Text = "Hello World!"</code></pre>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <h2 class="SectionSub">Container With Distributed Objects</h2>
+                        <p>Multiple distributed objects with the same interface description can be defined using a container. Like individual distributed objects, these are contained as global variables in the namespace <span class="GUI">HelloWorldTest</span>.</p>
+                        <div>
+                            <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                                <col class="TableStyle-vTableSymbol-Column-Column1" />
+                                <col class="TableStyle-vTableSymbol-Column-Column2" />
+                                <tbody>
+                                    <tr>
+                                        <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                            <p class="Table">
+                                                <img src="../../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                            </p>
+                                        </td>
+                                        <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                            <p class="TableSymbolHead">vCDL Example: Container with distributed objects</p><pre xml:space="preserve"><code class="language-cpp">version 2.0;
+
+import module "SilKit";
+
+namespace HelloWorldTest
+{
+&#160;&#160;[Binding="SilKit"]
+&#160;&#160;interface IObject
+&#160;&#160;{
+&#160;&#160;&#160;&#160;provided data string Text;
+&#160;&#160;}
+
+&#160;&#160;array&lt;IObject, 5&gt; Displays;
+}</code></pre>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>The following code snippet shows the access to the third distributed object within a container.</p>
+                        <div>
+                            <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                                <col class="TableStyle-vTableSymbol-Column-Column1" />
+                                <col class="TableStyle-vTableSymbol-Column-Column2" />
+                                <tbody>
+                                    <tr>
+                                        <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                            <p class="Table">
+                                                <img src="../../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                            </p>
+                                        </td>
+                                        <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                            <p class="TableSymbolHead">Python Example: Accessing container with distributed objects</p><pre xml:space="preserve"><code class="language-python">from SilAdapter import HelloWorldTest
+
+HelloWorldTest.Display.Text = "Hello World!"</code></pre>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div>
+                            <h2 class="SectionSub">Data Members</h2>
+                            <p>Data members allow you to read or write a value on a distributed object. The data type of a data member must not be <span class="bold">void</span>. An interface description for data members looks like this:</p>
+                            <div>
+                                <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                                    <col class="TableStyle-vTableSymbol-Column-Column1" />
+                                    <col class="TableStyle-vTableSymbol-Column-Column2" />
+                                    <tbody>
+                                        <tr>
+                                            <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                                <p class="Table">
+                                                    <img src="../../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                                </p>
+                                            </td>
+                                            <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                                <p class="TableSymbolHead">vCDL Example: Data member</p><pre xml:space="preserve"><code class="language-cpp">version 2.0;
+
+import module "SilKit";
+
+namespace Namespace
+{
+&#160;&#160;[Binding="SilKit"]
+&#160;&#160;interface IObject
+&#160;&#160;{
+&#160;&#160;&#160;&#160;provided data float FloatData;
+&#160;&#160;&#160;&#160;consumed data int32 IntData;
+&#160;&#160;}
+
+&#160;&#160;IObject Object;
+}</code></pre>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <p>The data types in Python are mapped as follows:</p>
+                            <ul>
+                                <li>Integer data types to Python data type <span class="bold">int</span></li>
+                                <li>Float and double to <span class="bold">float</span></li>
+                                <li>String to <span class="bold">str</span></li>
+                                <li>Bool to <span class="bold">bool</span></li>
+                                <li>Bytes to <span class="bold">bytearray</span></li>
+                                <li>Enum is mapped via derivatives of the <span class="bold">IntEnum</span> data type.</li>
+                                <li>Arrays and lists are mapped via classes that behave like native Python lists, but additionally check the minimum and maximum size. However, native lists may also be passed when setting values.</li>
+                                <li>Structs are mapped via classes with one property per struct member.</li>
+                                <li>Optional struct members can have <span class="bold">None</span> as value.</li>
+                                <li>The names of the Python data types for Enum, Array, List and Struct data types correspond to the definition in your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText>. According to the namespaces, these are created in the Python packages with the same names.</li>
+                            </ul>
+                            <p>When reading a data member value, a copy of the value must be created by calling the <span class="SourceCode">copy</span> method.</p>
+                            <p>When writing, the value can be assigned directly to the data member. Writing the value by the SIL Adapter is only possible for consumed data members.</p>
+                            <div>
+                                <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                                    <col class="TableStyle-vTableSymbol-Column-Column1" />
+                                    <col class="TableStyle-vTableSymbol-Column-Column2" />
+                                    <tbody>
+                                        <tr>
+                                            <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                                <p class="Table">
+                                                    <img src="../../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                                </p>
+                                            </td>
+                                            <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                                <p class="TableSymbolHead">Python example: Reading and writing data member values</p><pre><code class="language-python"># Read data member
+
+# Primitive data type
+data = myNamespace.Object.FloatData.copy()
+
+# Complex data type
+# Option 1 – complete structure
+complexData1 = myNamesapce.Object.ComplexData.copy()
+
+# Option 2 – only submember
+complexData2 = myNamespace.Object.ComplexData.IntData.copy()
+
+# Write data member
+
+# Primitive data type
+Namespace.Object.IntData = 42
+
+# Complex data type
+# Option 1 – complete structure
+complexVal = Namespace.Object.ComplexData.copy()
+complexVal.IntData = 2
+complexVal.FloatData = 4.0
+
+Namespace.Object.ComplexData = complexVal
+
+# Option 2 – only submember
+Namespace.Object.ComplexData.IntData = 2
+</code></pre>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <p>It is also possible to register on value changes or updates of a data member. Handlers can be registered directly on the member using the <span class="SourceCode">register_on_change_handler</span> or <span class="SourceCode">register_on_update_handler</span> methods. It is possible to register multiple handlers.</p>
+                            <div>
+                                <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                                    <col class="TableStyle-vTableSymbol-Column-Column1" />
+                                    <col class="TableStyle-vTableSymbol-Column-Column2" />
+                                    <tbody>
+                                        <tr>
+                                            <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                                <p class="Table">
+                                                    <img src="../../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                                </p>
+                                            </td>
+                                            <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                                <p class="TableSymbolHead">Python example: Registration for value changes for data members</p><pre xml:space="preserve"><code class="language-python"># Called when the value changes and the new value differs from the old one
+
+def OnFloatDataChanged():
+&#160;&#160;&#160;&#160;print(f“New Value: {Namespace.Object.FloatData.copy()}“)
+
+Namespace.Object.FloatData.register_on_change_handler(OnFloatDataChanged)
+
+# Called when the value is updated even if the new value is the same as the old one
+def OnFloatDataUpdated():
+&#160;&#160;&#160;&#160;print(f“Updated Value: {Namespace.Object.FloatData.copy()}“)
+
+Namespace.Object.FloatData.register_on_update_handler(OnFloatDataUpdated)
+</code></pre>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div>
+                            <h2 class="SectionSub">Event Members</h2>
+                            <p>Event members communicate the occurrence of events at an object. Both reading and writing as well as registering callback functions are possible as with data members and work in the same way. Writing to an event member triggers the event. The data type of an event member may also be <span class="bold">void</span>. In this case, only the occurrence of the event is communicated, but no further data is transferred.</p>
+                            <div>
+                                <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                                    <col class="TableStyle-vTableSymbol-Column-Column1" />
+                                    <col class="TableStyle-vTableSymbol-Column-Column2" />
+                                    <tbody>
+                                        <tr>
+                                            <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                                <p class="Table">
+                                                    <img src="../../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                                </p>
+                                            </td>
+                                            <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                                <p class="TableSymbolHead">vCDL example: Event member</p><pre xml:space="preserve"><code class="language-cpp">version 2.0;
+
+import module "SilKit";
+
+namespace Namespace
+{
+&#160;&#160;[Binding="SilKit"]
+&#160;&#160;interface IObject
+&#160;&#160;{
+&#160;&#160;&#160;&#160;consumed event void myEvent;
+&#160;&#160;}
+
+&#160;&#160;IObject Object;
+}</code></pre>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <p>Event members with the <span class="bold">void</span> data type cannot be accessed in read or write mode. The event is therefore triggered by the method <span class="SourceCode">trigger</span>. Only the <span class="SourceCode">register_on_update_handler</span> method is available on the member.</p>
+                            <div>
+                                <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                                    <col class="TableStyle-vTableSymbol-Column-Column1" />
+                                    <col class="TableStyle-vTableSymbol-Column-Column2" />
+                                    <tbody>
+                                        <tr>
+                                            <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                                <p class="Table">
+                                                    <img src="../../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                                </p>
+                                            </td>
+                                            <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                                <p class="TableSymbolHead">Python example: Registration for value changes for data members</p><pre xml:space="preserve"><code class="language-python"># Trigger void event
+
+Namespace.Object.myEvent.trigger()
+</code></pre>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div>
+                            <h2 class="SectionSub">Method Members</h2>
+                            <p>The Python SIL Adapter supports both provided and consumed method members. Provided method members are methods that are called by the Software SUT and whose implementation is provided by the <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText>. The implementation is done, for example, in an application model. Consumed method members are methods that are called by a <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> and implemented by the Software SUT.</p>
+                            <p>An interface description for method members with a vCDL file looks like this:</p>
+                            <div>
+                                <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                                    <col class="TableStyle-vTableSymbol-Column-Column1" />
+                                    <col class="TableStyle-vTableSymbol-Column-Column2" />
+                                    <tbody>
+                                        <tr>
+                                            <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                                <p class="Table">
+                                                    <img src="../../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                                </p>
+                                            </td>
+                                            <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                                <p class="TableSymbolHead">vCDL example: Method member</p><pre xml:space="preserve"><code class="language-cpp">version 2.0;
+
+import module "SilKit";
+
+namespace Namespace
+{
+struct Position
+{
+int32 x;
+int32 y;
+} 
+
+[Binding="SilKit"]
+interface IObject
+{
+provided method int32 Add(in int32 x, in int32 y);
+provided method void Add2(in int32 x, in int32 y, out result);
+provided method void AddVector(in Position posA, in Position posB, out Position result);
+consumed method float Multiply(in float x, in float y);
+consumed method void Multiply2(in float x, in float y, out float result);
+consumed method void MultiplyVector(in Position posA, in Position posB, out Position result);
+}
+
+IObject Object;
+}
+</code></pre>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <p>A provided method member of a distributed object can be called asynchronously via the SIL Adapter. An asynchronous call does not block and instead calls the passed-in callback function on return.</p>
+                            <p>With the method <span class="SourceCode">call_async</span> an provided method is called. The method expects all <span class="bold">In</span> and all <span class="bold">InOut</span> parameters. A callback function must be specified as the last parameter, which is called when the response is received. If available, the return function receives the return value as the first parameter. Subsequently, it receives all <span class="bold">Out</span> and <span class="bold">InOut</span> parameters.</p>
+                            <div>
+                                <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                                    <col class="TableStyle-vTableSymbol-Column-Column1" />
+                                    <col class="TableStyle-vTableSymbol-Column-Column2" />
+                                    <tbody>
+                                        <tr>
+                                            <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                                <p class="Table">
+                                                    <img src="../../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                                </p>
+                                            </td>
+                                            <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                                <p class="TableSymbolHead">Python example: Calling provided methods via SIL Adapter</p><pre xml:space="preserve"><code class="language-python"># Asynchronous calls
+
+# Primitive Datatype
+Namespace.Object.Add.call_async(1, 2, lambda result: print(f“Add returned with {result}“))
+Namespace.Object.Add2.call_async(1,2,lambda result: print(f"Add2 returned with {result}"))
+
+# Complex Datatype
+posA = Position()
+posA.x = 1
+posA. y = 2
+posB = Position()
+posB.x = 2
+posB.y = 3
+
+Namespace.Object.AddVector.call_async(posA, posB, lambda result: print(f"AddVector returned with x:{result.x} y:{result.y}"))
+</code></pre>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <p>In the case of a consumed method member, the Python application must provide the implementation. The <span class="SourceCode">set_call_handler</span> method can be used to set a callback function that contains the implementation of the method. The signature of the callback function is essentially the same as the defined method. For primitive data types, implemented in Python as so-called immutables, as well as for optional parameters, instances of a generic data type are passed in the case of <span class="bold">Out</span> and <span class="bold">InOut</span> parameters. This data type allows both reading and changing the parameter via a <span class="bold">value</span> property that has the original data type as its data type.</p>
+                            <div>
+                                <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                                    <col class="TableStyle-vTableSymbol-Column-Column1" />
+                                    <col class="TableStyle-vTableSymbol-Column-Column2" />
+                                    <tbody>
+                                        <tr>
+                                            <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                                <p class="Table">
+                                                    <img src="../../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                                </p>
+                                            </td>
+                                            <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                                <p class="TableSymbolHead">Python example: Implementation of consumes methods</p><pre xml:space="preserve"><code class="language-python">def Multiply_implementation(x: int, y: int) -&gt; int:
+&#160;&#160;&#160;&#160;return x * y
+
+def Multiply2_implementation(x: int, y: int, result: OutParameter[int]):
+&#160;&#160;&#160;&#160;result.value = x * y
+
+def MultiplyVector_implementation(pos_a: Position, pos_b: Position, result: Position):
+&#160;&#160;&#160;&#160;result.x = pos_a.x + pos_b.x
+&#160;&#160;&#160;&#160;result.y = pos_a.y + pos_b.y
+
+Namespace.Object.Multiply.set_call_handler(Multiply_implementation)
+Namespace.Object.Multiply2.set_call_handler(Multiply2_implementation)
+Namespace.Object.MultiplyVector.set_call_handler(MultiplyVector_implementation)
+</code></pre>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div>
+                            <h2 class="SectionSub">Field Members</h2>
+                            <p>A field member represents a value that is stored in an object. This value can be accessed from other objects. Field members are a combination of an event member and two method members (<span class="bold">set</span>/<span class="bold">get</span>). The object of the field member can thus be used like an event member and the properties <span class="bold">get</span> and <span class="bold">set</span> can be used like method members. It is possible to define only <span class="bold">get</span> or only <span class="bold">set</span> in the interface description. The technical details and how field members behave in a Software SUT (independent of the programming language of the SIL Adapter) can be found in section <a href="SILTechnicalDetails.htm#BMValueChangesUpdatesFieldMember">Value changes and updates for field members</a>.</p>
+                            <div>
+                                <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                                    <col class="TableStyle-vTableSymbol-Column-Column1" />
+                                    <col class="TableStyle-vTableSymbol-Column-Column2" />
+                                    <tbody>
+                                        <tr>
+                                            <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                                <p class="Table">
+                                                    <img src="../../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                                </p>
+                                            </td>
+                                            <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                                <p class="TableSymbolHead">vCDL example: Field member</p><pre xml:space="preserve"><code class="language-cpp">version 2.0;
+
+import module "SilKit";
+
+namespace Namespace
+{
+&#160;&#160;[Binding="SilKit"]
+&#160;&#160;interface IObject
+&#160;&#160;{
+&#160;&#160;&#160;&#160;provided field uint8 provided_field_get_set {get; set; notify;}
+&#160;&#160;&#160;&#160;consumed field uint8 consumed_field_get_set {get; set; notify;}
+&#160;&#160;}
+
+&#160;&#160;IObject Object;
+}
+</code></pre>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <p>For a provided field member, the <span class="SourceCode">get</span> and <span class="SourceCode">set</span> methods can be called asynchronously. The <span class="SourceCode">get.call_async</span> method has only the callback function as a passing parameter. This has a parameter corresponding to the Python data type of the field. When the response is received, the local value of the field is passed.</p>
+                            <p>The <span class="SourceCode">set.call_async</span> method must also be passed a new value as the first parameter.</p>
+                            <div>
+                                <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                                    <col class="TableStyle-vTableSymbol-Column-Column1" />
+                                    <col class="TableStyle-vTableSymbol-Column-Column2" />
+                                    <tbody>
+                                        <tr>
+                                            <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                                <p class="Table">
+                                                    <img src="../../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                                </p>
+                                            </td>
+                                            <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                                <p class="TableSymbolHead">Python example: Implementation of provided fields</p><pre xml:space="preserve"><code class="language-python">Namespace.Object.provided_field_get_set.get.call_async(lambda result: print(f“Get returned with {result }“))
+
+Namespace.Object.provided_field_get_set.set.call_async(2, lambda result: print(f“Set returned with {result}“))
+
+val = Namespace.Object.provided_field_get_set.copy()
+</code></pre>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <p>In the case of a consumed field member, the Python application can provide an implementation to set or read the value of the field. If no implementation is provided, the current value is set or returned. The callback function of the <span class="bold">get</span> implementation receives no passing parameters and has the Python data type of the field as its return value. The callback function of the <span class="bold">set</span> implementation receives the set value and returns the Python data type of the field.</p>
+                            <div>
+                                <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                                    <col class="TableStyle-vTableSymbol-Column-Column1" />
+                                    <col class="TableStyle-vTableSymbol-Column-Column2" />
+                                    <tbody>
+                                        <tr>
+                                            <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                                <p class="Table">
+                                                    <img src="../../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                                </p>
+                                            </td>
+                                            <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                                <p class="TableSymbolHead">Python example: Implementation of consumed fields</p><pre xml:space="preserve"><code class="language-python">def getter_impl() -&gt; int:
+&#160;&#160;&#160;&#160;write("Called the getter for consumed_field_get_set.”)
+&#160;&#160;&#160;&#160;return Namespace.Object.consumed_field_get_set.copy()
+
+def setter_impl(newValue: int) -&gt; int:
+&#160;&#160;&#160;&#160;write(f"Called the setter for consumed_field_get_set.”)
+&#160;&#160;&#160;&#160;return newValue
+
+Namespace.Object.consumed_field_get_set.get.set_call_handler(getter_impl)
+Namespace.Object.consumed_field_get_set.set.set_call_handler(setter_impl)
+Namespace.Object.consumed_field_get_set = 4
+</code></pre>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="LinkList">&#160;</p>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="FooterWhite">
+                <table class="FooterWhite" style="border-collapse: collapse;margin-left: auto;margin-right: auto;">
+                    <col style="width: 70px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col style="width: 16px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="buttons popup-container clearfix topicToolbarProxy topicToolbarProxyFooter _Skins_HTML5TopicToolbar mc-component nocontent">
+                                    <div class="button-group-container-left">
+                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo"><a href="../../../Shared/HowToUseOnlineHelp.htm" title="Tips for using the help" alt="Tips for using the help"><img src="../../../../Resources/vImages/vBackstage/vHelpInfo.png" /></a>
+                                </p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo" style="text-align: right;"><span class="mc-variable Vector.BuildTime variable">2024-04-8T20:56:42</span>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <table style="width: 100%;border-collapse: separate;border-spacing: 3px 0px;margin-left: auto;margin-right: auto;caption-side: top;">
+                <col />
+                <col />
+                <col />
+                <col data-mc-conditions="BuildProcess.HTML5Link" />
+                <tbody>
+                    <tr>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;">
+                            <p class="vec_Footer">©&#160;Vector Informatik GmbH</p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;text-align: right;">
+                            <p class="vec_FooterBold">
+                                <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE&#160;Product Families</MadCap:conditionalText> Version <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.VectorTestUnitRunner">18</MadCap:conditionalText></p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="../../../Shared/ContactCopyrightLicense.htm" class="vec_Footer MCXref xref xrefvec_Footer">Contact/Copyright/License</a>
+                            </p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="https://www.vector.com/int/en/company/get-info/privacy-policy/" target="_blank" class="vec_Footer">Data Privacy Notice</a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

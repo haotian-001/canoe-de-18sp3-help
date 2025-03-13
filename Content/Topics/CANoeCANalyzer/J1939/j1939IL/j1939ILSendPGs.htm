@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="topic" data-mc-search-type="Stem" data-mc-help-system-file-name="CANoeDEFamily.xml" data-mc-path-to-help-system="../../../../../" data-mc-conditions="Targets.CANoe-DE-Family" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../Skins/Favicons/favicon-16x16.png" /><title>Send Parameter Groups With J1939 IL according to J1939-22</title>
+        <link href="../../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Resources/Stylesheets/vTableMasterPageHeader.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../../Resources/Stylesheets/vStylesheet.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../../Resources/Stylesheets/vTableSymbol.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../../Resources/Stylesheets/vTable.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapGlobal.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapDom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapUtilities.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapXhr.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTextEffects.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSlideshow.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMessageBus.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMessageBus.CrossFrame.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapDefault.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMediaQueries.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapAccessibility.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapHelpSystem.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapAliasFile.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopicFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapFeedbackHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSkinHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.Breadcrumbs.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.MiniToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.SideMenu.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapIndex.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapGlossary.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapParser.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSearch.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapNavigateTopics.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapLms.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapELearning.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopic.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMicroContentComponent.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSearchHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopicElements.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTriPane.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/jscript" src="../../../../Resources/vScripts/SyntaxHighlighting.js">
+        </script>
+        <script type="text/jscript" src="../../../../Resources/vScripts/TabSwitch.js">
+        </script>
+        <script type="text/javascript" src="../../../../Resources/vScripts/Vector.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../../../CANoeDEFamily.htm#Topics/CANoeCANalyzer/J1939/j1939IL/j1939ILSendPGs.htm">Open topic with navigation</a>
+        </p>
+        <div class="Body">
+            <div role="main" id="mc-main-content">
+                <p class="StructurePath"><a href="../startpageJ1939.htm" class="StructurePath">J1939</a> » <a href="j1939ILOverview.htm" class="StructurePath">J1939 Interaction Layer</a> » <span class="mc-variable System.Title variable">Send Parameter Groups With J1939 IL according to J1939-22</span></p>
+                <h1><span class="mc-variable System.Title variable">Send Parameter Groups With J1939 IL according to J1939-22</span>
+                </h1>
+                <p class="MenuPath">&#160;</p>
+                <p class="ToolAvailability" data-mc-conditions="BuildProcess.ToolAvailability"><a href="../../../Shared/FeatureAvailability.htm" class="red" title="Feature availabilty for your product">Valid&#160;for</a>:&#160;&#160;CANoe&#160;DE<a name="aanchor934"></a><MadCap:concept term="SFCANoeDE" /></p>
+                <p class="AutoSearchFilterConcepts"><a name="aanchor935"></a>
+                    <MadCap:concept term="SFCore" />
+                </p>
+                <p>In contrast to the classic J1939, in J1939-22 the parameter groups are not placed directly on the bus, but are transmitted within Multi-PGs or via the FD transport protocol (FD TP). The only exception here is the <span class="bold">Address Claimed</span> message, which can be sent both as CEFF (Classical Extended Frame Format) and as FEFF (Flexible Data Rate Extended Frame Format).</p>
+                <p>The sending process can be divided into two steps:</p>
+                <ul>
+                    <li>The first step is to decide when a PG should be enabled (triggered) for sending. The decision is made in the same way as for classical J1939 - based on the attributes <span class="bold">GenMsgSendType</span>, <span class="bold">GenMsgCycleTime</span>, <span class="bold">GenSigSendType</span>, etc. At the moment of triggering the payload of the parameter group is taken and the parameter group is entered into the existing Multi-PG. For the parameter group to be entered into an existing Multi-PG, the source address and target address must match, otherwise a new Multi-PG is created. If the priority of the parameter group is higher than that of the Multi-PG, the priority of the Multi-PG is increased to this value.</li>
+                    <li>The second step is to decide when to send a ready Multi-PG. This decision is depends on the following factors:</li>
+                </ul>
+                <div class="Indent">
+                    <ol style="list-style-type: lower-alpha;">
+                        <li value="1">Filling level of the Multi-PG</li>
+                        <li value="2">Expired waiting time of the Multi-PG</li>
+                        <li value="3">Maximum allowed waiting times of C-PGs that have already been entered in the Multi-PG</li>
+                    </ol>
+                </div>
+                <p>A triggered C-PG that is waiting to send in a Multi-PG can no longer be changed. C-PGs are entered into the Multi-PG in the order in which they are triggered (there is no re-sorting within Multi-PG). It is possible that a Multi-PG contains more than one C-PG with the same PGN. A separate Multi-PG is provided for each target address.</p>
+                <div>
+                    <h2 class="SectionMain">DBC Attributes for Configuring the Send Strategy</h2>
+                    <p>The send strategy of a node can be configured in the database (DBC) at the node level and message level and can be overridden in CAPL. 
+The following DBC attributes can be used:</p>
+                    <table style="mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                    <p class="TableHead">Attribute Name</p>
+                                </th>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                    <p class="TableHead">Object Type</p>
+                                </th>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                    <p class="TableHead">Value Range</p>
+                                </th>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                    <p class="TableHead">Description</p>
+                                </th>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                    <p class="TableHead">Default Value</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">J1939MultiPgSendTimeout</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Node</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">0 – 3600000 ms</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Maximum time delay between triggering the first C-PG (i.e. the time when the Multi-PG was created) and sending the Multi-PG.</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">2 ms</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">J1939MultiPgSizeThreshold</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Node</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">0 – 64 Byte</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">If the payload of the Multi-PG exceeds this value, the Multi-PG is sent.</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">56 Byte</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">J1939MultiPgBroadcastType</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Node</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">FBFF (11 bit Can ID)</p>
+                                    <p class="Table">FEFF (29 bit Can ID)</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Type of Multi-PG that transports broadcast C-PGs.</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">FBFF (11 bit Can ID)</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">J1939PgAppearanceOnBus (*)</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Message</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Default</p>
+                                    <p class="Table">CAN_Extended</p>
+                                    <p class="Table">CANFD_Extended</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p>Defines how a PG should appear on the bus. Interpretation for a J1939.22 bus:</p>
+                                    <ul>
+                                        <li>
+                                            <p class="ListItem"><span class="bold">Default</span>:</p>
+                                            <p class="ListItem">PG will be transmitted with a Multi-PG.</p>
+                                        </li>
+                                        <li>
+                                            <p class="ListItem"><span class="bold">CAN_Extended</span>:</p>
+                                            <p class="ListItem">PG is sent as CEFF frame.</p>
+                                        </li>
+                                        <li>
+                                            <p class="ListItem"><span class="bold">CANFD_Extended</span>:</p>
+                                            <p class="ListItem">PG is sent as FEFF frame.</p>
+                                        </li>
+                                    </ul>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Default</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">J1939CPgSendTimeout</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Message</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">-1 or 0-3600000 ms</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <ul>
+                                        <li>
+                                            <p class="ListItem">-1:</p>
+                                            <p class="ListItem">The attribute is ignored.</p>
+                                        </li>
+                                        <li>
+                                            <p class="ListItem">≥ 0:</p>
+                                            <p class="ListItem">Maximum time delay between triggering the C-PG and sending the Multi-PG.</p>
+                                        </li>
+                                    </ul>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">-1</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">J1939CPgTOS</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Message</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">0 - 7</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Type Of Service of the C-PG</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">2 (SAE J1939 Contained-PG service with optional SAE defined assurance data support)</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">J1939CPgTF</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Message</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">0 - 7</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Trailer Format of the C-PG</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">0 (SAE J1939 with no assurance data)</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">J1939TpADT</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Message</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">0 - 255</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">—</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">0</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="Table">J1939TpADS</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="Table">Message</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="Table">0 - 255</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="Table">—</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                    <p class="Table">0</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>(*) For each individual PG you can define how it is to be sent. The behavior is determined by the message attribute <span class="bold">J1939PgAppearanceOnBus</span>. With values such as <span class="bold">CAN_Extended</span> or <span class="bold">CANFD_Extended</span>, the parameter group is placed directly on the bus as a CAN frame (corresponding to CEFF or FEFF). With the value <span class="bold">Default</span> the parameter group is sent as C-PG within a Multi-PG.</p>
+                </div>
+                <div>
+                    <h2 class="SectionMain">Determine the Sendpoint</h2>
+                    <p>Based on the attributes listed in the table above, the sendpoint is determined as follows:</p>
+                    <ul>
+                        <li>Parameter groups for which the <span class="bold">J1939PgAppearanceOnBus</span> attribute has the value <span class="bold">CAN_Extended</span> or <span class="bold">CANFD_Extended</span> are sent as separate frames <span class="bold">immediately after triggering</span>.</li>
+                        <li>Parameter groups where the <span class="bold">J1939PgAppearanceOnBus</span> attribute has the value <span class="bold">Default</span> are sent exclusively with a Multi-PG. The sendpoint is determined in this way:</li>
+                    </ul>
+                    <div class="Indent">
+                        <ol style="list-style-type: lower-alpha;">
+                            <li value="1">As soon as a PG is triggered, a suitable Multi-PG is created for it (if not yet available) or fetched (if already created earlier). When a Multi-PG is created, a timer is started for it immediately - with the value from <span class="bold">J1939MultiPgSendTimeout</span>. The timer defines the latest time for sending the Multi-PG. If J1939MultiPgSendTimeout has the value 0, the Multi-PG is sent immediately.</li>
+                            <li value="2">There is a separate Multi-PG for each combination of source address and target address. For PDU2 C-PGs the target address 0xFF is used.</li>
+                            <li value="3">If a suitable Multi-PG is fetched or created, the triggered PG is added to the Multi-PG as a C-PG. If the Multi-PG does not have enough space for it, it is sent immediately and a new Multi-PG is created (see a.).</li>
+                            <li value="4">When adding a PG, it is checked whether the attribute <span class="bold">J1939CPgSendTimeout</span> has a non-negative value for the PG. If it is, the timer of the Multi-PG is customized so that the remaining delay of the Multi-PG does not exceed the value defined in<span class="bold"> J1939CPgSendTimeout</span>. J1939CPgSendTimeout = -1 is ignored, J1939CPgSendTimeout = 0 leads to immediate sending of the C-PG with the currently existing Multi-PG.</li>
+                            <li value="5">In parallel, after each addition of a C-PG, it is checked whether the Multi-PG has exceeded the size specified in <span class="bold">J1939MultiPgSizeThreshold</span>. If this is the case, the Multi-PG is sent immediately.</li>
+                            <li value="6">In <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> version 16, FD TP is not yet supported. However, it may happen that a parameter group with length &gt; 60 bytes is triggered. In this case the parameter group is truncated to 60 bytes when the Multi-PG is added. But there is a workaround to send a parameter group with the FD TP: for this you have to block the triggering of the parameter group in the callback <a href="../../../CAPLFunctions/J1939/J1939InteractionLayer/Functions/CAPLfunctionJ1939ILOnTxPrepare.htm" class="SourceCode">J1939IL_OnTxPrepare</a> and send the blocked parameter group via the CAPL command <span class="bold">output</span>. <a href="../../../CAPLFunctions/J1939/J1939InteractionLayer/Functions/CAPLfunctionJ1939ILOnTxPrepare.htm" class="SourceCode">J1939IL_OnTxPrepare</a> is called for C-PGs whenever the C-PG is triggered (so not necessarily when they is put on the bus with the Multi-PG).</li>
+                            <li value="7">With a special workaround you can achieve that a parameter group is the only one to be sent with a Multi-PG: You have to block the sending of the parameter group in the callback <a href="../../../CAPLFunctions/J1939/J1939InteractionLayer/Functions/CAPLfunctionJ1939ILOnTxPrepare.htm" class="SourceCode">J1939IL_OnTxPrepare</a> and send the blocked parameter group via <a href="../../../CAPLFunctions/J1939/Functions/CAPLfunctionJ1939InitializeMultiPG.htm" class="SourceCode">J1939InitializeMultiPG</a> and <a href="../../../CAPLFunctions/J1939/Functions/CAPLfunctionJ1939AddContainedPG.htm" class="SourceCode">J1939AddContainedPG</a> directly from CAPL.</li>
+                        </ol>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="SectionMain">Customize the Configuration Parameters at Runtime</h2>
+                    <p>All parameters for defining the send strategy, which are defined by DBC attributes, can be overwritten at runtime.</p>
+                    <p>For overwriting node attributes you can use the function <span class="SourceCode">J1939ILSetNodeProperty</span>. The following table defines which DBC attributes correspond to the <span class="bold">propertyName</span> function parameter:</p>
+                    <table style="mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                    <p class="TableHead">propertyName</p>
+                                </th>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                    <p class="TableHead">DBC Attribute</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">MultiPgSendTimeout
+ (0-36000000)</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">J1939MultiPgSendTimeout</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">MultiPgSizeThreshold (0-64)</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">J1939MultiPgSizeThreshold</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="Table">MultiPgBroadcastType (0: FBFF, 1: FEFF)</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                    <p class="Table">J1939MultiPgForBroadcast</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>For overwriting message attributes you can use the function <span class="SourceCode">J1939ILSetMessageProperty</span>. The following table defines which DBC attributes correspond to the <span class="bold">propertyName</span> function parameter:</p>
+                    <table style="mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                    <p class="TableHead">propertyName</p>
+                                </th>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                    <p class="TableHead">DBC
+ Attribute</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">PgAppearanceOnBus (0: Default, 1: CAN_Extended, 2: CANFD_Extended)</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">J1939PgAppearanceOnBus</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">CPgSendTimeout (-1, 0-36000000)</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">J1939CPgSendTimeout</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">CPgTOS (0 – 7)</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">J1939CPgTOS</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="Table">CPgTF</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                    <p class="Table">J1939CPgTF</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>Furthermore, it is possible to customize or manipulate a parameter group individually after each trigger. For this purpose you can use the callback <a href="../../../CAPLFunctions/J1939/J1939InteractionLayer/Functions/CAPLfunctionJ1939ILOnTxPrepare.htm" class="SourceCode">J1939ILOnTxPrepare</a>. In the callback you can, among other things, change the payload of the parameter group, e.g. to set safety data and security data. Furthermore it is possible to adjust selectors <a href="../../../CAPLFunctions/J1939/CAPLfunctionJ1939GroupSelectors.htm#BMCANFDFlags"><span class="bold">FDF</span>, <span class="bold">TM</span>, <span class="bold">TOS</span> and <span class="bold">TF</span></a> here.</p>
+                </div>
+                <div>
+                    <h2 class="SectionMain">Assurance Data</h2>
+                    <p>In J1939-22 all parameter groups can optionally be provided with <a href="../J1939CANfd/1939CANfdPGcaplSendRec.htm#BMAssuranceData">Assurance Data</a> to preserve the integrity of the data. For C-PGs, the type and length is determined by the Type of Service (TOS) and the Trailer Format (TF). For transport protocols, the Assurance Data is appended in the <span class="bold">End of Message Status</span> (EOMS) message. The Interaction Layer interprets the Assurance Data as part of the overall payload of a message, consisting of the actual payload and the subsequent Assurance Data. The Assurance Data is then taken from the end of the message according to the specified length from TOS and TF or ADS (Assurance Data Size) in the transport protocols.</p>
+                    <p>This has the advantage that you can define in the database a signal at the end of the message with the length of ADS. You can then use this signal to calculate the checksum in CAPL and set the value of the signal or read it on receiver side.</p>
+                    <div>
+                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                            <col class="TableStyle-vTableSymbol-Column-Column1" />
+                            <col class="TableStyle-vTableSymbol-Column-Column2" />
+                            <tbody>
+                                <tr>
+                                    <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                        <p class="Table">
+                                            <img src="../../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                        <p class="TableSymbolHead">Example</p>
+                                        <p class="TableSourceCode">// Is called by the interaction layer when a PG is sent<br />long J1939ILOnTxPrepare(pg * txPG)<br />{<br />&#160;&#160;pg VeryLongPg myPg;<br />&#160;&#160;int64 checksum;<br />&#160;&#160;long idx;<br />&#160;&#160;checksum = 0;<br />&#160;&#160;if(txPG.PGN == VeryLongPg.PGN)<br />&#160;&#160;{<br />&#160;&#160;&#160;&#160;myPg = txPG;<br />&#160;&#160;&#160;&#160;// In this example we assume ADS is 8 bytes (must be set in database)<br />&#160;&#160;&#160;&#160;for(idx = 0; idx &lt; myPg.dlc - 8; idx++)<br />&#160;&#160;&#160;&#160;{<br />&#160;&#160;&#160;&#160;&#160;&#160;// Fill with random data<br />&#160;&#160;&#160;&#160;&#160;&#160;myPg.byte(idx) = idx % 256;<br />&#160;&#160;&#160;&#160;&#160;&#160;// Calculate pseudo checksum<br />&#160;&#160;&#160;&#160;&#160;&#160;checksum += myPg.byte(idx);<br />&#160;&#160;&#160;&#160;}<br />&#160;&#160;&#160;&#160;// Set the signal of AssuranceData (8 bytes, defined in database) to the calculated checksum value.<br />&#160;&#160;&#160;&#160;'myPg.AssuranceData = checksum;<br />&#160;&#160;&#160;&#160;txPG = myPg;<br />&#160;&#160;}<br />&#160;&#160;// IL shall send the PG<br />&#160;&#160;return 1;<br />}</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p>For fault injection you can also specify values &gt; 52 bytes for ADS, but since EoMS supports a maximum of 52 bytes, the J1939 interaction layer will effectively only consider the last 52 bytes and send all bytes before that as user data. The <span class="bold">ADS</span> field in the EoMS message will nevertheless contain the value you incorrectly specified.</p>
+                </div>
+                <p class="LinkList">&#160;</p>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="FooterWhite">
+                <table class="FooterWhite" style="border-collapse: collapse;margin-left: auto;margin-right: auto;">
+                    <col style="width: 70px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col style="width: 16px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="buttons popup-container clearfix topicToolbarProxy topicToolbarProxyFooter _Skins_HTML5TopicToolbar mc-component nocontent">
+                                    <div class="button-group-container-left">
+                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo"><a href="../../../Shared/HowToUseOnlineHelp.htm" title="Tips for using the help" alt="Tips for using the help"><img src="../../../../Resources/vImages/vBackstage/vHelpInfo.png" /></a>
+                                </p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo" style="text-align: right;"><span class="mc-variable Vector.BuildTime variable">2024-04-8T20:56:42</span>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <table style="width: 100%;border-collapse: separate;border-spacing: 3px 0px;margin-left: auto;margin-right: auto;caption-side: top;">
+                <col />
+                <col />
+                <col />
+                <col data-mc-conditions="BuildProcess.HTML5Link" />
+                <tbody>
+                    <tr>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;">
+                            <p class="vec_Footer">©&#160;Vector Informatik GmbH</p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;text-align: right;">
+                            <p class="vec_FooterBold">
+                                <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE&#160;Product Families</MadCap:conditionalText> Version <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.VectorTestUnitRunner">18</MadCap:conditionalText></p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="../../../Shared/ContactCopyrightLicense.htm" class="vec_Footer MCXref xref xrefvec_Footer">Contact/Copyright/License</a>
+                            </p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="https://www.vector.com/int/en/company/get-info/privacy-policy/" target="_blank" class="vec_Footer">Data Privacy Notice</a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

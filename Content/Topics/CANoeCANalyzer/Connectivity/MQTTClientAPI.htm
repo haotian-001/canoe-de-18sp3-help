@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="" data-mc-search-type="Stem" data-mc-help-system-file-name="CANoeDEFamily.xml" data-mc-path-to-help-system="../../../../" data-mc-conditions="Targets.CANoe-DE-Family" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../Skins/Favicons/favicon-16x16.png" /><title>MQTT Client API (Connectivity)</title>
+        <link href="../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Resources/Stylesheets/vTableMasterPageHeader.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../Resources/Stylesheets/vStylesheet.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../Resources/Stylesheets/vTable.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapGlobal.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapDom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapUtilities.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapXhr.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTextEffects.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSlideshow.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMessageBus.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMessageBus.CrossFrame.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapDefault.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMediaQueries.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAccessibility.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapHelpSystem.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAliasFile.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopicFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapFeedbackHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSkinHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.Breadcrumbs.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.MiniToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.SideMenu.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapIndex.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapGlossary.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapParser.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSearch.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapNavigateTopics.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapLms.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapELearning.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopic.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMicroContentComponent.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSearchHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopicElements.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTriPane.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/jscript" src="../../../Resources/vScripts/SyntaxHighlighting.js">
+        </script>
+        <script type="text/jscript" src="../../../Resources/vScripts/TabSwitch.js">
+        </script>
+        <script type="text/javascript" src="../../../Resources/vScripts/Vector.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../../CANoeDEFamily.htm#Topics/CANoeCANalyzer/Connectivity/MQTTClientAPI.htm">Open topic with navigation</a>
+        </p>
+        <div class="Body">
+            <div role="main" id="mc-main-content">
+                <div>
+                    <p class="StructurePath"><a href="../CANoeDEFamily.htm" class="StructurePath" data-mc-conditions="Targets.CANoe-DE-Family"><img src="../../../Resources/vImages/vToolIcons/CANoeDEFamily_Icon16_15x15.png" alt="" style="width: 15;height: 15;" />&#160;CANoe&#160;DE&#160;Product&#160;Families</a> » <a href="Connectivity.htm" class="StructurePath">Connectivity</a> » MQTT Client API</p>
+                    <h1>MQTT Client API</h1>
+                    <p class="MenuPath">&#160;</p>
+                    <p class="ToolAvailability" data-mc-conditions="BuildProcess.ToolAvailability"><a href="../../Shared/FeatureAvailability.htm" class="red" title="Feature availabilty for your product">Valid&#160;for</a>:&#160;&#160;CANoe&#160;DE<a name="aanchor24865"></a><MadCap:concept term="SFCANoeDE" />&#160;&#160;•&#160;&#160;CANoe:lite&#160;DE<a name="aanchor24866"></a><MadCap:concept term="SFCANoeLiteDE" />&#160;&#160;•&#160;&#160;CANoe4SW&#160;DE<a name="aanchor24867"></a><MadCap:concept term="SFCANoe4SWDE" />&#160;&#160;•&#160;&#160;CANoe4SW:lite&#160;DE<a name="aanchor24868"></a><MadCap:concept term="SFCANoe4SWLiteDE" /></p>
+                    <p class="AutoSearchFilterConcepts"><a name="aanchor24869"></a>
+                        <MadCap:concept term="SFCore" />
+                    </p>
+                    <p class="IndexConcept"><a name="kanchor8164"></a>
+                    </p>
+                </div>
+                <div>
+                    <h2 class="SectionMain">Introduction</h2>
+                    <p>The MQTT Client API provides a way to send and receive MQTT messages. To use the MQTT Client API, the <span class="GUI">MQTT service</span> must be activated in the <span class="GUI">Connectivity</span> dialog and the <span class="bold">MQTT</span> module must be imported into the vCDL (import module "MQTT").</p>
+                    <p>The MQTT client API provides the consumed and <span class="bold">provided</span> methods. To use these, a distributed object must be created by the <span class="bold">_MQTT::ClientAPI::IClientAPI interface</span>. The consumed methods can be called on the object in the application model or in the <span class="GUI">Application</span> panel, for example, to establish the connection with the broker or to publish a message. The <span class="bold">provided</span> methods are called on the object under the respective condition (according to the method name). The reaction to the call of these functions can be implemented in the application model. See also the <span class="bold"><a href="#BMExample">Examples</a></span> below. The syntax and meaning of the methods and their parameters are explained in the <span class="bold">Methods</span> chapter.</p>
+                </div>
+                <div>
+                    <h2 class="SectionMain">Methods</h2>
+                    <p>For explanations of the data types used from the _MQTT::DataTypes namespace, see the <a href="MQTTDataTypes.htm">MQTT Data Types</a> page.</p>
+                    <div>
+                        <h3 class="SectionSub"><a name="BMmqttConnect" id="BMmqttConnect"></a>MQTT_Connect</h3>
+                        <table style="mc-table-style: url('../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                            <col />
+                            <col />
+                            <col />
+                            <col />
+                            <tbody>
+                                <tr>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Function Name</p>
+                                    </th>
+                                    <td colspan="3" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">MQTT_Connect</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Syntax</p>
+                                    </th>
+                                    <td colspan="3" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">MQTT_Connect(ClientId, CleanSession, KeepAliveInSeconds, Username, Password, LWT)</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Communication Direction</p>
+                                    </th>
+                                    <td colspan="3" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">consumed</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Description</p>
+                                    </th>
+                                    <td colspan="3" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Establishes the connection with the MQTT broker.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th rowspan="7" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Parameter</p>
+                                    </th>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Name</p>
+                                    </th>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Data Type</p>
+                                    </th>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="TableHead">Description</p>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">ClientId</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">String</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Name/designation of the client.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">CleanSession</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Bool (optional)</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Specifies whether to reuse the previous session, if any.</p>
+                                        <p class="Table">If this parameter has the value <span class="bold">true</span></p>
+                                        <ul>
+                                            <li>the <span class="bold">previous</span> session is deleted when the connection is <span class="bold">established</span></li>
+                                            <li>the <span class="bold">current</span> session is deleted when the connection is <span class="bold">terminated</span>.</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">KeepAliveInSeconds</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Uint16 (optional)</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Time span in seconds after which the client sends a ping request. This checks whether the connection is still active.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Username</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">String (optional)</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Username (may be required by the broker).</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Password</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">String (optional)</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Password (possibly required by the broker).</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                        <p class="Table">LWT</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                        <p class="Table">_MQTT::DataTypes::MQTTPublishMessage (optional)</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                        <p class="Table">Message sent by the broker, when the connection with the client was unexpectedly terminated.</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <h3 class="SectionSub">MQTT_Disconnect</h3>
+                        <table style="mc-table-style: url('../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                            <col />
+                            <col />
+                            <col />
+                            <col />
+                            <tbody>
+                                <tr>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Function Name</p>
+                                    </th>
+                                    <td colspan="3" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">MQTT_Disconnect</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Syntax</p>
+                                    </th>
+                                    <td colspan="3" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">MQTT_Disconnect()</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Communication Direction</p>
+                                    </th>
+                                    <td colspan="3" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">consumed</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                        <p class="TableHead">Description</p>
+                                    </th>
+                                    <td colspan="3" class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                        <p class="Table">Terminates the connection with the MQTT broker.</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <h3 class="SectionSub">MQTT_Publish</h3>
+                        <table style="mc-table-style: url('../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                            <col />
+                            <col />
+                            <col />
+                            <col />
+                            <tbody>
+                                <tr>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Function Name</p>
+                                    </th>
+                                    <td colspan="3" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">MQTT_Publish</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Syntax</p>
+                                    </th>
+                                    <td colspan="3" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">MQTT_Publish(Message)</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Communication Direction</p>
+                                    </th>
+                                    <td colspan="3" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">consumed</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Description</p>
+                                    </th>
+                                    <td colspan="3" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Publishes a message on the topic defined in the argument.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep" rowspan="2">
+                                        <p class="TableHead">Parameter</p>
+                                    </th>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Name</p>
+                                    </th>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Data Type</p>
+                                    </th>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="TableHead">Description</p>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                        <p class="Table">Message</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                        <p class="Table">MQTT::DataTypes::MQTTPublishMessage</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                        <p class="Table">Content and other properties of the message.</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <h3 class="SectionSub">MQTT_SubscribeTopic</h3>
+                        <table style="mc-table-style: url('../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                            <col />
+                            <col />
+                            <col />
+                            <col />
+                            <tbody>
+                                <tr>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Function Name</p>
+                                    </th>
+                                    <td colspan="3" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">MQTT_SubscribeTopic</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Syntax</p>
+                                    </th>
+                                    <td colspan="3" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">MQTT_SubscribeTopic(Subscription)</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Communication Direction</p>
+                                    </th>
+                                    <td colspan="3" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">consumed</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Description</p>
+                                    </th>
+                                    <td colspan="3" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">The client API DO subscribes to topics matching the topic filter.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep" rowspan="2">
+                                        <p class="TableHead">Parameter</p>
+                                    </th>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Name</p>
+                                    </th>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Data Type</p>
+                                    </th>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="TableHead">Description</p>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                        <p class="Table">Subscription</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                        <p class="Table">MQTT::DataTypes::SubscriptionRequest</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                        <p class="Table">Includes a topic filter and the required Quality of Service.</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <h3 class="SectionSub">MQTT_SubscribeTopics</h3>
+                        <table style="mc-table-style: url('../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                            <col />
+                            <col />
+                            <col />
+                            <col />
+                            <tbody>
+                                <tr>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Function Name</p>
+                                    </th>
+                                    <td colspan="3" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">MQTT_SubscribeTopics</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Syntax</p>
+                                    </th>
+                                    <td colspan="3" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">MQTT_SubscribeTopics(Subscriptions)</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Communication Direction</p>
+                                    </th>
+                                    <td colspan="3" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">consumed</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Description</p>
+                                    </th>
+                                    <td colspan="3" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">The client API DO subscribes to topics matching the topic filter.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep" rowspan="2">
+                                        <p class="TableHead">Parameter</p>
+                                    </th>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Name</p>
+                                    </th>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Data Type</p>
+                                    </th>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="TableHead">Description</p>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                        <p class="Table">Subscriptions</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                        <p class="Table">MQTT::DataTypes::SubscriptionRequest</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                        <p class="Table">Includes multiple topic filters and required Quality of Service.</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <h3 class="SectionSub">MQTT_UnsubscribeTopic</h3>
+                        <table style="mc-table-style: url('../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                            <col />
+                            <col />
+                            <col />
+                            <col />
+                            <tbody>
+                                <tr>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Function Name</p>
+                                    </th>
+                                    <td colspan="3" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">MQTT_UnsubscribeTopic</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Syntax</p>
+                                    </th>
+                                    <td colspan="3" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">MQTT_UnsubscribeTopic(TopicFilter)</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Communication Direction</p>
+                                    </th>
+                                    <td colspan="3" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">consumed</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Description</p>
+                                    </th>
+                                    <td colspan="3" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Subscription to topics matching the topic filter is removed.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep" rowspan="2">
+                                        <p class="TableHead">Parameter</p>
+                                    </th>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Name</p>
+                                    </th>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Data Type</p>
+                                    </th>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="TableHead">Description</p>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                        <p class="Table">TopicFilter</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                        <p class="Table">String</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                        <p class="Table">Filter for the topics that should not be listened to from now on.</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <h3 class="SectionSub">MQTT_UnsubscribeTopics</h3>
+                        <table style="mc-table-style: url('../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                            <col />
+                            <col />
+                            <col />
+                            <col />
+                            <tbody>
+                                <tr>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Function Name</p>
+                                    </th>
+                                    <td colspan="3" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">MQTT_UnsubscribeTopics</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Syntax</p>
+                                    </th>
+                                    <td colspan="3" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">MQTT_UnsubscribeTopic(TopicFilter)</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Communication Direction</p>
+                                    </th>
+                                    <td colspan="3" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">consumed</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Description</p>
+                                    </th>
+                                    <td colspan="3" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Subscription to topics matching the topic filter is removed.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep" rowspan="2">
+                                        <p class="TableHead">Parameter</p>
+                                    </th>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Name</p>
+                                    </th>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Data Type</p>
+                                    </th>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="TableHead">Description</p>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                        <p class="Table">TopicFilter</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                        <p class="Table">MQTT::DataTypes::UnsubscriptionRequestList</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                        <p class="Table">List of filters for the topics that should not be listened to from now on. The TopicFilters are of data type string.<![CDATA[								]]></p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <h3 class="SectionSub">MQTT_OnConnected</h3>
+                        <table style="mc-table-style: url('../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                            <col />
+                            <col />
+                            <col />
+                            <col />
+                            <tbody>
+                                <tr>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Function Name</p>
+                                    </th>
+                                    <td colspan="3" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">MQTT_OnConnected</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Syntax</p>
+                                    </th>
+                                    <td colspan="3" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">MQTT_OnConnected(Result)</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Communication Direction</p>
+                                    </th>
+                                    <td colspan="3" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">provided</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Description</p>
+                                    </th>
+                                    <td colspan="3" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Called when the connection is established.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep" rowspan="2">
+                                        <p class="TableHead">Parameter</p>
+                                    </th>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Name</p>
+                                    </th>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Data Type</p>
+                                    </th>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="TableHead">Description</p>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                        <p class="Table">Result</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                        <p class="Table">MQTT::DataTypes::ConnectResult</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                        <p class="Table">Return value with the information whether the connection was established.</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <h3 class="SectionSub">MQTT_OnDisconnect</h3>
+                        <table style="mc-table-style: url('../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                            <col />
+                            <col />
+                            <col />
+                            <col />
+                            <tbody>
+                                <tr>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Function Name</p>
+                                    </th>
+                                    <td colspan="3" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">MQTT_OnDisconnect</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Syntax</p>
+                                    </th>
+                                    <td colspan="3" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">MQTT_OnDisconnect()</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Communication Direction</p>
+                                    </th>
+                                    <td colspan="3" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">provided</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                        <p class="TableHead">Description</p>
+                                    </th>
+                                    <td colspan="3" class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                        <p class="Table">Called when the connection has been terminated.</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <h3 class="SectionSub">MQTT_OnPublishReceived</h3>
+                        <table style="mc-table-style: url('../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                            <col />
+                            <col />
+                            <col />
+                            <col />
+                            <tbody>
+                                <tr>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Function Name</p>
+                                    </th>
+                                    <td colspan="3" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">MQTT_OnPublishReceived</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Syntax</p>
+                                    </th>
+                                    <td colspan="3" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">MQTT_OnPublishReceived(Message)</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Communication Direction</p>
+                                    </th>
+                                    <td colspan="3" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">provided</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Description</p>
+                                    </th>
+                                    <td colspan="3" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Called when a message has been received.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep" rowspan="2">
+                                        <p class="TableHead">Parameter</p>
+                                    </th>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Name</p>
+                                    </th>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Data Type</p>
+                                    </th>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="TableHead">Description</p>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                        <p class="Table">Message</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                        <p class="Table">MQTT::DataTypes::MQTTPublishMessage</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                        <p class="Table">Content and other properties of the message like the Topic.</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <h3 class="SectionSub">MQTT_OnSubscribe</h3>
+                        <table style="mc-table-style: url('../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                            <col />
+                            <col />
+                            <col />
+                            <col />
+                            <tbody>
+                                <tr>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Function Name</p>
+                                    </th>
+                                    <td colspan="3" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">MQTT_OnSubscribe</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Syntax</p>
+                                    </th>
+                                    <td colspan="3" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">MQTT_OnSubscribe(SubscriptionResults)</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Communication Direction</p>
+                                    </th>
+                                    <td colspan="3" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">provided</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Description</p>
+                                    </th>
+                                    <td colspan="3" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Called when one or more topics have been subscribed to.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep" rowspan="2">
+                                        <p class="TableHead">Parameter</p>
+                                    </th>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Name</p>
+                                    </th>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Data Type</p>
+                                    </th>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="TableHead">Description</p>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                        <p class="Table">SubscriptionResults</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                        <p class="Table">list&lt;_MQTT::DataTypes::SubscriptionResult&gt;</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                        <p class="Table">List of topics and their return codes.</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <h3 class="SectionSub">MQTT_OnUnsubscribe</h3>
+                        <table style="mc-table-style: url('../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                            <col />
+                            <col />
+                            <col />
+                            <col />
+                            <tbody>
+                                <tr>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Function Name</p>
+                                    </th>
+                                    <td colspan="3" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">MQTT_OnUnsubscribe</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Syntax</p>
+                                    </th>
+                                    <td colspan="3" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">MQTT_OnUnsubscribe(TopicFilters)</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Communication Direction</p>
+                                    </th>
+                                    <td colspan="3" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">provided</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Description</p>
+                                    </th>
+                                    <td colspan="3" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Called when the subscription to one or more topics has been cancelled.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep" rowspan="2">
+                                        <p class="TableHead">Parameter</p>
+                                    </th>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Name</p>
+                                    </th>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Data Type</p>
+                                    </th>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="TableHead">Description</p>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                        <p class="Table">TopicFilters</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                        <p class="Table">list&lt;string&gt;</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                        <p class="Table">List TopicFilters for which the subscription has been cancelled.</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="SectionMain"><a name="BMExample" id="BMExample"></a>Examples</h2>
+                    <p>In the following you can see a use case of the MQTT Client API. In the data source (vCDL file), only a single object of the client API is created here for better comprehensibility. However, it is possible to create multiple objects and use them independently, even in addition to using self-defined communication participants (so-called high level clients). The specified code blocks for the application models in <span class="bold"><a href="#BMvCDL">vCDL</a></span>, <span class="bold"><a href="#BMC">C#</a></span>, <span class="bold"><a href="#BMCAPL">CAPL</a></span> and <span class="bold"><a href="#BMPython">Python</a></span> have the same functionality. You can use the language you prefer.</p>
+                    <p>Some of the methods are not used in the example. In this case, orient yourself to the other <span class="bold">consumed</span> or <span class="bold">provided</span> methods and use the overview of the <a href="MQTTDataTypes.htm">MQTT Data Types</a>.</p>
+                    <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0)" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" /></a><a name="BMvCDL" id="BMvCDL"></a><a href="javascript:void(0)" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_" aria-expanded="false">vCDL</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <p class="SourceCode"><span class="CodeKeyword">version</span> <span class="CodeNumericalLiteral">1.4</span>;<br /><br /><span class="CodeKeyword">import module</span> <span class="CodeCOM">"MQTT"</span>;<br /><br /><span class="CodeKeyword">namespace</span> ClientAPIExample<br /><br />{<br />&#160;&#160;_MQTT::ClientAPI::IClientAPI ExampleClient;<br />}</p>
+                        </div>
+                    </div>
+                    <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0)" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" /></a><a name="BMC" id="BMC"></a><a href="javascript:void(0)" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_" aria-expanded="false">C#</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <p class="SourceCode"><span class="CodeKeyword">using</span> Vector.Tools;<br /><span class="CodeKeyword">using</span> Vector.CANoe.Runtime;<br /><br /><span class="CodeKeyword">public class</span> <span class="green">ClientAPIExample</span> : MeasurementScript {<br />&#160;&#160;<span class="CodeKeyword">public override void</span> Start()<br />&#160;&#160;{<br />&#160;&#160;&#160;&#160;ExampleClient.MQTT_Connect.Call(<span class="CodeStringLiteral">"ClientAPIExampleClient"</span>, <span class="CodeKeyword">false</span>, 60, <span class="CodeKeyword">null</span>, <span class="CodeKeyword">null</span>, <span class="CodeKeyword">null</span>);<br /><br />&#160;&#160;&#160;<span class="CodeComment">// make the argument for MQTT_Subscribe</span><br />&#160;&#160;&#160;&#160;<span class="CodeKeyword">var</span> subscriptionRequest = <span class="CodeKeyword">new</span> _MQTT.DataTypes.SubscriptionRequest();<br />&#160;&#160;&#160;&#160;subscriptionRequest.TopicFilter = <span class="CodeStringLiteral">"livingroom/#"</span>; <span class="CodeComment">//topic filter for all topics starting with "livingroom/"</span><br />&#160;&#160;&#160;&#160;subscriptionRequest.RequestedQos.ImplValue = 0;<br /><br />&#160;&#160;&#160;&#160;ExampleClient.MQTT_SubscribeTopic.Call(subscriptionRequest);<br /><br />&#160;&#160;&#160;&#160;<span class="CodeComment">// make the argument for MQTT_Publish</span><br />&#160;&#160;&#160;&#160;<span class="CodeKeyword">var</span> publishMessage = <span class="CodeKeyword">new</span> _MQTT.DataTypes.MQTTPublishMessage();<br />&#160;&#160;&#160;&#160;publishMessage.Payload.SetBytes(System.Text.Encoding.ASCII.GetBytes(<span class="CodeStringLiteral">"57 %"</span>));<br />&#160;&#160;&#160;&#160;publishMessage.PublishTopic = <span class="CodeStringLiteral">"livingroom/humidity"</span>;<br />&#160;&#160;&#160;&#160;publishMessage.QoS.ImplValue = 0;<br />&#160;&#160;&#160;&#160;publishMessage.Retain.ImplValue = <span class="CodeKeyword">false</span>;<br />&#160;&#160;&#160;&#160;publishMessage.DUP.ImplValue = <span class="CodeKeyword">false</span>;<br /><br />&#160;&#160;&#160;&#160;ExampleClient.MQTT_Publish.Call(publishMessage);<br />&#160;&#160;}<br /><br />&#160;&#160;<span class="CodeKeyword">public override void</span> Stop()<br />&#160;&#160;{<br />&#160;&#160;&#160;&#160;ExampleClient.MQTT_Disconnect.Call();<br />&#160;&#160;}<br /><br />&#160;&#160;[OnCall(ExampleClient.MemberIDs.MQTT_OnPublishReceived)] <span class="CodeComment">// function is called when a published message is received on a topic the client has subscribed on</span><br />&#160;&#160;<span class="CodeKeyword">public void</span> onPublishReceived(_MQTT.DataTypes.MQTTPublishMessage receivedMessage) <span class="CodeComment">// user defined implementation for the case of receiving a message. The name of the function can be anything.</span><br />&#160;&#160;{<br />&#160;&#160;&#160;&#160;<span class="CodeKeyword">if</span> (receivedMessage.PublishTopic == <span class="CodeStringLiteral">"livingroom/humidity"</span>)<br />&#160;&#160;&#160;&#160;{<br />&#160;&#160;&#160;&#160;&#160;&#160;<span class="CodeKeyword">var</span> humidity = System.Text.Encoding.ASCII.GetString(receivedMessage.Payload.GetBytes());<br /><br />&#160;&#160;&#160;&#160;&#160;&#160;Output.WriteLine(<span class="CodeStringLiteral">"Humidity of "</span> + humidity + <span class="CodeStringLiteral">" received."</span>); <span class="CodeComment">// write message to Write Window</span><br />&#160;&#160;&#160;&#160;}<br />&#160;&#160;&#160;&#160;<span class="CodeKeyword">else</span><br />&#160;&#160;&#160;&#160;&#160;&#160;{Output.WriteLine(<span class="CodeStringLiteral">"Message received."</span>);<br />&#160;&#160;&#160;&#160;}<br />&#160;&#160;}<br />}</p>
+                        </div>
+                    </div>
+                    <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0)" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" /></a><a name="BMCAPL" id="BMCAPL"></a><a href="javascript:void(0)" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_" aria-expanded="false">CAPL</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <p class="SourceCode">/*@!Encoding:1252*/<br /><span class="CodeKeyword">on start</span><br />{<br />&#160;&#160;<span class="CodeComment">// argument for MQTT_Subscribe</span><br />&#160;&#160;<span class="CodeKeyword">struct</span> _MQTT::DataTypes::SubscriptionRequest subscriptionRequest;<br /><br />&#160;&#160;<span class="CodeComment">// argument for MQTT_Publish</span><br />&#160;&#160;struct _MQTT::DataTypes::MQTTPublishMessage publishMessage;<br /><br />&#160;&#160;ExampleClient.MQTT_Connect.Call(<span class="CodeStringLiteral">"ClientAPIExampleClient"</span>, 0, 60, , , );<br /><br />&#160;&#160;<span class="CodeComment">// make the argument for MQTT_Subscribe</span><br />&#160;&#160;subscriptionRequest.TopicFilter = <span class="CodeStringLiteral">"livingroom/#"</span>; <span class="CodeComment">//topic filter for all topics starting with "livingroom/"</span><br />&#160;&#160;subscriptionRequest.RequestedQos = 0;<br /><br />&#160;&#160;ExampleClient.MQTT_SubscribeTopic.Call(subscriptionRequest);<br /><br />&#160;&#160;<span class="CodeComment">// make the argument for MQTT_Publish</span><br />&#160;&#160;memcpy(publishMessage.Payload, <span class="CodeStringLiteral">"57 %"</span>, 6);<br />&#160;&#160;publishMessage.PublishTopic = <span class="CodeStringLiteral">"livingroom/humidity"</span>;<br />&#160;&#160;publishMessage.QoS = 0;<br />&#160;&#160;publishMessage.Retain = 0;<br />&#160;&#160;publishMessage.DUP = 0;<br /><br />&#160;&#160;ExampleClient.MQTT_Publish.Call(publishMessage);<br />}<br /><br /><span class="CodeKeyword">on stopMeasurement</span><br />{<br />&#160;&#160;ExampleClient.MQTT_Disconnect.Call();<br />}<br /><span class="CodeKeyword">on fct_called</span> ExampleClient.MQTT_OnPublishReceived <span class="CodeComment">// user defined implementation for the case of receiving a message, function is called when a published message is received on a topic the client has subscribed on.</span><br />{<br />&#160;&#160;<span class="CodeKeyword">char</span> humidity[6];<br />&#160;&#160;<span class="CodeKeyword">byte</span> payload[6];<br /><br />&#160;&#160;<span class="CodeKeyword">if</span> (0 == strncmp(<span class="CodeKeyword">this</span>.`Message.PublishTopic, <span class="CodeStringLiteral">"livingroom/humidity"</span>, 19)) <span class="CodeComment">// As "Message" is a keyword in CAPL and at the same time the name of the parameter of ExampleClient.MQTT_OnPublishReceived, a preceeding ` is required. Non-keyword parameter names can be used without `.</span><br />&#160;&#160;{<br />&#160;&#160;&#160;&#160;memcpy(payload, <span class="CodeKeyword">this</span>.`Message.Payload);<br />&#160;&#160;&#160;&#160;memcpy(humidity, payload, 6);<br /><br />&#160;&#160;&#160;&#160;write(<span class="CodeStringLiteral">"Humidity of %s received."</span>, humidity); <span class="CodeComment">// write message to Write Window</span><br />&#160;&#160;}<br />&#160;&#160;<span class="CodeKeyword">else</span><br />&#160;&#160;{<br />&#160;&#160;&#160;&#160;write(<span class="CodeStringLiteral">"Message received."</span>);<br />&#160;&#160;}<br />}</p>
+                        </div>
+                    </div>
+                    <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0)" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" /></a><a name="BMPython" id="BMPython"></a><a href="javascript:void(0)" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_" aria-expanded="false">Python</a></span>
+                        <div class="MCDropDownBody dropDownBody">
+                            <p class="SourceCode"><span class="CodeKeyword">import</span> vector.canoe<br /><span class="CodeKeyword">import</span> application_layer<br /><br />@<span class="blue">vector.canoe.measurement_script</span><br /><span class="CodeKeyword">class</span> <span class="blue">ClientAPIExample</span>:<br />&#160;&#160;&#160;&#160;<span class="CodeKeyword">def</span> <span class="blue">start</span>(self):<br /><br />&#160;&#160;&#160;&#160;&#160;&#160;application_layer.ClientAPIExample.ExampleClient.MQTT_Connect.call(<span class="CodeStringLiteral">"ClientAPIExampleClient"</span>, <span class="CodeKeyword">False</span>, 60, <span class="CodeKeyword">None</span>, <span class="CodeKeyword">None</span>, <span class="CodeKeyword">None</span>)<br /><br />&#160;&#160;&#160;&#160;&#160;&#160;<span class="CodeComment"># make the argument for MQTT_Subscribe</span><br />&#160;&#160;&#160;&#160;&#160;&#160;subscriptionRequest = application_layer._MQTT.DataTypes.SubscriptionRequest()<br />&#160;&#160;&#160;&#160;&#160;&#160;subscriptionRequest.TopicFilter = <span class="CodeStringLiteral">"livingroom/#"</span> <span class="CodeComment"># topic filter for all topics starting with "livingroom/"</span><br /><br />&#160;&#160;&#160;&#160;&#160;&#160;subscriptionRequest.RequestedQos = 0<br /><br />&#160;&#160;&#160;&#160;&#160;&#160;application_layer.ClientAPIExample.ExampleClient.MQTT_SubscribeTopic.call(subscriptionRequest)<br /><br />&#160;&#160;&#160;&#160;&#160;&#160;<span class="CodeComment"># make the argument for MQTT_Publish</span><br />&#160;&#160;&#160;&#160;&#160;&#160;publishMessage = application_layer._MQTT.DataTypes.MQTTPublishMessage()<br />&#160;&#160;&#160;&#160;&#160;&#160;publishMessage.Payload = <span class="blue">bytes</span>(<span class="CodeFormulaVariable">"57 %%"</span>, <span class="CodeStringLiteral">"ascii"</span>)<br />&#160;&#160;&#160;&#160;&#160;&#160;publishMessage.PublishTopic = <span class="CodeStringLiteral">"livingroom/humidity"</span><br />&#160;&#160;&#160;&#160;&#160;&#160;publishMessage.QoS = 0<br />&#160;&#160;&#160;&#160;&#160;&#160;publishMessage.Retain = <span class="CodeKeyword">False</span><br />&#160;&#160;&#160;&#160;&#160;&#160;publishMessage.DUP = <span class="CodeKeyword">False</span><br /><br />&#160;&#160;&#160;&#160;&#160;&#160;application_layer.ClientAPIExample.ExampleClient.MQTT_Publish.call(publishMessage)<br /><br />&#160;&#160;&#160;&#160;<span class="CodeKeyword">def</span> <span class="blue">stop</span>(self):<br /><br />&#160;&#160;&#160;&#160;&#160;&#160;application_layer.ClientAPIExample.ExampleClient.MQTT_Disconnect.call()<br /><br />&#160;&#160;&#160;&#160;@vector.canoe.on_call(application_layer.ClientAPIExample.ExampleClient.MQTT_OnPublishReceived) <span class="CodeComment"># function is called when a published message is <br />received on a topic the client had subscribed on</span><br />&#160;&#160;&#160;&#160;<span class="CodeKeyword">def</span> <span class="blue">onPublishReceived</span>(self, receivedMessage): <span class="CodeComment"># user defined implementation for the case of receiving a message. The name of the function can be anything.</span><br /><br />&#160;&#160;&#160;&#160;&#160;&#160;<span class="CodeKeyword">if</span> receivedMessage.PublishTopic == <span class="CodeStringLiteral">"livingroom/humidity"</span>:<br /><br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;humidity = <span class="blue">str</span>(receivedMessage.Payload, <span class="CodeStringLiteral">"ascii"</span>)<br /><br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;vector.canoe.write(<span class="CodeStringLiteral">"Humidity of "</span> + humidity + <span class="CodeStringLiteral">" received."</span>) <span class="CodeComment"># write message to Write Window</span><br /><br />&#160;&#160;&#160;&#160;&#160;&#160;<span class="CodeKeyword">else</span>:<br /><br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;vector.canoe.write(<span class="CodeStringLiteral">"Message received."</span>)</p>
+                        </div>
+                    </div>
+                    <p>In this example, a distributed object of the MQTT client API is created and connected to the broker in the application model at the start of measurement. The object then subscribes to a topic filter and then publishes itself to a topic within this filter. At the end of the measurement, the connection with the broker is terminated. The object reacts to receiving a message and issues a corresponding notification in the Write Window.</p>
+                    <p>You can also call the consumed methods of the MQTT client API in the <span class="GUI">Application</span> panel. For example, you can perform a <span class="bold">Disconnect</span> and <span class="bold">Reconnect</span> after the start of the measurement. When publishing a message, the payload must be entered in bytes. To do this, first enter the number of bytes and then the values of the bytes in the <span class="GUI">Application</span> panel.</p>
+                </div>
+                <p class="LinkList">&#160;</p>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="FooterWhite">
+                <table class="FooterWhite" style="border-collapse: collapse;margin-left: auto;margin-right: auto;">
+                    <col style="width: 70px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col style="width: 16px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="buttons popup-container clearfix topicToolbarProxy topicToolbarProxyFooter _Skins_HTML5TopicToolbar mc-component nocontent">
+                                    <div class="button-group-container-left">
+                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo"><a href="../../Shared/HowToUseOnlineHelp.htm" title="Tips for using the help" alt="Tips for using the help"><img src="../../../Resources/vImages/vBackstage/vHelpInfo.png" /></a>
+                                </p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo" style="text-align: right;"><span class="mc-variable Vector.BuildTime variable">2024-04-8T20:56:42</span>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <table style="width: 100%;border-collapse: separate;border-spacing: 3px 0px;margin-left: auto;margin-right: auto;caption-side: top;">
+                <col />
+                <col />
+                <col />
+                <col data-mc-conditions="BuildProcess.HTML5Link" />
+                <tbody>
+                    <tr>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;">
+                            <p class="vec_Footer">©&#160;Vector Informatik GmbH</p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;text-align: right;">
+                            <p class="vec_FooterBold">
+                                <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE&#160;Product Families</MadCap:conditionalText> Version <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.VectorTestUnitRunner">18</MadCap:conditionalText></p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="../../Shared/ContactCopyrightLicense.htm" class="vec_Footer MCXref xref xrefvec_Footer">Contact/Copyright/License</a>
+                            </p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="https://www.vector.com/int/en/company/get-info/privacy-policy/" target="_blank" class="vec_Footer">Data Privacy Notice</a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

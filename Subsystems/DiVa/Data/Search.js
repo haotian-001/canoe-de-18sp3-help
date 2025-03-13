@@ -1,0 +1,1 @@
+define({r:0.5,st:'Stem',n:1,t:[0],m:[],u:['../Content/Topics/Option CANoe.DiVa/startpageOptionCANoeDiVa.htm'],s:['000','lica','tomoti'],p:[['a',0]]});

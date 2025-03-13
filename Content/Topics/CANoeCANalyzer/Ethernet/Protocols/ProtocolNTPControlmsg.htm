@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="" data-mc-search-type="Stem" data-mc-help-system-file-name="CANoeDEFamily.xml" data-mc-path-to-help-system="../../../../../" data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../Skins/Favicons/favicon-16x16.png" /><title>NTP/SNTP - Control messages</title>
+        <link href="../../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Resources/Stylesheets/vTableMasterPageHeader.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../../Resources/Stylesheets/vStylesheet.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../../Resources/Stylesheets/vTable.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../../Resources/Stylesheets/vTableSymbol.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapGlobal.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapDom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapUtilities.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapXhr.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTextEffects.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSlideshow.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMessageBus.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMessageBus.CrossFrame.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapDefault.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMediaQueries.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapAccessibility.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapHelpSystem.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapAliasFile.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopicFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapFeedbackHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSkinHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.Breadcrumbs.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.MiniToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.SideMenu.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapIndex.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapGlossary.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapParser.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSearch.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapNavigateTopics.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapLms.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapELearning.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopic.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMicroContentComponent.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSearchHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopicElements.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTriPane.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/jscript" src="../../../../Resources/vScripts/SyntaxHighlighting.js">
+        </script>
+        <script type="text/jscript" src="../../../../Resources/vScripts/TabSwitch.js">
+        </script>
+        <script type="text/javascript" src="../../../../Resources/vScripts/Vector.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../../../CANoeDEFamily.htm#Topics/CANoeCANalyzer/Ethernet/Protocols/ProtocolNTPControlmsg.htm">Open topic with navigation</a>
+        </p>
+        <div class="Body">
+            <div role="main" id="mc-main-content">
+                <p class="StructurePath"><a href="../Ethernet.htm" class="StructurePath">Ethernet</a> » <a href="Protocol.htm" class="StructurePath">Protocol Overview</a> » <a href="ProtocolNTP.htm" class="StructurePath">NTP</a> » <span class="mc-variable System.Title variable">NTP/SNTP - Control messages</span></p>
+                <h1><a name="kanchor6598"></a><span class="mc-variable System.Title variable">NTP/SNTP - Control messages</span>
+                </h1>
+                <p class="MenuPath">&#160;</p>
+                <p class="ToolAvailability" data-mc-conditions="BuildProcess.ToolAvailability"><a href="../../../Shared/FeatureAvailability.htm" class="red" title="Feature availabilty for your product">Valid&#160;for</a>:&#160;&#160;CANoe&#160;DE<a name="aanchor19716"></a><MadCap:concept term="SFCANoeDE" />&#160;&#160;•&#160;&#160;CANoe4SW&#160;DE<a name="aanchor19717"></a><MadCap:concept term="SFCANoe4SWDE" /></p>
+                <p class="AutoSearchFilterConcepts"><a name="aanchor19718"></a>
+                    <MadCap:concept term="SFCore" />
+                </p>
+                <p>For control messages of <a href="ProtocolNTP.htm">NTP</a> the following header format is valid:</p>
+                <h2 class="SectionSub">Header Format</h2>
+                <p>
+                    <img src="../../../../Resources/Images/CANoeCANalyzer/EthernetNtpControlMsg.png" />
+                </p>
+                <div>
+                    <table style="width: 100%;caption-side: top;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                        <col style="width: 130px;" />
+                        <col />
+                        <col />
+                        <col data-mc-conditions="Targets.CANoe-DE-Family" />
+                        <col data-mc-conditions="Targets.CANoe-DE-Family" />
+                        <col data-mc-conditions="Targets.CANoe-DE-Family" />
+                        <thead>
+                            <tr>
+                                <th rowspan="2" class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                    <p class="TableHead">Protocol Field</p>
+                                </th>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep" rowspan="2">
+                                    <p class="TableHead">Offset <br />[byte.bit]</p>
+                                </th>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep" rowspan="2">
+                                    <p class="TableHead">Length <br />[bit]</p>
+                                </th>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd" colspan="3">
+                                    <p class="TableHead"><a href="../Procedures/ProgrammingEthernetPacket.htm" class="red">Programming</a>
+                                    </p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                    <p class="TableHead"><a href="../../../CAPLFunctions/IP/Selectors/CAPLfunctionProtocolField.htm" class="red">Designator</a>
+                                    </p>
+                                </th>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                    <p class="TableSyntax"><a href="../../../CAPLFunctions/IP/Methods/CAPLfunctionProtocolInit.htm" class="SourceCode">ethernetPacket.<br></br>&lt;protocol&gt;.Init</a>
+                                    </p>
+                                </th>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                    <p class="TableHead"><a href="../../../CAPLFunctions/IP/Methods/CAPLfunctionCompletePacket.htm" class="SourceCode">ethernetPacket.<br></br>CompletePacket</a>
+                                    </p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td rowspan="2" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Leap indicator</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">0</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">2</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">leapId</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">0</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">—</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd" colspan="5">
+                                    <p class="Table">Warning of an impending leap second to be inserted or deleted in the last minute of the current day</p>
+                                    <div class="Indent">
+                                        <p>0 - no warning<br />1 - last minute of the day has 61 seconds<br />2 - last minute of the day has 59 seconds<br />3 - alarm condition (clock not synchronized)</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Version number</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">0.2</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">3</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">version</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">3</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">—</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd" colspan="5">
+                                    <p class="Table">NTP/SNTP version number</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Mode</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">0.5</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">3</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">mode</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">6</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">—</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd" colspan="5">
+                                    <p>Protocol mode</p>
+                                    <div class="Indent">
+                                        <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                                            <thead>
+                                                <tr>
+                                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                                        <p class="TableHead">Value</p>
+                                                    </th>
+                                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                                        <p class="TableHead">Packet Type Designator</p>
+                                                    </th>
+                                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                                        <p class="TableHead">Name</p>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                        <p class="Table">0</p>
+                                                    </td>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                        <p class="Table">—</p>
+                                                    </td>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                        <p class="Table">reserved</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                        <p class="Table">1</p>
+                                                    </td>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                        <p class="Table">symmetricActive</p>
+                                                    </td>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                        <p class="Table">symmetric active</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                        <p class="Table">2</p>
+                                                    </td>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                        <p class="Table">symmetricPassive</p>
+                                                    </td>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                        <p class="Table">symmetric passive</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                        <p class="Table">3</p>
+                                                    </td>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                        <p class="Table">client</p>
+                                                    </td>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                        <p class="Table">client</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                        <p class="Table">4</p>
+                                                    </td>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                        <p class="Table">server</p>
+                                                    </td>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                        <p class="Table">server</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                        <p class="Table">5</p>
+                                                    </td>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                        <p class="Table">broadcast</p>
+                                                    </td>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                        <p class="Table">broadcast</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                        <p class="Table">6</p>
+                                                    </td>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                        <p class="Table">control</p>
+                                                    </td>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                        <p class="Table">control message</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                                        <p class="Table">7</p>
+                                                    </td>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                                        <p class="Table">—</p>
+                                                    </td>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                                        <p class="Table">reserved for private use</p>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p rowspan="2" class="Table">Response Bit</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">1.0</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">1</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">response</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">0</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">—</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd" colspan="5">
+                                    <div>
+                                        <p colspan="4">0 - commands<br />1 - responses</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p rowspan="2" class="Table">Error Bit</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">1.1</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">1</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">error</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">0</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">—</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd" colspan="5">
+                                    <div>
+                                        <p colspan="4">0 - normal response<br />1 - error response</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p rowspan="2" class="Table">More Bit</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">1.2</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">1</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">more</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">0</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">—</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd" colspan="5">
+                                    <div>
+                                        <p colspan="4">0 - last fragment<br />1 - all others</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p rowspan="2" class="Table">Operation Code</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">1.3</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">5</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">operation</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">1</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">—</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd" colspan="5">
+                                    <p colspan="4" class="Table">Specifies the command function</p>
+                                    <div class="Indent">
+                                        <p>1 – Read Status<br />2 – Read Variables<br />3 – Write Variables<br />4 – Read Clock Variables<br />5 – Write Clock Variables<br />6 – Set Trap Address<br />7 – Trap Response</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p rowspan="2" class="Table">Sequence</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">2</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">16</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">sequence</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">0</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">—</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd" colspan="5">
+                                    <p colspan="4" class="Table">Indicates the sequence number of the command or the response</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p rowspan="2" class="Table">Status</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">4</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">16</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">status</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">0</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">—</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd" colspan="5">
+                                    <p colspan="4">Indicates the current status of the system, peer or clock.</p>
+                                    <div>
+                                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                                            <col class="TableStyle-vTableSymbol-Column-Column1" />
+                                            <col class="TableStyle-vTableSymbol-Column-Column2" />
+                                            <tbody>
+                                                <tr>
+                                                    <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                                        <p class="Table">
+                                                            <img src="../../../../Resources/vImages/vInfo.png" style="width: 48px;height: 45px;" title="Note" alt="Note" />
+                                                        </p>
+                                                    </td>
+                                                    <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                                        <p class="TableSymbolHead">Note</p>
+                                                        <p class="Table">The status token can be split more detailed in <a href="ProtocolNTPControlmsgSystem.htm">system status</a>, <a href="ProtocolNTPControlmsgPeer.htm">peer status</a>, <a href="ProtocolNTPControlmsgClock.htm">clock status</a> and <a href="ProtocolNTPControlmsgError.htm">error status</a>. Dependent on preconditions, several additional tokens are available.</p>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p rowspan="2" class="Table">Association ID</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">6</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">16</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">associationId</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">0</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">—</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd" colspan="5">
+                                    <p colspan="4" class="Table">Identifies a valid association</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p rowspan="2" class="Table">Offset</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">8</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">16</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">offset</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">0</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">—</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd" colspan="5">
+                                    <p colspan="4" class="Table">Indicates the offset of the first byte in the data area in byte</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p rowspan="2" class="Table">Count</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">10</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">16</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">count</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">0</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">—</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd" colspan="5">
+                                    <p colspan="4" class="Table">Indicates the length of the data area in byte</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p rowspan="2" class="Table">Data Area</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">12</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">value of token <span class="SourceCode">count</span></p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">dataArea</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">—</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">—</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd" colspan="5">
+                                    <p colspan="4" class="Table">Contains the message data for the command or the response, maximum value of data bytes:&#160;468</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p rowspan="2" class="Table">Padding</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">12 + <span class="SourceCode">count</span></p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">variable</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">padding</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">—</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">—</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd" colspan="5">
+                                    <p colspan="4" class="Table">If the authenticator is used the data field is zero-padded to a 32 bit boundary, but the padding bits are not considered part of the data field and are not included in the field <span class="SourceCode">count</span>.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p rowspan="2" class="Table">Key Identifier</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">12 + x (optional)</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">32</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">keyId</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">—</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">—</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd" colspan="5">
+                                    <p colspan="4" class="Table">Cryptographic key used to generate the message authentication code</p>
+                                    <p colspan="4" class="Table">x = <span class="SourceCode">count </span>+ <span class="SourceCode">count</span> modulo 4</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p rowspan="2" class="Table">Authentication Code</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">16 +x (optional)</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">64 or 128</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">authentication</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">—</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">—</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd" colspan="5">
+                                    <p class="Table">Optional message authentication code</p>
+                                    <p class="Table">If the frame is big enough the length is 128 bit, else 64 bit.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="LinkList">&#160;</p>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="FooterWhite">
+                <table class="FooterWhite" style="border-collapse: collapse;margin-left: auto;margin-right: auto;">
+                    <col style="width: 70px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col style="width: 16px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="buttons popup-container clearfix topicToolbarProxy topicToolbarProxyFooter _Skins_HTML5TopicToolbar mc-component nocontent">
+                                    <div class="button-group-container-left">
+                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo"><a href="../../../Shared/HowToUseOnlineHelp.htm" title="Tips for using the help" alt="Tips for using the help"><img src="../../../../Resources/vImages/vBackstage/vHelpInfo.png" /></a>
+                                </p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo" style="text-align: right;"><span class="mc-variable Vector.BuildTime variable">2024-04-8T20:56:42</span>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <table style="width: 100%;border-collapse: separate;border-spacing: 3px 0px;margin-left: auto;margin-right: auto;caption-side: top;">
+                <col />
+                <col />
+                <col />
+                <col data-mc-conditions="BuildProcess.HTML5Link" />
+                <tbody>
+                    <tr>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;">
+                            <p class="vec_Footer">©&#160;Vector Informatik GmbH</p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;text-align: right;">
+                            <p class="vec_FooterBold">
+                                <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE&#160;Product Families</MadCap:conditionalText> Version <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.VectorTestUnitRunner">18</MadCap:conditionalText></p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="../../../Shared/ContactCopyrightLicense.htm" class="vec_Footer MCXref xref xrefvec_Footer">Contact/Copyright/License</a>
+                            </p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="https://www.vector.com/int/en/company/get-info/privacy-policy/" target="_blank" class="vec_Footer">Data Privacy Notice</a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

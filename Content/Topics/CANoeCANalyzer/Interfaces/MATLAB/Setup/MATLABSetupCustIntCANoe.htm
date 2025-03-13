@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="CANoeDEFamily.xml" data-mc-path-to-help-system="../../../../../../" data-mc-conditions="Targets.CANoe-DE-Family" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../../Skins/Favicons/favicon-16x16.png" /><title>HIL Mode - Simulink Configuration (MATLAB Integration)</title>
+        <link href="../../../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Resources/Stylesheets/vTableMasterPageHeader.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../../../Resources/Stylesheets/vStylesheet.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../../../Resources/Stylesheets/vTableSymbol.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapGlobal.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapDom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapUtilities.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapXhr.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapTextEffects.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapSlideshow.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapMessageBus.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapMessageBus.CrossFrame.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapDefault.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapMediaQueries.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapAccessibility.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapHelpSystem.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapAliasFile.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapTopicFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapFeedbackHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapSkinHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapToc.Breadcrumbs.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapToc.MiniToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapToc.SideMenu.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapIndex.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapGlossary.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapParser.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapSearch.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapNavigateTopics.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapLms.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapELearning.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapTopic.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapMicroContentComponent.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapSearchHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapTopicElements.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapTriPane.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/jscript" src="../../../../../Resources/vScripts/SyntaxHighlighting.js">
+        </script>
+        <script type="text/jscript" src="../../../../../Resources/vScripts/TabSwitch.js">
+        </script>
+        <script type="text/javascript" src="../../../../../Resources/vScripts/Vector.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../../../../CANoeDEFamily.htm#Topics/CANoeCANalyzer/Interfaces/MATLAB/Setup/MATLABSetupCustIntCANoe.htm">Open topic with navigation</a>
+        </p>
+        <div class="Body">
+            <div role="main" id="mc-main-content">
+                <div>
+                    <p class="StructurePath"><a href="../MATLAB.htm" class="StructurePath">MATLAB Integration Package</a> » <a href="../MATLAB.htm#Setup" class="StructurePath">Setup</a> » HIL Mode - Simulink Configuration</p>
+                    <h1>HIL Mode - Simulink Configuration</h1>
+                    <p class="MenuPath">&#160;</p>
+                    <p class="ToolAvailability" data-mc-conditions="BuildProcess.ToolAvailability"><a href="../../../../Shared/FeatureAvailability.htm" class="red" title="Feature availabilty for your product">Valid&#160;for</a>:&#160;&#160;CANoe&#160;DE<a name="aanchor31931"></a><MadCap:concept term="SFCANoeDE" />&#160;&#160;•&#160;&#160;CANoe:lite&#160;DE<a name="aanchor31932"></a><MadCap:concept term="SFCANoeLiteDE" />&#160;&#160;•&#160;&#160;CANoe4SW&#160;DE<a name="aanchor31933"></a><MadCap:concept term="SFCANoe4SWDE" />&#160;&#160;•&#160;&#160;CANoe4SW:lite&#160;DE<a name="aanchor31934"></a><MadCap:concept term="SFCANoe4SWLiteDE" /></p>
+                    <p class="AutoSearchFilterConcepts"><a name="aanchor31935"></a>
+                        <MadCap:concept term="SFInterfaces" />
+                    </p>
+                    <p><a name="aanchor31936"></a>
+                        <MadCap:concept term="MATLABSetup" />
+                    </p>
+                </div>
+                <p>This page describes the steps which are necessary to run a MATLAB model together with a <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> configuration. It is recommendable to start your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> and open the desired configuration at first. If a new configuration should be created consider using the Model Generation Wizard (see <a href="MATLABSetupIL.htm#ConfigurationSetupScratch">Configuration Setup from Scratch</a>). The reason is that CAN signals or system variables can be selected easily in the Simulink model if a CANdb is present.</p>
+                <p>It may be helpful to copy the Simulink model file (MDL, SLX) into the same folder as the <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> configuration (CFG file). If you want to use the generated DLL/SO, create a subfolder named <span class="bold">Exec32</span> for example. The Simulink Coder can be configured to copy the DLL/SO into this folder.</p>
+                <div>
+                    <h2 class="SectionMain">Simulink Settings</h2>
+                    <p>The MATLAB Integration Package of your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> needs some settings of the Simulink model which are described here. Open the menu path <span class="GUI">Simulation|Configuration Parameters</span> to open the settings dialog.</p>
+                    <div>
+                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                            <col class="TableStyle-vTableSymbol-Column-Column1" />
+                            <col class="TableStyle-vTableSymbol-Column-Column2" />
+                            <tbody>
+                                <tr>
+                                    <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                        <p class="Table">
+                                            <img src="../../../../../Resources/vImages/vInfo.png" style="width: 48px;height: 45px;" title="Note" alt="Note" />
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                        <p class="TableSymbolHead">Note: Improvement performance when exchanging many signals</p>
+                                        <p class="Table">
+								If a large number of signals are to be exchanged between <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> and the Simulink model, not for every signal should be used a <span class="GUI">Signal Input</span> block or <span class="GUI">Signal Output</span> block. Instead, the signals should be collected in one <span class="GUI">Signal</span> block or a <span class="GUI">Bus</span> block. This improves the performance of the data exchange between your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> and the Simulink model.</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <h2 class="SectionSub"><a name="CoderSettings" id="CoderSettings"></a>Simulink Coder Settings</h2>
+                        <p>The Simulink Coder must be configured with the correct target for <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText>. Otherwise the MATLAB Integration Package blocks can’t be used. There are different targets which allow to work with various compilers. For the configuration of these compilers, see <a href="MATLABSetupIntroduction.htm">Compiler Configuration</a>.</p>
+                        <p>There are three different targets, for the three supported compilers, available:</p>
+                        <ul>
+                            <li>cn.tlc (Microsoft Visual C++ Compiler)</li>
+                            <li class="Indent"><span class="bold">Standard Realtime</span>: Build for Windows 32-Bit/64-Bit with the Visual Studio Compiler.</li>
+                            <li class="Indent"><span class="bold">Concurrent Execution Real Time</span>: Build for Windows 64-Bit with the Visual Studio Compiler.</li>
+                            <li class="Indent">The target folder for the code generation is <span class="bold">MODEL_cn_rtw</span>.
+</li>
+                            <li>cn_mingw.tlc (Mingw-w64 Compiler)</li>
+                            <li class="Indent"><span class="bold">Standard Realtime</span>: Build for Windows 32-Bit/64-Bit with the Mingw-w64 Compiler.</li>
+                            <li class="Indent"><span class="bold">Concurrent Execution Real Time</span>: Build for Windows 64-Bit with the Mingw-w64 Compiler.</li>
+                            <li class="Indent">The target folder for the code generation is <span class="bold">MODEL_cn_mingw_rtw</span>.
+</li>
+                            <li>cn_linux.tlc (Clang Cross-Compile Toolchain)</li>
+                            <li class="Indent"><span class="bold">Standard Realtime</span>: Build for Linux 64-Bit with the Clang Cross-Compile Toolchain.</li>
+                            <li class="Indent"><span class="bold">Extended Real Time</span> (available for <span class="Product">CANoe&#160;DE</span>): Build for Linux 64-Bit with the Clang Cross-Compile Toolchain.</li>
+                            <li class="IndentIndent">The execution in your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> is only supported starting with <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> version <a href="../../ExtendedRealTime/ERTCANoeVersion17.htm">version  17</a>.</li>
+                            <li class="Indent">The target folder for the code generation is <span class="bold">MODEL_cn_linux_rtw</span>.</li>
+                            <li class="Indent">For limitations with the Linux RT, see <a href="MATLABSetupIntroduction.htm">Compiler Configuration</a>.</li>
+                        </ul>
+                        <p>example of using the cn.tlc target:</p>
+                        <p>
+                            <img src="../../../../../Resources/Images/CANoeCANalyzer/MATLi3TargetSelection.png" />
+                        </p>
+                        <p>The <span class="GUI">Language</span> has to be set to <span class="GUI">C</span>, even when the model is developed in <span class="bold">C++</span>.</p>
+                    </div>
+                    <div>
+                        <h2 class="SectionSub">Interface</h2>
+                        <p>If you want to parameterize the model from your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> activate the C-API Interface for parameters:</p>
+                        <p>
+                            <img src="../../../../../Resources/Images/CANoeCANalyzer/MATLi4ConfigurationParameters_650x283.png" style="width: 650;height: 283;" />
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="SectionSub"><a name="CNCodeGernerationOptions" id="CNCodeGernerationOptions"></a>CN Code Generation Options</h2>
+                    <p>The CN target has some specific options for the code generation process. First of all the <span class="bold">Output Directory</span> can be set. If nothing is specified the DLL/SO will be generated in the
+<span class="bold">.\MODEL_cn*_rtw\</span> folder (with subfolders for the respective architecture) relative to the folder containing the Simulink model. You can specify a subfolder of your configuration like <span class="bold">./Exec32</span> for example to generate the DLL/SO in the <span class="bold">.\MODEL_cn_rtw\Exec32</span> folder.</p>
+                    <ul>
+                        <li><span class="bold">Export CAPL Functions</span>:<br />With this option activated three special CAPL functions are exported by the generated DLL. Refer to <a href="../../../../CAPLFunctions/MATLAB/CAPLfunctionsMATLABOverview.htm">MATLAB CAPL Function Overview</a> for more details.</li>
+                        <li><span class="bold">Perform Simulation Step at t(0)</span>:<br />If the model does not contain blocks with states (e.g. the model contains only algebraic blocks) this option can be selected to get a value for the simulation step at t=0.</li>
+                        <li><span class="bold">Check CANoe block configuration at compilation</span>:<br />Uses the Model Advisor to check settings of all CANoe blocks (see <a href="MATLABSetupConfigTest.htm#TestCANoeBlocks">Test of CANoe Blocks</a>).</li>
+                        <li><span class="bold">Generate CANoe Model Viewer description file</span>: Generates information required for viewing the MATLAB model within the <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText>. This feature is only supported for MATLAB R14 and newer.</li>
+                        <li><span class="bold">CreateSystem Variable blocks for unconnected ports</span>:<br />Connects each unconnected port on the top level of the model with a system variable input or output block (depending on whether it is an inport or an outport). For each block, a new system variable &lt;modelName&gt;::&lt;blockName&gt;_&lt;portNumber&gt; is created.</li>
+                        <li><span class="GUI">Create System Variables for performance measurement</span>
+                            <br />Creates system variables for measurement of the performance of the Simulink model. The created system variables are created in namespace<br /><span class="bold">&lt;modelName&gt;::Performance</span> and are called <span class="bold">minSampleTime</span>, <span class="bold">maxSampleTime</span>, <span class="bold">avgSampleTime</span> and <span class="bold">StepTime</span>.<br /><span class="bold">minSampleTime</span>, <span class="bold">maxSampleTime</span> and <span class="bold">avgSampleTime</span> specify the minimum, maximum, and average execution times, respectively, of a simulation step of the Simulink model, in microseconds. <span class="bold">StepTime</span> specifies the total time from the beginning of a simulation step to the beginning of the next simulation step, in microseconds.</li>
+                        <li><span class="bold">Suppress creation of System Variables</span>
+                            <br />Specifies whether system variables are to be created by the DLL/SO if these are not defined in your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText>. If this option is not selected, system variables that are used by the model but are not defined in your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> are created by the DLL/SO. If the option is selected, these system variables are not created. This option relates only to system variables configured in system variable blocks. System variables that are defined by parameter assignment of Simulink blocks or the Simulink signal analysis, or that are defined implicitly in the model for performance measurement are always created.</li>
+                        <li><span class="GUI">Target 64 bit CANoe</span>
+                            <br />Specifies whether the DLL is to be generated for the 32-bit or 64-bit version of your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText>. The DLL cannot be loaded by the other <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> version in each case.</li>
+                        <li><span class="bold">Debug build</span>
+                            <br />Specifies whether the DLL/SO file is to be built as a debug version. If this check box is activated, debug information is also generated during the build process.</li>
+                        <li><span class="bold">Target Architecture</span>
+                            <br />Defines the target architecture of the DLL/SO. Please note that not every option is available for every system target file, see section <a href="#CoderSettings">Simulink Coder settings</a>.</li>
+                        <li class="Indent"><a name="ERT" id="ERT"></a><span class="bold">Standard 32-Bit-Real-Time DLL</span>
+                            <br />Creates a DLL/SO for the 32-bit runtime kernel for serial execution.</li>
+                        <li class="Indent"><span class="bold">Standard 64-Bit-Real-Time DLL</span>
+                            <br />Creates a DLL/SO for the 64-bit runtime kernel for serial execution.</li>
+                        <li class="Indent"><span class="bold">Concurrent Execution 64 Bit Real-Time DLL</span>
+                            <br />Creates a DLL/SO for the 64-bit runtime kernel for concurrent execution.</li>
+                    </ul>
+                    <div class="IndentIndent">
+                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                            <col class="TableStyle-vTableSymbol-Column-Column1" />
+                            <col class="TableStyle-vTableSymbol-Column-Column2" />
+                            <tbody>
+                                <tr>
+                                    <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                        <p class="Table">
+                                            <img src="../../../../../Resources/vImages/vInfo.png" style="width: 48px;height: 45px;" title="Note" alt="Note" />
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                        <p class="TableSymbolHead">Note</p>
+                                        <p class="Table">Please note that currently only signal blocks and system-variable blocks are supported for concurrent execution.								</p>
+                                        <p class="Table">This option is incompatible with the following functions<br></br>(see check boxes in the screenshot below):</p>
+                                        <ul>
+                                            <li>Export CAPL Functions</li>
+                                            <li>Enable Simulink Signal Analysis</li>
+                                            <li>Enable Parameterization from CANoe</li>
+                                            <li>Parameterization and Signal Analysis also affect referenced models</li>
+                                            <li>Exclude specific Blocks from Parameterization</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <ul>
+                        <li><span class="bold">Extended Real-Time DLL </span>:<br />Creates a DLL/SO for Extended Real Time (ERT). To use this DLL/SO in your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText>, you have to use an ERT compatible device. Above you will find the required compiler and <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> versions, for the use of Extended Realtime.</li>
+                    </ul>
+                    <div class="IndentIndent">
+                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                            <col class="TableStyle-vTableSymbol-Column-Column1" />
+                            <col class="TableStyle-vTableSymbol-Column-Column2" />
+                            <tbody>
+                                <tr>
+                                    <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                        <p class="Table">
+                                            <img src="../../../../../Resources/vImages/vInfo.png" style="width: 48px;height: 45px;" title="Note" alt="Note" />
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                        <p class="TableSymbolHead">Note</p>
+                                        <p class="Table">Please note that currently only signal blocks and non-struct system-variable blocks are supported for ERT.								</p>
+                                        <p class="Table">This option is incompatible with the following functions<br></br>(see check boxes in the screenshot below):</p>
+                                        <ul>
+                                            <li>Exclude specific Blocks from Parameterization</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <ul>
+                        <li><span class="bold">Enable Simulink Signal Analysis</span>:<br />Enables analysis of all named Simulink signals. With <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> version 7.0 or newer system variables are created for each signal below the namespace <span class="bold">MODEL::Signals</span>. This option requires the activation of the C-API for signals. Signals should be considered as Test Points, otherwise <span class="bold">Simulink</span> might remove them when optimizing the model. Please refer to the <span class="bold">Simulink</span> help on Test Points.</li>
+                        <li><span class="bold">Enable Parameterization from CANoe</span>:<br />If this option is activated, values of model parameters will be accessible from the <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText>. This option requires activation of the C-API for parameters.</li>
+                        <li><span class="bold">Parameterization and Signal Analysis also affect referenced models</span>:<br />If this option is activated, the <span class="GUI">Enable Parameterization from CANoe</span> and <span class="GUI">Enable Simulink Signal Analysis</span> options allow the access to the parameters or signals in referenced models. Otherwise only parameters or signals of the root model can be accessed.</li>
+                        <li><span class="bold">Exclude specific Blocks from Parameterization</span>:<br />Allows to filter out some blocks from the parameterization. A standard regular expression can be given in the <span class="GUI">Blocks to exclude from Parameterization</span> input box. This feature is available starting with Visual C++ 2013 (12.0).</li>
+                        <li><span class="bold">Generate vModule file (*.vmodule)</span>:<br />Generates a module description file of type <span class="bold">vModule</span> which references the built DLL/SO. If the output directory is not specified, the file will be generated in the same folder as the Simulink model and references to both 32-bit and 64-bit DLL/SO built in the default path. Otherwise, it will be generated in the specified output directory and references to the DLL/SO generated in the same folder.</li>
+                    </ul>
+                    <p>
+                        <img src="../../../../../Resources/Images/CANoeCANalyzer/MATLi5CNCodeGenerationSettings_650x461.png" style="width: 650;height: 461;" />
+                    </p>
+                    <div>
+                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                            <col class="TableStyle-vTableSymbol-Column-Column1" />
+                            <col class="TableStyle-vTableSymbol-Column-Column2" />
+                            <tbody>
+                                <tr>
+                                    <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                        <p class="Table">
+                                            <img src="../../../../../Resources/vImages/vInfo.png" style="width: 48px;height: 45px;" title="Note" alt="Note" />
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                        <p class="TableSymbolHead">Note</p>
+                                        <p class="Table">Only non-complex scalar or vector parameters are supported by the parameterization and signal analysis feature. Both make use of the C-API interface.</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <p class="LinkList"><a class="MCHelpControl MCHelpControl-Concept conceptLink" data-mc-concepts="MATLABSetup" href="javascript:void(0);" data-mc-topics="Behavior of Models With Parallel Execution (MATLAB Integration)|MATLABParallelExecutionModels.htm#aanchor18337||CANoe Interaction Layer (MATLAB Integration)|MATLABSetupIL.htm#aanchor7628||Configuration and Test of CANoe Simulink Blocks (MATLAB Integration)|MATLABSetupConfigTest.htm#aanchor21937||Connect Simulink with CANoe|MATLABSimulinkWithCANoe.htm#aanchor30588||Customizing for Calibration using XCP (MATLAB Integration)|MATLABSetupCustCalXCP.htm#aanchor14180||Customizing for Multitasking Environment|MATLABSetupCustMultitasking.htm#aanchor8860||Customizing for Parameterization from CANoe (MATLAB Integration)|MATLABSetupCustParamCANoe.htm#aanchor13876||HIL Mode - CANoe Configuration (MATLAB Integration)|MATLABhilModeCANoeConfig.htm#aanchor28679||HIL Mode - Simulink Configuration (MATLAB Integration)|#aanchor31936||Installation of the MATLAB Integration Package|MATLABInstallation.htm#aanchor7374||Introduction (MATLAB Integration)|MATLABSetupIntroduction.htm#aanchor23413||Model Referencing (MATLAB Integration)|MATLABSetupModelRef.htm#aanchor28728||Offline Mode / Synchronous Mode - Simulink and CANoe (MATLAB Integration)|MATLABOffSynchSimuCANoe.htm#aanchor28256||Stateflow Charts (MATLAB Integration)|MATLABSetupStateflowCharts.htm#aanchor8260"><span class="MCHelpControl-ConceptHotSpot_"><img class="MCHelpControl_Image_Icon" src="../../../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="14" width="16" alt="Concept Link Icon" />See Also</span></a>
+                </p>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="FooterWhite">
+                <table class="FooterWhite" style="border-collapse: collapse;margin-left: auto;margin-right: auto;">
+                    <col style="width: 70px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col style="width: 16px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="buttons popup-container clearfix topicToolbarProxy topicToolbarProxyFooter _Skins_HTML5TopicToolbar mc-component nocontent">
+                                    <div class="button-group-container-left">
+                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo"><a href="../../../../Shared/HowToUseOnlineHelp.htm" title="Tips for using the help" alt="Tips for using the help"><img src="../../../../../Resources/vImages/vBackstage/vHelpInfo.png" /></a>
+                                </p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo" style="text-align: right;"><span class="mc-variable Vector.BuildTime variable">2024-04-8T20:56:42</span>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <table style="width: 100%;border-collapse: separate;border-spacing: 3px 0px;margin-left: auto;margin-right: auto;caption-side: top;">
+                <col />
+                <col />
+                <col />
+                <col data-mc-conditions="BuildProcess.HTML5Link" />
+                <tbody>
+                    <tr>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;">
+                            <p class="vec_Footer">©&#160;Vector Informatik GmbH</p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;text-align: right;">
+                            <p class="vec_FooterBold">
+                                <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE&#160;Product Families</MadCap:conditionalText> Version <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.VectorTestUnitRunner">18</MadCap:conditionalText></p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="../../../../Shared/ContactCopyrightLicense.htm" class="vec_Footer MCXref xref xrefvec_Footer">Contact/Copyright/License</a>
+                            </p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="https://www.vector.com/int/en/company/get-info/privacy-policy/" target="_blank" class="vec_Footer">Data Privacy Notice</a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="CANoeDEFamily.xml" data-mc-path-to-help-system="../../../../" data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../Skins/Favicons/favicon-16x16.png" /><title>Example of a Windows DLL for CAPL</title>
+        <link href="../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Resources/Stylesheets/vTableMasterPageHeader.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../Resources/Stylesheets/vStylesheet.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../Resources/Stylesheets/vTableSymbol.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapGlobal.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapDom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapUtilities.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapXhr.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTextEffects.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSlideshow.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMessageBus.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMessageBus.CrossFrame.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapDefault.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMediaQueries.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAccessibility.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapHelpSystem.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAliasFile.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopicFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapFeedbackHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSkinHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.Breadcrumbs.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.MiniToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.SideMenu.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapIndex.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapGlossary.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapParser.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSearch.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapNavigateTopics.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapLms.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapELearning.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopic.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMicroContentComponent.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSearchHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopicElements.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTriPane.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/jscript" src="../../../Resources/vScripts/SyntaxHighlighting.js">
+        </script>
+        <script type="text/jscript" src="../../../Resources/vScripts/TabSwitch.js">
+        </script>
+        <script type="text/javascript" src="../../../Resources/vScripts/Vector.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../../CANoeDEFamily.htm#Topics/CANoeCANalyzer/CAPL/CAPLIncludeWindowsDLLExample.htm">Open topic with navigation</a>
+        </p>
+        <div class="Body">
+            <div role="main" id="mc-main-content">
+                <div>
+                    <p class="AutoSearchFilterConcepts"><a name="aanchor27462"></a>
+                        <MadCap:concept term="SFCore" />
+                    </p>
+                    <p class="IndexConcept"><a name="kanchor8980"></a>
+                    </p>
+                    <p class="StructurePath"><a href="../../Shared/CAPL/CAPLIntroduction.htm" class="StructurePath">CAPL Introduction</a> » <a href="CAPLIncludeWindowsDLL.htm" class="StructurePath">CAPL&#160;DLL</a> » Windows DLL for CAPL</p>
+                    <h1><span class="mc-variable System.Title variable">Example of a Windows DLL for CAPL</span>
+                    </h1>
+                    <p class="MenuPath">&#160;</p>
+                    <p class="ToolAvailability" data-mc-conditions="BuildProcess.ToolAvailability"><a href="../../Shared/FeatureAvailability.htm" class="red" title="Feature availabilty for your product">Valid&#160;for</a>:&#160;&#160;CANoe&#160;DE<a name="aanchor27463"></a><MadCap:concept term="SFCANoeDE" />&#160;&#160;•&#160;&#160;CANoe:lite&#160;DE<a name="aanchor27464"></a><MadCap:concept term="SFCANoeLiteDE" />&#160;&#160;•&#160;&#160;CANoe4SW&#160;DE<a name="aanchor27465"></a><MadCap:concept term="SFCANoe4SWDE" />&#160;&#160;•&#160;&#160;CANoe4SW:lite&#160;DE<a name="aanchor27466"></a><MadCap:concept term="SFCANoe4SWLiteDE" /></p>
+                </div>
+                <p data-mc-conditions="Targets.CANoe-DE-Family">The following folder <a href="javascript:startCANoeLauncher('&quot;SAMPLES:\\Programming\\CAPLdll&quot;')" class="ExecuteLink">Open Folder</a> contains sample projects with the sources of a CAPL DLL for Microsoft Visual Studio projects.</p>
+                <p>Copy the generated DLL into the <span class="bold">Exec32</span> directory of the installation (see <a href="CAPLIncludeWindowsDLLSearchSequence.htm">Search order for a Windows DLL</a>).</p>
+                <div>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                    <p class="Table">
+                                        <img src="../../../Resources/vImages/vInfo.png" style="width: 48px;height: 45px;" title="Note" alt="Note" />
+                                    </p>
+                                </td>
+                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                    <p class="TableSymbolHead">Note<MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family"> for <span class="Product">CANoe&#160;DE</span><MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">, </MadCap:conditionalText><span class="Product">CANoe4SW&#160;DE</span></MadCap:conditionalText></p>
+                                    <p class="Table">A 64-bit DLL is required for the Measurement Setup.</p>
+                                    <p class="Table">The sample project also contains the code for this case.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>The DLL can be integrated in your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE Produkt</MadCap:conditionalText> as following:</p>
+                <ul>
+                    <li>Add the CAPL DLL into the <a href="../Ribbon/File/Options/Programming/ProgrammingCAPLDLL.htm" class="GUI">Options</a> dialog.</li>
+                    <li>The DLL can be included directly in CAPL using <span class="bold">#pragma library("File path")</span> command.</li>
+                </ul>
+                <p>The subdirectory <span class="bold">\Example</span> contains a configuration.</p>
+                <p>You can use the keyboard to call various functions of the CAPL DLL.</p>
+                <p class="SourceCode">#define USECDLL_FEATURE<br />#define _BUILDNODELAYERDLL<br />#pragma warning( disable : 4786 )<br />#include "..\Includes\cdll.h"<br />#include "..\Includes\via.h"<br />#include "..\Includes\via_CDLL.h"<br />#include &lt;stdio.h&gt;<br />#include &lt;stdlib.h&gt;<br />#include &lt;map&gt;<br />class CaplInstanceData;<br />typedef std::map&lt;uint32, CaplInstanceData*&gt; VCaplMap;</p>
+                <p class="SourceCode"><span class="CodeComment">// ============================================================================<br></br>// global variables<br></br>// ============================================================================</span>
+                    <br />static unsigned long data = 0;<br />static char dlldata[100];<br />char &#160;&#160;&#160;&#160;&#160;&#160;&#160;gModuleName[_MAX_FNAME]; &#160;<span class="CodeComment">// filename of this DLL</span><br />HINSTANCE &#160;&#160;gModuleHandle; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<span class="CodeComment">// windows instance handle of this DLL</span><br />VCaplMap &#160;&#160;&#160;gCaplMap;</p>
+                <p class="SourceCode"><span class="CodeComment">// ============================================================================<br />// CaplInstanceData<br />// <br />// Data local for a single CAPL Block. <br />//<br />// A CAPL-DLL can be used by more than one CAPL-Block, so every piece of <br />// information thats like a globale variable in CAPL, must now be wraped into <br />// an instance of an object.<br />// ============================================================================</span>
+                    <br />class CaplInstanceData<br />{<br />public:<br />&#160;&#160;CaplInstanceData(VIACapl* capl);<br />&#160;&#160;<br />&#160;&#160;void GetCallbackFunctions();<br />&#160;&#160;void ReleaseCallbackFunctions();<br />&#160;&#160;<span class="CodeComment">// Definition of the class function.</span><br />&#160;&#160;<span class="CodeComment">// This class function will call the CAPL callback functions</span><br />&#160;&#160;uint32 ShowValue(uint32 x);<br />&#160;&#160;uint32 ShowDates(int16 x, uint32 y, int16 z);<br />&#160;&#160;void &#160;&#160;DllInfo(char* x);<br />&#160;&#160;void &#160;&#160;ArrayValues(uint32 flags, uint32 numberOfDatabytes, uint8 databytes[], uint8 controlcode);<br />&#160;&#160;void DllVersion(char* y);<br />private: &#160;<br />&#160;&#160;<span class="CodeComment">// Pointer of the CAPL callback functions</span><br />&#160;&#160;VIACaplFunction* &#160;mShowValue;<br />&#160;&#160;VIACaplFunction* &#160;mShowDates;<br />&#160;&#160;VIACaplFunction* &#160;mDllInfo;<br />&#160;&#160;VIACaplFunction* &#160;mArrayValues;<br />&#160;&#160;VIACaplFunction* &#160;mDllVersion;<br />&#160;&#160;VIACapl* &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;mCapl;<br />};</p>
+                <p class="SourceCode">CaplInstanceData::CaplInstanceData(VIACapl* capl) <br />&#160;&#160;<span class="CodeComment">// This function will initialize the CAPL callback function with the NLL Pointer</span><br />&#160;: mCapl(capl), <br />&#160;&#160;&#160;mShowValue(NULL),<br />&#160;&#160;&#160;mShowDates(NULL),<br />&#160;&#160;&#160;mDllInfo(NULL),<br />&#160;&#160;&#160;mArrayValues(NULL),<br />&#160;&#160;&#160;mDllVersion(NULL)<br />{}</p>
+                <p class="SourceCode">static bool sCheckParams(VIACaplFunction* f, char rtype, char* ptype)<br />{<br />&#160;&#160;char &#160;&#160;&#160;&#160;&#160;type;<br />&#160;&#160;int32 &#160;&#160;&#160;&#160;pcount;<br />&#160;&#160;VIAResult rc;<br />&#160;&#160;<span class="CodeComment">// check return type</span><br />&#160;&#160;rc = f-&gt;ResultType(&amp;type);<br />&#160;&#160;if (rc!=kVIA_OK || type!=rtype)<br />&#160;&#160;{<br />&#160;&#160;&#160;&#160;return false;<br />&#160;&#160;}<br />&#160;&#160;<span class="CodeComment">// check number of parameters</span><br />&#160;&#160;rc = f-&gt;ParamCount(&amp;pcount);<br />&#160;&#160;if (rc!=kVIA_OK || strlen(ptype)!=pcount )<br />&#160;&#160;{<br />&#160;&#160;&#160;&#160;return false;<br />&#160;&#160;}<br />&#160;&#160;<span class="CodeComment">// check type of parameters</span><br />&#160;&#160;for (int i=0; i&lt;pcount; ++i)<br />&#160;&#160;{<br />&#160;&#160;&#160;&#160;rc = f-&gt;ParamType(&amp;type, i);<br />&#160;&#160;&#160;&#160;if (rc!=kVIA_OK || type!=ptype[i])<br />&#160;&#160;&#160;&#160;{<br />&#160;&#160;&#160;&#160;&#160;&#160;return false;<br />&#160;&#160;&#160;&#160;}<br />&#160;&#160;}<br />&#160;&#160;return true;<br />}</p>
+                <p class="SourceCode">static VIACaplFunction* sGetCaplFunc(VIACapl* capl, const char * fname, char rtype, char* ptype)<br />{<br />&#160;&#160;VIACaplFunction* f; <br />&#160;&#160;<span class="CodeComment">// get capl function object</span><br />&#160;&#160;VIAResult rc = &#160;capl-&gt;GetCaplFunction(&amp;f, fname);<br />&#160;&#160;if (rc!=kVIA_OK || f==NULL) <br />&#160;&#160;{<br />&#160;&#160;&#160;&#160;return NULL;<br />&#160;&#160;}<br />&#160;&#160;<span class="CodeComment">// check signature of function</span><br />&#160;&#160;if ( sCheckParams(f, rtype, ptype) )<br />&#160;&#160;{<br />&#160;&#160;&#160;&#160;&#160;return f;<br />&#160;&#160;}<br />&#160;&#160;else<br />&#160;&#160;{<br />&#160;&#160;&#160;&#160;capl-&gt;ReleaseCaplFunction(f);<br />&#160;&#160;&#160;&#160;return NULL;<br />&#160;&#160;}<br />}</p>
+                <p class="SourceCode">void CaplInstanceData::GetCallbackFunctions()<br />{<br />&#160;&#160;<span class="CodeComment">// Get a CAPL function handle. The handle stays valid until<br></br>&#160;&#160;// end of measurement or a call of ReleaseCaplFunction.</span><br />&#160;&#160;mShowValue  &#160;&#160;= sGetCaplFunc(mCapl, "CALLBACK_ShowValue", 'D', "D");<br />&#160;&#160;mShowDates &#160;&#160;= sGetCaplFunc(mCapl, "CALLBACK_ShowDates", 'D', "IDI");<br />&#160;&#160;mDllInfo &#160;&#160;&#160;&#160;= sGetCaplFunc(mCapl, "CALLBACK_DllInfo", 'V', "C");<br />&#160;&#160;mArrayValues = sGetCaplFunc(mCapl, "CALLBACK_ArrayValues", 'V', "DBB");<br />&#160;&#160;mDllVersion &#160;= sGetCaplFunc(mCapl, "CALLBACK_DllVersion", 'V', "C");<br />}</p>
+                <p class="SourceCode">void CaplInstanceData::ReleaseCallbackFunctions()<br />{<br />&#160;&#160;<span class="CodeComment">// Release all the requested Callback functions</span><br />&#160;&#160;mCapl-&gt;ReleaseCaplFunction(mShowValue);<br />&#160;&#160;mShowValue = NULL;<br />&#160;&#160;mCapl-&gt;ReleaseCaplFunction(mShowDates);<br />&#160;&#160;mShowDates = NULL;<br />&#160;&#160;mCapl-&gt;ReleaseCaplFunction(mDllInfo);<br />&#160;&#160;mDllInfo = NULL;<br />&#160;&#160;mCapl-&gt;ReleaseCaplFunction(mArrayValues);<br />&#160;&#160;mArrayValues = NULL;<br />&#160;&#160;mCapl-&gt;ReleaseCaplFunction(mDllVersion);<br />&#160;&#160;mDllVersion = NULL;<br />}</p>
+                <p class="SourceCode">void CaplInstanceData::DllVersion(char* y)<br />{<br />&#160;&#160;<span class="CodeComment">// Prepare the parameters for the call stack of CAPL.<br />&#160;&#160;// Arrays uses a 8 byte on the stack, 4 Bytes for the number of element,<br />&#160;&#160;// and 4 bytes for the pointer to the array</span><br />&#160;&#160;int32 sizeX = strlen(y)+1;<br />&#160;&#160;uint8 params[8]; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<span class="CodeComment">// parameters for call stack, 8 Bytes total</span><br />&#160;&#160;memcpy(params+0, &amp;sizeX, 4); &#160;&#160;<span class="CodeComment">// array size &#160;&#160;&#160;of first parameter, 4 Bytes</span><br />&#160;&#160;memcpy(params+4, &amp;y, &#160;&#160;&#160;&#160;4); &#160;&#160;<span class="CodeComment">// array pointer of first parameter, 4 Bytes</span><br />&#160;&#160;<br />&#160;&#160;if(mDllVersion!=NULL)<br />&#160;&#160;{<br />&#160;&#160;&#160;&#160;uint32 result;&#160;&#160;<span class="CodeComment">// dummy variable</span><br />&#160;&#160;&#160;&#160;VIAResult rc = &#160;mDllVersion-&gt;Call(&amp;result, params);<br />&#160;&#160;}<br />}</p>
+                <p class="SourceCode">uint32 CaplInstanceData::ShowValue(uint32 x)<br />{<br />&#160;&#160;void* params = &amp;x; &#160;&#160;<span class="CodeComment">// parameters for call stack</span><br />&#160;&#160;uint32 result;<br />&#160;&#160;if(mShowValue!=NULL)<br />&#160;&#160;{<br />&#160;&#160;&#160;&#160;VIAResult rc = &#160;mShowValue-&gt;Call(&amp;result, params);<br />&#160;&#160;&#160;&#160;if (rc==kVIA_OK)<br />&#160;&#160;&#160;&#160;{<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;return result;<br />&#160;&#160;&#160;&#160;}<br />&#160;&#160;} <br />&#160;&#160;return -1;<br />}</p>
+                <p class="SourceCode">uint32 CaplInstanceData::ShowDates(int16 x, uint32 y, int16 z)<br />{<br />&#160;&#160;<span class="CodeComment">// Prepare the parameters for the call stack of CAPL. The stack grows<br />&#160;&#160;// from top to down, so the first parameter in the parameter list is the last <br />&#160;&#160;// one in memory. CAPL uses also a 32 bit alignment for the parameters.</span><br />&#160;&#160;uint8 params[12]; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<span class="CodeComment">// parameters for call stack, 12 Bytes total</span><br />&#160;&#160;memcpy(params+0, &amp;z, 2); &#160;<span class="CodeComment">// third &#160;parameter, offset 0, 2 Bytes</span><br />&#160;&#160;memcpy(params+4, &amp;y, 4); &#160;<span class="CodeComment">// second parameter, offset 4, 4 Bytes</span><br />&#160;&#160;memcpy(params+8, &amp;x, 2); &#160;<span class="CodeComment">// first &#160;parameter, offset 8, 2 Bytes </span><br />&#160;&#160;uint32 result;<br />&#160;&#160;if(mShowDates!=NULL)<br />&#160;&#160;{<br />&#160;&#160;&#160;&#160;VIAResult rc = &#160;mShowDates-&gt;Call(&amp;result, params);<br />&#160;&#160;&#160;&#160;if (rc==kVIA_OK)<br />&#160;&#160;&#160;&#160;{<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;return rc; &#160;&#160;<span class="CodeComment">// call successful</span><br />&#160;&#160;&#160;&#160;}<br />&#160;&#160;} <br />&#160;&#160;&#160;&#160;<br />&#160;&#160;return -1;&#160;&#160;&#160;<span class="CodeComment">// call failed</span><br />}</p>
+                <p class="SourceCode">void CaplInstanceData::DllInfo(char* x)<br />{<br />&#160;&#160;<span class="CodeComment">// Prepare the parameters for the call stack of CAPL.<br />&#160;&#160;// Arrays uses a 8 byte on the stack, 4 Bytes for the number of element,<br />&#160;&#160;// and 4 bytes for the pointer to the array</span><br />&#160;&#160;int32 sizeX = strlen(x)+1;<br />&#160;&#160;uint8 params[8]; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<span class="CodeComment">// parameters for call stack, 8 Bytes total</span><br />&#160;&#160;memcpy(params+0, &amp;sizeX, 4); &#160;&#160;<span class="CodeComment">// array size &#160;&#160;&#160;of first parameter, 4 Bytes</span><br />&#160;&#160;memcpy(params+4, &amp;x, &#160;&#160;&#160;&#160;4); &#160;&#160;<span class="CodeComment">// array pointer of first parameter, 4 Bytes</span><br />&#160;&#160;<br />&#160;&#160;if(mDllInfo!=NULL)<br />&#160;&#160;{<br />&#160;&#160;&#160;&#160;uint32 result;&#160;&#160;&#160;<span class="CodeComment">// dummy variable</span><br />&#160;&#160;&#160;&#160;VIAResult rc = &#160;mDllInfo-&gt;Call(&amp;result, params);<br />&#160;&#160;}<br />}</p>
+                <p class="SourceCode">void CaplInstanceData::ArrayValues(uint32 flags, uint32 numberOfDatabytes, uint8 databytes[], uint8 controlcode)<br />{<br />&#160;&#160;<span class="CodeComment">// Prepare the parameters for the call stack of CAPL. The stack grows<br />&#160;&#160;// from top to down, so the first parameter in the parameter list is the last <br />&#160;&#160;// one in memory. CAPL uses also a 32 bit alignment for the parameters.<br />&#160;&#160;// Arrays uses a 8 byte on the stack, 4 Bytes for the number of element,<br />&#160;&#160;// and 4 bytes for the pointer to the array</span><br />&#160;&#160;<br />&#160;&#160;uint8 params[16]; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<span class="CodeComment">// parameters for call stack, 16 Bytes total</span><br />&#160;&#160;memcpy(params+ 0, &amp;controlcode, &#160;&#160;&#160;&#160;&#160;&#160;1); &#160;&#160;<span class="CodeComment">// third parameter, &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;offset &#160;0, 1 Bytes</span><br />&#160;&#160;memcpy(params+ 4, &amp;numberOfDatabytes, 4); &#160;&#160;<span class="CodeComment">// second parameter (array size), &#160;&#160;&#160;offset &#160;4, 4 Bytes</span><br />&#160;&#160;memcpy(params+ 8, &amp;databytes, &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;4); &#160;&#160;<span class="CodeComment">// second parameter (array pointer), offset &#160;8, 4 Bytes</span><br />&#160;&#160;memcpy(params+12, &amp;flags, &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;4); &#160;&#160;<span class="CodeComment">// first &#160;parameter, &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;offset 12, 4 Bytes</span><br />&#160;&#160;if(mArrayValues!=NULL)<br />&#160;&#160;{<br />&#160;&#160;&#160;&#160;uint32 result;&#160;&#160;&#160;<span class="CodeComment">// dummy variable</span><br />&#160;&#160;&#160;&#160;VIAResult rc = &#160;mArrayValues -&gt;Call(&amp;result, params);<br />&#160;&#160;}<br />}</p>
+                <p class="SourceCode"><span class="CodeComment">// ============================================================================<br />// CaplInstanceData<br />// <br />// Data local for a single CAPL Block. <br />//<br />// A CAPL-DLL can be used by more than one CAPL-Block, so every piece of <br />// information thats like a globale variable in CAPL, must now be wraped into <br />// an instance of an object.<br />// ============================================================================</span>
+                    <br />
+                    <br />void CAPLEXPORT far CAPLPASCAL appInit (uint32 handle)<br />{<br />&#160;&#160;CaplInstanceData* inst = gCaplMap[handle];<br />&#160;&#160;if (inst==NULL)<br />&#160;&#160;{<br />&#160;&#160;&#160;&#160;return;<br />&#160;&#160;}<br />&#160;&#160;inst-&gt;GetCallbackFunctions();<br />}</p>
+                <p class="SourceCode">void CAPLEXPORT far CAPLPASCAL appEnd (uint32 handle)<br />{<br />&#160;&#160;CaplInstanceData* inst = gCaplMap[handle];<br />&#160;&#160;if (inst==NULL)<br />&#160;&#160;{<br />&#160;&#160;&#160;&#160;return;<br />&#160;&#160;}<br />&#160;&#160;inst-&gt;ReleaseCallbackFunctions();<br />&#160;&#160;gCaplMap.erase(handle);<br />}</p>
+                <p class="SourceCode">long CAPLEXPORT far CAPLPASCAL appSetValue (uint32 handle, long x)<br />{<br />&#160;&#160;CaplInstanceData* inst = gCaplMap[handle];<br />&#160;&#160;if (inst==NULL)<br />&#160;&#160;{<br />&#160;&#160;&#160;&#160;return -1; <br />&#160;&#160;}<br />&#160;&#160;return inst-&gt;ShowValue(x);;<br />}</p>
+                <p class="SourceCode">long CAPLEXPORT far CAPLPASCAL appReadData (uint32 handle, long a)<br />{<br />&#160;&#160;CaplInstanceData* inst = gCaplMap[handle];<br />&#160;&#160;if (inst==NULL)<br />&#160;&#160;{<br />&#160;&#160;&#160;&#160;return -1; <br />&#160;&#160;}<br />&#160;&#160;int16 &#160;x = (a&gt;=0) ? +1 : -1;<br />&#160;&#160;uint32 y = abs(a);<br />&#160;&#160;int16 &#160;z = (int16)(a &amp; 0x0f000000) &gt;&gt; 24;<br />&#160;&#160;inst-&gt;DllVersion("Version 1.1");<br />&#160;&#160;<br />&#160;&#160;inst-&gt;DllInfo("DLL: processing");<br />&#160;&#160;uint8 databytes[8] = { 0x11, 0x22, 0x33, 0x44, 0x55, 0x66, 0x77, 0x88};<br />&#160;&#160;inst-&gt;ArrayValues( 0xaabbccdd, sizeof(databytes), databytes, 0x01);<br />&#160;&#160;return inst-&gt;ShowDates( x, y, z);<br />}</p>
+                <p class="SourceCode"><span class="CodeComment">// ============================================================================<br />// VIARegisterCDLL<br />// ============================================================================</span>
+                    <br />
+                    <br />VIACLIENT(void) VIARegisterCDLL (VIACapl* service)<br />{<br />&#160;&#160;uint32 &#160;&#160;&#160;handle;<br />&#160;&#160;VIAResult result;<br />&#160;&#160;if (service==NULL)<br />&#160;&#160;{<br />&#160;&#160;&#160;&#160;return;<br />&#160;&#160;}<br />&#160;&#160;result = service-&gt;GetCaplHandle(&amp;handle);<br />&#160;&#160;if(result!=kVIA_OK)<br />&#160;&#160;{<br />&#160;&#160;&#160;&#160;return;<br />&#160;&#160;}<br />&#160;&#160;gCaplMap[handle] = new CaplInstanceData(service);<br />}</p>
+                <p class="SourceCode">void CAPLEXPORT far CAPLPASCAL voidFct( void )<br />{<br />&#160;&#160;&#160;<span class="CodeComment">// do something</span><br />&#160;&#160;&#160;data = 55;<br />}</p>
+                <p class="SourceCode">unsigned long CAPLEXPORT far CAPLPASCAL appLongFuncName( void )<br />{<br />&#160;&#160;return 1;<br />}</p>
+                <p class="SourceCode">void CAPLEXPORT far CAPLPASCAL appPut(unsigned long x)<br />{<br />&#160;&#160;data = x;<br />}</p>
+                <p class="SourceCode">unsigned long CAPLEXPORT far CAPLPASCAL appGet(void)<br />{<br />&#160;&#160;return data;<br />}</p>
+                <p class="SourceCode">long CAPLEXPORT far CAPLPASCAL appAdd(long x, long y)<br />{<br />&#160;&#160;long z = x + y;<br />&#160;&#160;return z;<br />}</p>
+                <p class="SourceCode">long CAPLEXPORT far CAPLPASCAL appSubtract(long x, long y)<br />{<br />&#160;&#160;long z = x - y;<br />&#160;&#160;return z;<br />}</p>
+                <p class="SourceCode">void CAPLEXPORT far CAPLPASCAL appGetDataTwoPars( &#160;unsigned long numberBytes,<br />&#160;&#160;&#160;&#160;unsigned char dataBlock[] )<br />{<br />&#160;&#160;unsigned int i;<br />&#160;&#160;for (i = 0; i &lt; numberBytes; i++) {<br />&#160;&#160;&#160;&#160;dataBlock[i]= dlldata[i];<br />&#160;&#160;}<br />}</p>
+                <p class="SourceCode">void CAPLEXPORT far CAPLPASCAL appPutDataTwoPars( unsigned long numberBytes,<br />&#160;&#160;&#160;&#160;const unsigned char dataBlock[] )<br />{<br />&#160;&#160;unsigned int i;<br />&#160;&#160;for (i = 0; i &lt; numberBytes; i++) {<br />&#160;&#160;&#160;&#160;dlldata[i] = dataBlock[i];<br />&#160;&#160;}<br />}</p>
+                <p class="SourceCode"><span class="CodeComment">// get data from DLL into CAPL memory<br /></span>
+                    <br />void CAPLEXPORT far CAPLPASCAL appGetDataOnePar( unsigned char dataBlock[] )<br />{<br />&#160;&#160;<span class="CodeComment">// &#160;get first element</span><br />&#160;&#160;dataBlock[0] = (unsigned char)data;<br />}</p>
+                <p class="SourceCode"><span class="CodeComment">// put data from CAPL array to DLL</span>
+                    <br />
+                    <br />void CAPLEXPORT far CAPLPASCAL appPutDataOnePar( const unsigned char dataBlock[] )<br />{<br />&#160;&#160;<span class="CodeComment">// put first element</span><br />&#160;&#160;data = dataBlock[0];<br />}</p>
+                <p class="SourceCode"><span class="CodeComment">// ============================================================================<br />// CAPL_DLL_INFO_LIST : list of exported functions<br />// &#160;&#160;The first field is predefined and mustn't be changed!<br />// &#160;&#160;The list has to end with a {0,0} entry!<br />// New struct supporting function names with up to 50 characters<br />// ============================================================================</span>
+                    <br />
+                    <br />CAPL_DLL_INFO3 table[] = {<br />{CDLL_VERSION_NAME, (CAPL_FARCALL)CDLL_VERSION, "", "", CAPL_DLL_CDECL, 0xabcd, CDLL_EXPORT },<br />&#160;&#160;{"dllInit", &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(CAPL_FARCALL)appInit, &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"CAPL_DLL","This function will initialize all callback functions in the CAPLDLL",'V', 1, "D", "", {"handle"}},<br />&#160;&#160;{"dllEnd", &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(CAPL_FARCALL)appEnd, &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"CAPL_DLL","This function will release the CAPL function handle in the CAPLDLL",'V', 1, "D", "", {"handle"}}, <br />&#160;&#160;{"dllSetValue", &#160;&#160;&#160;&#160;&#160;&#160;(CAPL_FARCALL)appSetValue, &#160;&#160;&#160;&#160;&#160;"CAPL_DLL","This function will call a callback functions",'L', 2, "DL", "", {"handle","x"}},<br />&#160;&#160;{"dllReadData", &#160;&#160;&#160;&#160;&#160;&#160;(CAPL_FARCALL)appReadData, &#160;&#160;&#160;&#160;&#160;"CAPL_DLL","This function will call a callback functions",'L', 2, "DL", "", {"handle","x"}},<br />&#160;&#160;{"dllPut", &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(CAPL_FARCALL)appPut, &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"CAPL_DLL","This function will save data from CAPL to DLL memory",'V', 1, "D", "", {"x"}}, <br />&#160;&#160;{"dllGet", &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(CAPL_FARCALL)appGet, &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"CAPL_DLL","This function will read data from DLL memory to CAPL",'D', 0, "", "", {""}}, <br />&#160;&#160;{"dllVoid", &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(CAPL_FARCALL)voidFct, &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"CAPL_DLL","This function will overwrite DLL memory from CAPL without parameter",'V', 0, "", "", {""}}, <br />&#160;&#160;{"dllPutDataOnePar", &#160;(CAPL_FARCALL)appPutDataOnePar, "CAPL_DLL","This function will put data from CAPL array to DLL",'V', 1, "B", "\001", {"datablock"}}, <br />&#160;&#160;{"dllGetDataOnePar", &#160;(CAPL_FARCALL)appGetDataOnePar, "CAPL_DLL","This function will get data from DLL into CAPL memory",'V', 1, "B", "\001", {"datablock"}}, <br />&#160;&#160;{"dllPutDataTwoPars", (CAPL_FARCALL)appPutDataTwoPars,"CAPL_DLL","This function will put two datas from CAPL array to DLL",'V', 2, "DB", "\000\001", {"noOfBytes","datablock"}},&#160;&#160;&#160;<span class="CodeComment">// number of pars in octal format</span><br />&#160;&#160;{"dllGetDataTwoPars", (CAPL_FARCALL)appGetDataTwoPars,"CAPL_DLL","This function will get two datas from DLL into CAPL memory",'V', 2, "DB", "\000\001", {"noOfBytes","datablock"}},<br />&#160;&#160;{"dllAdd", &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(CAPL_FARCALL)appAdd, &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"CAPL_DLL","This function will add two values. The return value is the result",'L', 2, "LL", "", {"x","y"}}, &#160;<br />&#160;&#160;{"dllSubtract", &#160;&#160;&#160;&#160;&#160;&#160;(CAPL_FARCALL)appSubtract, &#160;&#160;&#160;&#160;&#160;"CAPL_DLL","This function will substract two values. The return value is the result",'L', 2, "LL", "", {"x","y"}},<br />&#160;&#160;{"dllSupportLongFunctionNamesWithUpTo50Characters", &#160;&#160;(CAPL_FARCALL)appLongFuncName, &#160;&#160;&#160;&#160;&#160;"CAPL_DLL","This function shows the support of long function names",'D', 0, "", "", {""}},<br />{0, 0}<br />};</p>
+                <p class="SourceCode">CAPLEXPORT CAPL_DLL_INFO3 far * caplDllTable3 = table;<br /><span class="CodeComment">// ============================================================================<br />// DllMain, entry Point of DLL &#160;<br />// ============================================================================</span><br /><br />BOOL WINAPI DllMain(HINSTANCE handle, dword reason, void*)<br />{ &#160;&#160;&#160;&#160;<br />&#160;&#160;switch (reason) <br />&#160;&#160;{<br />&#160;&#160;&#160;&#160;case DLL_PROCESS_ATTACH:<br />&#160;&#160;&#160;&#160;{<br />&#160;&#160;&#160;&#160;&#160;&#160;gModuleHandle = handle;<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<br />&#160;&#160;&#160;&#160;&#160;&#160;// Get full filename of module<br />&#160;&#160;&#160;&#160;&#160;&#160;char path_buffer[_MAX_PATH];<br />&#160;&#160;&#160;&#160;&#160;&#160;dword result = GetModuleFileName(gModuleHandle, path_buffer,_MAX_PATH);<br />&#160;&#160;&#160;&#160;&#160;&#160;// split filename into parts<br />&#160;&#160;&#160;&#160;&#160;&#160;char drive[_MAX_DRIVE];<br />&#160;&#160;&#160;&#160;&#160;&#160;char dir[_MAX_DIR];<br />&#160;&#160;&#160;&#160;&#160;&#160;char fname[_MAX_FNAME];<br />&#160;&#160;&#160;&#160;&#160;&#160;char ext[_MAX_EXT];<br />&#160;&#160;&#160;&#160;&#160;&#160;_splitpath_s( path_buffer, drive, dir, fname, ext );<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<br />&#160;&#160;&#160;&#160;&#160;&#160;strcpy_s(gModuleName, fname);<br />&#160;&#160;&#160;&#160;&#160;&#160;<br />&#160;&#160;&#160;&#160;&#160;&#160;return 1; &#160;&#160;<span class="CodeComment">// Indicate that the DLL was initialized successfully.</span><br />&#160;&#160;&#160;&#160;}<br />&#160;&#160;&#160;&#160;case DLL_PROCESS_DETACH:<br />&#160;&#160;&#160;&#160;{<br />&#160;&#160;&#160;&#160;&#160;&#160;return 1; &#160;&#160;<span class="CodeComment">// Indicate that the DLL was detached successfully.</span><br />&#160;&#160;&#160;&#160;}<br />&#160;&#160;}<br />&#160;&#160;return 1;<br />}</p>
+                <p class="LinkList"><a href="CAPLIncludeWindowsDLL.htm" class="LinkList">Linking a Windows DLL in CAPL</a>&#160;&#160;•&#160;&#160;<a href="CAPLExportTable.htm" class="LinkList">Description of the CAPL Export Table</a>&#160;&#160;•&#160;&#160;<a href="CAPLIncludeWindowsDLLSearchSequence.htm" class="LinkList">Search Sequence for a Windows DLL</a></p>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="FooterWhite">
+                <table class="FooterWhite" style="border-collapse: collapse;margin-left: auto;margin-right: auto;">
+                    <col style="width: 70px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col style="width: 16px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="buttons popup-container clearfix topicToolbarProxy topicToolbarProxyFooter _Skins_HTML5TopicToolbar mc-component nocontent">
+                                    <div class="button-group-container-left">
+                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo"><a href="../../Shared/HowToUseOnlineHelp.htm" title="Tips for using the help" alt="Tips for using the help"><img src="../../../Resources/vImages/vBackstage/vHelpInfo.png" /></a>
+                                </p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo" style="text-align: right;"><span class="mc-variable Vector.BuildTime variable">2024-04-8T20:56:42</span>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <table style="width: 100%;border-collapse: separate;border-spacing: 3px 0px;margin-left: auto;margin-right: auto;caption-side: top;">
+                <col />
+                <col />
+                <col />
+                <col data-mc-conditions="BuildProcess.HTML5Link" />
+                <tbody>
+                    <tr>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;">
+                            <p class="vec_Footer">©&#160;Vector Informatik GmbH</p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;text-align: right;">
+                            <p class="vec_FooterBold">
+                                <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE&#160;Product Families</MadCap:conditionalText> Version <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.VectorTestUnitRunner">18</MadCap:conditionalText></p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="../../Shared/ContactCopyrightLicense.htm" class="vec_Footer MCXref xref xrefvec_Footer">Contact/Copyright/License</a>
+                            </p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="https://www.vector.com/int/en/company/get-info/privacy-policy/" target="_blank" class="vec_Footer">Data Privacy Notice</a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

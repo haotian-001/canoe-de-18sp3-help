@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="topic" data-mc-search-type="Stem" data-mc-help-system-file-name="CANoeDEFamily.xml" data-mc-path-to-help-system="../../../../../" data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../Skins/Favicons/favicon-16x16.png" /><title>GNSS Node Layer</title>
+        <link href="../../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Resources/Stylesheets/vTableMasterPageHeader.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../../Resources/Stylesheets/vStylesheet.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../../Resources/Stylesheets/vTablePageTOC.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../../Resources/Stylesheets/vTable.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapGlobal.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapDom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapUtilities.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapXhr.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTextEffects.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSlideshow.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMessageBus.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMessageBus.CrossFrame.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapDefault.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMediaQueries.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapAccessibility.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapHelpSystem.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapAliasFile.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopicFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapFeedbackHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSkinHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.Breadcrumbs.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.MiniToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.SideMenu.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapIndex.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapGlossary.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapParser.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSearch.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapNavigateTopics.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapLms.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapELearning.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopic.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMicroContentComponent.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSearchHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopicElements.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTriPane.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/jscript" src="../../../../Resources/vScripts/SyntaxHighlighting.js">
+        </script>
+        <script type="text/jscript" src="../../../../Resources/vScripts/TabSwitch.js">
+        </script>
+        <script type="text/javascript" src="../../../../Resources/vScripts/Vector.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../../../CANoeDEFamily.htm#Topics/CAPLFunctions/J1939/GNSSNodeLayer/CAPLfunctionsGNSSNLOverview.htm">Open topic with navigation</a>
+        </p>
+        <div class="Body">
+            <div role="main" id="mc-main-content">
+                <p class="StructurePath"><a href="../../CAPLfunctions.htm" class="StructurePath MCXref xref xrefStructurePath">CAPL Functions</a> » <a href="../CAPLfunctionsJ1939StartPage.htm" class="StructurePath">1939</a> » <span class="mc-variable System.Title variable">GNSS Node Layer</span></p>
+                <h1><a name="kanchor9959"></a><a name="aanchor30908"></a>
+                    <MadCap:concept term="GNSSNL" /><span class="mc-variable System.Title variable">GNSS Node Layer</span>
+                </h1>
+                <p class="MenuPath">&#160;</p>
+                <p class="ToolAvailability" data-mc-conditions="BuildProcess.ToolAvailability"><a href="../../../Shared/FeatureAvailability.htm" class="red" title="Feature availabilty for your product">Valid&#160;for</a>:&#160;&#160;CANoe&#160;DE<a name="aanchor30909"></a><MadCap:concept term="SFCANoeDE" />&#160;&#160;•&#160;&#160;CANoe4SW&#160;DE<a name="aanchor30910"></a><MadCap:concept term="SFCANoe4SWDE" /></p>
+                <p class="AutoSearchFilterConcepts"><a name="aanchor30911"></a>
+                    <MadCap:concept term="SFCAPLFunctions" />
+                </p>
+                <div>
+                    <table style="margin-left: 0;margin-right: auto;width: 100%;">
+                        <col style="width: 60px;" />
+                        <col />
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <p>
+                                        <img src="../../../../Resources/vImages/vFunction.png" />
+                                    </p>
+                                </td>
+                                <td>
+                                    <p class="TableSymbolHead">J1939</p>
+                                    <p class="Table">Only available with J1939.</p>
+                                    <p class="Table">To use the CAPL functions the node layer via the <a href="../../../Shared/Interfaces/VModule/VModule.htm">module description file</a> <a href="../../../CANoeCANalyzer/J1939/gnssNL/gnssNLOverview.htm">GNSS_NL.vmodule</a> must be included.</p>
+                                    <p class="Table">You can include the node layer by using the configuration dialog of the node on page <span class="bold">Components </span>or via the node attribute <span class="bold">NodeLayerModules </span>in the database.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <hr class="Startpage" width="100%" size="0" align="center" />
+                <p class="TableCOM"><a name="Shortcuts" id="Shortcuts"></a><span class="red">ON THIS&#160;PAGE:</span>
+                </p>
+                <table style="margin-left: 0;margin-right: auto;caption-side: top;mc-table-style: url('../../../../Resources/Stylesheets/vTablePageTOC.css');" class="TableStyle-vTablePageTOC" cellspacing="2">
+                    <col class="TableStyle-vTablePageTOC-Column-Column1" style="width: 50%;" />
+                    <col class="TableStyle-vTablePageTOC-Column-Column1" style="width: 50%;" />
+                    <tbody>
+                        <tr class="TableStyle-vTablePageTOC-Body-Body1">
+                            <td class="TableStyle-vTablePageTOC-BodyB-Column1-Body1">
+                                <p class="PageTOC"><a href="#Events" class="PageTOC">Events</a>
+                                </p>
+                                <p class="PageTOC"><a href="#Node" class="PageTOC">Node Control</a>
+                                </p>
+                                <p class="PageTOC"><a href="#Other" class="PageTOC">Other Function</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle-vTablePageTOC-BodyA-Column1-Body1">
+                                <p class="PageTOC"><a href="#Settings" class="PageTOC">Settings</a>
+                                </p>
+                                <p class="PageTOC"><a href="#Simulati" class="PageTOC">Simulation</a>
+                                </p>
+                                <p class="PageTOC"><a href="#Waypoints" class="PageTOC">Waypoints</a>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div>
+                    <h2><a name="Events" id="Events"></a>Events <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;caption-side: top;mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                        <col style="width: 210px;" />
+                        <col />
+                        <tr>
+                            <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="TableHead">Function</p>
+                            </th>
+                            <th class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="TableHead">Short Description</p>
+                            </th>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionGNSSappaddrclaimed.htm">GNSSAppAddrClaimed</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Identifies an Address Claiming procedure that was performed successfully.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionGNSSappcmdaddrindication.htm">GNSSAppCmdAddrIndication</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Indicates that a new address has been assigned to the node.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionGNSSapperrorindication.htm">GNSSAppErrorIndication</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Identifies errors.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionGNSSonlastwpreached.htm">GNSSOnLastWpReached</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Is called when the last waypoint of the waypoint list has been reached.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionGNSSonsetspeed.htm">GNSSOnSetSpeed</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Is called if the speed of the simulation has been changed.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionGNSSonwpbeforelastreached.htm">GNSSOnWpBeforeLastReached</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Is called when the next-to-last waypoint of the waypoint list has been reached.</p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div>
+                    <h2><a name="Node" id="Node"></a>Node Control <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;caption-side: top;mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                        <col style="width: 210px;" />
+                        <col />
+                        <thead>
+                            <tr>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                    <p class="TableHead">Function</p>
+                                </th>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                    <p class="TableHead">Short Description</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionGNSSgetaddress.htm">GNSSGetAddress</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Returns a network address.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionGNSSgetname.htm">GNSSGetName</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Returns the J1939 device name of a control device.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionGNSSmakename.htm">GNSSMakeName</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Generates a J1939 device name.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionGNSSshutdown.htm">GNSSShutDown</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Removes the node from the network.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionGNSSstartup.htm">GNSSStartUp</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Sets up a logical node within a <span class="Product">CANoe</span> network node.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionGNSSupdatetable.htm">GNSSUpdateTable</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Updates the network table.</p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div>
+                    <h2><a name="Other" id="Other"></a>Other Functions <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;caption-side: top;mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                        <col style="width: 210px;" />
+                        <col />
+                        <thead>
+                            <tr>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                    <p class="TableHead">Function</p>
+                                </th>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                    <p class="TableHead">Short Description</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionGNSSGetAbsFilePath.htm">GNSSGetAbsFilePath</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Gets the absolute path of a file.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionGNSSgetlasterror.htm">GNSSGetLastError</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Returns the error status of the last executed function.</p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div>
+                    <h2><a name="Settings" id="Settings"></a>Settings <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;caption-side: top;mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                        <col style="width: 210px;" />
+                        <col />
+                        <tr>
+                            <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="TableHead">Function</p>
+                            </th>
+                            <th class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="TableHead">Short Description</p>
+                            </th>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionGNSSSetCOGSOGVal.htm">GNSSSetCOGSOGVal</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Changes the value of the parameter group <span class="bold">COG&amp;SOG, Rapid Update</span>.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionGNSSsetjitteralt.htm">GNSSSetJitterAlt</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Sets the jitter by which the altitude deviates from its nominal value.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionGNSSsetjitterlatlon.htm">GNSSSetJitterLatLon</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">Sets the jitter by which the longitudinal and latitudinal degree deviates from the respective nominal value.</td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionGNSSsetpgsettings.htm">GNSSSetPGSettings</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Changes the values of individual parameter groups.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionGNSSsetposdataval.htm">GNSSSetPosDataVal</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">Changes the value of the parameter group <span class="bold">GNSS Position Data</span>.</td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionGNSSsetunits.htm">GNSSSetUnits</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Determines the system of measurement units.</p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div>
+                    <h2><a name="Simulati" id="Simulati"></a>Simulation <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;caption-side: top;mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                        <col style="width: 210px;" />
+                        <col />
+                        <tr>
+                            <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="TableHead">Function</p>
+                            </th>
+                            <th class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="TableHead">Short Description</p>
+                            </th>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionGNSScontinuespeed.htm">GNSSContinueSpeed</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Restores an old speed.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionGNSSgetcurcourse.htm">GNSSGetCurCourse</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Returns the current course of the GNSS receiver.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionGNSSgetcurgradient.htm">GNSSGetCurGradient</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Returns the current gradient of the GNSS receiver.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionGNSSgetcurspeed.htm">GNSSGetCurSpeed</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Returns the current speed at which the GNSS receiver is moving.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionGNSSpausespeed.htm">GNSSPauseSpeed</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Sets the speed to zero, temporarily.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionGNSSsetcourse.htm">GNSSSetCourse</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Determines a new course and a new gradient for the GNSS&#160;receiver.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionGNSSsetspeed.htm">GNSSSetSpeed</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Sets the speed at which the GNSS receiver moves.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionGNSSstartsimulation.htm">GNSSStartSimulation</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Starts the simulation.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionGNSSstopsimulation.htm">GNSSStopSimulation</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Stops the simulation.</p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div>
+                    <h2><a name="Waypoints" id="Waypoints"></a>Waypoints <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;caption-side: top;mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                        <col style="width: 210px;" />
+                        <col />
+                        <tr>
+                            <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="TableHead">Function</p>
+                            </th>
+                            <th class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="TableHead">Short Description</p>
+                            </th>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionGNSSaddwp.htm">GNSSAddWp</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Inserts a new waypoint at the end of the waypoint list.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionGNSSaddwpfile.htm">GNSSAddWpFile</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Inserts the GNSS positions of a file into the waypoint list.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionGNSSaddwpline.htm">GNSSAddWpLine</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Describes a line.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionGNSSaddwpmeander.htm">GNSSAddWpMeander</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Describes a meander with rounded off corners.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionGNSSaddwprect.htm">GNSSAddWpRect</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Describes a rectangle with rounded off corners.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionGNSSaddwpref.htm">GNSSAddWpRef</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Inserts a new waypoint at the end of the waypoint list.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionGNSSaddwprefs.htm">GNSSAddWpRefS</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Inserts a new waypoint at a given speed at the end of the waypoint list.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionGNSSaddwprel.htm">GNSSAddWpRel</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Inserts a new waypoint at the end of the waypoint list.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionGNSSaddwprels.htm">GNSSAddWpRelS</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Inserts a new waypoint at a given speed at the end of the waypoint list.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionGNSSaddwps.htm">GNSSAddWpS</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Inserts a new waypoint at a given speed at the end of the waypoint list.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionGNSSgetcuralt.htm">GNSSGetCurAlt</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Returns the current altitude at which the receiver is located.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionGNSSgetcurlat.htm">GNSSGetCurLat</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Returns the current latitude at which the receiver is located.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionGNSSgetcurlon.htm">GNSSGetCurLon</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Returns the current longitude at which the receiver is located.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep"><a href="Functions/CAPLfunctionGNSSremovewp.htm">GNSSRemoveWp</a>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Deletes all waypoints of the waypoint list.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionGNSSsetrefpoint.htm">GNSSSetRefPoint</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Defines reference points.</p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <p class="LinkList"><a href="CAPLfunctionsGNSSNLErrorCodesAppErrorIndication.htm" class="LinkList">Error Codes GNSSAppErrorIndication</a>&#160;&#160;•&#160;&#160;<a href="CAPLfunctionsGNSSNLErrorCodesGetLastError.htm" class="LinkList">Error Codes GNSSGetLastError</a></p>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="FooterWhite">
+                <table class="FooterWhite" style="border-collapse: collapse;margin-left: auto;margin-right: auto;">
+                    <col style="width: 70px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col style="width: 16px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col data-mc-conditions="" />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="buttons popup-container clearfix topicToolbarProxy topicToolbarProxyFooter _Skins_HTML5TopicToolbar mc-component nocontent">
+                                    <div class="button-group-container-left">
+                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo"><a href="../../../Shared/HowToUseOnlineHelp.htm" title="Tips for using the help" alt="Tips for using the help"><img src="../../../../Resources/vImages/vBackstage/vHelpInfo.png" /></a>
+                                </p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo">•&#160;&#160;Technical&#160;References are only&#160;available&#160;in&#160;English</p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo" style="text-align: right;"><span class="mc-variable Vector.BuildTime variable">2024-04-8T20:56:42</span>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <table style="width: 100%;border-collapse: separate;border-spacing: 3px 0px;margin-left: auto;margin-right: auto;caption-side: top;">
+                <col />
+                <col />
+                <col />
+                <col data-mc-conditions="BuildProcess.HTML5Link" />
+                <tbody>
+                    <tr>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;">
+                            <p class="vec_Footer">©&#160;Vector Informatik GmbH</p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;text-align: right;">
+                            <p class="vec_FooterBold">
+                                <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE&#160;Product Families</MadCap:conditionalText> Version <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.VectorTestUnitRunner">18</MadCap:conditionalText></p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="../../../Shared/ContactCopyrightLicense.htm" class="vec_Footer MCXref xref xrefvec_Footer">Contact/Copyright/License</a>
+                            </p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="https://www.vector.com/int/en/company/get-info/privacy-policy/" target="_blank" class="vec_Footer">Data Privacy Notice</a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

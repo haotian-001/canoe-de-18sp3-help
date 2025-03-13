@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="topic" data-mc-search-type="Stem" data-mc-help-system-file-name="CANoeDEFamily.xml" data-mc-path-to-help-system="../../../../../" data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.vTESTstudio" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../Skins/Favicons/favicon-16x16.png" /><title>Client States (TIM Component - ISO11783)</title>
+        <link href="../../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Resources/Stylesheets/vTableMasterPageHeader.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../../Resources/Stylesheets/vStylesheet.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../../Resources/Stylesheets/vTable.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapGlobal.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapDom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapUtilities.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapXhr.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTextEffects.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSlideshow.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMessageBus.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMessageBus.CrossFrame.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapDefault.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMediaQueries.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapAccessibility.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapHelpSystem.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapAliasFile.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopicFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapFeedbackHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSkinHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.Breadcrumbs.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.MiniToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.SideMenu.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapIndex.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapGlossary.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapParser.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSearch.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapNavigateTopics.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapLms.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapELearning.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopic.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMicroContentComponent.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSearchHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopicElements.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTriPane.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/jscript" src="../../../../Resources/vScripts/SyntaxHighlighting.js">
+        </script>
+        <script type="text/jscript" src="../../../../Resources/vScripts/TabSwitch.js">
+        </script>
+        <script type="text/javascript" src="../../../../Resources/vScripts/Vector.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../../../CANoeDEFamily.htm#Topics/CAPLFunctions/ISO11783/ISOInteractionLayer/TIMComponentClientStates.htm">Open topic with navigation</a>
+        </p>
+        <div class="Body">
+            <div role="main" id="mc-main-content">
+                <p class="StructurePath"><a href="../../CAPLfunctions.htm" class="StructurePath MCXref xref xrefStructurePath">CAPL Functions</a> » <a href="../CAPLfunctionsISO11783Overview.htm" class="StructurePath">ISO11783 </a> » <a href="CAPLfunctionsISOILOverview.htm" class="StructurePath">ISO11783 Interaction Layer </a> » <span class="mc-variable System.Title variable">Client States (TIM Component - ISO11783)</span></p>
+                <h1>TIM Component Client States</h1>
+                <p class="MenuPath">&#160;</p>
+                <p class="ToolAvailability" data-mc-conditions="BuildProcess.ToolAvailability"><a href="../../../Shared/FeatureAvailability.htm" class="red" title="Feature availabilty for your product">Valid&#160;for</a>:&#160;&#160;CANoe&#160;DE<a name="aanchor309"></a><MadCap:concept term="SFCANoeDE" />&#160;&#160;•&#160;&#160;CANoe4SW&#160;DE<a name="aanchor310"></a><MadCap:concept term="SFCANoe4SWDE" /></p>
+                <p class="AutoSearchFilterConcepts"><a name="aanchor311"></a>
+                    <MadCap:concept term="SFCAPLFunctions" />
+                </p>
+                <p>The following table contains the states of a connection from the TIM client to the TIM server. The state is used by the CAPL functions <a href="Functions/CAPLfunctionIso11783ILtimConnectSysVarToState.htm" class="SourceCode">Iso11783IL_TIMConnectSysVarToState</a>, <a href="Functions/CAPLfunctionIso11783ILtimFreezeConnection.htm" class="SourceCode">Iso11783IL_TIMFreezeConnection</a> and <a href="Functions/CAPLfunctionIso11783ILtimContinueConnection.htm" class="SourceCode">Iso11783IL_TIMContinueConnection</a>.</p>
+                <div>
+                    <table style="mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');margin-left: 0;margin-right: auto;" class="TableStyle_vTable" cellspacing="0">
+                        <col class="TableStyle-vTable-Column-Column1" />
+                        <col class="TableStyle-vTable-Column-Column1" />
+                        <col class="TableStyle-vTable-Column-Column1" />
+                        <col class="TableStyle-vTable-Column-Column1" />
+                        <thead>
+                            <tr class="TableStyle-vTable-Head-Header1">
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                    <p class="TableHead">State</p>
+                                </th>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                    <p class="TableHead">Name</p>
+                                </th>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                    <p class="TableHead">Pre Condition</p>
+                                </th>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                    <p class="TableHead">Action when State is Entered</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">0</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Offline</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <ul>
+                                        <li>Client is not started.</li>
+                                        <li>Client is stopped (<a href="Functions/CAPLfunctionIso11783ILControlStop.htm" class="SourceCode">ISO11783IL_ControlStop</a>).</li>
+                                    </ul>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">—</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">10</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Automation
+ Unavailable</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <ul>
+                                        <li>Address Claim succeeded.</li>
+                                        <li><a href="Functions/CAPLfunctionIso11783ILtimConnectToServer.htm" class="SourceCode">Iso11783IL_TIMConnectToServer</a> is called to connect client a server.</li>
+                                    </ul>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Wait for <span class="bold">TIM_ServerStatus_Msg</span> of a server. If received switches to state <span class="bold">Tim Server Status is received</span>. </p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">11</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Tim
+ Server Status is received</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><span class="bold">TIM_ServerStatus_Msg</span> is received.</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Send <span class="bold">TIM_ConnectionVersionRequest</span> to
+ the server and switch to state <span class="bold">Connection Version request is sent</span>.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">12</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Connection
+ Version request is sent</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><span class="bold">TIM_ConnectionVersionRequest</span> is sent.</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Wait for the <span class="bold">TIM_ConnectionVersionResponse</span> of the server. If the response is received validate content and switch to state <span class="bold">Connection Version is valid</span> or <span class="bold">Initialization error</span>.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">13</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Connection
+ Version is valid</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Check of the connection version succeeded.</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Start sending cyclic <span class="bold">TIM_ClientStatus_Msg</span>.</p>
+                                    <p class="Table">Send <span class="bold">TIM_FunctionsSupportRequest</span> to
+ server and switch to state <span class="bold">Supported functions request is sent</span>.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">14</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Supported
+ functions request is sent</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><span class="bold">TIM_FunctionsSupportRequest</span> is sent to server.</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Wait for <span class="bold">TIM_FunctionsSupportResponse</span> of the server. If response is received then switch to state <span class="bold">Supported
+ functions response is received</span> if the required functions are supported else switch to state <span class="bold">Initialization error</span>.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">15</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Supported
+ functions response is received</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><span class="bold">TIM_FunctionsSupportRequest</span> is received.</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">If response contains the desired
+ functions switch to state <span class="bold">Automation not ready</span> else switch to state <span class="bold">Initialization error</span>.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">16</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Initialization
+ succeeded (equivalent to state
+ ‘Automation not ready’ of the standard)</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Initialization succeeded.</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Switch to state <span class="bold">Start authentication</span>.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">19</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Initialization
+ error</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Initialization has been stopped due to timeout or unexpected response.</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">No action. You can switch to state <span class="bold">Automation Unavailable</span> by calling <a href="Functions/CAPLfunctionIso11783ILtimConnectToServer.htm" class="SourceCode">Iso11783IL_TIMConnectToServer</a>.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">20</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Start
+ authentication</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <ul>
+                                        <li>Initialization succeeded.</li>
+                                        <li><a href="Functions/CAPLfunctionIso11783ILtimRestartAuthentication.htm" class="SourceCode">ISO1783IL_TIMRestartAuthentication</a> Authentication is called after an
+ authentication error.</li>
+                                    </ul>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Send
+ <span class="bold">Auth_ClientAuthenticationStatus</span>  with <span class="bold">(Re)Start authentication</span> bit.</p>
+                                    <p class="Table">If <span class="bold">Auth_ServerAuthenticationStatus</span> with
+ <span class="bold">(Re)Start authentication</span> Status bit set (to <span class="bold">1</span>) is received then check if LwA is possible, calculate random challenge and reset <span class="bold">(Re)Start authentication</span> bit of   <span class="bold">Auth_ClientAuthenticationStatus</span>.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">21</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Server
+ starts authentication</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><span class="bold">Auth_ServerAuthenticationStatus</span> with
+ <span class="bold">(Re)Start authentication</span> Status bit set is received.</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Send <span class="bold">Auth_ServerRandomChallengeRequest</span>
+  and switch to state <span class="bold">Server Random Challenge request is sent</span>.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">22</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Server
+ Random Challenge request is sent</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><span class="bold">Auth_ServerRandomChallengeRequest</span> is sent.</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Wait for <span class="bold">Auth_ServerRandomChallengeResponse</span>.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">23</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Server
+ Random Challenge response is received</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><span class="bold">Auth_SererRandomChallengeResponse</span> is received.</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">If full authentication (FwA) is necessary  then send <span class="bold">Auth_ServerCertificateRequest</span> to
+ the server to request the testlab certificate and switch to state <span class="bold">Server testlab
+ certificate request is sent</span>.</p>
+                                    <p class="Table">Else if lightweight authentication (LwA) is possible switch to state <span class="bold">Calculate CMCA over received challenge</span>.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">24</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Server testlab certificate request is sent</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><span class="bold">Auth_ServerCertificateRequest</span> for testlab certificate is sent to the server.</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Wait for the
+ <span class="bold">Auth_ServerCertificateResponse</span> of the server. If the response is received and the authentication type, the certification format as well as the
+ certification type is valid then the store the testlab certificate and switch
+ to state <span class="bold">Server testlab certificate response is received</span> is received. Otherwise switch to state <span class="bold">Authentication error</span>.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">25</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Server
+ testlab certificate response is received</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><span class="bold">Auth_ServerCertificateResponse</span>
+ with a testlab certificate is received</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Send <span class="bold">Auth_ServerCertificateRequest</span> to
+ the server to request the stored manufacturer certificate. Switch to state <span class="bold">Server
+ manufacturer certificate request sent</span>.  </p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">26</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Server
+ manufacturer certificate request is sent</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><span class="bold">Auth_ServerCertificateRequest</span> for manufacturer certificate is sent to the server.</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Wait for the
+ <span class="bold">Auth_ServerCertificateResponse</span> of the server. If the response is received and the authentication type, the certification format as well as the certification type is valid then the store the manufacturer certificate and
+ switch to state <span class="bold">Server manufacturer certificate response is received</span> is received. Otherwise switch to state <span class="bold">Authentication error</span>.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">27</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Server
+ manufacturer certificate response is received</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><span class="bold">Auth_ServerCertificateResponse</span>
+ with a manufacturer certificate is received.</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Send <span class="bold">Auth_ServerCertificateRequest</span> to the server to request the stored manufacturer series certificate. Switch to state <span class="bold">Server manufacturer series certificate request sent</span>.  </p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">28</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Server
+ manufacturer series certificate request is sent</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><span class="bold">Auth_ServerCertificateRequest</span> for manufacturer series certificate is sent to the server.</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Wait for the
+ <span class="bold">Auth_ServerCertificateResponse</span> of the server. If the response is received and
+ the authentication type, the certification format as well as the certification type is valid then the store the manufacturer series certificate
+ and switch to state <span class="bold">Server manufacturer series certificate response is
+ received</span> is received. Otherwise switch to state <span class="bold">Authentication error</span>.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">29</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Server
+ manufacturer series certificate response is received</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><span class="bold">Auth_ServerCertificateResponse</span>
+ with a manufacturer series certificate is received.</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Send <span class="bold">Auth_ServerCertificateRequest</span> to the server to request the stored device certificate. Switch to state <span class="bold">Server
+ device certificate request sent</span>.  </p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">30</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Server
+ device certificate request is sent</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><span class="bold">Auth_ServerCertificateRequest</span> for device is sent to the server.</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Wait for the
+ <span class="bold">Auth_ServerCertificateResponse</span> of the server. If the response is received and
+ the authentication type, the certification format as well as the
+ certification type is valid then the store the device certificate and switch
+ to state <span class="bold">Server device certificate response is received</span> is received. Otherwise switch to state <span class="bold">Authentication error</span>.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">31</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Server
+ device certificate response is received</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><span class="bold">Auth_ServerCertificateResponse</span> with a device certificate is received.</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Send a request for the ISOBUS compliance certification notification (PGN FD42h) and switch to state <span class="bold">Request for ISOBUS compliance certification is sent</span>.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">32</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Request
+ for ISOBUS compliance certification status is sent</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Request for ISOBUS compliance certification notification is sent.</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Wait for <span class="bold">ISOBUS compliance certification</span> notification.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">33</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">ISOBUS
+ compliance certification message is received</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><span class="bold">ISOBUS compliance certification</span> notification is received.</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Switch to state <span class="bold">Start validating
+ client certificates</span>.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">34</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Start
+ validating server certificates</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">All stored certificates of the server are requested by this client and all
+ certificates which are added via <a href="Functions/CAPLfunctionIso11783ILtimAddCertificate.htm" class="SourceCode">Iso11783IL_TIMAddCertificate</a> are requested
+ by the server.</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Check if received server certificates
+ are listed on CRL and if they are valid. Furthermore, check the ISO NAME in the certificates as well as the ISO Version.</p>
+                                    <p class="Table">If all check succeeded switch to state <span class="bold">Authentication succeeded</span>. Else switch to state <span class="bold">Authentication Error</span>.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">35</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Validation
+ of server certificates succeeded</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Check of the received server certificates succeeded.</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Wait for a <span class="bold">Auth_ServerAuthenticationStatus</span> which signals that all certificates are valid.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">40</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Start
+ key exchange</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Server has successfully validated the certificates.</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Switch to state <span class="bold">Start calculating
+ common secret</span>.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">41</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Start
+ calculating common secret</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Random challenge of the server is received and full authentication (FwA) is necessary.</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Client calculates a common secret using ECDH, use KDF to calculate a LwA key and store the LwA key in the key table. Then switch to state <span class="bold">Calculate CMCA over received challenge</span>.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">50</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Calculate
+ CMCA over received challenge</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">—</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Sign received challenge and send acknowledge for challenge signed to the server.</p>
+                                    <p class="Table">Wait for acknowledgment for challenge signed of the server. Then switch to state <span class="bold">Start CMCA Challenge Response</span>.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">51</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Start
+ CMAC challenge response</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Both challenges are signed.</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Send <span class="bold">Auth_ServerSignedChallengeRequest</span>
+ to the server and switch to state <span class="bold">Server Signed Challenge request is sent</span>.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">52</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Server
+ Signed Challenge request is sent</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><span class="bold">Auth_ServerSignedChallengeRequest</span> is sent.</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Wait for
+ <span class="bold">Auth_ServerSignedChallengeResponse</span>.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">53</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Server
+ Signed Challenge response is received</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><span class="bold">Auth_ServerSignedChallengeResponse</span> is sent.</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Wait for
+ <span class="bold">Auth_ClientSignedChallengeRequest</span>.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">54</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Authentication succeeded</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Authentication of client succeeded.</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Stop sending	<span class="bold">Auth_ClientAuthenticationStatus</span> after three more times.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">60</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Automation enabled</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">First <span class="bold">TIM_FunctionsAssignmentResponse</span> with status <span class="bold">1</span> (is assigned to requesting TIM client) and reason <span class="bold">0</span> (all clear/no reason) is received.</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Send <span class="bold">TIM_ClientStatus_Msg</span> with State <span class="bold">Automation Enable</span>.</p>
+                                    <p class="Table">Send <span class="bold">TIM function request</span> with value <span class="bold">Ready to Control</span>.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">70</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Automation active</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">First TIM function status with function automation status <span class="bold">5</span> (active, not limited), <span class="bold">6</span> (active, limited high) or <span class="bold">7</span> (active, limited low) is received.</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">—</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="Table">99</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="Table">Authentication
+ error</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <ul>
+                                        <li><span class="bold">Authentication Status</span> notification
+ with an error code is received.</li>
+                                        <li>No <span class="bold">Authentication Status</span>
+ notification is received for more than 3 seconds.</li>
+                                    </ul>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                    <p class="Table">Depends on post condition.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="LinkList"><a href="../../../CANoeCANalyzer/ISO11783/ISO11783IL/TIMComponent/TIMComponent.htm" class="MCXref xref" data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">TIM Component</a>
+                </p>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="FooterWhite">
+                <table class="FooterWhite" style="border-collapse: collapse;margin-left: auto;margin-right: auto;">
+                    <col style="width: 70px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col style="width: 16px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col data-mc-conditions="" />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="buttons popup-container clearfix topicToolbarProxy topicToolbarProxyFooter _Skins_HTML5TopicToolbar mc-component nocontent">
+                                    <div class="button-group-container-left">
+                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo"><a href="../../../Shared/HowToUseOnlineHelp.htm" title="Tips for using the help" alt="Tips for using the help"><img src="../../../../Resources/vImages/vBackstage/vHelpInfo.png" /></a>
+                                </p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo">•&#160;&#160;Technical&#160;References are only&#160;available&#160;in&#160;English</p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo" style="text-align: right;"><span class="mc-variable Vector.BuildTime variable">2024-04-8T20:56:42</span>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <table style="width: 100%;border-collapse: separate;border-spacing: 3px 0px;margin-left: auto;margin-right: auto;caption-side: top;">
+                <col />
+                <col />
+                <col />
+                <col data-mc-conditions="BuildProcess.HTML5Link" />
+                <tbody>
+                    <tr>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;">
+                            <p class="vec_Footer">©&#160;Vector Informatik GmbH</p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;text-align: right;">
+                            <p class="vec_FooterBold">
+                                <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE&#160;Product Families</MadCap:conditionalText> Version <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.VectorTestUnitRunner">18</MadCap:conditionalText></p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="../../../Shared/ContactCopyrightLicense.htm" class="vec_Footer MCXref xref xrefvec_Footer">Contact/Copyright/License</a>
+                            </p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="https://www.vector.com/int/en/company/get-info/privacy-policy/" target="_blank" class="vec_Footer">Data Privacy Notice</a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

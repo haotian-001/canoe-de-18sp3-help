@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="CANoeDEFamily.xml" data-mc-path-to-help-system="../../../../" data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.vTESTstudio" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../Skins/Favicons/favicon-16x16.png" /><title>System Variables CAPL Functions</title>
+        <link href="../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Resources/Stylesheets/vTableMasterPageHeader.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../Resources/Stylesheets/vStylesheet.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../Resources/Stylesheets/vTablePageTOC.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../Resources/Stylesheets/vTable.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapGlobal.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapDom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapUtilities.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapXhr.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTextEffects.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSlideshow.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMessageBus.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMessageBus.CrossFrame.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapDefault.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMediaQueries.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAccessibility.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapHelpSystem.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAliasFile.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopicFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapFeedbackHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSkinHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.Breadcrumbs.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.MiniToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.SideMenu.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapIndex.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapGlossary.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapParser.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSearch.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapNavigateTopics.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapLms.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapELearning.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopic.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMicroContentComponent.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSearchHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopicElements.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTriPane.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/jscript" src="../../../Resources/vScripts/SyntaxHighlighting.js">
+        </script>
+        <script type="text/jscript" src="../../../Resources/vScripts/TabSwitch.js">
+        </script>
+        <script type="text/javascript" src="../../../Resources/vScripts/Vector.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../../CANoeDEFamily.htm#Topics/CAPLFunctions/SystemVariables/CAPLfunctionsSystemVariablesOverview.htm">Open topic with navigation</a>
+        </p>
+        <div class="Body">
+            <div role="main" id="mc-main-content">
+                <p class="StructurePath"><a href="../CAPLfunctions.htm" class="StructurePath MCXref xref xrefStructurePath">CAPL Functions</a> » <span class="mc-variable System.Title variable">System Variables CAPL Functions</span></p>
+                <h1><a name="aanchor23075"></a>
+                    <MadCap:concept term="CAPLSysVariable" /><a name="kanchor7622"></a><span class="mc-variable System.Title variable">System Variables CAPL Functions</span>
+                </h1>
+                <p class="MenuPath">&#160;</p>
+                <p class="ToolAvailability" data-mc-conditions="BuildProcess.ToolAvailability"><a href="../../Shared/FeatureAvailability.htm" class="red" title="Feature availabilty for your product">Valid&#160;for</a>:&#160;&#160;CANoe&#160;DE<a name="aanchor23076"></a><MadCap:concept term="SFCANoeDE" />&#160;&#160;•&#160;&#160;CANoe:lite&#160;DE<a name="aanchor23077"></a><MadCap:concept term="SFCANoeLiteDE" />&#160;&#160;•&#160;&#160;CANoe4SW&#160;DE<a name="aanchor23078"></a><MadCap:concept term="SFCANoe4SWDE" />&#160;&#160;•&#160;&#160;CANoe4SW:lite&#160;DE<a name="aanchor23079"></a><MadCap:concept term="SFCANoe4SWLiteDE" /></p>
+                <p class="AutoSearchFilterConcepts"><a name="aanchor23080"></a>
+                    <MadCap:concept term="SFCAPLFunctions" />
+                </p>
+                <div>
+                    <table style="margin-left: 0;margin-right: auto;width: 100%;">
+                        <col style="width: 60px;" />
+                        <col />
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <p>
+                                        <img src="../../../Resources/vImages/vFunction.png" />
+                                    </p>
+                                </td>
+                                <td>
+                                    <p class="TableSymbolHead">System Variables</p>
+                                    <p class="Table">These CAPL&#160;functions are supported by <span class="Product">Windows</span> and <span class="Product">Linux</span>. The functionality under <span class="Product">Linux</span> has not been fully tested yet.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <hr class="Startpage" width="100%" size="0" align="center" />
+                <p class="TableCOM"><a name="Shortcuts" id="Shortcuts"></a><span class="red">ON THIS&#160;PAGE:</span>
+                </p>
+                <table style="margin-left: 0;margin-right: auto;caption-side: top;mc-table-style: url('../../../Resources/Stylesheets/vTablePageTOC.css');" class="TableStyle-vTablePageTOC" cellspacing="2">
+                    <col class="TableStyle-vTablePageTOC-Column-Column1" style="width: 50%;" />
+                    <col class="TableStyle-vTablePageTOC-Column-Column1" style="width: 50%;" />
+                    <tbody>
+                        <tr class="TableStyle-vTablePageTOC-Body-Body1">
+                            <td class="TableStyle-vTablePageTOC-BodyB-Column1-Body1">
+                                <p class="PageTOC"><a href="#FunctionsDefineVariables" class="PageTOC">Define Variables</a>
+                                </p>
+                                <p class="PageTOC"><a href="#GeneralFunctions" class="PageTOC">General Functions</a>
+                                </p>
+                                <p class="PageTOC"><a href="#FunctionsReturnValueVariable" class="PageTOC">Return Data of a Variable</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle-vTablePageTOC-BodyA-Column1-Body1">
+                                <p class="PageTOC"><a href="#FunctionsSetValueVariable" class="PageTOC">Set the Value of a Variable</a>
+                                </p>
+                                <p class="PageTOC"><a href="#FunctionsValueElements" class="PageTOC">Structs of System Variables</a>
+                                </p>
+                                <p class="PageTOC"><a href="#FunctionsVariableFilters" class="PageTOC">Variable Filters</a>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div>
+                    <h2><a name="FunctionsDefineVariables" id="FunctionsDefineVariables"></a>Define Variables <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');" width="100%" class="TableStyle_vTable" cellspacing="0">
+                        <col style="width: 230px;" />
+                        <col />
+                        <tr valign="top">
+                            <th rowspan="1" colspan="1" bgcolor="#E5E5E5" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="TableHead">Functions</p>
+                            </th>
+                            <th bgcolor="#E5E5E5" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="TableHead">Short Description</p>
+                            </th>
+                        </tr>
+                        <tr valign="top" data-mc-conditions="">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionSysDefineVariableData.htm">sysDefineVariableData</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Defines a variable of the data type.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionSysDefineVariableFloat.htm">sysDefineVariableFloat</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Defines a variable of the float type.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionSysDefineVariableFloatArray.htm">sysDefineVariableFloatArray</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Defines a variable of the float[] type.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionSysDefineVariableInt.htm">sysDefineVariableInt</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Defines a variable of the int type. </p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionSysDefineVariableIntArray.htm">sysDefineVariableIntArray</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Defines a variable of the int[] type.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p><a href="Functions/CAPLfunctionSysDefineVariableLongLong.htm">sysDefineVariableLongLong</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p>Defines a variable of the Int64 type.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionSysDefineVariableString.htm">sysDefineVariableString</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Defines a variable of the String (char[]) type.</p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div>
+                    <h2><a name="GeneralFunctions" id="GeneralFunctions"></a>General Functions <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');" width="100%" class="TableStyle_vTable" cellspacing="0">
+                        <col style="width: 230px;" />
+                        <col />
+                        <tr valign="top">
+                            <th rowspan="1" colspan="1" bgcolor="#E5E5E5" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="TableHead">Functions</p>
+                            </th>
+                            <th bgcolor="#E5E5E5" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="TableHead">Short Description</p>
+                            </th>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionSysDefineNameSpace.htm">sysDefineNamespace</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Defines a namespace.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionSysUndefineNameSpace.htm">sysUndefineNamespace</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Deletes a namespace.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionSysUndefineVariable.htm">sysUndefineVariable</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Deletes a variable.</p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div>
+                    <h2><a name="FunctionsReturnValueVariable" id="FunctionsReturnValueVariable"></a>Return Data of a Variable <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');" width="100%" class="TableStyle_vTable" cellspacing="0">
+                        <col style="width: 230px;" />
+                        <col />
+                        <tr valign="top">
+                            <th rowspan="1" colspan="1" bgcolor="#E5E5E5" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="TableHead">Functions</p>
+                            </th>
+                            <th bgcolor="#E5E5E5" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="TableHead">Short Description</p>
+                            </th>
+                        </tr>
+                        <tr valign="top" data-mc-conditions="">
+                            <td bgcolor="#E5E5E5" style="background-color: #ffffff;" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionSysGetOrigTimeNS.htm">SysGetOrigTimeNS</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Returns the original time stamp of the last update to the variable value.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionSysGetVariableArrayLength.htm">sysGetVariableArrayLength</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Returns the length of an array system variable.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p><a href="Functions/CAPLfunctionSysGetVariableArraySize.htm">sysGetVariableArraySize</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p>Returns the current array size of a system variable (element) of a generic array type.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionSysGetVariableData.htm">sysGetVariableData</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Returns the value of a variable of the data type.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionSysGetVariableDescriptionForValue.htm">sysGetVariableDescriptionForValue</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Retrieves a description for a value of a system variable of type long or long array.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionSysGetVariableDWord.htm" class="MCXref xref">sysGetVariableDWord</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Returns the value of a variable of type unsigned 32 bit integer.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionSysGetVariableFloat.htm">sysGetVariableFloat</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Returns the value of a variable of the float type.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionSysGetVariableFloatArray.htm">sysGetVariableFloatArray</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Returns the value of a variable of the float[] type.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionSysGetVariableInt.htm">sysGetVariableInt</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Returns the value of a variable of the int type.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionSysGetVariableLongArray.htm">sysGetVariableLongArray</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Returns the value of a variable of the int[] type.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p colspan="1" rowspan="1" class="Table"><a href="Functions/CAPLfunctionSysGetVariableLongLong.htm">sysGetVariableLongLong</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Returns the value of a variable of a 64 bit integer type.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top" data-mc-conditions="">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionSysGetVariableMax.htm">sysGetVariableMax</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Retrieves the maximum of a variable.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top" data-mc-conditions="">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionSysGetVariableMin.htm">sysGetVariableMin</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">Retrieves the minimum of a variable</td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionSysGetVariableQWord.htm" class="MCXref xref">sysGetVariableQWord</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Returns the value of a variable of type unsigned 64 bit integer.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionSysGetVariableString.htm">sysGetVariableString</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Returns the value of a variable of the string (char[]) type.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top" data-mc-conditions="">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionsysGetVariableSVType.htm" class="MCXref xref">sysGetVariableSVType</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Gets the type of a system variable encoded as a long integer.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top" data-mc-conditions="">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionSysGetVariableTimeNS.htm">sysGetVariableTimeNS</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Returns the time stamp of the last update to the variable value.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionSysGetVariableValueForDescription.htm">sysGetVariableValueForDescription</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Retrieves the value for a value description of a system variable of type long or long array.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionSysIsVariableTypeSigned.htm">sysIsVariableTypeSigned</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Returns whether the data type of a system variable is signed.</p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div>
+                    <h2><a name="FunctionsSetValueVariable" id="FunctionsSetValueVariable"></a>Set the Value of a Variable <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');" width="100%" class="TableStyle_vTable" cellspacing="0">
+                        <col style="width: 230px;" />
+                        <col />
+                        <tr valign="top">
+                            <th rowspan="1" colspan="1" bgcolor="#E5E5E5" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="TableHead">Functions</p>
+                            </th>
+                            <th bgcolor="#E5E5E5" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="TableHead">Short Description</p>
+                            </th>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep"><a href="Functions/CAPLfunctionSysResetValue.htm" class="MCXref xref">sysResetValue</a>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">Resets a system variable to its initial value.</td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep"><a href="Functions/CAPLfunctionSysResetValues.htm" class="MCXref xref">sysResetValues</a>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">Resets all system variables in a namespace to their initial values.</td>
+                        </tr>
+                        <tr valign="top" data-mc-conditions="">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionSysSetAnalysIsOnlyVariable.htm">sysSetAnalysisOnlyVariable</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Defines whether the variable shall be used only in the analysis area.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top" class="TableStyle-vTable-Body-Body1" data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionSysSetVariableAsync.htm">sysSetVariableAsync</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Assigns a value to a system variable.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionSysSetVariableArraySize.htm" class="MCXref xref">SysSetVariableArraySize</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p>Sets the current array size of a system variable (element) of a generic array type.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionSysSetVariableData.htm">sysSetVariableData</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Sets the value of a variable of the data type.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionSysSetVariableDescriptionForValue.htm">sysSetVariableDescriptionForValue</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Sets a description for a particular value of a system variable of type long or long array.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionSysSetVariableDWord.htm" class="MCXref xref">sysSetVariableDWord</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Sets the value of a variable of type unsigned 32 bit integer.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionSysSetVariableFloat.htm">sysSetVariableFloat</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Sets the value of a variable of the float type.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionSysSetVariableFloatArray.htm">sysSetVariableFloatArray</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Sets the value of a variable of the float[] type.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionSysSetVariableInt.htm">sysSetVariableInt</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Sets the value of a variable of the int type.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionSysSetVariableLongArray.htm">sysSetVariableLongArray</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Sets the value of a variable of the int[] type.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p colspan="1" rowspan="1" class="Table"><a href="Functions/CAPLfunctionSysSetVariableLongLong.htm">sysSetVariableLongLong</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Sets the value of a variable of a 64 bit integer type.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionSysSetVariableQWord.htm" class="MCXref xref">sysSetVariableQWord</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Sets the value of a variable of type unsigned 64bit integer.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionSysSetVariableString.htm">sysSetVariableString</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Sets the value of a variable of the string (char[]) type.</p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div>
+                    <h2><a name="FunctionsValueElements" id="FunctionsValueElements"></a><a href="../../Shared/SystemVariables/SysVar.htm" data-mc-exclude-action="unbind" data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">Structs of System Variables</a><a href="#Shortcuts" class="TopOfPage">[▲ back]</a>
+                    </h2>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');" width="100%" class="TableStyle_vTable" cellspacing="0">
+                        <col style="width: 230px;" />
+                        <col />
+                        <tr valign="top">
+                            <th rowspan="1" colspan="1" bgcolor="#E5E5E5" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="TableHead">Functions</p>
+                            </th>
+                            <th bgcolor="#E5E5E5" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="TableHead">Short Description</p>
+                            </th>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionSysBeginVariableStructUpdate.htm">sysBeginVariableStructUpdate</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Starts the update of several elements of a system variable of type struct or generic array.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionSysEndVariableStructUpdate.htm">sysEndVariableStructUpdate</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Ends the update of several elements of a system variable of type struct or generic array.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionSysGetVariableMemberPhys.htm">sysGetVariableMemberPhys</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Retrieves the physical value of a specific element of a variable of type struct or generic array.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionSysSetVariableMemberPhys.htm">sysSetVariableMemberPhys</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Sets the physical value of a specific element of a variable of type struct or generic array.</p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div>
+                    <h2><a name="FunctionsVariableFilters" id="FunctionsVariableFilters"></a>Variable Filters<a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');" width="100%" class="TableStyle_vTable" cellspacing="0">
+                        <col style="width: 230px;" />
+                        <col />
+                        <tr valign="top">
+                            <th rowspan="1" colspan="1" bgcolor="#E5E5E5" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="TableHead">Functions</p>
+                            </th>
+                            <th bgcolor="#E5E5E5" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="TableHead">Short Description</p>
+                            </th>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionSysCreateVariableFilter.htm">sysCreateVariableFilter</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Creates a new variable filter behind the node calling the function.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionSysFilterAddNamespace.htm">sysFilterAddNamespace</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Adds a namespace to the variable filter.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionSysFilterAddVariable.htm">sysFilterAddVariable</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Adds a variable a variable filter.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionSysFilterRemoveNamespace.htm">sysFilterRemoveNamespace</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Removes a namespace from the variable filter.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionSysFilterRemoveVariable.htm">sysFilterRemoveVariable</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Removes a variable from a variable filter.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionSysSetVariableFilterActive.htm">sysSetVariableFilterActive</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Activates or deactivates a variable filter.</p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <p class="LinkList">
+                    <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family"><a href="../../Shared/SystemVariables/SysVar.htm" class="LinkList">System Variables</a>&#160;&#160;•&#160;&#160;<a href="../../Shared/CAPL/SignalOrientedProgramming/SOPAccessSystemVariable.htm" class="LinkList">Direct Access to Values from System Variables</a></MadCap:conditionalText> </p>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="FooterWhite">
+                <table class="FooterWhite" style="border-collapse: collapse;margin-left: auto;margin-right: auto;">
+                    <col style="width: 70px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col style="width: 16px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col data-mc-conditions="" />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="buttons popup-container clearfix topicToolbarProxy topicToolbarProxyFooter _Skins_HTML5TopicToolbar mc-component nocontent">
+                                    <div class="button-group-container-left">
+                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo"><a href="../../Shared/HowToUseOnlineHelp.htm" title="Tips for using the help" alt="Tips for using the help"><img src="../../../Resources/vImages/vBackstage/vHelpInfo.png" /></a>
+                                </p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo">•&#160;&#160;Technical&#160;References are only&#160;available&#160;in&#160;English</p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo" style="text-align: right;"><span class="mc-variable Vector.BuildTime variable">2024-04-8T20:56:42</span>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <table style="width: 100%;border-collapse: separate;border-spacing: 3px 0px;margin-left: auto;margin-right: auto;caption-side: top;">
+                <col />
+                <col />
+                <col />
+                <col data-mc-conditions="BuildProcess.HTML5Link" />
+                <tbody>
+                    <tr>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;">
+                            <p class="vec_Footer">©&#160;Vector Informatik GmbH</p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;text-align: right;">
+                            <p class="vec_FooterBold">
+                                <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE&#160;Product Families</MadCap:conditionalText> Version <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.VectorTestUnitRunner">18</MadCap:conditionalText></p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="../../Shared/ContactCopyrightLicense.htm" class="vec_Footer MCXref xref xrefvec_Footer">Contact/Copyright/License</a>
+                            </p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="https://www.vector.com/int/en/company/get-info/privacy-policy/" target="_blank" class="vec_Footer">Data Privacy Notice</a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

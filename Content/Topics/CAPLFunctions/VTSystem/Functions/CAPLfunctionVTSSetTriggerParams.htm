@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="" data-mc-search-type="Stem" data-mc-help-system-file-name="CANoeDEFamily.xml" data-mc-path-to-help-system="../../../../../" data-mc-conditions="Targets.CANoe-DE-Family,Targets.vTESTstudio" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../Skins/Favicons/favicon-16x16.png" /><title>SetTriggerParams</title>
+        <link href="../../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Resources/Stylesheets/vTableMasterPageHeader.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../../Resources/Stylesheets/vStylesheet.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../../Resources/Stylesheets/vTableLight.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../../Resources/Stylesheets/vTableSymbol.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapGlobal.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapDom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapUtilities.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapXhr.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTextEffects.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSlideshow.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMessageBus.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMessageBus.CrossFrame.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapDefault.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMediaQueries.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapAccessibility.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapHelpSystem.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapAliasFile.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopicFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapFeedbackHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSkinHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.Breadcrumbs.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.MiniToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.SideMenu.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapIndex.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapGlossary.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapParser.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSearch.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapNavigateTopics.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapLms.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapELearning.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopic.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMicroContentComponent.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSearchHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopicElements.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTriPane.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/jscript" src="../../../../Resources/vScripts/SyntaxHighlighting.js">
+        </script>
+        <script type="text/jscript" src="../../../../Resources/vScripts/TabSwitch.js">
+        </script>
+        <script type="text/javascript" src="../../../../Resources/vScripts/Vector.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../../../CANoeDEFamily.htm#Topics/CAPLFunctions/VTSystem/Functions/CAPLfunctionVTSSetTriggerParams.htm">Open topic with navigation</a>
+        </p>
+        <div class="Body">
+            <div role="main" id="mc-main-content">
+                <p class="StructurePath"><a href="../../CAPLfunctions.htm" class="StructurePath MCXref xref xrefStructurePath">CAPL Functions</a> » <a href="../CAPLfunctionsVTSystemOverview.htm" class="StructurePath">VT System</a> » <span class="mc-variable System.Title variable">SetTriggerParams</span></p>
+                <h1><a name="aanchor5194"></a>
+                    <MadCap:concept term="CAPLVTSYSTEM" /><a name="kanchor1590"></a><span class="mc-variable System.Title variable">SetTriggerParams</span>
+                </h1>
+                <p class="MenuPath">&#160;</p>
+                <p class="ToolAvailability" data-mc-conditions="BuildProcess.ToolAvailability"><a href="../../../Shared/FeatureAvailability.htm" class="red" title="Feature availabilty for your product">Valid&#160;for</a>:&#160;&#160;CANoe&#160;DE<a name="aanchor5195"></a><MadCap:concept term="SFCANoeDE" />&#160;&#160;•&#160;&#160;CANoe:lite&#160;DE<a name="aanchor5196"></a><MadCap:concept term="SFCANoeLiteDE" /></p>
+                <p class="AutoSearchFilterConcepts"><a name="aanchor5197"></a>
+                    <MadCap:concept term="SFCAPLFunctions" />
+                </p>
+                <div data-mc-target-name="DIVCAPLNote">
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                    <p class="Table">
+                                        <img src="../../../../Resources/vImages/vInfo.png" style="width: 48px;height: 45px;" title="Note" alt="Note" />
+                                    </p>
+                                </td>
+                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                    <p class="TableSymbolHead">Note</p>
+                                    <p>The function can only be called on system variable namespaces of appropriate channels of <span class="Product">VT System</span> modules.<br /></p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div data-mc-target-name="DIVCAPLMethodSyntax">
+                    <h2 class="CommandPage"><a href="../../../Shared/CAPL/General/ClassesAndObjects.htm" class="red">Method</a> Syntax</h2>
+                    <p class="Syntax">long SysVarNamespace.SetTriggerParams (eVTSTrigger Trigger, eVTSTriggerSourceChannel SourceChannel, eVTSTriggerEdgeType EdgeType);</p>
+                </div>
+                <div data-mc-target-name="DIVCAPLDescription">
+                    <h2 class="CommandPage">Description</h2>
+                    <p>The function configures basic parameters for triggers. Further parameters can be set with the function <a href="CAPLfunctionVTSSetTriggerParamsEx.htm">SetTriggerParamsEx</a>.</p>
+                    <p data-mc-conditions="Targets.CANoe-DE-Family">You can find additional information about <span class="Product">VT System</span> triggers on the page <a href="../../../CANoeCANalyzer/VTSystem/VTSystemTrigger.htm" class="bold">Triggers</a>.</p>
+                </div>
+                <div data-mc-target-name="DIVCAPLParameters">
+                    <h2 class="CommandPage">Parameters</h2>
+                    <table style="margin-left: 0;margin-right: auto;width: 100%;mc-table-style: url('../../../../Resources/Stylesheets/vTableLight.css');" class="TableStyle-vTableLight" cellspacing="0">
+                        <col style="width: 80px;" class="TableStyle-vTableLight-Column-Column1" />
+                        <col class="TableStyle-vTableLight-Column-Column1" />
+                        <tbody>
+                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                <td id="name" class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <p class="TableBold">Trigger</p>
+                                </td>
+                                <td id="descr" class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                    <p class="Table">Specifies which trigger is configured: Values see <a href="../CAPLfunctionsVTSystemEnumeration.htm#eVTSTrigger">eVTSTrigger</a></p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                <td id="name" class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <p class="TableBold">SourceChannel</p>
+                                </td>
+                                <td id="descr" class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                    <p class="Table">Specifies to which channel the configured trigger is connected: Values see <a href="../CAPLfunctionsVTSystemEnumeration.htm#eVTSTriggerSourceChannel">eVTSTriggerSourceChannel</a></p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                <td id="name" class="TableStyle-vTableLight-BodyB-Column1-Body1">
+                                    <p class="TableBold">EdgeType</p>
+                                </td>
+                                <td id="descr" class="TableStyle-vTableLight-BodyA-Column1-Body1">
+                                    <p class="Table">Values see <a href="../CAPLfunctionsVTSystemEnumeration.htm#eVTSTriggerEdgeType">eVTSTriggerEdgeType</a></p>
+                                    <p class="Table">If a triggered is configured to <span class="bold">level</span> type using <a href="CAPLfunctionVTSSetTriggerParamsEx.htm">SetTriggerParamsEx</a> this parameter sets which level is detected.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div data-mc-target-name="DIVCAPLReturnValues">
+                    <h2 class="CommandPage">Return&#160;Values</h2>
+                    <table style="margin-left: 0;margin-right: auto;width: 100%;mc-table-style: url('../../../../Resources/Stylesheets/vTableLight.css');" class="TableStyle-vTableLight" cellspacing="0">
+                        <col style="width: 80px;" class="TableStyle-vTableLight-Column-Column1" />
+                        <col class="TableStyle-vTableLight-Column-Column1" />
+                        <tbody>
+                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                <td id="name" class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <p class="TableBold">0</p>
+                                </td>
+                                <td id="descr" class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                    <p class="Table">Successful call</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                <td id="name" class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <p class="TableBold">-1</p>
+                                </td>
+                                <td id="descr" class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                    <p class="Table">Call error</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                <td id="name" class="TableStyle-vTableLight-BodyB-Column1-Body1">
+                                    <p class="TableBold">-2</p>
+                                </td>
+                                <td id="descr" class="TableStyle-vTableLight-BodyA-Column1-Body1">
+                                    <p class="Table">The namespace on which the command was called does not exist, is not a valid <span class="Product">VT System</span> namespace or does not support this command.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div data-mc-target-name="DIVCAPLExample">
+                    <h2 class="CommandPage">Example</h2>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                    <p class="Table">
+                                        <img src="../../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                    </p>
+                                </td>
+                                <td id="content" class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                    <p class="TableSymbolHead">Example: CAPL Test Module</p>
+                                    <p class="Table">The following example shows how triggers can be used to measure the width of a pulse that is the distance between the rising and falling edge of a pulse.</p>
+                                    <p class="TableSourceCode">variables<br />{<br />&#160;&#160;&#160;int64 gRiseTime = 0;<br />&#160;&#160;&#160;int64 gFallTime = 0;<br />}<br /><br />void MainTest ()<br />{<br />&#160;&#160;&#160;MeasurePulseLength();<br />}<br /><br />void MeasurePulseLength()<br />{<br />&#160;&#160;&#160;dword trigger1EventCount = 0;<br />&#160;&#160;&#160;dword trigger2EventCount = 0;<br />&#160;&#160;&#160;int64 pulseWidth = 0;<br /><br />&#160;&#160;&#160;enum eVTSTrigger trigger = eVTSTrigger1;<br />&#160;&#160;&#160;enum eVTSTriggerSourceChannel sourceChannel = eVTSTriggerSourceChannel1;<br />&#160;&#160;&#160;enum eVTSTriggerEdgeType edgeType = eVTSTriggerEdgeTypeRising;<br />&#160;&#160;&#160;dword preTriggers = 0;<br /><br />&#160;&#160;&#160;double minPulseWidth = 0.0;<br /><br />&#160;&#160;&#160;// configure two triggers (one for the rising and one for the falling edge)<br />&#160;&#160;&#160;trigger = eVTSTrigger1;<br />&#160;&#160;&#160;sourceChannel = eVTSTriggerSourceChannel1;<br />&#160;&#160;&#160;edgeType = eVTSTriggerEdgeTypeRising; // rising edge<br />&#160;&#160;&#160;preTriggers = 0; // no other trigger as precondition<br />&#160;&#160;&#160;minPulseWidth = 0.002; // pulse must have a width of at at least 2ms<br /><br />&#160;&#160;&#160;sysvar::VTS::IgnitionChannels.SetTriggerParams( trigger, sourceChannel, edgeType);<br />&#160;&#160;&#160;sysvar::VTS::IgnitionChannels.SetTriggerParamsEx( trigger, minPulseWidth, 0.0, preTriggers, 0, 0, eVTSTriggerTypeEdge);<br /><br />&#160;&#160;&#160;trigger = eVTSTrigger2;<br />&#160;&#160;&#160;sourceChannel = eVTSTriggerSourceChannel1;<br />&#160;&#160;&#160;edgeType = eVTSTriggerEdgeTypeFalling; // falling edge<br />&#160;&#160;&#160;preTriggers = 1; // first bit set: trigger 1 must be activated as a precondition<br /><br />&#160;&#160;&#160;sysvar::VTS::IgnitionChannels.SetTriggerParams( trigger, sourceChannel, edgeType);<br />&#160;&#160;&#160;sysvar::VTS::IgnitionChannels.SetTriggerParamsEx( trigger, 0.0, 0.0, preTriggers, 0, 0, eVTSTriggerTypeEdge);<br /><br />&#160;&#160;&#160;TestWaitForTimeout( 50); // wait some time to make sure the settings are transferred<br /><br />&#160;&#160;&#160;// start triggers<br />&#160;&#160;&#160;trigger = eVTSTrigger1;<br />&#160;&#160;&#160;sysvar::VTS::IgnitionChannels.StartTrigger( trigger);<br />&#160;&#160;&#160;trigger = eVTSTrigger2;<br />&#160;&#160;&#160;sysvar::VTS::IgnitionChannels.StartTrigger( trigger);<br /><br />&#160;&#160;&#160;// wait some time until a pulse has occurred<br />&#160;&#160;&#160;TestWaitForTimeout( 1000);<br /><br />&#160;&#160;&#160;// check if pulse was detected and output pulse width<br />&#160;&#160;&#160;trigger1EventCount = @sysvar::VTS::IgnitionChannels::Trigger1EventCount;<br />&#160;&#160;&#160;trigger2EventCount = @sysvar::VTS::IgnitionChannels::Trigger2EventCount;<br /><br />&#160;&#160;&#160;if (trigger1EventCount &gt; 0 &amp;&amp; trigger2EventCount &gt; 0)<br />&#160;&#160;&#160;{<br />&#160;&#160;&#160;&#160;&#160;&#160;pulseWidth = gFallTime - gRiseTime;<br />&#160;&#160;&#160;&#160;&#160;&#160;Write( "Pulse width: %.3f µs", (pulseWidth/1000.0));<br />&#160;&#160;&#160;}<br />&#160;&#160;&#160;else<br />&#160;&#160;&#160;{<br />&#160;&#160;&#160;&#160;&#160;&#160;Write("No pulse detected!");<br />&#160;&#160;&#160;}<br />}<br /><br />on sysvar_update sysvar::VTS::IgnitionChannels::Trigger1Event<br />{<br />&#160;&#160;&#160;// save time stamp of rising edge when event occurs<br />&#160;&#160;&#160;gRiseTime = sysGetVariableTimeNS( this);<br />}<br /><br />on sysvar_update sysvar::VTS::IgnitionChannels::Trigger2Event<br />{<br />&#160;&#160;&#160;// save time stamp of falling edge when event occurs<br />&#160;&#160;&#160;gFallTime = sysGetVariableTimeNS( this);<br />}</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="LinkList"><a href="CAPLfunctionVTSvtsSetTriggerParams.htm" class="LinkList">vtsSetTriggerParams</a>
+                </p>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="FooterWhite">
+                <table class="FooterWhite" style="border-collapse: collapse;margin-left: auto;margin-right: auto;">
+                    <col style="width: 70px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col style="width: 16px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col data-mc-conditions="" />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="buttons popup-container clearfix topicToolbarProxy topicToolbarProxyFooter _Skins_HTML5TopicToolbar mc-component nocontent">
+                                    <div class="button-group-container-left">
+                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo"><a href="../../../Shared/HowToUseOnlineHelp.htm" title="Tips for using the help" alt="Tips for using the help"><img src="../../../../Resources/vImages/vBackstage/vHelpInfo.png" /></a>
+                                </p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo">•&#160;&#160;Technical&#160;References are only&#160;available&#160;in&#160;English</p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo" style="text-align: right;"><span class="mc-variable Vector.BuildTime variable">2024-04-8T20:56:42</span>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <table style="width: 100%;border-collapse: separate;border-spacing: 3px 0px;margin-left: auto;margin-right: auto;caption-side: top;">
+                <col />
+                <col />
+                <col />
+                <col data-mc-conditions="BuildProcess.HTML5Link" />
+                <tbody>
+                    <tr>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;">
+                            <p class="vec_Footer">©&#160;Vector Informatik GmbH</p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;text-align: right;">
+                            <p class="vec_FooterBold">
+                                <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE&#160;Product Families</MadCap:conditionalText> Version <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.VectorTestUnitRunner">18</MadCap:conditionalText></p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="../../../Shared/ContactCopyrightLicense.htm" class="vec_Footer MCXref xref xrefvec_Footer">Contact/Copyright/License</a>
+                            </p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="https://www.vector.com/int/en/company/get-info/privacy-policy/" target="_blank" class="vec_Footer">Data Privacy Notice</a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="topic" data-mc-search-type="Stem" data-mc-help-system-file-name="CANoeDEFamily.xml" data-mc-path-to-help-system="../../../../../" data-mc-conditions="Targets.CANoe-DE-Family" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../Skins/Favicons/favicon-16x16.png" /><title>Process Application Messages with CAPL (Car2x)</title>
+        <link href="../../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Resources/Stylesheets/vTableMasterPageHeader.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../../Resources/Stylesheets/vStylesheet.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapGlobal.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapDom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapUtilities.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapXhr.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTextEffects.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSlideshow.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMessageBus.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMessageBus.CrossFrame.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapDefault.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMediaQueries.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapAccessibility.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapHelpSystem.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapAliasFile.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopicFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapFeedbackHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSkinHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.Breadcrumbs.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.MiniToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.SideMenu.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapIndex.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapGlossary.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapParser.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSearch.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapNavigateTopics.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapLms.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapELearning.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopic.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMicroContentComponent.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSearchHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopicElements.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTriPane.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/jscript" src="../../../../Resources/vScripts/SyntaxHighlighting.js">
+        </script>
+        <script type="text/jscript" src="../../../../Resources/vScripts/TabSwitch.js">
+        </script>
+        <script type="text/javascript" src="../../../../Resources/vScripts/Vector.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../../../CANoeDEFamily.htm#Topics/CANoeCANalyzer/Car2x/asn1/asnApplMsgWithCAPL.htm">Open topic with navigation</a>
+        </p>
+        <div class="Body">
+            <div role="main" id="mc-main-content">
+                <p class="StructurePath"><a href="../Car2x.htm" class="StructurePath">Car2x</a> » <a href="../procedures/c2xProceduresOverview.htm" class="StructurePath">Procedures</a> » Process Application Messages with CAPL</p>
+                <h1>Process Application Messages with CAPL </h1>
+                <p class="MenuPath">&#160;</p>
+                <p class="ToolAvailability" data-mc-conditions="BuildProcess.ToolAvailability"><a href="../../../Shared/FeatureAvailability.htm" class="red" title="Feature availabilty for your product">Valid&#160;for</a>:&#160;&#160;CANoe&#160;DE<a name="aanchor14120"></a><MadCap:concept term="SFCANoeDE" /></p>
+                <p class="AutoSearchFilterConcepts"><a name="aanchor14121"></a>
+                    <MadCap:concept term="SFCore" />
+                </p>
+                <p><a name="aanchor14122"></a>
+                    <MadCap:concept term="ASN.1" /><a name="kanchor4282"></a>
+                </p>
+                <p>This example shows how you can create an application message as a packet with CAPL, fill it with data and send it. It is also shown how you can read and analyze an application message with a CAPL event handler.</p>
+                <h2 class="SectionSub">Create CAPL data structures and methods</h2>
+                <p>Because the application message is described with <a href="../protocols/ASN1.htm">ASN.1</a>, the ASN.1 specification has to be <a href="asnImportProcedure.htm">imported</a> to your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText>.</p>
+                <p>The following simple ASN.1 description is used for this example (transmitted in protocol <a href="../protocols/protocolBTP.htm">BTP</a> with destination port 1000):</p>
+                <p class="SourceCode">SIMPLE-PDU-Descriptions {<br />}<br /><br />DEFINITIONS AUTOMATIC TAGS ::=<br /><br />BEGIN<br />SimplePdu ::= SEQUENCE {<br />&#160;&#160;-- header is mandatory<br />&#160;&#160;header  SimpleHeader,<br />&#160;&#160;-- data is an optional field<br />&#160;&#160;data    SimpleData OPTIONAL<br />}<br /><br />SimpleHeader ::= SEQUENCE {<br />&#160;&#160;-- mandatory sample field<br />&#160;&#160;id INTEGER(0..100),    -- 7 bits<br />&#160;&#160;-- optional sample field<br />&#160;&#160;frequency   INTEGER (0..255)    OPTIONAL   --units of 0.1 Hz<br />}<br /><br />SimpleData ::= SEQUENCE {<br />&#160;&#160;simpleEnum ENUMERATED { first (0), next (1), last (2) },<br />&#160;&#160;value  INTEGER (0..900000000)<br />}<br />END</p>
+                <p class="StartList">After the import the following CAPL files are available in folder <span class="bold">Vector_CN_ASNV</span> in the directory of your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> configuration:</p>
+                <ul>
+                    <li>ASNV_Template_SimplePdu.cin</li>
+                    <li>ASNV_Template_BaseDatatypes.cin</li>
+                </ul>
+                <h2 class="SectionSub">Include CAPL files</h2>
+                <p>The file <span class="bold">C2x_Basics.cin</span> is an include file with help functions that is part of the Car2x sample configurations. Include this file and the file <span class="bold">ASNV_Template_SimplePdu.cin</span> to your CAPL program as follows:</p>
+                <p class="SourceCode">includes<br />{<br />&#160;&#160;#include "C2x_Basics.cin"<br />&#160;&#160;#include "..\Vector_CN_ASNV\ASNV_Template_SimplePdu.cin"<br />}</p>
+                <p>Now the following data structures and functions are available in CAPL that you can use to send and receive application messages.</p>
+                <h3><a name="Data" id="Data"></a>Data structures</h3>
+                <p class="SourceCode">struct SimplePduSimpleHeader {<br />&#160;&#160;INT isValidFlag; //necessary if this struct is used as an optional field of a SEQUENCE<br />&#160;&#160;LONG id;   //INTEGER, 0...100<br />&#160;&#160;struct OPT_LONG_ASN frequency;   //INTEGER, OPTIONAL, 0...255<br />};<br /><br />struct SimplePduSimpleData {<br />&#160;&#160;INT isValidFlag; //necessary if this struct is used as an optional field of a SEQUENCE<br />&#160;&#160;INT simpleEnum; //ENUMERATED, first(0), next(1), last(2)<br />&#160;&#160;LONG value; //INTEGER, 0...900000000<br />};<br /><br />struct SimplePdu {<br />&#160;&#160;INT isValidFlag; //necessary if this struct is used as an optional field of a SEQUENCE<br />&#160;&#160;struct SimplePduSimpleHeader header; //SEQUENCE<br />&#160;&#160;struct SimplePduSimpleData data; //SEQUENCE, OPTIONAL<br />};</p>
+                <p>Fields that are marked as optional contain a validation flag <span class="bold">isValidFlag</span> in its structure. If you want to fill optional fields with data (as it is done in the example above with field <span class="bold">SimplePduSimpleData data</span>), then set <span class="bold">isValidFlag</span> to 1 for the appropriate field.</p>
+                <p>A comfortable and efficient way to transfer the generated data structures to the CAPL Browser is provided by the <a href="../../../Shared/Car2x/Car2xNetworkExplorer/car2xNetworkExplorerUserInterface.htm">Car2x Network Explorer</a>. This browser shows the generated data structures in a clear tree view, in addition you can search within the data structures and generate CAPL code.</p>
+                <h3>Functions</h3>
+                <p class="SourceCode">// create a packet for SimplePdu-message<br />LONG API_InitSimplePduPacket()<br /><br />// create a packet for SimplePdu-message and initialize with valid data<br />LONG API_InitSimplePduPacket(struct SimplePdu value)<br /><br />// create a secured packet for SimplePdu-message and initialize with valid data<br />LONG API_InitSimplePduPacket(struct SimplePdu value, char packetTypeDesignator[],<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;char certificateName[])<br /><br />// set the data of a packet for SimplePdu-message<br />int API_SetSimplePduParams(LONG packetHandle, struct SimplePdu value)<br /><br />// get the data of a packet for SimplePdu-message<br />int API_GetSimplePduParams(LONG packetHandle, struct SimplePdu value)</p>
+                <h2 class="SectionSub">Send application message in CAPL</h2>
+                <p>You can create a packet of the application message and a timer for cyclic sending of the packet in the CAPL event <span class="bold">on start</span>.</p>
+                <p class="SourceCode">variables<br />{<br />&#160;&#160;// timer variables<br />&#160;&#160;msTimer timer_SendSimplePdu;<br /><br />&#160;&#160;// cycle time for sending SimplePdu-message<br />&#160;&#160;int gTimerCycleTime   = 1000;<br /><br />&#160;&#160;// handle for SimplePdu packet (data)<br />&#160;&#160;LONG gSimplePduHandle    = 0;<br />}<br /><br />on start<br />{<br />&#160;&#160;Appl_Init();<br />}<br /><br />void Appl_Init()<br />{<br />&#160;&#160;// create a packet for SimplePdu<br />&#160;&#160;gSimplePduHandle = API_InitSimplePduPacket();<br /><br />&#160;&#160;// start sending SimplePdu-packet (cyclic)<br />&#160;&#160;setTimer(timer_SendSimplePdu, 5);<br />}<br /><br />on timer timer_SendSimplePdu<br />{<br />&#160;&#160;SendSimplePdu();<br />&#160;&#160;setTimer(timer_SendSimplePdu, gTimerCycleTime);<br />}</p>
+                <p>You can fill and send the generated data structures (<span class="bold">struct SimplePdu</span>) as follows:</p>
+                <p class="SourceCode">void SendSimplePdu()<br />{<br />&#160;&#160;int errorFlag = 0;<br /><br />&#160;&#160;// data-structure for the SimplePdu<br />&#160;&#160;struct SimplePdu simplePdu;<br />&#160;&#160;simplePdu.header.id = 1;<br />&#160;&#160;simplePdu.header.frequency.isValidFlag = 1;<br />&#160;&#160;simplePdu.header.frequency.value = 100;<br /><br />&#160;&#160;// set validFlag to 1 to indicate that this optional field is used<br />&#160;&#160;simplePdu.data.isValidFlag = 1;<br />&#160;&#160;simplePdu.data.simpleEnum = 1;<br />&#160;&#160;simplePdu.data.value = 10000;<br /><br />&#160;&#160;// fill packet with data of SimplePdu-structure<br />&#160;&#160;API_SetSimplePduParams(gSimplePduHandle, simplePdu);<br /><br />&#160;&#160;// 1000 is the BTP destination port that is defined in ASN.1-import<br />&#160;&#160;// The function SetPacketData_BTP is defined in the file C2x_Basics.cin<br />&#160;&#160;if (SetPacketData_BTP(gSimplePduHandle, 1000, 0, 0) != 0) {<br />&#160;&#160;&#160;&#160;errorFlag=1;<br />&#160;&#160;}<br /><br />&#160;&#160;// send packet if no error occured<br />&#160;&#160;if (errorFlag == 0)<br />&#160;&#160;{<br />&#160;&#160;&#160;&#160;if (C2xCompletePacket(gSimplePduHandle) != 0) {<br />&#160;&#160;&#160;&#160;&#160;&#160;write ("C2xCompletePacket error: cannot encode SimplePdu message");<br />&#160;&#160;&#160;&#160;}<br />&#160;&#160;&#160;&#160;else {<br />&#160;&#160;&#160;&#160;&#160;&#160;C2xOutputPacket(gSimplePduHandle);<br />&#160;&#160;&#160;&#160;}<br />&#160;&#160;}<br />}</p>
+                <p>In this example the optional field <span class="bold">simplePdu.data</span> is filled and used, that's why <span class="bold">simplePdu.data.isValidFlag</span> is set to 1.</p>
+                <h2 class="SectionSub">Analyze application message in CAPL</h2>
+                <p>For the reception of an application message you need to register a receive function (for WLAN events) in the CAPL event <span class="bold">on prestart</span> with <a href="../../../CAPLFunctions/Car2x/Functions/CAPLfunctionC2xReceivePacket.htm">C2xReceivePacket</a> first. If an application message is received, you can read it by calling the function <span class="bold">API_GetSimplePduParams</span> in the receive function (in this example <a href="../../../CAPLFunctions/Car2x/Callbacks/CAPLfunctionC2xOnC2xPacket.htm">OnC2xPacket</a>) and then analyze the application message.</p>
+                <p class="SourceCode">on preStart<br />{<br />&#160;&#160;// init the receive function<br />&#160;&#160;C2xReceivePacket("OnC2xPacket");<br />}<br /><br />/******************************************************/<br />//<br />// function is called when a packet is received<br />//<br />/******************************************************/<br />void OnC2xPacket (LONG channel, LONG dir, LONG radioChannel, LONG signalStrength, LONG sigQuality, LONG packet)<br />{<br />&#160;&#160;struct SimplePdu simplePdu;<br /><br />&#160;&#160;if(API_GetSimplePduParams(packet, simplePdu) == 0) {<br />&#160;&#160;&#160;&#160;// check if data (optional field) is set for the SimplePdu. The isValidFlag is always 1 for structs which are not optional<br />&#160;&#160;&#160;&#160;if(simplePdu.data.isValidFlag == 1) {<br />&#160;&#160;&#160;&#160;&#160;&#160;write("SimplePdu data: %i", simplePdu.data.value);<br />&#160;&#160;&#160;&#160;}<br />&#160;&#160;}<br />}</p>
+                <p class="LinkList"><a href="../Car2x.htm" class="LinkList">Option&#160;Car2x</a>
+                </p>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="FooterWhite">
+                <table class="FooterWhite" style="border-collapse: collapse;margin-left: auto;margin-right: auto;">
+                    <col style="width: 70px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col style="width: 16px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="buttons popup-container clearfix topicToolbarProxy topicToolbarProxyFooter _Skins_HTML5TopicToolbar mc-component nocontent">
+                                    <div class="button-group-container-left">
+                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo"><a href="../../../Shared/HowToUseOnlineHelp.htm" title="Tips for using the help" alt="Tips for using the help"><img src="../../../../Resources/vImages/vBackstage/vHelpInfo.png" /></a>
+                                </p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo" style="text-align: right;"><span class="mc-variable Vector.BuildTime variable">2024-04-8T20:56:42</span>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <table style="width: 100%;border-collapse: separate;border-spacing: 3px 0px;margin-left: auto;margin-right: auto;caption-side: top;">
+                <col />
+                <col />
+                <col />
+                <col data-mc-conditions="BuildProcess.HTML5Link" />
+                <tbody>
+                    <tr>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;">
+                            <p class="vec_Footer">©&#160;Vector Informatik GmbH</p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;text-align: right;">
+                            <p class="vec_FooterBold">
+                                <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE&#160;Product Families</MadCap:conditionalText> Version <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.VectorTestUnitRunner">18</MadCap:conditionalText></p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="../../../Shared/ContactCopyrightLicense.htm" class="vec_Footer MCXref xref xrefvec_Footer">Contact/Copyright/License</a>
+                            </p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="https://www.vector.com/int/en/company/get-info/privacy-policy/" target="_blank" class="vec_Footer">Data Privacy Notice</a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

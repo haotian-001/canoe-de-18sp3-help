@@ -1,0 +1,1847 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="CANoeDEFamily.xml" data-mc-path-to-help-system="../../../../" data-mc-conditions="Targets.CANoe-DE-Family,Targets.vTESTstudio,Targets.CANoe-SE-Family" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../Skins/Favicons/favicon-16x16.png" /><title>Communication Objects CAPL Functions</title>
+        <link href="../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Resources/Stylesheets/vTableMasterPageHeader.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../Resources/Stylesheets/vStylesheet.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../Resources/Stylesheets/vTablePageTOC.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../Resources/Stylesheets/vTable.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapGlobal.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapDom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapUtilities.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapXhr.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTextEffects.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSlideshow.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMessageBus.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMessageBus.CrossFrame.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapDefault.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMediaQueries.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAccessibility.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapHelpSystem.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAliasFile.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopicFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapFeedbackHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSkinHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.Breadcrumbs.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.MiniToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.SideMenu.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapIndex.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapGlossary.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapParser.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSearch.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapNavigateTopics.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapLms.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapELearning.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopic.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMicroContentComponent.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSearchHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopicElements.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTriPane.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/jscript" src="../../../Resources/vScripts/SyntaxHighlighting.js">
+        </script>
+        <script type="text/jscript" src="../../../Resources/vScripts/TabSwitch.js">
+        </script>
+        <script type="text/javascript" src="../../../Resources/vScripts/Vector.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../../CANoeDEFamily.htm#Topics/CAPLFunctions/CommunicationObjects/CAPLfunctionsCOOverview.htm">Open topic with navigation</a>
+        </p>
+        <div class="Body">
+            <div role="main" id="mc-main-content">
+                <p class="StructurePath"><a href="../CAPLfunctions.htm" class="StructurePath MCXref xref xrefStructurePath">CAPL Functions</a> » <span class="mc-variable System.Title variable">Communication Objects CAPL Functions</span></p>
+                <h1><a name="kanchor6746"></a><span class="mc-variable System.Title variable">Communication Objects CAPL Functions</span> (obsolete)<br /></h1>
+                <p class="MenuPath">&#160;</p>
+                <p class="ToolAvailability" data-mc-conditions="BuildProcess.ToolAvailability"><a href="../../Shared/FeatureAvailability.htm" class="red" title="Feature availabilty for your product">Valid&#160;for</a>:&#160;&#160;CANoe&#160;DE<a name="aanchor20192"></a><MadCap:concept term="SFCANoeDE" /></p>
+                <p class="AutoSearchFilterConcepts"><a name="aanchor20193"></a>
+                    <MadCap:concept term="SFCAPLFunctions" />
+                </p>
+                <div>
+                    <table style="margin-left: 0;margin-right: auto;width: 100%;">
+                        <col style="width: 60px;" />
+                        <col />
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <p>
+                                        <img src="../../../Resources/vImages/vFunction.png" />
+                                    </p>
+                                </td>
+                                <td>
+                                    <p class="TableSymbolHead">Communication Objects</p>
+                                    <p class="Table">Overview of objects, event procedures, functions and methods to work with communication objects.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <hr class="Startpage" width="100%" size="0" align="center" />
+                <p class="TableCOM"><a name="Shortcuts" id="Shortcuts"></a><span class="red">ON THIS&#160;PAGE:</span>
+                </p>
+                <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTablePageTOC.css');" class="TableStyle-vTablePageTOC" cellspacing="2">
+                    <col class="TableStyle-vTablePageTOC-Column-Column1" />
+                    <tbody>
+                        <tr class="TableStyle-vTablePageTOC-Body-Body1">
+                            <td class="TableStyle-vTablePageTOC-BodyA-Column1-Body1">
+                                <p class="PageTOC"><a href="#EventProcedures" class="PageTOC">Event Procedures</a>
+                                </p>
+                                <p class="PageTOC"><a href="#Functions" class="PageTOC">Functions</a>
+                                </p>
+                                <p class="PageTOC"><a href="#Methods" class="PageTOC">Methods</a>
+                                </p>
+                                <p class="PageTOC"><a href="#Objects" class="PageTOC">Objects</a>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div>
+                    <h2><a name="EventProcedures" id="EventProcedures"></a><a href="../../Shared/CAPL/General/EventProceduresOverview.htm">Event Procedures</a><a href="#Shortcuts" class="TopOfPage">[▲ back]</a>
+                    </h2>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');" width="100%" class="TableStyle_vTable" cellspacing="0">
+                        <col style="width: 270px;" />
+                        <col />
+                        <tr valign="top">
+                            <th colspan="1" rowspan="1" bgcolor="#E5E5E5" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="TableHead">Event Procedures</p>
+                            </th>
+                            <th colspan="1" rowspan="1" bgcolor="#E5E5E5" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="TableHead">Short Description</p>
+                            </th>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="EventProcedures/CAPLfunctionOnAbstractEventSubscribed.htm" class="MCXref xref">on Abstract_EventSubscribed</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p colspan="1" rowspan="1" class="Table">Is called when an event is subscribed at a provider.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="EventProcedures/CAPLfunctionOnAbstractEventUnsubscribed.htm" class="MCXref xref">on Abstract_EventUnsubscribed</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p colspan="1" rowspan="1" class="Table">Is called when an event is unsubscribed at a provider.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="EventProcedures/CAPLfunctionOnAbstractFieldSubscribed.htm" class="MCXref xref">on Abstract_FieldSubscribed</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Is called when a field is subscribed at a provider.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="EventProcedures/CAPLfunctionOnAbstractFieldUnsubscribed.htm" class="MCXref xref">on Abstract_FieldUnsubscribed</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Is called when a field is unsubscribed at a provider.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="EventProcedures/CAPLfunctionOnfctCalled.htm">on fct_Called</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Is called when a service function is called.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="EventProcedures/CAPLfunctionOnfctCalling.htm">on fct_Calling</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Is called when a service function is about to be called.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="EventProcedures/CAPLfunctionOnfctReturned.htm">on fct_Returned</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Is called when a service function answer is returned to the consumer.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="EventProcedures/CAPLfunctionOnfctReturning.htm">on fct_Returning</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Is called when a service function is about to return its answer.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="EventProcedures/CAPLfunctionOnPDUChange.htm" class="MCXref xref">on PDU_change</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Is called when a PDU (of the new communication concept) is changed.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="EventProcedures/CAPLfunctionOnPDUSubscribed.htm" class="MCXref xref">on PDU_Subscribed</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Is called when a PDU is subscribed at a provider.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="EventProcedures/CAPLfunctionOnPDUUnsubscribed.htm" class="MCXref xref">on PDU_Unsubscribed</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Is called when a PDU is unsubscribed at a provider.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="EventProcedures/CAPLfunctionOnPDUUpdate.htm" class="MCXref xref">on PDU_update</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Is called when a PDU (of the new communication concept) is updated.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p><a href="EventProcedures/CAPLfunctionOnSDConnectionEstablished.htm" class="MCXref xref">on SD_connection_established</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Is called when a connection is established.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="EventProcedures/CAPLfunctionOnSDConnectionFailed.htm" class="MCXref xref">on SD_connection_failed</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Is called when a connection attempt fails.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="EventProcedures/CAPLfunctionOnSDConnectionRequested.htm" class="MCXref xref">on SD_connection_requested</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Is called when a connection is requested by a consumer.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="EventProcedures/CAPLfunctionOnSDConsumerDiscovered.htm" class="MCXref xref">on SD_consumer_discovered</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Is called when a new consumer is discovered.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="EventProcedures/CAPLfunctionOnSDProviderDiscovered.htm" class="MCXref xref">on SD_provider_discovered</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Is called when a new provider is discovered.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="EventProcedures/CAPLfunctionOnSDServiceDiscovery.htm" class="MCXref xref">on SD_service_discovery</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Is called when a new consumer is discovered.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="EventProcedures/CAPLfunctionOnSOMEIPEventGroupSubscribed.htm" class="MCXref xref">on SOMEIP_EventGroupSubscribed</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Is called when an event group is subscribed at a provider.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="EventProcedures/CAPLfunctionOnSOMEIPEventGroupUnsubscribed.htm" class="MCXref xref">on SOMEIP_EventGroupUnsubscribed</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Is called when an event group is unsubscribed at a provider.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="EventProcedures/CAPLfunctionOnSOMEIPEventGroupSubscribedConsumerSide.htm" class="MCXref xref">on SOMEIP_EventGroupSubscribedConsumerSide</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Is called on consumer side when a service provider has acknowledged the subscribtion for an event group.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="EventProcedures/CAPLfunctionOnValueChange.htm" class="MCXref xref">on value_change</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Is called when a communication object value changes.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="EventProcedures/CAPLfunctionOnValueUpdate.htm" class="MCXref xref">on value_update</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Is called when a communication object value is updated.</p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div>
+                    <h2><a name="Functions" id="Functions"></a>Functions <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');" width="100%" class="TableStyle_vTable" cellspacing="0">
+                        <col style="width: 270px;" />
+                        <col />
+                        <tr valign="top">
+                            <th colspan="1" rowspan="1" bgcolor="#E5E5E5" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="TableHead">Functions</p>
+                            </th>
+                            <th colspan="1" rowspan="1" bgcolor="#E5E5E5" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="TableHead">Short Description</p>
+                            </th>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p><a href="Functions/CAPLfunctionAbstractCreateAddress.htm" class="MCXref xref">Abstract_CreateAddress</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Creates a pseudo-address for abstract binding.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p><a href="Functions/CAPLfunctionAbstractGetConsumerId.htm" class="MCXref xref">Abstract_GetConsumerId</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p colspan="1" rowspan="1" class="Table">Gets an Id for a consumer with an abstract binding pseudo-address.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p><a href="Functions/CAPLfunctionAbstractGetDisplayName.htm" class="MCXref xref">Abstract_GetDisplayName</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Gets a display name for an endpoint with an abstract binding pseudo-address.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p><a href="Functions/CAPLfunctionAbstractGetProviderId.htm" class="MCXref xref">Abstract_GetProviderId</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Gets an Id for a provider with an abstract binding pseudo-address.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p><a href="Functions/CAPLfunctionAbstractReleaseAddress.htm" class="MCXref xref">Abstract_ReleaseAddress</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Releases a pseudo-address for abstract binding, freeing resources.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p><a href="Functions/CAPLfunctionAbstractSubscribeEvent.htm" class="MCXref xref">Abstract_SubscribeEvent</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Subscribes for a service event if abstract binding is used.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep"><a href="Functions/CAPLfunctionAbstractSubscribeField.htm" class="MCXref xref">Abstract_SubscribeField</a>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Subscribes for a service field if abstract binding is used.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep"><a href="Functions/CAPLfunctionAbstractSubscribePdu.htm" class="MCXref xref">Abstract_SubscribePdu</a>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Subscribes for a service PDU if abstract binding is used.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep"><a href="Functions/CAPLfunctionAbstractUnsubscribeEvent.htm" class="MCXref xref">Abstract_UnsubscribeEvent</a>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Unsubscribes for a service event if abstract binding is used.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep"><a href="Functions/CAPLfunctionAbstractUnsubscribeField.htm" class="MCXref xref">Abstract_UnsubscribeField</a>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Unsubscribes for a service field if abstract binding is used.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep"><a href="Functions/CAPLfunctionAbstractUnsubscribePdu.htm" class="MCXref xref">Abstract_UnsubscribePdu</a>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Unsubscribes for a service PDU if abstract binding is used.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top" data-mc-conditions="">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionGetNrOfCOConsumers.htm" class="MCXref xref">GetNrOfCOConsumers</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Gets the number of consumers at the communication object.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top" data-mc-conditions="">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionGetNrOfCOProviders.htm" class="MCXref xref">GetNrOfCOProviders</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Gets the number of providers at the communication object.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top" data-mc-conditions="">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionGetNrOfCOReceivers.htm" class="MCXref xref">GetNrOfCOReceivers</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Gets the number of receivers at the communication object.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top" data-mc-conditions="">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionGetNrOfCOSenders.htm" class="MCXref xref">GetNrOfCOSenders</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Gets the number of senders at the communication object.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionLookupConsumedEvent.htm" class="MCXref xref">LookupConsumedEvent</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Searches for the specified consumed event.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionLookupConsumedField.htm" class="MCXref xref">LookupConsumedField</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Searches for the specified consumed field.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionLookupConsumedMethod.htm" class="MCXref xref">LookupConsumedMethod</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Searches for the specified consumed method.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionLookupConsumedPDU.htm" class="MCXref xref">LookupConsumedPDU</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Searches for the specified consumed PDU.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionLookupConsumedService.htm" class="MCXref xref">LookupConsumedService</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Searches for the specified consumed service.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionLookupEventConsumer.htm" class="MCXref xref">LookupEventConsumer</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Searches for the specified event consumer.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionLookupEventProvider.htm" class="MCXref xref">LookupEventProvider</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Searches for the specified event provider.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionLookupFieldConsumer.htm" class="MCXref xref">LookupFieldConsumer</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Searches for the specified field consumer.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionLookupFieldProvider.htm" class="MCXref xref">LookupFieldProvider</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Searches for the specified field provider.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionLookupMeasuredEvent.htm" class="MCXref xref">LookupMeasuredEvent</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Searches for the specified measured event.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionLookupMeasuredField.htm" class="MCXref xref">LookupMeasuredField</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Searches for the specified measured field.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionLookupMeasuredMethod.htm" class="MCXref xref">LookupMeasuredMethod</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Searches for the specified measured method.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionLookupMeasuredPDU.htm" class="MCXref xref">LookupMeasuredPDU</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Searches for the specified measured PDU.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionLookupMeasuredService.htm" class="MCXref xref">LookupMeasuredService</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Searches for the specified measured service.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionLookupPDUConsumer.htm" class="MCXref xref">LookupPDUConsumer</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Searches for the specified PDU consumer.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionLookupPDUProvider.htm" class="MCXref xref">LookupPDUProvider</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Searches for the specified PDU provider.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionLookupProvidedEvent.htm" class="MCXref xref">LookupProvidedEvent</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Searches for the specified provided event.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionLookupProvidedField.htm" class="MCXref xref">LookupProvidedField</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Searches for the specified provided field.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionLookupProvidedMethod.htm" class="MCXref xref">LookupProvidedMethod</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Searches for the specified provided method.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionLookupProvidedPDU.htm" class="MCXref xref">LookupProvidedPDU</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Searches for the specified provided PDU.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionLookupProvidedService.htm" class="MCXref xref">LookupProvidedService</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Searches for the specified provided service.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionLookupRxPDU.htm" class="MCXref xref">LookupRxPDU</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Searches for the specified rx PDU.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionLookupRxSignal.htm" class="MCXref xref">LookupRxSignal</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Searches for the specified rx signal.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionLookupServiceConsumer.htm" class="MCXref xref">LookupServiceConsumer</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Searches for the specified service consumer.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionLookupServiceProvider.htm" class="MCXref xref">LookupServiceProvider</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Searches for the specified service provider.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionLookupTxPDU.htm" class="MCXref xref">LookupTxPDU</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Searches for the specified tx PDU.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionLookupTxSignal.htm" class="MCXref xref">LookupTxSignal</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Searches for the specified tx signal.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep"><a href="Functions/CAPLfunctionSDAddConsumer.htm" class="MCXref xref">SD_AddConsumer</a>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Dynamically adds a consumer endpoint to a service.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep"><a href="Functions/CAPLfunctionSDAddProvider.htm" class="MCXref xref">SD_AddProvider</a>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Dynamically adds a provider endpoint to a service.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep"><a href="Functions/CAPLfunctionSDAnnounceProvider.htm" class="MCXref xref">SD_AnnounceProvider</a>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Announces that a service provider is running.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep"><a href="Functions/CAPLfunctionSDConnectAsync.htm" class="MCXref xref">SD_ConnectAsync</a>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Requests the establishment of a connection between a service provider and consumer.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep"><a href="Functions/CAPLfunctionSDDisconnect.htm" class="MCXref xref">SD_Disconnect</a>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Disconnects a service provider and consumer.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep"><a href="Functions/CAPLfunctionSDDiscoverProviders.htm" class="MCXref xref">SD_DiscoverProviders</a>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Discovers all running providers of a service in the role of a consumer.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep"><a href="Functions/CAPLfunctionSDRemoveConsumer.htm" class="MCXref xref">SD_RemoveConsumer</a>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Dynamically removes a consumer endpoint from a service.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep"><a href="Functions/CAPLfunctionSDRemoveProvider.htm" class="MCXref xref">SD_RemoveProvider</a>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Dynamically removes a provider endpoint from a service.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep"><a href="Functions/CAPLfunctionSDSetAddress.htm" class="MCXref xref">SD_SetAddress</a>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Sets the address for a service endpoint.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep"><a href="Functions/CAPLfunctionSDUnannounceProvider.htm" class="MCXref xref">SD_UnannounceProvider</a>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Announces that a service provider is no longer running.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionSetSubscriptionStateIsolated.htm" class="MCXref xref">SetSubscriptionStateIsolated</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Sets the subscription state for a service sub-member.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top" data-mc-conditions="">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionSOMEIPChangeServiceInstanceID.htm" class="MCXref xref">SOMEIP_ChangeServiceInstanceID</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Changes the SOME/IP service instance ID of a provided service instance or the instance ID to which a consumed service should subscribe.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top" data-mc-conditions="">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep"><a href="Functions/CAPLfunctionSOMEIPInjectPDU.htm" class="MCXref xref">SOMEIP_InjectPDU</a>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Injects the PDU into the Communication Concepts SOME/IP-BindingBlock, where its then send.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top" data-mc-conditions="">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep"><a href="Functions/CAPLfunctionSOMEIPSubscribeEventGroup.htm" class="MCXref xref">SOMEIP_SubscribeEventGroup</a>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Subscribes for a service event group if SOME/IP binding is used.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top" data-mc-conditions="">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep"><a href="Functions/CAPLfunctionSOMEIPUnsubscribeEventGroup.htm" class="MCXref xref">SOMEIP_UnsubscribeEventGroup</a>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Unsubscribes for a service event group if SOME/IP binding is used.</p>
+                            </td>
+                        </tr>
+                    </table>
+                    <p><span class="bold">Test functions</span> see <a href="../Test/CAPLfunctionsTFSOverview.htm#BMCommunicationConcept" class="MCXref xref">Test Feature Set CAPL Functions</a></p>
+                </div>
+                <div>
+                    <h2><a name="Methods" id="Methods"></a>Methods<a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');" width="100%" class="TableStyle_vTable" cellspacing="0">
+                        <col style="width: 270px;" />
+                        <col />
+                        <tr valign="top">
+                            <th colspan="1" rowspan="1" bgcolor="#E5E5E5" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="TableHead">Callbacks</p>
+                            </th>
+                            <th colspan="1" rowspan="1" bgcolor="#E5E5E5" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="TableHead">Short Description</p>
+                            </th>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Methods/CAPLfunctionCallcontextCreatePermanentHandle.htm" class="MCXref xref">callcontext::CreatePermanentHandle</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Creates a permanent handle for a call context.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Methods/CAPLfunctionCallcontextDeferAnswer.htm" class="MCXref xref">callcontext::DeferAnswer</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Defers the answer for a function call indefinitely.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Methods/CAPLfunctionCallcontextFromHandle.htm" class="MCXref xref">callcontext::FromHandle</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Retrieves a call context from a permanent handle.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Methods/CAPLfunctionCallcontextReleaseHandle.htm" class="MCXref xref">callcontext::ReleaseHandle</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Releases a permanent handle for a call context.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Methods/CAPLfunctionCallcontextReturnCall.htm" class="MCXref xref">callcontext::ReturnCall</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Returns the call, sending an answer.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Methods/CAPLfunctionCallcontextSetDefaultAnswer.htm" class="MCXref xref">callcontext::SetDefaultAnswer</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Sets return value and out parameter values to defaults.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Methods/CAPLfunctionCallcontextSetTimeToAnswer.htm" class="MCXref xref">callcontext::SetTimeToAnswer</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Defines the time until the call shall be returned.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Methods/CAPLfunctionConsumedEventRefAbstractIsEventRequested.htm" class="MCXref xref">consumedEventRef::AbstractIsEventRequested</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Returns whether the specified event is currently requested.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Methods/CAPLfunctionConsumedEventRefAbstractReleaseEvent.htm" class="MCXref xref">consumedEventRef::AbstractReleaseEvent</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Releases subscription of a specific event.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Methods/CAPLfunctionConsumedEventRefAbstractRequestEvent.htm" class="MCXref xref">consumedEventRef::AbstractRequestEvent</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Requests subscription of a specific event.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Methods/CAPLfunctionConsumedEventGroupRefSOMEIPIsEventGroupRequested.htm" class="MCXref xref">consumedEventGroupRef::SOMEIPIsEventGroupRequested</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Returns whether the specified event group is currently requested.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Methods/CAPLfunctionConsumedEventGroupRefSOMEIPReleaseEventGroup.htm" class="MCXref xref">consumedEventGroupRef::SOMEIPReleaseEventGroup</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Releases subscription of a specific event group.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Methods/CAPLfunctionConsumedEventGroupRefSOMEIPRequestEventGroup.htm" class="MCXref xref">consumedEventGroupRef::SOMEIPRequestEventGroup</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Requests subscription of a specific event group.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Methods/CAPLfunctionConsumedFieldRefAbstractIsFieldRequested.htm" class="MCXref xref">consumedFieldRef::AbstractIsFieldRequested</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Returns whether the specified field is currently requested.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Methods/CAPLfunctionConsumedFieldRefAbstractReleaseField.htm" class="MCXref xref">consumedFieldRef::AbstractReleaseField</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Releases subscription of a specific field.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Methods/CAPLfunctionConsumedFieldRefAbstractRequestField.htm" class="MCXref xref">consumedFieldRef::AbstractRequestField</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Requests subscription of a specific field.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Methods/CAPLfunctionConsumedMethodRefCallAsync.htm" class="MCXref xref">consumedMethodRef::CallAsync</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Calls a service method.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Methods/CAPLfunctionConsumedMethodRefCallAsyncPhys.htm" class="MCXref xref">consumedMethodRef::CallAsyncPhys</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Calls a service method.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Methods/CAPLfunctionConsumedPduRefAbstractIsPduRequested.htm" class="MCXref xref">consumedPduRef::AbstractIsPduRequested</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Returns whether the specified service PDU is currently requested.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Methods/CAPLfunctionClear.htm" class="MCXref xref">Clear</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Clears the reference.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Methods/CAPLfunctionConsumedPduRefAbstractReleasePdu.htm" class="MCXref xref">consumedPduRef::AbstractReleasePdu</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Releases subscription of a specific PDU.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Methods/CAPLfunctionConsumedPduRefAbstractRequestPdu.htm" class="MCXref xref">consumedPduRef::AbstractRequestPdu</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Requests subscription of a specific PDU.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Methods/CAPLfunctionConsumedServiceRefIsServiceRequested.htm" class="MCXref xref">consumedServiceRef::IsServiceRequested</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Returns whether the service is requested.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Methods/CAPLfunctionConsumedServiceRefReleaseService.htm" class="MCXref xref">consumedServiceRef::ReleaseService</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Releases usage of a specific service.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Methods/CAPLfunctionConsumedServiceRefRequestService.htm" class="MCXref xref">consumedServiceRef::RequestService</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Requests usage of a specific service.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Methods/CAPLfunctionEventProviderRefGetNrOfSubscribedConsumers.htm" class="MCXref xref">eventProviderRef::GetNrOfSubscribedConsumers</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Returns the number of currently subscribed consumers.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Methods/CAPLfunctionEventProviderRefGetSubscribedConsumer.htm" class="MCXref xref">eventProviderRef::GetSubscribedConsumer</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Returns a subscribed consumer.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Methods/CAPLfunctionEventProviderRefTrigger.htm" class="MCXref xref">eventProviderRef::Trigger</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Triggers the specified event.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Methods/CAPLfunctionfieldProviderRefGetNrOfSubscribedConsumers.htm" class="MCXref xref">fieldProviderRef::GetNrOfSubscribedConsumers</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Returns the number of currently subscribed consumers.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Methods/CAPLfunctionfieldProviderRefGetSubscribedConsumer.htm" class="MCXref xref">fieldProviderRef::GetSubscribedConsumer</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Returns a subscribed consumer.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Methods/CAPLfunctionGetConsumedFieldRef.htm" class="MCXref xref">GetConsumedFieldRef</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Returns the referred field.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Methods/CAPLfunctionGetConsumedServiceRef.htm" class="MCXref xref">GetConsumedServiceRef</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Returns the referred service.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Methods/CAPLfunctionGetConsumer.htm" class="MCXref xref">GetConsumer</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Returns the consumer participant.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Methods/CAPLfunctionGetConsumerIndex.htm" class="MCXref xref">GetConsumerIndex</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Returns the consumer index.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Methods/CAPLfunctionGetProvidedFieldRef.htm" class="MCXref xref">GetProvidedFieldRef</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Returns the referred field.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Methods/CAPLfunctionGetProvidedServiceRef.htm" class="MCXref xref">GetProvidedServiceRef</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Returns the referred service.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Methods/CAPLfunctionGetProvider.htm" class="MCXref xref">GetProvider</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Returns the provider participant.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Methods/CAPLfunctionGetProviderIndex.htm" class="MCXref xref">GetProviderIndex</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Returns the provider index.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Methods/CAPLfunctionGetReceiver.htm" class="MCXref xref">GetReceiver</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Returns the receiver participant.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Methods/CAPLfunctionGetReceiverIndex.htm" class="MCXref xref">GetReceiverIndex</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Returns the receiver index.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Methods/CAPLfunctionGetSender.htm" class="MCXref xref">GetSender</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Returns the sender participant.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Methods/CAPLfunctionGetSenderIndex.htm" class="MCXref xref">GetSenderIndex</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Returns the sender index.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Methods/CAPLfunctionPduProviderRefGetNrOfSubscribedConsumers.htm" class="MCXref xref">pduProviderRef::GetNrOfSubscribedConsumers</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Returns the number of currently subscribed consumers.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Methods/CAPLfunctionPduProviderRefGetSubscribedConsumer.htm" class="MCXref xref">pduProviderRef::GetSubscribedConsumer</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Returns a subscribed consumer.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Methods/CAPLfunctionProvidedEventRefTrigger.htm" class="MCXref xref">providedEventRef::Trigger</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Triggers the specified event.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Methods/CAPLfunctionServiceProviderRefIsServiceProvided.htm" class="MCXref xref">serviceProviderRef::IsServiceProvided</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Returns whether the service is provided.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Methods/CAPLfunctionServiceProviderRefProvideService.htm" class="MCXref xref">serviceProviderRef::ProvideService</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Provides the service at the endpoint.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Methods/CAPLfunctionServiceProviderRefReleaseService.htm" class="MCXref xref">serviceProviderRef::ReleaseService</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Provides the service at the endpoint.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Methods/CAPLfunctionSetConsumer.htm" class="MCXref xref">SetConsumer</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Set the consumer endpoint.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Methods/CAPLfunctionSetEvent.htm" class="MCXref xref">SetEvent</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Sets the event.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Methods/CAPLfunctionSetField.htm" class="MCXref xref">SetField</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Sets the field.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Methods/CAPLfunctionSetMethod.htm" class="MCXref xref">SetMethod</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Sets the method.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Methods/CAPLfunctionSetPDU.htm" class="MCXref xref">SetPDU</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Sets the PDU/referred PDU object.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Methods/CAPLfunctionSetProvider.htm" class="MCXref xref">SetProvider</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Set the provider endpoint.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Methods/CAPLfunctionSetReceiver.htm" class="MCXref xref">SetReceiver</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Set the receiver endpoint.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Methods/CAPLfunctionSetSender.htm" class="MCXref xref">SetSender</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Set the sender endpoint.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Methods/CAPLfunctionSetService.htm" class="MCXref xref">SetService</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Sets the service.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Methods/CAPLfunctionSetSignal.htm" class="MCXref xref">SetSignal</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Sets the referred signal object.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Methods/CAPLfunctionValueClearChangeFlag.htm" class="MCXref xref">valueHandle::ClearChangeFlag</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Clears the change flag of the value.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Methods/CAPLfunctionValueClearUpdateFlag.htm" class="MCXref xref">valueHandle::ClearUpdateFlag</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Clears the update flag of the value.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Methods/CAPLfunctionValueGetChangeCount.htm" class="MCXref xref">valueHandle::GetChangeCount</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Returns the change count of the value.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Methods/CAPLfunctionValueGetUpdateCount.htm" class="MCXref xref">valueHandle::GetUpdateCount</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Returns the update count of the value.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Methods/CAPLfunctionValueGetValueState.htm" class="MCXref xref">valueHandle::GetValueState</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Returns the state of the value.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Methods/CAPLfunctionValueResetValueState.htm" class="MCXref xref">valueHandle::ResetValueState</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Resets the state of the value.</p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div>
+                    <h2><a name="Objects" id="Objects"></a>Objects <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');" width="100%" class="TableStyle_vTable" cellspacing="0">
+                        <col style="width: 270px;" />
+                        <col />
+                        <tr valign="top">
+                            <th colspan="1" rowspan="1" bgcolor="#E5E5E5" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="TableHead">Objects</p>
+                            </th>
+                            <th rowspan="1" colspan="1" bgcolor="#E5E5E5" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="TableHead">Short Description</p>
+                            </th>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Objects/CAPLfunctionCallContext.htm" class="MCXref xref">callContext</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p colspan="1" rowspan="1" class="Table">Contains data of a function call.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Objects/CAPLfunctionConsumedEventRef.htm" class="MCXref xref">consumedEventRef</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p colspan="1" rowspan="1" class="Table">References a consumed event endpoint.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Objects/CAPLfunctionConsumedFieldRef.htm" class="MCXref xref">consumedFieldRef</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">References a consumed field endpoint.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Objects/CAPLfunctionConsumedMethodRef.htm" class="MCXref xref">consumedMethodRef</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">References a consumed method endpoint.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Objects/CAPLfunctionConsumedPDURef.htm" class="MCXref xref">consumedPDURef</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">References a consumed PDU endpoint.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Objects/CAPLfunctionConsumedServiceRef.htm" class="MCXref xref">consumedServiceRef</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">References a consumed service endpoint.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Objects/CAPLfunctionEventConsumerRef.htm" class="MCXref xref">eventConsumerRef</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">References an event consumer endpoint.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Objects/CAPLfunctionEventProviderRef.htm" class="MCXref xref">eventProviderRef</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">References an event provider endpoint.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Objects/CAPLfunctionFieldConsumerRef.htm" class="MCXref xref">fieldConsumerRef</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">References a field consumer endpoint.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Objects/CAPLfunctionFieldProviderRef.htm" class="MCXref xref">fieldProviderRef</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">References a field provider endpoint.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Objects/CAPLfunctionMeasuredEventRef.htm" class="MCXref xref">measuredEventRef</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">References an event measurement point.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Objects/CAPLfunctionMeasuredFieldRef.htm" class="MCXref xref">measuredFieldRef</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">References a field measurement point.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Objects/CAPLfunctionMeasuredMethodRef.htm" class="MCXref xref">measuredMethodRef</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">References a method measurement point.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Objects/CAPLfunctionMeasuredPDURef.htm" class="MCXref xref">measuredPDURef</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">References a PDU measurement point.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Objects/CAPLfunctionMeasuredServicePDURef.htm" class="MCXref xref">measuredServicePDURef</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">References a service PDU measurement point.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Objects/CAPLfunctionMeasuredServiceRef.htm" class="MCXref xref">measuredServiceRef</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">References a service measurement point.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Objects/CAPLfunctionPDUConsumerRef.htm" class="MCXref xref">pduConsumerRef</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">References a PDU consumer endpoint.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Objects/CAPLfunctionPDUProviderRef.htm" class="MCXref xref">pduProviderRef</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">References a PDU provider endpoint.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Objects/CAPLfunctionProvidedEventRef.htm" class="MCXref xref">providedEventRef</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">References a provided event endpoint.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Objects/CAPLfunctionProvidedFieldRef.htm" class="MCXref xref">providedFieldRef</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">References a provided field endpoint.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Objects/CAPLfunctionProvidedMethodRef.htm" class="MCXref xref">providedMethodRef</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">References a provided method endpoint.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Objects/CAPLfunctionProvidedPDURef.htm" class="MCXref xref">providedPDURef</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">References a provided PDU endpoint.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Objects/CAPLfunctionProvidedServiceRef.htm" class="MCXref xref">providedServiceRef</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">References a provided service endpoint.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Objects/CAPLfunctionRxPDURef.htm" class="MCXref xref">rxPDURef</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">References an rx PDU endpoint.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Objects/CAPLfunctionRxSignalRef.htm" class="MCXref xref">rxSignalRef</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">References an rx signal endpoint.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Objects/CAPLfunctionServiceConsumerRef.htm" class="MCXref xref">serviceConsumerRef</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">References a service consumer endpoint.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Objects/CAPLfunctionServiceProviderRef.htm" class="MCXref xref">serviceProviderRef</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">References a service provider endpoint.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Objects/CAPLfunctionTxPDURef.htm" class="MCXref xref">txPDURef</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">References a tx PDU endpoint.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Objects/CAPLfunctionTxSignalRef.htm" class="MCXref xref">txSignalRef</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">References a tx signal endpoint.</p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <p class="LinkList">
+                    <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family"><a href="../../CANoeCANalyzer/CommunicationConcept/CC.htm" class="LinkList">Communication Concept</a>&#160;&#160;•&#160;&#160;<a href="../../CANoeCANalyzer/CommunicationConcept/Programming/CCP.htm" class="LinkList">Programming with Communication Concept</a></MadCap:conditionalText>&#160;</p>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="FooterWhite">
+                <table class="FooterWhite" style="border-collapse: collapse;margin-left: auto;margin-right: auto;">
+                    <col style="width: 70px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col style="width: 16px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col data-mc-conditions="" />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="buttons popup-container clearfix topicToolbarProxy topicToolbarProxyFooter _Skins_HTML5TopicToolbar mc-component nocontent">
+                                    <div class="button-group-container-left">
+                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo"><a href="../../Shared/HowToUseOnlineHelp.htm" title="Tips for using the help" alt="Tips for using the help"><img src="../../../Resources/vImages/vBackstage/vHelpInfo.png" /></a>
+                                </p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo">•&#160;&#160;Technical&#160;References are only&#160;available&#160;in&#160;English</p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo" style="text-align: right;"><span class="mc-variable Vector.BuildTime variable">2024-04-8T20:56:42</span>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <table style="width: 100%;border-collapse: separate;border-spacing: 3px 0px;margin-left: auto;margin-right: auto;caption-side: top;">
+                <col />
+                <col />
+                <col />
+                <col data-mc-conditions="BuildProcess.HTML5Link" />
+                <tbody>
+                    <tr>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;">
+                            <p class="vec_Footer">©&#160;Vector Informatik GmbH</p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;text-align: right;">
+                            <p class="vec_FooterBold">
+                                <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE&#160;Product Families</MadCap:conditionalText> Version <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.VectorTestUnitRunner">18</MadCap:conditionalText></p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="../../Shared/ContactCopyrightLicense.htm" class="vec_Footer MCXref xref xrefvec_Footer">Contact/Copyright/License</a>
+                            </p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="https://www.vector.com/int/en/company/get-info/privacy-policy/" target="_blank" class="vec_Footer">Data Privacy Notice</a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

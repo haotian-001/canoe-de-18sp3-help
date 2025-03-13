@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="" data-mc-search-type="Stem" data-mc-help-system-file-name="CANoeDEFamily.xml" data-mc-path-to-help-system="../../../../../" data-mc-conditions="Targets.CANoe-DE-Family" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../Skins/Favicons/favicon-16x16.png" /><title>Remote Debugging (VT6000/VT6020/VT6060)</title>
+        <link href="../../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Resources/Stylesheets/vTableMasterPageHeader.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../../Resources/Stylesheets/vStylesheet.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../../Resources/Stylesheets/vTableSymbol.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapGlobal.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapDom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapUtilities.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapXhr.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTextEffects.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSlideshow.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMessageBus.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMessageBus.CrossFrame.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapDefault.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMediaQueries.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapAccessibility.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapHelpSystem.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapAliasFile.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopicFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapFeedbackHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSkinHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.Breadcrumbs.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.MiniToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.SideMenu.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapIndex.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapGlossary.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapParser.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSearch.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapNavigateTopics.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapLms.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapELearning.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopic.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMicroContentComponent.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSearchHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopicElements.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTriPane.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/jscript" src="../../../../Resources/vScripts/SyntaxHighlighting.js">
+        </script>
+        <script type="text/jscript" src="../../../../Resources/vScripts/TabSwitch.js">
+        </script>
+        <script type="text/javascript" src="../../../../Resources/vScripts/Vector.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../../../CANoeDEFamily.htm#Topics/CANoeCANalyzer/VTSystem/VT6000/VT6000RemoteDebugging.htm">Open topic with navigation</a>
+        </p>
+        <div class="Body">
+            <div role="main" id="mc-main-content">
+                <div>
+                    <p class="AutoSearchFilterConcepts"><a name="aanchor2821"></a>
+                        <MadCap:concept term="SFCore" />
+                    </p>
+                    <p class="IndexConcept"><a name="kanchor840"></a>
+                    </p>
+                    <p class="StructurePath"><a href="VT6000.htm" class="StructurePath">VT6000/VT6020/VT6060</a> » Remote Debugging</p>
+                    <h1>Remote Debugging</h1>
+                    <p class="MenuPath">&#160;</p>
+                    <p class="ToolAvailability" data-mc-conditions="BuildProcess.ToolAvailability"><a href="../../../Shared/FeatureAvailability.htm" class="red" title="Feature availabilty for your product">Valid&#160;for</a>:&#160;&#160;CANoe&#160;DE<a name="aanchor2822"></a><MadCap:concept term="SFCANoeDE" />&#160;&#160;•&#160;&#160;CANoe:lite&#160;DE<a name="aanchor2823"></a><MadCap:concept term="SFCANoeLiteDE" /></p>
+                </div>
+                <div>
+                    <h2>Overview</h2>
+                    <p>It may be advisable, for performance reasons, to execute the realtime portions on a separate, dedicated computer. You can do this using a standard computer or also a special realtime computer (e.g. <a href="../../Interfaces/VN8900/VN8900.htm">VN8900</a> or <a href="VT6000.htm">VT6000</a>). If a configuration that is loaded in this way contains test nodes implemented in a .NET language, you can analyze their execution using the <span class="Product">Microsoft Remote Debugging Monitor</span>.</p>
+                    <p>This page describes how to establish and use such a remote debugging connection between a computer and a Vector realtime module (<span class="Product">VT6000</span> family).</p>
+                    <p>When your system is set up as described below you can use the <a href="../../Test/TestModules/NETDebugging.htm">integrated remote debug support</a>.</p>
+                    <p>For Remote Debugging you need <span class="Product">Visual Studio</span> 2003 or higher as a full version (not Express version!).</p>
+                </div>
+                <div>
+                    <h2 class="SectionMain">Concept</h2>
+                    <p>As described above, remote debugging of .NET code involves monitoring two computers, the <span class="bold">Host PC</span> and the <span class="bold">Remote PC</span>.</p>
+                    <p>
+                        <img src="../../../../Resources/Images/CANoeCANalyzer/VTSystem/VT6000RemoteDebugging.png" title="VT6000 Remote Debugging Concept" alt="VT6000 Remote Debugging Concept" />
+                    </p>
+                    <ul>
+                        <li><span class="bold">The host PC</span>
+                            <br />The host computer runs the GUI portions. It serves to load the configuration and control the measurement sequence.<br />This requires installing <span class="Product">Microsoft Visual Studio</span> (Version 2003 or higher) on the host computer to enable remote debugging.</li>
+                        <li><span class="bold">The remote PC</span> (VT realtime module)<br />The remote computer runs the realtime portions. Thus the .NET assemblies are also executed on this computer. In order to debug the .NET assemblies, you need <span class="Product">Microsoft Visual Studio</span> Remote Debugging Monitor (MSVSMON.EXE) on the remote computer. The Remote Debugging Monitor communicates with the <span class="Product">Visual Studio</span> installed on the host computer to enable debugging via the network interface.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="SectionMain">Procedure</h2>
+                    <div>
+                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                            <col class="TableStyle-vTableSymbol-Column-Column1" />
+                            <col class="TableStyle-vTableSymbol-Column-Column2" />
+                            <tbody>
+                                <tr>
+                                    <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                        <p class="Table">
+                                            <img src="../../../../Resources/vImages/vStep.png" style="width: 48px;height: 45px;" title="Action" alt="Action" />
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                        <p class="TableSymbolHead">Host PC Configuration</p>
+                                        <p>The remote debugging connection for .NET code requires a user account on the host computer and the remote computer with the same name and password. There is already a user account configured on the VT realtime module for this purpose:</p>
+                                        <ul>
+                                            <li>Name <span class="bold">rtdebug</span></li>
+                                            <li>Password: <span class="bold">Debug@VT6000</span></li>
+                                        </ul>
+                                        <p>Proceed as follows to set up the corresponding account on the host computer:</p>
+                                        <ol>
+                                            <li value="1">Start the user account administration with command <span class="bold">lusrmgr.msc</span>.</li>
+                                            <li value="2">Open the <span class="bold">Users</span> folder.</li>
+                                            <li value="3">
+                                                <p>Add a new user account by choosing <span class="bold">Action|New User…</span></p>
+                                                <p>Enter <span class="bold">rtdebug</span> as the user name and <span class="bold">Debug@VT6000</span> as the password for the new user.<br />Deactivate the <span class="bold">User must change password at next logon</span> option.<br />Activate the <span class="bold">Password never expires</span> option (<a targets="TOGNewUser" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler togglerBlackUnderline MCTogglerHotSpot_ MCTogglerHotSpot_BlackUnderline MCHotSpotImage" href="javascript:void(0)" data-mc-targets="TOGNewUser"><img class="MCToggler_Image_Icon" src="../../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />see image</a>).</p>
+                                                <p style="display: none;" data-mc-target-name="TOGNewUser">
+                                                    <img src="../../../../Resources/Images/CANoeCANalyzer/VTSystem/VT6000RemoteDebuggingNewUser.png" />
+                                                </p>
+                                            </li>
+                                            <li value="4">Right click on the new user account and choose <span class="bold">Properties</span>.</li>
+                                            <li value="5">Change to the <span class="bold">Member Of</span> page.</li>
+                                            <li value="6">Click <span class="bold">[Add...]</span>.</li>
+                                            <li value="7">
+                                                <p>Enter the name of the administrator group (e.g. <span class="bold">Administrators</span>; <a targets="TOGGroupAdministrator" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler togglerBlackUnderline MCTogglerHotSpot_ MCTogglerHotSpot_BlackUnderline MCHotSpotImage" href="javascript:void(0)" data-mc-targets="TOGGroupAdministrator"><img class="MCToggler_Image_Icon" src="../../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />see image</a>)</p>
+                                                <p style="display: none;" data-mc-target-name="TOGGroupAdministrator">
+                                                    <img src="../../../../Resources/Images/CANoeCANalyzer/VTSystem/VT6000RemoteDebuggingGroupAdministrator.png" title="VT6000 Remote Debugging: User group &quot;Administrators&quot;" alt="VT6000 Remote Debugging: User group &quot;Administrators&quot;" />
+                                                </p>
+                                            </li>
+                                            <li value="8">Confirm the open dialogs with <span class="bold">[OK]</span>.</li>
+                                        </ol>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                            <col class="TableStyle-vTableSymbol-Column-Column1" />
+                            <col class="TableStyle-vTableSymbol-Column-Column2" />
+                            <tbody>
+                                <tr>
+                                    <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                        <p class="Table">
+                                            <img src="../../../../Resources/vImages/vStep.png" style="width: 48px;height: 45px;" title="Action" alt="Action" />
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                        <p class="TableSymbolHead">VT6000 Configuration</p>
+                                        <div>
+                                            <p class="Bold">Step 1: Connection between the computer and the VT6000</p>
+                                            <ol>
+                                                <li value="1">
+                                                    <p>Connect the <span class="Product">VT6000</span> module with a dedicated network card on the computer using a crossover cable.</p>
+                                                    <p>When the upper connection port of the <span class="Product">VT6000</span> is used, it is assigned the static IP address <span class="bold">192.168.100.1</span>.<br />When the lower connection port of the <span class="Product">VT6000</span> is used, it is assigned the static IP address <span class="bold">192.168.100.2</span>.</p>
+                                                    <p>Upon successful connection, the new network is displayed in the <span class="Product">Windows</span> panel.</p>
+                                                </li>
+                                                <li value="2">
+                                                    <p>Now assign a static IP address and the subnet mask <span class="bold">255.255.255.0</span> of the <span class="Product">VT6000</span> to the computer (<a targets="TOGIPAddress" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler togglerBlackUnderline MCTogglerHotSpot_ MCTogglerHotSpot_BlackUnderline MCHotSpotImage" href="javascript:void(0)" data-mc-targets="TOGIPAddress"><img class="MCToggler_Image_Icon" src="../../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />see image</a>).</p>
+                                                    <p style="display: none;" data-mc-target-name="TOGIPAddress">
+                                                        <img src="../../../../Resources/Images/CANoeCANalyzer/VTSystem/VT6000RemoteDebuggingIPAddress.png" title="IP Address" alt="IP Address" />
+                                                    </p>
+                                                </li>
+                                                <li value="3">Use the <span class="bold">Ping</span> command in the command line to check whether the computer and the <span class="Product">VT6000</span> are connected (e.g.: <span class="SourceCode">ping 192.168.100.1</span>).</li>
+                                            </ol>
+                                            <div>
+                                                <p class="Bold">Step 2: Installation of the Remote Debugging Monitor on the VT6000</p>
+                                                <p>After connecting the computer with the <span class="Product">VT6000</span> you can copy the Remote Debugging Monitor to the <span class="Product">VT6000</span>.</p>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>In <span class="Product">Windows Explorer</span>, enter the path to the released <span class="bold">Tmp</span> directory on the <span class="Product">VT6000</span>.<br />Depending on the connection port/IP address used (see above) the required path is <span class="SourceCode">\\192.168.100.1\Tmp</span> or <span class="SourceCode">\\192.168.100.2\Tmp</span>.</p>
+                                                        <p>
+                                                            <img src="../../../../Resources/Images/CANoeCANalyzer/VTSystem/VT6000RemoteDebuggingTempDir.png" title="TEMP Directory" alt="TEMP Directory" />
+                                                        </p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p>Now copy the Remote Debugging Monitor to the <span class="bold">Tmp</span> directory on the<span class="Product">VT6000</span>, either</p>
+                                                        <ul>
+                                                            <li>from the <span class="Product">Visual Studio</span> installation directory (e.g. <span class="SourceCode">\Microsoft Visual Studio 10.0\Common7\IDE\Remote Debugger</span>) or</li>
+                                                            <li>from the <span class="Product">Visual Studio</span> installation DVD (<span class="SourceCode">\vs\Remote Debugger</span>).</li>
+                                                        </ul>
+                                                        <p>To connect successfully you need to use corresponding versions of  the Remote Debugging Monitor and <span class="Product">Visual Studio</span>.</p>
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                            <div>
+                                                <p class="Bold">Step 3: Starting the Remote Desktop Connection</p>
+                                                <p>To configure the Remote Debugging Monitor on the <span class="Product">VT6000</span> you need a remote desktop connection.</p>
+                                                <ol>
+                                                    <li value="1"> In <span class="Product">CANoe</span>, open the menu path <a href="../../Ribbon/RibbonHome.htm"><span class="GUI">Home</span> ribbon tab</a>|Group <span class="GUI">Measurement</span>|<span class="GUI"><a href="../../VTPPlatformManager/PlatformManager.htm">Vector Tool Platform</a></span>|<span class="bold">Connection</span>|<span class="GUI">General</span>|<span class="GUI"><a href="../../VTPPlatformManager/ConnectionGeneral.htm#Remote"><span class="GUI">Remote Desktop</span></a></span>|<span class="GUI">Connect</span>.</li>
+                                                    <li value="2">Enter <span class="bold">Administrator</span> as the user name and leave the password field empty.</li>
+                                                    <li value="3">Confirm your entries with <span class="bold">[OK]</span> to start the remote desktop connection.</li>
+                                                </ol>
+                                            </div>
+                                            <div>
+                                                <p class="Bold">Step 4: Starting the Remote Debugging Monitor</p>
+                                                <ol>
+                                                    <li value="1">To start <span class="Product">Windows Explorer</span> on the <span class="Product">VT6000</span>, enter <span class="bold">explorer</span> in the command console of RuntimeServer.EXE.<br />The console may be hidden behind another window, in which case you can move the other window to the side.</li>
+                                                    <li value="2">Navigate to the <span class="bold">D:\Tmp</span> directory into which you previously copied the Remote Debugging Monitor.</li>
+                                                    <li value="3">Right click on the <span class="bold">msvsmon.EXE</span> file and choose the command <span class="bold">Run as…</span>.<br />Select <span class="bold">rtdebug</span> as the user and enter the password (<span class="bold">Debug@VT6000</span>).</li>
+                                                </ol>
+                                            </div>
+                                            <div>
+                                                <p class="Bold">Step 5: Configuration of the Remote Debugging Monitor</p>
+                                                <ol>
+                                                    <li value="1">Choose <span class="bold">Tools|Options…</span> to open the Remote Debugging Monitor's options dialog.</li>
+                                                    <li value="2">Select the <span class="bold">Windows Authentication</span> option.</li>
+                                                    <li value="3">Make a note of the server name (format: <span class="SourceCode">Domain\User@ComputerName</span>), as you will need to enter this name in <span class="Product">Visual Studio</span> later on.</li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                            <col class="TableStyle-vTableSymbol-Column-Column1" />
+                            <col class="TableStyle-vTableSymbol-Column-Column2" />
+                            <tbody>
+                                <tr>
+                                    <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                        <p class="Table">
+                                            <img src="../../../../Resources/vImages/vStep.png" style="width: 48px;height: 45px;" title="Action" alt="Action" />
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                        <p class="TableSymbolHead">Checking the Connection</p>
+                                        <p>Before debugging the .NET assemblies of a configuration, you should check whether you can actually connect between <span class="Product">Visual Studio</span> (host computer) and the Remote Debugging Monitor (remote computer).<br />You can use the following steps to check the connection:</p>
+                                        <ol>
+                                            <li value="1">Begin by starting the Remote Debugging Monitor (MSVSMON.EXE) on the remote computer as described above.</li>
+                                            <li value="2">Make sure the authentication mode in the Remote Debugging Monitor is set to <span class="bold">Windows Authentication</span>.</li>
+                                            <li value="3">Make a note of the server name (format: <span class="SourceCode">Domain\User@ComputerName</span>), as you will need to enter this name in <span class="Product">Visual Studio</span> later on.</li>
+                                            <li value="4">Start <span class="Product">Visual Studio</span> on the host computer (likewise via the <span class="bold">Run as…</span> command with user <span class="bold">rtdebug</span>).</li>
+                                            <li value="5">Open the menu path <span class="bold">Debug|Attach to process…</span> from the <span class="Product">Visual Studio</span> menu to open the connection dialog.<br />Establishing the connection may take several seconds.</li>
+                                            <li value="6">Set the <span class="bold">Transport</span> field to <span class="bold">Default</span> to enable debugging of managed code.</li>
+                                            <li value="7">As qualifier enter the server name from the Remote Debugging Monitor's options dialog (<span class="SourceCode">Domain\User@ComputerName</span>).</li>
+                                        </ol>
+                                        <p class="Table">A complete list of processes on the remote computer is displayed. </p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                            <col class="TableStyle-vTableSymbol-Column-Column1" />
+                            <col class="TableStyle-vTableSymbol-Column-Column2" />
+                            <tbody>
+                                <tr>
+                                    <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                        <p class="Table">
+                                            <img src="../../../../Resources/vImages/vFAQ.png" style="width: 48px;height: 45px;" title="FAQ" alt="FAQ" />
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                        <p class="TableSymbolHead">Error Handling</p>
+                                        <p>If <span class="Product">Visual Studio</span> and the Remote Debugging Monitor don't connect, please check the following points:</p>
+                                        <ul>
+                                            <li>The Remote Debugging Monitor has to be started in <span class="bold">Windows Authentication</span> mode.<br />The <span class="bold">/noauth</span> mode may be used for connection checks but does not allow debugging of managed code.</li>
+                                            <li>In the <span class="Product">Visual Studio</span> <span class="bold">Attach to process</span> dialog, the transport mode has to be set to <span class="bold">Default</span>, as managed code can only be debugged in this mode.</li>
+                                            <li>The server name of the Remote Debugging Monitor has to be entered correctly in <span class="Product">Visual Studio</span>.</li>
+                                            <li>Both programs need to be able to access the respective other computer.<br />This requires that the shared user account <span class="bold">rtdebug</span> is set up correctly on both computers (same user name, same password, member of the administrator group).</li>
+                                            <li>In the <span class="bold">Permissions</span> menu of the Remote Debugging Monitor you can explicitly grant user rights to allow access by the host computer.</li>
+                                            <li><span class="Product">Visual Studio</span> and the Remote Debugging Monitor have to be the same version.</li>
+                                            <li><span class="Product">Visual Studio</span> and the Remote Debugging Monitor have to be run by the same user <span class="bold">rtdebug</span>.</li>
+                                            <li>On the remote computer you need to configure the network access security in the operating system so that access is enabled based on user name and password authentication, not Guest mode.<br />You can configure these setting under <span class="bold">Control Panel|Administration|Local Security Policy|Local Policies|Security Options|Network access: Sharing and security model for local accounts</span>.</li>
+                                        </ul>
+                                        <p class="Table">For further information on error handling, visit <a href="https://learn.microsoft.com/en-us/previous-versions/windows/embedded/bb521559(v=winembedded.5)" title="Microsoft MSDN" alt="Microsoft MSDN" target="_blank" class="ExternalLink">Microsoft MSDN pages (https://learn.microsoft.com/en-us/previous-versions/windows/embedded/bb521559(v=winembedded.5))</a>.</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                            <col class="TableStyle-vTableSymbol-Column-Column1" />
+                            <col class="TableStyle-vTableSymbol-Column-Column2" />
+                            <tbody>
+                                <tr>
+                                    <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                        <p class="Table">
+                                            <img src="../../../../Resources/vImages/vStep.png" style="width: 48px;height: 45px;" title="Action" alt="Action" />
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                        <p class="TableSymbolHead">Remote Debugging a .NET Assembly</p>
+                                        <ol>
+                                            <li value="1">Start your software on the host computer and load a configuration.</li>
+                                            <li value="2">On the remote computer, start RT kernel (RuntimeKernel.EXE in the Exec32 directory of the installation).</li>
+                                            <li value="3">Configure your software on the host computer so that it runs the RT portions on the remote computer, see <span class="bold">Vector Tool Platform</span> dialog (<a href="../../Ribbon/RibbonHome.htm"><span class="GUI">Home</span> ribbon tab</a>|Group <span class="GUI">Measurement</span>|<span class="GUI"><a href="../../VTPPlatformManager/PlatformManager.htm">Vector Tool Platform</a></span>).</li>
+                                            <li value="4">If the two computers are connected you can start a measurement to check.<br />If this test measurement is initialized and executed correctly you can proceed to the next step.</li>
+                                            <li value="5">
+                                                <p>Compile the .NET assemblies by choosing the <a href="../../Ribbon/RibbonEnvironment.htm"><span class="GUI">Environment</span> ribbon tab</a>|<span class="GUI">Compile All Nodes</span>.</p>
+                                                <p>Since this process does not generate any debug information (.pdb file), you need to open the <span class="Product">Visual Studio</span> solution of the .NET assembly.<br />If your software is configured accordingly (see help) you can do this by clicking the <span class="bold">[Edit]</span> button on the .NET test node</p>
+                                                <p>
+                                                    <img src="../../../../Resources/Images/CANoeCANalyzer/VTSystem/VT6000RemoteDebuggingNETTestNode.png" title=".NET Test Node" alt=".NET Test Node" />.</p>
+                                            </li>
+                                            <li value="6">
+                                                <p>Execute a rebuild of the assembly in <span class="Product">Visual Studio</span>.</p>
+                                                <p> The assembly is then recompiled and the debug information is generated.<br />This should generate two files:</p>
+                                                <ul>
+                                                    <li>AssemblyName.DLL</li>
+                                                    <li>AssemblyName.pdb</li>
+                                                </ul>
+                                            </li>
+                                            <li value="7">Now copy the debug information generated in the previous step (AssemblyName.pdb) to the <span class="bold">C:\CANrtk\Exec32\SynchronizedFiles</span> directory on the remote computer. The assembly corresponding to the debug information is automatically stored in this directory.</li>
+                                            <li value="8">
+                                                <p>Now start the Microsoft Remote Debugging Monitor (MSVSMON.EXE) on the remote computer.<br />Also open the <span class="Product">Visual Studio</span> solution of the.NET assembly on the host computer (see above).</p>
+                                                <p> Note that both the Remote Debugging Monitor and <span class="Product">Visual Studio</span> need to be started by user <span class="bold">rtdebug</span> (e.g. using the <span class="bold">RunAs</span> command).</p>
+                                            </li>
+                                            <li value="9">
+                                                <p>Now start the measurement.</p>
+                                                <p>You can debug the .NET assembly in <span class="Product">Visual Studio</span> while the measurement is running.</p>
+                                            </li>
+                                            <li value="10">
+                                                <p>To do so, choose <span class="bold">Debug|Attach to Process…</span> in <span class="Product">Visual Studio</span>.</p>
+                                                <p>As described above, you can then connect to the Remote Debugging Monitor on the remote computer.</p>
+                                            </li>
+                                            <li value="11">From the list of processes choose the <span class="bold">RuntimeKernel.EXE</span> process for debugging.</li>
+                                        </ol>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                            <col class="TableStyle-vTableSymbol-Column-Column1" />
+                            <col class="TableStyle-vTableSymbol-Column-Column2" />
+                            <tbody>
+                                <tr>
+                                    <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                        <p class="Table">
+                                            <img src="../../../../Resources/vImages/vFAQ.png" style="width: 48px;height: 45px;" title="FAQ" alt="FAQ" />
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                        <p class="TableSymbolHead">Error Handling</p>
+                                        <ul>
+                                            <li><span class="bold">Visual Studio cannot connect with the Remote Debugging Monitor.</span>
+                                                <br />For information on connection problems, see section <span class="bold">Checking the Connection</span>.</li>
+                                            <li><span class="bold">Breakpoints are not activated or there are no debug symbols available.</span>
+                                                <br />This happens when the debug symbol file (.pdb) has not been copied to the remote computer (see above).<br />If there are still no debug symbols available even after copying the file you can load the debug symbols file manually.<br />To do so, open the <span class="bold">Modules</span> window in <span class="Product">Visual Studio</span>, and then right click the DLL to be debugged to search for and load the corresponding PDB file.</li>
+                                            <li><span class="bold">Despite correct loading of the debug symbols the debugger does not stop at the breakpoints.</span>
+                                                <br />In this case you should check whether the .NET code is actually linked with the Simulation Setup; it could be that it is linked with the test setup instead. Debugging of .NET assemblies used in the test setup is currently not supported.</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <p class="LinkList">&#160;</p>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="FooterWhite">
+                <table class="FooterWhite" style="border-collapse: collapse;margin-left: auto;margin-right: auto;">
+                    <col style="width: 70px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col style="width: 16px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="buttons popup-container clearfix topicToolbarProxy topicToolbarProxyFooter _Skins_HTML5TopicToolbar mc-component nocontent">
+                                    <div class="button-group-container-left">
+                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo"><a href="../../../Shared/HowToUseOnlineHelp.htm" title="Tips for using the help" alt="Tips for using the help"><img src="../../../../Resources/vImages/vBackstage/vHelpInfo.png" /></a>
+                                </p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo" style="text-align: right;"><span class="mc-variable Vector.BuildTime variable">2024-04-8T20:56:42</span>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <table style="width: 100%;border-collapse: separate;border-spacing: 3px 0px;margin-left: auto;margin-right: auto;caption-side: top;">
+                <col />
+                <col />
+                <col />
+                <col data-mc-conditions="BuildProcess.HTML5Link" />
+                <tbody>
+                    <tr>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;">
+                            <p class="vec_Footer">©&#160;Vector Informatik GmbH</p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;text-align: right;">
+                            <p class="vec_FooterBold">
+                                <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE&#160;Product Families</MadCap:conditionalText> Version <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.VectorTestUnitRunner">18</MadCap:conditionalText></p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="../../../Shared/ContactCopyrightLicense.htm" class="vec_Footer MCXref xref xrefvec_Footer">Contact/Copyright/License</a>
+                            </p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="https://www.vector.com/int/en/company/get-info/privacy-policy/" target="_blank" class="vec_Footer">Data Privacy Notice</a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

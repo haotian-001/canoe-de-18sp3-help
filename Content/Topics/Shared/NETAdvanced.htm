@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="" data-mc-search-type="Stem" data-mc-help-system-file-name="CANoeDEFamily.xml" data-mc-path-to-help-system="../../../" data-mc-conditions="Targets.CANoe-DE-Family,Targets.vTESTstudio" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../Skins/Favicons/favicon-16x16.png" /><title>Notes for Advanced Users (.NET Programming)</title>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Resources/Stylesheets/vTableMasterPageHeader.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../Resources/Stylesheets/vStylesheet.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.needs-pie
+{
+	behavior: url('../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../Resources/Stylesheets/vTableSymbol.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapGlobal.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapDom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapUtilities.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapXhr.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapTextEffects.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapSlideshow.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapMessageBus.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapMessageBus.CrossFrame.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapDefault.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapMediaQueries.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAccessibility.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapHelpSystem.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAliasFile.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapTopicFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapFeedbackHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapSkinHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapToc.Breadcrumbs.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapToc.MiniToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapToc.SideMenu.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapIndex.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapGlossary.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapParser.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapSearch.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapNavigateTopics.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapLms.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapELearning.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapTopic.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapMicroContentComponent.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapSearchHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapTopicElements.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapTriPane.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/jscript" src="../../Resources/vScripts/SyntaxHighlighting.js">
+        </script>
+        <script type="text/jscript" src="../../Resources/vScripts/TabSwitch.js">
+        </script>
+        <script type="text/javascript" src="../../Resources/vScripts/Vector.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../CANoeDEFamily.htm#Topics/Shared/NETAdvanced.htm">Open topic with navigation</a>
+        </p>
+        <div class="Body">
+            <div role="main" id="mc-main-content">
+                <div>
+                    <p class="AutoSearchFilterConcepts"><a name="aanchor20694"></a>
+                        <MadCap:concept term="SFSampConf" />
+                    </p>
+                    <p class="IndexConcept"><a name="kanchor6921"></a>
+                    </p>
+                    <p class="StructurePath"><a href="../CANoeCANalyzer/CANoeDEFamily.htm" class="StructurePath" data-mc-conditions="Targets.CANoe-DE-Family"><img src="../../Resources/vImages/vToolIcons/CANoeDEFamily_Icon16_15x15.png" alt="" style="width: 15;height: 15;" />&#160;CANoe&#160;DE&#160;Product&#160;Families</a> » <a href="NET.htm" class="StructurePath">.NET-Programmierung</a> » Hinweise für Fortgeschrittene</p>
+                    <h1>Notes for Advanced Users</h1>
+                    <p class="MenuPath">&#160;</p>
+                    <p class="ToolAvailability" data-mc-conditions="BuildProcess.ToolAvailability"><a href="FeatureAvailability.htm" class="red" title="Feature availabilty for your product">Valid&#160;for</a>:&#160;&#160;CANoe&#160;DE<a name="aanchor20695"></a><MadCap:concept term="SFCANoeDE" />&#160;&#160;•&#160;&#160;CANoe:lite&#160;DE<a name="aanchor20696"></a><MadCap:concept term="SFCANoeLiteDE" />&#160;&#160;•&#160;&#160;CANoe4SW&#160;DE<a name="aanchor20697"></a><MadCap:concept term="SFCANoe4SWDE" />&#160;&#160;•&#160;&#160;CANoe4SW:lite&#160;DE<a name="aanchor20698"></a><MadCap:concept term="SFCANoe4SWLiteDE" /></p>
+                </div>
+                <div>
+                    <h2 class="SectionSub">Assemblies</h2>
+                    <div>
+                        <p class="StartList">You can also create projects in the development environment of your choice, such as <span class="Product">Visual Studio</span> or <span class="Product">SharpDevelop</span>. To enable the use of your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> types, you need to reference the following assemblies:</p>
+                        <ul>
+                            <li><span class="GUI">Vector.Tools</span>
+                                <br />contains the shared API for the Vector tools</li>
+                            <li><span class="GUI">Vector.CANoe.Runtime</span>
+                                <br />contains the interfaces and classes implemented by the <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> runtime environment</li>
+                            <li><span class="GUI">Vector.Tools.Internal</span> as well as <span class="GUI">Vector.CANoe.Runtime.Internal</span><br />internal <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> interface used by the types in <span class="GUI">Vector.Tools</span> and <span class="GUI">Vector.CANoe.Runtime</span></li>
+                            <li><span class="GUI" data-mc-conditions="Targets.CANoe-DE-Family">&lt;DB name&gt;.dll</span>
+                                <br />for the types generated from the database</li>
+                            <li><span class="GUI" data-mc-conditions="Targets.CANoe-DE-Family">&lt;configuration name&gt;.cfg_sysvars.dll</span>
+                                <br />for the system variables used in the configuration</li>
+                            <li><span class="GUI">&lt;system variable file&gt;.dll</span>
+                                <br />for the system variables assigned in the system environment.</li>
+                            <li><span class="bold" data-mc-conditions="Targets.CANoe-DE-Family">&lt;configuration name&gt;.co.dll</span>
+                                <br />for the new <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> Communication Concept</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="StartList">For the development of test <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">modules</MadCap:conditionalText> you also need to reference the following assemblies: (valid for <span class="Product">CANoe&#160;DE</span><MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">, </MadCap:conditionalText><span class="Product">CANoe:lite&#160;DE</span>)</p>
+                        <ul>
+                            <li><span class="GUI" data-mc-conditions="Targets.CANoe-DE-Family">Vector.CANoe.TFS</span>
+                                <br />contains the required types for test <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">modules</MadCap:conditionalText></li>
+                            <li><span class="GUI">Vector.CANoe.TFS.Internal</span>
+                                <br />internal <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> interface used by the types in <span class="GUI" data-mc-conditions="Targets.CANoe-DE-Family">Vector.CANoe.TFS</span></li>
+                            <li><span class="GUI">Vector.CANoe.Threading</span>
+                                <br />contains types for sequencing and timing control</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="StartList">For diagnostic communication, the following assembly has to be referenced: (valid for <span class="Product">CANoe&#160;DE</span><MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">, </MadCap:conditionalText><span class="Product">CANoe4SW&#160;DE</span>)</p>
+                        <ul>
+                            <li><span class="GUI">Vector.Diagnostics</span>
+                                <br />diagnostic objects for communication with the ECU via diagnostic services</li>
+                        </ul>
+                    </div>
+                    <p data-mc-conditions="Targets.CANoe-DE-Family">The assemblies are located in the <span class="SourceCode">Exec32\NETDev</span> folder of your installation.</p>
+                </div>
+                <div>
+                    <h2 class="SectionSub">Realtime Performance</h2>
+                    <p class="StartList">The .NET runtime environment includes a <span class="bold">Garbage Collector</span>. As a result of this advanced approach to memory management, memory requests may sometimes lead to an automatic cleanup and release of memory that is no longer needed. This means that the average time for memory requests is very short, but the maximum time may be longer. To ensure good realtime performance and short latency intervals, .NET code is treated in a special way by your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText>.</p>
+                    <ul>
+                        <li>Whenever .NET code is used, the <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> realtime component is executed in a separate process (RuntimeKernel.exe).<br />This ensures that the garbage collection process for the analysis component does not affect the realtime component.</li>
+                        <li>No Application Domains are used to execute .NET code.</li>
+                    </ul>
+                    <p class="StartList">If you are especially concerned with realtime performance, you should consider the following points for your .NET programming:</p>
+                    <ul>
+                        <li>Avoid extensive memory requests during a simulation.</li>
+                        <li>Do not execute I/O operations during a simulation.</li>
+                        <li>Do not use GUI elements, e.g. message windows.</li>
+                        <li>Refer to the relevant literature or MSDN web pages regarding garbage collection and the related programming paradigms.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="SectionSub"><a name="Concurrency" id="Concurrency"></a>Concurrency (valid for <span class="Product">CANoe&#160;DE</span><MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">, </MadCap:conditionalText><span class="Product">CANoe:lite&#160;DE</span>)</h2>
+                    <p>Although there can be several test <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">modules</MadCap:conditionalText> running in parallel, these <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">modules</MadCap:conditionalText> are not executed in separate threads. This means you don't have to be concerned with synchronization mechanisms. While a test<MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">module</MadCap:conditionalText> is waiting for an event, other test <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">modules</MadCap:conditionalText> or CAPL code are carried out. This is a form of cooperative multitasking; for this reason you should make sure not to program long running operations in a test <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">module</MadCap:conditionalText> without using intermediate <span class="bold">Wait</span> calls.</p>
+                    <p>Because of the <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> internal concurrency architecture, you are not permitted to use synchronization primitives (such as locks) in a .NET program.</p>
+                    <p class="StartList">If you need to execute potentially long lasting operations you can use the <span class="bold">WaitForTask</span> function. It is also possible to use of the <span class="bold">System.Thread</span> class. In both cases only a very limited number of API functions are available in background threads:</p>
+                    <ul>
+                        <li>Writing system variables (not reading!)<br />(<span class="bold">Note</span>: Test system variables in test units are not supported).</li>
+                        <li>Writing to logging file</li>
+                        <li>Writing messages to output window</li>
+                    </ul>
+                    <p>All other API function will throw an exception.</p>
+                    <div>
+                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                            <col class="TableStyle-vTableSymbol-Column-Column1" />
+                            <col class="TableStyle-vTableSymbol-Column-Column2" />
+                            <tbody>
+                                <tr>
+                                    <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                        <p class="Table">
+                                            <img src="../../Resources/vImages/vInfo.png" style="width: 48px;height: 45px;" title="Note" alt="Note" />
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                        <p class="TableSymbolHead">Note</p>
+                                        <p class="Table">If class <span class="bold">System.Thread</span> is used, the user code is responsible for the exception handling. In contrast to section <a href="#ExceptionHandling">Exception Handling</a>, a catch on the base class <span class="bold">System.Exception</span> must be used here.</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="SectionSub"><a name="GeneratedTypes" id="GeneratedTypes"></a>Generated Types for Access to Objects in the <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> Runtime Environment (valid for <span class="Product">CANoe&#160;DE</span><MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">, </MadCap:conditionalText><span class="Product">CANoe:lite&#160;DE</span>)</h2>
+                    <p>For user-friendly access to the values of signals or system variables, for example, or a convenient means of working with frames defined in databases, your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> generates assemblies with classes for each of these objects. For each database of the type AFDX, CAN, Ethernet, FlexRay, J1939 or LIN an assembly is generated that enables type-specific access to signals or frames.</p>
+                    <p>The types generated from a database are all located in the <span class="bold">NetworkDB</span> namespace. Environment variables can be accessed directly in this namespace. You can configure namespaces subordinate to <span class="bold">NetworkDB</span> for signals and frames in the <a href="../CANoeCANalyzer/Ribbon/File/Options/Programming/ProgrammingNETNamespaces.htm">Options</a> dialog. Furthermore, classes for frames are always stored in an additional namespace called <span class="bold">Frames</span>. This is to prevent the possibility of conflicts with signal classes.</p>
+                    <p>System variables are positioned directly after their namespaces.</p>
+                </div>
+                <div>
+                    <h2 class="SectionSub">Post-Compiling of the Assemblies (valid for <span class="Product">CANoe&#160;DE</span><MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">, </MadCap:conditionalText><span class="Product">CANoe:lite&#160;DE</span>)</h2>
+                    <p>
+                        <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">Test modules and test module libraries</MadCap:conditionalText> can be post-compiled in order to insert code or to check the use of attributes. The assembly is further processed by an external program (<span class="SourceCode">Vector.PostCompiler.exe</span>) for this.</p>
+                    <p>If you use a different program you must change a few entries in the <span class="SourceCode">[.NET]</span> section in the CAN.ini file; comments provided in the file for these entries explain this in more detail.</p>
+                    <div>
+                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                            <col class="TableStyle-vTableSymbol-Column-Column1" />
+                            <col class="TableStyle-vTableSymbol-Column-Column2" />
+                            <tbody>
+                                <tr>
+                                    <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                        <p class="Table">
+                                            <img src="../../Resources/vImages/vInfo.png" style="width: 48px;height: 45px;" title="Note" alt="Note" />
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                        <p class="TableSymbolHead">Note</p>
+                                        <p>Configured assemblies (not source files) that are compiled with a previous <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> version, but not post-compiled, must be re-compiled with the current version before they can be post compiled.</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="SectionSub"><a name="ExceptionHandling" id="ExceptionHandling"></a>Exception Handling</h2>
+                    <p>If you need some exception handling inside your .NET source code please don't use the <span class="bold">System.Exception</span> base class in the <span class="bold">Handler</span> catch (except together with <span class="bold">System.Thread</span> – see <a href="#Concurrency">Concurrency</a> section ). Either use a predefined exception class or define your own exception class that inherits from the <span class="bold">System.Exception</span> class.</p>
+                    <div>
+                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                            <col class="TableStyle-vTableSymbol-Column-Column1" />
+                            <col class="TableStyle-vTableSymbol-Column-Column2" />
+                            <tbody>
+                                <tr>
+                                    <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                        <p class="Table">
+                                            <img src="../../Resources/vImages/vCrossRef.png" style="width: 48px;height: 45px;" alt="Cross Reference" title="Cross Reference" />
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                        <p class="TableSymbolHead">Cross&#160;Reference</p>
+                                        <p class="Table">For an example of exception handling, see the following application note in chapter 7.6:</p>
+                                        <p class="Table"><a href="javascript:startDemoLoader('AN-IND-1-011_Using_CANoe_NET_API.pdf')" class="ExecuteLink">CANoe .NET-API</a>
+                                        </p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <p class="LinkList">&#160;</p>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="FooterWhite">
+                <table class="FooterWhite" style="border-collapse: collapse;margin-left: auto;margin-right: auto;">
+                    <col style="width: 70px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col style="width: 16px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="buttons popup-container clearfix topicToolbarProxy topicToolbarProxyFooter _Skins_HTML5TopicToolbar mc-component nocontent">
+                                    <div class="button-group-container-left">
+                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo"><a href="HowToUseOnlineHelp.htm" title="Tips for using the help" alt="Tips for using the help"><img src="../../Resources/vImages/vBackstage/vHelpInfo.png" /></a>
+                                </p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo" style="text-align: right;"><span class="mc-variable Vector.BuildTime variable">2024-04-8T20:56:42</span>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <table style="width: 100%;border-collapse: separate;border-spacing: 3px 0px;margin-left: auto;margin-right: auto;caption-side: top;">
+                <col />
+                <col />
+                <col />
+                <col data-mc-conditions="BuildProcess.HTML5Link" />
+                <tbody>
+                    <tr>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;">
+                            <p class="vec_Footer">©&#160;Vector Informatik GmbH</p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;text-align: right;">
+                            <p class="vec_FooterBold">
+                                <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE&#160;Product Families</MadCap:conditionalText> Version <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.VectorTestUnitRunner">18</MadCap:conditionalText></p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="ContactCopyrightLicense.htm" class="vec_Footer MCXref xref xrefvec_Footer">Contact/Copyright/License</a>
+                            </p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="https://www.vector.com/int/en/company/get-info/privacy-policy/" target="_blank" class="vec_Footer">Data Privacy Notice</a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

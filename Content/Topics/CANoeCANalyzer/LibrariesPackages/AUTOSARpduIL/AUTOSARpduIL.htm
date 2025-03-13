@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="CANoeDEFamily.xml" data-mc-path-to-help-system="../../../../../" data-mc-toc-path="Libraries and OEM Add-Ons|Standard Libraries" data-mc-conditions="Targets.CANoe-DE-Family" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../Skins/Favicons/favicon-16x16.png" /><title>AUTOSAR PDU Interaction Layer</title>
+        <link href="../../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Resources/Stylesheets/vTableMasterPageHeader.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../../Resources/Stylesheets/vStylesheet.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../../Resources/Stylesheets/vTable.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapGlobal.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapDom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapUtilities.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapXhr.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTextEffects.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSlideshow.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMessageBus.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMessageBus.CrossFrame.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapDefault.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMediaQueries.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapAccessibility.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapHelpSystem.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapAliasFile.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopicFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapFeedbackHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSkinHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.Breadcrumbs.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.MiniToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.SideMenu.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapIndex.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapGlossary.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapParser.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSearch.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapNavigateTopics.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapLms.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapELearning.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopic.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMicroContentComponent.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSearchHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopicElements.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTriPane.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/jscript" src="../../../../Resources/vScripts/SyntaxHighlighting.js">
+        </script>
+        <script type="text/jscript" src="../../../../Resources/vScripts/TabSwitch.js">
+        </script>
+        <script type="text/javascript" src="../../../../Resources/vScripts/Vector.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../../../CANoeDEFamily.htm#Topics/CANoeCANalyzer/LibrariesPackages/AUTOSARpduIL/AUTOSARpduIL.htm">Open topic with navigation</a>
+        </p>
+        <div class="Body">
+            <div role="main" id="mc-main-content">
+                <p class="StructurePath"><a href="../../CANoeDEFamily.htm" class="StructurePath" data-mc-conditions="Targets.CANoe-DE-Family"><img src="../../../../Resources/vImages/vToolIcons/CANoeDEFamily_Icon16_15x15.png" alt="" style="width: 15;height: 15;" />&#160;CANoe&#160;DE&#160;Product&#160;Families</a> » <a href="../OEMPackages.htm" class="StructurePath">Libraries &amp; Add-ons</a> »  <span class="mc-variable System.Title variable">AUTOSAR PDU Interaction Layer</span></p>
+                <h1><a name="kanchor4416"></a><span class="mc-variable System.Title variable">AUTOSAR PDU Interaction Layer</span>
+                </h1>
+                <p class="MenuPath">&#160;</p>
+                <p class="ToolAvailability" data-mc-conditions="BuildProcess.ToolAvailability"><a href="../../../Shared/FeatureAvailability.htm" class="red" title="Feature availabilty for your product">Valid&#160;for</a>:&#160;&#160;CANoe&#160;DE<a name="aanchor14547"></a><MadCap:concept term="SFCANoeDE" /></p>
+                <p class="AutoSearchFilterConcepts"><a name="aanchor14548"></a>
+                    <MadCap:concept term="SFCore" />
+                </p>
+                <p>This is a description of the functions of the of the <span class="bold">AUTOSAR PDU Interaction Layer</span> (short <span class="bold">AUTOSAR PDU IL</span>), which is based on the <a href="javascript:void(0)" class="MCTextPopup popup popupHead">module description file<span class="MCTextPopupBody MCTextPopupBody_Closed needs-pie popupBody" aria-hidden="true"><span class="MCTextPopupArrow"> </span>Enables support for different RT kernel architectures (64 bit/32 bit/Linux) without having to change the configuration.</span></a> <span class="bold">AsrPDUIL2.<a href="../../../Shared/Interfaces/VModule/VModule.htm">vmodule</a></span> and the <span class="bold">AsrPDUIL2.dll/libAsrPDUIL2.so</span> referenced in it. The module description file <span class="bold">AsrPDUIL.vmodule</span> and the <span class="bold">AsrPDUIL.dll/libAsrPDUIL.so </span> referenced in it are supplied for legacy reasons.</p>
+                <p>The <span class="bold">AsrPDUIL.dll/libAsrPDUIL.so</span> and the <span class="bold">AsrPDUIL2.dll/libAsrPDUIL2.so</span> have exactly the same range of functions, but use different prefixes for the function names:</p>
+                <ul>
+                    <li>The <span class="bold">AsrPDUIL2.dll/libAsrPDUIL2.so</span> uses the prefix <span class="bold">ARIL</span>.</li>
+                    <li>The <span class="bold">AsrPDUIL.dll/libAsrPDUIL.so</span> uses the prefix <span class="bold">IL</span>.</li>
+                </ul>
+                <p>This avoids naming conflicts with other DLLs, e.g. for gateway nodes.</p>
+                <p>It is not permitted to use <span class="bold">AsrPDUIL2.vmodule</span> and <span class="bold">AsrPDUIL.vmodule</span> on one node at the same time.</p>
+                <hr class="Startpage" width="100%" size="0" align="center" />
+                <div>
+                    <table style="width: 100%;border-left-style: none;border-left-width: 0px;border-left-color: #ffffff;border-right-style: none;border-right-width: 0px;border-right-color: #ffffff;border-top-style: none;border-top-width: 0px;border-top-color: #ffffff;border-bottom-style: none;border-bottom-width: 0px;border-bottom-color: #ffffff;margin-left: 0;margin-right: auto;">
+                        <col style="width: 33%;" />
+                        <col style="width: 33%;" />
+                        <col style="width: 33%;" />
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                                            <col class="TableStyle-vTable-Column-Column1" />
+                                            <tbody>
+                                                <tr class="TableStyle-vTable-Body-Body1">
+                                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                        <p class="TableHead">Quick Access</p>
+                                                    </th>
+                                                </tr>
+                                                <tr class="TableStyle-vTable-Body-Body1">
+                                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd" style="background-color: #b70032;">
+                                                        <ul>
+                                                            <li class="ComfortWhite"><a href="../../../CAPLFunctions/AUTOSARpduIL/CAPLfunctionsAUTOSARpduILOverview.htm" class="ListWhite">CAPL Functions</a>
+                                                            </li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div>
+                                        <table style="mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');margin-left: 0;margin-right: auto;width: 100%;" class="TableStyle_vTable" cellspacing="0">
+                                            <col />
+                                            <thead>
+                                                <tr>
+                                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                                        <p class="TableHead">Basics</p>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                                        <ul>
+                                                            <li><a href="AUTOSARpduILFeatures.htm">Supported Features</a>
+                                                            </li>
+                                                            <li><a href="AUTOSARpduILUsage.htm">Usage of the Interaction Layer</a>
+                                                            </li>
+                                                            <li><a href="AUTOSARpduILStateModel.htm">Interaction Layer State Model</a>
+                                                            </li>
+                                                            <li><a href="AUTOSARpduILReturnCodes.htm">Return Codes</a>
+                                                            </li>
+                                                            <li><a href="AUTOSARpduILWriteWindowNotification.htm">Write Window Notifications</a>
+                                                            </li>
+                                                            <li><a href="../../Windows/ILConfiguration.htm">IL Configuration</a>
+                                                                <br />(not supported for AUTOSAR versions starting with 4.0)</li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div>
+                                        <table style="mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');margin-left: 0;margin-right: auto;width: 100%;" class="TableStyle_vTable" cellspacing="0">
+                                            <col />
+                                            <thead>
+                                                <tr>
+                                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                                        <p class="TableHead">Caution: Release and Compatibility</p>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                                        <p class="Table">Always use the VMODULE file from your global add-on installation directory ("%PROGRAMDATA%\Vector\AddOn Packages\Vector AddOn\vModules")! Possibly the vModule and the DLLs/SOs referenced in the vModule are automatically updated by installing an OEM specific add-on.</p>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <table style="mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');margin-left: 0;margin-right: auto;width: 100%;" class="TableStyle_vTable" cellspacing="0">
+                                            <col />
+                                            <thead>
+                                                <tr>
+                                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                                        <p class="TableHead">Interaction Layer Functions</p>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                                        <p class="Table">The interaction layer is responsible for managing the transmission model and performs the following tasks:</p>
+                                                        <ul>
+                                                            <li>Controls the transmission of PDUs dependent to the send types of signals and PDUs.</li>
+                                                            <li>Provides the possibility to send PDUs on request (using a signal or a PDU as triggering object).</li>
+                                                            <li>Provides a fault injection interface to influence the sending of PDUs.</li>
+                                                            <li>Automatically calculates SQC and CRC of the E2E protection in PDUs.</li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div>
+                                        <table style="mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');margin-left: 0;margin-right: auto;width: 100%;" class="TableStyle_vTable" cellspacing="0">
+                                            <col />
+                                            <thead>
+                                                <tr>
+                                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                                        <p class="TableHead">Prerequisites</p>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                                        <ul>
+                                                            <li>Starting with version 9.0 SP3 (9.0.86) for usage with CAN and Ethernet.</li>
+                                                            <li>Starting with version 9.0 SP4 (9.0.111) for usage with FlexRay.</li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <table style="mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');margin-left: 0;margin-right: auto;width: 100%;" class="TableStyle_vTable" cellspacing="0">
+                                            <col />
+                                            <thead>
+                                                <tr>
+                                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                                        <p class="TableHead">Tip</p>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                                        <p class="TableBold">Get application callbacks (hooks) on transmit activity of the Interaction Layer</p>
+                                                        <p class="Table">It is possible to get an application callback within CAPL before the IL sends a PDU to the bus. In this callback it is possible to prevent the sending of the PDU or to change the data of the PDU.</p>
+                                                        <p class="TableSourceCodeIndent">dword applPDUILTxPending(dword busContext, dword longID, dword shortID, char name[], dword &amp; aPayloadLength, byte data[]);</p>
+                                                        <p class="Table">See <a href="../../../CAPLFunctions/AUTOSARpduIL/CAPLfunctionsAUTOSARpduILOverview.htm#CallbackInterface">Callback Interface</a> functions for details.</p>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="LinkList">&#160;</p>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="FooterWhite">
+                <table class="FooterWhite" style="border-collapse: collapse;margin-left: auto;margin-right: auto;">
+                    <col style="width: 70px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col style="width: 16px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="buttons popup-container clearfix topicToolbarProxy topicToolbarProxyFooter _Skins_HTML5TopicToolbar mc-component nocontent">
+                                    <div class="button-group-container-left">
+                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo"><a href="../../../Shared/HowToUseOnlineHelp.htm" title="Tips for using the help" alt="Tips for using the help"><img src="../../../../Resources/vImages/vBackstage/vHelpInfo.png" /></a>
+                                </p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo" style="text-align: right;"><span class="mc-variable Vector.BuildTime variable">2024-04-8T20:56:42</span>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <table style="width: 100%;border-collapse: separate;border-spacing: 3px 0px;margin-left: auto;margin-right: auto;caption-side: top;">
+                <col />
+                <col />
+                <col />
+                <col data-mc-conditions="BuildProcess.HTML5Link" />
+                <tbody>
+                    <tr>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;">
+                            <p class="vec_Footer">©&#160;Vector Informatik GmbH</p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;text-align: right;">
+                            <p class="vec_FooterBold">
+                                <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE&#160;Product Families</MadCap:conditionalText> Version <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.VectorTestUnitRunner">18</MadCap:conditionalText></p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="../../../Shared/ContactCopyrightLicense.htm" class="vec_Footer MCXref xref xrefvec_Footer">Contact/Copyright/License</a>
+                            </p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="https://www.vector.com/int/en/company/get-info/privacy-policy/" target="_blank" class="vec_Footer">Data Privacy Notice</a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

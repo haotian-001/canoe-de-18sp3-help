@@ -1,0 +1,2077 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="" data-mc-search-type="Stem" data-mc-help-system-file-name="CANoeDEFamily.xml" data-mc-path-to-help-system="../../../../" data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.CANalyzer" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../Skins/Favicons/favicon-16x16.png" /><title>Security CAPL Functions</title>
+        <link href="../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Resources/Stylesheets/vTableMasterPageHeader.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../Resources/Stylesheets/vStylesheet.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../Resources/Stylesheets/vTablePageTOC.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../Resources/Stylesheets/vTable.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapGlobal.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapDom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapUtilities.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapXhr.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTextEffects.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSlideshow.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMessageBus.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMessageBus.CrossFrame.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapDefault.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMediaQueries.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAccessibility.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapHelpSystem.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAliasFile.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopicFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapFeedbackHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSkinHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.Breadcrumbs.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.MiniToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.SideMenu.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapIndex.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapGlossary.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapParser.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSearch.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapNavigateTopics.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapLms.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapELearning.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopic.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMicroContentComponent.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSearchHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopicElements.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTriPane.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/jscript" src="../../../Resources/vScripts/SyntaxHighlighting.js">
+        </script>
+        <script type="text/jscript" src="../../../Resources/vScripts/TabSwitch.js">
+        </script>
+        <script type="text/javascript" src="../../../Resources/vScripts/Vector.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../../CANoeDEFamily.htm#Topics/CAPLFunctions/Security/CAPLFunctionsSecurityOverview.htm">Open topic with navigation</a>
+        </p>
+        <div class="Body">
+            <div role="main" id="mc-main-content">
+                <p class="StructurePath"><a href="../CAPLfunctions.htm" class="StructurePath MCXref xref xrefStructurePath">CAPL Functions</a> » <span class="mc-variable System.Title variable">Security CAPL Functions</span></p>
+                <h1><span class="mc-variable System.Title variable">Security CAPL Functions</span>
+                </h1>
+                <div>
+                    <p class="MenuPath">&#160;</p>
+                    <p class="ToolAvailability" data-mc-conditions="BuildProcess.ToolAvailability"><a href="../../Shared/FeatureAvailability.htm" class="red" title="Feature availabilty for your product">Valid&#160;for</a>:&#160;&#160;CANoe&#160;DE<a name="aanchor28600"></a><MadCap:concept term="SFCANoeDE" />&#160;&#160;•&#160;&#160;CANoe4SW&#160;DE<a name="aanchor28601"></a><MadCap:concept term="SFCANoe4SWDE" /></p>
+                    <p class="AutoSearchFilterConcepts"><a name="aanchor28602"></a>
+                        <MadCap:concept term="SFCAPLFunctions" />
+                    </p>
+                    <p class="IndexConcept"><a name="kanchor9285"></a><a name="aanchor28603"></a>
+                        <MadCap:concept term="CAPLSecurity" />
+                    </p>
+                </div>
+                <div>
+                    <table style="margin-left: 0;margin-right: auto;width: 100%;">
+                        <col style="width: 60px;" />
+                        <col />
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <p>
+                                        <img src="../../../Resources/vImages/vFunction.png" />
+                                    </p>
+                                </td>
+                                <td>
+                                    <p class="TableSymbolHead">Security</p>
+                                    <p class="Table" data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">To use the Security CAPL functions, the node layer <span class="bold">SecMgrCANoeClient.vmodule</span> (or SecMgrCANoeClient.dll) must be included.</p>
+                                    <p class="Table" data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">To use the X509 CAPL functions, the node layer <span class="bold">X509Api.vmodule</span> (or X509Api.dll) must be included.</p>
+                                    <p class="Table" data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">You can include the node layer by using the configuration dialog of the node on page <span class="bold">Components</span>.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <hr class="Startpage" width="100%" size="0" align="center" />
+                <p class="TableCOM"><a name="Shortcuts" id="Shortcuts"></a><span class="red">ON THIS&#160;PAGE:</span>
+                </p>
+                <table style="margin-left: 0;margin-right: auto;caption-side: top;mc-table-style: url('../../../Resources/Stylesheets/vTablePageTOC.css');" class="TableStyle-vTablePageTOC" cellspacing="2" data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">
+                    <col class="TableStyle-vTablePageTOC-Column-Column1" style="width: 50%;" />
+                    <col class="TableStyle-vTablePageTOC-Column-Column1" style="width: 50%;" />
+                    <tbody>
+                        <tr class="TableStyle-vTablePageTOC-Body-Body1">
+                            <td class="TableStyle-vTablePageTOC-BodyB-Column1-Body1">
+                                <p class="PageTOC"><a href="#CallbackHandler" class="PageTOC">Callback Handler</a>
+                                </p>
+                                <p class="PageTOC"><a href="#Crypto" class="PageTOC">Low Level Crypto Functions</a>
+                                </p>
+                                <p class="PageTOC"><a href="#SecOC" class="PageTOC">Secure Onboard Communication (SecOC)</a>
+                                </p>
+                                <p class="PageTOC"><a href="#Test" class="PageTOC">Test</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle-vTablePageTOC-BodyA-Column1-Body1">
+                                <p class="PageTOC"><a href="#TestCallback" class="PageTOC">Test Callback Handler</a>
+                                </p>
+                                <p class="PageTOC"><a href="#Utility" class="PageTOC">Utility</a>
+                                </p>
+                                <p class="PageTOC"><a href="#X509" class="PageTOC">X.509 Certificates</a>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">
+                    <h2><a name="CallbackHandler" id="CallbackHandler"></a>Callback Handler <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                    <div>
+                        <table style="width: 100%;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                            <col style="width: 317px;" />
+                            <col />
+                            <thead>
+                                <tr>
+                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Functions</p>
+                                    </th>
+                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                        <p class="TableHead">Short Description</p>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="CallbackHandler/CAPLfunctionOnSecurityLocalApplicationProtocolRxFinished.htm">OnSecurityLocalApplicationProtocolRxFinished</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">This callback handler is called the reception of an application protocol is finished.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="CallbackHandler/CAPLfunctionOnSecurityLocalApplicationProtocolTxFinished.htm">OnSecurityLocalApplicationProtocolTxFinished</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">This callback handler is called when the transmission of an application protocol is finished.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="CallbackHandler/CAPLfunctionOnSecurityLocalPDUPreTx.htm" class="MCXref xref">OnSecurityLocalPDUPreTx</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">This callback handler is called, after all data updates and the automatic Authenticator (MAC) calculation has be done.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="CallbackHandler/CAPLfunctionOnSecurityLocalPDUValidatedWithOemInfo.htm" class="MCXref xref">OnSecurityLocalPDUValidatedWithOemInfo</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">This callback handler is called, when a secured PDU is received in the node.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                        <p class="Table"><a href="CallbackHandler/CAPLfunctionOnSecurityLocalQueryFreshness.htm">OnSecurityLocalQueryFreshness</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                        <p class="Table">This callback handler is called, when a node a secured PDU receives and when a secured PDU is transmitted.</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">
+                    <h2><a name="Crypto" id="Crypto"></a>Low Level Crypto Functions <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                    <div>
+                        <table style="width: 100%;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                            <col style="width: 317px;" />
+                            <col />
+                            <thead>
+                                <tr>
+                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Functions</p>
+                                    </th>
+                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                        <p class="TableHead">Short Description</p>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionSecurityLocalDecryptAES128CBC.htm">SecurityLocalDecryptAES128CBC</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Decrypts ciphered data with a given key and initialization vector using AES128 (CBC), Padding Mode PKCS5.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionSecurityLocalDecryptAES128CTR.htm" class="MCXref xref">SecurityLocalDecryptAES128CTR</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Decrypts ciphered data with a given key and initialization vector using AES128 (CTR).</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionSecurityLocalDecryptAES128ECB.htm">SecurityLocalDecryptAES128ECB</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Decrypts ciphered data with a given key using AES128 (ECB), Padding Mode PKCS5.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionSecurityLocalDecryptAES128GCM.htm">SecurityLocalDecryptAES128GCM</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Decrypts ciphered data with a given key, initialization vector and additional authentication data. The decryption is AES128 (GCM), PKCS5 Padding. Also verifies data with tag.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionSecurityLocalDecryptAES256CBC.htm" class="MCXref xref">SecurityLocalDecryptAES256CBC</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Decrypts ciphered data with a given key and initialization vector using AES256 (CBC).</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionSecurityLocalDecryptAES256GCM.htm">SecurityLocalDecryptAES256GCM</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Decrypts ciphered data with a given key, initialization vector and additional authentication data. The decryption is AES256 (GCM), PKCS5 Padding. Also verifies data with tag.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionSecurityLocalDecryptRsa.htm">SecurityLocalDecryptRsa</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Decrypt data with RSA encryption algorithm using the specified padding algorithm.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionSecurityLocalEncryptAES128CBC.htm">SecurityLocalEncryptAES128CBC</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Encrypts data with a given key and initialization vector using AES128 (CBC), Padding Mode PKCS5.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionSecurityLocalEncryptAES128CTR.htm" class="MCXref xref">SecurityLocalEncryptAES128CTR</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Encrypts data with a given key and initialization vector using AES128 (CTR).</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionSecurityLocalEncryptAES128ECB.htm">SecurityLocalEncryptAES128ECB</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Encrypts data with a given key using AES128 (ECB), Padding Mode PKCS5.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionSecurityLocalEncryptAES128GCM.htm">SecurityLocalEncryptAES128GCM</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Encrypts data with a given key, additional authentication data and initialization vector using AES128 (GCM), Padding Mode PKCS5 and creates tag.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionSecurityLocalEncryptAES256CBC.htm" class="MCXref xref">SecurityLocalEncryptAES256CBC</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Encrypts data with a given key and initialization vector using AES256 (CBC).</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionSecurityLocalEncryptAES256GCM.htm">SecurityLocalEncryptAES256GCM</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Encrypts data with a given key, additional authentication data and initialization vector using AES256 (GCM), Padding Mode PKCS5 and creates tag.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionSecurityLocalEncryptRsa.htm">SecurityLocalEncryptRsa</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Encrypt data with RSA encryption algorithm using the specified padding algorithm.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionSecurityLocalGenerateAsymmetricKeyPair.htm">SecurityLocalGenerateAsymmetricKeyPair</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Generates asymmetric key pair for the given type. Currently supported types: Ed25519 = 1</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionSecurityLocalGenerateCMAC.htm">SecurityLocalGenerateCMAC</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Generates a hash for the given data and key. The generated Hash is a MAC.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionSecurityLocalGenerateEphemeralKeyPair.htm">SecurityLocalGenerateEphemeralKeyPair</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Generates a key pair to use in shared secret generation using the Elliptic Curve Diffie-Hellman (ECDH)protocol with the curve specified by the user.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionSecurityLocalGenerateHashMACSHA256.htm">SecurityLocalGenerateHashMACSHA256</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Generates a SHA256 hash for the given data and key. The generated hash is a MAC.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionSecurityLocalGenerateSHA256.htm">SecurityLocalGenerateSHA256</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Generates a SHA256 hash for the given data and key.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionSecurityLocalGenerateSHA512.htm">SecurityLocalGenerateSHA512</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Generates a SHA512 hash for the given data and key.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionSecurityLocalGenerateSharedSecret.htm">SecurityLocalGenerateSharedSecret</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Generates a shared secret between A and B using the Elliptic Curve Diffie-Hellman (ECDH) protocol.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionSecurityLocalSignEd25519.htm">SecurityLocalSignEd25519</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Sign data with Ed25519 signature algorithm.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionSecurityLocalSignRSA.htm">SecurityLocalSignRSA</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Sign data with RSA signature algorithm using the specified signature scheme.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionSecurityLocalVerifyEd25519.htm">SecurityLocalVerifyEd25519</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Verify data signed with Ed25519 signature algorithm.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionSecurityLocalVerifyRSA.htm">SecurityLocalVerifyRSA</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                        <p class="Table">Verify data with RSA signature algorithm using the specified signature scheme.</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div>
+                    <h2><a name="SecOC" id="SecOC"></a>Secure Onboard Communication (SecOC)<MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family"> <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></MadCap:conditionalText></h2>
+                    <div>
+                        <table style="width: 100%;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                            <col style="width: 318px;" />
+                            <col />
+                            <thead>
+                                <tr>
+                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                        <p class="Table">Functions</p>
+                                    </th>
+                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                        <p class="Table">Short Description</p>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionSecurityLocalActivateRxPDUs.htm">SecurityLocalActivateRxPDUs</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Allows a node (e.g. gateway) to validate Rx Secured-I-PDUs of another node.</p>
+                                    </td>
+                                </tr>
+                                <tr data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionSecurityLocalActivateTxPDUs.htm">SecurityLocalActivateTxPDUs</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Allows a node (e.g. gateway) to do a MAC calculation for Tx secured PDUs of another node.</p>
+                                    </td>
+                                </tr>
+                                <tr data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionSecurityLocalCalculateAuthenticator.htm">SecurityLocalCalculateAuthenticator</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Calculates the authenticator (MAC) for the given payload and freshness according to the active Security Profile on the network.</p>
+                                    </td>
+                                </tr>
+                                <tr data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionSecurityLocalGetFreshness.htm" class="MCXref xref">SecurityLocalGetFreshness</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Gets the freshness value for the specified Id.</p>
+                                    </td>
+                                </tr>
+                                <tr data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionSecurityLocalGetOperationParameter.htm" class="MCXref xref">SecurityLocalGetOperationParameter</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Returns the value of the specified operation parameter.</p>
+                                    </td>
+                                </tr>
+                                <tr data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionSecurityLocalGetOperationParameterKeys.htm" class="MCXref xref">SecurityLocalGetOperationParameterKeys</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Returns a list of operation parameters the Security Source supports.</p>
+                                    </td>
+                                </tr>
+                                <tr data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionSecurityLocalSetFreshness.htm" class="MCXref xref">SecurityLocalSetFreshness</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Set the freshness for the specified Id.</p>
+                                    </td>
+                                </tr>
+                                <tr data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionSecurityLocalSetKey.htm" class="MCXref xref">SecurityLocalSetKey</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Changes a key at the node.</p>
+                                    </td>
+                                </tr>
+                                <tr data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionSecurityLocalSetOperationParameter.htm" class="MCXref xref">SecurityLocalSetOperationParameter</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Sets an operation parameter.</p>
+                                    </td>
+                                </tr>
+                                <tr data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionSecurityLocalTransmitApplicationProtocol.htm" class="MCXref xref">SecurityLocalTransmitApplicationProtocol</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Transmits an special message of sequence of message, specifically to the active Security Profile on the network.</p>
+                                    </td>
+                                </tr>
+                                <tr data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionSecurityLocalVerifyAuthenticationInformation.htm" class="MCXref xref">SecurityLocalVerifyAuthenticationInformation</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Verifies the specified authentication information according to the active Security Profile on the network.</p>
+                                    </td>
+                                </tr>
+                                <tr data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionSecurityOfNodeGetOperationParameter.htm" class="MCXref xref">SecurityOfNodeGetOperationParameter</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Returns the value of the specified operation parameter.</p>
+                                    </td>
+                                </tr>
+                                <tr data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionSecurityOfNodeGetOperationParameterKeys.htm" class="MCXref xref">SecurityOfNodeGetOperationParameterKeys</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Returns a list of operation parameters the Security Source supports.</p>
+                                    </td>
+                                </tr>
+                                <tr data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionSecurityOfNodeSetOperationParameter.htm" class="MCXref xref">SecurityOfNodeSetOperationParameter</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                        <p class="Table">Sets an operation parameter.</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">
+                    <h2><a name="Test" id="Test"></a>Test <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                    <table style="width: 100%;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                        <col style="width: 317px;" />
+                        <col />
+                        <thead>
+                            <tr>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                    <p class="TableHead">Functions</p>
+                                </th>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                    <p class="TableHead">Short Description</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionSecurityOfNodeCalculateAuthenticator.htm" class="MCXref xref">SecurityOfNodeCalculateAuthenticator</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Calculates the authenticator (MAC) on the specified node on the specified network for the given payload and freshness according to the active Security Profile on the network.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionSecurityOfNodeGetFreshness.htm" class="MCXref xref">SecurityOfNodeGetFreshness</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Gets the freshness value of the specified node on the specified network for the specified Id.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionSecurityOfNodeSetFreshness.htm" class="MCXref xref">SecurityOfNodeSetFreshness</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Sets the freshness value of the specified node on the specified network for the specified Id.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionSecurityOfNodeSetKey.htm" class="MCXref xref">SecurityOfNodeSetKey</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Changes a key at the node the specified node on the specified network.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionSecurityOfNodeSetVerbosity.htm" class="MCXref xref">SecurityOfNodeSetVerbosity</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Configures the notification level for the specified node on the specified network from low (0) to high (5).</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionSecurityOfNodeTransmitApplicationProtocol.htm" class="MCXref xref">SecurityOfNodeTransmitApplicationProtocol</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Transmits an special message of sequence of message protocol from the specified node on the specified network, specifically to the active Security Profile on the network.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionSecurityOfNodeVerifyAuthenticationInformation.htm" class="MCXref xref">SecurityOfNodeVerifyAuthenticationInformation</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Verifies the specified authentication information of the specified node on the specified network according to the active Security Profile on the network.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionSecurityLocalStartControlSimulationNode.htm" class="MCXref xref">SecurityLocalStartControlSimulationNode</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Controls the specified simulation node on the specified network.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionSecurityLocalStopControlSimulationNode.htm" class="MCXref xref">SecurityLocalStopControlSimulationNode</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                    <p class="Table">Stops controlling the specified simulation node on the specified network.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">
+                    <h2><a name="TestCallback" id="TestCallback"></a>Test Callback Handler <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                    <div data-mc-target-name="TOGTestCallback">
+                        <table style="width: 100%;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                            <col style="width: 317px;" />
+                            <col />
+                            <thead>
+                                <tr>
+                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Functions</p>
+                                    </th>
+                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                        <p class="TableHead">Short Description</p>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="CallbackHandler/CAPLfunctionOnSecurityLocalApplicationProtocolRxFinished.htm">OnSecurityOfNodeApplicationProtocolRxFinished</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">This callback handler is called the reception of an application protocol is finished.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="CallbackHandler/CAPLfunctionOnSecurityLocalApplicationProtocolTxFinished.htm">OnSecurityOfNodeApplicationProtocolTxFinished</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">This callback handler is called when the transmission of an application protocol is finished.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="CallbackHandler/CAPLfunctionOnSecurityOfNodePDUPreTx.htm">OnSecurityOfNodePDUPreTx</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">This callback handler is called before the specified node on the specified network transmits a secured PDU.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="CallbackHandler/CAPLfunctionOnSecurityOfNodePDUValidatedWithOemInfo.htm" class="MCXref xref">OnSecurityOfNodePDUValidatedWithOemInfo</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">This callback handler is called, when a secured PDU is received in the node.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                        <p class="Table"><a href="CallbackHandler/CAPLfunctionOnSecurityOfNodeQueryFreshness.htm">OnSecurityOfNodeQueryFreshness</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                        <p class="Table">This callback handler is called, when the specified node receives or transmits a secured PDU on the specified network. It provides the possibility to influence the freshness value.</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">
+                    <h2><a name="Utility" id="Utility"></a>Utility <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                    <div>
+                        <table style="width: 100%;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                            <col style="width: 317px;" />
+                            <col />
+                            <thead>
+                                <tr>
+                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Functions</p>
+                                    </th>
+                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                        <p class="TableHead">Short Description</p>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionSecurityLocalAllowNetworkWideRegistrations.htm" class="MCXref xref">SecurityLocalAllowNetworkWideRegistrations</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Allows to register and unregister to network related security data.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionSecurityLocalGetNodeLayerVersion.htm" class="MCXref xref">SecurityLocalGetNodeLayerVersion</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Get NodeLayer version.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionSecurityLocalRegisterApplicationProtocol.htm" class="MCXref xref">SecurityLocalRegisterApplicationProtocol</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Allows to register and unregister to network related security data.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionSecurityLocalSetVerbosity.htm">SecurityLocalSetVerbosity</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Configures the notification level for a node from low (0) to high (5).</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionSecurityLocalUnregisterApplicationProtocol.htm" class="MCXref xref">SecurityLocalUnregisterApplicationProtocol</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                        <p class="Table">Allows to register and unregister to network related security data.</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">
+                    <h2><a name="X509" id="X509"></a>X.509 Certificates <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                    <div>
+                        <table style="width: 100%;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                            <col style="width: 317px;" />
+                            <col />
+                            <thead>
+                                <tr>
+                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Functions</p>
+                                    </th>
+                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                        <p class="TableHead">Short Description</p>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionGetX509ObjectFactory.htm">GetX509ObjectFactory</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Get Handle for X509 object factory.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionPkcs10SigningRequest_GetExtensionRequest.htm">Pkcs10SigningRequest_GetExtensionRequest</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Get content of field Extension Request. Returns handle of Type X509Extensions.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionPkcs10SigningRequest_GetPublicKey.htm">Pkcs10SigningRequest_GetPublicKey</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Get content of field public key.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionPkcs10SigningRequest_GetPublicKeyAlgIdentifier.htm">Pkcs10SigningRequest_GetPublicKeyAlgIdentifier</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Get content of Public Key Algorithm Identifier. Returns handle of Type X509AlgIdentifier.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionPkcs10SigningRequest_GetSignature.htm">Pkcs10SigningRequest_GetSignature</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Get content of field Signature.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionPkcs10SigningRequest_GetSignatureAlgIdentifier.htm">Pkcs10SigningRequest_GetSignatureAlgIdentifier</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Get content of field SignatureAlgorithmIdentifier. Returns handle of Type X509AlgIdentifier.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionPkcs10SigningRequest_GetSubjectDN.htm">Pkcs10SigningRequest_GetSubjectDN</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Get content of field Subject. Returns handle of Type X509DN.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionPkcs10SigningRequest_GetVersion.htm">Pkcs10SigningRequest_GetVersion</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Get content of field Version.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509AlgIdentifierGetOid.htm">X509AlgIdentifier_GetOid</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Get content of field Oid. Returns handle of Type X509Oid.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509AlgIdentifierGetParameters.htm">X509AlgIdentifier_GetParameters</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Get content of field Parameters.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509AlgIdentifierSetOid.htm">X509AlgIdentifier_SetOid</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Set content of field Oid. Valid argument handle must have type X509Oid or value 0 (= NULL) to delete the field.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509AlgIdentifierSetParameters.htm">X509AlgIdentifier_SetParameters</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Set content of field Parameters.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509CertificateGetAuthorityKeyIdentifier.htm">X509Certificate_GetAuthorityKeyIdentifier</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Get content of Extension AuthorityKeyIdentifier AKID / OID 2.5.29.35.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509CertificateGetExtensions.htm">X509Certificate_GetExtensions</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Get content of field Extensions. Returns handle of Type X509Extensions.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509CertificateGetIssuerDN.htm">X509Certificate_GetIssuerDN</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Get content of field Issuer. Returns handle of Type X509DN.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509CertificateGetPublicKey.htm">X509Certificate_GetPublicKey</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Get content of field Public Key.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509CertificateGetPublicKeyAlgIdentifier.htm">X509Certificate_GetPublicKeyAlgIdentifier</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Get content of field PublicKeyAlgorithmIdentifier. Returns handle of Type X509AlgIdentifier.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509CertificateGetSerialNo.htm">X509Certificate_GetSerialNo</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Get content of field SerialNumber.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509CertificateGetSignature.htm">X509Certificate_GetSignature</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Get content of field Signature.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509CertificateGetSignatureAlgIdentifier.htm">X509Certificate_GetSignatureAlgIdentifier</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Get content of field SignatureAlgorithmIdentifier. Returns handle of Type X509AlgIdentifier.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509CertificateGetSubjectDN.htm">X509Certificate_GetSubjectDN</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Get content of field Subject. Returns handle of Type X509DN.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509CertificateGetSubjectKeyIdentifier.htm">X509Certificate_GetSubjectKeyIdentifier</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Get content of Extension SubjectKeyIdentifier AKID / OID 2.5.29.14.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509CertificateGetValidFrom.htm">X509Certificate_GetValidFrom</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Get content of field NotBefore. Returns string in format ASN.1 GeneralizedTime or UTCTime.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509CertificateGetValidTo.htm">X509Certificate_GetValidTo</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Get content of field NotAfter. Returns string in format ASN.1 GeneralizedTime or UTCTime.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509CertificateGetVersion.htm">X509Certificate_GetVersion</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Get content of field Version.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509CertificateSetAuthorityKeyIdentifier.htm">X509Certificate_SetAuthorityKeyIdentifier</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Set content of Extension AuthorityKeyIdentifier AKID / OID 2.5.29.35. If the extension is not present, it will be added.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509CertificateSetAuthorityKeyIdentifierFromKey.htm">X509Certificate_SetAuthorityKeyIdentifierFromKey</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Set content of Extension AuthorityKeyIdentifier AKID / OID 2.5.29.35 to SHA1 of public key value. If the extension is not present, it will be added.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509CertificateSetExtensions.htm">X509Certificate_SetExtensions</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Set content of field Extensions. Valid argument handle must have type X509Extensions or value 0 (= NULL) to delete the field.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509CertificateSetIssuerDN.htm">X509Certificate_SetIssuerDN</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Set content of field Issuer. Valid argument handle must have type X509DN or value 0 (= NULL) to delete the field.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509CertificateSetPublicKey.htm">X509Certificate_SetPublicKey</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Set content of field PublicKey. Set value 0 (= NULL) to delete the field.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509CertificateSetPublicKeyAlgIdentifier.htm">X509Certificate_SetPublicKeyAlgIdentifier</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Set content of field PublicKeyAlgorithmIdentifier. Valid argument handle must have type X509AlgIdentifier or value 0 (= NULL) to delete the field.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509CertificateSetSerialNo.htm">X509Certificate_SetSerialNo</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Set content of field SerialNumber. Set value 0 (= NULL) to delete the field.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509CertificateSetSignature.htm">X509Certificate_SetSignature</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Set content of field Signature. Set value 0 (= NULL) to delete the field.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509CertificateSetSignatureAlgIdentifier.htm">X509Certificate_SetSignatureAlgIdentifier</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Set content of field SignatureAlgorithmIdentifier. Valid argument handle must have type X509AlgIdentifier or value 0 (= NULL) to delete the field.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509CertificateSetSubjectDN.htm">X509Certificate_SetSubjectDN</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Set content of field Subject. Valid argument handle must have type X509DN or value 0 (= NULL) to delete the field.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509CertificateSetSubjectKeyIdentifier.htm">X509Certificate_SetSubjectKeyIdentifier</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Set content of Extension SubjectKeyIdentifier AKID / OID 2.5.29.14. If the extension is not present, it will be added.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509CertificateSetSubjectKeyIdentifierFromKey.htm">X509Certificate_SetSubjectKeyIdentifierFromKey</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Set content of Extension SubjectKeyIdentifier AKID / OID 2.5.29.14 to SHA1 of public key value. If the extension is not present, it will be added.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509CertificateSetValidFrom.htm">X509Certificate_SetValidFrom</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Set content of field NotBefore. String is expected in format ASN.1 GeneralizedTime or UTCTime. Set value 0 (= NULL) to delete the field.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509CertificateSetValidTo.htm">X509Certificate_SetValidTo</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Set content of field NotAfter. String is expected in format ASN.1 GeneralizedTime or UTCTime. Set value 0 (= NULL) to delete the field.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509CertificateSetVersion.htm">X509Certificate_SetVersion</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Set content of field Version. Set value 0 (= NULL) to delete the field</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509CertificateToString.htm">X509Certificate_ToString</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Get certificate content in textual representation.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509Decoder_DecodeCertificate.htm">X509Decoder_DecodeCertificate</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Decode the certificate passed as binary data from DER or PEM format. Returns Handle of type X509Certificate.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509Decoder_DecodeSigningRequest.htm">X509Decoder_DecodeSigningRequest</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Decode the PKCS#10 Certificate Signing Request passed as binary data from DER or PEM format. Returns handle of Type Pkcs10SigningRequest.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509DN_GetAttributes.htm">X509DN_GetAttributes</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Get content of field Attributes. Returns handle of Type X509Attributes.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509DN_GetValueForAttribute.htm">X509DN_GetValueForAttribute</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Look up the attribute and get content for the given OID in textual representation. OID has point notation 0.1.2.3.4.5</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509DN_SetAttributes.htm">X509DN_SetAttributes</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Set content of field Attributes. Valid argument handle must have type X509Attributes or value 0 (= NULL) to delete the field.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509DN_SetValueForAttribute.htm">X509DN_SetValueForAttribute</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Look up the attribute and set the content for the given OID in textual representation. Will insert the attribute if it does not exist. OID has point notation 0.1.2.3.4.5</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509DNAttribute_GetAttribute.htm">X509DNAttribute_GetAttribute</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Get content of field Attribute. Returns handle of Type X509Oid.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509DNAttribute_GetValue.htm">X509DNAttribute_GetValue</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Get content of field Value.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509DNAttribute_GetValueAsn1Tag.htm">X509DNAttribute_GetValueAsn1Tag</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Get content of field ASN.1 Tag.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509DNAttribute_SetAttribute.htm">X509DNAttribute_SetAttribute</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Set content of field Attribute. Valid argument handle must have type X509Oid or value 0 (= NULL) to delete the field.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509DNAttribute_SetValue.htm">X509DNAttribute_SetValue</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Set content of field Value. Set value 0 (= NULL) to delete the field</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509DNAttribute_SetValueAsn1Tag.htm">X509DNAttribute_SetValueAsn1Tag</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Set content of field ASN.1 Tag. Set value 0 (= NULL) to delete the field</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509DNAttributes_Add.htm">X509DNAttributes_Add</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Add entry for DN Attributes, field will be appended to the end of the ordered attribute list. Valid argument handle must have type X509Attribute.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509DNAttributes_Erase.htm">X509DNAttributes_Erase</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Erase entry for DN Attributes. Valid argument handle must have type X509Attribute.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509DNAttributes_GetElement.htm">X509DNAttributes_GetElement</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Get an existing element from the attributes list at specific position. Will fail in case the position is not in valid range of the list. Returns handle of Type X509Attribute.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509DNAttributes_InsertElement.htm">X509DNAttributes_InsertElement</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Insert entry for DN Attributes at specific position. Will fail in case the position is not in valid range of the list. Valid argument handle must have type X509Attribute.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509DNAttributes_SetElement.htm">X509DNAttributes_SetElement</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Update content of an existing element for DN Attributes at specific position. Will fail in case the position is not in valid range of the list. Valid argument handle must have type X509Attribute.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509DNAttributes_Size.htm">X509DNAttributes_Size</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Get size of the list.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509Encoder_EncodeCertificate.htm">X509Encoder_EncodeCertificate</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Encode a certificate into binary DER format. This function will encode any certificate structure, even if the content of the certificate is invalid in terms of X.509 specification (-&gt; Error testing). Valid argument handle must have type X509Certificate.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509Encoder_EncodeSigningRequest.htm">X509Encoder_EncodeSigningRequest</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Encode PKCS#10 Signing Request into binary DER format. This function will encode any structure, even if the content of the structure is invalid in terms of X.509 specification (-&gt; Error testing). Valid argument handle must have type Pkcs10SigningRequest.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509Encoder_EncodeTbsCertificate.htm">X509Encoder_EncodeTbsCertificate</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Encode ToBeSigned part of certificate into binary DER format. This function will encode any certificate structure, even if the content of the certificate is invalid in terms of X.509 specification (-&gt; Error testing). Valid argument handle must have type X509Certificate.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509Encoder_EncodeTbsSigningRequest.htm">X509Encoder_EncodeTbsSigningRequest</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Encode ToBeSigned part of PKCS#10 Signing Request into binary DER format. This function will encode any structure, even if the content of the structure is invalid in terms of X.509 specification (-&gt; Error testing). Valid argument handle must have type Pkcs10SigningRequest.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509Extension_GetIsCritical.htm">X509Extension_GetIsCritical</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Get content of field Critical.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509Extension_GetOid.htm">X509Extension_GetOid</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Get content of field Oid. Returns handle of Type X509Oid.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509Extension_GetValue.htm">X509Extension_GetValue</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Get content of field Value.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509Extension_SetIsCritical.htm">X509Extension_SetIsCritical</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Set content of field Critical.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509Extension_SetOid.htm">X509Extension_SetOid</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Set content of field OID. Valid argument handle must have type X509Oid or value 0 (= NULL) to delete the field.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509Extension_SetValue.htm">X509Extension_SetValue</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Set value for the extension.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509Extensions_Add.htm">X509Extensions_Add</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Add entry for Extensions, field will be appended to the end of the ordered attribute list. Valid argument handle must have type X509Extension.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509Extensions_Erase.htm">X509Extensions_Erase</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Erase entry for Extensions. Valid argument handle must have type X509Extension.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509Extensions_GetElement.htm">X509Extensions_GetElement</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Get an existing element from the extensions list at specific position. Will fail in case the position is not in valid range of the list. Returns handle of Type X509Extension.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509Extensions_InsertElement.htm">X509Extensions_InsertElement</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Insert entry for Extension at specific position. Will fail in case the position is not in valid range of the list. Valid argument handle must have type X509Extension.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509Extensions_SetElement.htm">X509Extensions_SetElement</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Update content of an existing element for Extensions at specific position. Will fail in case the position is not in valid range of the list. Valid argument handle must have type X509Extension.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509Extensions_Size.htm">X509Extensions_Size</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Get size of the list.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509ObjectFactory_BytesFromHexString.htm">X509ObjectFactory_BytesFromHexString</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Convert string with hexadecimal representation into byte buffer.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509ObjectFactory_BytesToHexString.htm">X509ObjectFactory_BytesToHexString</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Convert byte buffer into hexadecimal representation as string in format AABBCCDD.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509ObjectFactory_copyX509AlgorithmIdentifier.htm">X509ObjectFactory_copyX509AlgorithmIdentifier</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Create deep copy of handle with type X509AlgIdentifier.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509ObjectFactory_copyX509Certificate.htm">X509ObjectFactory_copyX509Certificate</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Create deep copy of handle with type X509Certificate.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509ObjectFactory_copyX509DN.htm">X509ObjectFactory_copyX509DN</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Create deep copy of handle with type X509DN.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509ObjectFactory_copyX509DNAttribute.htm">X509ObjectFactory_copyX509DNAttribute</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Create deep copy of handle with type X509DNAttribute.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509ObjectFactory_copyX509DNAttributes.htm">X509ObjectFactory_copyX509DNAttributes</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Create deep copy of handle with type X509DNAttributes.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509ObjectFactory_copyX509Extension.htm">X509ObjectFactory_copyX509Extension</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Create deep copy of handle with type X509Extension.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509ObjectFactory_copyX509Extensions.htm">X509ObjectFactory_copyX509Extensions</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Create deep copy of handle with type X509Extensions.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509ObjectFactory_copyX509Oid.htm">X509ObjectFactory_copyX509Oid</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Create deep copy of handle with type X509Oid.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509ObjectFactory_createPkcs10SigningRequest.htm">X509ObjectFactory_createPkcs10SigningRequest</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Create empty handle of type Pkcs10SigningRequest.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509ObjectFactory_createX509AlgorithmIdentifier.htm">X509ObjectFactory_createX509AlgorithmIdentifier</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Create empty handle of type X509AlgIdentifier.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509ObjectFactory_createX509Certificate.htm">X509ObjectFactory_createX509Certificate</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Create empty handle of type X509Certificate.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509ObjectFactory_createX509CertificateFromCsr.htm">X509ObjectFactory_createX509CertificateFromCsr</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Create new certificate handle with content copied from PKCS#10 CSR. Valid argument handle must have type Pkcs10SigningRequest.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509ObjectFactory_createX509Decoder.htm">X509ObjectFactory_createX509Decoder</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Create handle of type X509Decoder.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509ObjectFactory_createX509DN.htm">X509ObjectFactory_createX509DN</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Create empty handle of type X509DN.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509ObjectFactory_createX509DNAttribute.htm">X509ObjectFactory_createX509DNAttribute</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Create empty handle of type X509DNAttribute.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509ObjectFactory_createX509DNAttributes.htm">X509ObjectFactory_createX509DNAttributes</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Create empty handle of type X509DNAttributes.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509ObjectFactory_createX509Encoder.htm">X509ObjectFactory_createX509Encoder</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Create handle of type X509Encoder.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509ObjectFactory_createX509Extension.htm">X509ObjectFactory_createX509Extension</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Create empty handle of type X509Extension.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509ObjectFactory_createX509Extensions.htm">X509ObjectFactory_createX509Extensions</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Create empty handle of type X509Extensions.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509ObjectFactory_createX509Oid.htm">X509ObjectFactory_createX509Oid</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Create empty handle of type X509Oid.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509ObjectFactory_createX509PkiAccess.htm">X509ObjectFactory_createX509PkiAccess</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Create handle of type X509PkiAccess.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509ObjectFactory_createX509Verifier.htm">X509ObjectFactory_createX509Verifier</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Create handle of type X509Verifier.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509Oid_GetOid.htm">X509Oid_GetOid</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Get the content of the numeric OID value.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509Oid_GetOidString.htm">X509Oid_GetOidString</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Get the content of the OID as string representation in point notation.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509Oid_SetOid.htm">X509Oid_SetOid</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Set the content of the numeric OID value.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509Oid_SetOidFromString.htm">X509Oid_SetOidFromString</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Set the content of the OID from string representation in point notation.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509PkiAccess_CreateSigner.htm">X509PkiAccess_CreateSigner</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Create signer handle from raw key material. The hash function will be used for algorithms that require specific hash function (e.g. ECDSA). For Algorithms with predefined Hash function (e.g. Ed25519) this will be ignored. Algorithm will be determined from certificate. Returns handle of Type X509Signer.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509PkiAccess_LoadCertificateByKeyIdentifier.htm">X509PkiAccess_LoadCertificateByKeyIdentifier</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Load signer certificate handle in Security Profile by subject key identifier in Security Profile. Returns handle of Type X509Certificate.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509PkiAccess_LoadCertificateByName.htm">X509PkiAccess_LoadCertificateByName</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Load signer certificate handle from key material in Security Profile by name. Returns handle of Type X509Certificate.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509PkiAccess_LoadSignerByKeyIdentifier.htm">X509PkiAccess_LoadSignerByKeyIdentifier</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Load signer handle from key material in Security Profile by certificate subject key identifier. The hash function will be used for algorithms that require specific hash function (e.g. ECDSA). For Algorithms with predefined Hash function (e.g. Ed25519) this will be ignored. Algorithm will be determined from certificate. Returns handle of Type X509Signer.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509PkiAccess_LoadSignerByName.htm">X509PkiAccess_LoadSignerByName</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Load signer handle from key material in Security Profile by name. The hash function will be used for algorithms that require specific hash function (e.g. ECDSA). For Algorithms with predefined Hash function (e.g. Ed25519) this will be ignored. Algorithm will be determined from certificate. Returns handle of Type X509Signer.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509Signer_CreateCertificateSignature.htm">X509Signer_CreateCertificateSignature</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Create signature for the certificate using the signers private key and the algorithm from signers certificate subject key algorithm. Will not update the certificate but only create the signature. Valid argument handle must have type X509Certificate.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509Signer_CreateDataSignature.htm">X509Signer_CreateDataSignature</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Create signature for the data using the signers private key and the algorithm from signers certificate subject key algorithm.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509Signer_GetAuthorityKeyIdentifier.htm">X509Signer_GetAuthorityKeyIdentifier</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Get the AuthorityKeyIdentifier of the signer certificate (if extension is available).</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509Signer_GetSignatureAlgIdentifier.htm">X509Signer_GetSignatureAlgIdentifier</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Get the signature algorithm identifier of the signer certificate. Returns handle of Type X509AlgIdentifier.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509Signer_GetSignerCertificate.htm">X509Signer_GetSignerCertificate</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Get the signer certificate. Returns handle of Type X509Certificate.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509Signer_GetSubjectKeyIdentifier.htm">X509Signer_GetSubjectKeyIdentifier</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Get the SubjectKeyIdentifier of the signer certificate (if extension is available).</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509Signer_UpdateAndSignCertificate.htm">X509Signer_UpdateAndSignCertificate</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Create update all relevant fields (Issuer, AuthorityKeyIdentifier, SignatureAlgorithm) in the certificate and update the signature using the signers key material. Valid argument handle must have type Pkcs10SigningRequest.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509Verifier_AddTrustedCertificate.htm">X509Verifier_AddTrustedCertificate</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Add certificate to the verifiers trust store to be used for chain verification. Valid argument handle must have type X509Certificate.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509Verifier_ClearTrustedCertificates.htm">X509Verifier_ClearTrustedCertificates</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Clear the verifiers trust store and remove all trusted certificates.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509Verifier_VerifyCertificateChain.htm">X509Verifier_VerifyCertificateChain</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Verify certificate chain using the stored and trusted certificates. Valid argument handle must have type X509Certificate.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509Verifier_VerifyDataSignature.htm">X509Verifier_VerifyDataSignature</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Verify signature of data block. Valid argument handle must have type X509Certificate. The hash function will be used for algorithms that require specific hash function (e.g. ECDSA). For Algorithms with predefined Hash function (e.g. Ed25519) this will be ignored.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509Verifier_VerifySelfSignedCertificate.htm">X509Verifier_VerifySelfSignedCertificate</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Verify signature of self signed certificate. Valid argument handle must have type X509Certificate.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionX509Verifier_VerifySigningRequest.htm">X509Verifier_VerifySigningRequest</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                        <p class="Table">Verify signature of PKCS#10 Certificate Signing Request. Valid argument handle must have type Pkcs10SigningRequest.</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <p class="LinkList">&#160;</p>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="FooterWhite">
+                <table class="FooterWhite" style="border-collapse: collapse;margin-left: auto;margin-right: auto;">
+                    <col style="width: 70px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col style="width: 16px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="buttons popup-container clearfix topicToolbarProxy topicToolbarProxyFooter _Skins_HTML5TopicToolbar mc-component nocontent">
+                                    <div class="button-group-container-left">
+                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo"><a href="../../Shared/HowToUseOnlineHelp.htm" title="Tips for using the help" alt="Tips for using the help"><img src="../../../Resources/vImages/vBackstage/vHelpInfo.png" /></a>
+                                </p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo" style="text-align: right;"><span class="mc-variable Vector.BuildTime variable">2024-04-8T20:56:42</span>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <table style="width: 100%;border-collapse: separate;border-spacing: 3px 0px;margin-left: auto;margin-right: auto;caption-side: top;">
+                <col />
+                <col />
+                <col />
+                <col data-mc-conditions="BuildProcess.HTML5Link" />
+                <tbody>
+                    <tr>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;">
+                            <p class="vec_Footer">©&#160;Vector Informatik GmbH</p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;text-align: right;">
+                            <p class="vec_FooterBold">
+                                <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE&#160;Product Families</MadCap:conditionalText> Version <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.VectorTestUnitRunner">18</MadCap:conditionalText></p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="../../Shared/ContactCopyrightLicense.htm" class="vec_Footer MCXref xref xrefvec_Footer">Contact/Copyright/License</a>
+                            </p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="https://www.vector.com/int/en/company/get-info/privacy-policy/" target="_blank" class="vec_Footer">Data Privacy Notice</a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

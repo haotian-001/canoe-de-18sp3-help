@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="CANoeDEFamily.xml" data-mc-path-to-help-system="../../../../../../" data-mc-conditions="Targets.CANoe-DE-Family" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../../Skins/Favicons/favicon-16x16.png" /><title>Introduction (MATLAB Integration)</title>
+        <link href="../../../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Resources/Stylesheets/vTableMasterPageHeader.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../../../Resources/Stylesheets/vStylesheet.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../../../Resources/Stylesheets/vTableSymbol.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../../../Resources/Stylesheets/vTable.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapGlobal.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapDom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapUtilities.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapXhr.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapTextEffects.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapSlideshow.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapMessageBus.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapMessageBus.CrossFrame.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapDefault.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapMediaQueries.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapAccessibility.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapHelpSystem.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapAliasFile.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapTopicFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapFeedbackHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapSkinHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapToc.Breadcrumbs.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapToc.MiniToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapToc.SideMenu.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapIndex.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapGlossary.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapParser.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapSearch.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapNavigateTopics.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapLms.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapELearning.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapTopic.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapMicroContentComponent.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapSearchHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapTopicElements.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapTriPane.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/jscript" src="../../../../../Resources/vScripts/SyntaxHighlighting.js">
+        </script>
+        <script type="text/jscript" src="../../../../../Resources/vScripts/TabSwitch.js">
+        </script>
+        <script type="text/javascript" src="../../../../../Resources/vScripts/Vector.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../../../../CANoeDEFamily.htm#Topics/CANoeCANalyzer/Interfaces/MATLAB/Setup/MATLABSetupIntroduction.htm">Open topic with navigation</a>
+        </p>
+        <div class="Body">
+            <div role="main" id="mc-main-content">
+                <div>
+                    <p class="StructurePath"><a href="../MATLAB.htm" class="StructurePath">MATLAB Integration Package</a> » <a href="../MATLAB.htm#Setup" class="StructurePath">Setup</a> » Compiler Configuration</p>
+                    <h1>Compiler Configuration</h1>
+                    <p class="MenuPath">&#160;</p>
+                    <p class="ToolAvailability" data-mc-conditions="BuildProcess.ToolAvailability"><a href="../../../../Shared/FeatureAvailability.htm" class="red" title="Feature availabilty for your product">Valid&#160;for</a>:&#160;&#160;CANoe&#160;DE<a name="aanchor23408"></a><MadCap:concept term="SFCANoeDE" />&#160;&#160;•&#160;&#160;CANoe:lite&#160;DE<a name="aanchor23409"></a><MadCap:concept term="SFCANoeLiteDE" />&#160;&#160;•&#160;&#160;CANoe4SW&#160;DE<a name="aanchor23410"></a><MadCap:concept term="SFCANoe4SWDE" />&#160;&#160;•&#160;&#160;CANoe4SW:lite&#160;DE<a name="aanchor23411"></a><MadCap:concept term="SFCANoe4SWLiteDE" /></p>
+                    <p class="AutoSearchFilterConcepts"><a name="aanchor23412"></a>
+                        <MadCap:concept term="SFInterfaces" />
+                    </p>
+                    <p><a name="aanchor23413"></a>
+                        <MadCap:concept term="MATLABSetup" /><a name="kanchor7738"></a>
+                    </p>
+                </div>
+                <div>
+                    <h2 class="SectionMain">MATLAB / Compiler Versions</h2>
+                    <p>MATLAB needs to be associated with your C compiler in order to generate the DLL/SO files for the HIL mode.
+See your MATLAB Simulink Coder  documentation for a correct setup of the compiler environment. Typically the command <span class="bold">mex – setup</span> (for MATLAB Version up to and including R2013b) or <span class="bold">mex – setup C++</span> (starting with MATLAB Version R2014a) must be run from the command window. The following compilers are currently supported:</p>
+                    <div>
+                        <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                            <col />
+                            <col />
+                            <col />
+                            <col />
+                            <col />
+                            <col />
+                            <col />
+                            <col />
+                            <thead>
+                                <tr>
+                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep" rowspan="2">
+                                        <p class="TableHead">MATLAB Version</p>
+                                    </th>
+                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep" colspan="5">
+                                        <p class="Table">Microsoft Visual C++ Version</p>
+                                    </th>
+                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd" colspan="2">
+                                        <p class="TableHead">Mingw-w64 Version</p>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                        <p class="TableHead">2013 (12.0), Professional</p>
+                                    </th>
+                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                        <p class="TableHead">2015 (14.0), Professional</p>
+                                    </th>
+                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                        <p class="TableHead">2017 (15.0), Professional</p>
+                                    </th>
+                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                        <p class="TableHead">2019 (16.0), Professional</p>
+                                    </th>
+                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                        <p class="TableHead">2022 (17.0), Professional</p>
+                                    </th>
+                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                        <p class="TableHead">MinGW 5.3</p>
+                                    </th>
+                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                        <p class="TableHead">MinGW 6.3</p>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableHead">R2014a</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p align="center" class="Table">✔</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd" style="text-align: center;">
+                                        <p class="Table">—</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableHead">R2014b</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">✔</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd" style="text-align: center;">
+                                        <p class="Table">—</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableHead">R2015a</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">✔</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd" style="text-align: center;">
+                                        <p class="Table">—</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableHead">R2015b</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">✔</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd" style="text-align: center;">
+                                        <p class="Table">—</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableHead">R2016a</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">✔</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">✔</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd" style="text-align: center;">
+                                        <p class="Table">—</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableHead">R2016b</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">✔</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">✔</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd" style="text-align: center;">
+                                        <p class="Table">—</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableHead">R2017a</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">✔</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">✔</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd" style="text-align: center;">
+                                        <p class="Table">—</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableHead">R2017b</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">✔</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">✔</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">✔</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">✔</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd" style="text-align: center;">
+                                        <p class="Table">—</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableHead">R2018a</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">✔</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">✔</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">✔</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">✔</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd" style="text-align: center;">
+                                        <p class="Table">—</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableHead">R2018b</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p align="center" class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">✔</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">✔</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd" style="text-align: center;">
+                                        <p class="Table">✔</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableHead">R2019a</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">✔</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">✔</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd" style="text-align: center;">
+                                        <p class="Table">✔</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableHead">R2019b</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">✔</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">✔</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">✔</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">—</td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd" style="text-align: center;">
+                                        <p class="Table">✔</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableHead">R2020a</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">✔</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">✔</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">✔</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">—</td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd" style="text-align: center;">
+                                        <p class="Table">✔</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableHead">R2020b</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">✔</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">✔</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">✔</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">—</td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd" style="text-align: center;">
+                                        <p class="Table">✔</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableHead">R2021a</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">✔</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">✔</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">✔</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">—</td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd" style="text-align: center;">
+                                        <p class="Table">✔</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableHead">R2021b</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p align="center" class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">✔</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">✔</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">—</td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd" style="text-align: center;">
+                                        <p class="Table">✔</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableHead">R2022a</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p align="center" class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">✔</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">✔</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">✔</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd" style="text-align: center;">
+                                        <p class="Table">✔</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableHead">R2022b</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p align="center" class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">✔</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">✔</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">✔</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd" style="text-align: center;">
+                                        <p class="Table">✔</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableHead">R2023a</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p align="center" class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">✔</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">✔</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">✔</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd" style="text-align: center;">
+                                        <p class="Table">✔</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                        <p class="TableHead">R2023b</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep" style="text-align: center;">
+                                        <p class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep" style="text-align: center;">
+                                        <p align="center" class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep" style="text-align: center;">
+                                        <p class="Table">✔</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep" style="text-align: center;">
+                                        <p class="Table">✔</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep" style="text-align: center;">
+                                        <p class="Table">✔</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep" style="text-align: center;">
+                                        <p class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd" style="text-align: center;">
+                                        <p class="Table">✔</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p>See further: <a href="../MATLABVersionHistory.htm">MATLAB Integration Package Version History</a></p>
+                </div>
+                <div>
+                    <h2 class="SectionMain">Microsoft Visual C++ Compiler</h2>
+                    <p>
+See your MATLAB Simulink Coder  documentation for a correct setup of the compiler environment. Typically the command <span class="bold">mex – setup</span> (for MATLAB Version up to and including R2013b) or <span class="bold">mex – setup C++</span> (starting with MATLAB Version R2014a) must be run from the command window. </p>
+                </div>
+                <div>
+                    <h2 class="SectionMain">Mingw-w64 Compiler</h2>
+                    <h3>
+Limitations</h3>
+                    <p>The <span class="bold">MinGW compiler</span> does not yet support all the features of the <span class="bold">Microsoft Visual C++ compiler</span>. Currently not available is the following feature:</p>
+                    <ul>
+                        <li>Extended Real-Time DLL</li>
+                    </ul>
+                    <h3>Required Compiler Configuration</h3>
+                    <p>For the MATLAB Integration Package <span class="bold">both</span> architectures (32Bit/ 64Bit) of the MinGW compiler are necessary. With MinGW each architecture comes as a separate compiler, so two compilers have to be installed.</p>
+                    <p>The MinGW compiler comes in different configurations we recommend the following:</p>
+                    <table style="mc-table-style: url('../../../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                        <tbody>
+                            <tr>
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="TableHead">Architecture</p>
+                                </th>
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="TableHead">Threading Model</p>
+                                </th>
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="TableHead">Exception Handling</p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">32 Bit</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Posix</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">dwarf</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="Table">64 Bit</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="Table">Posix</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                    <p class="Table">seh
+(Structured Exception Handling)</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h3>Obtaining the Compiler</h3>
+                    <div>
+                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                            <col class="TableStyle-vTableSymbol-Column-Column1" />
+                            <col class="TableStyle-vTableSymbol-Column-Column2" />
+                            <tbody>
+                                <tr>
+                                    <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                        <p class="Table">
+                                            <img src="../../../../../Resources/vImages/vInfo.png" style="width: 48px;height: 45px;" title="Note" alt="Note" />
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                        <p class="TableSymbolHead">Note</p>
+                                        <p class="Table">Vector is not affiliated with the compiler distributor in any way. Please be aware that this is FOSS (Free and open-source software) with all the advantages and risks.</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p>The 64-bit MinGW compiler must be installed through the free official MATLAB add-on. The add-on, named <span class="bold">MATLAB Support for MinGW-w64 C/C++ Compiler</span>, can be obtained either through the <span class="bold">MATLAB Add-on Explorer</span> or directly from the <a href="https://www.mathworks.com/matlabcentral/fileexchange/52848-matlab-support-for-mingw-w64-c-c-compiler" target="_blank" class="ExternalLink">Mathworks website</a>.</p>
+                    <p>The 32-bit version of the MinGW compiler can be obtained free-of-charge from the Vector Download Center. There, the two supported versions MinGW 5.3 and MinGW 6.3 are available in the form of the <a href="http://www.vector.com/downloads/MatlabCompilerBundle/" target="_blank" class="ExternalLink">CANoe MATLAB Integration Package Compiler Bundle 1.0</a>. Alternatively, the compilers can be downloaded from the <a href="https://sourceforge.net/projects/mingw-w64/files/" target="_blank" class="ExternalLink">SourceForge website</a>. Direct links to the recommended versions are <a href="https://sourceforge.net/projects/mingw-w64/files/Toolchains targeting Win32/Personal Builds/mingw-builds/5.3.0/threads-posix/dwarf/" target="_blank" class="ExternalLink">MinGW 5. 3</a> and <a href="https://sourceforge.net/projects/mingw-w64/files/Toolchains targeting Win32/Personal Builds/mingw-builds/6.3.0/threads-posix/dwarf/" target="_blank" class="ExternalLink">MinGW 6.3</a>.</p>
+                    <p>The compressed folder only has to be unzipped and placed in a suitable directory. Installing the compiler it is not necessary.</p>
+                    <h3>Configuring the Compiler</h3>
+                    <p>The 64 bit MinGW compiler only needs to be registered in MATLAB after setup, all you need to do is execute the <span class="bold">mex -setup</span> command in the MATLAB command window.</p>
+                    <p>The 32-bit MinGW compiler for the MATLAB Integration Package can’t be set from the MATLAB command window. The paths to its/bin directory has to be configured as Windows system variable.</p>
+                    <table style="mc-table-style: url('../../../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                        <col />
+                        <col />
+                        <col />
+                        <tbody>
+                            <tr>
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="TableHead">Name of the System Variable</p>
+                                </th>
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="TableHead">Configuration</p>
+                                </th>
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="TableHead">Example Content</p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="Table">CANoe_MatlabIntegrationPackage_MinGW_32_bin</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="Table">Path to the /bin directory of the 32 Bit MinGW installation</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                    <p class="Table">C:\mingw32\bin</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>You can create the system environment variables with the following steps:</p>
+                    <ol>
+                        <li value="1">Use the Windows (Start Menu)&#160;search input box, type in <span class="bold">env</span>, and choose <span class="GUI">Edit the system environment variables</span>.</li>
+                        <li value="2">In the <span class="GUI">System Properties</span> dialog on page <span class="GUI">Advanced</span>, click the <span class="GUI">Environment Variables</span> button.</li>
+                        <li value="3">Use the <span class="GUI">New</span> button to define the variable as required.</li>
+                        <li value="4">Restart MATLAB, so these changes will take effect.</li>
+                    </ol>
+                </div>
+                <div>
+                    <h3 class="SectionMain">Linux Compiler</h3>
+                    <p>The MATLAB Integration Package allows you to compile Simulink models for use in <a href="../../../RTSetup/RTSetupLinux.htm">Linux RT</a><a href="../../ExtendedRealTime/ERTCANoeVersion17.htm">/ERT</a>  (ERT is only available for CANoe DE). To install this optional feature, select the <span class="bold">Custom</span> setup type and activate <span class="bold">Support for Linux RT</span><span class="bold">/ERT</span> (ERT is only available for CANoe DE) during the MATLAB Integration Package setup. Afterwards, the target <span class="bold">cn_linux</span> is additionally available to you.</p>
+                    <p>Currently, the range of functions is still limited. The following features are not yet supported:</p>
+                    <ul>
+                        <li>Multitasking mode</li>
+                        <li>CAPL blocks and CAPL functions</li>
+                        <li>XCP</li>
+                        <li>Signal analysis</li>
+                    </ul>
+                    <p>To use all the features of the MATLAB Integration Package, you still need to register a C compiler in MATLAB. This can be either a Microsoft Visual C compiler or the 64-bit version of the MinGW compiler.</p>
+                    <p>System requirements:</p>
+                    <ul>
+                        <li>MATLAB&#160;Version: starting with MATLAB R2018b</li>
+                        <li>Linux RT available starting with <a href="../../../RTSetup/RTSetupLinux.htm"><MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> version 13</a> (only CANoe DE, CANoe:lite DE)</li>
+                        <li>Linux ERT available starting with <a href="../../ExtendedRealTime/ERTCANoeVersion17.htm"><MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> version 17</a> (only CANoe DE)</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="SectionMain">Verification</h2>
+                    <p>To verify proper installation open the Simulink library browser. You should see an additional library: <span class="GUI">Vector CANoe</span>.
+When you open a model (or create a new one) open the <span class="GUI">Tools</span> menu and click the <span class="GUI">Code Generation Options</span>. Under <span class="GUI">Code generation</span> select the <span class="GUI">Browse</span> button to open the <span class="GUI">System Target File Browser</span>. In this list you should see the following lines:</p>
+                    <ul>
+                        <li>
+                            <p class="TableBold">cn.tlc		Vector CANoe Real-Time Target DLL (Visual C++ Project Makefile)</p>
+                        </li>
+                        <li>
+                            <p class="TableBold">cn_mingw.tlc  Vector CANoe Real-Time Target DLL (MinGW C/C++ Makefile)</p>
+                        </li>
+                        <li>
+                            <p class="TableBold">cn_linux.tlc Vector CANoe Real-Time Target (Clang C/C++ Makefile) (only if support for Linux RT/ERT was installed)</p>
+                        </li>
+                    </ul>
+                </div>
+                <p class="LinkList"><a class="MCHelpControl MCHelpControl-Concept conceptLink" data-mc-concepts="MATLABSetup" href="javascript:void(0);" data-mc-topics="Behavior of Models With Parallel Execution (MATLAB Integration)|MATLABParallelExecutionModels.htm#aanchor18337||CANoe Interaction Layer (MATLAB Integration)|MATLABSetupIL.htm#aanchor7628||Configuration and Test of CANoe Simulink Blocks (MATLAB Integration)|MATLABSetupConfigTest.htm#aanchor21937||Connect Simulink with CANoe|MATLABSimulinkWithCANoe.htm#aanchor30588||Customizing for Calibration using XCP (MATLAB Integration)|MATLABSetupCustCalXCP.htm#aanchor14180||Customizing for Multitasking Environment|MATLABSetupCustMultitasking.htm#aanchor8860||Customizing for Parameterization from CANoe (MATLAB Integration)|MATLABSetupCustParamCANoe.htm#aanchor13876||HIL Mode - CANoe Configuration (MATLAB Integration)|MATLABhilModeCANoeConfig.htm#aanchor28679||HIL Mode - Simulink Configuration (MATLAB Integration)|MATLABSetupCustIntCANoe.htm#aanchor31936||Installation of the MATLAB Integration Package|MATLABInstallation.htm#aanchor7374||Introduction (MATLAB Integration)|#aanchor23413||Model Referencing (MATLAB Integration)|MATLABSetupModelRef.htm#aanchor28728||Offline Mode / Synchronous Mode - Simulink and CANoe (MATLAB Integration)|MATLABOffSynchSimuCANoe.htm#aanchor28256||Stateflow Charts (MATLAB Integration)|MATLABSetupStateflowCharts.htm#aanchor8260"><span class="MCHelpControl-ConceptHotSpot_"><img class="MCHelpControl_Image_Icon" src="../../../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="14" width="16" alt="Concept Link Icon" />See Also</span></a>
+                </p>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="FooterWhite">
+                <table class="FooterWhite" style="border-collapse: collapse;margin-left: auto;margin-right: auto;">
+                    <col style="width: 70px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col style="width: 16px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="buttons popup-container clearfix topicToolbarProxy topicToolbarProxyFooter _Skins_HTML5TopicToolbar mc-component nocontent">
+                                    <div class="button-group-container-left">
+                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo"><a href="../../../../Shared/HowToUseOnlineHelp.htm" title="Tips for using the help" alt="Tips for using the help"><img src="../../../../../Resources/vImages/vBackstage/vHelpInfo.png" /></a>
+                                </p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo" style="text-align: right;"><span class="mc-variable Vector.BuildTime variable">2024-04-8T20:56:42</span>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <table style="width: 100%;border-collapse: separate;border-spacing: 3px 0px;margin-left: auto;margin-right: auto;caption-side: top;">
+                <col />
+                <col />
+                <col />
+                <col data-mc-conditions="BuildProcess.HTML5Link" />
+                <tbody>
+                    <tr>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;">
+                            <p class="vec_Footer">©&#160;Vector Informatik GmbH</p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;text-align: right;">
+                            <p class="vec_FooterBold">
+                                <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE&#160;Product Families</MadCap:conditionalText> Version <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.VectorTestUnitRunner">18</MadCap:conditionalText></p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="../../../../Shared/ContactCopyrightLicense.htm" class="vec_Footer MCXref xref xrefvec_Footer">Contact/Copyright/License</a>
+                            </p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="https://www.vector.com/int/en/company/get-info/privacy-policy/" target="_blank" class="vec_Footer">Data Privacy Notice</a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="CANoeDEFamily.xml" data-mc-path-to-help-system="../../../../" data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../Skins/Favicons/favicon-16x16.png" /><title>Ports (COM Object)</title>
+        <link href="../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Resources/Stylesheets/vTableMasterPageHeader.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../Resources/Stylesheets/vStylesheet.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../Resources/Stylesheets/vTableSymbol.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../Resources/Stylesheets/vTableLight.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapGlobal.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapDom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapUtilities.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapXhr.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTextEffects.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSlideshow.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMessageBus.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMessageBus.CrossFrame.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapDefault.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMediaQueries.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAccessibility.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapHelpSystem.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAliasFile.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopicFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapFeedbackHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSkinHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.Breadcrumbs.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.MiniToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.SideMenu.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapIndex.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapGlossary.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapParser.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSearch.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapNavigateTopics.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapLms.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapELearning.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopic.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMicroContentComponent.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSearchHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopicElements.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTriPane.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/jscript" src="../../../Resources/vScripts/SyntaxHighlighting.js">
+        </script>
+        <script type="text/jscript" src="../../../Resources/vScripts/TabSwitch.js">
+        </script>
+        <script type="text/javascript" src="../../../Resources/vScripts/Vector.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../../CANoeDEFamily.htm#Topics/COMInterface/Objects/COMObjectPorts.htm">Open topic with navigation</a>
+        </p>
+        <div class="Body">
+            <div role="main" id="mc-main-content">
+                <div>
+                    <p class="AutoSearchFilterConcepts"><a name="aanchor22889"></a>
+                        <MadCap:concept term="SFCOMInterface" />
+                    </p>
+                    <p class="IndexConcept"><a name="kanchor7568"></a>
+                    </p>
+                    <p class="StructurePath"><a href="../../CANoeCANalyzer/CANoeDEFamily.htm" class="StructurePath" data-mc-conditions="Targets.CANoe-DE-Family"><img src="../../../Resources/vImages/vToolIcons/CANoeDEFamily_Icon16_15x15.png" alt="" style="width: 15;height: 15;" />&#160;CANoe&#160;DE&#160;Product&#160;Families</a> » <a href="../COMInterface.htm" class="StructurePath MCXref xref xrefStructurePath">COM Interface</a> » <a href="../COMObjectHierarchy.htm" class="StructurePath">Objects</a> » Ports</p>
+                    <h1>Ports</h1>
+                    <p class="MenuPath"><a href="COMObjectApplication.htm" class="MenuPath">Application</a>&#160;» <a href="COMObjectBus.htm" class="MenuPath">Bus</a>&#160;» Ports<MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family"><br /><a href="COMObjectApplication.htm" class="MenuPath">Application</a>&#160;» <a href="COMObjectConfiguration.htm" class="MenuPath">Configuration</a>&#160;» <a href="COMObjectSimulationSetup.htm" class="MenuPath">SimulationSetup</a>&#160;» <a href="COMObjectBuses.htm" class="MenuPath">Buses</a>&#160;» <a href="COMObjectBus.htm" class="MenuPath">Bus</a>&#160;» Ports<br /><a href="COMObjectApplication.htm" class="MenuPath">Application</a>&#160;» <a href="COMObjectConfiguration.htm" class="MenuPath">Configuration</a>&#160;» <a href="COMObjectSimulationSetup.htm" class="MenuPath">SimulationSetup</a>&#160;» <a href="COMObjectNodes.htm" class="MenuPath">Nodes</a>&#160;» <a href="COMObjectNode.htm" class="MenuPath">Node</a>&#160;» <a href="COMObjectBuses.htm" class="MenuPath">Buses</a>&#160;» <a href="COMObjectBus.htm" class="MenuPath">Bus</a>&#160;» Ports</MadCap:conditionalText></p>
+                    <p class="ToolAvailability" data-mc-conditions="BuildProcess.ToolAvailability"><a href="../../Shared/FeatureAvailability.htm" class="red" title="Feature availabilty for your product">Valid&#160;for</a>:&#160;&#160;CANoe&#160;DE<a name="aanchor22890"></a><MadCap:concept term="SFCANoeDE" />&#160;&#160;•&#160;&#160;CANoe4SW&#160;DE<a name="aanchor22891"></a><MadCap:concept term="SFCANoe4SWDE" /></p>
+                </div>
+                <div>
+                    <div>
+                        <h2 class="CommandPage">Description</h2>
+                        <p>The <span class="bold">Ports</span> object represents all ports of a specific Ethernet bus in <a href="../../CANoeCANalyzer/Ethernet/EthernetPortBasedNetworkAccess.htm" class="MCXref xref">Network-based Access</a> mode as a collection.</p>
+                        <p>Ports are the access points for applications on the network. They can be used for <a href="../../CANoeCANalyzer/Ethernet/EthernetPortBasedNetworkAccess.htm">simulation</a> (read/write access) or for <a href="../../CANoeCANalyzer/Ethernet/EthernetPortBasedNetworkAccess.htm">measurement</a> (read access).</p>
+                        <ul>
+                            <li>
+                                <p class="ListItem">In <span class="Product">CANoe</span> the instantiation of ports is done by the <a href="COMObjectBus.htm#BMPorts"><span class="bold">Ports</span> property of the <span class="bold">Bus</span> object</a>, whereas</p>
+                            </li>
+                            <li>
+                                <p class="ListItem">in <span class="Product">CANalyzer</span> this is achieved by the <a href="COMObjectBus.htm#BMPortsOfChannel"><span class="bold">PortsOfChannel</span> property of the <span class="bold">Bus</span> object</a>.</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="CommandPage">Properties</h2>
+                        <table style="mc-table-style: url('../../../Resources/Stylesheets/vTableLight.css');margin-left: 0;margin-right: auto;width: 100%;" class="TableStyle-vTableLight" cellspacing="0">
+                            <col class="TableStyle-vTableLight-Column-Column1" style="width: 20%;" />
+                            <col class="TableStyle-vTableLight-Column-Column1" style="width: 5%;" />
+                            <col class="TableStyle-vTableLight-Column-Column1" style="width: 5%;" />
+                            <col class="TableStyle-vTableLight-Column-Column1" style="width: 45%;" />
+                            <col class="TableStyle-vTableLight-Column-Column1" style="width: 25%;" />
+                            <thead>
+                                <tr class="TableStyle-vTableLight-Head-Header1">
+                                    <th class="TableStyle-vTableLight-HeadE-Column1-Header1">
+                                        <p class="TableHead">Name</p>
+                                    </th>
+                                    <th class="TableStyle-vTableLight-HeadE-Column1-Header1">
+                                        <p class="TableTextSmall">Introduced<br />in version</p>
+                                    </th>
+                                    <th class="TableStyle-vTableLight-HeadE-Column1-Header1">
+                                        <p class="TableTextSmall">Available for</p>
+                                    </th>
+                                    <th class="TableStyle-vTableLight-HeadE-Column1-Header1">
+                                        <p class="TableHead">Property Value/Type</p>
+                                    </th>
+                                    <th class="TableStyle-vTableLight-HeadD-Column1-Header1">
+                                        <p class="TableHead">Property Value Element</p>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="TableStyle-vTableLight-Body-Body1">
+                                    <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                        <p class="TableBold"><a name="kanchor7569"></a><a name="BMCount" id="BMCount"></a><a class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler togglerBoldBlackUnderline MCTogglerHotSpot_ MCTogglerHotSpot_BoldBlackUnderline MCHotSpotImage" targets="TOGCount" href="javascript:void(0)" data-mc-targets="TOGCount"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Count</a>
+                                        </p>
+                                        <div style="display: none;" data-mc-target-name="TOGCount">
+                                            <p class="Table">This property returns the number of objects inside the collection.</p>
+                                            <p class="Table"><span class="bold">Syntax</span>: <span class="SourceCode">object.Count</span></p>
+                                        </div>
+                                        <p class="TableTextSmall">(read-only)</p>
+                                        <p class="TableTextSmall">(see example below)</p>
+                                    </td>
+                                    <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                        <p class="Table">12.0</p>
+                                    </td>
+                                    <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                        <div>
+                                            <p class="TableTextSmall"><span class="Product">CANalyzer</span>
+                                            </p>
+                                            <p class="TableTextSmall"><span class="Product">CANoe&#160;DE</span>
+                                            </p>
+                                            <p class="TableTextSmall"><span class="Product">CANoe4SW&#160;DE</span>
+                                            </p>
+                                        </div>
+                                    </td>
+                                    <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                        <p class="Table">Type: INT</p>
+                                        <p>The number of ports contained.</p>
+                                    </td>
+                                    <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                        <p class="Table">—</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-vTableLight-Body-Body1">
+                                    <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                        <p class="TableBold"><a name="kanchor7570"></a><a name="BMIsPortBasedConfig" id="BMIsPortBasedConfig"></a><a targets="TOGIsPortBasedConfig" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler togglerBoldBlackUnderline MCTogglerHotSpot_ MCTogglerHotSpot_BoldBlackUnderline MCHotSpotImage" href="javascript:void(0)" data-mc-targets="TOGIsPortBasedConfig"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />IsPortBasedConfig</a>
+                                        </p>
+                                        <div style="display: none;" data-mc-target-name="TOGIsPortBasedConfig">
+                                            <p class="Table">This property indicates whether the bus with its ports is operated in channel-based or <a href="../../CANoeCANalyzer/Ethernet/EthernetPortBasedNetworkAccess.htm">network-based access</a> mode.</p>
+                                            <p class="Table">In contrast to <span class="bold">IsSwitchedNetwork</span> this property triggers an internal update of all related objects, if the value is changed.</p>
+                                            <p class="Table"><span class="bold">Syntax</span>: <span class="SourceCode">object.IsPortBasedConfig [=value]</span></p>
+                                        </div>
+                                    </td>
+                                    <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                        <p class="Table">13.0</p>
+                                    </td>
+                                    <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                        <div>
+                                            <p class="TableTextSmall"><span class="Product">CANalyzer</span>
+                                            </p>
+                                            <p class="TableTextSmall"><span class="Product">CANoe&#160;DE</span>
+                                            </p>
+                                            <p class="TableTextSmall"><span class="Product">CANoe4SW&#160;DE</span>
+                                            </p>
+                                        </div>
+                                    </td>
+                                    <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                        <p class="Table">Type: BOOL</p>
+                                        <p class="Table">Indicates whether the bus with its ports is operated in channel-based or <a href="../../CANoeCANalyzer/Ethernet/EthernetPortBasedNetworkAccess.htm">network-based access</a> mode; <a class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler togglerBlackUnderline MCTogglerHotSpot_ MCTogglerHotSpot_BlackUnderline MCHotSpotImage" targets="TOGIsPortBasedConfig" href="javascript:void(0)" data-mc-targets="TOGIsPortBasedConfig"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />possible values</a>:</p>
+                                        <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableLight.css');display: none;" class="TableStyle-vTableLight" cellspacing="0" data-mc-target-name="TOGIsPortBasedConfig">
+                                            <col class="TableStyle-vTableLight-Column-Column1" />
+                                            <col class="TableStyle-vTableLight-Column-Column1" />
+                                            <tbody>
+                                                <tr class="TableStyle-vTableLight-Body-Body1">
+                                                    <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                        <p class="Table">TRUE</p>
+                                                    </td>
+                                                    <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                        <p class="Table">the network operates in <a href="../../CANoeCANalyzer/Ethernet/EthernetPortBasedNetworkAccess.htm">network-based access</a> mode.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-vTableLight-Body-Body1">
+                                                    <td class="TableStyle-vTableLight-BodyB-Column1-Body1">
+                                                        <p class="Table">FALSE</p>
+                                                    </td>
+                                                    <td class="TableStyle-vTableLight-BodyA-Column1-Body1">
+                                                        <p class="Table">the network operates in channel-based access mode.</p>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                    <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                        <p class="Table">—</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-vTableLight-Body-Body1">
+                                    <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                        <p class="TableBold"><a name="kanchor7571"></a><a name="BMIsSwitchedNetwork" id="BMIsSwitchedNetwork"></a><a class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler togglerBoldBlackUnderline MCTogglerHotSpot_ MCTogglerHotSpot_BoldBlackUnderline MCHotSpotImage" targets="TOGIsSwitchedNetwork" href="javascript:void(0)" data-mc-targets="TOGIsSwitchedNetwork"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />IsSwitchedNetwork</a>
+                                        </p>
+                                        <div style="display: none;" data-mc-target-name="TOGIsSwitchedNetwork">
+                                            <p class="Table">This property indicates whether the bus with its ports is operated in channel-based or <a href="../../CANoeCANalyzer/Ethernet/EthernetPortBasedNetworkAccess.htm">network-based access</a> mode.</p>
+                                            <p class="Table">For changing the access type the property <span class="bold">IsPortBasedConfig</span> is recommended, because this property only changes internal member value and not the state of depending objects.</p>
+                                            <p class="Table"><span class="bold">Syntax</span>: <span class="SourceCode">object.IsSwitchedNetwork [=value]</span></p>
+                                        </div>
+                                        <p class="TableTextSmall">(see example below)</p>
+                                    </td>
+                                    <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                        <p class="Table">12.0</p>
+                                    </td>
+                                    <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                        <div>
+                                            <p class="TableTextSmall"><span class="Product">CANalyzer</span>
+                                            </p>
+                                            <p class="TableTextSmall"><span class="Product">CANoe&#160;DE</span>
+                                            </p>
+                                            <p class="TableTextSmall"><span class="Product">CANoe4SW&#160;DE</span>
+                                            </p>
+                                        </div>
+                                    </td>
+                                    <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                        <p class="Table">Type: BOOL</p>
+                                        <p class="Table">Indicates whether the bus with its ports is operated in channel-based or <a href="../../CANoeCANalyzer/Ethernet/EthernetPortBasedNetworkAccess.htm">network-based access</a> mode; <a class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler togglerBlackUnderline MCTogglerHotSpot_ MCTogglerHotSpot_BlackUnderline MCHotSpotImage" targets="TOGIsSwitchedNetwork" href="javascript:void(0)" data-mc-targets="TOGIsSwitchedNetwork"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />possible values</a>:</p>
+                                        <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableLight.css');display: none;" class="TableStyle-vTableLight" cellspacing="0" data-mc-target-name="TOGIsSwitchedNetwork">
+                                            <col class="TableStyle-vTableLight-Column-Column1" />
+                                            <col class="TableStyle-vTableLight-Column-Column1" />
+                                            <tbody>
+                                                <tr class="TableStyle-vTableLight-Body-Body1">
+                                                    <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                        <p class="Table">TRUE</p>
+                                                    </td>
+                                                    <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                        <p class="Table">the network operates in <a href="../../CANoeCANalyzer/Ethernet/EthernetPortBasedNetworkAccess.htm">network-based access</a> mode.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-vTableLight-Body-Body1">
+                                                    <td class="TableStyle-vTableLight-BodyB-Column1-Body1">
+                                                        <p class="Table">FALSE</p>
+                                                    </td>
+                                                    <td class="TableStyle-vTableLight-BodyA-Column1-Body1">
+                                                        <p class="Table">the network operates in channel-based access mode.</p>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                    <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                        <p class="Table">—</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-vTableLight-Body-Body1">
+                                    <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                        <p class="TableBold"><a name="kanchor7572"></a><a name="BMItem" id="BMItem"></a><a class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler togglerBoldBlackUnderline MCTogglerHotSpot_ MCTogglerHotSpot_BoldBlackUnderline MCHotSpotImage" targets="TOGItem" href="javascript:void(0)" data-mc-targets="TOGItem"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Item</a>
+                                        </p>
+                                        <div style="display: none;" data-mc-target-name="TOGItem">
+                                            <p class="Table">This property returns an object from the collection.</p>
+                                            <p class="Table"><span class="bold">Syntax</span>: <span class="SourceCode">object.Item(index)</span></p>
+                                        </div>
+                                        <p class="TableTextSmall">(read-only)</p>
+                                        <p class="TableTextSmall">(see example below)</p>
+                                    </td>
+                                    <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                        <p class="Table">12.0</p>
+                                    </td>
+                                    <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                        <div>
+                                            <p class="TableTextSmall"><span class="Product">CANalyzer</span>
+                                            </p>
+                                            <p class="TableTextSmall"><span class="Product">CANoe&#160;DE</span>
+                                            </p>
+                                            <p class="TableTextSmall"><span class="Product">CANoe4SW&#160;DE</span>
+                                            </p>
+                                        </div>
+                                    </td>
+                                    <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                        <p class="Table">Type: <a href="COMObjectPort.htm">Port</a></p>
+                                    </td>
+                                    <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                        <p class="Table">—</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-vTableLight-Body-Body1">
+                                    <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                        <p class="TableBold"><a name="kanchor7573"></a><a name="BMNetworkName" id="BMNetworkName"></a><a class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler togglerBoldBlackUnderline MCTogglerHotSpot_ MCTogglerHotSpot_BoldBlackUnderline MCHotSpotImage" targets="TOGNetworkName" href="javascript:void(0)" data-mc-targets="TOGNetworkName"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />NetworkName</a>
+                                        </p>
+                                        <div style="display: none;" data-mc-target-name="TOGNetworkName">
+                                            <p class="Table">This property determines the network name of the associated bus instance.</p>
+                                            <p class="Table"><span class="bold">Syntax</span>: <span class="SourceCode">object.NetworkName</span></p>
+                                        </div>
+                                        <p class="TableTextSmall">(read-only)</p>
+                                        <p class="TableTextSmall">(see example below)</p>
+                                    </td>
+                                    <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                        <p class="Table">12.0</p>
+                                    </td>
+                                    <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                        <div>
+                                            <p class="TableTextSmall"><span class="Product">CANalyzer</span>
+                                            </p>
+                                            <p class="TableTextSmall"><span class="Product">CANoe&#160;DE</span>
+                                            </p>
+                                            <p class="TableTextSmall"><span class="Product">CANoe4SW&#160;DE</span>
+                                            </p>
+                                        </div>
+                                    </td>
+                                    <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                        <p class="Table">Type: STRING</p>
+                                        <p class="Table">The name of the network.</p>
+                                    </td>
+                                    <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                        <p class="Table">—</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-vTableLight-Body-Body1">
+                                    <td class="TableStyle-vTableLight-BodyB-Column1-Body1">
+                                        <p class="TableBold"><a name="kanchor7574"></a><a name="BMPortsAreSimulated" id="BMPortsAreSimulated"></a><a class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler togglerBoldBlackUnderline MCTogglerHotSpot_ MCTogglerHotSpot_BoldBlackUnderline MCHotSpotImage" targets="TOGPortsAreSimulated" href="javascript:void(0)" data-mc-targets="TOGPortsAreSimulated"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />PortsAreSimulated</a>
+                                        </p>
+                                        <div style="display: none;" data-mc-target-name="TOGPortsAreSimulated">
+                                            <p class="Table">This property optimizes the hardware resources used for the simulation.</p>
+                                            <p class="Table">For CANalyzer the ports must be assigned via <a href="COMObjectBus.htm#BMPortsOfChannel">PortsOfChannel</a>.</p>
+                                            <p class="Table"><span class="bold">Syntax</span>: <span class="SourceCode">object.PortsAreSimulated [=value]</span></p>
+                                        </div>
+                                    </td>
+                                    <td class="TableStyle-vTableLight-BodyB-Column1-Body1">
+                                        <p class="Table">14</p>
+                                    </td>
+                                    <td class="TableStyle-vTableLight-BodyB-Column1-Body1">
+                                        <div>
+                                            <p class="TableTextSmall"><span class="Product">CANalyzer</span>
+                                            </p>
+                                            <p class="TableTextSmall"><span class="Product">CANoe&#160;DE</span>
+                                            </p>
+                                            <p class="TableTextSmall"><span class="Product">CANoe4SW&#160;DE</span>
+                                            </p>
+                                        </div>
+                                    </td>
+                                    <td class="TableStyle-vTableLight-BodyB-Column1-Body1">
+                                        <p class="Table">Type: BOOL</p>
+                                        <p>Optimizes the hardware resources used for the simulation; <a class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler togglerBlackUnderline MCTogglerHotSpot_ MCTogglerHotSpot_BlackUnderline MCHotSpotImage" targets="TOGPortsAreSimulated" href="javascript:void(0)" data-mc-targets="TOGPortsAreSimulated"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />possible values</a>:</p>
+                                        <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableLight.css');display: none;" class="TableStyle-vTableLight" cellspacing="0" data-mc-target-name="TOGPortsAreSimulated">
+                                            <col class="TableStyle-vTableLight-Column-Column1" />
+                                            <col class="TableStyle-vTableLight-Column-Column1" />
+                                            <tbody>
+                                                <tr class="TableStyle-vTableLight-Body-Body1">
+                                                    <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                        <p class="Table">TRUE</p>
+                                                    </td>
+                                                    <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                        <p class="Table">Simulated ports are not assigned on hardware, but simulated within your application.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-vTableLight-Body-Body1">
+                                                    <td class="TableStyle-vTableLight-BodyB-Column1-Body1">
+                                                        <p class="Table">FALSE</p>
+                                                    </td>
+                                                    <td class="TableStyle-vTableLight-BodyA-Column1-Body1">
+                                                        <p class="Table">Simulated ports are assigned on hardware.</p>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                    <td class="TableStyle-vTableLight-BodyA-Column1-Body1">
+                                        <p class="Table">—</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <h2 class="CommandPage">Methods</h2>
+                        <table style="mc-table-style: url('../../../Resources/Stylesheets/vTableLight.css');margin-left: 0;margin-right: auto;width: 100%;" class="TableStyle-vTableLight" cellspacing="0">
+                            <col class="TableStyle-vTableLight-Column-Column1" style="width: 20%;" />
+                            <col class="TableStyle-vTableLight-Column-Column1" style="width: 5%;" />
+                            <col class="TableStyle-vTableLight-Column-Column1" style="width: 5%;" />
+                            <col class="TableStyle-vTableLight-Column-Column1" style="width: 45%;" />
+                            <col class="TableStyle-vTableLight-Column-Column1" style="width: 25%;" />
+                            <thead>
+                                <tr class="TableStyle-vTableLight-Head-Header1">
+                                    <th class="TableStyle-vTableLight-HeadE-Column1-Header1">
+                                        <p class="TableBold">Name</p>
+                                    </th>
+                                    <th class="TableStyle-vTableLight-HeadE-Column1-Header1">
+                                        <p class="TableTextSmall">Introduced<br />in version</p>
+                                    </th>
+                                    <th class="TableStyle-vTableLight-HeadE-Column1-Header1">
+                                        <p class="TableTextSmall">Available for</p>
+                                    </th>
+                                    <th class="TableStyle-vTableLight-HeadE-Column1-Header1">
+                                        <p class="TableBold">Parameters</p>
+                                    </th>
+                                    <th class="TableStyle-vTableLight-HeadD-Column1-Header1">
+                                        <p class="TableBold">Return&#160;Value</p>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="TableStyle-vTableLight-Body-Body1">
+                                    <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                        <div>
+                                            <p class="TableBold"><a name="kanchor7575"></a><a name="BMAdd" id="BMAdd"></a><a class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler togglerBoldBlackUnderline MCTogglerHotSpot_ MCTogglerHotSpot_BoldBlackUnderline MCHotSpotImage" targets="TOGAdd" href="javascript:void(0)" data-mc-targets="TOGAdd"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Add</a>
+                                            </p>
+                                            <div style="display: none;" data-mc-target-name="TOGAdd">
+                                                <p class="Table">This method adds a dedicated <a href="../../CANoeCANalyzer/Ethernet/EthernetPortBasedNetworkAccess.htm">simulation port</a> to the network, the bus belongs to.</p>
+                                                <p><span class="SourceCode">Ports.Add</span> can add <a href="../../CANoeCANalyzer/Ethernet/EthernetPortBasedNetworkAccess.htm">measurement ports</a> as well using empty segmentNames, but requires additional property settings afterwards and is mainly intended to add <a href="../../CANoeCANalyzer/Ethernet/EthernetPortBasedNetworkAccess.htm">simulation ports</a>.</p>
+                                                <p class="Table"><span class="bold">Syntax</span>: <span class="SourceCode">object.Add(portName, segmentName)</span></p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                        <p class="Table">12.0</p>
+                                    </td>
+                                    <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                        <div>
+                                            <p class="TableTextSmall"><span class="Product">CANalyzer</span>
+                                            </p>
+                                            <p class="TableTextSmall"><span class="Product">CANoe&#160;DE</span>
+                                            </p>
+                                            <p class="TableTextSmall"><span class="Product">CANoe4SW&#160;DE</span>
+                                            </p>
+                                        </div>
+                                    </td>
+                                    <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                        <div>
+                                            <p class="Table"><a class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler togglerBlackUnderline MCTogglerHotSpot_ MCTogglerHotSpot_BlackUnderline MCHotSpotImage" targets="TOGAdd" href="javascript:void(0)" data-mc-targets="TOGAdd"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />portName, segmentName</a>
+                                            </p>
+                                            <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableLight.css');display: none;" class="TableStyle-vTableLight" cellspacing="0" data-mc-target-name="TOGAdd">
+                                                <col class="TableStyle-vTableLight-Column-Column1" />
+                                                <col class="TableStyle-vTableLight-Column-Column1" />
+                                                <tbody>
+                                                    <tr class="TableStyle-vTableLight-Body-Body1">
+                                                        <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                            <p class="TableBold">object</p>
+                                                        </td>
+                                                        <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                            <p class="Table">Type: Ports</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-vTableLight-Body-Body1">
+                                                        <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                            <p class="TableBold">portName</p>
+                                                        </td>
+                                                        <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                            <p class="Table">Type: STRING</p>
+                                                            <p class="Table">The name of the added measurement port.</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-vTableLight-Body-Body1">
+                                                        <td class="TableStyle-vTableLight-BodyB-Column1-Body1">
+                                                            <p class="TableBold">segmentName</p>
+                                                        </td>
+                                                        <td class="TableStyle-vTableLight-BodyA-Column1-Body1">
+                                                            <p class="Table">Type: STRING</p>
+                                                            <p class="Table">The name of the hardware segment the port should belong to.</p>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </td>
+                                    <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                        <p class="Table">Type: <a href="COMObjectPort.htm">Port</a></p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-vTableLight-Body-Body1">
+                                    <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                        <p class="TableBold"><a name="kanchor7576"></a><a name="BMAddMP" id="BMAddMP"></a><a class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler togglerBoldBlackUnderline MCTogglerHotSpot_ MCTogglerHotSpot_BoldBlackUnderline MCHotSpotImage" targets="TOGAddMP" href="javascript:void(0)" data-mc-targets="TOGAddMP"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />AddMP</a>
+                                        </p>
+                                        <div style="display: none;" data-mc-target-name="TOGAddMP">
+                                            <p class="Table">Add a dedicated <a href="../../CANoeCANalyzer/Ethernet/EthernetPortBasedNetworkAccess.htm">measurement port</a> to the network, the bus belongs to.</p>
+                                            <p class="Table"><span class="SourceCode">Ports.Add</span> can add <a href="../../CANoeCANalyzer/Ethernet/EthernetPortBasedNetworkAccess.htm">measurement ports</a> as well using empty segmentNames, but requires additional property settings afterwards and is mainly intended to add simulation ports.</p>
+                                            <p class="Table"><span class="bold">Syntax</span>: <span class="SourceCode">object.AddMP(portName)</span></p>
+                                        </div>
+                                        <p class="TableTextSmall">(see example below)</p>
+                                    </td>
+                                    <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                        <p class="Table">14</p>
+                                    </td>
+                                    <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                        <div>
+                                            <p class="TableTextSmall"><span class="Product">CANalyzer</span>
+                                            </p>
+                                            <p class="TableTextSmall"><span class="Product">CANoe&#160;DE</span>
+                                            </p>
+                                            <p class="TableTextSmall"><span class="Product">CANoe4SW&#160;DE</span>
+                                            </p>
+                                        </div>
+                                    </td>
+                                    <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                        <p class="Table"><a class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler togglerBlackUnderline MCTogglerHotSpot_ MCTogglerHotSpot_BlackUnderline MCHotSpotImage" targets="TOGAddMP" href="javascript:void(0)" data-mc-targets="TOGAddMP"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />portName</a>
+                                        </p>
+                                        <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableLight.css');display: none;" class="TableStyle-vTableLight" cellspacing="0" data-mc-target-name="TOGAddMP">
+                                            <col class="TableStyle-vTableLight-Column-Column1" />
+                                            <col class="TableStyle-vTableLight-Column-Column1" />
+                                            <tbody>
+                                                <tr class="TableStyle-vTableLight-Body-Body1">
+                                                    <td class="TableStyle-vTableLight-BodyB-Column1-Body1">
+                                                        <p class="TableBold">portName</p>
+                                                    </td>
+                                                    <td class="TableStyle-vTableLight-BodyA-Column1-Body1">
+                                                        <p class="Table">Type: STRING</p>
+                                                        <p class="Table">The name of the added <a href="../../CANoeCANalyzer/Ethernet/EthernetPortBasedNetworkAccess.htm">measurement port</a>.</p>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                    <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                        <p class="Table">Type: <a href="COMObjectPort.htm">Port</a></p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-vTableLight-Body-Body1" data-mc-conditions="">
+                                    <td class="TableStyle-vTableLight-BodyB-Column1-Body1">
+                                        <div>
+                                            <p class="TableBold"><a name="kanchor7577"></a><a name="BMRemove" id="BMRemove"></a><a class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler togglerBoldBlackUnderline MCTogglerHotSpot_ MCTogglerHotSpot_BoldBlackUnderline MCHotSpotImage" targets="TOGRemove" href="javascript:void(0)" data-mc-targets="TOGRemove"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Remove</a>
+                                            </p>
+                                            <div style="display: none;" data-mc-target-name="TOGRemove">
+                                                <p class="Table">This method removes the port defined by index from the network.</p>
+                                                <p class="Table"><span class="bold">Syntax</span>: <span class="SourceCode">object.Remove(index)</span></p>
+                                            </div>
+                                            <p class="TableTextSmall">(see example below)</p>
+                                        </div>
+                                    </td>
+                                    <td class="TableStyle-vTableLight-BodyB-Column1-Body1">
+                                        <p class="Table">12.0</p>
+                                    </td>
+                                    <td class="TableStyle-vTableLight-BodyB-Column1-Body1">
+                                        <div>
+                                            <p class="TableTextSmall"><span class="Product">CANalyzer</span>
+                                            </p>
+                                            <p class="TableTextSmall"><span class="Product">CANoe&#160;DE</span>
+                                            </p>
+                                            <p class="TableTextSmall"><span class="Product">CANoe4SW&#160;DE</span>
+                                            </p>
+                                        </div>
+                                    </td>
+                                    <td class="TableStyle-vTableLight-BodyB-Column1-Body1">
+                                        <div>
+                                            <p class="Table"><a class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler togglerBlackUnderline MCTogglerHotSpot_ MCTogglerHotSpot_BlackUnderline MCHotSpotImage" targets="TOGRemove" href="javascript:void(0)" data-mc-targets="TOGRemove"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />index</a>
+                                            </p>
+                                            <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableLight.css');display: none;" class="TableStyle-vTableLight" cellspacing="0" data-mc-target-name="TOGRemove">
+                                                <col class="TableStyle-vTableLight-Column-Column1" />
+                                                <col class="TableStyle-vTableLight-Column-Column1" />
+                                                <tbody>
+                                                    <tr class="TableStyle-vTableLight-Body-Body1">
+                                                        <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                            <p class="TableBold">object</p>
+                                                        </td>
+                                                        <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                            <p class="Table">Type: Ports</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-vTableLight-Body-Body1">
+                                                        <td class="TableStyle-vTableLight-BodyB-Column1-Body1">
+                                                            <p class="TableBold">index</p>
+                                                        </td>
+                                                        <td class="TableStyle-vTableLight-BodyA-Column1-Body1">
+                                                            <p class="Table">Type: INT</p>
+                                                            <p class="Table">The index within the ports list.</p>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </td>
+                                    <td class="TableStyle-vTableLight-BodyA-Column1-Body1">
+                                        <p class="Table">—</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <h2 class="CommandPage">Events</h2>
+                        <p>—</p>
+                    </div>
+                    <div>
+                        <h2 class="CommandPage">Example</h2>
+                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                            <col class="TableStyle-vTableSymbol-Column-Column1" />
+                            <col class="TableStyle-vTableSymbol-Column-Column2" />
+                            <tbody>
+                                <tr>
+                                    <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                        <p class="Table">
+                                            <img src="../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                        <p class="TableSymbolHead">Example — <a class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler togglerBoldBlackUnderline MCTogglerHotSpot_ MCTogglerHotSpot_BoldBlackUnderline MCHotSpotImage" targets="TOGEXGeneral" href="javascript:void(0)" data-mc-targets="TOGEXGeneral"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />General</a></p>
+                                        <p style="display: none;" data-mc-target-name="TOGEXGeneral">The following example prints all available ports of all networks for your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText>:</p>
+                                        <p class="TableSourceCode" style="display: none;" data-mc-target-name="TOGEXGeneral">Set App&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= CreateObject("<a href="../COMInterface.htm#ProductCOMName" class="SourceCode">&lt;product COM name&gt;</a>.Application")<br />Set Configuration&#160;&#160;&#160;= <a href="COMObjectApplication.htm">App</a>.<a href="COMObjectApplication.htm#BMConfiguration">Configuration</a><br />Set SimulationSetup&#160;= <a href="COMObjectConfiguration.htm">Configuration</a>.<a href="COMObjectConfiguration.htm#BMSimulationSetup">SimulationSetup</a><br />Set Buses&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= <a href="COMObjectSimulationSetup.htm">SimulationSetup</a>.<a href="COMObjectSimulationSetup.htm#BMBuses">Buses</a><br /><br />Wscript.Echo "Configuration: " &amp; <a href="COMObjectConfiguration.htm">Configuration</a>.<a href="COMObjectConfiguration.htm#BMName">Name</a><br /><br />ListPorts()<br /><br />Sub ListPorts()<br />&#160;&#160;&#160;<span class="CodeComment">' List configuration of simulation nodes</span><br />&#160;&#160;for BusIndex = 1 to <a href="COMObjectSimulationSetup.htm">SimulationSetup</a>.<a href="COMObjectSimulationSetup.htm#BMBuses">Buses</a>.Count<br />&#160;&#160;&#160;&#160;Set Bus&#160;&#160;&#160;= <a href="COMObjectBuses.htm">Buses</a>.Item(BusIndex)<br />&#160;&#160;&#160;&#160;Set Ports&#160;= <a href="COMObjectBus.htm">Bus</a>.<a href="COMObjectBus.htm#BMPorts">Ports</a><br /><br />&#160;&#160;&#160;&#160;if <a href="#" class="selected">Ports</a>.<a href="#BMIsSwitchedNetwork">IsSwitchedNetwork</a> then<br />&#160;&#160;&#160;&#160;&#160;&#160;Wscript.Echo ""<br />&#160;&#160;&#160;&#160;&#160;&#160;Wscript.Echo "###################################################"<br />&#160;&#160;&#160;&#160;&#160;&#160;Wscript.Echo "Network: " &amp; <a href="#" class="selected">Ports</a>.<a href="#BMNetworkName">NetworkName</a><br />&#160;&#160;&#160;&#160;&#160;&#160;PrintPorts Ports<br />&#160;&#160;&#160;&#160;End if<br />&#160;&#160;next<br />End Sub<br /><br />Sub PrintPorts(portList)<br />&#160;&#160;for PortIndex = 1 to portList.Count<br />&#160;&#160;&#160;&#160;Set Port = portList.Item(PortIndex)<br />&#160;&#160;&#160;&#160;PrintPort Port<br />&#160;&#160;next<br />End Sub<br /><br />Sub PrintPort(port)<br />&#160;&#160;Wscript.Echo "-------------- Port " &amp; <a href="COMObjectPort.htm">port</a>.<a href="COMObjectPort.htm#BMName">Name</a> &amp; " -------------------"<br />&#160;&#160;Wscript.Echo "Segment Name: " &amp; <a href="COMObjectPort.htm">port</a>.<a href="COMObjectPort.htm#BMSegmentName">SegmentName</a><br />&#160;&#160;Wscript.Echo "Is Simulation Port: " &amp; CSTR(<a href="COMObjectPort.htm">port</a>.<a href="COMObjectPort.htm#BMIsSimulated">IsSimulated</a>)<br />&#160;&#160;Wscript.Echo "Is Active: " &amp; CSTR(<a href="COMObjectPort.htm">port</a>.<a href="COMObjectPort.htm#BMIsActive">IsActive</a>)<br />End Sub</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                            <col class="TableStyle-vTableSymbol-Column-Column1" />
+                            <col class="TableStyle-vTableSymbol-Column-Column2" />
+                            <tbody>
+                                <tr>
+                                    <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                        <p class="Table">
+                                            <img src="../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                        <p class="TableSymbolHead">Example — <a class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler togglerBoldBlackUnderline MCTogglerHotSpot_ MCTogglerHotSpot_BoldBlackUnderline MCHotSpotImage" targets="TOGEXAddMP" href="javascript:void(0)" data-mc-targets="TOGEXAddMP"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />AddMP method</a></p>
+                                        <div style="display: none;" data-mc-target-name="TOGEXAddMP">
+                                            <p>The following example adds a <a href="../../CANoeCANalyzer/Ethernet/EthernetPortBasedNetworkAccess.htm">measurement port</a> in <span class="Product">CANoe</span>:</p>
+                                            <p class="TableSourceCode">Set App&#160;&#160;&#160;= CreateObject("CANoe.Application")<br />Set Ports&#160;= <a href="COMObjectApplication.htm">App</a>.<a href="COMObjectApplication.htm#BMBus">Bus</a>.<a href="COMObjectBus.htm#BMPorts">Ports</a><br />Set Port&#160;&#160;= Ports.AddMP("MeasurementPort1")</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <h2 class="CommandPage">Object Availability</h2>
+                        <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableLight.css');" class="TableStyle-vTableLight" cellspacing="0">
+                            <col class="TableStyle-vTableLight-Column-Column1" />
+                            <col class="TableStyle-vTableLight-Column-Column1" data-mc-conditions="" />
+                            <col class="TableStyle-vTableLight-Column-Column1" data-mc-conditions="" />
+                            <col class="TableStyle-vTableLight-Column-Column1" data-mc-conditions="" />
+                            <col class="TableStyle-vTableLight-Column-Column1" data-mc-conditions="" />
+                            <col class="TableStyle-vTableLight-Column-Column1" data-mc-conditions="" />
+                            <tbody>
+                                <tr class="TableStyle-vTableLight-Body-Body1" data-mc-conditions="">
+                                    <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                        <p class="TableHead">&#160;</p>
+                                    </td>
+                                    <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                        <p class="TableHead">CANalyzer</p>
+                                    </td>
+                                    <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                        <p class="TableHead">CANoe&#160;DE</p>
+                                    </td>
+                                    <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                        <p class="TableHead">CANoe4SW&#160;DE</p>
+                                    </td>
+                                    <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                        <p class="TableHead">CANoe:lite&#160;DE</p>
+                                    </td>
+                                    <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                        <p class="TableHead">CANoe4SW:lite&#160;DE</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-vTableLight-Body-Body1">
+                                    <td class="TableStyle-vTableLight-BodyB-Column1-Body1">
+                                        <p class="TableHead">Introduced<br />in version</p>
+                                    </td>
+                                    <td class="TableStyle-vTableLight-BodyB-Column1-Body1">
+                                        <p class="Table">12.0</p>
+                                    </td>
+                                    <td class="TableStyle-vTableLight-BodyB-Column1-Body1">
+                                        <p class="Table">12.0</p>
+                                    </td>
+                                    <td class="TableStyle-vTableLight-BodyB-Column1-Body1">
+                                        <p class="Table">18</p>
+                                    </td>
+                                    <td class="TableStyle-vTableLight-BodyB-Column1-Body1">
+                                        <p class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle-vTableLight-BodyA-Column1-Body1">
+                                        <p class="Table">—</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <p class="LinkList"><a href="../COMObjectHierarchy.htm" class="LinkList MCXref xref xrefLinkList">COM Object Hierarchy</a>
+                </p>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="FooterWhite">
+                <table class="FooterWhite" style="border-collapse: collapse;margin-left: auto;margin-right: auto;">
+                    <col style="width: 70px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col style="width: 16px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col data-mc-conditions="" />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="buttons popup-container clearfix topicToolbarProxy topicToolbarProxyFooter _Skins_HTML5TopicToolbar mc-component nocontent">
+                                    <div class="button-group-container-left">
+                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo"><a href="../../Shared/HowToUseOnlineHelp.htm" title="Tips for using the help" alt="Tips for using the help"><img src="../../../Resources/vImages/vBackstage/vHelpInfo.png" /></a>
+                                </p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo">•&#160;&#160;Technical&#160;References are only&#160;available&#160;in&#160;English</p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo" style="text-align: right;"><span class="mc-variable Vector.BuildTime variable">2024-04-8T20:56:42</span>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <table style="width: 100%;border-collapse: separate;border-spacing: 3px 0px;margin-left: auto;margin-right: auto;caption-side: top;">
+                <col />
+                <col />
+                <col />
+                <col data-mc-conditions="BuildProcess.HTML5Link" />
+                <tbody>
+                    <tr>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;">
+                            <p class="vec_Footer">©&#160;Vector Informatik GmbH</p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;text-align: right;">
+                            <p class="vec_FooterBold">
+                                <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE&#160;Product Families</MadCap:conditionalText> Version <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.VectorTestUnitRunner">18</MadCap:conditionalText></p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="../../Shared/ContactCopyrightLicense.htm" class="vec_Footer MCXref xref xrefvec_Footer">Contact/Copyright/License</a>
+                            </p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="https://www.vector.com/int/en/company/get-info/privacy-policy/" target="_blank" class="vec_Footer">Data Privacy Notice</a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

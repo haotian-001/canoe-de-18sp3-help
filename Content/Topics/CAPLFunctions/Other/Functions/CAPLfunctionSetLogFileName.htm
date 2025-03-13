@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="CANoeDEFamily.xml" data-mc-path-to-help-system="../../../../../" data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANalyzer,Targets.CANoe-SE-Family,Targets.vTESTstudio" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../Skins/Favicons/favicon-16x16.png" /><title>setLogFileName</title>
+        <link href="../../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Resources/Stylesheets/vTableMasterPageHeader.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../../Resources/Stylesheets/vStylesheet.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../../Resources/Stylesheets/vTableLight.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../../Resources/Stylesheets/vTableSymbol.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapGlobal.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapDom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapUtilities.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapXhr.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTextEffects.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSlideshow.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMessageBus.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMessageBus.CrossFrame.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapDefault.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMediaQueries.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapAccessibility.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapHelpSystem.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapAliasFile.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopicFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapFeedbackHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSkinHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.Breadcrumbs.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.MiniToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.SideMenu.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapIndex.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapGlossary.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapParser.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSearch.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapNavigateTopics.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapLms.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapELearning.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopic.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMicroContentComponent.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSearchHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopicElements.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTriPane.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/jscript" src="../../../../Resources/vScripts/SyntaxHighlighting.js">
+        </script>
+        <script type="text/jscript" src="../../../../Resources/vScripts/TabSwitch.js">
+        </script>
+        <script type="text/javascript" src="../../../../Resources/vScripts/Vector.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../../../CANoeDEFamily.htm#Topics/CAPLFunctions/Other/Functions/CAPLfunctionSetLogFileName.htm">Open topic with navigation</a>
+        </p>
+        <div class="Body">
+            <div role="main" id="mc-main-content">
+                <p class="StructurePath"><a href="../../CAPLfunctions.htm" class="StructurePath MCXref xref xrefStructurePath">CAPL Functions</a> » <a href="../CAPLGeneralStartPage.htm" class="StructurePath">General</a> » <a href="../CAPLfunctionsGeneralOverview.htm" class="StructurePath">Function Overview</a> » <span class="mc-variable System.Title variable">setLogFileName</span></p>
+                <h1><a name="aanchor18621"></a>
+                    <MadCap:concept term="CAPLOTHER" /><a name="kanchor6255"></a><span class="mc-variable System.Title variable">setLogFileName</span>
+                </h1>
+                <p class="MenuPath">&#160;</p>
+                <p class="ToolAvailability" data-mc-conditions="BuildProcess.ToolAvailability"><a href="../../../Shared/FeatureAvailability.htm" class="red" title="Feature availabilty for your product">Valid&#160;for</a>:&#160;&#160;CANoe&#160;DE<a name="aanchor18622"></a><MadCap:concept term="SFCANoeDE" />&#160;&#160;•&#160;&#160;CANoe:lite&#160;DE<a name="aanchor18623"></a><MadCap:concept term="SFCANoeLiteDE" />&#160;&#160;•&#160;&#160;CANoe4SW&#160;DE<a name="aanchor18624"></a><MadCap:concept term="SFCANoe4SWDE" />&#160;&#160;•&#160;&#160;CANoe4SW:lite&#160;DE<a name="aanchor18625"></a><MadCap:concept term="SFCANoe4SWLiteDE" /></p>
+                <p class="AutoSearchFilterConcepts"><a name="aanchor18626"></a>
+                    <MadCap:concept term="SFCAPLFunctions" />
+                </p>
+                <div data-mc-target-name="DIVCAPLFunctionSyntax">
+                    <h2 class="CommandPage">Function Syntax</h2>
+                    <p class="Syntax">setLogFileName(char fileName[]); // form 1</p>
+                    <p class="Syntax">setLogFileName(char strLoggingBlockName[], char fileName[]); // form 2</p>
+                    <p class="Syntax">setLogFileName(char strLoggingBlockName[], char fileName[], int appendIncrementFieldCodes); // form 3</p>
+                </div>
+                <div data-mc-target-name="DIVCAPLDescription">
+                    <h2 class="CommandPage">Description</h2>
+                    <p>Sets the name of the logging file. If a valid extension is given it also changes the file type.</p>
+                </div>
+                <div data-mc-target-name="DIVCAPLParameters">
+                    <h2 class="CommandPage">Parameters</h2>
+                    <table style="margin-left: 0;margin-right: auto;width: 100%;mc-table-style: url('../../../../Resources/Stylesheets/vTableLight.css');" class="TableStyle-vTableLight" cellspacing="0">
+                        <col style="width: 80px;" class="TableStyle-vTableLight-Column-Column1" />
+                        <col class="TableStyle-vTableLight-Column-Column1" />
+                        <tbody>
+                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                <td id="name" class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <p class="TableBold">fileName</p>
+                                </td>
+                                <td id="descr" class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                    <table style="width: 100%;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0" data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">
+                                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                                        <tbody>
+                                            <tr>
+                                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                                    <p class="Table">
+                                                        <img src="../../../../Resources/vImages/vInfo.png" style="width: 48px;height: 45px;" title="Note" alt="Note" />
+                                                    </p>
+                                                </td>
+                                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                                    <p class="TableSymbolHead">Note</p>
+                                                    <p>Since Version 8.5 the filename can also contain field codes. If the new filename does not contain any field code, all increment field codes from the old one will be appended (regardless of whether there are other field codes there as well). The auto increment field codes will be added to the filenames as usual. With form 3, this behavior can be suppressed with the parameter <span class="bold">appendIncrementFieldCodes</span>.</p>
+                                                    <p>Example field codes:</p>
+                                                    <p class="TableSourceCode">...<br />setLogFileName( "logFile_M{IncMeasurement}.blf" );<br />...<br />// Sets the name of the logging file to logFile_MX.blf with X = current measurement index.<br /><br />...<br />setLogFileName( "logFile_ {Date}.blf" );<br />...<br />//&#160;Sets the name of the logging file to logFile_YYYY-MM-DD.blf with YYYY-MM-DD = current system date.</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <p class="Table">The name may be an absolute path, a single filename or a relative path. If an absolute path or a relative path is supplied, all non existing directories of the path will be created. The logging file will be placed in the directory of the current configuration, if a single filename is supplied, or in the path relative to the configuration file if a relative path is supplied. The directories of the path must be separated by a backslash ('\'). The filename can contain a filename extension. If no extension is input, the last used file type will be set automatically. If an invalid extension is given the function will do nothing.</p>
+                                    <table style="width: 100%;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                                        <tbody>
+                                            <tr>
+                                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                                    <p class="Table">
+                                                        <img src="../../../../Resources/vImages/vInfo.png" style="width: 48px;height: 45px;" title="Note" alt="Note" />
+                                                    </p>
+                                                </td>
+                                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                                    <p class="TableSymbolHead">Note</p>
+                                                    <p class="Table">Within a <a href="../CAPLfunctionsStringLiteral.htm">string literal</a> a second backslash has to be set (see example).</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <p class="Table">The new name will only be changed with a new <span class="SourceCode">setLogFileName</span> call or by a corresponding entry in the configuration dialog of the logging file.</p>
+                                    <p class="Table">If the Logging Block does not log (logging is not active) the name is changed immediately.</p>
+                                    <p class="Table">If the Logging Block logs (logging is active) the new name will be taken over with the next trigger event or with a new measurement start.</p>
+                                    <table style="width: 100%;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                                        <tbody>
+                                            <tr>
+                                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                                    <p class="Table">
+                                                        <img src="../../../../Resources/vImages/vInfo.png" style="width: 48px;height: 45px;" title="Note" alt="Note" />
+                                                    </p>
+                                                </td>
+                                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                                    <p class="TableSymbolHead">Note</p>
+                                                    <p class="Table">The name set with the <span class="SourceCode">setLogFileName</span> function will not be saved when saving the configuration. Only the name set in the configuration dialog of the logging file will be taken over.</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                <td id="name" class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <p colspan="4" class="Bold">strLoggingBlockName</p>
+                                </td>
+                                <td id="descr" class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                    <p class="Table">Name of the Logging Block.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                <td id="name" class="TableStyle-vTableLight-BodyB-Column1-Body1">
+                                    <p class="TableBold">appendIncrementFieldCodes</p>
+                                </td>
+                                <td id="descr" class="TableStyle-vTableLight-BodyA-Column1-Body1">
+                                    <ul>
+                                        <li>
+                                            <p class="Table">0: no field codes are appended automatically to the given file name.</p>
+                                        </li>
+                                        <li>
+                                            <p class="Table">Otherwise: If the new filename does not contain any field codes, all increment field codes from the old filename are appended to the new filename, as described in the note to parameter <span class="bold">fileName</span>.</p>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div data-mc-target-name="DIVCAPLReturnValues">
+                    <h2 class="CommandPage">Return&#160;Values</h2>
+                    <p>—</p>
+                </div>
+                <div data-mc-target-name="DIVCAPLExample">
+                    <h2 class="CommandPage">Example</h2>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                    <p class="Table">
+                                        <img src="../../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                    </p>
+                                </td>
+                                <td id="content" class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                    <p class="TableSourceCode">...<br />setLogFileName("Logging1", "newlog");<br />...<br />Sets the name of the logging file to "newlog" in the directory of the current configuration.</p>
+                                    <p class="TableSourceCode">...<br />setLogFileName("Logging1", "c:\\canw\\demo\\automot\\newlog");<br />...<br />Sets the absolute path of the logging file.</p>
+                                    <p class="TableSourceCode">...<br />setLogFileName("Logging1", "..\\Logging\\newlog");<br />...<br />Sets the relative path of the logging file.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                    <p class="Table">
+                                        <img src="../../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                    </p>
+                                </td>
+                                <td id="content" class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                    <p class="TableSymbolHead">Example File Type</p>
+                                    <p class="TableSourceCode">...<br />setLogFileName( "newlog.blf" );<br />...<br />Sets the name of the logging file to newlog and the file type  blf<br />...</p>
+                                    <p class="TableSourceCode">...<br />setLogFileName( "newlog.notSupportedExtension" );<br />...<br />Does nothing //filename extension not valid</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="LinkList">&#160;</p>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="FooterWhite">
+                <table class="FooterWhite" style="border-collapse: collapse;margin-left: auto;margin-right: auto;">
+                    <col style="width: 70px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col style="width: 16px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col data-mc-conditions="" />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="buttons popup-container clearfix topicToolbarProxy topicToolbarProxyFooter _Skins_HTML5TopicToolbar mc-component nocontent">
+                                    <div class="button-group-container-left">
+                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo"><a href="../../../Shared/HowToUseOnlineHelp.htm" title="Tips for using the help" alt="Tips for using the help"><img src="../../../../Resources/vImages/vBackstage/vHelpInfo.png" /></a>
+                                </p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo">•&#160;&#160;Technical&#160;References are only&#160;available&#160;in&#160;English</p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo" style="text-align: right;"><span class="mc-variable Vector.BuildTime variable">2024-04-8T20:56:42</span>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <table style="width: 100%;border-collapse: separate;border-spacing: 3px 0px;margin-left: auto;margin-right: auto;caption-side: top;">
+                <col />
+                <col />
+                <col />
+                <col data-mc-conditions="BuildProcess.HTML5Link" />
+                <tbody>
+                    <tr>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;">
+                            <p class="vec_Footer">©&#160;Vector Informatik GmbH</p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;text-align: right;">
+                            <p class="vec_FooterBold">
+                                <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE&#160;Product Families</MadCap:conditionalText> Version <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.VectorTestUnitRunner">18</MadCap:conditionalText></p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="../../../Shared/ContactCopyrightLicense.htm" class="vec_Footer MCXref xref xrefvec_Footer">Contact/Copyright/License</a>
+                            </p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="https://www.vector.com/int/en/company/get-info/privacy-policy/" target="_blank" class="vec_Footer">Data Privacy Notice</a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

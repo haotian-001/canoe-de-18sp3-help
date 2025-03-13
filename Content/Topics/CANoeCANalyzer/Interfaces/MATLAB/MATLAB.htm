@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="CANoeDEFamily.xml" data-mc-path-to-help-system="../../../../../" data-mc-toc-path="Software Interfaces" data-mc-conditions="Targets.CANoe-DE-Family" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../Skins/Favicons/favicon-16x16.png" /><title>MATLAB Integration Package</title>
+        <link href="../../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Resources/Stylesheets/vTableMasterPageHeader.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../../Resources/Stylesheets/vStylesheet.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../../Resources/Stylesheets/vTableSymbol.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../../Resources/Stylesheets/vTable.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapGlobal.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapDom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapUtilities.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapXhr.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTextEffects.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSlideshow.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMessageBus.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMessageBus.CrossFrame.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapDefault.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMediaQueries.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapAccessibility.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapHelpSystem.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapAliasFile.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopicFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapFeedbackHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSkinHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.Breadcrumbs.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.MiniToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.SideMenu.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapIndex.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapGlossary.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapParser.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSearch.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapNavigateTopics.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapLms.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapELearning.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopic.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMicroContentComponent.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSearchHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopicElements.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTriPane.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/jscript" src="../../../../Resources/vScripts/SyntaxHighlighting.js">
+        </script>
+        <script type="text/jscript" src="../../../../Resources/vScripts/TabSwitch.js">
+        </script>
+        <script type="text/javascript" src="../../../../Resources/vScripts/Vector.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../../../CANoeDEFamily.htm#Topics/CANoeCANalyzer/Interfaces/MATLAB/MATLAB.htm">Open topic with navigation</a>
+        </p>
+        <div class="Body">
+            <div role="main" id="mc-main-content">
+                <div>
+                    <p class="StructurePath"><a href="../ExtensionsInterfaces.htm" class="StructurePath MCXref xref xrefStructurePath">Software Interfaces</a>(only CANoe DE, CANoe:lite DE) » MATLAB Integration Package</p>
+                    <h1><span class="mc-variable System.Title variable">MATLAB Integration Package</span>
+                    </h1>
+                    <p class="MenuPath"><a href="../../Ribbon/Ribbon.htm" class="MenuPath">Ribbon</a>: <a href="../../Ribbon/RibbonEnvironment.htm" class="MenuPath">Environment Tab</a>|Tool Couplings|<span class="mc-variable System.Title variable">MATLAB Integration Package</span> (only CANoe DE, CANoe:lite DE)</p>
+                    <p class="ToolAvailability" data-mc-conditions="BuildProcess.ToolAvailability"><a href="../../../Shared/FeatureAvailability.htm" class="red" title="Feature availabilty for your product">Valid&#160;for</a>:&#160;&#160;CANoe&#160;DE<a name="aanchor27395"></a><MadCap:concept term="SFCANoeDE" />&#160;&#160;•&#160;&#160;CANoe:lite&#160;DE<a name="aanchor27396"></a><MadCap:concept term="SFCANoeLiteDE" />&#160;&#160;•&#160;&#160;CANoe4SW&#160;DE<a name="aanchor27397"></a><MadCap:concept term="SFCANoe4SWDE" />&#160;&#160;•&#160;&#160;CANoe4SW:lite&#160;DE<a name="aanchor27398"></a><MadCap:concept term="SFCANoe4SWLiteDE" /></p>
+                    <p class="AutoSearchFilterConcepts"><a name="aanchor27399"></a>
+                        <MadCap:concept term="SFInterfaces" />
+                    </p>
+                    <p><a name="kanchor8950"></a>
+                    </p>
+                </div>
+                <p>This help describes the MATLAB Integration Package of your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText>. It was designed to combine the strengths of both simulation tools.
+Your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> is a total network simulation tool designed to both model nodes on a network and the network that binds them. Traditionally the functionality of these network nodes are modeled using the CAPL language provided with your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText>. The purpose of this interface is to extend node modeling capability by adding the strength of the MATLAB/Simulink environment.
+Now models can be used to describe the functionality of a network node in the <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText>. This allows your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> to simulate nodes which are impossible or difficult to model using CAPL alone. Another feature would be to use a Simulink model to generate an outside stimulus to an existing CAPL node.</p>
+                <div>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                    <p class="Table">
+                                        <img src="../../../../Resources/vImages/vInfo.png" style="width: 48px;height: 45px;" title="Note" alt="Note" />
+                                    </p>
+                                </td>
+                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                    <p class="TableSymbolHead">Note (only for CANoe4SW)</p>
+                                    <p class="Table">Read the <a href="MATLABCANoe4SW.htm">Special Notes for CANoe</a>.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <hr class="Startpage" width="100%" size="0" align="center" />
+                <div>
+                    <table style="width: 100%;border-left-style: none;border-left-width: 0px;border-left-color: #ffffff;border-right-style: none;border-right-width: 0px;border-right-color: #ffffff;border-top-style: none;border-top-width: 0px;border-top-color: #ffffff;border-bottom-style: none;border-bottom-width: 0px;border-bottom-color: #ffffff;margin-left: 0;margin-right: auto;">
+                        <col style="width: 33%;" />
+                        <col style="width: 33%;" />
+                        <col style="width: 33%;" />
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <table style="mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');margin-left: 0;margin-right: auto;width: 100%;" class="TableStyle_vTable" cellspacing="0">
+                                            <col />
+                                            <thead>
+                                                <tr>
+                                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                                        <p class="TableHead"><a name="ModelingConcept" id="ModelingConcept"></a>Modeling Concepts</p>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                                        <p class="Table">It is important to understand how the MATLAB Integration Package communicates with your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> in order to easily design a model.
+It is easiest to think of the MATLAB Integration Package of your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> as an extension or a complete replacement of existing CAPL code. The application of a CAPL node can be completely implemented with Simulink.
+It is possible to design an entire ECU in Simulink. Examples of this can be found under <span class="bold">Sample Configurations</span>.
+For definition of concepts see <a href="ModelingConcepts/MATLABmcMiddleware.htm#MiddlewareDefinitionOfConcepts">Definition of Concepts</a>.
+Please continue with the <span class="bold">Setup</span> if you are familiar with Software Layers of an ECU.
+
+The following definitions and explanations are intended to describe the functionality of various components and their coordination with other modules/components.</p>
+                                                        <ul>
+                                                            <li><a href="ModelingConcepts/MATLABmcSoftwareLayers.htm">Software Layers of an ECU</a>
+                                                            </li>
+                                                            <li><a href="ModelingConcepts/MATLABmcApplication.htm">Application</a>
+                                                            </li>
+                                                            <li><a href="ModelingConcepts/MATLABmcMiddleware.htm">Middleware</a>
+                                                            </li>
+                                                            <li><a href="ModelingConcepts/MATLABmcInteractionLayer.htm">Interaction Layer</a>
+                                                            </li>
+                                                            <li><a href="ModelingConcepts/MATLABmcTransportLayer.htm">Transport Layer</a>
+                                                            </li>
+                                                            <li><a href="ModelingConcepts/MATLABmcNetworkManagementLayer.htm">Network Management Layer</a>
+                                                            </li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div>
+                                        <table style="mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');margin-left: 0;margin-right: auto;width: 100%;" class="TableStyle_vTable" cellspacing="0">
+                                            <col />
+                                            <thead>
+                                                <tr>
+                                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                                        <p class="TableHead">Sample Configurations</p>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                                        <p>This chapter shows how to use the MATLAB Integration Package in the context of various <a href="MATLABExecutionModes.htm">Execution Modes</a>:</p>
+                                                        <ul>
+                                                            <li><a href="../../../SampConf/Matlab/MATLABscOfflineMode.htm">Offline Mode</a>
+                                                            </li>
+                                                            <li><span class="bold">Hardware-In-The-Loop (HIL) Mode</span>
+                                                                <br />Two sample configurations are provided for showing the usage of your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> as the execution environment for Simulink models.
+For using the model for the HIL Mode, Simulink Coder must compile the model into a DLL/SO that the <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> can run. The generated DLL/SO must then be added to the <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> configuration:</li>
+                                                            <li class="Indent"><a href="../../../SampConf/Matlab/MATLABscHILSigAccConf.htm">Signal Access</a>
+                                                            </li>
+                                                            <li class="Indent"><a href="../../../SampConf/Matlab/MATLABscHILSinParamConf.htm">Sine Parameterization</a>
+                                                            </li>
+                                                            <li><a href="../../../SampConf/Matlab/MATLABscSimpSysConf.htm">Simple System</a>
+                                                            </li>
+                                                            <li><a href="../../../SampConf/Matlab/MATLABscStateFlowConf.htm">State Flow System</a>
+                                                            </li>
+                                                            <li><a href="../../../SampConf/Matlab/MATLABscTriggerSampleConf.htm">Trigger</a>
+                                                                <br />
+                                                            </li>
+                                                            <li class="Indent">Triggering by Environment Input</li>
+                                                            <li class="Indent">Triggering by Environment Event</li>
+                                                            <li><a href="../../../SampConf/Matlab/MATLABscUsingDifferentTargets.htm">Using Different Targets</a>
+                                                            </li>
+                                                            <li><a href="../../../SampConf/Matlab/MATLABscAnalysisConf.htm">Analysis</a>
+                                                            </li>
+                                                            <li><a href="../../../SampConf/Matlab/MATLABSamConfCAPLCall.htm">CAPL Call</a>
+                                                            </li>
+                                                            <li><a href="../../../SampConf/Matlab/MATLABSamConfCAPLHandler.htm">CAPL Handler</a>
+                                                            </li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <table style="mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');margin-left: 0;margin-right: auto;width: 100%;" class="TableStyle_vTable" cellspacing="0">
+                                            <col />
+                                            <thead>
+                                                <tr>
+                                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                                        <p class="TableHead">Execution Modes</p>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                                        <p>Execution Modes describe how the simulation is executed and which roles are played by Simulink and the <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText>.</p>
+                                                        <p class="Table"><a href="MATLABExecutionModes.htm">Execution Modes:</a>
+                                                        </p>
+                                                        <ul>
+                                                            <li>Offline Mode</li>
+                                                            <li>Synchronous Mode</li>
+                                                            <li>Hardware-In-The-Loop (HIL) Mode</li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div>
+                                        <table style="mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');margin-left: 0;margin-right: auto;width: 100%;" class="TableStyle_vTable" cellspacing="0">
+                                            <col />
+                                            <thead>
+                                                <tr>
+                                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                                        <p><a name="Setup" id="Setup"></a>MATLAB Integration Package - Installation and Requirements</p>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                                        <ul>
+                                                            <li><a href="Setup/MATLABInstallation.htm" class="MCXref xref">Installation of the MATLAB Integration Package</a>
+                                                            </li>
+                                                            <li><a href="Setup/MATLABSetupIntroduction.htm">Compiler Configuration</a>
+                                                            </li>
+                                                            <li><a href="MATLABtroubleshooting.htm">Troubleshooting</a>
+                                                            </li>
+                                                            <li><a href="MATLABVersionHistory.htm">MATLAB Integration Package Version History</a>
+                                                            </li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div>
+                                        <table style="mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');margin-left: 0;margin-right: auto;width: 100%;" class="TableStyle_vTable" cellspacing="0">
+                                            <col />
+                                            <thead>
+                                                <tr>
+                                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                                        <p class="TableHead">Quick Start - <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> with Simulink</p>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                                        <p>In this section, the execution mode independent mechanisms on how to connect your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> with Simulink are explained.</p>
+                                                        <ul>
+                                                            <li>
+                                                                <p><a href="Setup/MATLABSimulinkWithCANoe.htm">Connect Simulink with your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText></a>
+                                                                </p>
+                                                            </li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div>
+                                        <table style="mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');margin-left: 0;margin-right: auto;width: 100%;" class="TableStyle_vTable" cellspacing="0">
+                                            <col />
+                                            <thead>
+                                                <tr>
+                                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                                        <p class="TableHead">Offline Mode / Synchronous Mode - Simulink/<MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> Configuration</p>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                                        <ul>
+                                                            <li>
+                                                                <p><a href="Setup/MATLABOffSynchSimuCANoe.htm">Offline Mode / Synchronous Mode - Simulink and the <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText></a>
+                                                                </p>
+                                                            </li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div>
+                                        <table style="mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');margin-left: 0;margin-right: auto;width: 100%;" class="TableStyle_vTable" cellspacing="0">
+                                            <col />
+                                            <thead>
+                                                <tr>
+                                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                                        <p class="TableHead">HIL Mode - Simulink/<MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> Configuration</p>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                                        <ul>
+                                                            <li><a href="Setup/MATLABSetupCustIntCANoe.htm">HIL Mode - Simulink Configuration</a>
+                                                            </li>
+                                                            <li><a href="Setup/MATLABhilModeCANoeConfig.htm">HIL Mode - <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> Configuration</a>
+                                                            </li>
+                                                            <li><a href="Setup/MATLABSetupCustParamCANoe.htm">Customize a MATLAB Simulink Model for Parameterization from the <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText></a>
+                                                                <li class="Indent">Simulink Settings</li>
+                                                                <li class="Indent">
+                                                                    <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> Settings</li>
+                                                                <li><a href="Setup/MATLABSetupCustCalXCP.htm">Customize a MATLAB Simulink Model for Calibration using XCP</a>
+                                                                </li>
+                                                                <li class="Indent">Simulink Settings</li>
+                                                                <li class="Indent">Simulink Block Settings</li>
+                                                                <li class="Indent">Code Generation</li>
+                                                                <li><a href="Setup/MATLABParallelExecutionModels.htm">Behavior of Models with Concurrent Execution</a>
+                                                                    <li class="Indent">System Requirements</li>
+                                                                    <li class="Indent">Timing Behavior: Differences between serial and concurrent execution</li>
+                                                                    <li class="Indent">Handling of Overruns</li>
+                                                                    <li class="Indent">Limitations for Concurrent Model Execution</li>
+                                                                </li>
+                                                            </li>
+                                                        </ul>
+                                                        <ul>
+                                                            <li><a href="Setup/MATLABSetupCustMultitasking.htm" class="MCXref xref">Customizing for Multitasking Environment</a>
+                                                            </li>
+                                                            <li class="Indent">System Requirements</li>
+                                                            <li class="Indent">Simulink Settings</li>
+                                                            <li class="Indent">Behavior of the Multitasking Mode</li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <table style="mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');margin-left: 0;margin-right: auto;width: 100%;" class="TableStyle_vTable" cellspacing="0">
+                                            <col />
+                                            <thead>
+                                                <tr>
+                                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                                        <p class="TableHead">Further Resources</p>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                                        <ul>
+                                                            <li>Application Note:<br /><a href="javascript:startDemoLoader('AN-IND-1-007_Using_MATLAB_with_CANoe.pdf')" class="ExecuteLink">AN-IND-1-007_Using_MATLAB_with_CANoe.pdf</a></li>
+                                                            <li><a href="https://www.youtube.com/watch?v=hVfaM_f_rO8" target="_blank" class="ExternalLink">Vector Tech Tutorial – MATLAB in CANoe (Video)</a>
+                                                            </li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div>
+                                        <table style="mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');margin-left: 0;margin-right: auto;width: 100%;" class="TableStyle_vTable" cellspacing="0">
+                                            <col />
+                                            <thead>
+                                                <tr>
+                                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                                        <p class="TableHead">CANoe I/O Library / CAPL Functions</p>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                                        <p class="Table">The CANoe I/O library is a collection of S-Functions blocks:</p>
+                                                        <ul>
+                                                            <li><a href="CANoeIOLibrary/MATLABioLib.htm">Function Block Overview</a>
+                                                            </li>
+                                                            <li><a href="CANoeCOlibrary/MATLABcoLib.htm">CO Function Block Overview</a>
+                                                            </li>
+                                                            <li><a href="CANoeDOlibrary/MATLABdoLib.htm">DO Function Block Overview</a>
+                                                            </li>
+                                                            <li><a href="CANoeSfunctions/MATLABioLibSfunction.htm">S-Functions Overview</a>
+                                                            </li>
+                                                        </ul>
+                                                        <p>The Simulink Coder  generated DLL/SO contains three additional functions which can be called by CAPL:</p>
+                                                        <ul>
+                                                            <li><a href="../../../CAPLFunctions/MATLAB/CAPLfunctionsMATLABOverview.htm">CAPL Function Overview</a>
+                                                            </li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div>
+                                        <table style="mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');margin-left: 0;margin-right: auto;width: 100%;" class="TableStyle_vTable" cellspacing="0">
+                                            <col />
+                                            <thead>
+                                                <tr>
+                                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                                        <p class="TableHead">Further Topics</p>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                                        <ul>
+                                                            <li><a href="Setup/MATLABSetupModelRef.htm">Model Referencing</a>
+                                                            </li>
+                                                            <li><a href="Setup/MATLABSetupIL.htm">CANoe Interaction Layer</a>
+                                                            </li>
+                                                            <li class="Indent">Database preparation</li>
+                                                            <li class="Indent">Configuration Setup from scratch</li>
+                                                            <li><a href="../../Windows/SimulinkModelViewer.htm">Simulink Model Viewer</a>
+                                                            </li>
+                                                            <li><a href="Setup/MATLABSetupStateflowCharts.htm">Stateflow Charts - Highlighting of States</a>
+                                                            </li>
+                                                            <li><a href="Setup/MATLABSetupConfigTest.htm">Configuration and Test of Simulink Blocks
+</a>
+                                                            </li>
+                                                            <li class="Indent">
+Signal Block Configuration</li>
+                                                            <li class="Indent">Test of CANoe Blocks</li>
+                                                            <li><a href="MATLAButilities.htm">Utilities for Configuration</a>
+                                                            </li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="LinkList">&#160;</p>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="FooterWhite">
+                <table class="FooterWhite" style="border-collapse: collapse;margin-left: auto;margin-right: auto;">
+                    <col style="width: 70px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col style="width: 16px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="buttons popup-container clearfix topicToolbarProxy topicToolbarProxyFooter _Skins_HTML5TopicToolbar mc-component nocontent">
+                                    <div class="button-group-container-left">
+                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo"><a href="../../../Shared/HowToUseOnlineHelp.htm" title="Tips for using the help" alt="Tips for using the help"><img src="../../../../Resources/vImages/vBackstage/vHelpInfo.png" /></a>
+                                </p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo" style="text-align: right;"><span class="mc-variable Vector.BuildTime variable">2024-04-8T20:56:42</span>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <table style="width: 100%;border-collapse: separate;border-spacing: 3px 0px;margin-left: auto;margin-right: auto;caption-side: top;">
+                <col />
+                <col />
+                <col />
+                <col data-mc-conditions="BuildProcess.HTML5Link" />
+                <tbody>
+                    <tr>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;">
+                            <p class="vec_Footer">©&#160;Vector Informatik GmbH</p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;text-align: right;">
+                            <p class="vec_FooterBold">
+                                <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE&#160;Product Families</MadCap:conditionalText> Version <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.VectorTestUnitRunner">18</MadCap:conditionalText></p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="../../../Shared/ContactCopyrightLicense.htm" class="vec_Footer MCXref xref xrefvec_Footer">Contact/Copyright/License</a>
+                            </p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="https://www.vector.com/int/en/company/get-info/privacy-policy/" target="_blank" class="vec_Footer">Data Privacy Notice</a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

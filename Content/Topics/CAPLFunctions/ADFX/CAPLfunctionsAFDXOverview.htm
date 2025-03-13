@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="topic" data-mc-search-type="Stem" data-mc-help-system-file-name="CANoeDEFamily.xml" data-mc-path-to-help-system="../../../../" data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../Skins/Favicons/favicon-16x16.png" /><title>AFDX CAPL Functions</title>
+        <link href="../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Resources/Stylesheets/vTableMasterPageHeader.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../Resources/Stylesheets/vStylesheet.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../Resources/Stylesheets/vTablePageTOC.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../Resources/Stylesheets/vTable.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapGlobal.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapDom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapUtilities.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapXhr.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTextEffects.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSlideshow.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMessageBus.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMessageBus.CrossFrame.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapDefault.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMediaQueries.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAccessibility.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapHelpSystem.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAliasFile.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopicFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapFeedbackHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSkinHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.Breadcrumbs.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.MiniToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.SideMenu.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapIndex.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapGlossary.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapParser.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSearch.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapNavigateTopics.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapLms.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapELearning.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopic.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMicroContentComponent.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSearchHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopicElements.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTriPane.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/jscript" src="../../../Resources/vScripts/SyntaxHighlighting.js">
+        </script>
+        <script type="text/jscript" src="../../../Resources/vScripts/TabSwitch.js">
+        </script>
+        <script type="text/javascript" src="../../../Resources/vScripts/Vector.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../../CANoeDEFamily.htm#Topics/CAPLFunctions/ADFX/CAPLfunctionsAFDXOverview.htm">Open topic with navigation</a>
+        </p>
+        <div class="Body">
+            <div role="main" id="mc-main-content">
+                <div>
+                    <p class="StructurePath"><a href="../CAPLfunctions.htm" class="StructurePath MCXref xref xrefStructurePath">CAPL Functions</a> » AFDX CAPL Functions</p>
+                    <h1>AFDX CAPL Functions</h1>
+                    <p class="MenuPath">&#160;</p>
+                    <p class="ToolAvailability" data-mc-conditions="BuildProcess.ToolAvailability"><a href="../../Shared/FeatureAvailability.htm" class="red" title="Feature availabilty for your product">Valid&#160;for</a>:&#160;&#160;CANoe&#160;DE<a name="aanchor29257"></a><MadCap:concept term="SFCANoeDE" />&#160;&#160;•&#160;&#160;CANoe:lite&#160;DE<a name="aanchor29258"></a><MadCap:concept term="SFCANoeLiteDE" />&#160;&#160;•&#160;&#160;CANoe4SW&#160;DE<a name="aanchor29259"></a><MadCap:concept term="SFCANoe4SWDE" />&#160;&#160;•&#160;&#160;CANoe4SW:lite&#160;DE<a name="aanchor29260"></a><MadCap:concept term="SFCANoe4SWLiteDE" /></p>
+                    <p class="AutoSearchFilterConcepts"><a name="aanchor29261"></a>
+                        <MadCap:concept term="SFCAPLFunctions" />
+                    </p>
+                    <p><a name="aanchor29262"></a>
+                        <MadCap:concept term="CAPLAFDX" /><a name="kanchor9504"></a>
+                    </p>
+                    <div>
+                        <table style="margin-left: 0;margin-right: auto;width: 100%;">
+                            <col style="width: 60px;" />
+                            <col />
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <p>
+                                            <img src="../../../Resources/vImages/vFunction.png" />
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <p class="TableSymbolHead">AFDX</p>
+                                        <p class="Table">Only available with Option&#160;AFDX.</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <hr class="Startpage" width="100%" size="0" align="center" />
+                    <p class="TableCOM"><a name="Shortcuts" id="Shortcuts"></a><span class="red">ON THIS&#160;PAGE:</span>
+                    </p>
+                    <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTablePageTOC.css');" class="TableStyle-vTablePageTOC" cellspacing="2">
+                        <col style="width: 50%;" class="TableStyle-vTablePageTOC-Column-Column1" data-mc-conditions="" />
+                        <col style="width: 50%;" class="TableStyle-vTablePageTOC-Column-Column1" data-mc-conditions="Targets.CANoe-DE-Family" />
+                        <tbody>
+                            <tr class="TableStyle-vTablePageTOC-Body-Body1">
+                                <td class="TableStyle-vTablePageTOC-BodyB-Column1-Body1">
+                                    <p class="PageTOC"><a href="#A664" class="PageTOC">A664 Functions (only CANalyzer, CANoe DE, CANoe:lite DE)</a>
+                                    </p>
+                                    <p class="PageTOC"><a href="#A664-Handler" class="PageTOC">A664 Handler (only CANalyzer, CANoe DE, CANoe:lite DE)</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle-vTablePageTOC-BodyA-Column1-Body1">
+                                    <p class="PageTOC"><a href="#AFDXIL" class="PageTOC">AFDX Interaction Layer</a>
+                                    </p>
+                                    <p class="PageTOC"><a href="#Callback" class="PageTOC">Callback Functions</a>
+                                    </p>
+                                    <p class="PageTOC"><a href="#DB_API" class="PageTOC">DB&#160;API</a>
+                                    </p>
+                                    <p class="PageTOC"><a href="#GeneralFunctions" class="PageTOC">General Functions</a>
+                                    </p>
+                                    <p class="PageTOC"><a href="#PacketAPI" class="PageTOC">Packet API</a>
+                                    </p>
+                                    <p class="PageTOC"><a href="#SignalAPI" class="PageTOC">Signal API</a>
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h2 class="SectionMain">A664 Functions</h2>
+                    <p>The following CAPL functions are based on native CAPL. These are the recommended functions to use for CAPL programming.</p>
+                    <div>
+                        <h2><a name="A664" id="A664"></a>A664 Functions (only CANalyzer, CANoe DE, CANoe:lite DE) <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                        <table style="width: 100%;margin-left: 0;margin-right: auto;caption-side: top;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                            <col style="width: 225px;" />
+                            <col />
+                            <thead>
+                                <tr>
+                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Functions</p>
+                                    </th>
+                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                        <p class="TableHead">Short Description</p>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionA664CloseProxyPort.htm">A664CloseProxyPort</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Method to close a specific socket port, which was generated using a664InitProxyPort.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionA664GetFunctionalStatus.htm">A664GetFunctionalStatus</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">This function returns the Functional Status (FS) of an AFDX-PDU (FDS).</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionA664InitICMP.htm">A664InitICMP</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">The complete Ethernet and IP headers of an AFDX packet are consistently set based on the given parameters.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionA664InitMessage.htm">A664InitMessage</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">The complete Ethernet, IP- and UDP headers for an AFDX message are consistently set based on the given parameters. The payload area is initialized with 0.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionA664InitPayload.htm">A664InitPayload</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">The payload section (excluding sequence number) of an AFDX message is set using the current Tx-values of the internal signal list (<span class="Product">CANdb++</span>).</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionA664InitProxyPort.htm">A664InitProxyPort</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Open a windows socket based on a network adapter characterized by the ipAddr parameter and using the specified UDP-port.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionA664isICMP.htm">A664isICMP</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">This function returns the ICMP type and code for a packet. The intended use case is a check for an expected ICMP packet in an on-handler.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionA664MsgConfig.htm">A664MsgConfig</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">This function triggers the scheduling of the message aMessage. The message is either scheduled once or periodic.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionA664ResizeMessage.htm">A664ResizeMessage</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">The message object’s payload area is resized to match the new payload size. </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionA664SetChecksum.htm">A664SetChecksum</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">This function calculates and sets the checksum in the specified aFrame according to the defined checksum rule.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionA664SetFunctionalStatus.htm">A664SetFunctionalStatus</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">This function sets the Functional Status (FS) of a AFDX-PDU (FDS) (available only in PDU-mode).</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionA664SetStringSignal.htm">A664SetStringSignal</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">This function can be used to set a string-signal within a specific a664Message (form 2) or to set the Tx-signal of the <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> subsystem (form 1).</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionA664TriggerFrame.htm">A664TriggerFrame</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">This function triggers the transmission of a single frame &lt;aFrame&gt; either immediately or respecting the BAG.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionA664TriggerMessage.htm">A664TriggerMessage</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">This function triggers the scheduling of the message "aMessage". The message is either scheduled once or periodic.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionA664VLConfig.htm">A664VLConfig</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Configure a Virtual-Link for a given a664Frame or a664Message.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionAfdxCopyOperator.htm">Copy Operator</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">The copy operator allows to copy a664Message object and a664Frame object combinations.</p>
+                                    </td>
+                                </tr>
+                                <tr data-mc-conditions="">
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                        <p class="Table"><a href="Functions/CAPLfunctionAfdxOutput.htm">Output</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                        <p class="Table">This function outputs the object from the program block of the analysis branch. </p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div>
+                    <h2><a name="A664-Handler" id="A664-Handler"></a>A664 Handler/Event Procedures (only CANalyzer, CANoe DE, CANoe:lite DE)</h2>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;caption-side: top;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                        <col style="width: 225px;" />
+                        <col />
+                        <thead>
+                            <tr>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                    <p class="TableHead">Functions</p>
+                                </th>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                    <p class="TableHead">Short Description</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="EventProcedures/CAPLfunctionAFDXOnA664Frame.htm">on a664Frame</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">The event procedure <span class="bold">on a664Frame</span> is called on every AFDX packet if certain conditions are fulfilled.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="Table"><a href="EventProcedures/CAPLfunctionAFDXOnA664Message.htm">on a664Message</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                    <p class="Table">The event procedure <span class="bold">on a664Message</span> is called on every AFDX message if certain conditions are fulfilled.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div data-mc-conditions="Targets.CANoe-DE-Family">
+                    <h2 class="SectionMain"><a name="AFDXIL" id="AFDXIL"></a>AFDX Interaction Layer</h2>
+                    <p>The following functions are not recommended any more. Use native CAPL programming (A664) above instead.</p>
+                    <p>The AFDX Interaction Layer (AFDX IL) enables the simulation of AFDX nodes with CAPL and allows sending and receiving individual AFDX packets. For addressing parts of a frame so-called tokens are used. Since these tokens are called by their names, there is no need for the user to remember the exact position of e.g. a header field. Instead the name of the protocol (via protocolDesignator) and the token's name (via tokenDesignator) have to be specified in the API call. The names of the available tokens are provided on the corresponding protocol page.</p>
+                    <ul>
+                        <li><a href="../../CANoeCANalyzer/AFDX/protocols/afdxProtocolEthernet.htm">raw Ethernet packet</a>: "eth"</li>
+                        <li><a href="../../CANoeCANalyzer/AFDX/protocols/afdxProtocolIPv4.htm">IPv4 frame</a>: "ipv4"</li>
+                        <li><a href="../../CANoeCANalyzer/AFDX/protocols/afdxProtocolUDP.htm">UDP frame</a>: "udp"</li>
+                        <li><a href="../../CANoeCANalyzer/AFDX/protocols/afdxProtocolAfdx.htm">AFDX frame</a>: "afdx"</li>
+                    </ul>
+                    <p>For more convenience in the programming environment a <a href="../../Shared/CAPL/IncludeFiles/IncludeFiles.htm">CAPL include file</a> is provided. The file gives the programmer a number of symbolic constants and some helper routines as a supplement for the CAPL API. Use this statement in the include section of your CAPL code: <span class="bold">#include "AFDX/Utils.cin"</span>.</p>
+                    <p>To use the CAPL functions the <a href="../../CANoeCANalyzer/AFDX/afdxIL/afdxILInclude.htm">AFDX_IL.DLL</a> must be included. Note that these functions provide access to signals located in an AFDX packet. You may also access the internal signal representation. For details refer to <a href="../../Shared/CAPL/SignalOrientedProgramming/SOPSignalConcept.htm">Concept of a Signal in CAPL</a>.</p>
+                </div>
+                <div data-mc-conditions="Targets.CANoe-DE-Family">
+                    <h2><a name="Callback" id="Callback"></a>Callback Functions <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;caption-side: top;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                        <col style="width: 225px;" />
+                        <col />
+                        <thead>
+                            <tr>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                    <p class="TableHead">Functions</p>
+                                </th>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                    <p class="TableHead">Short Description</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="EventProcedures/CAPLfunctionOnAfdxError.htm">&lt;OnAfdxError&gt;</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">CAPL callback to handle AFDX error events.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="Table"><a href="EventProcedures/CAPLfunctionOnAfdxPacket.htm">&lt;OnAfdxPacket&gt;</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                    <p class="Table">CAPL callback to receive data of AFDX packets.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div data-mc-conditions="Targets.CANoe-DE-Family">
+                    <h2><a name="DB_API" id="DB_API"></a>DB API <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;caption-side: top;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                        <col style="width: 225px;" />
+                        <col />
+                        <thead>
+                            <tr>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                    <p class="TableHead">Functions</p>
+                                </th>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                    <p class="TableHead">Short Description</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionAfdxGetDBAttrAsString.htm">AfdxGetDBAttrAsString</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Retrieves a message attribute value in string representation from a given message ID.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionAfdxGetDBAttrValue.htm">AfdxGetDBAttrValue</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Retrieves the value of a specific attribute of a dedicated message if the attribute is not of type string.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionAfdxGetDBMessageName.htm">AfdxGetDBMessageName</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                    <p class="Table">Retrieves the message name from database from a given message ID if it is defined there.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div data-mc-conditions="Targets.CANoe-DE-Family">
+                    <h2><a name="GeneralFunctions" id="GeneralFunctions"></a>General Functions <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;caption-side: top;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                        <col style="width: 225px;" />
+                        <col />
+                        <thead>
+                            <tr>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                    <p class="TableHead">Functions</p>
+                                </th>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                    <p class="TableHead">Short Description</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionAfdxGetLastError.htm">AfdxGetLastError</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Gets the last error code.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionAfdxGetLastErrorText.htm">AfdxGetLastErrorText</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Gets the description of the last error code.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="background-color: #ffffff;" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionAfdxSetErrorHandler.htm">AfdxSetErrorHandler</a>
+                                    </p>
+                                </td>
+                                <td style="background-color: #ffffff;" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Registers a CAPL callback to handle AFDX error events.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="background-color: #ffffff;" class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionAfdxSetVerbosity.htm">AfdxSetVerbosity</a>
+                                    </p>
+                                </td>
+                                <td style="background-color: #ffffff;" class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                    <p class="Table">Sets the verbosity level of the AFDX IL.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div data-mc-conditions="Targets.CANoe-DE-Family">
+                    <h2><a name="PacketAPI" id="PacketAPI"></a>Packet API <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;caption-side: top;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                        <col style="width: 225px;" />
+                        <col />
+                        <thead>
+                            <tr>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                    <p class="TableHead">Functions</p>
+                                </th>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                    <p class="TableHead">Short Description</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionAfdxCompletePacket.htm">AfdxCompletePacket</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Completes an AFDX packet for sending.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionAfdxDeregisterReceiveCallback.htm">AfdxDeregisterReceiveCallback</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Deregisters a previous installed CAPL callback.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionAfdxGetMessageId.htm">AfdxGetMessageId</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Gets the ID of a message.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionAfdxGetMessageName.htm">AfdxGetMessageName</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Gets the name of a message.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionAfdxGetPacketData.htm">AfdxGetPacketData</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Copies the packet content to a local buffer.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionAfdxGetTokenData.htm">AfdxGetTokenData</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Gets the data of a token.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionAfdxGetTokenInt.htm">AfdxGetTokenInt</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Gets the integer value of a token.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionAfdxGetTokenInt64.htm">AfdxGetTokenInt64</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Gets the 64 bit integer value of a token.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionAfdxGetTokenLengthBit.htm">AfdxGetTokenLengthBit</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Gets the length of a token in bit.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionAfdxGetTokenReal.htm">AfdxGetTokenReal</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Gets the float or double value of a token.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionAfdxGetTokenString.htm">AfdxGetTokenString</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Gets the string value of a token.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionAfdxInitPacket.htm">AfdxInitPacket</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Creates a new AFDX packet.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionAfdxInitProtocol.htm">AfdxInitProtocol</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Initializes a protocol for an AFDX packet.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionAfdxInitSchedule.htm">AfdxInitSchedule</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Initializes the scheduled transmission of the specified message during the start phase of the measurement.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionAfdxIsPacketValid.htm">AfdxIsPacketValid</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Checks if an AFDX packet has protocol errors.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionAfdxIsReceiveCallbackRegistered.htm">AfdxIsReceiveCallbackRegistered</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Determines if a CAPL callback with this name is installed.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionAfdxOutputPacket.htm">AfdxOutputPacket</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Sends an AFDX packet.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionAfdxOutputPacketRaw.htm">AfdxOutputPacketRaw</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Sends a raw AFDX packet.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionAfdxOutputPacketWithSignals.htm">AfdxOutputPacketWithSignals</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Sends a message and automatically updates the payload with the current Tx-signal values of the SignalServer.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionAfdxRegisterReceiveCallback.htm">AfdxRegisterReceiveCallback</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Registers a CAPL callback function to receive AFDX packets.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionAfdxReleasePacket.htm">AfdxReleasePacket</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Deletes an AFDX packet.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionAfdxRemoveToken.htm">AfdxRemoveToken</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Removes a token from a protocol header.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionAfdxResizeToken.htm">AfdxResizeToken</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Modifies the length of a token.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionAfdxSetTokenData.htm">AfdxSetTokenData</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Sets the data of a token.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionAfdxSetTokenInt.htm">AfdxSetTokenInt</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Sets the integer value of a token.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionAfdxSetTokenInt64.htm">AfdxSetTokenInt64</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Sets the 64 bit integer value of a token.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionAfdxSetTokenReal.htm">AfdxSetTokenReal</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Sets the float or double value of a token.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionAfdxSetTokenString.htm">AfdxSetTokenString</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                    <p class="Table">Sets the string value of a token.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div data-mc-conditions="Targets.CANoe-DE-Family">
+                    <h2><a name="SignalAPI" id="SignalAPI"></a>Signal API <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                    <p>If signals of messages are defined in an AFDX database, they may be accessed via their defined signal names with these functions or by an offset within the  payload if no database information is available.</p>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;caption-side: top;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                        <col style="width: 225px;" />
+                        <col />
+                        <thead>
+                            <tr>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                    <p class="TableHead">Functions</p>
+                                </th>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                    <p class="TableHead">Short Description</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="2" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p colspan="2" class="Table">Read signals from AFDX message payload according to their data type.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionAfdxGetSignalBool.htm">AfdxGetSignalBool</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Read boolean.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionAfdxGetSignalInt.htm">AfdxGetSignalInt</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Read integer value (32 bit).</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionAfdxGetSignalInt64.htm">AfdxGetSignalInt64</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Read integer value (64 bit)
+.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionAfdxGetSignalOpaque.htm">AfdxGetSignalOpaque</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Read opaque value.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionAfdxGetSignalReal.htm">AfdxGetSignalReal</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Read real/float value.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionAfdxGetSignalStatus.htm">AfdxGetSignalStatus</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Read frame data set (FDS) status.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionAfdxGetSignalString.htm">AfdxGetSignalString</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Read string type.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p colspan="2" class="Table">Write signals in AFDX message payload according to their data type.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionAfdxSetSignalBool.htm">AfdxSetSignalBool</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Write boolean.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionAfdxSetSignalInt.htm">AfdxSetSignalInt</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Write integer value (32 bit).</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionAfdxSetSignalInt64.htm">AfdxSetSignalInt64</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Write integer value (64 bit).</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionAfdxSetSignalOpaque.htm">AfdxSetSignalOpaque</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Write opaque value.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionAfdxSetSignalReal.htm">AfdxSetSignalReal</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Write real/float value.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionAfdxSetSignalStatus.htm">AfdxSetSignalStatus</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Write frame data set (FDS) status.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionAfdxSetSignalString.htm">AfdxSetSignalString</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                    <p class="Table">Write string type.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="LinkList"><a href="CAPLfunctionsAFDXErrorCodes.htm" class="LinkList MCXref xref xrefLinkList">AFDX Error Codes</a>&#160;&#160;•&#160;&#160;<a href="CAPLfunctionsAFDXSelectors.htm" class="LinkList MCXref xref xrefLinkList">AFDX Selectors</a></p>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="FooterWhite">
+                <table class="FooterWhite" style="border-collapse: collapse;margin-left: auto;margin-right: auto;">
+                    <col style="width: 70px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col style="width: 16px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col data-mc-conditions="" />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="buttons popup-container clearfix topicToolbarProxy topicToolbarProxyFooter _Skins_HTML5TopicToolbar mc-component nocontent">
+                                    <div class="button-group-container-left">
+                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo"><a href="../../Shared/HowToUseOnlineHelp.htm" title="Tips for using the help" alt="Tips for using the help"><img src="../../../Resources/vImages/vBackstage/vHelpInfo.png" /></a>
+                                </p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo">•&#160;&#160;Technical&#160;References are only&#160;available&#160;in&#160;English</p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo" style="text-align: right;"><span class="mc-variable Vector.BuildTime variable">2024-04-8T20:56:42</span>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <table style="width: 100%;border-collapse: separate;border-spacing: 3px 0px;margin-left: auto;margin-right: auto;caption-side: top;">
+                <col />
+                <col />
+                <col />
+                <col data-mc-conditions="BuildProcess.HTML5Link" />
+                <tbody>
+                    <tr>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;">
+                            <p class="vec_Footer">©&#160;Vector Informatik GmbH</p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;text-align: right;">
+                            <p class="vec_FooterBold">
+                                <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE&#160;Product Families</MadCap:conditionalText> Version <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.VectorTestUnitRunner">18</MadCap:conditionalText></p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="../../Shared/ContactCopyrightLicense.htm" class="vec_Footer MCXref xref xrefvec_Footer">Contact/Copyright/License</a>
+                            </p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="https://www.vector.com/int/en/company/get-info/privacy-policy/" target="_blank" class="vec_Footer">Data Privacy Notice</a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

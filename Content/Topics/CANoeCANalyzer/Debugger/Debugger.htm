@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="" data-mc-search-type="Stem" data-mc-help-system-file-name="CANoeDEFamily.xml" data-mc-path-to-help-system="../../../../" data-mc-toc-path="Programming Interfaces (APIs)" data-mc-conditions="Targets.CANoe-DE-Family" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../Skins/Favicons/favicon-16x16.png" /><title>Debugger</title>
+        <link href="../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Resources/Stylesheets/vTableMasterPageHeader.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../Resources/Stylesheets/vStylesheet.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../Resources/Stylesheets/vTable.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../Resources/Stylesheets/vTableSymbol.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapGlobal.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapDom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapUtilities.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapXhr.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTextEffects.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSlideshow.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMessageBus.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMessageBus.CrossFrame.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapDefault.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMediaQueries.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAccessibility.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapHelpSystem.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAliasFile.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopicFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapFeedbackHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSkinHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.Breadcrumbs.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.MiniToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.SideMenu.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapIndex.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapGlossary.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapParser.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSearch.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapNavigateTopics.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapLms.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapELearning.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopic.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMicroContentComponent.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSearchHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopicElements.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTriPane.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/jscript" src="../../../Resources/vScripts/SyntaxHighlighting.js">
+        </script>
+        <script type="text/jscript" src="../../../Resources/vScripts/TabSwitch.js">
+        </script>
+        <script type="text/javascript" src="../../../Resources/vScripts/Vector.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../../CANoeDEFamily.htm#Topics/CANoeCANalyzer/Debugger/Debugger.htm">Open topic with navigation</a>
+        </p>
+        <div class="Body">
+            <div role="main" id="mc-main-content">
+                <div>
+                    <div>
+                        <p class="StructurePath"><a href="../CANoeDEFamily.htm" class="StructurePath" data-mc-conditions="Targets.CANoe-DE-Family"><img src="../../../Resources/vImages/vToolIcons/CANoeDEFamily_Icon16_15x15.png" alt="" style="width: 15;height: 15;" />&#160;CANoe&#160;DE&#160;Product&#160;Families</a> » <span class="mc-variable System.Title variable">Debugger</span></p>
+                        <h1><span class="mc-variable System.Title variable">Debugger</span>
+                        </h1>
+                        <p class="MenuPath">&#160;</p>
+                        <p class="ToolAvailability" data-mc-conditions="BuildProcess.ToolAvailability"><a href="../../Shared/FeatureAvailability.htm" class="red" title="Feature availabilty for your product">Valid&#160;for</a>:&#160;&#160;CANoe&#160;DE<a name="aanchor32104"></a><MadCap:concept term="SFCANoeDE" />&#160;&#160;•&#160;&#160;CANoe:lite&#160;DE<a name="aanchor32105"></a><MadCap:concept term="SFCANoeLiteDE" />&#160;&#160;•&#160;&#160;CANoe4SW&#160;DE<a name="aanchor32106"></a><MadCap:concept term="SFCANoe4SWDE" />&#160;&#160;•&#160;&#160;CANoe4SW:lite&#160;DE<a name="aanchor32107"></a><MadCap:concept term="SFCANoe4SWLiteDE" /></p>
+                        <p class="AutoSearchFilterConcepts"><a name="aanchor32108"></a>
+                            <MadCap:concept term="SFCore" />
+                        </p>
+                        <p class="IndexConcept"><a name="kanchor10330"></a>
+                        </p>
+                    </div>
+                    <div>
+                        <table style="width: 100%;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                            <col style="width: 50%;" />
+                            <col style="width: 50%;" />
+                            <thead>
+                                <tr>
+                                    <th colspan="2" class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                        <p class="TableHead">General</p>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p>
+                                            <img src="../../../Resources/Images/CANoeCANalyzer/CAPLDebuggerPreview.png" />
+                                        </p>
+                                        <p class="Table">The icons may vary depending on the context in which the window is opened.</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p>The debugger supports you in troubleshooting as follows: </p>
+                                        <div>
+                                            <p>
+                                                <!-- Tab links -->
+                                            </p>
+                                            <div class="tab">
+                                                <button class="tablinks CANoe-DE active" onclick="openTab('CANoe-DE')">CANoe&#160;DE</button>
+                                                <button class="tablinks CANoe-Lite-DE" onclick="openTab('CANoe-Lite-DE')">CANoe:lite&#160;DE</button>
+                                                <button class="tablinks CANoe4SW-DE" onclick="openTab('CANoe4SW-DE')">CANoe4SW&#160;DE</button>
+                                                <button class="tablinks CANoe4SW-Lite-DE" onclick="openTab('CANoe4SW-Lite-DE')">CANoe4SW:lite&#160;DE</button>
+                                            </div>
+                                            <p>
+                                                <!-- Tab content -->
+                                            </p>
+                                            <div class="tabcontent CANoe-DE" style="display: block" data-mc-conditions="ToolAvailability.CANoe-DE">
+                                                <ul>
+                                                    <li>in <a href="../Windows/SimulationSetup/SimulationSetupWindow.htm">Simulation Setup</a>: of network nodes and test modules that were developed in <span class="bold">CAPL</span> and <span class="bold">.NET</span>.</li>
+                                                    <li>in <a href="../Windows/MeasurementSetup/MeasurementSetupWindow.htm">Measurement Setup</a>: of program nodes that were developed in <span class="bold">CAPL</span>.</li>
+                                                    <li>in <a href="../Windows/TestEnvironments/TestEnvironments.htm">Test Setup for Test Modules</a>: in test modules that were developed in <span class="bold">CAPL</span> and <span class="bold">.NET</span>.</li>
+                                                    <li>in <a href="../Windows/CommunicationSetup/CommunicationSetup.htm">Communication Setup</a>: of application models that were developed in <span class="bold">CAPL</span> and <span class="bold">.NET</span>.</li>
+                                                    <li>in <a href="../Windows/TestConfigurations/TC.htm">Test Setup for Test Units</a>: in test units that were developed in <span class="bold">CAPL</span> and <span class="bold">.NET</span>.</li>
+                                                </ul>
+                                            </div>
+                                            <div class="tabcontent CANoe-Lite-DE" data-mc-conditions="ToolAvailability.CANoe-Lite-DE">
+                                                <ul>
+                                                    <li>in <a href="../Windows/SimulationSetup/SimulationSetupWindow.htm">Simulation Setup</a>: of network nodes and test modules that were developed in <span class="bold">CAPL</span> and <span class="bold">.NET</span>.</li>
+                                                    <li>in <a href="../Windows/TestEnvironments/TestEnvironments.htm">Test Setup for Test Modules</a>: in test modules that were developed in <span class="bold">CAPL</span> and <span class="bold">.NET</span>.</li>
+                                                    <li>in <a href="../Windows/CommunicationSetup/CommunicationSetup.htm">Communication Setup</a>: of application models that were developed in <span class="bold">CAPL</span> and <span class="bold">.NET</span>.</li>
+                                                    <li>in <a href="../Windows/TestConfigurations/TC.htm">Test Setup for Test Units</a>: in test units that were developed in <span class="bold">CAPL</span> and <span class="bold">.NET</span>.</li>
+                                                </ul>
+                                            </div>
+                                            <div class="tabcontent CANoe4SW-DE" data-mc-conditions="ToolAvailability.CANoe4SW-DE">
+                                                <ul>
+                                                    <li>in <a href="../Windows/SimulationSetup/SimulationSetupWindow.htm">Simulation Setup</a>: of network nodes and test modules that were developed in <span class="bold">CAPL</span> and <span class="bold">.NET</span>.</li>
+                                                    <li>in <a href="../Windows/MeasurementSetup/MeasurementSetupWindow.htm">Measurement Setup</a>: of program nodes that were developed in <span class="bold">CAPL</span>.</li>
+                                                    <li>in <a href="../Windows/TestEnvironments/TestEnvironments.htm">Test Setup for Test Modules</a>: in test modules that were developed in <span class="bold">CAPL</span> and <span class="bold">.NET</span>.</li>
+                                                    <li>in <a href="../Windows/CommunicationSetup/CommunicationSetup.htm">Communication Setup</a>: of application models that were developed in <span class="bold">CAPL</span> and <span class="bold">.NET</span>.</li>
+                                                    <li>in <a href="../Windows/TestConfigurations/TC.htm">Test Setup for Test Units</a>: in test units that were developed in <span class="bold">CAPL</span> and <span class="bold">.NET</span>.</li>
+                                                </ul>
+                                            </div>
+                                            <div class="tabcontent CANoe4SW-Lite-DE" data-mc-conditions="ToolAvailability.CANoe4SW-Lite-DE">
+                                                <ul>
+                                                    <li>in <a href="../Windows/CommunicationSetup/CommunicationSetup.htm">Communication Setup</a>: of application models that were developed in <span class="bold">CAPL</span> and <span class="bold">.NET</span>.</li>
+                                                    <li>in <a href="../Windows/TestConfigurations/TC.htm">Test Setup for Test Units</a>: in test units that were developed in <span class="bold">CAPL</span> and <span class="bold">.NET</span>.</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <p>During runtime of a simulation, the debugger can be used to analyze the program flow and to check values of variables.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p>The debugger enables you to analyze programs that run during a measurement. In the document view of the Debugger Window, you can set breakpoints in the original source code at which the program flow will be stopped. Depending on the type of program and measurement, the remaining simulation can continue running or will also be stopped. Single step functions enable you to trace the further sequence step by step.</p>
+                                        <p>As soon as a breakpoint is reached, all variables of the program are output with their current values in the <span class="bold">Variables</span> and <span class="bold">Watch</span> areas. After each single step, value changes can be checked in this way.</p>
+                                        <p>To resume the simulation, you actuate the <span class="bold">Start</span> <a href="../Ribbon/RibbonHome.htm">icon</a> (<img src="../../../Resources/Images/CANoeCANalyzer/ToolbarStandardStart.png" alt="Start measurement" border="0" />) or the <span class="bold">Play</span> key <img src="../../../Resources/vImages/vIcons/play_16.png" />.</p>
+                                        <div>
+                                            <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                                                <col class="TableStyle-vTableSymbol-Column-Column1" />
+                                                <col class="TableStyle-vTableSymbol-Column-Column2" />
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                                            <p class="Table">
+                                                                <img src="../../../Resources/vImages/vInfo.png" style="width: 48px;height: 45px;" title="Note" alt="Note" />
+                                                            </p>
+                                                        </td>
+                                                        <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                                            <p class="TableSymbolHead">Note</p>
+                                                            <div>
+                                                                <p>
+                                                                    <!-- Tab links -->
+                                                                </p>
+                                                                <div class="tab">
+                                                                    <button class="tablinks CANoe-DE active" onclick="openTab('CANoe-DE')">CANoe&#160;DE</button>
+                                                                    <button class="tablinks CANoe-Lite-DE" onclick="openTab('CANoe-Lite-DE')">CANoe:lite&#160;DE</button>
+                                                                    <button class="tablinks CANoe4SW-DE" onclick="openTab('CANoe4SW-DE')">CANoe4SW&#160;DE</button>
+                                                                    <button class="tablinks CANoe4SW-Lite-DE" onclick="openTab('CANoe4SW-Lite-DE')">CANoe4SW:lite&#160;DE</button>
+                                                                </div>
+                                                                <p>
+                                                                    <!-- Tab content -->
+                                                                </p>
+                                                                <div class="tabcontent CANoe-DE" style="display: block" data-mc-conditions="ToolAvailability.CANoe-DE">
+                                                                    <ul>
+                                                                        <li>For test modules and test units, debugging is also possible for measurements with real hardware.<br />For network nodes, debugging is only possible in simulated mode, because the complete simulation is stopped.</li>
+                                                                        <li>The debugger does not support .NET programs in the Measurement Setup.</li>
+                                                                        <li>
+                                                                            <p>For .NET programs, <span class="Product">Visual Studio</span> can also be specified as the debugger in the <a href="../Ribbon/File/Options/Programming/ProgrammingNETDebugging.htm" class="bold">Options</a> dialog.</p>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div class="tabcontent CANoe-Lite-DE" data-mc-conditions="ToolAvailability.CANoe-Lite-DE">
+                                                                    <ul>
+                                                                        <li>For test modules and test units, debugging is also possible for measurements with real hardware.<br />For network nodes, debugging is only possible in simulated mode, because the complete simulation is stopped.</li>
+                                                                        <li>
+                                                                            <p>For .NET programs, <span class="Product">Visual Studio</span> can also be specified as the debugger in the <a href="../Ribbon/File/Options/Programming/ProgrammingNETDebugging.htm" class="bold">Options</a> dialog.</p>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div class="tabcontent CANoe4SW-DE" data-mc-conditions="ToolAvailability.CANoe4SW-DE">
+                                                                    <ul>
+                                                                        <li>The debugger does not support .NET programs in the Measurement Setup.</li>
+                                                                        <li>For .NET programs, <span class="Product">Visual Studio</span> can also be specified as the debugger in the <a href="../Ribbon/File/Options/Programming/ProgrammingNETDebugging.htm" class="bold">Options</a> dialog.</li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div class="tabcontent CANoe4SW-Lite-DE" data-mc-conditions="ToolAvailability.CANoe4SW-Lite-DE">
+                                                                    <p>For .NET programs, <span class="Product">Visual Studio</span> can also be specified as the debugger in the <a href="../Ribbon/File/Options/Programming/ProgrammingNETDebugging.htm" class="bold">Options</a> dialog.</p>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Opening</p>
+                                    </th>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="TableHead">Using</p>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                        <p>You can open the CAPL debugger as follows: </p>
+                                        <div>
+                                            <p>
+                                                <!-- Tab links -->
+                                            </p>
+                                            <div class="tab">
+                                                <button class="tablinks CANoe-DE active" onclick="openTab('CANoe-DE')">CANoe&#160;DE</button>
+                                                <button class="tablinks CANoe-Lite-DE" onclick="openTab('CANoe-Lite-DE')">CANoe:lite&#160;DE</button>
+                                                <button class="tablinks CANoe4SW-DE" onclick="openTab('CANoe4SW-DE')">CANoe4SW&#160;DE</button>
+                                                <button class="tablinks CANoe4SW-Lite-DE" onclick="openTab('CANoe4SW-Lite-DE')">CANoe4SW:lite&#160;DE</button>
+                                            </div>
+                                            <p>
+                                                <!-- Tab content -->
+                                            </p>
+                                            <div class="tabcontent CANoe-DE" style="display: block" data-mc-conditions="ToolAvailability.CANoe-DE">
+                                                <ul>
+                                                    <li>Via the <span class="bold">Debug...</span>context menu command for a network node in the Simulation Setup or for a test module (CAPL or .NET) in the Simulation Setup or for a program node in the Measurement Setup.</li>
+                                                    <li>Via the <span class="bold">Debug...</span>context menu command for a test module (CAPL or .NET) in the Test Setup</li>
+                                                    <li>Via in the toolbar of the <a href="../Windows/TestConfigurations/TC.htm">Test Configurations for Test Units</a> or via the <span class="bold">Debug...</span>context menu command of an included test configuration</li>
+                                                    <li>Via <img src="../../../Resources/Images/CANoeCANalyzer/CAPLDebugger.png" /> in the test run dialog of a test module or a <a href="../Windows/TestConfigurations/TCConfig.htm">test configuration</a></li>
+                                                    <li>Via <img src="../../../Resources/Images/CANoeCANalyzer/CAPLDebugger.png" /> in <span class="GUI">Actions</span> area of application models in <a href="../Windows/CommunicationSetup/ComSetupApplicationModels.htm">Communication Setup</a></li>
+                                                </ul>
+                                                <p>The source code of the program and the related include files are displayed in the document view of the opened Debugger Window.</p>
+                                                <p>You can use the <a href="../Ribbon/RibbonTools.htm"><span class="GUI">Tools</span> ribbon tab</a> to open the individual Debugger Windows.</p>
+                                            </div>
+                                            <div class="tabcontent CANoe-Lite-DE" data-mc-conditions="ToolAvailability.CANoe-Lite-DE">
+                                                <ul>
+                                                    <li>Via the <span class="bold">Debug...</span>context menu command for a network node in the Simulation Setup or for a test module (CAPL or .NET) in the Simulation Setup or for a program node in the Measurement Setup.</li>
+                                                    <li>Via the <span class="bold">Debug...</span>context menu command for a test module (CAPL or .NET) in the Test Setup</li>
+                                                    <li>Via in the toolbar of the <a href="../Windows/TestConfigurations/TC.htm">Test Configurations for Test Units</a> or via the <span class="bold">Debug...</span>context menu command of an included test configuration</li>
+                                                    <li>Via <img src="../../../Resources/Images/CANoeCANalyzer/CAPLDebugger.png" /> in the test run dialog of a test module or a <a href="../Windows/TestConfigurations/TCConfig.htm">test configuration</a></li>
+                                                    <li>Via <img src="../../../Resources/Images/CANoeCANalyzer/CAPLDebugger.png" /> in <span class="GUI">Actions</span> area of application models in <a href="../Windows/CommunicationSetup/ComSetupApplicationModels.htm">Communication Setup</a></li>
+                                                </ul>
+                                                <p>The source code of the program and the related include files are displayed in the document view of the opened Debugger Window.</p>
+                                                <p>You can use the <a href="../Ribbon/RibbonTools.htm"><span class="GUI">Tools</span> ribbon tab</a> to open the individual Debugger Windows.</p>
+                                            </div>
+                                            <div class="tabcontent CANoe4SW-DE" data-mc-conditions="ToolAvailability.CANoe4SW-DE">
+                                                <ul>
+                                                    <li>Via in the toolbar of the <a href="../Windows/TestConfigurations/TC.htm">Test Configurations for Test Units</a> or via the <span class="bold">Debug...</span>context menu command of an included test configuration</li>
+                                                    <li>Via <img src="../../../Resources/Images/CANoeCANalyzer/CAPLDebugger.png" /> in the test run dialog of a <a href="../Windows/TestConfigurations/TCConfig.htm">test configuration</a></li>
+                                                    <li>Via <img src="../../../Resources/Images/CANoeCANalyzer/CAPLDebugger.png" /> in <span class="GUI">Actions</span> area of application models in <a href="../Windows/CommunicationSetup/ComSetupApplicationModels.htm">Communication Setup</a></li>
+                                                </ul>
+                                                <p>The source code of the program and the related include files are displayed in the document view of the opened Debugger Window.</p>
+                                                <p>You can use the <span class="GUI">Analysis</span> ribbon tab to open the individual Debugger Windows.</p>
+                                            </div>
+                                            <div class="tabcontent CANoe4SW-Lite-DE" data-mc-conditions="ToolAvailability.CANoe4SW-Lite-DE">
+                                                <ul>
+                                                    <li>Via in the toolbar of the <a href="../Windows/TestConfigurations/TC.htm">Test Configurations for Test Units</a> or via the <span class="bold">Debug...</span>context menu command of an included test configuration</li>
+                                                    <li>Via <img src="../../../Resources/Images/CANoeCANalyzer/CAPLDebugger.png" /> in the test run dialog of a <a href="../Windows/TestConfigurations/TCConfig.htm">test configuration</a></li>
+                                                    <li>Via <img src="../../../Resources/Images/CANoeCANalyzer/CAPLDebugger.png" /> in <span class="GUI">Actions</span> area of application models in <a href="../Windows/CommunicationSetup/ComSetupApplicationModels.htm">Communication Setup</a></li>
+                                                </ul>
+                                                <p>The source code of the program and the related include files are displayed in the document view of the opened Debugger Window.</p>
+                                                <p>You can use the <span class="GUI">Analysis</span> ribbon tab to open the individual Debugger Windows.</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                        <ul>
+                                            <li><a href="DebuggerDebugging.htm">Debugging</a>
+                                            </li>
+                                        </ul>
+                                        <h3>Windows</h3>
+                                        <ul>
+                                            <li><a href="DebuggerToolbar.htm">Toolbar</a>
+                                            </li>
+                                            <li><a href="DebuggerDocumentView.htm">Document view</a>
+                                            </li>
+                                            <li><a href="DebuggerVariablesWindow.htm">Variables</a>
+                                            </li>
+                                            <li><a href="DebuggerWatchWindow.htm">Watch</a>
+                                            </li>
+                                            <li><a href="DebuggerBreakPointWindow.htm">Breakpoints</a>
+                                            </li>
+                                            <li><a href="DebuggerFind.htm">Find (Source Code)</a>
+                                            </li>
+                                            <li><a href="DebuggerAvailableFiles.htm">Available Files</a>
+                                            </li>
+                                        </ul>
+                                        <p>The <span class="bold">Variables...</span>, <span class="bold">Watch...</span> and <span class="bold">Breakpoint</span> areas are not always visible. They can be displayed and hidden, docked, or auto-hidden via the toolbar.</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="LinkList">&#160;</p>
+                </div>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="FooterWhite">
+                <table class="FooterWhite" style="border-collapse: collapse;margin-left: auto;margin-right: auto;">
+                    <col style="width: 70px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col style="width: 16px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="buttons popup-container clearfix topicToolbarProxy topicToolbarProxyFooter _Skins_HTML5TopicToolbar mc-component nocontent">
+                                    <div class="button-group-container-left">
+                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo"><a href="../../Shared/HowToUseOnlineHelp.htm" title="Tips for using the help" alt="Tips for using the help"><img src="../../../Resources/vImages/vBackstage/vHelpInfo.png" /></a>
+                                </p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo" style="text-align: right;"><span class="mc-variable Vector.BuildTime variable">2024-04-8T20:56:42</span>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <table style="width: 100%;border-collapse: separate;border-spacing: 3px 0px;margin-left: auto;margin-right: auto;caption-side: top;">
+                <col />
+                <col />
+                <col />
+                <col data-mc-conditions="BuildProcess.HTML5Link" />
+                <tbody>
+                    <tr>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;">
+                            <p class="vec_Footer">©&#160;Vector Informatik GmbH</p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;text-align: right;">
+                            <p class="vec_FooterBold">
+                                <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE&#160;Product Families</MadCap:conditionalText> Version <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.VectorTestUnitRunner">18</MadCap:conditionalText></p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="../../Shared/ContactCopyrightLicense.htm" class="vec_Footer MCXref xref xrefvec_Footer">Contact/Copyright/License</a>
+                            </p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="https://www.vector.com/int/en/company/get-info/privacy-policy/" target="_blank" class="vec_Footer">Data Privacy Notice</a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

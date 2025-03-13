@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="" data-mc-search-type="Stem" data-mc-help-system-file-name="CANoeDEFamily.xml" data-mc-path-to-help-system="../../../../" data-mc-conditions="Targets.CANoe-DE-Family" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../Skins/Favicons/favicon-16x16.png" /><title>Working with the SENT Protocol</title>
+        <link href="../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Resources/Stylesheets/vTableMasterPageHeader.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../Resources/Stylesheets/vStylesheet.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../Resources/Stylesheets/vTable.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../Resources/Stylesheets/vTableMiniTOC.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapGlobal.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapDom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapUtilities.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapXhr.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTextEffects.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSlideshow.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMessageBus.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMessageBus.CrossFrame.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapDefault.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMediaQueries.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAccessibility.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapHelpSystem.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAliasFile.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopicFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapFeedbackHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSkinHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.Breadcrumbs.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.MiniToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.SideMenu.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapIndex.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapGlossary.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapParser.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSearch.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapNavigateTopics.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapLms.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapELearning.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopic.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMicroContentComponent.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSearchHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopicElements.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTriPane.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/jscript" src="../../../Resources/vScripts/SyntaxHighlighting.js">
+        </script>
+        <script type="text/jscript" src="../../../Resources/vScripts/TabSwitch.js">
+        </script>
+        <script type="text/javascript" src="../../../Resources/vScripts/Vector.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../../CANoeDEFamily.htm#Topics/CANoeCANalyzer/Sensor/SensorUsageSENT.htm">Open topic with navigation</a>
+        </p>
+        <div class="Body">
+            <div role="main" id="mc-main-content">
+                <div>
+                    <p class="StructurePath"><a href="../CANoeDEFamily.htm" class="StructurePath" data-mc-conditions="Targets.CANoe-DE-Family"><img src="../../../Resources/vImages/vToolIcons/CANoeDEFamily_Icon16_15x15.png" alt="" style="width: 15;height: 15;" />&#160;CANoe&#160;DE&#160;Product&#160;Families</a> » <a href="Sensor.htm" class="StructurePath">Option&#160;Sensor</a> » <a href="SensorSENTProtocol.htm" class="StructurePath">SENT protocol</a> » <span class="mc-variable System.Title variable">Working with the SENT Protocol</span></p>
+                    <h1><span class="mc-variable System.Title variable">Working with the SENT Protocol</span>
+                    </h1>
+                    <p class="MenuPath">&#160;</p>
+                    <p class="ToolAvailability" data-mc-conditions="BuildProcess.ToolAvailability"><a href="../../Shared/FeatureAvailability.htm" class="red" title="Feature availabilty for your product">Valid&#160;for</a>:&#160;&#160;CANoe&#160;DE<a name="aanchor17944"></a><MadCap:concept term="SFCANoeDE" /></p>
+                    <p class="AutoSearchFilterConcepts"><a name="aanchor17945"></a>
+                        <MadCap:concept term="SFCore" />
+                    </p>
+                    <p class="IndexConcept"><a name="kanchor6039"></a>
+                    </p>
+                </div>
+                <p class="TableCOM"><a name="Shortcuts" id="Shortcuts"></a><span class="red">ON THIS&#160;PAGE:</span>
+                </p>
+                <div>
+                    <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableMiniTOC.css');" class="TableStyle-vTableMiniTOC" cellspacing="2">
+                        <col class="TableStyle-vTableMiniTOC-Column-Column1" />
+                        <tbody>
+                            <tr class="TableStyle-vTableMiniTOC-Body-Body1">
+                                <td style="background-color: #f0f5f5;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;" class="TableStyle-vTableMiniTOC-BodyD-Column1-Body1">
+                                    <p class="TableTextSmall"><a href="#OverviewSystemVariables" class="Tab">Overview of the SENT System Variables</a>
+                                    </p>
+                                    <div class="Indent">
+                                        <p class="TableTextSmall"><a href="#OverviewSystemVariables" class="Tab">Variables and their Members</a>
+                                        </p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTableMiniTOC-Body-Body1">
+                                <td style="background-color: #f0f5f5;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;" class="TableStyle-vTableMiniTOC-BodyD-Column1-Body1">
+                                    <p class="TableTextSmall"><a href="#SimulationSensor" class="Tab">Simulating a Sensor</a>
+                                    </p>
+                                    <div class="Indent">
+                                        <p class="TableTextSmall"><a href="#ConfigurationSensorSimulation" class="Tab">Configuration of the Sensor Simulation</a>
+                                        </p>
+                                        <p class="TableTextSmall"><a href="#StartBehaviorSimSensor" class="Tab">Starting Behavior of the Sensor Simulation</a>
+                                        </p>
+                                        <p class="TableTextSmall"><a href="#BehaviorPowerLoss" class="Tab">Behavior of the Sensor in Case of a Voltage Loss</a>
+                                        </p>
+                                        <p class="TableTextSmall"><a href="#SendSimData" class="Tab">Sending of Simulation Data</a>
+                                        </p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTableMiniTOC-Body-Body1">
+                                <td style="background-color: #f0f5f5;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;" class="TableStyle-vTableMiniTOC-BodyD-Column1-Body1">
+                                    <p class="TableTextSmall"><a href="#SimulationECU" class="Tab">Simulating an ECU</a>
+                                    </p>
+                                    <div class="Indent">
+                                        <p class="TableTextSmall"><a href="#ConfigurationECUSimulation" class="Tab">Configuration of the ECU Simulation</a>
+                                        </p>
+                                        <p class="TableTextSmall"><a href="#BehaviorSimECU" class="Tab">Behavior of a Simulated ECU</a>
+                                        </p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTableMiniTOC-Body-Body1">
+                                <td style="background-color: #f0f5f5;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;" class="TableStyle-vTableMiniTOC-BodyA-Column1-Body1">
+                                    <p class="TableTextSmall"><a href="#AnalysisCommunication" class="Tab">Analysis of the Communication between two Devices</a>
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h2 class="SectionMain"><a name="OverviewSystemVariables" id="OverviewSystemVariables"></a>Overview of the SENT System Variables <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                <p>If you have configured a SENT network in the <a href="SensorConfigurationSENT.htm" class="GUI">Sensor Configuration</a> dialog, the corresponding <a href="../../Shared/SystemVariables/SysVar.htm">system variables</a> are automatically created.</p>
+                <h2 class="SectionSub">Variables and their Members <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                <ul>
+                    <li><a targets="TOGPowerStatus" href="javascript:void(0)" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="TOGPowerStatus"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />PowerStatus</a>
+                    </li>
+                    <div style="display: none;" data-mc-target-name="TOGPowerStatus">
+                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                            <col style="width: 100px;" />
+                            <col />
+                            <tbody>
+                                <tr>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Name	</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">PowerStatus</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Namespace	</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">SENSOR::SENT::ExampleChannel</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Function	</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">This variable indicates if the sensor is currently supplied with power.</p>
+                                        <p class="Table">Possible values are 0 (Power off) and 1 (Power on).</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Time stamp	</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">The time stamp of this event corresponds to the time at which the hardware detected the changes in the supply voltage.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                        <p class="Table">Member</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                        <p class="Table">—</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <li><a targets="TOGSensorError" href="javascript:void(0)" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="TOGSensorError"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />SensorError</a>
+                    </li>
+                    <div style="display: none;" data-mc-target-name="TOGSensorError">
+                        <table style="width: 100%;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');margin-left: 0;margin-right: auto;" class="TableStyle_vTable" cellspacing="0">
+                            <col class="TableStyle-vTable-Column-Column1" style="width: 100px;" />
+                            <col class="TableStyle-vTable-Column-Column1" />
+                            <tbody>
+                                <tr class="TableStyle-vTable-Body-Body1">
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Name</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">SensorError</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-vTable-Body-Body1">
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Namespace</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">SENSOR::SENT::ExampleChannel::ExampleSensor</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-vTable-Body-Body1">
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Function	</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">The errors concerning this sensor are reported in these variables. If, for example, a sensor receives a frame with an invalid CRC, the error will be reported here.</p>
+                                        <p class="Table"><a href="SensorErrorCodes.htm">Overview of the possible error codes.</a>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-vTable-Body-Body1">
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Time stamp</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">The time stamp of this event usually corresponds to the end of the frame that has caused the error.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-vTable-Body-Body1">
+                                    <th class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                        <p class="Table">Member</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                        <ul>
+                                            <li><span class="bold">ErrorCode</span>
+                                                <br />Provides information about the type of error.</li>
+                                            <li><span class="bold">Frame</span>
+                                                <br />If a frame is linked to this error, this member contains the data of the frame (if available).</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <li><a targets="TOGSensorFrame" href="javascript:void(0)" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="TOGSensorFrame"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />SensorFrame</a>
+                    </li>
+                    <div style="display: none;" data-mc-target-name="TOGSensorFrame">
+                        <table style="width: 100%;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');margin-left: 0;margin-right: auto;" class="TableStyle_vTable" cellspacing="0">
+                            <col class="TableStyle-vTable-Column-Column1" style="width: 100px;" />
+                            <col class="TableStyle-vTable-Column-Column1" />
+                            <tbody>
+                                <tr class="TableStyle-vTable-Body-Body1">
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Name</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">SensorFrame</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-vTable-Body-Body1">
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Namespace</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">SENSOR:: SENT::ExampleChannel::ExampleSensor</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-vTable-Body-Body1">
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Function	</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">The sent or received sensor frames are reported in these variables.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-vTable-Body-Body1">
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Time stamp</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">The time stamp of this event corresponds to the end of the sent or received frame.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-vTable-Body-Body1">
+                                    <th class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                        <p class="Table">Member</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                        <ul>
+                                            <li><span class="bold">Status</span>
+                                                <br />Contains the status bit value.</li>
+                                            <li><span class="bold">Data</span>
+                                                <br />Contains the value of the nibbles in the data region.</li>
+                                            <li><span class="bold">CRC</span>
+                                                <br />Contains the CRC bit value.</li>
+                                            <li><span class="bold">StartOfFrameTime</span>
+                                                <br />Contains the time stamp at which the frame begins. Measured in nanoseconds, relative to the end of the sync pulse.</li>
+                                            <li><span class="bold">FrameLength</span>
+                                                <br />Contains the frame length in bits.</li>
+                                            <li><span class="bold">TickLength</span>
+                                                <br />Contains the measured clock tick length of the frame.</li>
+                                            <li><span class="bold">PauseLength</span>
+                                                <br />Contains the number of pause ticks of the frame. If there was no pause, this value is 0.</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <li><a targets="TOGSensorFrame_Stim" href="javascript:void(0)" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="TOGSensorFrame_Stim"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />SensorFrame_Stim</a>
+                    </li>
+                    <div style="display: none;" data-mc-target-name="TOGSensorFrame_Stim">
+                        <table style="width: 100%;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');margin-left: 0;margin-right: auto;" class="TableStyle_vTable" cellspacing="0">
+                            <col class="TableStyle-vTable-Column-Column1" style="width: 100px;" />
+                            <col class="TableStyle-vTable-Column-Column1" />
+                            <tbody>
+                                <tr class="TableStyle-vTable-Body-Body1">
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Name</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">SensorFrame_Stim</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-vTable-Body-Body1">
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Namespace</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">SENSOR::SENT::ExampleChannel::ExampleSensor</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-vTable-Body-Body1">
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Function	</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">If the sensor is a simulated one, in addition to the frame variables, also this variable is created. This variable allows you to determine which data are contained in the frame sent by the sensor.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-vTable-Body-Body1">
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Time stamp</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">—</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-vTable-Body-Body1">
+                                    <th class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                        <p class="Table">Member</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                        <ul>
+                                            <li><span class="bold">Status</span>
+                                                <br />Contains the status bit value.</li>
+                                            <li><span class="bold">Data</span>
+                                                <br />Contains the value of the bits in the data region.</li>
+                                            <li><span class="bold">CRC</span>
+                                                <br />Contains the CRC bit value.</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <li><a targets="TOGSerialMessage" href="javascript:void(0)" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="TOGSerialMessage"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />SerialMessage</a>
+                    </li>
+                    <div style="display: none;" data-mc-target-name="TOGSerialMessage">
+                        <table style="width: 100%;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');margin-left: 0;margin-right: auto;" class="TableStyle_vTable" cellspacing="0">
+                            <col class="TableStyle-vTable-Column-Column1" style="width: 100px;" />
+                            <col class="TableStyle-vTable-Column-Column1" />
+                            <tbody>
+                                <tr class="TableStyle-vTable-Body-Body1">
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Name</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">SerialMessage</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-vTable-Body-Body1">
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Namespace</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">SENSOR::SENT::ExampleChannel::ExampleSensor</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-vTable-Body-Body1">
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Function	</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">The sent or received serial messages are reported in these variables.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-vTable-Body-Body1">
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Time stamp</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">The time stamp of this event corresponds to the end of the last frame containing a part of the serial message.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-vTable-Body-Body1">
+                                    <th class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                        <p class="Table">Member</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                        <ul>
+                                            <li><span class="bold">ID</span>
+                                                <br />Contains the ID of the serial message.</li>
+                                            <li><span class="bold">Data</span>
+                                                <br />Contains the data of the serial message.</li>
+                                            <li><span class="bold">CRC</span>
+                                                <br />Contains the CRC checksum of the serial message.</li>
+                                            <li><span class="bold">Type</span>
+                                                <br />Provides information about the type of the message:</li>
+                                            <li class="Indent">0: Short message</li>
+                                            <li class="Indent">1: Enhanced message (with short ID)</li>
+                                            <li class="Indent">2: Enhanced message (with long ID)</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <li><a targets="TOGSerialMessageError" href="javascript:void(0)" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="TOGSerialMessageError"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />SerialMessageError</a>
+                    </li>
+                    <div style="display: none;" data-mc-target-name="TOGSerialMessageError">
+                        <table style="width: 100%;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');margin-left: 0;margin-right: auto;" class="TableStyle_vTable" cellspacing="0">
+                            <col class="TableStyle-vTable-Column-Column1" style="width: 100px;" />
+                            <col class="TableStyle-vTable-Column-Column1" />
+                            <tbody>
+                                <tr class="TableStyle-vTable-Body-Body1">
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Name</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">SerialMessageError</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-vTable-Body-Body1">
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Namespace</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">SENSOR::SENT::ExampleChannel::ExampleSensor</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-vTable-Body-Body1">
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Function	</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">The errors contained in sent or received serial messages are reported in these variables.</p>
+                                        <p class="Table"><a href="SensorErrorCodes.htm">Overview of the possible error codes.</a>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-vTable-Body-Body1">
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Time stamp</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">The time stamp of this event corresponds to the end of the last frame containing a part of the serial message.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-vTable-Body-Body1">
+                                    <th class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                        <p class="Table">Member</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                        <ul>
+                                            <li><span class="bold">ErrorCode</span>
+                                                <br />Contains the error code.</li>
+                                            <li><span class="bold">ID</span>
+                                                <br />Contains the ID of the serial message.</li>
+                                            <li><span class="bold">Data</span>
+                                                <br />Contains the data of the serial message.</li>
+                                            <li><span class="bold">CRC</span>
+                                                <br />Contains the CRC checksum of the serial message.</li>
+                                            <li><span class="bold">Type</span>
+                                                <br />Provides information about the type of the message:</li>
+                                            <li class="Indent">0: Short message</li>
+                                            <li class="Indent">1: Enhanced message (with short ID)</li>
+                                            <li class="Indent">2: Enhanced message (with long ID)</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <li><a targets="TOGSignal" href="javascript:void(0)" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="TOGSignal"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Signal</a>
+                    </li>
+                    <div style="display: none;" data-mc-target-name="TOGSignal">
+                        <table style="width: 100%;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');margin-left: 0;margin-right: auto;" class="TableStyle_vTable" cellspacing="0">
+                            <col class="TableStyle-vTable-Column-Column1" style="width: 100px;" />
+                            <col class="TableStyle-vTable-Column-Column1" />
+                            <tbody>
+                                <tr class="TableStyle-vTable-Body-Body1">
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Name</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">ExampleSignal</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-vTable-Body-Body1">
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Namespace</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">SENSOR::SENT::ExampleChannel::ExampleSensor::Signals</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-vTable-Body-Body1">
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Function	</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">The signal system variables can be freely configured. Whenever a frame has been received, also the system variables of the signals contained in the frame have been updated. They are useful to make certain parts of the frame available in your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> as independent values.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-vTable-Body-Body1">
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Time stamp</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">The time stamp of a signal corresponds to the end of the frame that contained the signal.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-vTable-Body-Body1">
+                                    <th class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                        <p class="Table">Member</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                        <p class="Table">—</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <li><a targets="TOGSignal_Stim" href="javascript:void(0)" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="TOGSignal_Stim"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Signal_Stim</a>
+                    </li>
+                    <div style="display: none;" data-mc-target-name="TOGSignal_Stim">
+                        <table style="width: 100%;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');margin-left: 0;margin-right: auto;" class="TableStyle_vTable" cellspacing="0">
+                            <col class="TableStyle-vTable-Column-Column1" style="width: 100px;" />
+                            <col class="TableStyle-vTable-Column-Column1" />
+                            <tbody>
+                                <tr class="TableStyle-vTable-Body-Body1">
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Name</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">	ExampleSignal_Stim</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-vTable-Body-Body1">
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Namespace</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">SENSOR::SENT::ExampleChannel::ExampleSensor::Signals</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-vTable-Body-Body1">
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Function	</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">The signal system variables can be freely configured. If the sensor is a simulated one, a <span class="bold">_Stim</span> variable is additionally created for each signal. As soon as this variable is set, a sensor frame containing the signal data will be sent. A certain measured value from your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> can be easily sent via the sensor.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-vTable-Body-Body1">
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Time stamp</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">—</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-vTable-Body-Body1">
+                                    <th class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                        <p class="Table">Member</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                        <p class="Table">—</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </ul>
+                <h2 class="SectionMain"><a name="SimulationSensor" id="SimulationSensor"></a>Simulating a Sensor <a href="#Shortcuts" class="TopOfPageWhite">[▲ back]</a></h2>
+                <p>For testing ECUs, it is possible to simulate SENT sensors. This allows you to simulate ECUs with predetermined sensor values.</p>
+                <h2 class="SectionSub"><a name="ConfigurationSensorSimulation" id="ConfigurationSensorSimulation"></a>Configuration of the Sensor Simulation <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                <p>For the simulation of a sensor, it is necessary to set the sensor mode to "simulated" in the <a href="SensorConfigurationSENT.htm" class="GUI">Sensor Configuration</a> dialog.</p>
+                <h2 class="SectionSub"><a name="StartBehaviorSimSensor" id="StartBehaviorSimSensor"></a>Starting behavior of the Sensor Simulation <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                <p>Your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> starts with the simulation of the sensor at the start of a measurement. First the sensor waits until the required supply voltage is applied by the ECU. This threshold can be defined in the <a href="SensorConfigurationSENT.htm" class="GUI">Sensor Configuration</a> dialog. As soon as the required voltage has been reached, this is reported by the <span class="bold">PowerStatus</span> system variable. The sensor is now active, but it doesn't send any data yet. The start time of the sensor is therefore simulated. The length of the start time can be set in the <a href="SensorConfigurationSENT.htm" class="GUI">Sensor Configuration</a> dialog.</p>
+                <h2 class="SectionSub"><a name="BehaviorPowerLoss" id="BehaviorPowerLoss"></a>Behavior of the Sensor in Case of a Voltage Loss <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                <p>If a supply voltage loss occurs during the measurement, the sensor will stop sending. This error is reported by the <span class="bold">PowerStatus</span> system variable.</p>
+                <p>As soon as the required supply voltage is reached again, the sensor will start with its normal starting sequence (see above). Also this event is reported by the <span class="bold">PowerStatus</span> system variable.</p>
+                <h2 class="SectionSub"><a name="SendSimData" id="SendSimData"></a>Sending of Simulation Data <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                <p>Different options are provided to affect the data sent by the simulated sensor. These options are described in the following sections.</p>
+                <p>The hardware channel repeats the last sent frame until new data are set.</p>
+                <ul>
+                    <li><span class="bold">Sending of signals via system variables</span>
+                        <br />A system variable is created for each signal that has been configured in the <a href="SensorConfigurationSENT.htm" class="GUI">Sensor Configuration</a> dialog. The signal values can be modified through, for example, a panel or a signal generator. The modification of the variables is transmitted to the hardware channel in which the new value will be initiated in the sent frame.</li>
+                    <li><span class="bold">Sending of frames via system variables</span>
+                        <br />Similarly to sending signals via system variables, you can also send entire frames. To do this, modify the value of the frame simulation variables. This value is then transmitted to the hardware channel in which the new frame will be sent.<br />The frame simulation variables provide access to the status and data regions of the frame. The CRC checksum is calculated automatically and therefore it cannot be set.</li>
+                    <li><span class="bold">Sending of signals with CAPL</span>
+                        <br />The values of the sent signals can also be modified via CAPL. To do this, select the <a href="../../CAPLFunctions/Sensor/Functions/CAPLfunctionQueueValues.htm" class="SourceCode">QueueValues</a> method on the corresponding signal system variables. Alternatively, you can also use the CAPL function <a href="../../CAPLFunctions/Sensor/Functions/CAPLfunctionSensorQueueValues.htm" class="SourceCode">sensorQueueValues</a> which expects the names of the signal system variables as first parameters. In both cases, an array of signal values is transmitted which will then wait in a queue.</li>
+                    <li><span class="bold">Sending of frames with CAPL</span>
+                        <br />To send entire frames via CAPL use the <a href="../../CAPLFunctions/Sensor/Functions/CAPLfunctionQueueSentFrame.htm" class="SourceCode">QueueSentFrame</a> or <a href="../../CAPLFunctions/Sensor/Functions/CAPLfunctionSensorQueueSentFrame.htm" class="SourceCode">sensorQueueSentFrame</a> function. A description of the frame is expected as individual parameter.</li>
+                    <li><span class="bold">Sending of serial messages with CAPL</span>
+                        <br />The CAPL function <a href="../../CAPLFunctions/Sensor/Functions/CAPLfunctionQueueSerialMessage.htm" class="SourceCode">QueueSerialMessage</a> or <a href="../../CAPLFunctions/Sensor/Functions/CAPLfunctionSensorQueueSerialMessage.htm" class="SourceCode">sensorQueueSerialMessage</a> allows you to prepare the sending of serial messages. On the one hand the message ID is transmitted as parameter. On the other hand a flag is transmitted that allows you to select the type of message:</li>
+                    <li class="Indent"><span class="bold">Long ID</span>: the ID is 8 bits long, the data are 12 bits long.</li>
+                    <li class="Indent"><span class="bold">Short ID</span>: the ID is 4 bits long, the data are 16 bits long.</li>
+                    <p>The latter refers only to sensors that are used as <span class="GUI">enhanced serial messages</span>. If the sensor is configured for <span class="GUI">short serial messages</span>, 4-bit IDs and 8-bit data are always sent.<br />The current data of the message are not transferred to the CAPL function. These data are taken from the signal system variables assigned to the corresponding message IDs.</p>
+                    <li><span class="bold">Logging and replaying of the sensor communication</span>
+                        <br />The logging functionallows you to log the communication of a real sensor. This log can be later replayed by a simulated sensor. To do so, proceed as follows:</li>
+                </ul>
+                <ol>
+                    <li class="Indent" value="1">Load or create a <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> configuration with a real SENT sensor.</li>
+                    <li class="Indent" value="2">Activate the <a href="../FunctionBlocks/Logging/LoggingBlock.htm">Logging Block</a> in the Measurement Setup configuration.</li>
+                    <li class="Indent" value="3">Select <span class="bold">BLF</span> as output format.</li>
+                    <li class="Indent" value="4">Start the measurement in order to allow the communication of the sensor to be logged.</li>
+                    <li class="Indent" value="5">Create a new <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> configuration with a simulated SENT sensor.</li>
+                    <li class="Indent" value="6">In the <a href="SensorConfigurationSENT.htm">configuration of the SENT channel</a> dialog select the BLF logging file as data source.</li>
+                    <li class="Indent" value="7">In the <a href="SensorConfigurationSENT.htm">configuration of the simulated SENT sensor</a> dialog activate the replay from the logging file.</li>
+                    <li class="Indent" value="8">Select the names of the sensor whose logging file you want to replay.</li>
+                    <p>The data are sent from the logging file through the simulated sensor at the start of the measurement.</p>
+                </ol>
+                <h2 class="SectionMain"><a name="SimulationECU" id="SimulationECU"></a>Simulating an ECU <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                <p>For analyzing and testing sensors, it is possible to simulate a SENT ECU. The data sent from the sensor can be displayed and evaluated.</p>
+                <h2 class="SectionSub"><a name="ConfigurationECUSimulation" id="ConfigurationECUSimulation"></a>Configuration of the ECU Simulation <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                <p>For the simulation of an ECU, it is necessary to set the sensor mode to <span class="GUI">simulated</span> in the <a href="SensorConfigurationSENT.htm" class="GUI">Sensor Configuration</a> dialog.</p>
+                <h2 class="SectionSub"><a name="BehaviorSimECU" id="BehaviorSimECU"></a>Behavior of a Simulated ECU <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                <p>As soon as the measurement is started, the simulation of the SENT ECU will begin. This allows the supply voltage for the connected sensor to be generated.</p>
+                <h2 class="SectionMain"><a name="AnalysisCommunication" id="AnalysisCommunication"></a>Analysis of the Communication between two Real Devices <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                <p>The Option&#160;Sensor allows you to log the communication between a real ECU and a real sensor and to analyze it in realtime. The mode of the ECU and that of the sensor must both be set to <span class="GUI">real</span> in the <a href="SensorConfigurationSENT.htm" class="GUI">Sensor Configuration</a> dialog. The data received from the ECU and the sensor will then be reported via the corresponding system variables.</p>
+                <p class="LinkList">&#160;</p>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="FooterWhite">
+                <table class="FooterWhite" style="border-collapse: collapse;margin-left: auto;margin-right: auto;">
+                    <col style="width: 70px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col style="width: 16px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="buttons popup-container clearfix topicToolbarProxy topicToolbarProxyFooter _Skins_HTML5TopicToolbar mc-component nocontent">
+                                    <div class="button-group-container-left">
+                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo"><a href="../../Shared/HowToUseOnlineHelp.htm" title="Tips for using the help" alt="Tips for using the help"><img src="../../../Resources/vImages/vBackstage/vHelpInfo.png" /></a>
+                                </p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo" style="text-align: right;"><span class="mc-variable Vector.BuildTime variable">2024-04-8T20:56:42</span>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <table style="width: 100%;border-collapse: separate;border-spacing: 3px 0px;margin-left: auto;margin-right: auto;caption-side: top;">
+                <col />
+                <col />
+                <col />
+                <col data-mc-conditions="BuildProcess.HTML5Link" />
+                <tbody>
+                    <tr>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;">
+                            <p class="vec_Footer">©&#160;Vector Informatik GmbH</p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;text-align: right;">
+                            <p class="vec_FooterBold">
+                                <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE&#160;Product Families</MadCap:conditionalText> Version <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.VectorTestUnitRunner">18</MadCap:conditionalText></p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="../../Shared/ContactCopyrightLicense.htm" class="vec_Footer MCXref xref xrefvec_Footer">Contact/Copyright/License</a>
+                            </p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="https://www.vector.com/int/en/company/get-info/privacy-policy/" target="_blank" class="vec_Footer">Data Privacy Notice</a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

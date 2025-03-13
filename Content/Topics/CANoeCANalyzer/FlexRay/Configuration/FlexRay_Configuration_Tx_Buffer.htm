@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="CANoeDEFamily.xml" data-mc-path-to-help-system="../../../../../" data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANalyzer" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../Skins/Favicons/favicon-16x16.png" /><title>FlexRay Configuration: Tx Buffer</title>
+        <link href="../../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Resources/Stylesheets/vTableMasterPageHeader.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../../Resources/Stylesheets/vStylesheet.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../../Resources/Stylesheets/vTable.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../../Resources/Stylesheets/vTableSymbol.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapGlobal.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapDom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapUtilities.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapXhr.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTextEffects.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSlideshow.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMessageBus.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMessageBus.CrossFrame.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapDefault.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMediaQueries.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapAccessibility.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapHelpSystem.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapAliasFile.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopicFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapFeedbackHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSkinHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.Breadcrumbs.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.MiniToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.SideMenu.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapIndex.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapGlossary.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapParser.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSearch.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapNavigateTopics.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapLms.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapELearning.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopic.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMicroContentComponent.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSearchHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopicElements.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTriPane.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/jscript" src="../../../../Resources/vScripts/SyntaxHighlighting.js">
+        </script>
+        <script type="text/jscript" src="../../../../Resources/vScripts/TabSwitch.js">
+        </script>
+        <script type="text/javascript" src="../../../../Resources/vScripts/Vector.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../../../CANoeDEFamily.htm#Topics/CANoeCANalyzer/FlexRay/Configuration/FlexRay_Configuration_Tx_Buffer.htm">Open topic with navigation</a>
+        </p>
+        <div class="Body">
+            <div role="main" id="mc-main-content">
+                <p class="StructurePath"><a href="../FlexRay.htm" class="StructurePath">FlexRay</a><a href="FlexRay_Configuration_Hardware.htm" class="StructurePath"><br />Network Hardware</a> » FlexRay Configuration: Tx Buffer</p>
+                <h1>FlexRay Configuration: Tx Buffer</h1>
+                <p class="MenuPath"><a href="../../Ribbon/Ribbon.htm" class="MenuPath">Ribbon</a>: <a href="../../Ribbon/RibbonHardware.htm" class="MenuPath">Hardware Tab</a>|<a href="../../Ribbon/Hardware/NetworkHardware.htm" class="MenuPath">Network Hardware</a>|<a href="FlexRay_Configuration_Hardware.htm" class="MenuPath">FlexRay</a>|Tx Buffer</p>
+                <p class="ToolAvailability" data-mc-conditions="BuildProcess.ToolAvailability"><a href="../../../Shared/FeatureAvailability.htm" class="red" title="Feature availabilty for your product">Valid&#160;for</a>:&#160;&#160;CANoe&#160;DE<a name="aanchor15255"></a><MadCap:concept term="SFCANoeDE" /></p>
+                <p class="AutoSearchFilterConcepts"><a name="aanchor15256"></a>
+                    <MadCap:concept term="SFCore" />
+                </p>
+                <p><a name="kanchor5228"></a>
+                </p>
+                <p>This page lists all Tx frames of the database, which shall be transmitted by the nodes of the database. It is important that the database nodes are assigned to the CAPL nodes. The buffers can here be configured. For activated frames send buffers on the FlexRay interface are defined accordingly.</p>
+                <p class="StartList">This configuration dialog can be opened from two different locations:</p>
+                <ul>
+                    <li><span class="bold">Alternative 1</span>: Via this page and the <span class="GUI">Tx Buffer Configuration</span> button you open the <span class="GUI">Transmit Buffers Configuration</span> dialog.</li>
+                </ul>
+                <ul>
+                    <li><span class="bold">Alternative 2</span>: In the <a href="../../Windows/SimulationSetup/SimulationSetupWindow.htm">Simulation Setup</a> open with a right click on a node and the context menu command<a href="../../Windows/SimulationSetup/SimulationSetupNodeConfiguration.htm" class="bold">Configuration</a> the <span class="GUI">Node Configuration</span> dialog. On the <span class="bold">PowerTrain_FlexRay</span> page you find the current settings for the <span class="GUI">Tx Buffer</span>. Via the <span class="GUI">Configuration</span> button you open the <span class="GUI">Transmit Buffers Configuration</span> dialog.</li>
+                </ul>
+                <p>Depending on the database model (frame-based or PDU-based) the dialog only displays frames or displays frames and their contained PDUs. The PDU list will be updated when a specific frame is selected.</p>
+                <h3>Dialog layout when only frames are displayed:</h3>
+                <p>
+                    <img src="../../../../Resources/Images/CANoeCANalyzer/FrTXBufferListFrameOverview.png" />
+                </p>
+                <h3>Dialog layout when frames and PDUs are considered:</h3>
+                <p>
+                    <img src="../../../../Resources/Images/CANoeCANalyzer/FrTXBufferListPDUOverview.png" />
+                </p>
+                <p class="StartList">In the leftmost tree view of the dialog the contents of the frame list can be filtered. The selection of</p>
+                <ul>
+                    <li><span class="GUI">All Frames</span>
+                        <br />Shows all frames. Even those that do not have any Tx relations</li>
+                    <li><span class="GUI">Tx Nodes</span>
+                        <br />Shows all frames with Tx&#160;relations.</li>
+                    <li><span class="bold">Concrete Node from Database</span>
+                        <br />Shows only those frames that are sent by this node.</li>
+                </ul>
+                <p class="StartList">In the area on the left bottom of the dialog the configured key slots are displayed:</p>
+                <ul>
+                    <li>If you select the <span class="GUI">All Frames</span> or the <span class="GUI">Tx Nodes</span> entry an overview of all ECUs with key slot and its usage (Sync, Startup,Leading Coldstart) are displayed.</li>
+                    <li>If you select a single node you can change the settings of the key slot and its usage.<br />The <span class="GUI">Key Slot Usage</span> list provides the following settings:</li>
+                </ul>
+                <div class="Indent">
+                    <div>
+                        <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                            <col />
+                            <col />
+                            <tbody>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableBold">Not configured</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">No key slot will be used.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableBold">Sync</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">For this key slot the <span class="bold">Sync</span> flag will be configured.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableBold">Startup</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">For this key slot the <span class="bold">Sync</span> and <span class="bold">Startup</span> flag will be configured.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                        <p class="TableBold">Startup, LCS</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                        <p class="Table">For this key slot the <span class="bold">Sync</span> and <span class="bold">Startup</span> flag will be configured.<br />The <span class="GUI">Leading Coldstart</span> property in the controller will be activated.</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <p>With setting the check box of the column <span class="bold">Active</span> the appropriate Tx&#160;buffer in the interface can be created. Within the tree view the check box enables or disabled all Tx buffers of the appropriate filter list.</p>
+                <p class="StartList">The check box of the tree view distinguishes three states:</p>
+                <ul>
+                    <li><span class="bold">Activated</span>: All frames are enabled</li>
+                    <li><span class="bold">Deactivated</span>: All frames are disabled</li>
+                    <li><span class="bold">Three-State</span>: Some Frames are activated while other frames are deactivated</li>
+                </ul>
+                <p>If frames are sent by more than one node, then the deactivation/activation is applied to the lists of all nodes, which contain this frame.</p>
+                <h2>Configuration columns of the frame list:</h2>
+                <table style="width: 100%;caption-side: top;mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');" width="100%" class="TableStyle_vTable" cellspacing="0">
+                    <col style="width: 176px;" />
+                    <col />
+                    <thead>
+                        <tr>
+                            <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                <p class="TableHead">Column</p>
+                            </th>
+                            <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                <p class="TableHead">Meaning</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tr valign="top">
+                        <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="TableGUI">Active</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">Activates or deactivates the corresponding Tx&#160;buffer.</p>
+                        </td>
+                    </tr>
+                    <tr valign="top">
+                        <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="TableGUI">Name</p>
+                        </td>
+                        <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">Name of the Frame (FIBEX+ does not define frame names. Therefore "..." will be displayed.)</p>
+                        </td>
+                    </tr>
+                    <tr valign="top">
+                        <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="TableGUI">Tx Node</p>
+                        </td>
+                        <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">Name of the database node that transmits this frame</p>
+                        </td>
+                    </tr>
+                    <tr valign="top">
+                        <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="TableGUI">Slot</p>
+                        </td>
+                        <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">Slot ID that contains this frame</p>
+                        </td>
+                    </tr>
+                    <tr valign="top">
+                        <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="TableGUI">Offset</p>
+                        </td>
+                        <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">Base cycle of the frame's cycle multiplexing</p>
+                        </td>
+                    </tr>
+                    <tr valign="top">
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="TableGUI">Rep.</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">Cycle repetition of the frame's cycle multiplexing</p>
+                        </td>
+                    </tr>
+                    <tr valign="top">
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="TableGUI">Type</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">Service type (that is defined in the FIBEX file)</p>
+                        </td>
+                    </tr>
+                    <tr valign="top">
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="TableGUI">Channel Mask</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">FlexRay channel (A or B)</p>
+                        </td>
+                    </tr>
+                    <tr valign="top">
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="TableGUI">Payload Length</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">Length of the frame's payload area in [16 Bit words]</p>
+                        </td>
+                    </tr>
+                    <tr valign="top">
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="TableGUI">TT</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">If enabled, then the Tx buffer is set to time-triggered mode (automatic repeated transmission). Otherwise to event-triggered mode (Null frames will be sent, if the buffer is not updated).</p>
+                        </td>
+                    </tr>
+                    <tr valign="top">
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="TableGUI">PP</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">Sets or unsets the Payload Preamble bit of the frame's header.</p>
+                        </td>
+                    </tr>
+                    <tr valign="top">
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="TableGUI">Used for PDU</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">If set, then the Tx buffer can only be used by PDU updates (otherwise only frame updates are allowed).</p>
+                        </td>
+                    </tr>
+                    <tr valign="top">
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="TableGUI">Database</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">Name of the database that defines this frame</p>
+                        </td>
+                    </tr>
+                </table>
+                <p class="StartList">The following menu commands will be applied only to frames, that can be configured:</p>
+                <ul>
+                    <li><span class="bold">Enable All</span>
+                        <br />Activates all frames</li>
+                    <li><span class="bold">Disable All</span>
+                        <br />Deactivates all frames</li>
+                    <li><span class="bold">Flags</span>
+                        <ul>
+                            <li><span class="bold">Delete startup flags</span>
+                                <br />Deletes the SUPF flag of all frames</li>
+                            <li><span class="bold">Set startup flags according to Database</span>
+                                <br />Sets the SUPF flag for all frames that are defined as startup frames in the database</li>
+                            <li><span class="bold">Delete Sync Flags</span>
+                                <br />Deletes the Sync (and SUPF) flag of all frames</li>
+                            <li><span class="bold">Set Sync Flags according to Database</span>
+                                <br />Sets the Sync flag for all frames that are defined as Sync frames in the database</li>
+                        </ul>
+                    </li>
+                    <li><span class="bold">Dynamic/static frames</span>
+                        <ul>
+                            <li><span class="bold">Set to Time-Triggered</span>
+                                <br />Sets all dynamic/static frame's Tx&#160;buffers to time-triggered transmission (automatic repeated transmission)<br /></li>
+                            <li><span class="bold">Set to Event-Triggered</span>
+                                <br />Sets all dynamic/static frame's Tx buffers to event-triggered transmission (Null frame is sent on missing update in static segment)</li>
+                        </ul>
+                    </li>
+                    <li><span class="bold">Service Types</span>
+                        <br />Activates/deactivates all frames of a specific service type</li>
+                </ul>
+                <div>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                    <p class="Table">
+                                        <img src="../../../../Resources/vImages/vInfo.png" style="width: 48px;height: 45px;" title="Note" alt="Note" />
+                                    </p>
+                                </td>
+                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                    <p class="TableSymbolHead">Note</p>
+                                    <p class="Table">To create a send buffer for a frame which is not defined in the database use the CAPL function <a href="../../../CAPLFunctions/FlexRay/Functions/CAPLfunctionFrSetSendFrame.htm" class="SourceCode">FrSetSendFrame</a> or the <a href="../../FunctionBlocks/IG/FlexRayFramePanel.htm">FlexRay Frame Panel</a>.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div data-mc-conditions="Targets.CANoe-DE-Family">
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                    <p class="Table">
+                                        <img src="../../../../Resources/vImages/vInfo.png" style="width: 48px;height: 45px;" title="Note" alt="Note" />
+                                    </p>
+                                </td>
+                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                    <p class="TableSymbolHead">Notes</p>
+                                    <ul>
+                                        <li>A frame can only be activated when the database node is assigned to a node in the Simulation Setup and the simulation node is active. If the simulation node is deactivated the frame will also be deactivated and displayed in gray. If the database node is not assigned to a simulation node the frame is deactivated and displayed in gray. Frames, whose database node is assigned to a simulation node and the simulation node is also active in the Simulation Setup, are displayed in a normal way and may be activated and deactivated.</li>
+                                        <li>If the Real Mode is selected, then an interface channel (e.g. "FlexRay 1") must be attached to the measurement channel of the Simulation Setup.</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="LinkList"><a href="../FlexRay.htm" class="LinkList">FlexRay</a>&#160;&#160;•&#160;&#160;<a href="../FlexRayFIBEX.htm" class="LinkList">FIBEX Support</a>&#160;&#160;•&#160;&#160;<a href="../FlexRayPDUSupport.htm" class="LinkList">PDU Support</a>&#160;&#160;•&#160;&#160;<a href="../FlexRayMultiChannelSupport.htm" class="LinkList">Multi-Channel Support</a>&#160;&#160;•&#160;&#160;<a href="FlexRay_Configuration_Hardware.htm" class="LinkList">FlexRay Hardware Configuration</a>&#160;&#160;•&#160;&#160;<a href="../../Ribbon/File/Options/BussystemsProtocols/BussystemsProtocolsBussystems.htm" class="LinkList">FlexRay Settings</a>&#160;&#160;•&#160;&#160;<a href="../../../CAPLFunctions/FlexRay/CAPLfunctionsFlexrayOverview.htm" class="LinkList">FlexRay CAPL Functionality</a></p>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="FooterWhite">
+                <table class="FooterWhite" style="border-collapse: collapse;margin-left: auto;margin-right: auto;">
+                    <col style="width: 70px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col style="width: 16px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="buttons popup-container clearfix topicToolbarProxy topicToolbarProxyFooter _Skins_HTML5TopicToolbar mc-component nocontent">
+                                    <div class="button-group-container-left">
+                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo"><a href="../../../Shared/HowToUseOnlineHelp.htm" title="Tips for using the help" alt="Tips for using the help"><img src="../../../../Resources/vImages/vBackstage/vHelpInfo.png" /></a>
+                                </p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo" style="text-align: right;"><span class="mc-variable Vector.BuildTime variable">2024-04-8T20:56:42</span>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <table style="width: 100%;border-collapse: separate;border-spacing: 3px 0px;margin-left: auto;margin-right: auto;caption-side: top;">
+                <col />
+                <col />
+                <col />
+                <col data-mc-conditions="BuildProcess.HTML5Link" />
+                <tbody>
+                    <tr>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;">
+                            <p class="vec_Footer">©&#160;Vector Informatik GmbH</p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;text-align: right;">
+                            <p class="vec_FooterBold">
+                                <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE&#160;Product Families</MadCap:conditionalText> Version <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.VectorTestUnitRunner">18</MadCap:conditionalText></p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="../../../Shared/ContactCopyrightLicense.htm" class="vec_Footer MCXref xref xrefvec_Footer">Contact/Copyright/License</a>
+                            </p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="https://www.vector.com/int/en/company/get-info/privacy-policy/" target="_blank" class="vec_Footer">Data Privacy Notice</a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

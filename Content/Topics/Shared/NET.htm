@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="CANoeDEFamily.xml" data-mc-path-to-help-system="../../../" data-mc-toc-path="Programming Interfaces (APIs)|.NET" data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.vTESTstudio" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../Skins/Favicons/favicon-16x16.png" /><title>.NET Programming</title>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Resources/Stylesheets/vTableMasterPageHeader.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../Resources/Stylesheets/vStylesheet.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.needs-pie
+{
+	behavior: url('../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../Resources/Stylesheets/vTable.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../Resources/Stylesheets/vTableSymbol.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapGlobal.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapDom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapUtilities.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapXhr.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapTextEffects.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapSlideshow.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapMessageBus.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapMessageBus.CrossFrame.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapDefault.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapMediaQueries.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAccessibility.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapHelpSystem.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAliasFile.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapTopicFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapFeedbackHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapSkinHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapToc.Breadcrumbs.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapToc.MiniToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapToc.SideMenu.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapIndex.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapGlossary.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapParser.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapSearch.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapNavigateTopics.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapLms.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapELearning.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapTopic.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapMicroContentComponent.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapSearchHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapTopicElements.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapTriPane.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/jscript" src="../../Resources/vScripts/SyntaxHighlighting.js">
+        </script>
+        <script type="text/jscript" src="../../Resources/vScripts/TabSwitch.js">
+        </script>
+        <script type="text/javascript" src="../../Resources/vScripts/Vector.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../CANoeDEFamily.htm#Topics/Shared/NET.htm">Open topic with navigation</a>
+        </p>
+        <div class="Body">
+            <div role="main" id="mc-main-content">
+                <p>ly</p>
+                <div>
+                    <p class="AutoSearchFilterConcepts"><a name="aanchor20311"></a>
+                        <MadCap:concept term="SFCore" />
+                    </p>
+                    <p><a name="kanchor6789"></a>
+                    </p>
+                    <p class="StructurePath"><a href="../CANoeCANalyzer/CANoeDEFamily.htm" class="StructurePath" data-mc-conditions="Targets.CANoe-DE-Family"><img src="../../Resources/vImages/vToolIcons/CANoeDEFamily_Icon16_15x15.png" alt="" style="width: 15;height: 15;" />&#160;CANoe&#160;DE&#160;Product&#160;Families</a> » … » <span class="mc-variable System.Title variable">.NET Programming</span></p>
+                    <h1><span class="mc-variable System.Title variable">.NET Programming</span>
+                    </h1>
+                    <p class="MenuPath">&#160;</p>
+                    <p class="ToolAvailability" data-mc-conditions="BuildProcess.ToolAvailability"><a href="FeatureAvailability.htm" class="red" title="Feature availabilty for your product">Valid&#160;for</a>:&#160;&#160;CANoe&#160;DE<a name="aanchor20312"></a><MadCap:concept term="SFCANoeDE" />&#160;&#160;•&#160;&#160;CANoe:lite&#160;DE<a name="aanchor20313"></a><MadCap:concept term="SFCANoeLiteDE" />&#160;&#160;•&#160;&#160;CANoe4SW&#160;DE<a name="aanchor20314"></a><MadCap:concept term="SFCANoe4SWDE" />&#160;&#160;•&#160;&#160;CANoe4SW:lite&#160;DE<a name="aanchor20315"></a><MadCap:concept term="SFCANoe4SWLiteDE" /></p>
+                </div>
+                <div data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">
+                    <p>You can use .NET programming languages in different areas of your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText>.</p>
+                    <ul>
+                        <li>For the programming of simulated network nodes and application models</li>
+                        <li>For the programming of test modules, test cases and test libraries (valid for <span class="Product">CANoe&#160;DE</span><MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">, </MadCap:conditionalText><span class="Product">CANoe4SW&#160;DE</span>)</li>
+                        <li>And for the programming of snippets (valid for <span class="Product">CANoe&#160;DE</span><MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">, </MadCap:conditionalText><span class="Product">CANoe4SW&#160;DE</span>)</li>
+                    </ul>
+                    <p>Your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> provides a special .NET API with specific language extensions (i.e. it creates Embedded Domain Specific Languages). The following programming languages are supported directly:</p>
+                    <ul>
+                        <li>C# (programming language recommended by Vector)</li>
+                        <li>Visual Basic .NET</li>
+                    </ul>
+                </div>
+                <div data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                    <p class="Table">
+                                        <img src="../../Resources/vImages/vInfo.png" style="width: 48px;height: 45px;" title="Note" alt="Note" />
+                                    </p>
+                                </td>
+                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                    <p class="TableSymbolHead">Note on .NET Framework Compatibility</p>
+                                    <p class="Table">.NET 4.7 language features are supported for .NET-based network nodes and application models. To guarantee compatibility for all environments including VN/VT-Systems higher versions are not supported. For compatibility with existing .NET libraries, you can also choose to build against the .NET Framework 4.0 or .NET Framework 2.0 APIs.</p>
+                                    <p class="Table">Due to Microsoft's decision to perform minor .NET framework updates as "in-place updates", a simple exchange of files is not sufficient for your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> to create network nodes and application models for .NET 4.7 or 4.0 if the ".NET 4.0 Framework Reference Assemblies" are not installed.</p>
+                                    <p class="Table">You will typically not encounter problems when a warning appears, if you do not use "extension methods" or .NET features &gt;4.7/4.0. If you however encounter a "TypeLoadException" when running the simulation on another machine than the build machine, you can assure the compatibility on build time, by providing the Reference Assemblies. To do so, please</p>
+                                    <ul>
+                                        <li>install the .NET 4.7/4.0 reference assemblies by installing</li>
+                                        <li class="Indent">Microsoft Visual Studio 2017 (2010 for 4.0) or higher, or</li>
+                                        <li class="Indent">the NuGet package "Microsoft.NETFramework.ReferenceAssemblies" or</li>
+                                        <li class="Indent">.NET Framework 4.7.2 Developer Pack or</li>
+                                        <li class="Indent">Windows SDK 7.1 for version 4.0 (only "Intellisense and Reference Assemblies" component is needed)<br /><span class="bold">Note</span>: If the installation of Windows SDK 7.1 fails of unclear origin, you may need to uninstall the "Microsoft Visual C++ 2010 x86 Redistributable" package before. (It will automatically be re-installed by the Windows SDK setup.)</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                        <col class="TableStyle-vTableSymbol-Column-Column1" style="width: 50px;" />
+                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                    <p class="Table">
+                                        <img src="../../Resources/vImages/vInfo.png" style="width: 48px;height: 45px;" title="Note" alt="Note" />
+                                    </p>
+                                </td>
+                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                    <p class="TableSymbolHead">Note on .NET Frameworks</p>
+                                    <p class="Table">Your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> compiles the .NET programs against the .NET Framework 4.7, or alternatively in compatibility mode against the .NET Framework 4.0 or 2.0. Other versions are not supported. Therefore, in Visual Studio, you must specify one of these version numbers for compilation as the Target Framework. The compiled programs can then be run with .NET Framework 4.7, for example.</p>
+                                    <p class="Table">Starting with <span class="Product">Windows 8</span> you must activate <span class="Product">.NET 3.5 Framework</span> manually in Windows in order to use <span class="Product">.NET 2 API</span>. Otherwise you may receive the following error message: <span class="bold">Compiler executable file csc.exe cannot be found</span>.</p>
+                                    <p class="Table" data-mc-conditions="Targets.CANoe-DE-Family">Additional information on installation of <span class="Product">.NET 3.5 Framework</span> can be found in this document:</p>
+                                    <div data-mc-conditions="Targets.CANoe-DE-Family">
+                                        <ul>
+                                            <li>CANoe&#160;DE<a name="aanchor20316"></a><MadCap:concept term="SFCANoeDE" />, CANoe4SW&#160;DE<a name="aanchor20317"></a><MadCap:concept term="SFCANoe4SWDE" />: <a href="javascript:startCANoeLauncher('CANoeDEFamily_Activation_Installation_EN.pdf')" class="ExecuteLink">CANoeDEFamily_Activation_Installation_EN.pdf</a></li>
+                                            <li>CANoe:lite&#160;DE<a name="aanchor20318"></a><MadCap:concept term="SFCANoeLiteDE" />, CANoe4SW:lite&#160;DE<a name="aanchor20319"></a><MadCap:concept term="SFCANoe4SWLiteDE" />: <a href="javascript:startCANoeLiteLauncher('CANoeLiteDEFamily_Activation_Installation_EN.pdf')" class="ExecuteLink">CANoeLiteDEFamily_Activation_Installation_EN.pdf&#160;</a></li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div data-mc-conditions="Targets.CANoe-DE-Family">
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                    <p class="Table">
+                                        <img src="../../Resources/vImages/vCrossRef.png" style="width: 48px;height: 45px;" />
+                                    </p>
+                                </td>
+                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                    <p class="TableSymbolHead">Detailed Information on .NET</p>
+                                    <p class="Table">A detailed description about the environment, programming with .NET API and further background information for experts can be found here: <a href="javascript:startDemoLoader('AN-IND-1-011_Using_CANoe_NET_API.pdf')" class="ExecuteLink">Using CANoe .NET API</a></p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                    <p class="Table">
+                                        <img src="../../Resources/vImages/vInfo.png" style="width: 48px;height: 45px;" title="Note" alt="Note" />
+                                    </p>
+                                </td>
+                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                    <p class="TableSymbolHead">Note on the C#- Language Version (valid for <span class="Product">CANoe&#160;DE</span><MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">, </MadCap:conditionalText><span class="Product">CANoe4SW&#160;DE</span>)</p>
+                                    <p class="Table">The supported C# language version depends on both the selected .NET Framework and the product version used. The following table shows the maximum C# language version that can be used:</p>
+                                    <div>
+                                        <table style="width: 100%;mc-table-style: url('../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                                            <col style="width: 50%;" />
+                                            <col style="width: 50%;" />
+                                            <col style="width: 50%;" />
+                                            <col style="width: 50%;" />
+                                            <thead>
+                                                <tr>
+                                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                                        <p class="TableHead">Product Version</p>
+                                                    </th>
+                                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                                        <p class="TableHead">Framework
+																			4.7</p>
+                                                    </th>
+                                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                                        <p class="Table">Framework
+																			4.0</p>
+                                                    </th>
+                                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                                        <p class="TableHead">Framework
+																			2.0</p>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                        <p class="Table"> 13.0 SP2</p>
+                                                    </td>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                        <p class="Table">C# 7</p>
+                                                    </td>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                        <p class="Table">C# 5</p>
+                                                    </td>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                        <p class="Table">C# 2</p>
+                                                    </td>
+                                                </tr>
+                                                <tr data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                        <p class="Table"> 13.0</p>
+                                                    </td>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                        <p class="Table">C# 5</p>
+                                                    </td>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                        <p class="Table">C# 5</p>
+                                                    </td>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                        <p class="Table">C# 2</p>
+                                                    </td>
+                                                </tr>
+                                                <tr data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">
+                                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                                        <p class="Table">Up to and including 12.0</p>
+                                                    </td>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                                        <p class="Table">N/A</p>
+                                                    </td>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                                        <p class="Table">C# 5</p>
+                                                    </td>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                                        <p class="Table">C# 2</p>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <p class="Table">You have two options for selecting the language version:</p>
+                                    <ul>
+                                        <li>In the Solution Explorer select the C# project. Then select on the <span class="GUI">Properties</span> page under <span class="GUI">C# Language Level</span> the appropriate option.</li>
+                                        <li>In the Solution Explorer select the C# project. Then put a right click on <span class="GUI">Properties</span>. In the new window switch to the <span class="GUI">Build</span> page and click there on <span class="GUI">Advanced</span>.<br />A new window appears with a list in that you can select the language version. </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <hr class="Startpage" width="100%" size="0" align="center" />
+                <table style="width: 100%;">
+                    <col />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div>
+                                    <table style="mc-table-style: url('../../Resources/Stylesheets/vTable.css');margin-left: 0;margin-right: auto;width: 100%;" class="TableStyle_vTable" cellspacing="0" data-mc-conditions="Targets.CANoe-DE-Family,Targets.vTESTstudio">
+                                        <col class="TableStyle-vTable-Column-Column1" />
+                                        <thead>
+                                            <tr class="TableStyle-vTable-Head-Header1">
+                                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                                    <p class="TableHead">General</p>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="TableStyle-vTable-Body-Body1">
+                                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                                    <div>
+                                                        <ul>
+                                                            <li data-mc-conditions="Targets.CANoe-DE-Family,Targets.vTESTstudio"><a href="NETAdvanced.htm">.NET Programming: Notes for Advanced Users</a>
+                                                            </li>
+                                                            <li data-mc-conditions="Targets.CANoe-DE-Family"><a href="../CANoeCANalyzer/General/LoadConfigurationFromNetworkDrive.htm">Load Configuration from a Network Drive</a>
+                                                            </li>
+                                                            <li data-mc-conditions="Targets.CANoe-DE-Family"><a href="NETDiagnostics.htm">.NET Programming: Diagnostics</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    <table style="mc-table-style: url('../../Resources/Stylesheets/vTable.css');margin-left: 0;margin-right: auto;width: 100%;" class="TableStyle_vTable" cellspacing="0" data-mc-conditions="Targets.CANoe-DE-Family">
+                                        <col class="TableStyle-vTable-Column-Column1" />
+                                        <thead>
+                                            <tr class="TableStyle-vTable-Head-Header1">
+                                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                                    <p class="TableHead">Test</p>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="TableStyle-vTable-Body-Body1">
+                                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                                    <ul>
+                                                        <li><a href="../CANoeCANalyzer/Test/TestModules/NETTestModule.htm">.NET Test Modules</a>
+                                                        </li>
+                                                        <li><a href="../CANoeCANalyzer/Test/TestModules/NETDebugging.htm">.NET Debugging</a>
+                                                        </li>
+                                                        <li><a href="../CANoeCANalyzer/VTSystem/VTSystemUsingInNET.htm">VT System: Using in .NET</a>
+                                                        </li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <div>
+                                    <table style="width: 100%;mc-table-style: url('../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                                        <col style="width: 50%;" />
+                                        <tbody>
+                                            <tr>
+                                                <th colspan="2" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                    <p class="TableHead">Using .NET</p>
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2" class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                                    <div data-mc-conditions="Targets.CANoe-DE-Family">
+                                                        <h2><a targets="TOGt5" href="javascript:void(0)" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="TOGt5"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Using Visual Studio / Visual Studio Code as your Programming Editor</a>
+                                                        </h2>
+                                                        <div style="display: none;" data-mc-target-name="TOGt5">
+                                                            <p><a name="EditorVisualStudio" id="EditorVisualStudio"></a>You can comfortably edit .NET applications by using, for example, Visual Studio or Visual Studio Code as your development environment. Visual Studio Code is available free of charge, as is the Community Edition of Visual Studio under certain circumstances. Express Editions of older Visual Studio versions (up to 2015) are also supported. In order to use Visual Studio for the development of .NET applications in your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText>, open the <span class="bold">External Programs</span> page in the <a href="../CANoeCANalyzer/Ribbon/File/Options.htm" class="GUI">Options</a> dialog, click on <span class="bold">.NET file editor</span> and select <span class="bold">Edit_NET_Source_With_VS_2019.vbs</span> (or another, e.g. 2017), which is located in the <span class="bold">Exec64\Scripts</span> folder of the installation. For Visual Studio Code use <span class="bold">Edit_NET_Source_With_VS_Code.vbs</span>.</p>
+                                                            <p>Instead of the source file you may also configure Visual Studio's solution file (SLN) or the built assembly (DLL) in a network node, test node or for an application model in the Communication Setup. When you select a solution file, your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> automatically uses an installed Visual Studio to compile the sources. Therefore the solution must have the same name as the assembly and the assembly must be stored in the path of the solution. If you specify an assembly in your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText>, you have to rebuild it if e.g. the databases have changed.</p>
+                                                            <div>
+                                                                <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                                                                    <col class="TableStyle-vTableSymbol-Column-Column1" />
+                                                                    <col class="TableStyle-vTableSymbol-Column-Column2" />
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                                                                <p class="Table">
+                                                                                    <img src="../../Resources/vImages/vInfo.png" style="width: 48px;height: 45px;" title="Note" alt="Note" />
+                                                                                </p>
+                                                                            </td>
+                                                                            <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                                                                <p class="TableSymbolHead">Note on Creation</p>
+                                                                                <p class="Table">It is recommended not to create the solution manually, but to enter the name of the not yet existing solution directly in the configuration dialog. After that you can start the automatic generation of the solution with <span class="bold">[Edit]</span>. Thus all settings are automatically correct.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                            <div>
+                                                                <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                                                                    <col class="TableStyle-vTableSymbol-Column-Column1" />
+                                                                    <col class="TableStyle-vTableSymbol-Column-Column2" />
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                                                                <p class="Table">
+                                                                                    <img src="../../Resources/vImages/vInfo.png" style="width: 48px;height: 45px;" title="Note" alt="Note" />
+                                                                                </p>
+                                                                            </td>
+                                                                            <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                                                                <p class="TableSymbolHead">Note on Versions</p>
+                                                                                <ul>
+                                                                                    <li>For .NET 4.7 <span class="Product">Visual Studio</span> since version 2017 is needed.</li>
+                                                                                    <li>For .NET 4.0 <span class="Product">Visual Studio</span> since version 2010 is needed.</li>
+                                                                                </ul>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                            <div>
+                                                                <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                                                                    <col class="TableStyle-vTableSymbol-Column-Column1" />
+                                                                    <col class="TableStyle-vTableSymbol-Column-Column2" />
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                                                                <p class="Table">
+                                                                                    <img src="../../Resources/vImages/vInfo.png" style="width: 48px;height: 45px;" title="Note" alt="Note" />
+                                                                                </p>
+                                                                            </td>
+                                                                            <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                                                                <p class="TableSymbolHead">Note</p>
+                                                                                <p>To build Visual Studio Solutions in your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> or in Visual Studio Code, the <span class="bold">msbuild</span> program is required. It is included in a Visual Studio setup or can be installed separately using the <span class="bold">Visual Studio Build Tools</span>. Without <span class="bold">msbuild</span> only single C# files can be compiled from your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText>.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <h2><a targets="TOGt4" href="javascript:void(0)" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="TOGt4"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Access to Signals and System Variables</a>
+                                                        </h2>
+                                                        <div style="display: none;" data-mc-target-name="TOGt4">
+                                                            <p>For every signal and every system variable .NET provides a class which you can use to access the values in the <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> runtime environment. Example:</p>
+                                                            <p class="SourceCode">double value = EnvSpeedEntry.Value;</p>
+                                                            <p>Each of these classes has a static property <span class="bold">Value</span>. You cannot create instances of these classes, since the value only occurs once in the runtime environment.</p>
+                                                            <p>Please note that setting the value is just a request to your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> to change the value. The changed value is not available until this has happened, in general after a certain delay (e.g. after the system variable has been transmitted and received again on the bus).</p>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <h2><a targets="TOGAccessToCANFrames" href="javascript:void(0)" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="TOGAccessToCANFrames"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Access to CAN Frames</a> (valid for <span class="Product">CANoe&#160;DE</span><MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">, </MadCap:conditionalText><span class="Product">CANoe4SW&#160;DE</span>)</h2>
+                                                        <div style="display: none;" data-mc-target-name="TOGAccessToCANFrames">
+                                                            <p>For each CAN frame defined in the database an own class is available in .NET. You may create instances of these classes, set signal values and put the frames on the bus with the <span class="bold">Send</span> method. Furthermore you can react on received CAN frames with the <span class="bold">[OnCANFrame]</span> attribute.</p>
+                                                            <p>If you don't use a database you may directly use the general class <span class="bold">CANFrame</span> or derive own classes from this class. If so, use the <span class="bold">[Signal]</span> attribute to define signals.</p>
+                                                            <p>The <a href="../../../Subsystems/VectorCANoeNETAPI/Content/html/c52a109e-d9a8-3382-973a-3e3fb60dda38.htm" data-mc-conditions="BuildProcess.HTML5Link">API Reference</a> contains further information.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <h2><a targets="TOGAccessDiagnostics" href="javascript:void(0)" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="TOGAccessDiagnostics"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Access to Diagnostics</a> (valid for <span class="Product">CANoe&#160;DE</span><MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">, </MadCap:conditionalText><span class="Product">CANoe4SW&#160;DE</span>)</h2>
+                                                        <div style="display: none;" data-mc-target-name="TOGAccessDiagnostics">
+                                                            <p><a name="AccessToDiagnostics" id="AccessToDiagnostics"></a><a name="kanchor6790"></a>If one or more <a href="../CANoeCANalyzer/Diagnostics/DiagISOTPconfig/DiagDescr/DiagDesc.htm">diagnostic descriptions</a> are configured, test modules and snippets may send diagnostic requests and receive diagnostic responses using a .NET library. It is possible to set parameters in requests, read them from responses and use any .NET language.</p>
+                                                            <p>The library <span class="bold">Vector.Diagnostics</span>, often referred to as <span class="bold">Vector Diagnostic Scripting Library (VDS Library)</span>, is supported by several other Vector applications, i.e. diagnostic procedures can be reused easily in your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText>, <span class="Product">CANape</span>, <span class="Product">CANdito</span> and <span class="Product">Indigo</span>.</p>
+                                                            <p data-mc-conditions="Targets.CANoe-DE-Family">More information is available in the <a href="../../../Subsystems/VDSLibrary/Content/html/2884526b-fa44-c3fc-4112-a0bffa514949.htm" data-mc-conditions="BuildProcess.HTML5Link">API reference Vector.Diagnostics Namespace</a> and the VDS Library Quickstart Guide <a href="javascript:startDemoLoader('VDS_Library_QuickStart.pdf')" class="ExecuteLink">VDS_Library_QuickStart.pdf</a>.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <h2><a targets="TOGGenerateNETNamespace" href="javascript:void(0)" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="TOGGenerateNETNamespace"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Generating .NET Namespaces</a> (valid for <span class="Product">CANoe&#160;DE</span><MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">, </MadCap:conditionalText><span class="Product">CANoe4SW&#160;DE</span>)</h2>
+                                                        <div style="display: none;" data-mc-target-name="TOGGenerateNETNamespace">
+                                                            <p><a name="GenerateNETNamespace" id="GenerateNETNamespace"></a>To have access to symbols in .NET, classes will be generated automatically to provide access to objects from databases and other symbol files. Resultant is a restriction when choosing an identifier in these files: they have to follow rules for C# identifiers. In particular C# keywords (e.g. class, public, interface, return..) must not be used. Identifiers that begin with <span class="SourceCode">get_</span> or with <span class="SourceCode">set_</span> can also cause problems.</p>
+                                                            <div>
+                                                                <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                                                                    <col class="TableStyle-vTableSymbol-Column-Column1" />
+                                                                    <col class="TableStyle-vTableSymbol-Column-Column2" />
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                                                                <p class="Table">
+                                                                                    <img src="../../Resources/vImages/vInfo.png" style="width: 48px;height: 45px;" title="Note" alt="Note" />
+                                                                                </p>
+                                                                            </td>
+                                                                            <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                                                                <p class="TableSymbolHead">Note</p>
+                                                                                <p class="Table">The validation depends on the exact spelling: "<span class="bold">Class</span>" is allowed, "<span class="bold">class</span>" is not allowed.<br />Please see C# language definition for details.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                            <p>Among others the following files are concerned:</p>
+                                                            <ul>
+                                                                <li>databases (signals, messages, environment variables…)</li>
+                                                                <li>system variables</li>
+                                                                <li>CAPL functions that can be called in .NET</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <h2><a targets="TOGt3" href="javascript:void(0)" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="TOGt3"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Event Procedures</a>
+                                                        </h2>
+                                                        <div style="display: none;" data-mc-target-name="TOGt3">
+                                                            <p>If you want to react to events you can add special attributes to methods. The methods are then called when the event occurs (just like in CAPL).<br />The following attributes are available in your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText>:</p>
+                                                            <ul>
+                                                                <li><span class="bold">OnChange(Type t)</span>
+                                                                    <br />This method is called whenever the value of the runtime object specified by Type t changes.</li>
+                                                            </ul>
+                                                            <div class="Indent">
+                                                                <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                                                                    <col class="TableStyle-vTableSymbol-Column-Column1" />
+                                                                    <col class="TableStyle-vTableSymbol-Column-Column2" />
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                                                                <p class="Table">
+                                                                                    <img src="../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                                                                </p>
+                                                                            </td>
+                                                                            <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                                                                <p class="TableSymbolHead">Example</p>
+                                                                                <p class="TableSourceCode">[OnChange(typeof(EnvMotorSwitch))]<br />public void MotorSwitchChanged()</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                            <ul>
+                                                                <li><span class="bold">OnKey(char ch)</span>
+                                                                    <br />This method is called whenever a key is pressed.</li>
+                                                            </ul>
+                                                            <div class="Indent">
+                                                                <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                                                                    <col class="TableStyle-vTableSymbol-Column-Column1" />
+                                                                    <col class="TableStyle-vTableSymbol-Column-Column2" />
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                                                                <p class="Table">
+                                                                                    <img src="../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                                                                </p>
+                                                                            </td>
+                                                                            <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                                                                <p class="TableSymbolHead">Example</p>
+                                                                                <p class="TableSourceCode">[OnKey('a')]<br />public void KeyPressed(char ch)</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                            <ul>
+                                                                <li><span class="bold">OnTimer(long interval)</span>
+                                                                    <br />This method is called regularly every interval milliseconds.</li>
+                                                            </ul>
+                                                            <div class="Indent">
+                                                                <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                                                                    <col class="TableStyle-vTableSymbol-Column-Column1" />
+                                                                    <col class="TableStyle-vTableSymbol-Column-Column2" />
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                                                                <p class="Table">
+                                                                                    <img src="../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                                                                </p>
+                                                                            </td>
+                                                                            <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                                                                <p class="TableSymbolHead">Example</p>
+                                                                                <p class="TableSourceCode">[OnTimer(2000)]<br />public void TimeElapsed()&#160;&#160;<span class="CodeComment">//&#160;&#160;called every 2 seconds</span></p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                            <ul>
+                                                                <li><span class="bold">OnCANFrame()</span> (valid for <span class="Product">CANoe&#160;DE</span><MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">, </MadCap:conditionalText><span class="Product">CANoe4SW&#160;DE</span>)<br />This method is called, if a certain CAN frame is received. The frame can either be identified by parameters of the attribute or by the parameter type of the method.</li>
+                                                            </ul>
+                                                            <div class="Indent">
+                                                                <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                                                                    <col class="TableStyle-vTableSymbol-Column-Column1" />
+                                                                    <col class="TableStyle-vTableSymbol-Column-Column2" />
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                                                                <p class="Table">
+                                                                                    <img src="../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                                                                </p>
+                                                                            </td>
+                                                                            <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                                                                <p class="TableSymbolHead">Example</p>
+                                                                                <p class="TableSourceCode">[OnCANFrame]<br />public void MotorStateReceived(NetworkDB.Frames.MotorState frame)</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                            <ul>
+                                                                <li><span class="bold">OnAnyCANFrame() (</span>valid for <span class="Product">CANoe&#160;DE</span><MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">, </MadCap:conditionalText><span class="Product">CANoe4SW&#160;DE</span>)<br />This method is called on any received CAN frame. You can use a parameter of the attribute to restrict the call to a certain channel.</li>
+                                                            </ul>
+                                                            <div class="Indent">
+                                                                <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                                                                    <col class="TableStyle-vTableSymbol-Column-Column1" />
+                                                                    <col class="TableStyle-vTableSymbol-Column-Column2" />
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                                                                <p class="Table">
+                                                                                    <img src="../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                                                                </p>
+                                                                            </td>
+                                                                            <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                                                                <p class="TableSymbolHead">Example</p>
+                                                                                <p class="TableSourceCode">[OnAnyCANFrame(1)]<br />public void CANFrameReceived(CANFrame frame)</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                            <p>For further information on the attributes please refer to the <a href="../../../Subsystems/VectorCANoeNETAPI/Content/html/c52a109e-d9a8-3382-973a-3e3fb60dda38.htm">API Reference</a>.</p>
+                                                            <p>The event procedures in your main class are automatically activated and deactivated by your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText>. You can dynamically activate and deactivate event procedures in other classes. The classes <span class="bold">Vector.CANoe.Runtime.Runtime</span> and <span class="bold">Vector.CANoe.Runtime.DynamicHandlers</span> can be used for this purpose.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">
+                                                        <h2><a targets="TOGt2" href="javascript:void(0)" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="TOGt2"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Programming Network Nodes / Application Models</a>
+                                                        </h2>
+                                                        <div style="display: none;" data-mc-target-name="TOGt2">
+                                                            <p><a name="ProgrammingNetNode" id="ProgrammingNetNode"></a>For the programming of network nodes and application models you can simply specify a .NET source file instead of a CAPL file. Alternatively you can also select an assembly (i.e. a .NET DLL) you have created - this is particularly useful if you want to make the configuration available without source code. The assembly must contain exactly one class, derived from <span class="bold">Vector.CANoe.Runtime.Script</span>. The class has to have a public default constructor.</p>
+                                                            <p>This class is instantiated by your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> at runtime and its event procedures are automatically registered.</p>
+                                                            <p>If you want to react to the measurement start or stop event, for example to execute initializations or cleanup work, you should derive your main class from <span class="bold">Vector.CANoe.Runtime.MeasurementScript</span>. This class contains overwritable methods that are called by the your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> runtime environment at the start and end of the measurement.</p>
+                                                            <p>The types from the <span class="bold">Vector.CANoe.Threading</span> namespace cannot be used in network nodes and application models.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">
+                                                        <h2><a targets="TOGt1" href="javascript:void(0)" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="TOGt1"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Programming Snippets</a> (valid for <span class="Product">CANoe&#160;DE</span><MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">, </MadCap:conditionalText><span class="Product">CANoe4SW&#160;DE</span>)</h2>
+                                                        <div style="display: none;" data-mc-target-name="TOGt1">
+                                                            <p><a name="ProgrammingSnippets" id="ProgrammingSnippets"></a>Snippets are small procedures that are used, for example, for the stimulation of tests. To program snippets, configure the .NET source file in the macro configuration dialog. In the resulting assembly all methods are treated as snippets that meet the following requirements:</p>
+                                                            <ul>
+                                                                <li>They are public</li>
+                                                                <li>They have no parameters and no return value</li>
+                                                                <li>They are not static</li>
+                                                                <li>Their class is public and has a public default constructor</li>
+                                                            </ul>
+                                                            <p>These snippets can then be carried out in the macro configuration dialog or via the macro toolbar.</p>
+                                                            <p>Event procedures in a snippet's class are automatically registered while the snippet is running. Before and after the snippet is carried out, they are not registered.</p>
+                                                            <p>A snippet can be edited and recompiled while the measurement is running (but not while the snippet itself is being carried out).</p>
+                                                            <p>The types for the <span class="bold">Vector.CANoe.Threading</span> namespace can be used in snippets to control the timing.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">
+                                                        <h2><a targets="TOGNET4API" href="javascript:void(0)" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="TOGNET4API"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Migrating from .NET 2 API to .NET 4 API</a> (valid for <span class="Product">CANoe&#160;DE</span><MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">, </MadCap:conditionalText><span class="Product">CANoe4SW&#160;DE</span>)</h2>
+                                                        <div style="display: none;" data-mc-target-name="TOGNET4API">
+                                                            <p>For the binary compatibility with existing DLLs, the .NET 2.0 version of the <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> API continues to be supported. In order to benefit from the further API developments, we recommend conversion to .NET 4.7 API, since the .NET 2.0 API supports only the scope of functions of product version 8.2 SP2 and will not be further developed. For this you must have access to the source code of your test modules.</p>
+                                                            <div data-mc-conditions="Targets.CANoe-DE-Family">
+                                                                <h2 class="SectionSub">Migrating the <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> Configuration</h2>
+                                                                <p>The .NET 2.0 assemblies are not binary compatible with the .NET  API. These must therefore be recompiled.</p>
+                                                                <p>You cannot migrate to .NET if you are using compiled assemblies of an older <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> version and have no access to the source code. An error message to that effect is output in the output window in this case.</p>
+                                                                <p>You can set the .NET version for each <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> configuration in the <span class="GUI">Options</span> dialog (<span class="GUI">Programming</span>|<a href="../CANoeCANalyzer/Ribbon/File/Options/Programming/ProgrammingNETNamespaces.htm" class="bold">.NET</a>|<span class="GUI">.NET Runtime</span>).</p>
+                                                                <p>The version .NET 4.7 is the default setting for new configurations.</p>
+                                                            </div>
+                                                            <div>
+                                                                <h2 class="SectionSub">	Migrating .NET Test Modules and Test Libraries</h2>
+                                                                <p>The .NET API uses the same files as the .NET 2.0 API. The files of the two APIs are in separate directories, however. The .NET files are in directory <span class="GUI">&lt;CANoe Installation&gt;/Exec64/NETDev/v40</span>. Already existing test libraries refer to the assemblies in directory <span class="GUI">&lt;CANoe installation&gt;/Exec64/NETDev/</span>.</p>
+                                                                <p>For test modules, you generally refer to a source code file. If you have selected <span class="Product">Visual Studio</span> as the editor, your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> automatically creates a project file and a solution file for <span class="Product">Visual Studio</span>. You can safely delete the SLN and CSPROJ files. When test modules are edited, your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> generates these files again with the set .NET Runtime version and the suitable API library.</p>
+                                                                <p>If you have changed the project file during development and want to keep these changes, you can also make the changes manually.</p>
+                                                                <p>For test libraries, you can create a new test library project that uses the .NET API.</p>
+                                                                <p>The exact procedure is described in the <a href="javascript:startDemoLoader('AN-IND-1-011_Using_CANoe_NET_API.pdf')" class="ExecuteLink">Using CANoe .NET API</a> document, <span class="GUI">Migrating a .NET Module</span> section.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="LinkList">&#160;</p>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="FooterWhite">
+                <table class="FooterWhite" style="border-collapse: collapse;margin-left: auto;margin-right: auto;">
+                    <col style="width: 70px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col style="width: 16px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="buttons popup-container clearfix topicToolbarProxy topicToolbarProxyFooter _Skins_HTML5TopicToolbar mc-component nocontent">
+                                    <div class="button-group-container-left">
+                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo"><a href="HowToUseOnlineHelp.htm" title="Tips for using the help" alt="Tips for using the help"><img src="../../Resources/vImages/vBackstage/vHelpInfo.png" /></a>
+                                </p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo" style="text-align: right;"><span class="mc-variable Vector.BuildTime variable">2024-04-8T20:56:42</span>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <table style="width: 100%;border-collapse: separate;border-spacing: 3px 0px;margin-left: auto;margin-right: auto;caption-side: top;">
+                <col />
+                <col />
+                <col />
+                <col data-mc-conditions="BuildProcess.HTML5Link" />
+                <tbody>
+                    <tr>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;">
+                            <p class="vec_Footer">©&#160;Vector Informatik GmbH</p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;text-align: right;">
+                            <p class="vec_FooterBold">
+                                <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE&#160;Product Families</MadCap:conditionalText> Version <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.VectorTestUnitRunner">18</MadCap:conditionalText></p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="ContactCopyrightLicense.htm" class="vec_Footer MCXref xref xrefvec_Footer">Contact/Copyright/License</a>
+                            </p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="https://www.vector.com/int/en/company/get-info/privacy-policy/" target="_blank" class="vec_Footer">Data Privacy Notice</a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

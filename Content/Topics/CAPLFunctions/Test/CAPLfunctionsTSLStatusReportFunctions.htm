@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="CANoeDEFamily.xml" data-mc-path-to-help-system="../../../../" data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.vTESTstudio" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta name="msapplication-config" content="../../../../Skins/Favicons/browserconfig.xml" />
+        <meta name="copyright" value="© 2003 Vector Informatik GmbH" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../Skins/Favicons/favicon-16x16.png" /><title>Test Service Library: Status Report Functions</title>
+        <link href="../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Resources/Stylesheets/vTableMasterPageHeader.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../Resources/Stylesheets/vStylesheet.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../Resources/Stylesheets/vTable.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapGlobal.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapDom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapUtilities.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapXhr.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTextEffects.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSlideshow.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMessageBus.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMessageBus.CrossFrame.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapDefault.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMediaQueries.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAccessibility.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapHelpSystem.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAliasFile.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopicFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapFeedbackHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSkinHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.Breadcrumbs.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.MiniToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.SideMenu.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapIndex.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapGlossary.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapParser.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSearch.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapNavigateTopics.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapLms.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapELearning.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopic.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMicroContentComponent.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSearchHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopicElements.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTriPane.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/jscript" src="../../../Resources/vScripts/SyntaxHighlighting.js">
+        </script>
+        <script type="text/jscript" src="../../../Resources/vScripts/TabSwitch.js">
+        </script>
+        <script type="text/javascript" src="../../../Resources/vScripts/Vector.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../../CANoeDEFamily.htm#Topics/CAPLFunctions/Test/CAPLfunctionsTSLStatusReportFunctions.htm">Open topic with navigation</a>
+        </p>
+        <div class="Body">
+            <div role="main" id="mc-main-content">
+                <p class="StructurePath"><a href="../CAPLfunctions.htm" class="StructurePath MCXref xref xrefStructurePath">CAPL Functions</a> » <a href="CAPLfunctionsTSLOverview.htm" class="StructurePath">Test Service Library</a> » Status Report Functions</p>
+                <h1><a name="aanchor5476"></a>
+                    <MadCap:concept term="CAPLTSL" /><a name="kanchor1660"></a><span class="mc-variable System.Title variable">Test Service Library: Status Report Functions</span>
+                </h1>
+                <p class="MenuPath">&#160;</p>
+                <p class="ToolAvailability" data-mc-conditions="BuildProcess.ToolAvailability"><a href="../../Shared/FeatureAvailability.htm" class="red" title="Feature availabilty for your product">Valid&#160;for</a>:&#160;&#160;CANoe&#160;DE<a name="aanchor5477"></a><MadCap:concept term="SFCANoeDE" />&#160;&#160;•&#160;&#160;CANoe:lite&#160;DE<a name="aanchor5478"></a><MadCap:concept term="SFCANoeLiteDE" />&#160;&#160;•&#160;&#160;CANoe4SW&#160;DE<a name="aanchor5479"></a><MadCap:concept term="SFCANoe4SWDE" />&#160;&#160;•&#160;&#160;CANoe4SW:lite&#160;DE<a name="aanchor5480"></a><MadCap:concept term="SFCANoe4SWLiteDE" /></p>
+                <p class="AutoSearchFilterConcepts"><a name="aanchor5481"></a>
+                    <MadCap:concept term="SFCAPLFunctions" />
+                </p>
+                <p>In order to query information about a check, generic and check specific 
+ status report functions are implemented. The general status report functions are working with all types of checks. The check specific status report functions are working only with a special part of the checks. If a check specific status report function is called for a check that does not support this function, a warning will be displayed in the Write Window.</p>
+                <h2 class="SectionSub">Mode of Operation</h2>
+                <p>The goal of the following functions is to give a value for the quality 
+ of the system, but the quality depends hardly from the runtime of the check. For statistical reasons, all values are derived in a way that an error event is supposed just before the check has been started and just after the check has been stopped. So the maximum time between events will 
+ be never greater than the time between the event and check start and the time between the event and check stop.</p>
+                <p>The following figure explains the statistical data collection in more detail:</p>
+                <p>
+                    <img src="../../../Resources/Images/CAPLFunctions/CAPLfunctionTSLStatusReportFunctions.png" style="height: 219px;width: 567px;" width="567" height="219" border="0" />
+                </p>
+                <p>At first, session 1 is performed. The red arrows are marking error events, the yellow triangles are marking particular times, the following description 
+ will refer.</p>
+                <p>After the first session, the following statistical values could be queried at the time <span class="bold">"query #1"</span>:</p>
+                <ul>
+                    <li>min distance = t1</li>
+                    <li>max distance = t2</li>
+                </ul>
+                <p>Then the session 2 is started without resetting the check. At the time <span class="bold">"query #2"</span>, the following 
+ statistical values could be queried (while the check is running).</p>
+                <ul>
+                    <li>min distance = t1</li>
+                    <li>max distance = t10a</li>
+                </ul>
+                <p>After this session at <span class="bold">"query #3"</span>, the following results will occur:</p>
+                <ul>
+                    <li>min distance = t12</li>
+                    <li>max distance = t10</li>
+                </ul>
+                <div>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                        <col />
+                        <col />
+                        <thead>
+                            <tr>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                    <p class="TableHead">Generic Status Report Functions</p>
+                                </th>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                    <p class="TableHead">Short Description</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="2" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">These functions return statistics on the number of events that any check 
+ generated since its creation or reset. They also include functions to convert the check status to a string, for logging. <br />Generic status report functions are available for all check types.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">These query functions may <span class="bold">not raise an error class</span> that leads to a measurement stop.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionChkQueryNumEvents.htm">ChkQuery_NumEvents</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd" rowspan="2">
+                                    <p class="Table">Returns the number of events generated by this check since its initialization.</p>
+                                </td>
+                            </tr>
+                            <tr data-mc-conditions="">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionChkQueryNumEventsAsyncResult.htm" class="MCXref xref">ChkQuery_NumEvents_AsyncResult</a>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionChkQueryValid.htm">ChkQuery_Valid</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd" rowspan="2">
+                                    <p class="Table">Examines whether a check with particular Id is valid.</p>
+                                </td>
+                            </tr>
+                            <tr data-mc-conditions="">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionChkQueryValidAsyncResult.htm" class="MCXref xref">ChkQuery_Valid_AsyncResult</a>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionStmQueryValid.htm">StmQuery_Valid</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Examines whether a stimulus with particular Id is valid.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p colspan="2" class="TableHead">Statistic Data Collection</p>
+                                </th>
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="TableHead">Short Description</p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">The following functions return a timely distance given in the actual 
+ precision. The decimal places are cut. To get a value with more decimals (more exact value), the precision can be modified with <a href="Functions/CAPLfunctionChkConfigSetPrecision.htm">ChkConfig_SetPrecision</a>.</p>
+                                </td>
+                            </tr>
+                            <tr data-mc-conditions="">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionChkQueryPrecision_AsyncResult.htm" class="MCXref xref">ChkQuery_Precision_AsyncResult</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Returns a factor that can be multiplied with the return value of the statistical queries.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionChkQueryStatEventFreePeriodAvg.htm">ChkQuery_StatEventFreePeriodAvg</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd" rowspan="2">
+                                    <p class="Table">Returns the average timely distance between 
+ events and check starts/stops.</p>
+                                </td>
+                            </tr>
+                            <tr data-mc-conditions="">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionChkQueryStatEventFreePeriodAvgAsyncResult.htm" class="MCXref xref">ChkQuery_StatEventFreePeriodAvg_AsyncResult</a>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionChkQueryStatEventFreePeriodMax.htm">ChkQuery_StatEventFreePeriodMax</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd" rowspan="2">
+                                    <p class="Table">Returns the maximum timely distance between 
+ events and check starts/stops.</p>
+                                </td>
+                            </tr>
+                            <tr data-mc-conditions="">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionChkQueryStatEventFreePeriodMaxAsyncResult.htm" class="MCXref xref">ChkQuery_StatEventFreePeriodMax_AsyncResult</a>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionChkQueryStatEventFreePeriodMed.htm">ChkQuery_StatEventFreePeriodMed</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd" rowspan="2">
+                                    <p class="Table">Returns the average timely distance between 
+ events and check starts/stops.</p>
+                                </td>
+                            </tr>
+                            <tr data-mc-conditions="">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionChkQueryStatEventFreePeriodMedAsyncResult.htm" class="MCXref xref">ChkQuery_StatEventFreePeriodMed_AsyncResult</a>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionChkQueryStatEventFreePeriodMin.htm">ChkQuery_StatEventFreePeriodMin</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd" rowspan="2">
+                                    <p class="Table">Returns the minimum timely distance between 
+ events and check starts/stops.</p>
+                                </td>
+                            </tr>
+                            <tr data-mc-conditions="">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionChkQueryStatEventFreePeriodMinAsyncResult.htm" class="MCXref xref">ChkQuery_StatEventFreePeriodMin_AsyncResult</a>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionChkQueryStatProbeIntervalAvg.htm">ChkQuery_StatProbeIntervalAvg</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd" rowspan="2">
+                                    <p class="Table">Returns the average timely distance between 
+ 2 consumed message events.</p>
+                                </td>
+                            </tr>
+                            <tr data-mc-conditions="">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionChkQueryStatProbeIntervalAvgAsyncResult.htm" class="MCXref xref">ChkQuery_StatProbeIntervalAvg_AsyncResult</a>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionChkQueryStatProbeIntervalMax.htm">ChkQuery_StatProbeIntervalMax</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd" rowspan="2">
+                                    <p class="Table">Returns the maximum timely distance between 
+ 2 consumed message events.</p>
+                                </td>
+                            </tr>
+                            <tr data-mc-conditions="">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionChkQueryStatProbeIntervalMaxAsyncResult.htm" class="MCXref xref">ChkQuery_StatProbeIntervalMax_AsyncResult</a>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionChkQueryStatProbeIntervalMin.htm">ChkQuery_StatProbeIntervalMin</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd" rowspan="2">
+                                    <p class="Table">Returns the minimum timely distance between 
+ 2 consumed message events.</p>
+                                </td>
+                            </tr>
+                            <tr data-mc-conditions="">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionChkQueryStatProbeIntervalMinAsyncResult.htm" class="MCXref xref">ChkQuery_StatProbeIntervalMin_AsyncResult</a>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p colspan="2" class="TableHead">Generic Textual Status Report Functions</p>
+                                </th>
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="TableHead">Short Description</p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionChkQueryEventStatus.htm">ChkQuery_EventStatus</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd" rowspan="2">
+                                    <p class="Table">Converts the status into a string that can be printed.</p>
+                                </td>
+                            </tr>
+                            <tr data-mc-conditions="">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionChkQueryEventStatusAsyncResult.htm" class="MCXref xref">ChkQuery_EventStatus_AsyncResult</a>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">The following functions allow the easy writing of the status text to different output sinks.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionChkQueryEventStatusToLog.htm">ChkQuery_EventStatusToLog</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd" rowspan="2">
+                                    <p class="Table">Uses the output of <a href="Functions/CAPLfunctionChkQueryEventStatus.htm">ChkQuery_EventStatus</a> and writes the result to the logging file.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionChkQueryEventStatusToWrite.htm">ChkQuery_EventStatusToWrite</a>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionChkQueryStatNumProbes.htm">ChkQuery_StatNumProbes</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Returns the number of probes (measurements) that have been considered by the check.</p>
+                                </td>
+                            </tr>
+                            <tr data-mc-conditions="">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionChkQueryStatNumProbesAsyncResult.htm" class="MCXref xref">ChkQuery_StatNumProbes_AsyncResult</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Returns the number of samples (probes) that have been considered by the check.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="TableHead">Check Specific Status Report Functions</p>
+                                </th>
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="TableHead">Short Description</p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">The check-specific status report functions permit querying of information that is only available for some types of checks. Which queries are possible 
+ and meaningful depend on the purposes of the individual checks. <br />Included in the description of individual check types are definitions of which check-specific Status Report functions are supported.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionChkQueryEventInterval.htm">ChkQuery_EventInterval</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd" rowspan="2">
+                                    <p class="Table">Returns the last time-interval that has led to the event.</p>
+                                </td>
+                            </tr>
+                            <tr data-mc-conditions="">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionChkQueryEventIntervalAsyncResult.htm" class="MCXref xref">ChkQuery_EventInterval_AsyncResult</a>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionChkQueryEventMessageId.htm">ChkQuery_EventMessageId</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Returns the Id of the message that has forced the event.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionChkQueryEventMessageName.htm">ChkQuery_EventMessageName</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Stores the name of the message in a buffer.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionChkQueryEventSignalValue.htm">ChkQuery_EventSignalValue</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd" rowspan="2">
+                                    <p class="Table">Enables access to the signal value which was last reported by a check as invalid.</p>
+                                </td>
+                            </tr>
+                            <tr data-mc-conditions="">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionChkQueryEventSignalValueAsyncResult.htm" class="MCXref xref">ChkQuery_EventSignalValue_AsyncResult</a>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionChkQueryEventSignalValueMinMax.htm">ChkQuery_EventSignalValueMin</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd" rowspan="2">
+                                    <p class="Table">Enables access to the minimal measured values within a check.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionChkQueryEventSignalValueMinMax.htm">ChkQuery_EventSignalValueMax</a>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr data-mc-conditions="">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionChkQueryEventSignalValueMinMaxAsyncResult.htm" class="MCXref xref">ChkQuery_EventSignalValueMin_AsyncResult, ChkQuery_EventSignalValueMax_AsyncResult</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Returns the last time-interval that has led to the event.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionChkQueryEventSignalValuePositive.htm">ChkQuery_EventSignalValue 
+ (for signals with positive values)</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Enables access to the signal (only with positive) value which was last reported by a check as invalid.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep"><a href="Functions/CAPLfunctionChkQueryEventTimeStamp.htm">ChkQuery_EventTimeStamp</a>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd" rowspan="4">
+                                    <p class="Table">Retrieves time stamp of last fired event.</p>
+                                </td>
+                            </tr>
+                            <tr data-mc-conditions="">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionChkQueryEventTimestampAsyncResult.htm" class="MCXref xref">ChkQuery_EventTimestamp_AsyncResult</a>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionChkQueryEventTimeStampInt64.htm" class="MCXref xref">ChkQuery_EventTimeStampInt64</a>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr data-mc-conditions="">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionChkQueryEventTimestamp64AsyncResult.htm" class="MCXref xref">ChkQuery_EventTimestamp64_AsyncResult</a>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr data-mc-conditions="Targets.CANoe-DE-Family">
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p colspan="2" class="TableHead">MOST Specific Functions</p>
+                                </th>
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="TableHead">Short Description</p>
+                                </th>
+                            </tr>
+                            <tr data-mc-conditions="Targets.CANoe-DE-Family">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionChkQueryNumRequests.htm">ChkQuery_NumRequests</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Returns the total number of requests that occurred during the current observation period.</p>
+                                </td>
+                            </tr>
+                            <tr data-mc-conditions="Targets.CANoe-DE-Family">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionChkQueryNumTimedoutRequests.htm">ChkQuery_NumTimedoutRequests</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Returns the number of requests within the current observation period for which no corresponding response message was observed during the specified 
+ timeout.</p>
+                                </td>
+                            </tr>
+                            <tr data-mc-conditions="Targets.CANoe-DE-Family">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionChkQueryRequestDstAdr.htm">ChkQuery_RequestDstAdr</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Returns the destination address of the request message, which last led to a protocol violation.</p>
+                                </td>
+                            </tr>
+                            <tr data-mc-conditions="Targets.CANoe-DE-Family">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionChkQueryRequestFBlockId.htm">ChkQuery_RequestFBlockId</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Returns the FBlock of the request message, which last led to a protocol violation.</p>
+                                </td>
+                            </tr>
+                            <tr data-mc-conditions="Targets.CANoe-DE-Family">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionChkQueryRequestFunctionId.htm">ChkQuery_RequestFunctionId</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Returns the FunctionID of the request message, which last led to a protocol violation.</p>
+                                </td>
+                            </tr>
+                            <tr data-mc-conditions="Targets.CANoe-DE-Family">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionChkQueryRequestInstId.htm">ChkQuery_RequestInstId</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Returns the InstID of the request message, which last led to a protocol violation.</p>
+                                </td>
+                            </tr>
+                            <tr data-mc-conditions="Targets.CANoe-DE-Family">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionChkQueryRequestOpType.htm">ChkQuery_RequestOpType</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Returns the OpType of the request message, which last led to a protocol violation.</p>
+                                </td>
+                            </tr>
+                            <tr data-mc-conditions="Targets.CANoe-DE-Family">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionChkQueryRequestSrcAdr.htm">ChkQuery_RequestSrcAdr</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Returns the source address of the request message, which last led to 
+ a protocol violation.</p>
+                                </td>
+                            </tr>
+                            <tr data-mc-conditions="Targets.CANoe-DE-Family">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionChkQueryRequestTimestamp.htm">ChkQuery_RequestTimestamp</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Returns the reception time stamp of the request message, which last 
+ led to a protocol violation.</p>
+                                </td>
+                            </tr>
+                            <tr data-mc-conditions="Targets.CANoe-DE-Family">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep"><a href="Functions/CAPLfunctionChkQueryStatAvResponseTime.htm">ChkQuery_StatAvResponseTime</a>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Returns the average time lag between the request and corresponding response messages.</p>
+                                </td>
+                            </tr>
+                            <tr data-mc-conditions="Targets.CANoe-DE-Family">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionChkQueryStatMaxValidResponseTime.htm">ChkQuery_StatMaxValidResponseTime</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Returns the longest time lag between the request and corresponding response message that occurred during the current observation period.</p>
+                                </td>
+                            </tr>
+                            <tr data-mc-conditions="Targets.CANoe-DE-Family">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionChkQueryStatMinResponseTime.htm">ChkQuery_StatMinResponseTime</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Returns the shortest time lag between the request and corresponding response message that occurred during the current observation period.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p colspan="2" class="TableHead">LIN Specific Functions</p>
+                                </th>
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="TableHead">Short Description</p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionChkQueryEventFrameId.htm">ChkQuery_EventFrameID</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Retrieves frame id of a schedule table for whicht the event has been sent.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionChkQueryEventMessageContents.htm">ChkQuery_EventMessageContents</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Stores the data bytes of the message into a buffer.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionChkQueryEventNodeName.htm">ChkQuery_EventNodeName</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Stores the name of the node into a buffer.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionChkQueryEventSchedSlotIndex.htm">ChkQuery_EventSchedSlotIndex</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Retrieves slot index of a schedule table for which the event has been 
+ sent.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionChkQueryEventReason.htm">ChkQuery_EventReason</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Retrieves the exact reason of firing event in the LIN specific check.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="Table"><a href="Functions/CAPLfunctionChkQueryEventTiming.htm">ChkQuery_EventTiming</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                    <p class="Table">Retrieves the timing value that has been violated in the LIN specific check.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h2 class="SectionSub">Asynchronous Evaluation</h2>
+                <p>Special care must be taken when the checks are evaluated asynchronously and status values are to be queried. Since the values are not available in the RT kernel they need to be requested explicitly before each use. The status values are requested with the function <a href="Functions/CAPLfunctionTestWaitForCheckQuery.htm">testWaitForCheckQuery</a>. For every status report function (for example <a href="Functions/CAPLfunctionChkQueryEventStatus.htm">ChkQuery_EventStatus</a>) there is a corresponding function with the same name and the suffix <span class="SourceCode">_AsyncResult</span> (for example <a href="Functions/CAPLfunctionChkQueryEventStatusAsyncResult.htm">ChkQuery_EventStatus_AsyncResult</a>) which retrieves the requested values from the asynchronous evaluation.</p>
+                <p>A call to <span class="SourceCode">testWaitForCheckQuery</span> retrieves all possible status values from the asynchronous evaluation for the given check. Therefore, it is possible to query multiple values with a single call to <span class="SourceCode">testWaitForCheckQuery</span>.</p>
+                <p>The following example code shows how status report functions can be used for checks that are evaluated asynchronously.</p>
+                <p class="SourceCode">dword checkId;<br />dword res;<br />double doubleRes;<br />int eventTimestamp;<br />int numEvents;<br />checkId = ChkStart_SignalValueChange(sysvar::TestCheckQuery::MySysVar);<br />// ... test execution<br />// query values after test execution<br />res = testWaitForCheckQuery(checkId, 1000);<br />doubleRes = ChkQuery_EventSignalValue_AsyncResult(checkId);<br />eventTimestamp = ChkQuery_EventTimestamp_AsyncResult(checkId);<br />numEvents = ChkQuery_NumEvents_AsyncResult(checkId);</p>
+                <p>Please be aware that the retrieved information should be used only at the (simulation) time when the function <span class="SourceCode">testWaitForCheckQuery</span> resumed. A warning will be triggered if you use any of the <a href="CAPLfunctionsTFSOverview.htm"><span class="bold">TestWaitFor...</span> functions</a> before you actually query any of the information. The following example will give you such a warning message.</p>
+                <p class="SourceCode">dword checkId;<br />dword res;<br />int numEvents;<br />checkId = ChkStart_SignalValueChange(sysvar::TestCheckQuery::MySysVar);<br />// ... test execution<br />// query values after execution<br />res = testWaitForCheckQuery(checkId, 10000000);<br />testWaitForTimeout(10);<br />// the following call will trigger the following warning in the test report:<br />// Result of CheckQuery might be outdated.<br />numEvents = ChkQuery_NumEvents_AsyncResult(checkId);</p>
+                <p>The function <span class="SourceCode">testWaitForCheckQuery</span> together with <span class="SourceCode">ChkQuery_&lt;function name&gt;_AsyncResult</span> can also be used when the checks are evaluated synchronously. In this case <span class="SourceCode">testWaitForCheckQuery</span> returns immediately.</p>
+                <p class="LinkList">&#160;</p>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="FooterWhite">
+                <table class="FooterWhite" style="border-collapse: collapse;margin-left: auto;margin-right: auto;">
+                    <col style="width: 70px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col style="width: 16px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col data-mc-conditions="" />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="buttons popup-container clearfix topicToolbarProxy topicToolbarProxyFooter _Skins_HTML5TopicToolbar mc-component nocontent">
+                                    <div class="button-group-container-left">
+                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo"><a href="../../Shared/HowToUseOnlineHelp.htm" title="Tips for using the help" alt="Tips for using the help"><img src="../../../Resources/vImages/vBackstage/vHelpInfo.png" /></a>
+                                </p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo">•&#160;&#160;Technical&#160;References are only&#160;available&#160;in&#160;English</p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo" style="text-align: right;"><span class="mc-variable Vector.BuildTime variable">2024-04-8T20:56:42</span>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <table style="width: 100%;border-collapse: separate;border-spacing: 3px 0px;margin-left: auto;margin-right: auto;caption-side: top;">
+                <col />
+                <col />
+                <col />
+                <col data-mc-conditions="BuildProcess.HTML5Link" />
+                <tbody>
+                    <tr>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;">
+                            <p class="vec_Footer">©&#160;Vector Informatik GmbH</p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;text-align: right;">
+                            <p class="vec_FooterBold">
+                                <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE&#160;Product Families</MadCap:conditionalText> Version <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.VectorTestUnitRunner">18</MadCap:conditionalText></p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="../../Shared/ContactCopyrightLicense.htm" class="vec_Footer MCXref xref xrefvec_Footer">Contact/Copyright/License</a>
+                            </p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="https://www.vector.com/int/en/company/get-info/privacy-policy/" target="_blank" class="vec_Footer">Data Privacy Notice</a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

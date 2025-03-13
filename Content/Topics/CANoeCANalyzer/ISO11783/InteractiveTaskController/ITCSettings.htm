@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="topic" data-mc-search-type="Stem" data-mc-help-system-file-name="CANoeDEFamily.xml" data-mc-path-to-help-system="../../../../../" data-mc-conditions="Targets.CANoe-DE-Family" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../Skins/Favicons/favicon-16x16.png" /><title>Configuration of the Interactive Task Controller</title>
+        <link href="../../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Resources/Stylesheets/vTableMasterPageHeader.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../../Resources/Stylesheets/vStylesheet.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../../Resources/Stylesheets/vTable.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapGlobal.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapDom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapUtilities.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapXhr.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTextEffects.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSlideshow.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMessageBus.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMessageBus.CrossFrame.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapDefault.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMediaQueries.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapAccessibility.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapHelpSystem.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapAliasFile.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopicFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapFeedbackHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSkinHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.Breadcrumbs.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.MiniToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.SideMenu.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapIndex.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapGlossary.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapParser.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSearch.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapNavigateTopics.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapLms.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapELearning.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopic.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMicroContentComponent.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSearchHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopicElements.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTriPane.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/jscript" src="../../../../Resources/vScripts/SyntaxHighlighting.js">
+        </script>
+        <script type="text/jscript" src="../../../../Resources/vScripts/TabSwitch.js">
+        </script>
+        <script type="text/javascript" src="../../../../Resources/vScripts/Vector.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../../../CANoeDEFamily.htm#Topics/CANoeCANalyzer/ISO11783/InteractiveTaskController/ITCSettings.htm">Open topic with navigation</a>
+        </p>
+        <div class="Body">
+            <div role="main" id="mc-main-content">
+                <p class="StructurePath"><a href="../startpageISO11783.htm" class="StructurePath">ISO11783</a> » <a href="ITC.htm" class="StructurePath">Interactive Task Controller</a> » Configuration</p>
+                <h1><a name="aanchor23251"></a>
+                    <MadCap:concept term="ITC" /><a name="kanchor7676"></a>Configuration of the Interactive Task Controller</h1>
+                <p class="MenuPath">&#160;</p>
+                <p class="ToolAvailability" data-mc-conditions="BuildProcess.ToolAvailability"><a href="../../../Shared/FeatureAvailability.htm" class="red" title="Feature availabilty for your product">Valid&#160;for</a>:&#160;&#160;CANoe&#160;DE<a name="aanchor23252"></a><MadCap:concept term="SFCANoeDE" /></p>
+                <p class="AutoSearchFilterConcepts"><a name="aanchor23253"></a>
+                    <MadCap:concept term="SFCore" />
+                </p>
+                <p>You can adjust various settings on page <span class="bold">Configuration</span> of the Interactive Task Controller.</p>
+                <div>
+                    <h2>Properties of the Interactive Task Controller</h2>
+                    <div align="left">
+                        <table style="margin-left: 0;margin-right: auto;caption-side: top;width: 100%;mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                            <col style="width: 25%;" />
+                            <col />
+                            <tr valign="top">
+                                <th colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p colspan="1" rowspan="1" class="TableHead">Task Controller version</p>
+                                </th>
+                                <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p colspan="1" rowspan="1" class="Table">Here you can select if the Interactive Task Controller is a version 1, 2, 3 or 4 Task Controller.</p>
+                                </td>
+                            </tr>
+                            <tr valign="top">
+                                <th colspan="2" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p colspan="2" class="TableHead">Task Controller Capability</p>
+                                </th>
+                            </tr>
+                            <tr valign="top">
+                                <th colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <div class="Indent">
+                                        <p colspan="1" rowspan="1" class="TableHead">Support Version Request</p>
+                                    </div>
+                                </th>
+                                <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">If you activate this option, the response for the Version Request message is enabled.</p>
+                                    <p class="Table">If you deactivate the option, a negative acknowledge is sent.</p>
+                                </td>
+                            </tr>
+                            <tr valign="top">
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <div class="Indent">
+                                        <p class="TableHead">Support Structure Label Request</p>
+                                    </div>
+                                </th>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">If you activate this option, the response for the Structure Label Request message is enabled. The implement can activate a device description stored in the Task Controller without anew transmission.</p>
+                                    <p class="Table">If you deactivate the option, a negative acknowledge is sent. The device description must sent to the Task Controller again.</p>
+                                </td>
+                            </tr>
+                            <tr valign="top">
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <div class="Indent">
+                                        <p class="TableHead">Support Localization Label Request</p>
+                                    </div>
+                                </th>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">If you activate this option, the response for the Localization Label Request message is enabled.</p>
+                                    <p class="Table">If you deactivate the option, a negative acknowledge is sent.</p>
+                                </td>
+                            </tr>
+                            <tr valign="top">
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <div class="Indent">
+                                        <p class="TableHead">Boot time</p>
+                                    </div>
+                                </th>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Here you set the maximum number of seconds until the first Task Controller status message</p>
+                                    <p class="Table"> A value of 255 (default value) means that this information is not available. This value is used in the Version Message if the Task Controller version is 3 or higher.</p>
+                                </td>
+                            </tr>
+                            <tr valign="top">
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="TableHead">Supports TC-BAS, TC-GEO, peer control
+ assignment, TC-SC</p>
+                                </th>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">These options are used in the Version Message
+ if the Task Controller version is 3 or higher.</p>
+                                </td>
+                            </tr>
+                            <tr valign="top">
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="TableHead">Number
+ of booms</p>
+                                </th>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Maximum number of section control booms that
+ is supported. This value is used in the Version Message if the Task
+ Controller version is 3 or higher.</p>
+                                </td>
+                            </tr>
+                            <tr valign="top">
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="TableHead">Number of sections</p>
+                                </th>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Maximum
+ number of sections that is supported. This
+ value is used in the Version Message if the Task Controller version is 3 or
+ higher.</p>
+                                </td>
+                            </tr>
+                            <tr valign="top">
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="TableHead">Number of control channels</p>
+                                </th>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Maximum
+ number of individual control channels that is supported. This value is used in the Version Message if the Task Controller
+ version is 3 or higher.</p>
+                                </td>
+                            </tr>
+                            <tr valign="top">
+                                <th colspan="2" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="TableHead">Process Data Values</p>
+                                </th>
+                            </tr>
+                            <tr valign="top">
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <div class="Indent">
+                                        <p class="TableHead">Use Value Command to set values</p>
+                                    </div>
+                                </th>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">If you select this option the Interactive Task Controller uses the command <span class="bold">Value Command</span> to write new values to the process data dictionary of the implement in the <a href="ITCDeviceView.htm">device view</a>. The successful execution of the command cannot be verified due the implement sends no response.</p>
+                                </td>
+                            </tr>
+                            <tr valign="top">
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <div class="Indent">
+                                        <p class="TableHead">Use Set Value and Acknowledge Command to set values</p>
+                                    </div>
+                                </th>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">If you select this option the Interactive Task Controller uses the command <span class="bold">Set Value and Acknowledge Command</span> to write new values to the process data dictionary of the implement in the <a href="ITCDeviceView.htm">device view</a>. The response of the implement shows if the write access was successful or not.</p>
+                                    <p class="Table">This option is only enabled of the Task Controller version is 4.</p>
+                                </td>
+                            </tr>
+                            <tr valign="top">
+                                <th colspan="2" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="TableHead">Mode</p>
+                                </th>
+                            </tr>
+                            <tr valign="top">
+                                <th colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <div class="Indent">
+                                        <p colspan="1" rowspan="1" class="TableHead">Enable passive mode</p>
+                                    </div>
+                                </th>
+                                <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">The <a href="ITC.htm#PassiveMode">passive mode</a> is enabled and the Interactive Task Controller monitors the bus traffic only.</p>
+                                    <p class="Table">If the two following settings are not used, the Interactive Task Controller with the address defined at <span class="bold">Device Name</span> is monitored and displayed.</p>
+                                </td>
+                            </tr>
+                            <tr valign="top">
+                                <th colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <div class="Indent">
+                                        <p class="TableHead">Auto detect address of the Task Controller</p>
+                                    </div>
+                                </th>
+                                <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p colspan="1" rowspan="1" class="Table">The Interactive Task Controller that registers first on the bus with an "Address Claimed" message is monitored and displayed.</p>
+                                </td>
+                            </tr>
+                            <tr valign="top">
+                                <th colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <div class="Indent">
+                                        <p colspan="1" rowspan="1" class="TableHead">Auto detected Task Controller must have Function Instance</p>
+                                    </div>
+                                </th>
+                                <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p colspan="1" rowspan="1" class="Table">The Interactive Task Controller that has the same Function Instance as defined here is monitored and displayed.</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div>
+                    <h2>View</h2>
+                    <div align="left">
+                        <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');" width="100%" class="TableStyle_vTable" cellspacing="0">
+                            <col style="width: 25%;" />
+                            <col />
+                            <tr valign="top">
+                                <th colspan="2" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p colspan="2" class="TableHead">Displayed items in Process Data Dictionary</p>
+                                </th>
+                            </tr>
+                            <tr valign="top">
+                                <th colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p colspan="1" rowspan="1" class="TableHead">Device Properties</p>
+                                </th>
+                                <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Here you define whether the properties of a device are displayed in the Device view.</p>
+                                </td>
+                            </tr>
+                            <tr valign="top">
+                                <th colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="TableHead">Device Process Data</p>
+                                </th>
+                                <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Here you define which process data of a device are displayed in the Device view.</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div>
+                    <h2>Network Management</h2>
+                    <div align="left">
+                        <table style="margin-left: 0;margin-right: auto;caption-side: top;width: 100%;mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                            <col style="width: 25%;" />
+                            <col />
+                            <tr valign="top">
+                                <th colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p colspan="1" rowspan="1" class="TableHead">Address</p>
+                                </th>
+                                <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Here you set the address that is used by the Interactive Task Controller.</p>
+                                </td>
+                            </tr>
+                            <tr valign="top">
+                                <th colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="TableHead">[Device Name...]</p>
+                                </th>
+                                <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">If you click this button a dialog is opened to configure the <a href="ITCDeviceName.htm">device name</a>. This name is used by the Interactive Device Controller.</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div>
+                    <h2>Settings</h2>
+                    <div align="left">
+                        <table style="margin-left: 0;margin-right: auto;width: 100%;mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                            <col style="width: 25%;" />
+                            <col />
+                            <tr valign="top">
+                                <th colspan="2" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="TableHead">Use Task File (<a href="ITCSettingsTaskfileMatrix.htm">Settings matrix</a>)</p>
+                                </th>
+                            </tr>
+                            <tr valign="top">
+                                <th colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <div class="Indent">
+                                        <p class="TableHead">Use Task File</p>
+                                    </div>
+                                </th>
+                                <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p colspan="1" rowspan="1" class="Table">Select the file with the device description that is read by the Interactive Task Controller or in which a device description is written.</p>
+                                    <p class="Table">Depending on the activation of this option, the next option is named <span class="bold">Load Task File</span> or <span class="bold">Reset task data</span>.</p>
+                                </td>
+                            </tr>
+                            <tr valign="top">
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <div class="Indent">
+                                        <p class="TableHead">Load Task File</p>
+                                    </div>
+                                </th>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Here you specify when the selected task file is load.</p>
+                                    <p class="Table">There are several options:</p>
+                                    <ul>
+                                        <li><span class="bold">On configuration loading only</span> (default)</li>
+                                        <li><span class="bold">On configuration loading and on each measurement start</span>: The Interactive Task Controller is reset to its default state on each measurement start. Existing device descriptions are discarded and the selected task file is reload.</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr valign="top">
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <div class="Indent">
+                                        <p class="TableHead">Reset task data</p>
+                                    </div>
+                                </th>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Here you specify when existing task data are reset.</p>
+                                    <p class="Table">There are several options:</p>
+                                    <ul>
+                                        <li><span class="bold">On configuration loading only</span> (default)</li>
+                                        <li><span class="bold">On configuration loading and on each measurement start</span>: The Interactive Task Controller is reset to its default state on each measurement start. Existing device descriptions are discarded.</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr valign="top">
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <div class="Indent">
+                                        <p class="TableHead">Store data to Task File</p>
+                                    </div>
+                                </th>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Here you specify when the device description of the Interactive Task Controller is stored to the selected task file.</p>
+                                    <p class="Table">
+There are several options:</p>
+                                    <ul>
+                                        <li><span class="bold">On configuration saving only</span> (default): The device description is stored during storage of the <span class="Product">CANoe</span> configuration.</li>
+                                        <li><span class="bold">On each measurement stop</span>: The selected task file is overwritten with the device description of the Interactive Task Controller on each measurement stop.</li>
+                                        <li><span class="bold">Never</span>: The selected task file is never overwritten with new device descriptions.</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr valign="top">
+                                <th colspan="2" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="TableHead">Object Pool Transfer</p>
+                                </th>
+                            </tr>
+                            <tr valign="top">
+                                <th colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <div class="Indent">
+                                        <p colspan="1" rowspan="1" class="TableHead">Available space for object pool in bytes</p>
+                                    </div>
+                                </th>
+                                <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Here you set the size of the available memory for the object pool. This value influences the status field in the Request Object-pool Transfer Response message of the Interactive Task Controller.</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div>
+                    <h2>Language</h2>
+                    <p>These settings can be queried from other devices with the <span class="bold">Language</span> command and is available since Task Controller version 3.</p>
+                    <div align="left">
+                        <table style="margin-left: 0;margin-right: auto;caption-side: top;width: 100%;mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                            <col style="width: 20%;" />
+                            <col />
+                            <tr valign="top">
+                                <th colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="TableHead">Get language from Primary Virtual Terminal</p>
+                                </th>
+                                <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">If you select this option, the language setting will be queried on measurement start by the primary Virtual Terminal. If the query fails, the user settings will be used.</p>
+                                </td>
+                            </tr>
+                            <tr valign="top">
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="TableHead">User setting</p>
+                                </th>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">If you select this option, you can change e.g. language, format, and unit settings.</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <p class="LinkList"><a class="MCHelpControl MCHelpControl-Concept conceptLink" data-mc-concepts="ITC" href="javascript:void(0);" data-mc-topics="Configuration of the Interactive Task Controller|#aanchor23251||Device name|ITCDeviceName.htm#aanchor16213||Device overview of the Interactive Task Controller|ITCDeviceOverview.htm#aanchor29352||Device view of the Interactive Task Controller|ITCDeviceView.htm#aanchor18449||Insert Interactive Task Controller|ITCInsert.htm#aanchor247||Interactive Task Controller (ISO11783)|ITC.htm#aanchor31590||Measurement Command Dialog (ISO11783 ITC)|ITCMeasurementCommandDialog.htm#aanchor25267||Process Data Definition in the Database|../processData/ProcessDataDefinition.htm#aanchor4979||Process Data|../processData/ProcessDataOverview.htm#aanchor11887||Segmented Transmission of a Device Description|../processData/ProcessDataSegmentedTransmission.htm#aanchor26153||Settings Matrix Task File|ITCSettingsTaskfileMatrix.htm#aanchor21825||Task overview of the Interactive Task Controller|ITCTaskOverview.htm#aanchor23868||Task view of the Interactive Task Controller|ITCTaskView.htm#aanchor29376"><span class="MCHelpControl-ConceptHotSpot_"><img class="MCHelpControl_Image_Icon" src="../../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="14" width="16" alt="Concept Link Icon" />See Also</span></a>
+                </p>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="FooterWhite">
+                <table class="FooterWhite" style="border-collapse: collapse;margin-left: auto;margin-right: auto;">
+                    <col style="width: 70px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col style="width: 16px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="buttons popup-container clearfix topicToolbarProxy topicToolbarProxyFooter _Skins_HTML5TopicToolbar mc-component nocontent">
+                                    <div class="button-group-container-left">
+                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo"><a href="../../../Shared/HowToUseOnlineHelp.htm" title="Tips for using the help" alt="Tips for using the help"><img src="../../../../Resources/vImages/vBackstage/vHelpInfo.png" /></a>
+                                </p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo" style="text-align: right;"><span class="mc-variable Vector.BuildTime variable">2024-04-8T20:56:42</span>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <table style="width: 100%;border-collapse: separate;border-spacing: 3px 0px;margin-left: auto;margin-right: auto;caption-side: top;">
+                <col />
+                <col />
+                <col />
+                <col data-mc-conditions="BuildProcess.HTML5Link" />
+                <tbody>
+                    <tr>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;">
+                            <p class="vec_Footer">©&#160;Vector Informatik GmbH</p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;text-align: right;">
+                            <p class="vec_FooterBold">
+                                <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE&#160;Product Families</MadCap:conditionalText> Version <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.VectorTestUnitRunner">18</MadCap:conditionalText></p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="../../../Shared/ContactCopyrightLicense.htm" class="vec_Footer MCXref xref xrefvec_Footer">Contact/Copyright/License</a>
+                            </p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="https://www.vector.com/int/en/company/get-info/privacy-policy/" target="_blank" class="vec_Footer">Data Privacy Notice</a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="" data-mc-search-type="Stem" data-mc-help-system-file-name="CANoeDEFamily.xml" data-mc-path-to-help-system="../../../../" data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../Skins/Favicons/favicon-16x16.png" /><title>Structure and Syntax (vCDL 1.4)</title>
+        <link href="../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Resources/Stylesheets/vTableMasterPageHeader.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../Resources/Stylesheets/vStylesheet.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../Resources/Stylesheets/vTable.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapGlobal.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapDom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapUtilities.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapXhr.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTextEffects.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSlideshow.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMessageBus.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMessageBus.CrossFrame.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapDefault.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMediaQueries.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAccessibility.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapHelpSystem.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAliasFile.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopicFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapFeedbackHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSkinHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.Breadcrumbs.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.MiniToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.SideMenu.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapIndex.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapGlossary.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapParser.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSearch.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapNavigateTopics.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapLms.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapELearning.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopic.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMicroContentComponent.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSearchHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopicElements.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTriPane.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/jscript" src="../../../Resources/vScripts/SyntaxHighlighting.js">
+        </script>
+        <script type="text/jscript" src="../../../Resources/vScripts/TabSwitch.js">
+        </script>
+        <script type="text/javascript" src="../../../Resources/vScripts/Vector.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../../CANoeDEFamily.htm#Topics/vCDL/Concept/vCDLSyntax.htm">Open topic with navigation</a>
+        </p>
+        <div class="Body">
+            <div role="main" id="mc-main-content">
+                <div>
+                    <p class="StructurePath"><a href="../../CANoeCANalyzer/CANoeDEFamily.htm" class="StructurePath" data-mc-conditions="Targets.CANoe-DE-Family"><img src="../../../Resources/vImages/vToolIcons/CANoeDEFamily_Icon16_15x15.png" alt="" style="width: 15;height: 15;" />&#160;CANoe&#160;DE&#160;Product&#160;Families</a> » <a href="../vCDLStartpage.htm" class="StructurePath">vCDL</a> » vCDL 1.4 (deprecated) » Structure and Syntax</p>
+                    <h1>Structure and Syntax</h1>
+                    <p class="MenuPath">&#160;</p>
+                    <p class="ToolAvailability" data-mc-conditions="BuildProcess.ToolAvailability"><a href="../../Shared/FeatureAvailability.htm" class="red" title="Feature availabilty for your product">Valid&#160;for</a>:&#160;&#160;CANoe&#160;DE<a name="aanchor2737"></a><MadCap:concept term="SFCANoeDE" />&#160;&#160;•&#160;&#160;CANoe:lite&#160;DE<a name="aanchor2738"></a><MadCap:concept term="SFCANoeLiteDE" /></p>
+                    <p class="AutoSearchFilterConcepts"><a name="aanchor2739"></a>
+                        <MadCap:concept term="SFvCDL" />
+                    </p>
+                </div>
+                <p>The structure of vCDL is similar to the most common programming languages, except that vCDL is a pure declarative language and therefore does not include any program flow.</p>
+                <h2 class="SectionMain">Communication Objects</h2>
+                <p>The basic objective of this language is to define <a href="../../CANoeCANalyzer/CommunicationConcept/CCObjects.htm" data-mc-exclude-action="unbind" data-mc-conditions="Targets.CANoe-SE-Family,Targets.CANoe-DE-Family">communication objects</a> that can be identified by a unique name. In the case of service-oriented architecture, these are <a href="../Language/vCDLServices.htm">services</a> that can include <a href="../Language/vCDLEvents.htm">events</a>, <a href="../Language/vCDLFields.htm">fields</a>, <a href="../Language/vCDLMethods.htm">methods</a>, and <a href="../Language/vCDLServicePDUs.htm">PDUs</a>. In signal-based communication, <a href="../Language/vCDLSignals.htm">signals</a> and <a href="../Language/vCDLPDUs.htm">PDUs</a> are available as independent communication objects.</p>
+                <p class="SourceCode"><span class="CodeKeyword">signal</span> uint16 Speed<br />{<br />&#160;&#160;<span class="CodeKeyword">sender</span> WheelFL, WheelFR, WheelBL, WheelBR;<br />&#160;&#160;<span class="CodeKeyword">receiver</span> TractionControl;<br />}</p>
+                <h2 class="SectionMain">Data Types</h2>
+                <p>Defining communication objects requires a description of the data to be communicated in the form of primitive and complex data types.</p>
+                <h2>Supported Data Types</h2>
+                <div>
+                    <table style="mc-table-style: url('../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                        <col />
+                        <col />
+                        <thead>
+                            <tr>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                    <p class="TableHead"><a href="../Language/vCDLPrimitiveDataTypes.htm" class="red">Primitive Data Types</a>
+                                    </p>
+                                </th>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                    <p class="TableHead">Complex Data Types</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a href="../Language/vCDLStringDataTypes.htm">Strings</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table"><a href="../Language/vCDLEnumerations.htm">Enumerations</a>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">Boolean</td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd"><a href="../Language/vCDLBitFields.htm">Bit fields</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">Integer numbers</td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd"><a href="../Language/vCDLArrayDataTypes.htm">Arrays</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">Float numbers</td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd"><a href="../Language/vCDLListDataTypes.htm">Lists</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Time</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table"><a href="../Language/vCDLStuctDataTypes.htm">Structures</a>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="Table">&#160;</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                    <p class="Table"><a href="../Language/vCDLUnionDataTypes.htm">Unions</a>
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>Type alias definitions allow application-specific names to be assigned to the defined data types; furthermore, properties for serialization and simulation can be added by means of data-specific attributes.</p>
+                <p class="SourceCode"><span class="CodeKeyword">const</span> int32 AbsZero = <span class="CodeNumericalLiteral">-273</span>;<br /><br />[<span class="CodeAttributeKey_Namespace">min</span>=AbsZero, <span class="CodeAttributeKey_Namespace">max</span>=<span class="CodeNumericalLiteral">1000</span>, <span class="CodeAttributeKey_Namespace">unit</span>=<span class="CodeStringLiteral">"C"</span>]<br /><span class="CodeKeyword">typedef</span> Temperature = int32;<br /><span class="CodeKeyword">typedef</span> History&#160;&#160;&#160;&#160;&#160;= <span class="CodeKeyword">array</span>&lt;Temperature, <span class="CodeNumericalLiteral">100</span>&gt;;</p>
+                <h2 class="SectionMain">Namespaces</h2>
+                <p>As for conventional programming languages, defined communication objects are organized in <a href="../Language/vCDLNamespaces.htm">namespaces</a> that are used for an unambiguous classification in case of mutual references. Any type definitions and other independent constructs such as <a href="../Language/vCDLEncodingSemanticAttributes.htm">linear coding rules</a>, <a href="../Language/vCDLConstantDeclarations.htm">constant declarations</a>, <a href="../Language/vCDLFunctionPrototypes.htm">function prototypes</a>, <a href="../Language/vCDLServiceInterfaces.htm">interfaces</a>, <a href="../Language/vCDLPDUTypes.htm">PDU types</a> and binding-specific definitions are also identified by the respective namespace.</p>
+                <p class="SourceCode"><span class="CodeKeyword">namespace</span> Multimedia<br />{<br />&#160;&#160;<span class="CodeKeyword">namespace</span> Audio<br />&#160;&#160;{<br />&#160;&#160;&#160;&#160;<span class="CodeKeyword">interface</span> IAudioSource<br />&#160;&#160;&#160;&#160;{<br />&#160;&#160;&#160;&#160;&#160;&#160;<span class="CodeKeyword">field</span> uint16 CurrentTrack { <span class="CodeKeyword">get</span>; <span class="CodeKeyword">set</span>; <span class="CodeKeyword">notify</span>; }<br />&#160;&#160;&#160;&#160;}<br />&#160;&#160;}<br /><br />&#160;&#160;<span class="CodeKeyword">service</span> CDPlayer : Audio::IAudioSource<br />&#160;&#160;{<br />&#160;&#160;&#160;&#160;<span class="CodeKeyword">consumer</span> MediaController;<br />&#160;&#160;&#160;&#160;<span class="CodeKeyword">provider</span> Console;<br />&#160;&#160;}<br />}</p>
+                <h2 class="SectionMain">Bindings and Refinements</h2>
+                <p>To define the network binding of communication objects, vCDL provides special language constructs through which the binding is identified by a reserved identifier. For example, the <a href="../Language/vCDLAbstractBinding.htm">abstract binding</a> for the pure simulation of communication is identified by the identifier <span class="bold">Abstract</span>. Depending on the complexity of the communication stacks, parameters and serialization rules are set by means of binding-specific attributes or additional language constructs. The use of a specific binding can be completely separated from the actual definition of communication objects by defining additional attributes elsewhere in the source file or even in a separate source file by means of the so-called <a href="../Language/vCDLAttributeRefinements.htm">refinements</a>. The same applies to distributed objects, where all bindings are configured exclusively via attributes.</p>
+                <p class="SourceCode">[<span class="CodeAttributeKey_Namespace">delay</span>=<span class="CodeNumericalLiteral">100ns</span>]<br /><span class="CodeKeyword">refine</span> Multimedia::CDPlayer<br />{<br />&#160;&#160;<span class="CodeKeyword">binding</span> Abstract;<br /><br />&#160;&#160;[<span class="CodeAttributeKey_Namespace">subscribedConsumers</span>=MediaController]<br />&#160;&#160;<span class="CodeKeyword">refine</span>.Console.CurrentTrack;<br />}</p>
+                <h2 class="SectionMain">Imports</h2>
+                <p>vCDL allows to divide a model into several source files as desired. Source files can reference each other via an <a href="../Language/vCDLImports.htm">import</a>; furthermore, references between communication objects, data types and other identifiable vCDL objects can work across file limits. It is recommended to specify paths in imports in a relative way so that all directories can be simply moved and copied.</p>
+                <p class="SourceCode"><span class="CodeKeyword">import</span><span class="CodeStringLiteral">"../common/types.vcdl"</span>;</p>
+                <h2 class="SectionMain">Syntax</h2>
+                <p>From a syntactic point of view, a vCDL source file includes declarations which either can end with a semicolon or which contain a body definition between curly brackets. Declarations of objects are always located in a namespace. Only the declaration of the <a href="../Language/vCDLVersioning.htm">language version</a> and the import statements are located at the beginning of each source file outside all namespaces.</p>
+                <p class="SourceCode"><span class="CodeKeyword">version</span><span class="CodeNumericalLiteral">1.4</span>;</p>
+                <p><a href="../Language/vCDLAttributes.htm">Attributes</a> are assigned to declarations in the form of a list of key-value pairs between square brackets. The assignment is made using the placement rules for attributes that are documented in the technical reference for all types of declarations. In general, attributes can always be written directly before and after the declaration, but before the final semicolon.</p>
+                <p class="LinkList">&#160;</p>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="FooterWhite">
+                <table class="FooterWhite" style="border-collapse: collapse;margin-left: auto;margin-right: auto;">
+                    <col style="width: 70px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col style="width: 16px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="buttons popup-container clearfix topicToolbarProxy topicToolbarProxyFooter _Skins_HTML5TopicToolbar mc-component nocontent">
+                                    <div class="button-group-container-left">
+                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo"><a href="../../Shared/HowToUseOnlineHelp.htm" title="Tips for using the help" alt="Tips for using the help"><img src="../../../Resources/vImages/vBackstage/vHelpInfo.png" /></a>
+                                </p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo" style="text-align: right;"><span class="mc-variable Vector.BuildTime variable">2024-04-8T20:56:42</span>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <table style="width: 100%;border-collapse: separate;border-spacing: 3px 0px;margin-left: auto;margin-right: auto;caption-side: top;">
+                <col />
+                <col />
+                <col />
+                <col data-mc-conditions="BuildProcess.HTML5Link" />
+                <tbody>
+                    <tr>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;">
+                            <p class="vec_Footer">©&#160;Vector Informatik GmbH</p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;text-align: right;">
+                            <p class="vec_FooterBold">
+                                <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE&#160;Product Families</MadCap:conditionalText> Version <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.VectorTestUnitRunner">18</MadCap:conditionalText></p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="../../Shared/ContactCopyrightLicense.htm" class="vec_Footer MCXref xref xrefvec_Footer">Contact/Copyright/License</a>
+                            </p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="https://www.vector.com/int/en/company/get-info/privacy-policy/" target="_blank" class="vec_Footer">Data Privacy Notice</a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

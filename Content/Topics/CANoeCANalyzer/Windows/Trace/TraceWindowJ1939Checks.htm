@@ -1,0 +1,1160 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="" data-mc-search-type="Stem" data-mc-help-system-file-name="CANoeDEFamily.xml" data-mc-path-to-help-system="../../../../../" data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../Skins/Favicons/favicon-16x16.png" /><title>Checks of J1939 Parameter Groups</title>
+        <link href="../../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Resources/Stylesheets/vTableMasterPageHeader.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../../Resources/Stylesheets/vStylesheet.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../../Resources/Stylesheets/vTable.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../../Resources/Stylesheets/vTableSymbol.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapGlobal.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapDom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapUtilities.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapXhr.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTextEffects.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSlideshow.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMessageBus.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMessageBus.CrossFrame.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapDefault.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMediaQueries.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapAccessibility.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapHelpSystem.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapAliasFile.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopicFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapFeedbackHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSkinHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.Breadcrumbs.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.MiniToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.SideMenu.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapIndex.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapGlossary.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapParser.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSearch.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapNavigateTopics.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapLms.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapELearning.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopic.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMicroContentComponent.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSearchHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopicElements.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTriPane.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/jscript" src="../../../../Resources/vScripts/SyntaxHighlighting.js">
+        </script>
+        <script type="text/jscript" src="../../../../Resources/vScripts/TabSwitch.js">
+        </script>
+        <script type="text/javascript" src="../../../../Resources/vScripts/Vector.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../../../CANoeDEFamily.htm#Topics/CANoeCANalyzer/Windows/Trace/TraceWindowJ1939Checks.htm">Open topic with navigation</a>
+        </p>
+        <div class="Body">
+            <div role="main" id="mc-main-content">
+                <p class="StructurePath"><a href="../../CANoeDEFamily.htm" class="StructurePath" data-mc-conditions="Targets.CANoe-DE-Family"><img src="../../../../Resources/vImages/vToolIcons/CANoeDEFamily_Icon16_15x15.png" alt="" style="width: 15;height: 15;" />&#160;CANoe&#160;DE&#160;Product&#160;Families</a> » … » <a href="TraceWindow.htm" class="StructurePath">Trace Window</a> » Checks of J1939 Parameter Groups</p>
+                <h1><a name="kanchor3680"></a><span class="mc-variable System.Title variable">Checks of J1939 Parameter Groups</span>
+                </h1>
+                <p class="MenuPath">&#160;</p>
+                <p class="ToolAvailability" data-mc-conditions="BuildProcess.ToolAvailability"><a href="../../../Shared/FeatureAvailability.htm" class="red" title="Feature availabilty for your product">Valid&#160;for</a>:&#160;&#160;CANoe&#160;DE<a name="aanchor12101"></a><MadCap:concept term="SFCANoeDE" />&#160;&#160;•&#160;&#160;CANoe4SW&#160;DE<a name="aanchor12102"></a><MadCap:concept term="SFCANoe4SWDE" /></p>
+                <p class="AutoSearchFilterConcepts"><a name="aanchor12103"></a>
+                    <MadCap:concept term="SFCore" />
+                </p>
+                <p>Several checks of J1939 parameter groups are processed to detect violations against the J1939 specification. If a violation is detected, the appropriate row is highlighted in color and marked with an error icon. The column <span class="bold">J1939 Violation </span>displays an error message.</p>
+                <div>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                    <p class="Table">
+                                        <img src="../../../../Resources/vImages/vInfo.png" style="width: 48px;height: 45px;" title="Note" alt="Note" />
+                                    </p>
+                                </td>
+                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                    <p class="TableSymbolHead">Note</p>
+                                    <p>During measurement start error messages about the transport protocol are possible. This is caused by measurement start during a transport protocol transmission so your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> cannot evaluate the start of the transport protocol.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                    <p class="Table">
+                                        <img src="../../../../Resources/vImages/vInfo.png" style="width: 48px;height: 45px;" title="Note" alt="Note" />
+                                    </p>
+                                </td>
+                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                    <p class="TableSymbolHead">Note</p>
+                                    <p>If an import into the Trace Window was executed not all checks are processed. No checks are processed if a sequence of parameter groups has to be evaluated, e.g. the transport protocol.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>The following J1939 checks are processed:</p>
+                <table style="mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                    <col />
+                    <col />
+                    <tr>
+                        <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="TableHead">J1939 specification</p>
+                        </th>
+                        <th class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="TableHead">Message</p>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th colspan="2" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p colspan="2" class="TableHead">General Checks</p>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">J1939-21</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[J1939] Source address must not be Null (254)</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">J1939-21</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[J1939] Source address must not be Global (255)</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">J1939-21</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[J1939] DLC must be 8</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th colspan="2" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p colspan="2" class="TableHead">Request</p>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">J1939-21</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[RQST] Response later than 1250&#160;ms after request</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">J1939-21</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[RQST] Request is sent more than 3 times per second</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">J1939-21</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[RQST] Negative Acknowledge not allowed after global request</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">J1939-21</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[RQST] Previous request not responded</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">J1939-21</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[RQST] Timeout after request at &lt;time&gt;</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">J1939-21</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[RQST] DLC for Request must be 3</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">J1939-21</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[RQST] Invalid destination address</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">J1939-21</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[RQST] Reserved field of requested PGN used</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">J1939-21</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[RQST] Requested PGN contains destination address</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th colspan="2" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p colspan="2" class="TableHead">Address Claiming</p>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">J1939-81</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[ACL] DLC must be 8</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">J1939-81</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[ACL] Destination address must be global (255)</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">J1939-81</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[ACL] Source address must not be global (255)</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">J1939-81</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[ACL] Reserved bit must be 0</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th colspan="2" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p colspan="2" class="TableHead">Acknowledgment</p>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">J1939-21</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[ACKM] DLC must be 8</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">J1939-21</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[ACKM] Invalid control byte value</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">J1939-21</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[ACKM] Destination address must be global (255)</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">J1939-21</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[ACKM] Invalid use of reserved data bytes</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">J1939-21</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[ACKM] Reserved field of acknowledged PGN used</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">J1939-21</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[ACKM] Requested PGN contains destination address</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th colspan="2" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p colspan="2" class="TableHead">Transport Protocol</p>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">J1939-21</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[TP] More data bytes used than specified by RTS/BAM</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">J1939-21</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[TP] Message not allowed in this state of connection</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">J1939-21</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[TP] Acknowledged PGN is wrong</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">J1939-21</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[TP] Acknowledged total size is wrong</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">J1939-21</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[TP] Acknowledged total number of packets is wrong</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">J1939-21</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[TP] Unexpected sequence number</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">J1939-21</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[TP] Less than 50&#160;ms after previous data</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">J1939-21</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[TP] More than 200&#160;ms after previous message</p>
+                            <p class="Table">This message affects the sender. It is a protocol violation if sender and your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> are in the same network segment. This message can be ignored if e.g. gateways are located between sender and your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText>.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">J1939-21</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[TP] More than 500&#160;ms after previous message</p>
+                            <p class="Table">This message affects the sender. It is a protocol violation if sender and your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> are in the same network segment. This message can be ignored if e.g. gateways are located between sender and your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText>.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">J1939-21</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[TP] Not the same PGN as in RTS</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">J1939-21</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[TP] Abort with wrong PGN</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">J1939-21</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[TP] Received broadcast data after timeout</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">J1939-21</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[TP] Message size and number of packets is inconsistent</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">J1939-21</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[TP] No connection for this message</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">J1939-21</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[TP] Overwrite existing connection</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">J1939-21</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[TP] More Packets requested than allowed</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">J1939-21</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[TP] Timeout after &lt;time&gt; while waiting for CTS</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">J1939-21</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[TP] Timeout after &lt;time&gt; while waiting for Data</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">J1939-21</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[TP] Timeout after &lt;time&gt; while waiting for EoMA</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">J1939-21</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[TP] Timeout after &lt;time&gt; while waiting for broadcast data</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">J1939-21</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[TP] DLC must be 8</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">J1939-21</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[TP] Invalid total size, expect 9..1785</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">J1939-21</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[TP] Total number of packets must be greater than 1</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">J1939-21</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[TP] Destination address must not be global (255)</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">J1939-21</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[TP] Destination address must be global (255)</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">J1939-21</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[TP] PGN of packeted message contains destination address</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">J1939-21</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[TP] Reserved field of packeted PGN used</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">J1939-21</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[TP] Next packet number must not be 0</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">J1939-21</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[TP] Reserved data bytes are not 0xFF</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">J1939-21</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[TP] CTS next packet is larger than total number of packets</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">J1939-21</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[TP] CTS next packet 0, but number of packets is not 255</p>
+                        </td>
+                    </tr>
+                    <tr data-mc-conditions="Targets.CANoe-DE-Family">
+                        <th colspan="2" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p colspan="2" class="TableHead">Extended Transport Protocol (ISO11783)</p>
+                        </th>
+                    </tr>
+                    <tr data-mc-conditions="Targets.CANoe-DE-Family">
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">ISO11783-6</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[ETP] More data bytes used than specified by ERTS</p>
+                        </td>
+                    </tr>
+                    <tr data-mc-conditions="Targets.CANoe-DE-Family">
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">ISO11783-6</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[ETP] Message not allowed in this state of connection</p>
+                        </td>
+                    </tr>
+                    <tr data-mc-conditions="Targets.CANoe-DE-Family">
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">ISO11783-6</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[ETP] Acknowledged PGN is wrong</p>
+                        </td>
+                    </tr>
+                    <tr data-mc-conditions="Targets.CANoe-DE-Family">
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">ISO11783-6</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[ETP] Acknowledged total size is wrong</p>
+                        </td>
+                    </tr>
+                    <tr data-mc-conditions="Targets.CANoe-DE-Family">
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">ISO11783-6</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[ETP] Unexpected sequence number</p>
+                        </td>
+                    </tr>
+                    <tr data-mc-conditions="Targets.CANoe-DE-Family">
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">ISO11783-6</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[ETP] Abort with wrong PGN</p>
+                        </td>
+                    </tr>
+                    <tr data-mc-conditions="Targets.CANoe-DE-Family">
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">ISO11783-6</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[ETP] Not the same PGN as in ERTS</p>
+                        </td>
+                    </tr>
+                    <tr data-mc-conditions="Targets.CANoe-DE-Family">
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">ISO11783-6</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[ETP] No connection for this message</p>
+                        </td>
+                    </tr>
+                    <tr data-mc-conditions="Targets.CANoe-DE-Family">
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">ISO11783-6</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[ETP] Overwrite existing connection</p>
+                        </td>
+                    </tr>
+                    <tr data-mc-conditions="Targets.CANoe-DE-Family">
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">ISO11783-6</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[ETP] Timeout after &lt;time&gt; while waiting for Data</p>
+                        </td>
+                    </tr>
+                    <tr data-mc-conditions="Targets.CANoe-DE-Family">
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">ISO11783-6</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[ETP] Timeout after &lt;time&gt; while waiting for ECTS</p>
+                        </td>
+                    </tr>
+                    <tr data-mc-conditions="Targets.CANoe-DE-Family">
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">ISO11783-6</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[ETP] Timeout after &lt;time&gt; while waiting for EDPO</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th colspan="2" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p colspan="2" class="TableHead">Fast Packet Transport Protocol</p>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">NMEA 2000</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[FP] More than 750&#160;ms after previous message</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">NMEA 2000</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[FP] Unexpected sequence number</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">NMEA 2000</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[FP] More data bytes used than specified</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">NMEA 2000</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[FP] Timeout after &lt;time&gt; while waiting for data</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th colspan="2" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p colspan="2" class="TableHead">Functional Safety</p>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">J1939 DA</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[INTEGRITY] Wrong message checksum value</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">J1939 DA</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[INTEGRITY] Wrong message counter value</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">J1939 DA</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[INTEGRITY] Wrong message checksum and counter values</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th colspan="2" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="TableHead">J1939 CAN FD</p>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">J1939-22</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[J1939-22] Leading three bytes of padding must be 0x00</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">J1939-22</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[J1939-22] Padding bytes 4-15 must be set to 0xAA</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">J1939-22</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[J1939-22] Data length of Multi-PG is unnecessary big for the contained C-PGs</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">J1939-22</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[J1939-22] Destination specific D_PDU1 must not contain PDU2 messages</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">J1939-22</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[J1939-22] PDU1 C-PG: PDU Specific field of PGN must be 0x00</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">J1939-22</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[J1939-22] Length of C-PG exceeds Multi-PG</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">J1939-22</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[J1939-22] C-PGs do not fit into the Multi-PG</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">J1939-22</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[J1939-22] Length of C-PG exceeds maximum of 60 bytes</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">J1939-22</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[J1939-22] Assurance Data length exceeds length of C-PG</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">J1939-22</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[FD.TP] Invalid session number for this connection</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">J1939-22</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[FD.TP] Unknown data transfer format indicator (DTFI)</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">J1939-22</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[FD.TP] Timeout after &lt;time&gt; while waiting for EOMS</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">J1939-22</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[FD.TP] Assurance data does not fit the specified length</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">J1939-22</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[FD.TP] Not the same total size as in RTS/BAM</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">J1939-22</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[FD.TP] Not the same number of segments as in RTS/BAM</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">J1939-22</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[FD.TP] Not the same Assurance Data Type as in RTS/BAM</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">J1939-22</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[FD.TP] Not the same PGN as in RTS/BAM</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">J1939-22</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[FD.TP] Retransmission</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">J1939-22</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[FD.TP] Number of segments is 0 but next segment is not 0xFFFFFF</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">J1939-22</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[FD.TP] Segment number must not be 0</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">J1939-22</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[FD.TP] Unexpected sequence number</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">J1939-22</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[FD.TP] Less than 10ms after previous data</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">J1939-22</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[FD.TP] Message size and number of segments are inconsistent</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">J1939-22</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[FD.TP] More data bytes used than specified by RTS/BAM</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">J1939-22</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[FD.TP] Timeout after &lt;time&gt; while waiting for Data</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">J1939-22</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[FD.TP] Abort with wrong PGN</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">J1939-22</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[FD.TP] Message not allowed in this state of connection</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">J1939-22</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[FD.TP] Timeout after &lt;time&gt; while waiting for CTS</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">J1939-22</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[FD.TP] Timeout after &lt;time&gt; while waiting for EOMA</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">J1939-22</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[FD.TP] More segments requested than allowed</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">J1939-22</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[FD.TP] CTS next segment is greater than total number of segments</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">J1939-22</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[FD.TP] Overwrite existing connection</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                            <p class="Table">J1939-22</p>
+                        </td>
+                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                            <p class="Table">[FD.TP] Intermediate data segment must have a length of 64 bytes</p>
+                        </td>
+                    </tr>
+                </table>
+                <p class="LinkList">&#160;</p>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="FooterWhite">
+                <table class="FooterWhite" style="border-collapse: collapse;margin-left: auto;margin-right: auto;">
+                    <col style="width: 70px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col style="width: 16px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="buttons popup-container clearfix topicToolbarProxy topicToolbarProxyFooter _Skins_HTML5TopicToolbar mc-component nocontent">
+                                    <div class="button-group-container-left">
+                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo"><a href="../../../Shared/HowToUseOnlineHelp.htm" title="Tips for using the help" alt="Tips for using the help"><img src="../../../../Resources/vImages/vBackstage/vHelpInfo.png" /></a>
+                                </p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo" style="text-align: right;"><span class="mc-variable Vector.BuildTime variable">2024-04-8T20:56:42</span>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <table style="width: 100%;border-collapse: separate;border-spacing: 3px 0px;margin-left: auto;margin-right: auto;caption-side: top;">
+                <col />
+                <col />
+                <col />
+                <col data-mc-conditions="BuildProcess.HTML5Link" />
+                <tbody>
+                    <tr>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;">
+                            <p class="vec_Footer">©&#160;Vector Informatik GmbH</p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;text-align: right;">
+                            <p class="vec_FooterBold">
+                                <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE&#160;Product Families</MadCap:conditionalText> Version <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.VectorTestUnitRunner">18</MadCap:conditionalText></p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="../../../Shared/ContactCopyrightLicense.htm" class="vec_Footer MCXref xref xrefvec_Footer">Contact/Copyright/License</a>
+                            </p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="https://www.vector.com/int/en/company/get-info/privacy-policy/" target="_blank" class="vec_Footer">Data Privacy Notice</a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

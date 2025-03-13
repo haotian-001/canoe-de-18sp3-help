@@ -1,0 +1,1389 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="CANoeDEFamily.xml" data-mc-path-to-help-system="../../../../" data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.vTESTstudio" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../Skins/Favicons/favicon-16x16.png" /><title>FlexRay CAPL Functions</title>
+        <link href="../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Resources/Stylesheets/vTableMasterPageHeader.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../Resources/Stylesheets/vStylesheet.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../Resources/Stylesheets/vTablePageTOC.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../Resources/Stylesheets/vTable.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../Resources/Stylesheets/vTableSymbol.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapGlobal.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapDom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapUtilities.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapXhr.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTextEffects.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSlideshow.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMessageBus.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMessageBus.CrossFrame.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapDefault.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMediaQueries.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAccessibility.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapHelpSystem.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAliasFile.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopicFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapFeedbackHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSkinHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.Breadcrumbs.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.MiniToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.SideMenu.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapIndex.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapGlossary.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapParser.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSearch.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapNavigateTopics.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapLms.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapELearning.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopic.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMicroContentComponent.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSearchHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopicElements.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTriPane.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/jscript" src="../../../Resources/vScripts/SyntaxHighlighting.js">
+        </script>
+        <script type="text/jscript" src="../../../Resources/vScripts/TabSwitch.js">
+        </script>
+        <script type="text/javascript" src="../../../Resources/vScripts/Vector.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../../CANoeDEFamily.htm#Topics/CAPLFunctions/FlexRay/CAPLfunctionsFlexrayOverview.htm">Open topic with navigation</a>
+        </p>
+        <div class="Body">
+            <div role="main" id="mc-main-content">
+                <p class="StructurePath"><a href="../CAPLfunctions.htm" class="StructurePath MCXref xref xrefStructurePath">CAPL Functions</a> » <span class="mc-variable System.Title variable">FlexRay CAPL Functions</span></p>
+                <h1><a name="kanchor9786"></a><span class="mc-variable System.Title variable">FlexRay CAPL Functions</span>
+                </h1>
+                <p class="MenuPath">&#160;</p>
+                <p class="ToolAvailability" data-mc-conditions="BuildProcess.ToolAvailability"><a href="../../Shared/FeatureAvailability.htm" class="red" title="Feature availabilty for your product">Valid&#160;for</a>:&#160;&#160;CANoe&#160;DE<a name="aanchor30229"></a><MadCap:concept term="SFCANoeDE" />&#160;&#160;•&#160;&#160;CANoe4SW&#160;DE<a name="aanchor30230"></a><MadCap:concept term="SFCANoe4SWDE" /></p>
+                <p class="AutoSearchFilterConcepts"><a name="aanchor30231"></a>
+                    <MadCap:concept term="SFCAPLFunctions" />
+                </p>
+                <div>
+                    <table style="margin-left: 0;margin-right: auto;width: 100%;">
+                        <col style="width: 60px;" />
+                        <col />
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <p>
+                                        <img src="../../../Resources/vImages/vFunction.png" />
+                                    </p>
+                                </td>
+                                <td>
+                                    <p class="TableSymbolHead">FlexRay</p>
+                                    <p class="Table">Only available with Option&#160;FlexRay.</p>
+                                    <p class="Table">In Option&#160;FlexRay several APIs are provided for receiving and transmitting FlexRay frames.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <hr class="Startpage" width="100%" size="0" align="center" />
+                <p class="TableCOM"><a name="Shortcuts" id="Shortcuts"></a><span class="red">ON THIS&#160;PAGE:</span>
+                </p>
+                <table style="margin-left: 0;margin-right: auto;caption-side: top;mc-table-style: url('../../../Resources/Stylesheets/vTablePageTOC.css');" class="TableStyle-vTablePageTOC" cellspacing="2">
+                    <col class="TableStyle-vTablePageTOC-Column-Column1" style="width: 50%;" />
+                    <col class="TableStyle-vTablePageTOC-Column-Column1" style="width: 50%;" />
+                    <tbody>
+                        <tr class="TableStyle-vTablePageTOC-Body-Body1">
+                            <td class="TableStyle-vTablePageTOC-BodyB-Column1-Body1">
+                                <p class="PageTOC" data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family"><a href="#BMBusStatistics" class="PageTOC">Bus Statistics</a>
+                                </p>
+                                <p class="PageTOC"><a href="#EventProcedures" class="PageTOC">Event Procedures</a>
+                                </p>
+                                <p class="PageTOC" data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family"><a href="#FlexRayISOTP" class="PageTOC">FlexRay ISO TP</a>
+                                </p>
+                                <p class="PageTOC"><a href="#GeneralFunctions" class="PageTOC">General Functions</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle-vTablePageTOC-BodyA-Column1-Body1">
+                                <p class="PageTOC"><a href="#Objects" class="PageTOC">Object</a>
+                                </p>
+                                <p class="PageTOC" data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family"><a href="#TestFeatureSet" class="PageTOC">Test Feature Set for FlexRay</a>
+                                </p>
+                                <p class="PageTOC" data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family"><a href="#FlexRayTestServiceLibrary" class="PageTOC">Test Service Library for FlexRay</a>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">
+                    <h2><a name="BMBusStatistics" id="BMBusStatistics"></a>Bus Statistics <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');" width="100%" class="TableStyle_vTable" cellspacing="0">
+                        <col style="width: 320px;" />
+                        <col />
+                        <tr valign="top">
+                            <th rowspan="1" colspan="1" bgcolor="#E5E5E5" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="TableHead">Functions</p>
+                            </th>
+                            <th bgcolor="#E5E5E5" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="TableHead">Short Description</p>
+                            </th>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionFREnableStatistics.htm" class="MCXref xref">frEnableStatistics</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Enables or disables FlexRay statistics on a specific (Form 1) or all (Form 2) FlexRay channels.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionFRGetBoundaryViolationCount.htm" class="MCXref xref">frGetBoundaryViolationCount</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Gets the total count of boundary violations of a FlexRay channel.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionFRGetBoundaryViolationRate.htm" class="MCXref xref">frGetBoundaryViolationRate</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Gets the rate of boundary violations of a FlexRay channel in frames per second [fr/s].</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionFRGetBusLoadDynamic.htm" class="MCXref xref">frGetBusLoadDynamic</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Gets the busload of the dynamic segment for data frames of a FlexRay channel in percent.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionFRGetBusLoadStatic.htm" class="MCXref xref">frGetBusLoadStatic</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Gets the static busload of a FlexRay channel in percent.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionFRGetBusLoadStaticDFNF.htm" class="MCXref xref">frGetBusLoadStaticDFNF</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Gets the static busload for dynamic and null frames of a FlexRay channel in percent.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionFRGetContentErrorCount.htm" class="MCXref xref">frGetContentErrorCount</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Gets the total count of content errors of a FlexRay channel.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionFRGetContentErrorRate.htm" class="MCXref xref">frGetContentErrorRate</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Gets the content error rate of a FlexRay channel in frames per second [fr/s].</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionFRGetFrameCount.htm" class="MCXref xref">frGetFrameCount</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Gets the total count of frames on a FlexRay channel.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionFRGetFrameErrorCount.htm" class="MCXref xref">frGetFrameErrorCount</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Gets the total count of frame errors of a FlexRay channel.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionFRGetFrameErrorRate.htm" class="MCXref xref">frGetFrameErrorRate</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Gets the frame error rate of a FlexRay channel in frames per second [fr/s].</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionFRGetFrameRate.htm" class="MCXref xref">frGetFrameRate</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Gets the frame rate of a FlexRay channel in frames per second [fr/s].</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionFRGetNullFrameCount.htm" class="MCXref xref">frGetNullFrameCount</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Gets the total count of null frames (including null frames resulting from unused slots in cyclic multiplexing) of a FlexRay channel.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionFRGetNullFrameRate.htm" class="MCXref xref">frGetNullFrameRate</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Gets the null frame rate (including null frames resulting from unused slots in cyclic multiplexing) of a FlexRay channel in frames per second [fr/s].</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionFRGetOffsetCorrection.htm" class="MCXref xref">frGetOffsetCorrection</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Gets the offset correction of a FlexRay channel.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionFRGetPOCState.htm" class="MCXref xref">frGetPOCState</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Gets the current POC state of a FlexRay channel.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionFRGetRateCorrection.htm" class="MCXref xref">frGetRateCorrection</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Gets the rate correction of a FlexRay channel.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionFRGetSyntaxErrorCount.htm" class="MCXref xref">frGetSyntaxErrorCount</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Gets the total count of syntax errors of a FlexRay channel.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionFRGetSyntaxErrorRate.htm" class="MCXref xref">frGetSyntaxErrorRate</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Gets the rate of syntax errors of a FlexRay channel in frames per second [fr/s].</p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div>
+                    <h2><a name="EventProcedures" id="EventProcedures"></a><a href="../../Shared/CAPL/General/EventProceduresOverview.htm">Event Procedures</a> <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');" width="100%" class="TableStyle_vTable" cellspacing="0">
+                        <col style="width: 270px;" />
+                        <col />
+                        <tr valign="top">
+                            <th colspan="1" rowspan="1" bgcolor="#E5E5E5" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="TableHead">Event Procedures</p>
+                            </th>
+                            <th colspan="1" rowspan="1" bgcolor="#E5E5E5" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="TableHead">Short Description</p>
+                            </th>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="EventProcedures/CAPLfunctionOnFRError.htm">on frError</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Is called in the event of a general error being detected on the FlexRay bus.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="EventProcedures/CAPLfunctionOnFRFrame.htm">on frFrame</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Is called up after a frame has been received in the specified slot and cycle.</p>
+                                <div>
+                                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                                        <col class="TableStyle-vTableSymbol-Column-Column1" style="width: 62px;" />
+                                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                                        <tbody>
+                                            <tr>
+                                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                                    <p class="Table">
+                                                        <img src="../../../Resources/vImages/vInfo.png" style="width: 48px;height: 45px;" title="Note" alt="Note" />
+                                                    </p>
+                                                </td>
+                                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                                    <p class="TableSymbolHead">Note</p>
+                                                    <p class="Table">It is recommended to use <span class="bold">on FRFrame </span>only for the reception of valid data frames.</p>
+                                                    <p class="Table">To receive Null Frames and erroneous frames, please use the <a href="EventProcedures/CAPLfunctionOnFRNnullFrame.htm">on frNullFrame</a> or <a href="EventProcedures/CAPLfunctionOnFRFrameError.htm">on frFrameError</a> event procedures, since these events will not be received anymore with <span class="bold">on frFrame</span> from <span class="bold">version 6.1</span>.</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="EventProcedures/CAPLfunctionOnFRFrameError.htm">on frFrameError</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Is called if a erroneous frame is received in the specified slot and cycle.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="EventProcedures/CAPLfunctionOnFRNnullFrame.htm">on frNullFrame</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Is called if a Null Frame is received in the specified slot and cycle.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="EventProcedures/CAPLfunctionOnFRPDU.htm">on frPDU</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Is called when a PDU with the corresponding name is received.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="EventProcedures/CAPLfunctionOnFRPocState.htm">on frPocState</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Is called whenever there is a change of state on the FlexRay Communication Controller's protocol operation state machine.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="EventProcedures/CAPLfunctionOnFRSlot.htm">on frSlot</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Is called up in each cycle after the Slot is past.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="EventProcedures/CAPLfunctionOnFRStartCycle.htm">on frStartCycle</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Can be generated by FlexRay at the beginning of each communication cycle and contains the NM vector valid for this cycle.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="EventProcedures/CAPLfunctionOnFRSymbol.htm">on frSymbol</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Is called whenever a symbol (wake-up, CAS, MTS) is received.</p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">
+                    <h2><a name="FlexRayISOTP" id="FlexRayISOTP"></a>FlexRay ISO TP CAPL Functions</h2>
+                    <p class="Table">The ISO TP node layer DLL (<span class="bold">FlexRayTPISO.dll</span>) for Vector <span class="Product">DENoe.FlexRay</span> implements the transport protocol to allow nodes simulated by <span class="Product">DENoe</span> to interact with hardware nodes attached to a FlexRay network.</p>
+                    <p>A detailed description of the ISO 10681-2 TP for FlexRay and the implemented CAPL functions can be found in the help <a href="../../../../Subsystems/SML/Subsystems/FRTPISO/Content/Topics/FRTPISO/FlexRayTPFRTPiso.htm" data-mc-conditions="BuildProcess.HTML5Link">FlexRay TP ISO</a>.</p>
+                </div>
+                <div>
+                    <h2><a name="GeneralFunctions" id="GeneralFunctions"></a>General Functions <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');" width="100%" class="TableStyle_vTable" cellspacing="0">
+                        <col style="width: 270px;" />
+                        <col />
+                        <tr valign="top">
+                            <th colspan="1" rowspan="1" bgcolor="#E5E5E5" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="TableHead">Functions</p>
+                            </th>
+                            <th colspan="1" rowspan="1" bgcolor="#E5E5E5" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="TableHead">Short Description</p>
+                            </th>
+                        </tr>
+                        <tr valign="top" data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.vTESTstudio">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionFrChannelUsesCANoeNetworkSimulator.htm">frChannelUsesCANoeNetworkSimulator</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Gets whether the given channel uses the built-in network simulator.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top" data-mc-conditions="">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionFREnableGateway.htm">frEnableGateway</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Activates a gateway.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top" data-mc-conditions="">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionFREnableNodeTx.htm">frEnableNodeTx</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Enable/disable all TX frames/PDUs of the specified node.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionFRGetConfiguration.htm">frGetConfiguration</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Copies the FlexRay protocol parameters to a FlexRay parameter object.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionFRGetFrameCRC.htm">frGetFrameCRC</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Returns the CRC of a received FlexRay frame.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top" data-mc-conditions="">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionFRGwBypassDynamic.htm">frGwBypassDynamic</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Controls the routing for the dynamic frame part.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top" data-mc-conditions="">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionFRGwBypassStatic.htm">frGwBypassStatic</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Controls the routing for static frames.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionFROutputDynFrame.htm">frOutputDynFrame</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Updates the FlexRay Communication Controller’s (CC) send buffer with the current data from the send object.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionFRResetStatistics.htm">frResetStatistics</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Resets FlexRay cluster statistics.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionFRSendSymbol.htm">frSendSymbol</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Sends an MTS symbol in the next possible symbol window if the Communication Controller is in normal mode (synchronized).</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionFRSetAutoIncrement.htm">frSetAutoIncrement</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Part of the payload of a frame will be incremented automatically on each transmission. </p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionFRSetConfiguration.htm">frSetConfiguration</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Writes the FlexRay protocol parameters from the FlexRay parameter object to the FlexRay interface’s Communication Controller.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionFRSetExtOffsetRateControl.htm">frSetExtOffsetRateControl</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Applies the external rate and offset correction values from the FlexRay parameters for the next cycle.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionFrSetKeySlot.htm">frSetKeySlot</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">This function configures one of two possible key slots that are to be sent for a FlexRay bus.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionFRSetMode.htm">frSetMode</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Initializes the FlexRay bus transceivers. </p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionFRSetPayloadLengthInByte.htm">frSetPayloadLengthInByte</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Sets the payload (data) length of the object in bytes.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top" data-mc-conditions="">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionFRSetPDuFilter.htm">frSetPduFilter</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Configures a filter for PDUs.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionFRSetPocState.htm">frSetPOCState</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Puts the FlexRay Communication Controller into the desired Protocol Operation Mode.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionFrSetSendFrame.htm">frSetSendFrame</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Configures the hardware for sending the specified message.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionFRSetSendGroup.htm">frSetSendGroup</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">All frames in the group are sent in the current cycle, or all frames are not sent until the next possible cycle.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionFRSetSendPDU.htm">frSetSendPDU</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Configures the hardware to transmit the specified PDU.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionFRTriggerOut.htm">frSetTrigger</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Activates the Trigger Output of the selected VN interface.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionFRUpdatePDU.htm">frUpdatePDU</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Updates the PDU payload in the assigned FlexRay frames.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionFRUpdateStatFrame.htm">frUpdateStatFrame</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Updates the FlexRay Communication Controller’s (CC) send buffer with the current data from the send object. </p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionMessageTimeNS.htm">messageTimeNS</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Returns the receive time of the frame or slot in nanoseconds.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionFROutput.htm">output</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Outputs the object from the program block of the analysis branch.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionResetFlexrayCC.htm">resetFlexRayCC</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Initializes the FlexRay Communication Controller (CC) and begins a new start-up phase for the cluster or a new integrations phase in the cluster.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Functions/CAPLfunctionResetFlexrayCCEX.htm">resetFlexRayCCEx</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Initializes the FlexRay Communication Controller (CC) and generates the specified wake-up pattern before reintegration in the cluster or the start-up.</p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div>
+                    <h2><a name="Objects" id="Objects"></a>Objects <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');" width="100%" class="TableStyle_vTable" cellspacing="0">
+                        <col style="width: 270px;" />
+                        <col />
+                        <tr valign="top">
+                            <th colspan="1" rowspan="1" bgcolor="#E5E5E5" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="TableHead">Objects</p>
+                            </th>
+                            <th rowspan="1" colspan="1" bgcolor="#E5E5E5" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="TableHead">Short Description</p>
+                            </th>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Objects/CAPLfunctionFRFrame.htm">frFrame</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Creates a <span class="bold">FlexRay frame object</span>.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Objects/CAPLfunctionFRConfiguration.htm">frConfiguration</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Create a <span class="bold">FlexRay parameter object</span>.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="Objects/CAPLfunctionFrPDU.htm">frPDU</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Creates a <span class="bold">FlexRay PDU object</span>.</p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">
+                    <h2><a name="TestFeatureSet" id="TestFeatureSet"></a>Test Feature Set for FlexRay <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');" width="100%" class="TableStyle_vTable" cellspacing="0">
+                        <col style="width: 270px;" />
+                        <col />
+                        <tr valign="top" data-mc-conditions="">
+                            <th colspan="1" rowspan="1" bgcolor="#DCDCDC" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="TableHead">Functions</p>
+                            </th>
+                            <th colspan="1" rowspan="1" bgcolor="#DCDCDC" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p colspan="1" rowspan="1" bgcolor="#DCDCDC" width="50%" class="TableHead">Short Description</p>
+                            </th>
+                        </tr>
+                        <tr valign="top" data-mc-conditions="">
+                            <td colspan="2" style="background-color: #EDF1F4;" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="TableHead">Waiting for Valid FlexRay Frames</p>
+                            </td>
+                        </tr>
+                        <tr valign="top" data-mc-conditions="">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="../Test/Functions/CAPLfunctionTestWaitForFrFrame.htm">testWaitForFrFrame</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Waits for the occurrence of the valid specified FlexRay frame.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top" data-mc-conditions="">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="../Test/Functions/CAPLfunctionTestGetWaitFrFrameData.htm">testGetWaitFrFrameData</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">If a valid FlexRay frame is the last event that triggers a wait instruction, the frame’s content can be called up.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top" data-mc-conditions="">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="../Test/Functions/CAPLfunctionTestJoinFrFrameEvent.htm">testJoinFrFrameEvent</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Completes the current set of "joined events" with the FlexRay frame.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top" data-mc-conditions="">
+                            <td colspan="2" style="background-color: #EDF1F4;" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="TableHead">Waiting for FlexRay Null Frame</p>
+                            </td>
+                        </tr>
+                        <tr valign="top" data-mc-conditions="">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="../Test/Functions/CAPLfunctionTestWaitForFrNullFrame.htm">testWaitForFrNullFrame</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Waits for the occurrence of the specified FlexRay Null Frame.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top" data-mc-conditions="">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="../Test/Functions/CAPLfunctionTestGetWaitFrNullFrameData.htm">testGetWaitFrNullFrameData</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">If a FlexRay Null Frame is the last event that triggers a wait instruction, the frame’s content can be called up.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top" data-mc-conditions="">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="../Test/Functions/CAPLfunctionTestJoinFrNullFrameEvent.htm">testJoinFrNullFrameEvent</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Completes the current set of "joined events" with the FlexRay Null Frame.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top" data-mc-conditions="">
+                            <td colspan="2" style="background-color: #EDF1F4;" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="TableHead">Waiting for FlexRay Start Cycle Event</p>
+                            </td>
+                        </tr>
+                        <tr valign="top" data-mc-conditions="">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="../Test/Functions/CAPLfunctionTestWaitForFrStartCycle.htm">testWaitForFrStartCycle</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Waits for the occurrence of the specified FlexRay start cycle event.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top" data-mc-conditions="">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="../Test/Functions/CAPLfunctionTestGetWaitFrStartCycleData.htm">testGetWaitFrStartCycleData</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">If a FlexRay start cycle is the last event that triggers a wait instruction, the event’s content can be called up.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top" data-mc-conditions="">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="../Test/Functions/CAPLfunctionTestJoinFrStartCycleEvent.htm">testJoinFrStartCycleEvent</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Completes the current set of "joined events" with the FlexRay start cycle event. </p>
+                            </td>
+                        </tr>
+                        <tr valign="top" data-mc-conditions="">
+                            <td colspan="2" style="background-color: #EDF1F4;" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="TableHead">Waiting for FlexRay PDU</p>
+                            </td>
+                        </tr>
+                        <tr valign="top" data-mc-conditions="">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="../Test/Functions/CAPLfunctionTestWaitForFrPDU.htm">testWaitForFrPDU</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Waits for the occurrence of the specified FlexRay PDU event.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top" data-mc-conditions="">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="../Test/Functions/CAPLfunctionTestGetWaitFrPDUData.htm">testGetWaitFrPDUData</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">If a valid FlexRay PDU is the last event that triggers a wait instruction, the PDU’s content can be called up.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top" data-mc-conditions="">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="../Test/Functions/CAPLfunctionTestJoinFrPDUEvent.htm">testJoinFrPDUEvent</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Completes the current set of "joined events" with the FlexRay PDU.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top" data-mc-conditions="">
+                            <td colspan="2" style="background-color: #EDF1F4;" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="TableHead">Waiting for FlexRay POC State Event</p>
+                            </td>
+                        </tr>
+                        <tr valign="top" data-mc-conditions="">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="../Test/Functions/CAPLfunctionTestWaitForFrPOCState.htm">testWaitForFrPOCState</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Waits for the occurrence of change of state on the FlexRay Communication Controller's protocol operation state machine.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top" data-mc-conditions="">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="../Test/Functions/CAPLfunctionTestGetWaitFrPOCStateData.htm">testGetWaitFrPOCStateData</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">If an event indicating a change of state on the FlexRay Communication Controller's protocol operation state machine is the last event that triggers a wait instruction, the event’s content can be called up.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top" data-mc-conditions="">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="../Test/Functions/CAPLfunctionTestJoinFrPOCState.htm">testJoinFrPOCState</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Completes the current set of "joined events" with the change of state event on the FlexRay Communication Controller's protocol operation state machine.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top" data-mc-conditions="">
+                            <td colspan="2" style="background-color: #EDF1F4;" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="TableHead">Waiting for FlexRay Erroneous Frame</p>
+                            </td>
+                        </tr>
+                        <tr valign="top" data-mc-conditions="">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="../Test/Functions/CAPLfunctionTestWaitForFrFrameError.htm">testWaitForFrFrameError</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Waits for the occurrence of FlexRay erroneous frame event (frame error).</p>
+                            </td>
+                        </tr>
+                        <tr valign="top" data-mc-conditions="">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="../Test/Functions/CAPLfunctionTestGetWaitFrFrameErrorData.htm">testGetWaitFrFrameErrorData</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">If a FlexRay erroneous frame is the last event that triggers a wait instruction, the event’s content can be called up.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top" data-mc-conditions="">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="../Test/Functions/CAPLfunctionTestJoinFrFrameErrorEvent.htm">testJoinFrFrameErrorEvent</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Completes the current set of "joined events" with the FlexRay erroneous frame event.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top" data-mc-conditions="">
+                            <td colspan="2" style="background-color: #EDF1F4;" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="TableHead">Waiting for FlexRay Symbol Event</p>
+                            </td>
+                        </tr>
+                        <tr valign="top" data-mc-conditions="">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="../Test/Functions/CAPLfunctionTestWaitForFrSymbol.htm">testWaitForFrSymbol</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Waits for the occurrence of a FlexRay symbol on the bus.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top" data-mc-conditions="">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="../Test/Functions/CAPLfunctionTestGetWaitFrSymbolData.htm">testGetWaitFrSymbolData</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">If a FlexRay symbol event is the last event that triggers a wait instruction, the event’s content can be called up.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top" data-mc-conditions="">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="../Test/Functions/CAPLfunctionTestJoinFrSymbolEvent.htm">testJoinFrSymbolEvent</a>
+                                </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Completes the current set of "joined events" with the FlexRay symbol event.</p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">
+                    <h2><a name="FlexRayTestServiceLibrary" id="FlexRayTestServiceLibrary"></a>Test Service Library for FlexRay <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');" width="100%" class="TableStyle_vTable" cellspacing="0">
+                        <col />
+                        <col />
+                        <tr valign="top" data-mc-conditions="">
+                            <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p width="50%" class="TableHead">Constructor Functions</p>
+                            </th>
+                            <th class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p width="50%" class="TableHead">Short Description</p>
+                            </th>
+                        </tr>
+                        <tr data-mc-conditions="">
+                            <td style="background-color: #EDF1F4;" colspan="2" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="TableHead"><a href="../../TestCommands/CheckDescriptions/CDDLC.htm">DLC</a>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr valign="top" data-mc-conditions="">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="../Test/Functions/CAPLfunctionChkCreateInconsistentDlc.htm">TestCheck::CreateInconsistentDLC, TestCheck::StartInconsistentDLC</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">The check condition is violated if the payload length of the message does not agree with the specified payload length of the database (useful for dynamic frames).</p>
+                            </td>
+                        </tr>
+                        <tr data-mc-conditions="">
+                            <td style="background-color: #EDF1F4;" colspan="2" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="TableHead"><a href="../../TestCommands/CheckDescriptions/CDCycleTime.htm">Cycle Time</a>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr valign="top" data-mc-conditions="">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="../Test/Functions/CAPLfunctionChkCreateMsgAbsCycleTimeViolation.htm">TestCheck::CreateMsgAbsCycleTimeViolation, TestCheck::StartMsgAbsCycleTimeViolation</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Checks the occurrences of cyclic messages.</p>
+                            </td>
+                        </tr>
+                        <tr valign="top" data-mc-conditions="">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="../Test/Functions/CAPLfunctionChkCreateMsgRelCycleTimeViolation.htm">TestCheck::CreateMsgRelCycleTimeViolation, TestCheck::StartMsgRelCycleTimeViolation</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Checks the occurrences of cyclic messages.</p>
+                            </td>
+                        </tr>
+                        <tr data-mc-conditions="">
+                            <td style="background-color: #EDF1F4;" colspan="2" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="TableHead"><a href="../../TestCommands/CheckDescriptions/CDOccurrenceOfMessages.htm">Occurrence of Messages</a>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr valign="top" data-mc-conditions="">
+                            <td style="background-color: #ffffff;" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="../Test/Functions/CAPLfunctionChkCreateMsgRelOccurrenceViolation.htm">TestCheck::CreateMsgRelOccurrenceViolation, TestCheck::StartMsgRelOccurrenceViolation</a>
+                                </p>
+                            </td>
+                            <td style="background-color: #ffffff;" rowspan="2" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p rowspan="2" width="50%">Checks are used to monitor the sending delay of messages which allow both cyclic and spontaneous transmission.</p>
+                            </td>
+                        </tr>
+                        <tr data-mc-conditions="">
+                            <td style="background-color: #ffffff;" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="../Test/Functions/CAPLfunctionChkCreateNodeMsgsRelOccurrenceViolation.htm">TestCheck::CreateNodeMsgsRelOccurrenceViolation, TestCheck::StartNodeMsgsRelOccurrenceViolation</a>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr data-mc-conditions="">
+                            <td style="background-color: #EDF1F4;" colspan="2" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="TableHead"><a href="../../TestCommands/CheckDescriptions/CDMessageDistance.htm">Message Distance</a>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr valign="top" data-mc-conditions="">
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="../Test/Functions/CAPLfunctionChkCreateMsgDistViolation.htm">TestCheck::CreateMsgDistViolation, TestCheck::StartMsgDistViolation</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">This check is useful for spontaneous messages where one message is a result of another message; e.g. the check is used to check the processing time of the reference message.</p>
+                            </td>
+                        </tr>
+                        <tr data-mc-conditions="">
+                            <td style="background-color: #EDF1F4;" colspan="2" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="TableHead"><a href="../../TestCommands/CheckDescriptions/CDAbsenceOfFlexRayErroneosFrames.htm">Absence of FlexRay Erroneous Frames</a>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr valign="top" data-mc-conditions="">
+                            <td style="background-color: #ffffff;" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="../Test/Functions/CAPLfunctionTestCheckCreateFlexRayFrameErrorOccurrenceCount.htm">TestCheck::CreateFlexRayFrameErrorOccurrenceCount, TestCheck::StartFlexRayFrameErrorOccurrenceCount, TestCheck::CreateNodeFlexRayFrameErrorsOccurrenceCount, TestCheck::StartNodeFlexRayFrameErrorsOccurrenceCount</a>
+                                </p>
+                            </td>
+                            <td style="background-color: #ffffff;" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Checks the absence of erroneous frames for the specified frame/slot on the bus.</p>
+                            </td>
+                        </tr>
+                        <tr data-mc-conditions="">
+                            <td style="background-color: #EDF1F4;" colspan="2" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="TableHead"><a href="../../TestCommands/CheckDescriptions/CDAbsenceOfFlexRayNullFrames.htm">Absence of FlexRay Null Frames</a>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr valign="top" data-mc-conditions="">
+                            <td style="background-color: #ffffff;" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="../Test/Functions/CAPLfunctionTestCheckCreateFlexRayNullFrameOccurrenceCount.htm">TestCheck::CreateFlexRayNullFrameOccurrenceCount, TestCheck::StartFlexRayNullFrameOccurrenceCount, TestCheck::CreateNodeFlexRayNullFramesOccurrenceCount, TestCheck::StartNodeFlexRayNullFramesOccurrenceCount</a>
+                                </p>
+                            </td>
+                            <td style="background-color: #ffffff;" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Checks the absence of Null Frames for the specified frame/slot on the bus.</p>
+                            </td>
+                        </tr>
+                        <tr data-mc-conditions="">
+                            <td style="background-color: #EDF1F4;" colspan="2" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="TableHead"><a href="../../TestCommands/CheckDescriptions/CDMessageCountObservation.htm">Message Count Observation</a>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr valign="top" data-mc-conditions="">
+                            <td style="background-color: #ffffff;" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="../Test/Functions/CAPLfunctionTestCheckCreateMsgSendCountViolation.htm">TestCheck::CreateMsgSendCountViolation, TestCheck::StartMsgSendCountViolation, TestCheck::CreateNodeMsgSendCountViolation, TestCheck::StartNodeMsgSendCountViolation</a>
+                                </p>
+                            </td>
+                            <td style="background-color: #ffffff;" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Check is used to monitor the minimum and/or maximum number for each of the defined messages within a specified cyclic time interval.</p>
+                            </td>
+                        </tr>
+                        <tr data-mc-conditions="">
+                            <td style="background-color: #EDF1F4;" colspan="2" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="TableHead"><a href="../../TestCommands/CheckDescriptions/CDMessagesKnown.htm">Messages Known</a>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr data-mc-conditions="">
+                            <td style="background-color: #ffffff;" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="../Test/Functions/CAPLfunctionChkCreateUndefinedMessageReceived.htm">TestCheck::CreateUndefinedMessageReceived, TestCheck::StartUndefinedMessageReceived</a>
+                                </p>
+                            </td>
+                            <td style="background-color: #ffffff;" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">This check listens to the bus and reports a violation, if a message was received that is not defined in any of the databases that are associated to the current bus.</p>
+                            </td>
+                        </tr>
+                        <tr data-mc-conditions="">
+                            <td style="background-color: #EDF1F4;" colspan="2" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="TableHead"><a href="../../TestCommands/CheckDescriptions/CDNodeActive.htm">Node Active</a>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr data-mc-conditions="">
+                            <td style="background-color: #ffffff;" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="../Test/Functions/CAPLfunctionChkCreateAllNodesDead.htm">TestCheck::CreateAllNodesDead, TestCheck::StartAllNodesDead</a>
+                                </p>
+                            </td>
+                            <td style="background-color: #ffffff;" rowspan="2" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p rowspan="2" width="50%">This check reports a problem, if the node has not send any of its Tx messages within a given time-interval.</p>
+                            </td>
+                        </tr>
+                        <tr data-mc-conditions="">
+                            <td style="background-color: #ffffff;" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="../Test/Functions/CAPLfunctionChkCreateNodeDead.htm">TestCheck::CreateNodeDead, TestCheck::StartNodeDead</a>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr data-mc-conditions="">
+                            <td style="background-color: #EDF1F4;" colspan="2" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="TableHead"><a href="../../TestCommands/CheckDescriptions/CDNodeInactive.htm">Node Inactive</a>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr data-mc-conditions="">
+                            <td style="background-color: #ffffff;" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="../Test/Functions/CAPLfunctionChkCreateAllNodesBabbling.htm">TestCheck::CreateAllNodesBabbling,  TestCheck::StartAllNodesBabbling</a>
+                                </p>
+                            </td>
+                            <td rowspan="2" style="background-color: #ffffff;" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p rowspan="2">This check allows the observation of the end of the activity of nodes.</p>
+                            </td>
+                        </tr>
+                        <tr data-mc-conditions="">
+                            <td style="background-color: #ffffff;" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="../Test/Functions/CAPLfunctionChkCreateNodeBabbling.htm">TestCheck::CreateNodeBabbling, TestCheck::StartNodeBabbling</a>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr data-mc-conditions="">
+                            <td style="background-color: #EDF1F4;" colspan="2" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="TableHead"><a href="../../TestCommands/CheckDescriptions/CDNoValueChange.htm">No Value Change</a>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr data-mc-conditions="">
+                            <td style="background-color: #ffffff;" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="../Test/Functions/CAPLfunctionChkCreateSignalValueChange.htm">TestCheck::CreateSignalValueChange, TestCheck::StartSignalValueChange</a>
+                                </p>
+                            </td>
+                            <td style="background-color: #ffffff;" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">The check is useful to observe the constancy of a signal value.</p>
+                            </td>
+                        </tr>
+                        <tr data-mc-conditions="">
+                            <td style="background-color: #EDF1F4;" colspan="2" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="TableHead"><a href="../../TestCommands/CheckDescriptions/CDOccurrenceCount.htm">Occurrence Count</a>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr valign="top" data-mc-conditions="">
+                            <td style="background-color: #ffffff;" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="../Test/Functions/CAPLfunctionChkCreateMsgOccurrenceCount.htm">TestCheck::CreateMsgOccurrenceCount, TestCheck::StartMsgOccurrenceCount</a>
+                                </p>
+                            </td>
+                            <td style="background-color: #ffffff;" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Checks the absence of the specified message on the bus.</p>
+                            </td>
+                        </tr>
+                        <tr data-mc-conditions="">
+                            <td style="background-color: #EDF1F4;" colspan="2" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="TableHead"><a href="../../TestCommands/CheckDescriptions/CDTimeout.htm">Timeout</a>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr data-mc-conditions="">
+                            <td style="background-color: #ffffff;" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="../Test/Functions/CAPLfunctionChkCreateTimeout.htm">TestCheck::CreateTimeout, TestCheck::StartTimeout</a>
+                                </p>
+                            </td>
+                            <td style="background-color: #ffffff;" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">This checks creates an error event if particular time is expired.</p>
+                            </td>
+                        </tr>
+                        <tr data-mc-conditions="">
+                            <td style="background-color: #EDF1F4;" colspan="2" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="TableHead"><a href="../../TestCommands/CheckDescriptions/CDValueValid.htm">Value Valid</a>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr data-mc-conditions="">
+                            <td style="background-color: #ffffff;" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="../Test/Functions/CAPLfunctionChkCreateMsgSignalValueInvalid.htm">TestCheck::CreateMsgSignalValueInvalid, TestCheck::StartMsgSignalValueInvalid</a>
+                                </p>
+                            </td>
+                            <td style="background-color: #ffffff;" rowspan="2" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p rowspan="2">This check is useful to supervise the value of signals.</p>
+                            </td>
+                        </tr>
+                        <tr data-mc-conditions="">
+                            <td style="background-color: #ffffff;" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"><a href="../Test/Functions/CAPLfunctionChkCreateMsgSignalValueRangeViolation.htm">TestCheck::CreateMsgSignalValueRangeViolation, TestCheck::StartMsgSignalValueRangeViolation</a>
+                                </p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <p class="LinkList">
+                    <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family"><a href="../../CANoeCANalyzer/FlexRay/FlexRay.htm" class="LinkList">FlexRay</a>&#160;&#160;•&#160;&#160;<a href="../../CANoeCANalyzer/FlexRay/FlexRayCAPLUsage.htm" class="LinkList">Exemplary Usage of FlexRay Functions in CAPL</a></MadCap:conditionalText>&#160;</p>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="FooterWhite">
+                <table class="FooterWhite" style="border-collapse: collapse;margin-left: auto;margin-right: auto;">
+                    <col style="width: 70px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col style="width: 16px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col data-mc-conditions="" />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="buttons popup-container clearfix topicToolbarProxy topicToolbarProxyFooter _Skins_HTML5TopicToolbar mc-component nocontent">
+                                    <div class="button-group-container-left">
+                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo"><a href="../../Shared/HowToUseOnlineHelp.htm" title="Tips for using the help" alt="Tips for using the help"><img src="../../../Resources/vImages/vBackstage/vHelpInfo.png" /></a>
+                                </p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo">•&#160;&#160;Technical&#160;References are only&#160;available&#160;in&#160;English</p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo" style="text-align: right;"><span class="mc-variable Vector.BuildTime variable">2024-04-8T20:56:42</span>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <table style="width: 100%;border-collapse: separate;border-spacing: 3px 0px;margin-left: auto;margin-right: auto;caption-side: top;">
+                <col />
+                <col />
+                <col />
+                <col data-mc-conditions="BuildProcess.HTML5Link" />
+                <tbody>
+                    <tr>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;">
+                            <p class="vec_Footer">©&#160;Vector Informatik GmbH</p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;text-align: right;">
+                            <p class="vec_FooterBold">
+                                <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE&#160;Product Families</MadCap:conditionalText> Version <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.VectorTestUnitRunner">18</MadCap:conditionalText></p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="../../Shared/ContactCopyrightLicense.htm" class="vec_Footer MCXref xref xrefvec_Footer">Contact/Copyright/License</a>
+                            </p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="https://www.vector.com/int/en/company/get-info/privacy-policy/" target="_blank" class="vec_Footer">Data Privacy Notice</a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

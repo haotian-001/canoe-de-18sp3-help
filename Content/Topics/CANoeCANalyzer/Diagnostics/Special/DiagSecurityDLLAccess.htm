@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="CANoeDEFamily.xml" data-mc-path-to-help-system="../../../../../" data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../Skins/Favicons/favicon-16x16.png" /><title>Seed &amp; Key DLL / Security Access</title>
+        <link href="../../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Resources/Stylesheets/vTableMasterPageHeader.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../../Resources/Stylesheets/vStylesheet.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../../Resources/Stylesheets/vTableSymbol.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapGlobal.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapDom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapUtilities.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapXhr.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTextEffects.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSlideshow.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMessageBus.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMessageBus.CrossFrame.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapDefault.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMediaQueries.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapAccessibility.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapHelpSystem.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapAliasFile.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopicFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapFeedbackHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSkinHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.Breadcrumbs.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.MiniToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.SideMenu.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapIndex.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapGlossary.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapParser.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSearch.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapNavigateTopics.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapLms.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapELearning.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopic.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMicroContentComponent.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSearchHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopicElements.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTriPane.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/jscript" src="../../../../Resources/vScripts/SyntaxHighlighting.js">
+        </script>
+        <script type="text/jscript" src="../../../../Resources/vScripts/TabSwitch.js">
+        </script>
+        <script type="text/javascript" src="../../../../Resources/vScripts/Vector.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../../../CANoeDEFamily.htm#Topics/CANoeCANalyzer/Diagnostics/Special/DiagSecurityDLLAccess.htm">Open topic with navigation</a>
+        </p>
+        <div class="Body">
+            <div role="main" id="mc-main-content">
+                <p class="StructurePath"><a href="../DiagnosticsConcept.htm" class="StructurePath">Diagnostics with your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText></a> » <a href="../DiagnosticsFeatures.htm" class="StructurePath">Functional Overview</a> » <a href="../DiagnosticsFeatures.htm#Special" class="StructurePath">Special</a> » <span class="mc-variable System.Title variable">Seed &amp; Key DLL / Security Access</span></p>
+                <h1><span class="mc-variable System.Title variable">Seed &amp; Key DLL / Security Access</span>
+                </h1>
+                <p class="MenuPath">&#160;</p>
+                <p class="ToolAvailability" data-mc-conditions="BuildProcess.ToolAvailability"><a href="../../../Shared/FeatureAvailability.htm" class="red" title="Feature availabilty for your product">Valid&#160;for</a>:&#160;&#160;CANoe&#160;DE<a name="aanchor7404"></a><MadCap:concept term="SFCANoeDE" /></p>
+                <p class="AutoSearchFilterConcepts"><a name="aanchor7405"></a>
+                    <MadCap:concept term="SFCore" />
+                </p>
+                <p class="IndexConcept"><a name="kanchor2299"></a>
+                </p>
+                <div>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                    <p class="Table">
+                                        <img src="../../../../Resources/vImages/vInfo.png" style="width: 48px;height: 45px;" title="Note" alt="Note" />
+                                    </p>
+                                </td>
+                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                    <p class="TableSymbolHead">Note</p>
+                                    <p class="Table">Starting with <span class="Product">CANoe</span> <span class="bold">7.1</span> or <span class="Product">CANalyzer</span> <span class="bold">8.0</span> it is possible to use a Seed &amp; Key DLL without <span class="bold">GenSAKey.DLL</span>.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>The <a href="../../../CAPLFunctions/Diagnostics/Functions/CAPLfunctionDiagGenerateKeyFromSeed.htm" class="bold">DiagGenerateKeyFromSeed</a> and other functions encapsulate the concrete implementation of the key algorithm in the provider-dependent <span class="bold">Seed &amp; Key DLL</span>. The <span class="bold">Seed &amp; Key DLL</span> must be configured in the diagnostic configuration dialog (<span class="bold">Diagnostics/ISO TP Configuration|Diagnostic Description Settings|Diagnostic Layer</span>) for each diagnostic description that shall be used with <span class="bold">DiagGenerateKeyFromSeed</span>.</p>
+                <div>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                    <p class="Table">
+                                        <img src="../../../../Resources/vImages/vInfo.png" style="width: 48px;height: 45px;" title="Note" alt="Note" />
+                                    </p>
+                                </td>
+                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                    <p class="TableSymbolHead">Note</p>
+                                    <p class="Table">The target has to be selected before with the <span class="bold">DiagSetTarget</span> function.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>The algorithm implemented in the DLL may be complex, or it may need to communicate with other network entities. Therefore it is possible that a computation needs more than a fraction of a milli-second to complete. In this case, calling <a href="../../../CAPLFunctions/Diagnostics/Functions/CAPLfunctionDiagGenerateKeyFromSeed.htm">DiagGenerateKeyFromSeed</a> would stop the execution of the realtime measurement process, possibly causing problems like event loss and timeouts.</p>
+                <p>Therefore it is recommended to use the following functions:</p>
+                <ul>
+                    <li data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">In a test module, <a href="../../../CAPLFunctions/Test/Functions/CAPLfunctionTestWaitForGenerateKeyFromSeed.htm">TestWaitForGenerateKeyFromSeed</a> will perform the same functionality, but allows waiting for the result.</li>
+                    <li>In simulation nodes, e.g. ECU simulations or event-controlled testers, using <a href="../../../CAPLFunctions/Diagnostics/Functions/CAPLfunctionDiagStartGenerateKeyFromSeed.htm">DiagStartGenerateKeyFromSeed</a> and <a href="../../../CAPLFunctions/Diagnostics/Functions/CAPLfunctionDiagGenerateKeyResult.htm">_Diag_GenerateKeyResult</a> will prevent realtime problems by performing the calculation in the background.</li>
+                </ul>
+                <p>In addition, your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> will rely on the algorithm in the Seed &amp; Key DLL to return eventually. Therefore it must be made sure that it implements timeouts etc. to detect a situation where the key cannot be computed within a sensible amount of time, e.g. several seconds.</p>
+                <p>As an alternative the DLL can be configured via the <a href="../../../COMInterface/COMInterface.htm" class="MCXref xref">COM Interface</a> (<a href="../../../COMInterface/Objects/COMObjectDiagDescription.htm#BMSeedNKeyDLL">SeedNKeyDLL</a> property).</p>
+                <p>In CAPL you can use <span class="bold">DiagGenerateKeyFromSeed</span> to generate a key. The return value is either <span class="bold">0</span> (success) or otherwise an <span class="bold">error code</span>. For further error analysis the <span class="bold">_Diag_GetError (char str[])</span> callback function is supported with which an additional textual description of the error can be output.</p>
+                <div>
+                    <div data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">
+                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                            <col class="TableStyle-vTableSymbol-Column-Column1" />
+                            <col class="TableStyle-vTableSymbol-Column-Column2" />
+                            <tbody>
+                                <tr>
+                                    <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                        <p class="Table">
+                                            <img src="../../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                        <p class="TableSymbolHead">Example</p>
+                                        <p class="Table">This example shows the schematic usage of the <span class="bold">DiagGenerateKeyFromSeed</span> and the callback function in a CAPL test module.</p>
+                                        <p class="TableSourceCode">variables<br />{<br />&#160;&#160;...<br />&#160;&#160;<span class="CodeComment">//actual size of Seed &amp; Key Arrays depends on ECU</span><br />&#160;&#160;byte gSeedArray[2];<br />&#160;&#160;int &#160;gSeedArraySize &#160;&#160;= 2;<br />&#160;&#160;int &#160;gSecurityLevel &#160;&#160;= 0x20;<br />&#160;&#160;char gVariant[200] &#160;&#160;&#160;= "Variant1";<br />&#160;&#160;char gOption[200] &#160;&#160;&#160;&#160;= "option";<br />&#160;&#160;byte gKeyArray[255];<br />&#160;&#160;int &#160;gMaxKeyArraySize = 255;<br />&#160;&#160;dword gActualSize = 0;<br />&#160;&#160;char gDebugBuffer[255];<br /><br />&#160;&#160;diagRequest SecurityAccess::SecuritySeed::Request gSeedReq;<br />&#160;&#160;diagResponse SecurityAccess::SecuritySeed::Request gSeedResp;<br />&#160;&#160;diagRequest SecurityAccess::SecurityKey::Send gKeyReq;<br />&#160;&#160;...<br />}<br /><br /><span class="CodeComment">//Unlock ECU by calling customer specific SeedKey DLL (e.g. in a CAPL test module)</span><br />{<br />&#160;&#160;...<br />&#160;&#160;<span class="CodeComment">//Request seed from ECU</span><br />&#160;&#160;DiagSendRequest(gSeedReq);<br /><br />&#160;&#160;<span class="CodeComment">//Wait for response and write seed from response parameter to array</span><br />&#160;&#160;TestWaitForDiagResponse(gSeedReq, 1000);<br />&#160;&#160;DiagGetLastResponse(gSeedReq, gSeedResp);<br />&#160;&#160;DiagGetParameterRaw(gSeedResp, "Seed", gSeedArray, elcount(SeedArray));<br /><br />&#160;&#160;<span class="CodeComment">//Calculate key</span><br />&#160;&#160;DiagGenerateKeyFromSeed (gSeedArray, gSeedArraySize, gSecurityLevel, gVariant, gOption, gKeyArray, gMaxKeyArraySize, gActualSize);<br /><br />&#160;&#160;<span class="CodeComment">//Write result to diagnostic request</span><br />&#160;&#160;DiagSetParameterRaw(gKeyReq, "Key", gKeyArray, gActualSize);<br /><br />&#160;&#160;<span class="CodeComment">//Send Key to unlock ECU</span><br />&#160;&#160;TestWaitForDiagRequestSent(gKeyReq);<br />&#160;&#160;...<br />}<br /><br /><span class="CodeComment">//Callback function for error handling (optional)</span><br />_Diag_GetError (char buffer[])<br />{<br />&#160;&#160;<span class="CodeComment">//called if error in DiagGenerateKeyFromSeed occurs</span><br />&#160;&#160;snprintf(gDebugBuffer,elcount(gDebugBuffer),"%s", buffer);<br />&#160;&#160;write("CALLBACK %s", gDebugBuffer);<br />}</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                    <p class="Table">
+                                        <img src="../../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                    </p>
+                                </td>
+                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                    <p class="TableSymbolHead">Example</p>
+                                    <p>The Seed &amp; Key DLL can be accessed like an attribute:</p>
+                                    <p class="TableSourceCode">Module Module1<br />&#160;&#160;Sub Main()<br />&#160;&#160;&#160;&#160;Dim gCanoeApp As CANoe.Application<br />&#160;&#160;&#160;&#160;Dim diagDescriptions As CANoe.DiagDescriptions<br />&#160;&#160;&#160;&#160;gCanoeApp = New CANoe.Application<br />&#160;&#160;&#160;&#160;diagDescriptions = gCanoeApp.Configuration.GeneralSetup.DiagnosticsSetup.DiagDescriptions<br />&#160;&#160;&#160;&#160;diagDescriptions.Item(2).SeednKeyDLL = name<br />&#160;&#160;End Sub<br />End Module</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <h2 class="SectionSub">Security Access</h2>
+                    <p>In order to execute protected diagnostic functions in a control unit, the tester requires a key. <br />For this, the tester (your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText>) first requests the seed from the ECU. Then, the key for the chosen status is calculated from this seed using the Seed &amp; Key DLL configured for the current diagnostic ECU and sent to the ECU. If the key matches the key calculated there, the ECU allows the execution of the protected function.</p>
+                    <p>The request of the seed or key can be executed with the <span class="bold"><a href="../Basics/DiagnosticSessionControl.htm">Diagnostic Session Control</a></span> as well as with CAPL.</p>
+                    <div>
+                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                            <col class="TableStyle-vTableSymbol-Column-Column1" />
+                            <col class="TableStyle-vTableSymbol-Column-Column2" />
+                            <tbody>
+                                <tr>
+                                    <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                        <p class="Table">
+                                            <img src="../../../../Resources/vImages/vStep.png" style="width: 48px;height: 45px;" title="Procedure" alt="Procedure" />
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                        <p class="TableSymbolHead">Key calculation</p>
+                                        <p>The key is usually calculated in the tester following this scheme:</p>
+                                        <div class="Procedure">
+                                            <ol>
+                                                <li value="1">Request seed from control unit via diagnostic request</li>
+                                                <li value="2">Calculate key (<span class="bold">ioKeyArray</span>) based on the seed received in step <span class="bold">1</span> (<span class="bold">iSeedArray</span>).</li>
+                                                <p>For this, it is necessary to specify the variant (<span class="bold">iVariant</span>) of the control unit and the security level (<span class="bold">iSecurityLevel</span>) for which a key is to be generated. The name of the manufacturer-dependent SeedKey-DLL to be used for the calculation can be configured in the diagnostic configuration dialog.</p>
+                                            </ol>
+                                            <div class="Indent">
+                                                <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                                                    <col class="TableStyle-vTableSymbol-Column-Column1" />
+                                                    <col class="TableStyle-vTableSymbol-Column-Column2" />
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                                                <p class="Table">
+                                                                    <img src="../../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                                                <p class="TableSymbolHead">Example</p>
+                                                                <p class="Table">The following API shows an example of a possible implementation of the function that calculates the key. The API differs depending on the OEM. <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">Examples for the use of other APIs can be found in the <a href="../../../SampConf/CAN/CANoe/Diagnostics/UDSSystemCN.htm">UDS Diagnostic System Configuration</a>.</MadCap:conditionalText></p>
+                                                                <p class="TableSourceCode">KEYGENALGO_API VKeyGenResultEx GenerateKeyEx(const unsigned char*  iSeedArray, unsigned int          iSeedArraySize, const unsigned int    iSecurityLevel, const char*           iVariant, unsigned char* ioKeyArray, unsigned int iKeyArraySize, unsigned int&amp; oSize)</p>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <ol start="3">
+                                                <li value="3">Set calculated key from step <span class="bold">2</span> in the corresponding diagnostic request and send to the control unit.</li>
+                                            </ol>
+                                            <p>In many cases, the <span class="bold">ioKeyArray</span> key that is returned by the function as a raw byte stream can be set directly in the corresponding parameter of the diagnostic request with the <span class="bold">DiagSetParameterRaw</span> function.</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">
+                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                            <col class="TableStyle-vTableSymbol-Column-Column1" />
+                            <col class="TableStyle-vTableSymbol-Column-Column2" />
+                            <tbody>
+                                <tr>
+                                    <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                        <p class="Table">
+                                            <img src="../../../../Resources/vImages/vCrossRef.png" style="width: 48px;height: 45px;" alt="Cross Reference" title="Cross Reference" />
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                        <p class="TableSymbolHead">Cross&#160;Reference</p>
+                                        <p class="Table">Further information about usage of Seed &amp; Key DLLs with <a href="../../../../../Subsystems/DiVa/Content/Topics/Option CANoe.DiVa/startpageOptionCANoeDiVa.htm" data-mc-conditions="BuildProcess.HTML5Link">Option DiVa</a> you find in the corresponding help, if you have installed the option.</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <p>This DLL is used in your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> to calculate the <span class="bold">key</span> from a <span class="bold">seed</span> in the following cases:</p>
+                        <ul>
+                            <li>When unlocking the ECU using the <a href="../Basics/DiagnosticSessionControl.htm">Diagnostic Session Control</a>.</li>
+                            <li>When unlocking the ECU using the corresponding services from the <a href="../../../Externals/DiagConsole/Welcome_diagnosticconsole.htm">Diagnostic Console</a>.<br />(The key for a subsequent Security Access request from the Diagnostic Console is computed automatically when a seed is received).</li>
+                            <li>In the CAPL function<MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">s</MadCap:conditionalText><a href="../../../CAPLFunctions/Diagnostics/Functions/CAPLfunctionDiagGenerateKeyFromSeed.htm">DiagGenerateKeyFromSeed</a><MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">, <a href="../../../CAPLFunctions/Test/Functions/CAPLfunctionTestWaitForGenerateKeyFromSeed.htm">TestWaitForGenerateKeyFromSeed</a> and <a href="../../../CAPLFunctions/Test/Functions/CAPLfunctionTestWaitForUnlockEcu.htm">TestWaitForUnlockEcu</a></MadCap:conditionalText>.</li>
+                            <li data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">In the XML test pattern Diagnostics Unlock ECU.</li>
+                            <li data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">In the VDS methods <span class="bold"><a href="../../../../../Subsystems/VDSLibrary/Content/html/f96735f8-af45-4e85-a1fe-22cf04a6b398.htm" data-mc-conditions="BuildProcess.HTML5Link">Ecu.Unlock</a></span>, <span class="bold"><a href="../../../../../Subsystems/VDSLibrary/Content/html/19ce527b-d5bf-020c-bd7b-4f809586dbf9.htm" data-mc-conditions="BuildProcess.HTML5Link">Application.GenerateSecurityKey</a></span>.</li>
+                        </ul>
+                        <p>In these cases the API of the DLL is searched for the following functions. The first one found is called:</p>
+                        <ul>
+                            <li>KWP2000_ComputeKeyFromSeed (deprecated)</li>
+                            <li>GenerateKeyExOpt</li>
+                            <li>GenerateKeyEx</li>
+                            <li>GenerateKey (deprecated)</li>
+                            <li>ASAP1A_CCP_ComputeKeyFromSeed (deprecated)</li>
+                        </ul>
+                        <div data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">
+                            <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                                <col class="TableStyle-vTableSymbol-Column-Column1" />
+                                <col class="TableStyle-vTableSymbol-Column-Column2" />
+                                <tbody>
+                                    <tr>
+                                        <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                            <p class="Table">
+                                                <img src="../../../../Resources/vImages/vCrossRef.png" style="width: 48px;height: 45px;" alt="Cross Reference" title="Cross Reference" />
+                                            </p>
+                                        </td>
+                                        <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                            <p class="TableSymbolHead">Cross&#160;Reference</p>
+                                            <p class="Table">You can find example source code for the both alternatives GenerateKeyExOpt and GenerateKeyEx in the following folder: <a href="javascript:startCANoeLauncher('&quot;SAMPLES:\\CAN\\Diagnostics\\UDSSystem\\SecurityAccess\\Sources&quot;')" class="ExecuteLink">Open Folder</a></p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p> This CAPL function searches the API of the DLL for the above functions and calls the first one found.</p>
+                    </div>
+                </div>
+                <p class="LinkList"><a href="../DiagISOTPconfig/DiagSettings/DiagDescDiagLayer.htm" class="LinkList MCXref xref xrefLinkList">Diagnostic Layer</a>&#160;&#160;•&#160;&#160;<a href="../../../Externals/DiagConsole/Welcome_diagnosticconsole.htm" class="LinkList">Diagnostic Console</a>&#160;&#160;•&#160;&#160;<a href="../Basics/DiagnosticSessionControl.htm" class="LinkList MCXref xref xrefLinkList">Diagnostic Session Control (Window)</a></p>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="FooterWhite">
+                <table class="FooterWhite" style="border-collapse: collapse;margin-left: auto;margin-right: auto;">
+                    <col style="width: 70px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col style="width: 16px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="buttons popup-container clearfix topicToolbarProxy topicToolbarProxyFooter _Skins_HTML5TopicToolbar mc-component nocontent">
+                                    <div class="button-group-container-left">
+                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo"><a href="../../../Shared/HowToUseOnlineHelp.htm" title="Tips for using the help" alt="Tips for using the help"><img src="../../../../Resources/vImages/vBackstage/vHelpInfo.png" /></a>
+                                </p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo" style="text-align: right;"><span class="mc-variable Vector.BuildTime variable">2024-04-8T20:56:42</span>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <table style="width: 100%;border-collapse: separate;border-spacing: 3px 0px;margin-left: auto;margin-right: auto;caption-side: top;">
+                <col />
+                <col />
+                <col />
+                <col data-mc-conditions="BuildProcess.HTML5Link" />
+                <tbody>
+                    <tr>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;">
+                            <p class="vec_Footer">©&#160;Vector Informatik GmbH</p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;text-align: right;">
+                            <p class="vec_FooterBold">
+                                <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE&#160;Product Families</MadCap:conditionalText> Version <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.VectorTestUnitRunner">18</MadCap:conditionalText></p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="../../../Shared/ContactCopyrightLicense.htm" class="vec_Footer MCXref xref xrefvec_Footer">Contact/Copyright/License</a>
+                            </p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="https://www.vector.com/int/en/company/get-info/privacy-policy/" target="_blank" class="vec_Footer">Data Privacy Notice</a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

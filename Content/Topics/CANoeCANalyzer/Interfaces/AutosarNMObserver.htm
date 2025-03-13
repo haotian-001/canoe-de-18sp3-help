@@ -1,0 +1,1663 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="" data-mc-search-type="Stem" data-mc-help-system-file-name="CANoeDEFamily.xml" data-mc-path-to-help-system="../../../../" data-mc-toc-path="Libraries and OEM Add-Ons|Standard Libraries" data-mc-conditions="Targets.CANoe-DE-Family" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../Skins/Favicons/favicon-16x16.png" /><title>AUTOSAR NM Observer</title>
+        <link href="../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Resources/Stylesheets/vTableMasterPageHeader.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../Resources/Stylesheets/vStylesheet.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../Resources/Stylesheets/vTable.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../Resources/Stylesheets/vTableSymbol.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapGlobal.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapDom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapUtilities.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapXhr.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTextEffects.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSlideshow.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMessageBus.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMessageBus.CrossFrame.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapDefault.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMediaQueries.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAccessibility.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapHelpSystem.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAliasFile.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopicFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapFeedbackHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSkinHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.Breadcrumbs.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.MiniToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.SideMenu.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapIndex.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapGlossary.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapParser.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSearch.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapNavigateTopics.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapLms.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapELearning.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopic.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMicroContentComponent.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSearchHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopicElements.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTriPane.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/jscript" src="../../../Resources/vScripts/SyntaxHighlighting.js">
+        </script>
+        <script type="text/jscript" src="../../../Resources/vScripts/TabSwitch.js">
+        </script>
+        <script type="text/javascript" src="../../../Resources/vScripts/Vector.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../../CANoeDEFamily.htm#Topics/CANoeCANalyzer/Interfaces/AutosarNMObserver.htm">Open topic with navigation</a>
+        </p>
+        <div class="Body">
+            <div role="main" id="mc-main-content">
+                <div>
+                    <p class="AutoSearchFilterConcepts"><a name="aanchor6751"></a>
+                        <MadCap:concept term="SFInterfaces" />
+                    </p>
+                    <p class="IndexConcept"><a name="kanchor2046"></a>
+                    </p>
+                    <p class="StructurePath"><a href="../CANoeDEFamily.htm" class="StructurePath" data-mc-conditions="Targets.CANoe-DE-Family"><img src="../../../Resources/vImages/vToolIcons/CANoeDEFamily_Icon16_15x15.png" alt="" style="width: 15;height: 15;" />&#160;CANoe&#160;DE&#160;Product&#160;Families</a> » … » <span class="mc-variable System.Title variable">AUTOSAR NM Observer</span></p>
+                    <h1><span class="mc-variable System.Title variable">AUTOSAR NM Observer</span>
+                    </h1>
+                    <p class="MenuPath">&#160;</p>
+                    <p class="ToolAvailability" data-mc-conditions="BuildProcess.ToolAvailability"><a href="../../Shared/FeatureAvailability.htm" class="red" title="Feature availabilty for your product">Valid&#160;for</a>:&#160;&#160;CANoe&#160;DE<a name="aanchor6752"></a><MadCap:concept term="SFCANoeDE" />&#160;&#160;•&#160;&#160;CANoe4SW&#160;DE<a name="aanchor6753"></a><MadCap:concept term="SFCANoe4SWDE" />x</p>
+                </div>
+                <div>
+                    <h2 class="NavigationS">Introduction</h2>
+                    <p>The AUTOSAR NM Observer enables you to perform an analysis (online and offline) of the protocol behavior of control units with respect to the AUTOSAR <a href="../SimulationStimulation/NetworkManagement.htm">Network Management</a> (NM) on CAN buses. This allows you to detect incorrect behavior at an early stage.</p>
+                    <p>You can activate and configure the AUTOSAR NM Observer using the <a href="../Ribbon/StimulationSimulation/NMConfiguration.htm" class="bold">NM Configuration</a> dialog.</p>
+                </div>
+                <div>
+                    <h2 class="NavigationS">Method</h2>
+                    <div>
+                        <h2 class="GroupBox">Overview</h2>
+                        <p>The AUTOSAR NM Observer observes the bus traffic (NM messages and application messages) and attempts to determine the current state of the control units from these observed messages. This determined state is written in <a href="../../Shared/SystemVariables/SysVar.htm">system variables</a>. You can use the <a href="../Windows/StateTracker/StateTracker.htm">State Tracker</a> to visualize the corresponding states.</p>
+                        <p>For certain events, <a href="#StateMessages">status messages</a> are generated (e.g., if an NM message is missing) and displayed in the <a href="../Windows/Trace/TraceWindow.htm">Trace Window</a>.</p>
+                        <p>The system variables of the Observer are in the <span class="bold">AUTOSAR_NM</span> namespace. This namespace must not be used for your own system variables. When the Observer is activated, fixed system variables (per CAN network) that reflect the observed state are created automatically.<br />After the configuration is saved, the system variables are displayed in the <a href="../../Shared/SystemVariables/SystemVariablesConfiguration.htm" class="bold">System Variables Configuration</a> dialog.</p>
+                        <p>The following <span class="bold">instances and their states</span> are observed:</p>
+                        <div>
+                            <p><a targets="TOGNetworkBus" href="javascript:void(0)" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="TOGNetworkBus"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Network/Bus</a>
+                            </p>
+                            <div style="display: none;" data-mc-target-name="TOGNetworkBus">
+                                <table style="caption-side: top;margin-left: 0;margin-right: auto;width: 100%;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                                    <col style="width: 250px;" />
+                                    <col />
+                                    <thead>
+                                        <tr>
+                                            <th colspan="2" class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                                <p class="TableHead">System Variables</p>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td colspan="2" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                <p class="TableBold">NM Mode</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                <p class="Table">State designation</p>
+                                            </th>
+                                            <th class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                <p class="Table">Explanation</p>
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                <p class="Table">Requested</p>
+                                            </td>
+                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                <p class="Table">	At least one node sends NM messages that request the bus.</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                <p class="Table">Prepare Sleep</p>
+                                            </td>
+                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                <p class="Table">	No node requests the bus; transition phase to Sleep</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                <p class="Table">Sleep</p>
+                                            </td>
+                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                <p class="Table">	No node requests the bus</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                <p class="TableBold">Activity</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                <p class="Table">State designation</p>
+                                            </th>
+                                            <th class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                <p class="Table">Explanation</p>
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                <p class="Table">Active</p>
+                                            </td>
+                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                <p class="Table">Valid message are being sent</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                <p class="Table">Inactive</p>
+                                            </td>
+                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                <p class="Table">Bus contains no messages</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                <p class="Table">Wake Up</p>
+                                            </td>
+                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                <p class="Table">Only Error Frames and no valid messages are being sent</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                <p colspan="2" class="TableBold">CarWakeup</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                <p class="Table">State designation</p>
+                                            </th>
+                                            <th class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                <p class="Table">Explanation</p>
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                <p class="Table">Active</p>
+                                            </td>
+                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                <p class="Table">An NM message with Car Wakeup bit was sent</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                <p class="Table">Inactive</p>
+                                            </td>
+                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                <p class="Table">Bus contains no NM messages with Car Wakeup bit</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                <p colspan="2" class="TableBold">Requesting nodes</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                <p>State designation</p>
+                                            </th>
+                                            <th class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                <p>Explanation</p>
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                                <p class="Table">NMRequestNodeIDList</p>
+                                            </td>
+                                            <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                                <p class="TableBeforeInfoblock">This system variable contains a string in which the NM addresses of all nodes that request the bus are listed. Only the nodes monitored by the NM Observer are displayed.</p>
+                                                <div>
+                                                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                                                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                                                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                                                    <p class="Table">
+                                                                        <img src="../../../Resources/vImages/vInfo.png" style="width: 48px;height: 45px;" title="Note" alt="Note" />
+                                                                    </p>
+                                                                </td>
+                                                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                                                    <p class="TableSymbolHead">Note</p>
+                                                                    <p class="Table">The State Tracker shows only the first ID in the string. The whole string is visible in the <a href="../Windows/Data/DataWindow.htm">Data Window</a> or <a href="../Windows/Trace/TraceWindow.htm">Trace Window</a>.</p>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div>
+                            <p><a targets="TOGPartialNetwork" href="javascript:void(0)" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="TOGPartialNetwork"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Partial network</a>
+                            </p>
+                            <div style="display: none;" data-mc-target-name="TOGPartialNetwork">
+                                <table style="caption-side: top;margin-left: 0;margin-right: auto;width: 100%;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                                    <col style="width: 250px;" />
+                                    <col />
+                                    <tbody>
+                                        <tr>
+                                            <th colspan="2" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                <p colspan="2" class="TableHead">System Variables</p>
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                <p colspan="2" class="TableBold">NM Mode</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                <p class="Table">State designation</p>
+                                            </th>
+                                            <th class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                <p class="Table">Explanation</p>
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                <p class="Table">Requested</p>
+                                            </td>
+                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                <p class="Table">	At least one node sends NM messages that request the partial network.</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                <p class="Table">Prepare Sleep</p>
+                                            </td>
+                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                <p class="Table">No node requests the partial network; transition phase to Sleep</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                <p class="Table">Sleep</p>
+                                            </td>
+                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                <p class="Table">	No node requests the partial network</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                <p colspan="2" class="TableBold">Requesting nodes</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                <p>State designation</p>
+                                            </th>
+                                            <th class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                <p>Explanation</p>
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                                <p class="Table"> NMRequestNodeIDList</p>
+                                            </td>
+                                            <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                                <p class="TableBeforeInfoblock">This system variable contains a string in which the NM addresses of all nodes that request the partial network are listed. Only the nodes monitored by the NM Observer are displayed.</p>
+                                                <div>
+                                                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                                                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                                                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                                                    <p class="Table">
+                                                                        <img src="../../../Resources/vImages/vInfo.png" style="width: 48px;height: 45px;" title="Note" alt="Note" />
+                                                                    </p>
+                                                                </td>
+                                                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                                                    <p class="TableSymbolHead">Note</p>
+                                                                    <p class="Table">The State Tracker shows only the first ID in the string. The whole string is visible in the <a href="../Windows/Data/DataWindow.htm">Data Window</a> or <a href="../Windows/Trace/TraceWindow.htm">Trace Window</a>.</p>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div>
+                            <p><a targets="TOGNode" href="javascript:void(0)" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="TOGNode"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Node</a>
+                            </p>
+                            <div style="display: none;" data-mc-target-name="TOGNode">
+                                <table style="caption-side: top;margin-left: 0;margin-right: auto;width: 100%;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                                    <col style="width: 250px;" />
+                                    <col />
+                                    <tbody>
+                                        <tr>
+                                            <th colspan="2" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                <p colspan="2" class="TableHead">System Variables</p>
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                <p colspan="2" class="TableBold">NM State</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                <p class="Table">State designation</p>
+                                            </th>
+                                            <th class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                <p class="Table">Explanation</p>
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                <p class="Table">Bus Sleep</p>
+                                            </td>
+                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                <p class="Table">No node requests the bus</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                <p class="Table">Prepare Bus Sleep</p>
+                                            </td>
+                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                <p class="Table">No node requests the bus; transition phase to Sleep</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                <p class="Table">Ready Sleep</p>
+                                            </td>
+                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                <p class="Table">Node no longer requests the bus but is prevented from going to sleep by another node</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                <p class="Table">Normal Operation</p>
+                                            </td>
+                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                <p class="Table">Node requests the bus</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                <p class="Table">Repeat Message</p>
+                                            </td>
+                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                <p class="Table">	Transition phase to Normal Operation or Ready Sleep</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                <p class="Table">Passive Mode</p>
+                                            </td>
+                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                <p class="Table">Node is in passive mode and does not send NM messages</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                <p class="Table">Normal Operation / Ready Sleep</p>
+                                            </td>
+                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                <p class="Table">Node is either in Normal Operation or Ready Sleep state (when busload reduction is activated, the Observer is unable in certain cases to differentiate between these two states)</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                <p colspan="2" class="TableBold">RequestState</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                <p class="Table">State designation</p>
+                                            </th>
+                                            <th class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                <p class="Table">Explanation</p>
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                <p class="Table">Requested</p>
+                                            </td>
+                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                <p class="Table">Node requests the bus</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                <p class="Table">Released</p>
+                                            </td>
+                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                <p class="Table">Node does not request the bus</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                <p colspan="2" class="TableBold">Activity</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                <p class="Table">State designation</p>
+                                            </th>
+                                            <th class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                <p class="Table">Explanation</p>
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                <p class="Table">Active</p>
+                                            </td>
+                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                <p class="Table">Node sends application messages</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                                <p class="Table">Inactive</p>
+                                            </td>
+                                            <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                                <p class="Table">Node sends no application messages</p>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <p>A partial network n corresponds to bit position (n mod 8) in byte (n div 8) of the partial network request information.</p>
+                    </div>
+                    <div>
+                        <h2 class="GroupBox">Detailed Method of Functioning</h2>
+                        <p>The AUTOSAR NM protocol defines a state machine, including the conditions for the state transitions. The manner in which NM messages are sent is also dependent on the state. The AUTOSAR NM&#160;Observer monitors the arrival of these messages with timers and determines based on their arrival or absence if the current state is still valid or if a transition to another state is necessary. The timers and state machines used by the Observer are described below.</p>
+                    </div>
+                    <div>
+                        <h2 class="GroupBox">Timers</h2>
+                        <p>The values used for timers result to a large extent from the AUTOSAR NM protocol. However, specific time periods are also used for the Observer. Some of these specific values serve exclusively for visualization of certain bus events.</p>
+                        <div>
+                            <p><a targets="TOGTimerAUTOSARNMSpec" href="javascript:void(0)" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="TOGTimerAUTOSARNMSpec"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Timers from AUTOSAR NM Specification</a>
+                            </p>
+                            <div style="display: none;" data-mc-target-name="TOGTimerAUTOSARNMSpec">
+                                <p>These timers are defined in the INI file ([TIMER] section) or the database (DBC). The same definitions from the DBC or INI file are used for the NM simulation with the aid of the NM-DLL. Refer to the <a href="../../../../Subsystems/SML/Subsystems/AsrNMCAN330/Content/Topics/CAN330/AutosarNMCAN330.htm" data-mc-conditions="BuildProcess.HTML5Link">Technical Reference: AUTOSAR NM CAN 3.3.0</a> for more information.</p>
+                                <div>
+                                    <table style="margin-left: 0;margin-right: auto;caption-side: top;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                                        <col />
+                                        <col />
+                                        <thead>
+                                            <tr>
+                                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                                    <p class="TableHead">Timer</p>
+                                                </th>
+                                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                                    <p class="TableHead">Description</p>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                    <p class="Table">CANNM_MSG_CYCLE_TIME<br />	(DBC: NmAsrCanMsgCycleTime)</p>
+                                                </td>
+                                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                    <p class="Table">Cycle time of NM messages of a control unit when NM messages are being sent.</p>
+                                                    <p class="Table">Default value: 640 ms</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                    <p class="Table">NM_TIMEOUT_TIME<br />	(DBC: NmAsrTimeoutTime)</p>
+                                                </td>
+                                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                    <p class="Table">Timer is restarted with each received and sent NM message. When the timer expires in <span class="bold">Ready Sleep</span> state, a transition to <span class="bold">Prepare Bus Sleep</span> state occurs.</p>
+                                                    <p class="Table">Default value: 2000 ms</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                    <p class="Table">NM_WAIT_BUS_SLEEP_TIME<br />(DBC: NmAsrWaitBusSleepTime)</p>
+                                                </td>
+                                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                    <p class="Table">Time the node is in <span class="bold">Prepare Bus Sleep</span> state until the transition to <span class="bold">Bus Sleep</span> state.</p>
+                                                    <p class="Table">Default value: 1500 ms</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                    <p class="Table">NM_REPEAT_MESSAGE_TIME<br />(DBC: NmAsrRepeatMessageTime)</p>
+                                                </td>
+                                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                    <p class="Table">Time the node is in <span class="bold"> Repeat Message</span> state.</p>
+                                                    <p class="Table">Default value: 3200 ms</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                    <p class="Table">NM_IMMEDIATE_NM_CYCLE_TIME</p>
+                                                </td>
+                                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                    <p class="Table">Cycle time of NM messages in <span class="bold">Repeat Message</span> state when messages with shortened cycle time are being sent.</p>
+                                                    <p class="Table">Default value: 100 ms</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                                    <p class="Table">NM_CAN_MSG_REDUCED_TIME<br />(DBC: NmAsrCanMsgReducedTime)</p>
+                                                </td>
+                                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                                    <p class="Table">Reduced node-specific cycle time of NM messages of a control unit when busload reduction is activated.</p>
+                                                    <p class="Table">Default value: (128 + NmAsrNodeIdentifier) * CANNM_MSG_CYCLE_TIME / 256</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <p><a targets="TOGTimerAUTOSATNMObserver" href="javascript:void(0)" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="TOGTimerAUTOSATNMObserver"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />AUTOSAR NM Observer-specific Timers</a>
+                            </p>
+                            <div style="display: none;" data-mc-target-name="TOGTimerAUTOSATNMObserver">
+                                <p><a name="Conditions" id="Conditions"></a>These timers are defined exclusively in the INI file (<span class="SourceCode">[OBSERVERTIMER]</span> section or in the node-specific section)</p>
+                                <div>
+                                    <table style="margin-left: 0;margin-right: auto;caption-side: top;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                                        <col />
+                                        <col />
+                                        <thead>
+                                            <tr>
+                                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                                    <p class="TableHead">Timer</p>
+                                                </th>
+                                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                                    <p class="TableHead">Description</p>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                    <p class="Table">NM_MAX_START_DELAY</p>
+                                                </td>
+                                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                    <p class="Table">When there is a new request of a partial network (transition to <span class="bold">Requested</span> mode), all nodes of the partial network must be in <span class="bold">Repeat Message</span> or <span class="bold">Normal Operation</span> state after this time.</p>
+                                                    <p class="Table">Default value: 200 ms</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                    <p class="Table">MAX_APPL_BEFORE_NM_MESSAGE_TIME</p>
+                                                </td>
+                                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                    <p class="Table">Maximum permissible time period that application messages of a control unit may be sent before its first NM message (after exiting the <span class="bold">Bus Sleep</span> state).</p>
+                                                    <p class="Table">Default value: 0 ms</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                    <p class="Table">MAX_APPL_AFTER_NM_MESSAGE_TIME</p>
+                                                </td>
+                                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                    <p class="Table">For a node the maximum permissible time period that may elapse between sending its own NM message or receiving an NM message relevant to it and sending its application message. The selected time must be greater than NM_TIMEOUT_TIME.</p>
+                                                    <p class="Table">Default value: NM_TIMEOUT_TIME + 10 ms</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                    <p class="Table">MIN_ACTIVE_TIME</p>
+                                                </td>
+                                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                    <p class="Table">Minimum permissible time period that a node must be in <span class="bold">Active</span> state after a transition to this state.</p>
+                                                    <p class="Table">Default value: 0 ms</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                    <p class="Table">ACTIVE_TIME</p>
+                                                </td>
+                                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                    <p class="Table">Shortest cycle time of all cyclic application messages of a node (derived per node from DBC)</p>
+                                                    <p class="Table">Default value: 100 ms</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                                    <p class="Table">WAKEUP_TIME</p>
+                                                </td>
+                                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                                    <p class="Table">The system variable for indicating the occurrence of an NM message with set<span class="bold">CarWakeup</span> bit is in <span class="bold">Active</span> state for this time period; used for visualization only</p>
+                                                    <p class="Table">Default value: 500 ms</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h2>Effect of Arbitration on Timers</h2>
+                            <p>In order for a message to be sent on the CAN bus, the arbitration must first be won. This can produce time delays that the AUTOSAR NM Observer must take into consideration. For this reason, for example, the timer values used for monitoring the cycle time are greater than the values designated by the protocol. In such cases, the values used are determined based on the following scheme</p>
+                            <p class="SourceCode">Timer value = Protocol value * Tolerance factor</p>
+                            <p>This tolerance factor (NM_OBSERVER_TIME_TOLERANCE, default value: 1.2) is used for monitoring of the following times:</p>
+                            <ul>
+                                <li>CANNM_MSG_CYCLE_TIME</li>
+                                <li>NM_IMMEDIATE_NM_CYCLE_TIME</li>
+                                <li>ACTIVE_TIME</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <h2 class="GroupBox">Limitations</h2>
+                        <p>NM state changes in control units often do not immediately affect the sent bus messages. Due to its completely passive method of functioning, the AUTOSAR NM Observer cannot detect such state changes until the effects on bus messages are present. As a result, there may be a time offset between the current NM state of the control unit and the state determined by the Observer. In rare cases, the Observer indicates the transitions too late, even if the control unit is functioning properly and the delays on the bus are not excessive (this pertains especially to the <span class="bold">Normal Operation</span> and <span class="bold">Ready Sleep</span> NM states). However, the overly long observed hold time in this state is limited to one NM cycle time.</p>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="NavigationM">Configuration and Input Parameters</h2>
+                    <p>The AUTOSAR NM Observer can be activated for the individual CAN networks in the <a href="../Ribbon/StimulationSimulation/NMConfiguration.htm" class="bold">NM Configuration</a> dialog. The nodes to be monitored can be selected individually.</p>
+                    <p>The Observer obtains its settings from the same INI files that are used for AUTOSAR NM simulation (see <a href="../../../../Subsystems/SML/Subsystems/AsrNMCAN330/Content/Topics/CAN330/AutosarNMCAN330.htm" data-mc-conditions="BuildProcess.HTML5Link">Technical Reference: AUTOSAR NM CAN 3.3.0</a>). If the corresponding files already exist, they can be opened in the configuration dialog. Additional settings are taken from the database (DBC). The Observer also requires other parameters, which can be added to one of the two INI files (local/global). If these parameters are not assigned, the appropriate default settings are used. </p>
+                    <p>The additional parameters are as follows:</p>
+                    <p class="SourceCode">[OBSERVERTIMER]<br />; all timers are in milliseconds<br />NM_MAX_START_DELAY=200<br />MAX_APPL_BEFORE_NM_MESSAGE_TIME=0<br />MAX_APPL_AFTER_NM_MESSAGE_TIME=10<br />MIN_ACTIVE_TIME=0<br />ACTIVE_TIME=100<br />WAKEUP_TIME=500<br />; timer tolerance<br />NM_OBSERVER_TIME_TOLERANCE=1.2</p>
+                    <p>For an explanation of the parameters, refer to <a href="#Conditions">AUTOSAR NM Observer-specific timers</a></p>
+                    <p>Except for NM_MAX_START_DELAY, the values of all timers can be overwritten in the node-specific sections <span class="SourceCode">[node name]</span>.</p>
+                    <div>
+                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                            <col class="TableStyle-vTableSymbol-Column-Column1" />
+                            <col class="TableStyle-vTableSymbol-Column-Column2" />
+                            <tbody>
+                                <tr>
+                                    <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                        <p class="Table">
+                                            <img src="../../../Resources/vImages/vInfo.png" style="width: 48px;height: 45px;" title="Note" alt="Note" />
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                        <p class="TableSymbolHead">Note</p>
+                                        <p>For a simulation, only the nodes to be simulated have to be specified in the INI files. By contrast, the AUTOSAR NM Observer requires all nodes to be specified.</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <h2 class="GroupBox">Evaluation Sequence</h2>
+                        <p>Default values are defined for almost all parameters. These are overwritten by corresponding information in the INI files or the DBC.</p>
+                        <p class="StartList">The evaluation sequence for this is as follows, beginning with the lowest priority:</p>
+                        <ol>
+                            <li value="1">Default values</li>
+                            <li value="2">Global INI file (general)</li>
+                            <li value="3">Database (DBC)</li>
+                            <li value="4">Local INI file (general)</li>
+                            <li value="5">Global INI file (node-specific)</li>
+                            <li value="6">Local INI file (node-specific)</li>
+                        </ol>
+                        <p>Because of this evaluation sequence, the creation of a local INI file is recommended. Its structure is described in the <a href="../../../../Subsystems/SML/Subsystems/AsrNMCAN330/Content/Topics/CAN330/AutosarNMCAN330.htm" data-mc-conditions="BuildProcess.HTML5Link">Technical Reference: AUTOSAR NM CAN 3.3.0</a> in the pages about the <a href="../../../../Subsystems/SML/Subsystems/AsrNMCAN330/Content/Topics/CAN330/Basics/INIfilesIntroductionCAN330.htm" data-mc-conditions="BuildProcess.HTML5Link">INI files</a>.</p>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="NavigationS"><a name="StateMessages" id="StateMessages"></a>Status Messages</h2>
+                    <p><a targets="TOGMAXAPPLBEFORENMMESSAGETIMEexpired" href="javascript:void(0)" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="TOGMAXAPPLBEFORENMMESSAGETIMEexpired"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />MAX_APPL_BEFORE_NM_MESSAGE_TIME expired</a>
+                    </p>
+                    <div style="display: none;" data-mc-target-name="TOGMAXAPPLBEFORENMMESSAGETIMEexpired">
+                        <p>The node has transitioned to the <span class="bold">Active</span> activity state However, a corresponding NM state change has not occurred.</p>
+                        <p><span class="bold">Requirement</span>: node is being observed<br /><span class="bold">Timing</span>: after time expiration</p>
+                        <div>
+                            <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                                <col style="width: 155px;" />
+                                <col />
+                                <tbody>
+                                    <tr>
+                                        <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">Type</p>
+                                        </th>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">1</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">Category	</p>
+                                        </th>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">Error</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">PN ID</p>
+                                        </th>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">—</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">Node Name</p>
+                                        </th>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">Name of the node causing the message</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">Node ID</p>
+                                        </th>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">ID of the node causing the message</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">Parameter 1</p>
+                                        </th>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">0</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                            <p class="Table">Parameter 2	</p>
+                                        </th>
+                                        <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                            <p class="Table">0</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <p><a targets="TOGMAXAPPLAFTERNMMESSAGETIMEexpired" href="javascript:void(0)" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="TOGMAXAPPLAFTERNMMESSAGETIMEexpired"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />MAX_APPL_AFTER_NM_MESSAGE_TIME expired</a>
+                    </p>
+                    <div style="display: none;" data-mc-target-name="TOGMAXAPPLAFTERNMMESSAGETIMEexpired">
+                        <p>Too much time passed between the current application message and the last NM message relevant for the node.</p>
+                        <p><span class="bold">Requirement</span>: node is being observed and is already in <span class="bold">Active</span> activity state<br /><span class="bold">Timing</span>: after time expiration</p>
+                        <div>
+                            <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                                <col style="width: 155px;" />
+                                <col />
+                                <tbody>
+                                    <tr>
+                                        <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">Type</p>
+                                        </th>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">2</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">Category	</p>
+                                        </th>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">Error</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">PN ID</p>
+                                        </th>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">—</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">Node Name</p>
+                                        </th>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">Name of the node causing the message</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">Node ID</p>
+                                        </th>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">ID of the node causing the message</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">Parameter 1</p>
+                                        </th>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">0</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                            <p class="Table">Parameter 2	</p>
+                                        </th>
+                                        <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                            <p class="Table">0</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <p><a targets="TOGnodeChangedIntoRequestedState" href="javascript:void(0)" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="TOGnodeChangedIntoRequestedState"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />node changed into requested state</a>
+                    </p>
+                    <div style="display: none;" data-mc-target-name="TOGnodeChangedIntoRequestedState">
+                        <p>A node has changed to the <span class="bold">Requested</span> NM Request state.</p>
+                        <p><span class="bold">Requirement</span>: node is being observed<br /><span class="bold">Timing</span>: immediately</p>
+                        <div>
+                            <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                                <col style="width: 155px;" />
+                                <col />
+                                <tbody>
+                                    <tr>
+                                        <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">Type</p>
+                                        </th>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">3</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">Category	</p>
+                                        </th>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">Information</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">PN ID</p>
+                                        </th>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">—</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">Node Name</p>
+                                        </th>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">Name of the node</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">Node ID</p>
+                                        </th>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">ID of the node</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">Parameter 1</p>
+                                        </th>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">Request mask of the NM message (if PN enabled, otherwise 0)</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                            <p class="Table">Parameter 2	</p>
+                                        </th>
+                                        <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                            <p class="Table">0</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <p><a targets="TOGunknownNMmessageID" href="javascript:void(0)" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="TOGunknownNMmessageID"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />unknown NM message ID</a>
+                    </p>
+                    <div style="display: none;" data-mc-target-name="TOGunknownNMmessageID">
+                        <p>The ID of a message is within the range reserved for AUTOSAR NM. However, a corresponding send node is not listed in the database.</p>
+                        <p><span class="bold">Requirement</span>: node is being observed<br /><span class="bold">Timing</span>: immediately</p>
+                        <div>
+                            <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                                <col style="width: 155px;" />
+                                <col />
+                                <tbody>
+                                    <tr>
+                                        <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">Type</p>
+                                        </th>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">4</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">Category	</p>
+                                        </th>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">Warning</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">PN ID</p>
+                                        </th>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">—</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">Node Name</p>
+                                        </th>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">—</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">Node ID</p>
+                                        </th>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">ID of the NM message</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">Parameter 1</p>
+                                        </th>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">0</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                            <p class="Table">Parameter 2	</p>
+                                        </th>
+                                        <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                            <p class="Table">0</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <p><a targets="TOGpartialNetworkGotRequestedButNodeStillNotAwake" href="javascript:void(0)" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="TOGpartialNetworkGotRequestedButNodeStillNotAwake"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />partial network got requested but node still not awake</a>
+                    </p>
+                    <div style="display: none;" data-mc-target-name="TOGpartialNetworkGotRequestedButNodeStillNotAwake">
+                        <p>A PN was requested by an NM message. A node that should react to this request according to the configuration (filter mask) has not done so in the time allocated for this.</p>
+                        <p><span class="bold">Requirement</span>: node is being observed<br /><span class="bold">Timing</span>: after time expiration</p>
+                        <div>
+                            <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                                <col style="width: 155px;" />
+                                <col />
+                                <tbody>
+                                    <tr>
+                                        <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">Type</p>
+                                        </th>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">5</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">Category	</p>
+                                        </th>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">Error</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">PN ID</p>
+                                        </th>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">Bit position within the mask (beginning with 1)</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">Node Name</p>
+                                        </th>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">Name of the node causing the message</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">Node ID</p>
+                                        </th>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">ID of the node causing the message</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">Parameter 1</p>
+                                        </th>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">0</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                            <p class="Table">Parameter 2	</p>
+                                        </th>
+                                        <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                            <p class="Table">0</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <p><a targets="TOGtimeInActiveStateSmallerThanMinimumActiveTime" href="javascript:void(0)" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="TOGtimeInActiveStateSmallerThanMinimumActiveTime"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />time in active state smaller than minimum active time</a>
+                    </p>
+                    <div style="display: none;" data-mc-target-name="TOGtimeInActiveStateSmallerThanMinimumActiveTime">
+                        <p>The time that a node spent in the <span class="bold">Active</span> state is less than the specified minimum time period.</p>
+                        <p><span class="bold">Requirement</span>: node is being observed<br /><span class="bold">Timing</span>: immediately</p>
+                        <div>
+                            <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                                <col style="width: 155px;" />
+                                <col />
+                                <tbody>
+                                    <tr>
+                                        <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">Type</p>
+                                        </th>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">6</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">Category	</p>
+                                        </th>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">Warning</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">PN ID</p>
+                                        </th>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">—</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">Node Name</p>
+                                        </th>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">Name of the node causing the message</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">Node ID</p>
+                                        </th>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">ID of the node causing the message</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">Parameter 1</p>
+                                        </th>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">0</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                            <p class="Table">Parameter 2	</p>
+                                        </th>
+                                        <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                            <p class="Table">0</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <p><a targets="TOGoutstandingNMmessage" href="javascript:void(0)" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="TOGoutstandingNMmessage"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />outstanding NM message</a>
+                    </p>
+                    <div style="display: none;" data-mc-target-name="TOGoutstandingNMmessage">
+                        <p>Based on its state, a node would have had to send an NM message but this has not occurred in the time allocated for it.</p>
+                        <p><span class="bold">Requirement</span>: node is being observed<br /><span class="bold">Timing</span>: after time expiration</p>
+                        <div>
+                            <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                                <col style="width: 155px;" />
+                                <col />
+                                <tbody>
+                                    <tr>
+                                        <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">Type</p>
+                                        </th>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">7</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">Category	</p>
+                                        </th>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">Error
+</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">PN ID</p>
+                                        </th>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">—</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">Node Name</p>
+                                        </th>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">Name of the node causing the message</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">Node ID</p>
+                                        </th>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">ID of the node causing the message</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">Parameter 1</p>
+                                        </th>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">0</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                            <p class="Table">Parameter 2	</p>
+                                        </th>
+                                        <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                            <p class="Table">0</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <p><a targets="TOGpartialNetworkingEnabledButPNIbitNotSet" href="javascript:void(0)" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="TOGpartialNetworkingEnabledButPNIbitNotSet"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />partial networking enabled but PNI bit not set</a>
+                    </p>
+                    <div style="display: none;" data-mc-target-name="TOGpartialNetworkingEnabledButPNIbitNotSet">
+                        <p>According to the configuration or the last sent NM message, the node uses partial networks. However, the sent NM message does not correspond to the format designated for it (PNI bit should be set). From now on it is assumed, that the node does not use partial networks anymore.</p>
+                        <p><span class="bold">Requirement</span>: node is being observed<br /><span class="bold">Timing</span>: immediately</p>
+                        <div>
+                            <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                                <col style="width: 155px;" />
+                                <col />
+                                <tbody>
+                                    <tr>
+                                        <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">Type</p>
+                                        </th>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">8</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">Category	</p>
+                                        </th>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">Warning</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">PN ID</p>
+                                        </th>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">—</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">Node Name</p>
+                                        </th>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">Name of the node causing the message</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">Node ID</p>
+                                        </th>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">ID of the node causing the message</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">Parameter 1</p>
+                                        </th>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">0</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                            <p class="Table">Parameter 2	</p>
+                                        </th>
+                                        <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                            <p class="Table">0</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <p><a targets="TOGpartialNetworkingNotEnabledButPNIbitIsSet" href="javascript:void(0)" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="TOGpartialNetworkingNotEnabledButPNIbitIsSet"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />partial networking not enabled but PNI bit is set</a>
+                    </p>
+                    <div style="display: none;" data-mc-target-name="TOGpartialNetworkingNotEnabledButPNIbitIsSet">
+                        <p>According to the configuration or the last sent NM message, the node does not use partial networks. However, the sent NM message does not correspond to the format designated for it (PNI bit should not be set). From now on it is assumed, that the node uses partial networks.</p>
+                        <p><span class="bold">Requirement</span>: node is being observed<br /><span class="bold">Timing</span>: immediately</p>
+                        <div>
+                            <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                                <col style="width: 155px;" />
+                                <col />
+                                <tbody>
+                                    <tr>
+                                        <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">Type</p>
+                                        </th>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">9</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">Category	</p>
+                                        </th>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">Warning</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">PN ID</p>
+                                        </th>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">—</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">Node Name</p>
+                                        </th>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">Name of the node causing the message</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">Node ID</p>
+                                        </th>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">ID of the node causing the message</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">Parameter 1</p>
+                                        </th>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">0</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                            <p class="Table">Parameter 2	</p>
+                                        </th>
+                                        <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                            <p class="Table">0</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <p><a targets="TOGrequestMaskNotConformToSettingsInINIfile" href="javascript:void(0)" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="TOGrequestMaskNotConformToSettingsInINIfile"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />request mask not conform to settings in INI file</a>
+                    </p>
+                    <div style="display: none;" data-mc-target-name="TOGrequestMaskNotConformToSettingsInINIfile">
+                        <p>The partial networks that the node may request are specified in the configuration (request mask). However, the node requests at least one other partial network.</p>
+                        <p><span class="bold">Requirement</span>: node is being observed<br /><span class="bold">Timing</span>: immediately</p>
+                        <div>
+                            <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                                <col style="width: 155px;" />
+                                <col />
+                                <tbody>
+                                    <tr>
+                                        <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">Type</p>
+                                        </th>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">10</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">Category	</p>
+                                        </th>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">Error
+</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">PN ID</p>
+                                        </th>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">—</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">Node Name</p>
+                                        </th>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">Name of the node causing the message</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">Node ID</p>
+                                        </th>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">ID of the node causing the message</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">Parameter 1</p>
+                                        </th>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">Request Mask of NM message</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                            <p class="Table">Parameter 2	</p>
+                                        </th>
+                                        <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                            <p class="Table">0</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <p><a targets="TOGpassiveNodeSendsNMMessage" href="javascript:void(0)" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="TOGpassiveNodeSendsNMMessage"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />passive node sends NM message</a>
+                    </p>
+                    <div style="display: none;" data-mc-target-name="TOGpassiveNodeSendsNMMessage">
+                        <p>According to the configuration, the node is in the passive state and should therefore not send any NM messages.</p>
+                        <p><span class="bold">Requirement</span>: node is being observed<br /><span class="bold">Timing</span>: immediately</p>
+                        <div>
+                            <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                                <col style="width: 155px;" />
+                                <col />
+                                <tbody>
+                                    <tr>
+                                        <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">Type</p>
+                                        </th>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">11</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">Category	</p>
+                                        </th>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">Error
+</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">PN ID</p>
+                                        </th>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">—</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">Node Name</p>
+                                        </th>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">Name of the node causing the message</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">Node ID</p>
+                                        </th>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">ID of the node causing the message</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                            <p class="Table">Parameter 1</p>
+                                        </th>
+                                        <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                            <p class="Table">0</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                            <p class="Table">Parameter 2	</p>
+                                        </th>
+                                        <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                            <p class="Table">0</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="NavigationS">Supported Features</h2>
+                    <div>
+                        <h2 class="GroupBox">General Features</h2>
+                        <ul>
+                            <li>Observable bus system: CAN</li>
+                            <li>Parameter extraction from the same INI files and DBC as for the NM simulation</li>
+                            <li>Easy dialog-based configuration</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="GroupBox">NM-specific Features</h2>
+                        <ul>
+                            <li class="Bold">AUTOSAR NM Release 3.2, e.g., with</li>
+                            <li class="Indent">Partial networks</li>
+                            <li class="Indent">Busload reduction</li>
+                            <li class="Bold">Warning and error messages, e.g.,</li>
+                            <li class="Indent">Missing NM messages</li>
+                            <li class="Indent">NM messages from unknown source</li>
+                            <li class="Indent">NM messages with incorrect parameters</li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="LinkList">&#160;</p>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="FooterWhite">
+                <table class="FooterWhite" style="border-collapse: collapse;margin-left: auto;margin-right: auto;">
+                    <col style="width: 70px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col style="width: 16px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="buttons popup-container clearfix topicToolbarProxy topicToolbarProxyFooter _Skins_HTML5TopicToolbar mc-component nocontent">
+                                    <div class="button-group-container-left">
+                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo"><a href="../../Shared/HowToUseOnlineHelp.htm" title="Tips for using the help" alt="Tips for using the help"><img src="../../../Resources/vImages/vBackstage/vHelpInfo.png" /></a>
+                                </p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo" style="text-align: right;"><span class="mc-variable Vector.BuildTime variable">2024-04-8T20:56:42</span>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <table style="width: 100%;border-collapse: separate;border-spacing: 3px 0px;margin-left: auto;margin-right: auto;caption-side: top;">
+                <col />
+                <col />
+                <col />
+                <col data-mc-conditions="BuildProcess.HTML5Link" />
+                <tbody>
+                    <tr>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;">
+                            <p class="vec_Footer">©&#160;Vector Informatik GmbH</p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;text-align: right;">
+                            <p class="vec_FooterBold">
+                                <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE&#160;Product Families</MadCap:conditionalText> Version <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.VectorTestUnitRunner">18</MadCap:conditionalText></p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="../../Shared/ContactCopyrightLicense.htm" class="vec_Footer MCXref xref xrefvec_Footer">Contact/Copyright/License</a>
+                            </p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="https://www.vector.com/int/en/company/get-info/privacy-policy/" target="_blank" class="vec_Footer">Data Privacy Notice</a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

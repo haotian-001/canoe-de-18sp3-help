@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="CANoeDEFamily.xml" data-mc-path-to-help-system="../../../../../../" data-mc-conditions="Targets.CANoe-DE-Family" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../../Skins/Favicons/favicon-16x16.png" /><title>MQTT Serialization</title>
+        <link href="../../../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Resources/Stylesheets/vTableMasterPageHeader.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../../../Resources/Stylesheets/vStylesheet.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../../../Resources/Stylesheets/vTableSymbol.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapGlobal.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapDom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapUtilities.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapXhr.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapTextEffects.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapSlideshow.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapMessageBus.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapMessageBus.CrossFrame.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapDefault.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapMediaQueries.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapAccessibility.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapHelpSystem.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapAliasFile.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapTopicFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapFeedbackHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapSkinHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapToc.Breadcrumbs.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapToc.MiniToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapToc.SideMenu.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapIndex.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapGlossary.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapParser.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapSearch.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapNavigateTopics.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapLms.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapELearning.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapTopic.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapMicroContentComponent.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapSearchHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapTopicElements.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapTriPane.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/jscript" src="../../../../../Resources/vScripts/SyntaxHighlighting.js">
+        </script>
+        <script type="text/jscript" src="../../../../../Resources/vScripts/TabSwitch.js">
+        </script>
+        <script type="text/javascript" src="../../../../../Resources/vScripts/Vector.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../../../../CANoeDEFamily.htm#Topics/SampConf/Connectivity/CANoe/MQTTSerialization/MQTTSerialization.htm">Open topic with navigation</a>
+        </p>
+        <div class="Body">
+            <div role="main" id="mc-main-content">
+                <p class="StructurePath"><a href="../../../CANoeCANalyzerSampleConfigurations.htm" class="StructurePath MCXref xref xrefStructurePath">Sample Configurations</a> » <a href="../../SampConfsConnectivity.htm" class="StructurePath">Connectivity</a> » <span class="mc-variable System.Title variable">MQTT Serialization</span></p>
+                <h1><a name="kanchor8810"></a><a name="kanchor8811"></a><span class="mc-variable System.Title variable">MQTT Serialization</span>
+                </h1>
+                <p class="MenuPath">&#160;</p>
+                <p class="ToolAvailability" data-mc-conditions="BuildProcess.ToolAvailability"><a href="../../../../Shared/FeatureAvailability.htm" class="red" title="Feature availabilty for your product">Valid&#160;for</a>:&#160;&#160;CANoe&#160;DE<a name="aanchor26931"></a><MadCap:concept term="SFCANoeDE" />&#160;&#160;•&#160;&#160;CANoe:lite&#160;DE<a name="aanchor26932"></a><MadCap:concept term="SFCANoeLiteDE" />&#160;&#160;•&#160;&#160;CANoe4SW&#160;DE<a name="aanchor26933"></a><MadCap:concept term="SFCANoe4SWDE" />&#160;&#160;•&#160;&#160;CANoe4SW:lite&#160;DE<a name="aanchor26934"></a><MadCap:concept term="SFCANoe4SWLiteDE" /></p>
+                <p class="AutoSearchFilterConcepts"><a name="aanchor26935"></a>
+                    <MadCap:concept term="SFSampConf" />
+                </p>
+                <div>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                    <p class="TableHead">
+                                        <img src="../../../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                    </p>
+                                </td>
+                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                    <p class="Table">Click on the blue link to load the sample configuration in your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText>.</p>
+                                    <ul>
+                                        <li>
+                                            <div>
+                                                <p><span class="bold">MQTT Serialization</span>
+                                                </p>
+                                                <ul>
+                                                    <li>CANoe&#160;DE<a name="aanchor26936"></a><MadCap:concept term="SFCANoeDE" />: <span class="bold"><a href="javascript:startCANoeLauncher('&quot;SAMPLES:\\Connectivity\\MQTT\\Serialization\\CANoe\\MQTTSerialization.cfg&quot;')" class="ExecuteLink">MQTTSerialization.cfg</a></span></li>
+                                                    <li>CANoe:lite&#160;DE<a name="aanchor26937"></a><MadCap:concept term="SFCANoeLiteDE" />: <span class="bold"><a href="javascript:startCANoeLiteLauncher('&quot;SAMPLES:\\Connectivity\\MQTT\\Serialization\\CANoeLite\\MQTTSerialization.cfg&quot;')" class="ExecuteLink">MQTTSerialization.cfg</a></span></li>
+                                                    <li>CANoe4SW&#160;DE<a name="aanchor26938"></a><MadCap:concept term="SFCANoe4SWDE" />: <span class="bold"><a href="javascript:startCANoe4SWLauncher('&quot;SAMPLES:\\Connectivity\\MQTT\\Serialization\\CANoe4SW\\MQTTSerialization.cfg&quot;')" class="ExecuteLink">MQTTSerialization.cfg</a></span></li>
+                                                    <li>CANoe4SW:lite&#160;DE<a name="aanchor26939"></a><MadCap:concept term="SFCANoe4SWLiteDE" />: <span class="bold"><a href="javascript:startCANoe4SWLiteLauncher('&quot;SAMPLES:\\Connectivity\\MQTT\\Serialization\\CANoe4SWLite\\MQTTSerialization.cfg&quot;')" class="ExecuteLink">MQTTSerialization.cfg</a></span></li>
+                                                </ul>
+                                                <p>Shows how your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> can be used in connection with the IoT protocol  <span class="bold">MQTT</span> and different serializations.</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>The sample configuration shows how you can use the different <a href="../../../../CANoeCANalyzer/Connectivity/MQTTModelingDOs.htm">serializations</a> with the MQTT protocol.</p>
+                <div>
+                    <h2>Introduction</h2>
+                    <p>This configuration contains three tests. Two of them show the transition between JSON/GPB serialization to plain serialization and back. The third test also consists of a transition between JSON serialization and plain serialization, but in the intermediate step the Python JSON component is used to modify the message. This demonstrates how a custom serialization can be combined with the serializations provided in your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText>.</p>
+                    <div>
+                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                            <col class="TableStyle-vTableSymbol-Column-Column1" />
+                            <col class="TableStyle-vTableSymbol-Column-Column2" />
+                            <tbody>
+                                <tr>
+                                    <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                        <p class="Table">
+                                            <img src="../../../../../Resources/vImages/vInfo.png" style="width: 48px;height: 45px;" title="Note" alt="Note" />
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                        <p class="TableSymbolHead">Note</p>
+                                        <p class="Table">To use the configuration a MQTT broker is needed. The internal broker <span class="bold">CANoe Hosted</span> is used, but if desired a local MQTT broker can also be used. A download is e.g. available under the following address:&#160;<a href="https://mosquitto.org/download/" class="ExternalLink" target="_blank">https://mosquitto.org/download/</a></p>
+                                        <p class="Table">Under <span class="GUI"><a href="../../../../CANoeCANalyzer/Ribbon/File/Options/Extensions/ExtensionsConnectivity.htm">Options|Extensions|Connectivity</a></span> you can adjust the TCP port of the internal MQTT broker in the <span class="GUI">CANoe Hosted</span> area. The usual TCP port for MQTT is 1883.</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div>
+                    <h2><a name="Shortcuts" id="Shortcuts"></a>Desktops</h2>
+                    <p>This configuration contains the following desktops:</p>
+                    <div>
+                        <table style="width: 100%;border-collapse: separate;border-spacing: 2px 0px;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-top-style: none;border-top-width: 1px;border-bottom-style: none;border-bottom-width: 1px;margin-left: 0;margin-right: auto;">
+                            <col style="width: 120px;">
+                            </col>
+                            <col style="width: 120px;">
+                            </col>
+                            <col>
+                            </col>
+                            <tbody>
+                                <tr>
+                                    <td style="background-color: #F0F5F5;vertical-align: middle;border-left-style: solid;border-left-width: 1px;border-left-color: #bebebe;border-right-style: solid;border-right-width: 1px;border-right-color: #bebebe;border-top-style: solid;border-top-width: 1px;border-top-color: #bebebe;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #00a2e8;padding-left: 2pt;padding-right: 5pt;padding-top: 1pt;padding-bottom: 1pt;">
+                                        <p class="Table"><a href="#Tests" class="Tab">Tests</a>
+                                        </p>
+                                    </td>
+                                    <td style="background-color: #F0F5F5;vertical-align: middle;border-left-style: solid;border-left-width: 1px;border-left-color: #bebebe;border-right-style: solid;border-right-width: 1px;border-right-color: #bebebe;border-top-style: solid;border-top-width: 1px;border-top-color: #bebebe;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #00a2e8;padding-left: 2pt;padding-right: 5pt;padding-top: 1pt;padding-bottom: 1pt;">
+                                        <p class="Table"><a href="#Modeling" class="Tab">Modeling</a>
+                                        </p>
+                                    </td>
+                                    <td style="vertical-align: middle;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #00a2e8;padding-left: 5pt;padding-right: 5pt;padding-top: 2pt;padding-bottom: 2pt;">
+                                        <p class="Table">&#160;</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <h2 class="NavigationM"><a name="Tests" id="Tests"></a>Tests <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                        <p>On this desktop you see a <span class="GUI">Trace</span> window and a Test Configuration Dialog for test units (<span class="Product">vTESTstudio</span>).</p>
+                        <p>The test unit contains four individual tests, which are described in more detail below:</p>
+                        <h3 class="SectionSub">TestSubscription</h3>
+                        <p>This test verifies that all subscribers defined in the vCDL are connected to the MQTT broker.</p>
+                        <h3 class="SectionSub">JSONMirrorTestCase</h3>
+                        <p>The following components from vCDL are required in this test:</p>
+                        <p class="SourceCode">&#160;&#160;<span class="CodeKeyword">struct</span> person<br />&#160;&#160;{<br />&#160;&#160;&#160;&#160;<span class="CodeDataType">string</span> name;<br /><br />&#160;&#160;&#160;&#160;<span class="CodeDataType">uint32</span> age;<br />&#160;&#160;}<br /><br />&#160;&#160;[Binding=<span class="CodeStringLiteral">"MQTT"</span>]<br />&#160;&#160;[MQTTBinding::ClientId=<span class="CodeStringLiteral">"CANoe_JSON"</span>]<br />&#160;&#160;<span class="CodeKeyword">interface</span> IJSONRepeatClient<br />&#160;&#160;{<br />&#160;&#160;&#160;&#160;[Serialization=<span class="CodeStringLiteral">"JSON"</span>]<br />&#160;&#160;&#160;&#160;[MQTTBinding::Topic=<span class="CodeStringLiteral">"CANoe/Serialization/JsonToBytes"</span>]<br />&#160;&#160;&#160;&#160;<span class="CodeKeyword">provided data</span> person JSONPublisher;<br /><br />&#160;&#160;&#160;&#160;[Serialization=<span class="CodeStringLiteral">"Plain"</span>]<br />&#160;&#160;&#160;&#160;[MQTTBinding::Topic=<span class="CodeStringLiteral">"CANoe/Serialization/JsonToBytes"</span>]<br />&#160;&#160;&#160;&#160;<span class="CodeKeyword">consumed data</span> bytes PlainReceiver;<br /><br />&#160;&#160;&#160;&#160;[Serialization=<span class="CodeStringLiteral">"Plain"</span>]<br />&#160;&#160;&#160;&#160;[MQTTBinding::Topic=<span class="CodeStringLiteral">"CANoe/Serialization/BytesToJSON"</span>]<br />&#160;&#160;&#160;&#160;<span class="CodeKeyword">provided data</span> bytes PlainPublisher;<br /><br />&#160;&#160;&#160;&#160;[Serialization=<span class="CodeStringLiteral">"JSON"</span>]<br />&#160;&#160;&#160;&#160;[MQTTBinding::Topic=<span class="CodeStringLiteral">"CANoe/Serialization/BytesToJSON"</span>]<br />&#160;&#160;&#160;&#160;<span class="CodeKeyword">consumed data</span> person JSONReceiver;<br />&#160;&#160;}<br />&#160;&#160;IJSONRepeatClient JSONRepeatClient;</p>
+                        <p>In the test, the value of JSONPublisher is set to a concrete instance of the <span class="bold">struct person</span>. The selected JSON serialization turns the struct into a JSON object and this is sent to <span class="bold">PlainReceiver</span> using MQTT. Since it has selected bytes as the data type in combination with the plain serialization, <span class="bold">PlainReceiver</span> receives the payload. The following Python code sets a copy of the payload as the value of <span class="bold">PlainPublisher</span>:</p>
+                        <p class="SourceCode">@vector.canoe.on_update(application_layer.SerializationModel.JSONRepeatClient.PlainReceiver)<br />&#160;&#160;def on_JSONClientPlainReceiver_update(self):<br />&#160;&#160;&#160;&#160;receivedBytes = application_layer.SerializationModel.JSONRepeatClient.PlainReceiver.copy()<br />&#160;&#160;&#160;&#160;application_layer.SerializationModel.JSONRepeatClient.PlainPublisher = receivedBytes</p>
+                        <p>Since the <span class="bold">PlainPublisher</span> is also of the <span class="bold">bytes</span> data type with the plain serialization, the payload is sent to JSONReceiver without modification. This is of the person data type and uses JSON serialization. The JSON serialization automatically converts the received payload into an object of <span class="bold">struct person</span>. The test then checks if the received <span class="bold">person</span> type instance of JSONReceiver matches the original one (sent with JSONPublisher ).</p>
+                        <h3 class="SectionSub">GPBMirrorTestCase</h3>
+                        <p>The following components from vCDL are required in this test:</p>
+                        <p class="SourceCode">&#160;&#160;<span class="CodeKeyword">struct</span> person<br />&#160;&#160;{<br />&#160;&#160;&#160;&#160;<span class="CodeDataType">string</span> name;<br />&#160;&#160;&#160;&#160;<span class="CodeDataType">uint32</span> age;<br />&#160;&#160;}<br /><br />&#160;&#160;[Binding=<span class="CodeStringLiteral">"MQTT"</span>]<br />&#160;&#160;[MQTTBinding::ClientId=<span class="CodeStringLiteral">"CANoe_GPB"</span>]<br />&#160;&#160;<span class="CodeKeyword">interface</span> IGPBRepeatClient<br />&#160;&#160;{<br />&#160;&#160;&#160;&#160;[Serialization=<span class="CodeStringLiteral">"GoogleProtobuf"</span>]<br />&#160;&#160;&#160;&#160;[MQTTBinding::Topic=<span class="CodeStringLiteral">"CANoe/Serialization/GPBToBytes"</span>]<br />&#160;&#160;&#160;&#160;<span class="CodeKeyword">provided data</span> person GPBPublisher;<br /><br />&#160;&#160;&#160;&#160;[Serialization=<span class="CodeStringLiteral">"Plain"</span>]<br />&#160;&#160;&#160;&#160;[MQTTBinding::Topic=<span class="CodeStringLiteral">"CANoe/Serialization/GPBToBytes"</span>]<br />&#160;&#160;&#160;&#160;<span class="CodeKeyword">consumed data</span> bytes PlainReceiver;<br /><br />&#160;&#160;&#160;&#160;[Serialization=<span class="CodeStringLiteral">"Plain"</span>]<br />&#160;&#160;&#160;&#160;[MQTTBinding::Topic=<span class="CodeStringLiteral">"CANoe/Serialization/BytesToGPB"</span>]<br />&#160;&#160;&#160;&#160;<span class="CodeKeyword">provided data</span> bytes PlainPublisher;<br /><br />&#160;&#160;&#160;&#160;[Serialization=<span class="CodeStringLiteral">"GoogleProtobuf"</span>]<br />&#160;&#160;&#160;&#160;[MQTTBinding::Topic=<span class="CodeStringLiteral">"CANoe/Serialization/BytesToGPB"</span>]<br />&#160;&#160;&#160;&#160;<span class="CodeKeyword">consumed data</span> person GPBReceiver;<br />&#160;&#160;}<br />&#160;&#160;IGPBRepeatClient GPBRepeatClient;</p>
+                        <p>In the test, the value of GPBPublisher is set to a concrete instance of the <span class="bold">struct person</span>. The selected GoogleProtobuf serialization turns the struct into a byte array and this is sent to <span class="bold">PlainReceiver</span> using MQTT. Since this has selected <span class="bold">bytes</span> as the data type in combination with the Plain serialization, <span class="bold">PlainReceiver</span> receives the payload. The following Python code sets a copy of the payload as the value of <span class="bold">PlainPublisher</span>:</p>
+                        <p class="SourceCode">&#160;&#160;@vector.canoe.on_update(application_layer.SerializationModel.GPBRepeatClient.PlainReceiver)<br />&#160;&#160;def on_GPBClientPlainReceiver_update(self):<br />&#160;&#160;&#160;&#160;receivedBytes = application_layer.SerializationModel.GPBRepeatClient.PlainReceiver.copy()<br />&#160;&#160;&#160;&#160;application_layer.SerializationModel.GPBRepeatClient.PlainPublisher = receivedBytes</p>
+                        <p>Since the <span class="bold">PlainPublisher</span> is also of the <span class="bold">bytes</span> data type with the plain serialization, the payload is sent to GPBReceiver without modification. This is of data type person and uses the GoogleProtobuf serialization. The GoogleProtobuf serialization automatically converts the received payload to an object of <span class="bold">struct person</span>. The test then checks if the received instance of type <span class="bold">person</span> of the GPBReceiver matches the original instance (sent with GPBPublisher).</p>
+                        <h3 class="SectionSub">JSONModifierTestCase</h3>
+                        <p>This test shows the interaction between JSON serialization in your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> and other, external serialization options. The following section from the vCDL is required in this test:</p>
+                        <p class="SourceCode">&#160;&#160;<span class="CodeKeyword">struct</span> person<br />&#160;&#160;{<br />&#160;&#160;&#160;&#160;<span class="CodeDataType">string </span>name;<br />&#160;&#160;&#160;&#160;<span class="CodeDataType">uint32</span> age;<br />&#160;&#160;}<br /><br />&#160;&#160;<span class="CodeKeyword">struct</span> outerStruct<br />&#160;&#160;{<br />&#160;&#160;<span class="CodeDataType">person</span> orig;<br />&#160;&#160;<span class="CodeDataType">uint32</span> origAge;<br />&#160;&#160;}<br />&#160;&#160;[Binding=<span class="CodeStringLiteral">"MQTT"</span>]<br />&#160;&#160;[MQTTBinding::ClientId=<span class="CodeStringLiteral">"CANoe_JSON_modifier"</span>]<br />&#160;&#160;<span class="CodeKeyword">interface</span> IJSONModifier<br />&#160;&#160;{<br />&#160;&#160;&#160;&#160;[MQTTBinding::Topic=<span class="CodeStringLiteral">"CANoe/Serialization/modified/JsonToBytes"</span>]<br />&#160;&#160;&#160;&#160;[Serialization=<span class="CodeStringLiteral">"JSON"</span>]<br />&#160;&#160;&#160;&#160;<span class="CodeKeyword">provided data</span> innerStruct JSONPublisher;<br /><br />&#160;&#160;&#160;&#160;[MQTTBinding::Topic=<span class="CodeStringLiteral">"CANoe/Serialization/modified/JsonToBytes"</span>]<br />&#160;&#160;&#160;&#160;[Serialization=<span class="CodeStringLiteral">"Plain"</span>]<br />&#160;&#160;&#160;&#160;<span class="CodeKeyword">consumed data</span> bytes PlainReceiver;<br /><br />&#160;&#160;&#160;&#160;[MQTTBinding::Topic=<span class="CodeStringLiteral">"CANoe/Serialization/modified/BytesToJSON"</span>]<br />&#160;&#160;&#160;&#160;[Serialization=<span class="CodeStringLiteral">"Plain"</span>]<br />&#160;&#160;&#160;&#160;<span class="CodeKeyword">provided data</span> bytes PlainPublisher;<br /><br />&#160;&#160;&#160;&#160;[MQTTBinding::Topic=<span class="CodeStringLiteral">"CANoe/Serialization/modified/BytesToJSON"</span>]<br />&#160;&#160;&#160;&#160;[Serialization=<span class="CodeStringLiteral">"JSON"</span>]<br />&#160;&#160;&#160;&#160;<span class="CodeKeyword">consumed data</span> outerStruct JSONReceiver;<br />&#160;&#160;}<br />&#160;&#160;IJSONModifier JSONModifier;</p>
+                        <p>When the test is started, the value of JSONPublisher is set to an instance of the <span class="bold">person struct</span>. The JSON serialization then converts the <span class="bold">struct</span> into a byte array, which is transmitted to the <span class="bold">PlainReceiver</span> as an MQTT payload. Through the following Python code, the Python JSON module is used to create a JSON dictionary from the bytes data type received:</p>
+                        <p class="SourceCode">def deserialize_person_struct(receivedBytes):<br />&#160;&#160;&#160;&#160;return json.loads(receivedBytes.decode('utf-8'))<br /><br />def serialize_outerStruct(outerData):<br />&#160;&#160;outerDataJSON = json.dumps(outerData, indent=4, cls=outerDataEncoder)<br />&#160;&#160;return bytearray(outerDataJSON.encode('utf-8'))<br /><br />def create_outerStruct_from_person(person):<br />&#160;&#160;outerData = application_layer.SerializationModel.outerStruct()<br />&#160;&#160;outerData.origAge = person['age']<br />&#160;&#160;outerData.orig.age = person['age']<br />&#160;&#160;outerData.orig.name = person['name']<br />&#160;&#160;return outerData<br /><br />@vector.canoe.measurement_script<br />class Repeater:<br />&#160;&#160;@vector.canoe.on_update(application_layer.SerializationModel.JSONModifier.PlainReceiver)<br />&#160;&#160;def on_JSONModifierPlainReceiver_update(self):<br />&#160;&#160;&#160;&#160;receivedBytes = application_layer.SerializationModel.JSONModifier.PlainReceiver.copy()<br />&#160;&#160;&#160;&#160;receivedPerson = deserialize_person_struct(receivedBytes)<br />&#160;&#160;&#160;&#160;outerData = create_outerStruct_from_person(receivedPerson)<br />&#160;&#160;&#160;&#160;application_layer.SerializationModel.JSONModifier.PlainPublisher = serialize_outerStruct(outerData)</p>
+                        <p>Then, an instance of the <span class="bold">outerData struct</span> is created, whose values are related to those of the dictionary obtained. Finally, the Python JSON module is used to convert the <span class="bold">outerData</span> instance into a <span class="bold">bytearray</span>. This is transmitted to the JSONReceiver through <span class="bold">PlainPublisher</span>. Here, the incoming payload is translated to the <span class="bold">outerStruct</span> by the <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> internal JSON serialization and thus appears in the <span class="GUI">Trace</span> window.
+The test compares whether JSONReceiver.orig corresponds to the sent value of JSONPublisher.</p>
+                    </div>
+                    <div>
+                        <h2 class="NavigationM"><a name="Modeling" id="Modeling"></a>Modeling <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                        <p>The Communication Setup, Measurement Setup and a <span class="GUI">Write</span> window are found on this desktop. The Communication Setup can be seen here. The <span class="bold">vCDL</span> language is used as the data source for modeling. A Python script is responsible for processing incoming data.</p>
+                    </div>
+                </div>
+                <p class="LinkList">&#160;</p>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="FooterWhite">
+                <table class="FooterWhite" style="border-collapse: collapse;margin-left: auto;margin-right: auto;">
+                    <col style="width: 70px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col style="width: 16px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="buttons popup-container clearfix topicToolbarProxy topicToolbarProxyFooter _Skins_HTML5TopicToolbar mc-component nocontent">
+                                    <div class="button-group-container-left">
+                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo"><a href="../../../../Shared/HowToUseOnlineHelp.htm" title="Tips for using the help" alt="Tips for using the help"><img src="../../../../../Resources/vImages/vBackstage/vHelpInfo.png" /></a>
+                                </p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo" style="text-align: right;"><span class="mc-variable Vector.BuildTime variable">2024-04-8T20:56:42</span>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <table style="width: 100%;border-collapse: separate;border-spacing: 3px 0px;margin-left: auto;margin-right: auto;caption-side: top;">
+                <col />
+                <col />
+                <col />
+                <col data-mc-conditions="BuildProcess.HTML5Link" />
+                <tbody>
+                    <tr>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;">
+                            <p class="vec_Footer">©&#160;Vector Informatik GmbH</p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;text-align: right;">
+                            <p class="vec_FooterBold">
+                                <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE&#160;Product Families</MadCap:conditionalText> Version <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.VectorTestUnitRunner">18</MadCap:conditionalText></p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="../../../../Shared/ContactCopyrightLicense.htm" class="vec_Footer MCXref xref xrefvec_Footer">Contact/Copyright/License</a>
+                            </p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="https://www.vector.com/int/en/company/get-info/privacy-policy/" target="_blank" class="vec_Footer">Data Privacy Notice</a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="CANoeDEFamily.xml" data-mc-path-to-help-system="../../../" data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../Skins/Favicons/favicon-16x16.png" /><title>Example: LIN</title>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Resources/Stylesheets/vTableMasterPageHeader.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../Resources/Stylesheets/vStylesheet.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.needs-pie
+{
+	behavior: url('../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapGlobal.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapDom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapUtilities.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapXhr.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapTextEffects.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapSlideshow.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapMessageBus.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapMessageBus.CrossFrame.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapDefault.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapMediaQueries.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAccessibility.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapHelpSystem.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAliasFile.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapTopicFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapFeedbackHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapSkinHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapToc.Breadcrumbs.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapToc.MiniToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapToc.SideMenu.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapIndex.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapGlossary.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapParser.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapSearch.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapNavigateTopics.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapLms.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapELearning.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapTopic.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapMicroContentComponent.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapSearchHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapTopicElements.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapTriPane.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/jscript" src="../../Resources/vScripts/SyntaxHighlighting.js">
+        </script>
+        <script type="text/jscript" src="../../Resources/vScripts/TabSwitch.js">
+        </script>
+        <script type="text/javascript" src="../../Resources/vScripts/Vector.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../CANoeDEFamily.htm#Topics/CLibraryAPI/CLibraryAPIExampleLIN.htm">Open topic with navigation</a>
+        </p>
+        <div class="Body">
+            <div role="main" id="mc-main-content">
+                <p class="StructurePath"><a href="../CANoeCANalyzer/CANoeDEFamily.htm" class="StructurePath" data-mc-conditions="Targets.CANoe-DE-Family"><img src="../../Resources/vImages/vToolIcons/CANoeDEFamily_Icon16_15x15.png" alt="" style="width: 15;height: 15;" />&#160;CANoe&#160;DE&#160;Product&#160;Families</a> » <a href="CLibraryAPI.htm" class="StructurePath MCXref xref xrefStructurePath">C Library API</a> » <span class="mc-variable System.Title variable">Example: LIN</span></p>
+                <h1><span class="mc-variable System.Title variable">Example: LIN</span>
+                    <br />
+                </h1>
+                <p class="MenuPath">&#160;</p>
+                <p class="ToolAvailability" data-mc-conditions="BuildProcess.ToolAvailability"><a href="../Shared/FeatureAvailability.htm" class="red" title="Feature availabilty for your product">Valid&#160;for</a>:&#160;&#160;CANoe&#160;DE<a name="aanchor14897"></a><MadCap:concept term="SFCANoeDE" />&#160;&#160;•&#160;&#160;CANoe4SW&#160;DE<a name="aanchor14898"></a><MadCap:concept term="SFCANoe4SWDE" />&#160;&#160;•&#160;&#160;</p>
+                <p class="AutoSearchFilterConcepts"><a name="aanchor14899"></a>
+                    <MadCap:concept term="SFCLibraryAPI" />
+                </p>
+                <p class="Syntax">// LIN.c : Example of a CANalyzer/CANoe C Library</p>
+                <p class="Syntax">//</p>
+                <p class="Syntax">// This example file demonstrates the usage of the LIN bus in a</p>
+                <p class="Syntax">// CANalyzer/CANoe C Library.</p>
+                <p class="Syntax">//</p>
+                <p class="Syntax">&#160;</p>
+                <p class="Syntax">#include "CCL/CCL.h"</p>
+                <p class="Syntax">&#160;</p>
+                <p class="Syntax">/* Declare all handler functions to be registered with CANoe/CANalyzer: */</p>
+                <p class="Syntax">extern void OnMeasurementPreStart();</p>
+                <p class="Syntax">extern void OnMeasurementStart();</p>
+                <p class="Syntax">extern void OnTimer(int64_t time, int32_t timerID);</p>
+                <p class="Syntax">extern void OnLinFrame0x33(struct cclLinFrame* frame);</p>
+                <p class="Syntax">extern void OnLinFrame0x34(struct cclLinFrame* frame);</p>
+                <p class="Syntax">extern void OnLinFrame0x01(struct cclLinFrame* frame);</p>
+                <p class="Syntax">extern void OnSleepModeEvent(struct cclLinSleepModeEvent* event);</p>
+                <p class="Syntax">extern void OnWakeupFrame(struct cclLinWakeupFrame* frame);</p>
+                <p class="Syntax">extern void OnError(struct cclLinError* error);</p>
+                <p class="Syntax">extern void OnSysVar_SchedulerStart(int64_t time, int32_t sysVarID);</p>
+                <p class="Syntax">extern void OnSysVar_SchedulerStop(int64_t time, int32_t sysVarID);</p>
+                <p class="Syntax">extern void OnSysVar_ChangeScheduleTable(int64_t time, int32_t sysVarID);</p>
+                <p class="Syntax">extern void OnSysVar_SendHeader(int64_t time, int32_t sysVarID);</p>
+                <p class="Syntax">extern void OnSysVar_UpdateResponse(int64_t time, int32_t sysVarID);</p>
+                <p class="Syntax">extern void OnSysVar_SendGotoSleep(int64_t time, int32_t sysVarID);</p>
+                <p class="Syntax">extern void OnSysVar_SendWakeup(int64_t time, int32_t sysVarID);</p>
+                <p class="Syntax">&#160;</p>
+                <p class="Syntax">/* Define a global timer identifier: */</p>
+                <p class="Syntax">int32_t gTimerID;</p>
+                <p class="Syntax">&#160;</p>
+                <p class="Syntax">/* Define global (CANoe/CANalyzer) system variable identifier: */</p>
+                <p class="Syntax">int32_t gSysVarID_SchedulerStart;</p>
+                <p class="Syntax">int32_t gSysVarID_SchedulerStop;</p>
+                <p class="Syntax">int32_t gSysVarID_ScheduleChange;</p>
+                <p class="Syntax">int32_t gSysVarID_SendHeader;</p>
+                <p class="Syntax">int32_t gSysVarID_UpdateResponse;</p>
+                <p class="Syntax">int32_t gSysVarID_SOF;</p>
+                <p class="Syntax">int32_t gSysVarID_SyncBreak;</p>
+                <p class="Syntax">int32_t gSysVarID_SyncDel;</p>
+                <p class="Syntax">int32_t gSysVarID_EOH;</p>
+                <p class="Syntax">int32_t gSysVarID_EOF;</p>
+                <p class="Syntax">int32_t gSysVarID_SendGotoSleep;</p>
+                <p class="Syntax">int32_t gSysVarID_SendWakeup;</p>
+                <p class="Syntax">&#160;</p>
+                <p class="Syntax">double gTimeFactorNS = 1000000000.0;</p>
+                <p class="Syntax">double gTimeFactorUS = 1000000.0;</p>
+                <p class="Syntax">&#160;</p>
+                <p class="Syntax">/* Define a global data array to be sent over the LIN bus: */</p>
+                <p class="Syntax">uint8_t gData[8] = {0, 0, 0, 0, 0, 0, 0, 0};</p>
+                <p class="Syntax">&#160;</p>
+                <p class="Syntax">/* This function will be called on loading the DLL created by this project: */</p>
+                <p class="Syntax">void cclOnDllLoad()</p>
+                <p class="Syntax">{</p>
+                <p class="Syntax">&#160;&#160;/* Register handler for measurement pre start and measurement start. These handlers</p>
+                <p class="Syntax">&#160;&#160;&#160;&#160;are needed to register further handlers and to initialize data structures used</p>
+                <p class="Syntax">&#160;&#160;&#160;&#160;by the handlers. */</p>
+                <p class="Syntax">&#160;&#160;cclSetMeasurementPreStartHandler(&amp;OnMeasurementPreStart);</p>
+                <p class="Syntax">&#160;&#160;cclSetMeasurementStartHandler(&amp;OnMeasurementStart);</p>
+                <p class="Syntax">}</p>
+                <p class="Syntax">&#160;</p>
+                <p class="Syntax">/* Handler function called just before measurement starts. Registers further handlers</p>
+                <p class="Syntax">&#160;&#160;and initializes data structures. Any handler should be registered here, because</p>
+                <p class="Syntax">&#160;&#160;otherwise they will not be called on measurement start.*/</p>
+                <p class="Syntax">void OnMeasurementPreStart()</p>
+                <p class="Syntax">{</p>
+                <p class="Syntax">&#160;&#160;uint8_t data[8] = {1, 2, 3, 4, 5, 6, 7, 8};</p>
+                <p class="Syntax">&#160;</p>
+                <p class="Syntax">&#160;&#160;/* Register timer handler and save the identifier returned for further usage. */</p>
+                <p class="Syntax">&#160;&#160;gTimerID = cclTimerCreate(&amp;OnTimer);</p>
+                <p class="Syntax">&#160;</p>
+                <p class="Syntax">&#160;&#160;/* Register a handler function for LIN frame 0x33 on channel 1. The handler will be</p>
+                <p class="Syntax"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;called by CANoe/CANalyzer whenever LIN frame 0x33 is transmitted or received on</p>
+                <p class="Syntax">&#160;&#160;&#160;&#160;channel 1: */</p>
+                <p class="Syntax">&#160;&#160;if  (CCL_SUCCESS != cclLinSetFrameHandler(1, 0x33, &amp;OnLinFrame0x33))</p>
+                <p class="Syntax">&#160;&#160;{</p>
+                <p class="Syntax">&#160;&#160;&#160;&#160;cclWrite("C Library Example: Could not set frame handler OnLinFrame0x33");</p>
+                <p class="Syntax">&#160;&#160;}</p>
+                <p class="Syntax">&#160;</p>
+                <p class="Syntax">&#160;&#160;/* Do the same for LIN frame 0x34...: */</p>
+                <p class="Syntax">&#160;&#160;if  (CCL_SUCCESS != cclLinSetFrameHandler(1, 0x34, &amp;OnLinFrame0x34))</p>
+                <p class="Syntax">&#160;&#160;{</p>
+                <p class="Syntax">&#160;&#160;&#160;&#160;cclWrite("C Library Example: Could not set frame handler OnLinFrame0x34");</p>
+                <p class="Syntax">&#160;&#160;}</p>
+                <p class="Syntax">&#160;</p>
+                <p class="Syntax">&#160;&#160;/* ... and for LIN frame 0x01: */</p>
+                <p class="Syntax">&#160;&#160;if  (CCL_SUCCESS != cclLinSetFrameHandler(1, 0x01, &amp;OnLinFrame0x01))</p>
+                <p class="Syntax">&#160;&#160;{</p>
+                <p class="Syntax">&#160;&#160;&#160;&#160;cclWrite("C Library Example: Could not set frame handler OnLinFrame0x01");</p>
+                <p class="Syntax">&#160;&#160;}</p>
+                <p class="Syntax">&#160;</p>
+                <p class="Syntax">&#160;&#160;/* Configure LIN responses for simulation with the data array defined above.</p>
+                <p class="Syntax">&#160;&#160;&#160;&#160;First for LIN frame 0x33. The response of the frame will be sent with the data...:*/</p>
+                <p class="Syntax">&#160;&#160;if (CCL_SUCCESS != cclLinUpdateResponseData(1, 0x33, 6, data))</p>
+                <p class="Syntax">&#160;&#160;{</p>
+                <p class="Syntax">&#160;&#160;&#160;&#160;cclWrite("C Library Example: Could not update response data of ID 0x33");</p>
+                <p class="Syntax">&#160;&#160;}</p>
+                <p class="Syntax">&#160;</p>
+                <p class="Syntax">&#160;&#160;/* ... then for LIN frame 0x34...: */</p>
+                <p class="Syntax">&#160;&#160;if (CCL_SUCCESS != cclLinUpdateResponseData(1, 0x34, 6, data))</p>
+                <p class="Syntax">&#160;&#160;{</p>
+                <p class="Syntax">&#160;&#160;&#160;&#160;cclWrite("C Library Example: Could not update response data of ID 0x34");</p>
+                <p class="Syntax">&#160;&#160;}</p>
+                <p class="Syntax">&#160;</p>
+                <p class="Syntax">&#160;&#160;/* ... and for LIN frame 0x36: */</p>
+                <p class="Syntax">&#160;&#160;if (CCL_SUCCESS != cclLinUpdateResponseData(1, 0x36, 3, data))</p>
+                <p class="Syntax">&#160;&#160;{</p>
+                <p class="Syntax">&#160;&#160;&#160;&#160;cclWrite("C Library Example: Could not update response data of ID 0x36");</p>
+                <p class="Syntax">&#160;&#160;}</p>
+                <p class="Syntax">&#160;</p>
+                <p class="Syntax">&#160;&#160;/* Configure identifier not defined in the LDF. Here we use the global data array: */</p>
+                <p class="Syntax">&#160;&#160;if (CCL_SUCCESS != cclLinUpdateResponseData(1, 0x01, 2, gData))</p>
+                <p class="Syntax">&#160;&#160;{</p>
+                <p class="Syntax">&#160;&#160;&#160;&#160;cclWrite("C Library Example: Could not update response data if ID 0x01");</p>
+                <p class="Syntax">&#160;&#160;}</p>
+                <p class="Syntax">&#160;</p>
+                <p class="Syntax">&#160;&#160;/* Register a handler function for LIN frame 0x33 on channel 2. Note that this only</p>
+                <p class="Syntax">&#160;&#160;&#160;&#160;works if the LIN channels 1 and 2 are connected to each other (looped): */</p>
+                <p class="Syntax">&#160;&#160;if  (CCL_SUCCESS != cclLinSetFrameHandler(2, 0x33, &amp;OnLinFrame0x33))</p>
+                <p class="Syntax">&#160;&#160;{</p>
+                <p class="Syntax">&#160;&#160;&#160;&#160;cclWrite("C Library Example: Could not set message handler OnLinFrame0x33");</p>
+                <p class="Syntax">&#160;&#160;}</p>
+                <p class="Syntax">&#160;</p>
+                <p class="Syntax">&#160;&#160;/* Do the same for LIN frame 0x34: */</p>
+                <p class="Syntax">&#160;&#160;if  (CCL_SUCCESS != cclLinSetFrameHandler(2, 0x34, &amp;OnLinFrame0x34))</p>
+                <p class="Syntax">&#160;&#160;{</p>
+                <p class="Syntax">&#160;&#160;&#160;&#160;cclWrite("C Library Example: Could not set message handler OnLinFrame0x34");</p>
+                <p class="Syntax">&#160;&#160;}</p>
+                <p class="Syntax">&#160;</p>
+                <p class="Syntax">&#160;&#160;/* Register a sleep mode event handler on channel 1. This handler is called whenever</p>
+                <p class="Syntax">&#160;&#160;&#160;&#160;a sleep mode event appears on the LIN bus: */</p>
+                <p class="Syntax">&#160;&#160;if (CCL_SUCCESS != cclLinSetSleepModeEventHandler(1, &amp;OnSleepModeEvent))</p>
+                <p class="Syntax">&#160;&#160;{</p>
+                <p class="Syntax">&#160;&#160;&#160;&#160;cclWrite("C Library Example: Could not set event handler OnSleepModeEvent");</p>
+                <p class="Syntax">&#160;&#160;}</p>
+                <p class="Syntax">&#160;</p>
+                <p class="Syntax">&#160;&#160;/* Register a wakeup frame handler on channel 1. This handler is called whenever a</p>
+                <p class="Syntax">&#160;&#160;&#160;&#160;wakeup frame appears on the LIN bus: */</p>
+                <p class="Syntax">&#160;&#160;if (CCL_SUCCESS != cclLinSetWakeupFrameHandler(1, &amp;OnWakeupFrame))</p>
+                <p class="Syntax">&#160;&#160;{</p>
+                <p class="Syntax">&#160;&#160;&#160;&#160;cclWrite("C Library Example: Could not set message handler OnWakeupFrame");</p>
+                <p class="Syntax">&#160;&#160;}</p>
+                <p class="Syntax">&#160;</p>
+                <p class="Syntax">&#160;&#160;/* Register an error handler for all LIN frames on channel 1. You may also register</p>
+                <p class="Syntax">&#160;&#160;&#160;&#160;the handler only for a specific LIN frame by passing the frame identifier instead</p>
+                <p class="Syntax">&#160;&#160;&#160;&#160;of CCL_LIN_ALLMESSAGES to the function: */</p>
+                <p class="Syntax">&#160;&#160;if (CCL_SUCCESS != cclLinSetErrorHandler(1, CCL_LIN_ALLMESSAGES, &amp;OnError))</p>
+                <p class="Syntax">&#160;&#160;{</p>
+                <p class="Syntax">&#160;&#160;&#160;&#160;cclWrite("C Library Example: Could not set error handler OnError");</p>
+                <p class="Syntax">&#160;&#160;}</p>
+                <p class="Syntax">&#160;</p>
+                <p class="Syntax">&#160;&#160;/* Obtain system variable identifier from CANoe/CANalyzer. These are needed to access</p>
+                <p class="Syntax">&#160;&#160;&#160;&#160;the system variables for modification: */</p>
+                <p class="Syntax">&#160;&#160;gSysVarID_SchedulerStart = cclSysVarGetID("LIN::SchedulerStart");</p>
+                <p class="Syntax">&#160;&#160;gSysVarID_SchedulerStop = cclSysVarGetID("LIN::SchedulerStop");</p>
+                <p class="Syntax">&#160;&#160;gSysVarID_ScheduleChange = cclSysVarGetID("LIN::ChangeScheduleTable");</p>
+                <p class="Syntax">&#160;&#160;gSysVarID_SendHeader = cclSysVarGetID("LIN::SendHeader");</p>
+                <p class="Syntax">&#160;&#160;gSysVarID_UpdateResponse = cclSysVarGetID("LIN::UpdateResponse");</p>
+                <p class="Syntax">&#160;&#160;gSysVarID_SOF = cclSysVarGetID("LIN::SOF");</p>
+                <p class="Syntax">&#160;&#160;gSysVarID_SyncBreak = cclSysVarGetID("LIN::SyncBreak");</p>
+                <p class="Syntax">&#160;&#160;gSysVarID_SyncDel = cclSysVarGetID("LIN::SyncDel");</p>
+                <p class="Syntax">&#160;&#160;gSysVarID_EOH = cclSysVarGetID("LIN::EOH");</p>
+                <p class="Syntax">&#160;&#160;gSysVarID_EOF = cclSysVarGetID("LIN::EOF");</p>
+                <p class="Syntax">&#160;&#160;gSysVarID_SendGotoSleep = cclSysVarGetID("LIN::SendGotoSleep");</p>
+                <p class="Syntax">&#160;&#160;gSysVarID_SendWakeup = cclSysVarGetID("LIN::SendWakeup");</p>
+                <p class="Syntax">&#160;</p>
+                <p class="Syntax">&#160;&#160;/* Register some system variable handler functions using the identifiers. The functions</p>
+                <p class="Syntax">&#160;&#160;&#160;&#160;will be called by CANoe/CANalyzer whenever the value of the system variable to which</p>
+                <p class="Syntax">&#160;&#160;&#160;&#160;the function is registered gets an update: */</p>
+                <p class="Syntax">&#160;&#160;cclSysVarSetHandler(gSysVarID_SchedulerStart, &amp;OnSysVar_SchedulerStart);</p>
+                <p class="Syntax">&#160;&#160;cclSysVarSetHandler(gSysVarID_SchedulerStop, &amp;OnSysVar_SchedulerStop);</p>
+                <p class="Syntax">&#160;&#160;cclSysVarSetHandler(gSysVarID_ScheduleChange, &amp;OnSysVar_ChangeScheduleTable);</p>
+                <p class="Syntax">&#160;&#160;cclSysVarSetHandler(gSysVarID_SendHeader, &amp;OnSysVar_SendHeader);</p>
+                <p class="Syntax">&#160;&#160;cclSysVarSetHandler(gSysVarID_UpdateResponse, &amp;OnSysVar_UpdateResponse);</p>
+                <p class="Syntax">&#160;&#160;cclSysVarSetHandler(gSysVarID_SendGotoSleep, &amp;OnSysVar_SendGotoSleep);</p>
+                <p class="Syntax">&#160;&#160;cclSysVarSetHandler(gSysVarID_SendWakeup, &amp;OnSysVar_SendWakeup);</p>
+                <p class="Syntax">}</p>
+                <p class="Syntax">&#160;</p>
+                <p class="Syntax">/* Called on measurement start. Can be used e.g. to initialize internal variables with</p>
+                <p class="Syntax">&#160;&#160;default values and to start the simulation.</p>
+                <p class="Syntax">&#160;&#160;In this example it just issues a message to the Write window of CANoe/CANalyzer. */</p>
+                <p class="Syntax">void OnMeasurementStart()</p>
+                <p class="Syntax">{</p>
+                <p class="Syntax">&#160;&#160;cclWrite("C Library Example: OnMeasurementStart");</p>
+                <p class="Syntax">}</p>
+                <p class="Syntax">&#160;</p>
+                <p class="Syntax">/* Called if the timer expires. Can be used to react on timing events.</p>
+                <p class="Syntax">&#160;&#160;In this example it changes the currently set schedule table back to the first</p>
+                <p class="Syntax">&#160;&#160;schedule table. */</p>
+                <p class="Syntax">void OnTimer(int64_t time, int32_t timerID)</p>
+                <p class="Syntax">{</p>
+                <p class="Syntax">&#160;&#160;/* Change schedule table back to the first schedule table. */</p>
+                <p class="Syntax">&#160;&#160;cclLinChangeSchedtable(1, 0);</p>
+                <p class="Syntax">}</p>
+                <p class="Syntax">&#160;</p>
+                <p class="Syntax">/* Handler function for LIN frame 0x33. */</p>
+                <p class="Syntax">void OnLinFrame0x33(struct cclLinFrame* frame)</p>
+                <p class="Syntax">{</p>
+                <p class="Syntax">&#160;&#160;/* Do something (hopefully useful) with the frame, e.g. modify its data. Here we</p>
+                <p class="Syntax">&#160;&#160;&#160;&#160;check only the channel on which the frame came in and issue a message to the</p>
+                <p class="Syntax">&#160;&#160;&#160;&#160;Write window of CANoe/CANalyzer: */</p>
+                <p class="Syntax">&#160;&#160;if (frame-&gt;channel == 2)</p>
+                <p class="Syntax">&#160;&#160;{</p>
+                <p class="Syntax">&#160;&#160;&#160;&#160;cclWrite("C Library Example: OnLinFrame0x33 on channel 2");</p>
+                <p class="Syntax">&#160;&#160;}</p>
+                <p class="Syntax">}</p>
+                <p class="Syntax">&#160;</p>
+                <p class="Syntax">/* Handler function for LIN frame 0x34. */</p>
+                <p class="Syntax">void OnLinFrame0x34(struct cclLinFrame* frame)</p>
+                <p class="Syntax">{</p>
+                <p class="Syntax">&#160;&#160;/* Same as for LIN frame 0x33: */</p>
+                <p class="Syntax">&#160;&#160;if (frame-&gt;channel == 2)</p>
+                <p class="Syntax">&#160;&#160;{</p>
+                <p class="Syntax">&#160;&#160;&#160;&#160;cclWrite("C Library Example: OnLinFrame0x34 on channel 2");</p>
+                <p class="Syntax">&#160;&#160;}</p>
+                <p class="Syntax">}</p>
+                <p class="Syntax">&#160;</p>
+                <p class="Syntax">/* Handler function for LIN frame 0x01. */</p>
+                <p class="Syntax">void OnLinFrame0x01(struct cclLinFrame* frame)</p>
+                <p class="Syntax">{</p>
+                <p class="Syntax">&#160;&#160;/* Set some system variables with values computed from the time values of</p>
+                <p class="Syntax">&#160;&#160;&#160;&#160;the frame. To do so, we need the identifier of the system variables</p>
+                <p class="Syntax">&#160;&#160;&#160;&#160;obtained in OnMeasurementPreStart(): */</p>
+                <p class="Syntax">&#160;&#160;double sof         = frame-&gt;timestampSOF/gTimeFactorNS;</p>
+                <p class="Syntax">&#160;&#160;double syncBreak   = frame-&gt;timeSyncBreak/gTimeFactorUS;</p>
+                <p class="Syntax">&#160;&#160;double syncDel     = frame-&gt;timeSyncDel/gTimeFactorUS;</p>
+                <p class="Syntax">&#160;&#160;double eoh         = frame-&gt;timestampEOH/gTimeFactorNS;</p>
+                <p class="Syntax">&#160;&#160;double eof         = frame-&gt;timestampEOF/gTimeFactorNS;</p>
+                <p class="Syntax">&#160;</p>
+                <p class="Syntax">&#160;&#160;cclSysVarSetFloat(gSysVarID_SOF       , sof);</p>
+                <p class="Syntax">&#160;&#160;cclSysVarSetFloat(gSysVarID_SyncBreak , syncBreak);</p>
+                <p class="Syntax">&#160;&#160;cclSysVarSetFloat(gSysVarID_SyncDel   , syncDel);</p>
+                <p class="Syntax">&#160;&#160;cclSysVarSetFloat(gSysVarID_EOH       , eoh);</p>
+                <p class="Syntax">&#160;&#160;cclSysVarSetFloat(gSysVarID_EOF       , eof);</p>
+                <p class="Syntax">&#160;&#160;/* While measurement is running, you should see the system variable values</p>
+                <p class="Syntax">&#160;&#160;&#160;&#160;changing in the "Frame Timings" window of the configuration in CANoe/CANalyzer. */</p>
+                <p class="Syntax">}</p>
+                <p class="Syntax">&#160;</p>
+                <p class="Syntax">/* Handler function for system variable "SchedulerStart". This handler is called when</p>
+                <p class="Syntax">&#160;&#160;you click on the "Start Scheduler" button in the "Control of LIN Transmission" window</p>
+                <p class="Syntax">&#160;&#160;of the CANoe/CANalyzer configuration. */</p>
+                <p class="Syntax">void OnSysVar_SchedulerStart(int64_t time, int32_t sysVarID)</p>
+                <p class="Syntax">{</p>
+                <p class="Syntax">&#160;&#160;/* Get current value of the system variable: */</p>
+                <p class="Syntax">&#160;&#160;int32_t startScheduler;</p>
+                <p class="Syntax">&#160;&#160;cclSysVarGetInteger(gSysVarID_SchedulerStart, &amp;startScheduler);</p>
+                <p>&#160;</p>
+                <p class="Syntax">&#160;&#160;if (startScheduler == 1)</p>
+                <p class="Syntax">&#160;&#160;{</p>
+                <p class="Syntax">&#160;&#160;&#160;&#160;/* Start scheduler on channel 1: */</p>
+                <p class="Syntax">&#160;&#160;&#160;&#160;cclLinStartScheduler(1);</p>
+                <p class="Syntax">cclWrite("C Library Example: OnSysVar_SchedulerStart");</p>
+                <p class="Syntax">&#160;&#160;&#160;&#160;/* You should see frames getting periodically updated in the Trace window. */</p>
+                <p class="Syntax">&#160;&#160;}</p>
+                <p class="Syntax">}</p>
+                <p class="Syntax">&#160;</p>
+                <p class="Syntax">/* Handler function for system variable "SchedulerStop". This handler is called when</p>
+                <p class="Syntax">&#160;&#160;you click on the "Stop Scheduler" button in the "Control of LIN Transmission" window</p>
+                <p class="Syntax">&#160;&#160;of the CANoe/CANalyzer configuration. */</p>
+                <p class="Syntax">void OnSysVar_SchedulerStop(int64_t time, int32_t sysVarID)</p>
+                <p class="Syntax">{</p>
+                <p class="Syntax">&#160;&#160;/* Get current value of the system variable: */</p>
+                <p class="Syntax">&#160;&#160;int32_t stopScheduler;</p>
+                <p class="Syntax">&#160;&#160;cclSysVarGetInteger(gSysVarID_SchedulerStop, &amp;stopScheduler);</p>
+                <p class="Syntax">&#160;</p>
+                <p class="Syntax">&#160;&#160;if (stopScheduler == 1)</p>
+                <p class="Syntax">&#160;&#160;{</p>
+                <p class="Syntax">&#160;&#160;&#160;&#160;/* Stop scheduler on channel 1: */</p>
+                <p class="Syntax">&#160;&#160;&#160;&#160;cclLinStopScheduler(1);</p>
+                <p class="Syntax">&#160;&#160;&#160;&#160;cclWrite("C Library Example: OnSysVar_SchedulerStop");</p>
+                <p class="Syntax">&#160;&#160;&#160;&#160;/* You should see either no frame at all or frames not getting updated in the Trace window. */</p>
+                <p class="Syntax">&#160;&#160;}</p>
+                <p class="Syntax">}</p>
+                <p class="Syntax">&#160;</p>
+                <p class="Syntax">/* Handler function for system variable "ChangeScheduleTable". This handler is called when</p>
+                <p class="Syntax">&#160;&#160;you click on the "Change Table" button in the "Control of LIN Transmission" window</p>
+                <p class="Syntax">&#160;&#160;of the CANoe/CANalyzer configuration. */</p>
+                <p class="Syntax">void OnSysVar_ChangeScheduleTable(int64_t time, int32_t sysVarID)</p>
+                <p class="Syntax">{</p>
+                <p class="Syntax">&#160;&#160;/* Get current value of the system variable: */</p>
+                <p class="Syntax">&#160;&#160;int32_t tableIndex;</p>
+                <p class="Syntax">&#160;&#160;cclSysVarGetInteger(gSysVarID_ScheduleChange, &amp;tableIndex);</p>
+                <p class="Syntax">&#160;</p>
+                <p class="Syntax">&#160;&#160;if (tableIndex == 1)</p>
+                <p class="Syntax">&#160;&#160;{</p>
+                <p class="Syntax">&#160;&#160;&#160;&#160;/* Change table to index 1 and set timer to 5 seconds. Note that the table indexes are null based,</p>
+                <p class="Syntax">&#160;&#160;&#160;&#160;&#160;&#160;that is: tableIndex 0 is the first, tableIndex 1 the second schedule table (etc.).*/</p>
+                <p class="Syntax">&#160;&#160;&#160;&#160;cclLinChangeSchedtable(1, tableIndex);</p>
+                <p class="Syntax">&#160;&#160;&#160;&#160;cclTimerSet(gTimerID, cclTimeMilliseconds(5000));</p>
+                <p class="Syntax">&#160;&#160;&#160;&#160;cclWrite("C Library Example: OnSysVar_ChangeScheduleTable");</p>
+                <p class="Syntax">&#160;&#160;&#160;&#160;/* You should see frames sent by the second schedule table until the timer expires (about 5 seconds).</p>
+                <p class="Syntax">&#160;&#160;&#160;&#160;&#160;&#160;After the timer has expired, handler function OnTimer() will be called and sets the schedule table</p>
+                <p class="Syntax">&#160;&#160;&#160;&#160;&#160;&#160;back to the first table. */</p>
+                <p class="Syntax">&#160;&#160;}</p>
+                <p class="Syntax">}</p>
+                <p class="Syntax">&#160;</p>
+                <p class="Syntax">/* Handler function for system variable "SendHeader". This handler is called when you click</p>
+                <p class="Syntax">&#160;&#160;on the "Send Header ID = 0x01" button in the "Control of LIN Transmission" window of the</p>
+                <p class="Syntax">&#160;&#160;CANoe/CANalyzer configuration. */</p>
+                <p class="Syntax">void OnSysVar_SendHeader(int64_t time, int32_t sysVarID)</p>
+                <p class="Syntax">{</p>
+                <p class="Syntax">&#160;&#160;/* Get current value of the system variable: */</p>
+                <p class="Syntax">&#160;&#160;int32_t sendHeader;</p>
+                <p class="Syntax">&#160;&#160;cclSysVarGetInteger(gSysVarID_SendHeader, &amp;sendHeader);</p>
+                <p class="Syntax">&#160;</p>
+                <p class="Syntax">&#160;&#160;if (sendHeader == 1)</p>
+                <p class="Syntax">&#160;&#160;{</p>
+                <p class="Syntax">&#160;&#160;&#160;&#160;/* Send header of frame identifier 0x01 on channel 1: */</p>
+                <p class="Syntax">&#160;&#160;&#160;&#160;cclLinSendHeader(1, 0x01);</p>
+                <p class="Syntax">&#160;&#160;&#160;&#160;cclWrite("C Library Example: OnSysVar_SendHeader");</p>
+                <p class="Syntax">&#160;&#160;}</p>
+                <p class="Syntax">}</p>
+                <p class="Syntax">&#160;</p>
+                <p class="Syntax">/* Handler function for system variable "UpdateResponse". This handler is called when you click</p>
+                <p class="Syntax">&#160;&#160;on the "Update Response ID = 0x01" button in the "Control of LIN Transmission" window of the</p>
+                <p class="Syntax">&#160;&#160;CANoe/CANalyzer configuration. */</p>
+                <p class="Syntax">void OnSysVar_UpdateResponse(int64_t time, int32_t sysVarID)</p>
+                <p class="Syntax">{</p>
+                <p class="Syntax">&#160;&#160;/* Get current value of the system variable: */</p>
+                <p class="Syntax">&#160;&#160;int32_t updateResponse;</p>
+                <p class="Syntax">&#160;&#160;cclSysVarGetInteger(gSysVarID_UpdateResponse, &amp;updateResponse);</p>
+                <p class="Syntax">&#160;</p>
+                <p class="Syntax">&#160;&#160;if (updateResponse == 1)</p>
+                <p class="Syntax">&#160;&#160;{</p>
+                <p class="Syntax">&#160;&#160;&#160;&#160;/* Modify global data array in some way...: */</p>
+                <p class="Syntax">&#160;&#160;&#160;&#160;gData[0] += 1;</p>
+                <p class="Syntax">&#160;&#160;&#160;&#160;gData[1] += 1;</p>
+                <p class="Syntax">&#160;&#160;&#160;&#160;/* ... and update the response of the frame with the modified data: */</p>
+                <p class="Syntax">&#160;&#160;&#160;&#160;cclLinUpdateResponseData(1, 0x01, 2, gData);</p>
+                <p class="Syntax">&#160;&#160;&#160;&#160;cclWrite("C Library Example: OnSysVar_UpdateResponse");</p>
+                <p class="Syntax">&#160;&#160;}</p>
+                <p class="Syntax">}</p>
+                <p class="Syntax">&#160;</p>
+                <p class="Syntax">/* Handler function for system variable "SendGotoSleep". This handler is called when you click</p>
+                <p class="Syntax">&#160;&#160;on the "Goto Sleep" button in the "Control of LIN Transmission" window of the CANoe/CANalyzer</p>
+                <p class="Syntax">&#160;&#160;configuration. */</p>
+                <p class="Syntax">void OnSysVar_SendGotoSleep(int64_t time, int32_t sysVarID)</p>
+                <p class="Syntax">{</p>
+                <p class="Syntax">&#160;&#160;/* Get current value of the system variable: */</p>
+                <p class="Syntax">&#160;&#160;int32_t gotoSleep;</p>
+                <p class="Syntax">&#160;&#160;cclSysVarGetInteger(gSysVarID_SendGotoSleep, &amp;gotoSleep);</p>
+                <p class="Syntax">&#160;</p>
+                <p class="Syntax">&#160;&#160;if (gotoSleep == 1)</p>
+                <p class="Syntax">&#160;&#160;{</p>
+                <p class="Syntax">&#160;&#160;&#160;&#160;/* Send goto sleep event to the LIN network on channel 1:*/</p>
+                <p class="Syntax">&#160;&#160;&#160;&#160;cclLinGotoSleep(1);</p>
+                <p class="Syntax">&#160;&#160;&#160;&#160;cclWrite("C Library Example: OnSysVar_SendGotoSleep");</p>
+                <p class="Syntax">&#160;&#160;&#160;&#160;/* Two green MasterReq ("Go-to-Sleep") events, one for each channel, should appear in</p>
+                <p class="Syntax">&#160;&#160;&#160;&#160;&#160;&#160;the Trace window. Update of LIN frames should be halted.*/</p>
+                <p class="Syntax">&#160;&#160;}</p>
+                <p class="Syntax">}</p>
+                <p class="Syntax">&#160;</p>
+                <p class="Syntax">/* Handler function for system variable "SendWakeup". This handler is called when you click</p>
+                <p class="Syntax">&#160;&#160;on the "Wakeup" button in the "Control of LIN Transmission" window of the CANoe/CANalyzer</p>
+                <p class="Syntax">&#160;&#160;configuration. */</p>
+                <p class="Syntax">void OnSysVar_SendWakeup(int64_t time, int32_t sysVarID)</p>
+                <p class="Syntax">{</p>
+                <p class="Syntax">&#160;&#160;/* Get current value of the system variable: */</p>
+                <p class="Syntax">&#160;&#160;int32_t wakeup;</p>
+                <p class="Syntax">&#160;&#160;cclSysVarGetInteger(gSysVarID_SendWakeup, &amp;wakeup);</p>
+                <p class="Syntax">&#160;</p>
+                <p class="Syntax">&#160;&#160;if (wakeup == 1)</p>
+                <p class="Syntax">&#160;&#160;{</p>
+                <p class="Syntax">&#160;&#160;&#160;&#160;/* Send wakeup request to the LIN network on channel 1:*/</p>
+                <p class="Syntax">&#160;&#160;&#160;&#160;cclLinWakeup(1);</p>
+                <p class="Syntax">&#160;&#160;&#160;&#160;cclWrite("C Library Example: OnSysVar_SendWakeup");</p>
+                <p class="Syntax">&#160;&#160;&#160;&#160;/* Two green WakeupRequest events, one for each channel, should appear in the Trace window.</p>
+                <p class="Syntax">&#160;&#160;&#160;&#160;&#160;&#160;All LIN frames should be updated again.*/</p>
+                <p class="Syntax">&#160;&#160;}</p>
+                <p class="Syntax">}</p>
+                <p class="Syntax">&#160;</p>
+                <p class="Syntax">/* Handler function for sleep mode events. Can be used to pause the simulation. */</p>
+                <p class="Syntax">void OnSleepModeEvent(struct cclLinSleepModeEvent* event)</p>
+                <p class="Syntax">{</p>
+                <p class="Syntax">&#160;&#160;/* Here we just issue messages to the Write window of CANoe/CANalyzer: */</p>
+                <p class="Syntax">&#160;&#160;if (event-&gt;channel == 1)</p>
+                <p class="Syntax">&#160;&#160;{</p>
+                <p class="Syntax">&#160;&#160;&#160;&#160;cclWrite("C Library Example: OnSleepModeEvent on channel 1");</p>
+                <p class="Syntax">&#160;&#160;}</p>
+                <p class="Syntax">&#160;&#160;else</p>
+                <p class="Syntax">&#160;&#160;{</p>
+                <p class="Syntax">&#160;&#160;&#160;&#160;cclWrite("C Library Example: OnSleepModeEvent on channel 2");</p>
+                <p class="Syntax">&#160;&#160;}</p>
+                <p class="Syntax">}</p>
+                <p class="Syntax">&#160;</p>
+                <p class="Syntax">/* Handler function for wakeup frames. Can be used to restart the simulation. */</p>
+                <p class="Syntax">void OnWakeupFrame(struct cclLinWakeupFrame* frame)</p>
+                <p class="Syntax">{</p>
+                <p class="Syntax">&#160;&#160;/* Here we just issue messages to the Write window of CANoe/CANalyzer: */</p>
+                <p class="Syntax">&#160;&#160;if (frame-&gt;channel == 1)</p>
+                <p class="Syntax">&#160;&#160;{</p>
+                <p class="Syntax">&#160;&#160;&#160;&#160;cclWrite("C Library Example: OnWakeupFrame on channel 1");</p>
+                <p class="Syntax">&#160;&#160;}</p>
+                <p class="Syntax">&#160;&#160;else</p>
+                <p class="Syntax">&#160;&#160;{</p>
+                <p class="Syntax">&#160;&#160;&#160;&#160;cclWrite("C Library Example: OnWakeupFrame on channel 2");</p>
+                <p class="Syntax">&#160;&#160;}</p>
+                <p class="Syntax">}</p>
+                <p class="Syntax">&#160;</p>
+                <p class="Syntax">/* Error handler function. Should be implemented to allow the simulation to react on errors. */</p>
+                <p class="Syntax">void OnError(struct cclLinError* error)</p>
+                <p class="Syntax">{</p>
+                <p class="Syntax">&#160;&#160;/* Use this handler function to implement a proper error handling in the simulation. In this</p>
+                <p class="Syntax">&#160;&#160;&#160;&#160;example, we just issue a message for each of the error types known by CANoe/CANalyzer to</p>
+                <p class="Syntax">&#160;&#160;&#160;&#160;the Write window: */</p>
+                <p class="Syntax">&#160;&#160;switch (error-&gt;type)</p>
+                <p class="Syntax">&#160;&#160;{</p>
+                <p class="Syntax">&#160;&#160;case CCL_LIN_ERROR_CHECKSUM:</p>
+                <p class="Syntax">&#160;&#160;&#160;&#160;cclPrintf("C Library Example: Checksum error (Frame Id: 0x%x, CRC=%i)",</p>
+                <p class="Syntax">&#160;&#160;&#160;&#160;&#160;&#160;error-&gt;id, error-&gt;crc);</p>
+                <p class="Syntax">&#160;&#160;&#160;&#160;break;</p>
+                <p class="Syntax">&#160;&#160;case CCL_LIN_ERROR_TRANSMISSION:</p>
+                <p class="Syntax">&#160;&#160;&#160;&#160;cclPrintf("C Library Example: Transmission error (Full time: %i, Header time: %i)",</p>
+                <p class="Syntax">&#160;&#160;&#160;&#160;&#160;&#160;error-&gt;fullTime, error-&gt;headerTime);</p>
+                <p class="Syntax">&#160;&#160;&#160;&#160;break;</p>
+                <p class="Syntax">&#160;&#160;case CCL_LIN_ERROR_RECEIVE:</p>
+                <p class="Syntax">&#160;&#160;&#160;&#160;cclPrintf("C Library Example: Receive error (Frame Id: 0x%x, Expected DLC: %i, Offending byte: %i, Short error: %i)",</p>
+                <p class="Syntax">&#160;&#160;&#160;&#160;&#160;&#160;error-&gt;id, error-&gt;dlc, error-&gt;offendingByte, error-&gt;shortError);</p>
+                <p class="Syntax">&#160;&#160;&#160;&#160;break;</p>
+                <p class="Syntax">&#160;&#160;case CCL_LIN_ERROR_SYNC:</p>
+                <p class="Syntax">&#160;&#160;&#160;&#160;cclWrite("C Library Example: Sync error");</p>
+                <p class="Syntax">&#160;&#160;&#160;&#160;break;</p>
+                <p class="Syntax">&#160;&#160;case CCL_LIN_ERROR_SLAVETIMEOUT:</p>
+                <p class="Syntax">&#160;&#160;&#160;&#160;cclPrintf("C Library Example: Slave Timeout error (Slave Id: 0x%x)",</p>
+                <p class="Syntax">&#160;&#160;&#160;&#160;&#160;&#160;error-&gt;slaveId);</p>
+                <p class="Syntax">&#160;&#160;&#160;&#160;break;</p>
+                <p class="Syntax">&#160;&#160;default:</p>
+                <p class="Syntax">&#160;&#160;&#160;&#160;break;</p>
+                <p class="Syntax">&#160;&#160;}</p>
+                <p class="Syntax">}</p>
+                <p class="LinkList"><a href="CLibraryAPIExampleEthernet.htm" class="LinkList">Example: Ethernet</a>&#160;&#160;•&#160;&#160;<a href="CLibraryAPIExampleCAN.htm" class="LinkList">Example: CAN</a>&#160;&#160;•&#160;&#160;<a href="CLibraryAPIExampleGlobalEventHandler.htm" class="LinkList">Example: GlobalEventHandler</a>&#160;&#160;•&#160;&#160;<a href="CLibraryAPIExampleSystemVariables.htm" class="LinkList">Example: SystemVariables</a>&#160;&#160;•&#160;&#160;<a href="CLibraryAPIExampleSignal.htm" class="LinkList">Example: Signal</a>&#160;&#160;•&#160;&#160;<a href="CLibraryAPIExampleTimer.htm" class="LinkList">Example: Timer</a></p>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="FooterWhite">
+                <table class="FooterWhite" style="border-collapse: collapse;margin-left: auto;margin-right: auto;">
+                    <col style="width: 70px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col style="width: 16px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col data-mc-conditions="" />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="buttons popup-container clearfix topicToolbarProxy topicToolbarProxyFooter _Skins_HTML5TopicToolbar mc-component nocontent">
+                                    <div class="button-group-container-left">
+                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo"><a href="../Shared/HowToUseOnlineHelp.htm" title="Tips for using the help" alt="Tips for using the help"><img src="../../Resources/vImages/vBackstage/vHelpInfo.png" /></a>
+                                </p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo">•&#160;&#160;Technical&#160;References are only&#160;available&#160;in&#160;English</p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo" style="text-align: right;"><span class="mc-variable Vector.BuildTime variable">2024-04-8T20:56:42</span>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <table style="width: 100%;border-collapse: separate;border-spacing: 3px 0px;margin-left: auto;margin-right: auto;caption-side: top;">
+                <col />
+                <col />
+                <col />
+                <col data-mc-conditions="BuildProcess.HTML5Link" />
+                <tbody>
+                    <tr>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;">
+                            <p class="vec_Footer">©&#160;Vector Informatik GmbH</p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;text-align: right;">
+                            <p class="vec_FooterBold">
+                                <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE&#160;Product Families</MadCap:conditionalText> Version <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.VectorTestUnitRunner">18</MadCap:conditionalText></p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="../Shared/ContactCopyrightLicense.htm" class="vec_Footer MCXref xref xrefvec_Footer">Contact/Copyright/License</a>
+                            </p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="https://www.vector.com/int/en/company/get-info/privacy-policy/" target="_blank" class="vec_Footer">Data Privacy Notice</a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

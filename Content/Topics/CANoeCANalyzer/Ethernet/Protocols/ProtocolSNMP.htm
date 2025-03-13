@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="" data-mc-search-type="Stem" data-mc-help-system-file-name="CANoeDEFamily.xml" data-mc-path-to-help-system="../../../../../" data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../Skins/Favicons/favicon-16x16.png" /><title>SNMP</title>
+        <link href="../../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Resources/Stylesheets/vTableMasterPageHeader.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../../Resources/Stylesheets/vStylesheet.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../../Resources/Stylesheets/vTableSymbol.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../../Resources/Stylesheets/vTable.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapGlobal.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapDom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapUtilities.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapXhr.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTextEffects.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSlideshow.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMessageBus.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMessageBus.CrossFrame.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapDefault.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMediaQueries.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapAccessibility.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapHelpSystem.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapAliasFile.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopicFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapFeedbackHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSkinHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.Breadcrumbs.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.MiniToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.SideMenu.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapIndex.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapGlossary.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapParser.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSearch.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapNavigateTopics.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapLms.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapELearning.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopic.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMicroContentComponent.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSearchHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopicElements.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTriPane.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/jscript" src="../../../../Resources/vScripts/SyntaxHighlighting.js">
+        </script>
+        <script type="text/jscript" src="../../../../Resources/vScripts/TabSwitch.js">
+        </script>
+        <script type="text/javascript" src="../../../../Resources/vScripts/Vector.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../../../CANoeDEFamily.htm#Topics/CANoeCANalyzer/Ethernet/Protocols/ProtocolSNMP.htm">Open topic with navigation</a>
+        </p>
+        <div class="Body">
+            <div role="main" id="mc-main-content">
+                <p class="StructurePath"><a href="../Ethernet.htm" class="StructurePath">Ethernet</a> » <a href="Protocol.htm" class="StructurePath">Protocol Overview</a> » <span class="mc-variable System.Title variable">SNMP</span></p>
+                <h1><a name="kanchor4212"></a><a name="aanchor13891"></a>
+                    <MadCap:concept term="Protocols" /><span class="mc-variable System.Title variable">SNMP</span>
+                </h1>
+                <p class="MenuPath">&#160;</p>
+                <p class="ToolAvailability" data-mc-conditions="BuildProcess.ToolAvailability"><a href="../../../Shared/FeatureAvailability.htm" class="red" title="Feature availabilty for your product">Valid&#160;for</a>:&#160;&#160;CANoe&#160;DE<a name="aanchor13892"></a><MadCap:concept term="SFCANoeDE" />&#160;&#160;•&#160;&#160;CANoe4SW&#160;DE<a name="aanchor13893"></a><MadCap:concept term="SFCANoe4SWDE" /></p>
+                <p class="AutoSearchFilterConcepts"><a name="aanchor13894"></a>
+                    <concept term="SFCore" xmlns="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+                </p>
+                <div>
+                    <table style="mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                        <col />
+                        <thead>
+                            <tr>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                    <p class="TableHead"><a name="Shortcuts" id="Shortcuts"></a>Quick Access</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table"><a href="#ProtocolInfo">Protocol Information</a>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table"><a href="#ProtocolDependencies">Protocol Dependencies</a>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table"><a href="#HeaderFormat">Header Format</a>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table"><a href="#ProtocolValidation">Protocol Validation</a>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr data-mc-conditions="Targets.CANoe-DE-Family">
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                    <p class="Table"><a href="#PacketAPI">Programming</a>
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h2 class="SectionSub"><a name="ProtocolInfo" id="ProtocolInfo"></a>Protocol Information <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                <p>The SNMP-protocol (<span class="bold">S</span>imple <span class="bold">N</span>etwork <span class="bold">M</span>anagement <span class="bold">P</span>rotocol) is a simple and very common protocol of the application layer to configure and monitor managed devices on IP-networks and was originally specified in the RFC 1067.</p>
+                <p>The communication happens typically between so called agents (client-side) and managers (server-side).<br />The SNMP-protocol exists mainly in 3 different versions, v1, v2c and v3; v2c is currently only partially and v3 not supported here.<br />The communication is connectionless via so called „well known UDP ports“</p>
+                <ul>
+                    <li>161 to query agents.</li>
+                    <li>162 to send notifications (so called traps).</li>
+                </ul>
+                <h2 class="SectionSub"><a name="ProtocolDependencies" id="ProtocolDependencies"></a>Protocol Dependencies <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                <div>
+                    <table style="mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');border-left-style: solid;border-left-width: 1px;border-left-color: #909090;border-right-style: solid;border-right-width: 1px;border-right-color: #909090;border-top-style: solid;border-top-width: 1px;border-top-color: #909090;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #909090;margin-left: 0;margin-right: auto;" class="TableStyle_vTable" cellspacing="0">
+                        <col class="TableStyle-vTable-Column-Column1" />
+                        <col class="TableStyle-vTable-Column-Column1" />
+                        <tbody>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Application layer</p>
+                                </th>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" colspan="2" style="text-align: center;background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;border-right-style: solid;border-right-width: 1px;border-right-color: #909090;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #909090;">
+                                    <p class="TableBoldWhite">SNMP</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Transport layer</p>
+                                </th>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;" colspan="2">
+                                    <p class="Table">UDP</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Internet layer</p>
+                                </th>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;" colspan="2">
+                                    <p class="Table">IPv4, IPv6</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <th class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="Table">Link layer</p>
+                                </th>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep" style="text-align: center;" colspan="2">
+                                    <p class="Table">Ethernet</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h2 class="SectionSub"><a name="HeaderFormat" id="HeaderFormat"></a>Header Format <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                <p>The SNMP packets are described by ASN.1 and the protocol fields are encoded in the Type-Length-Value format. The SNMP protocol specifies the following packet types: GET-REQUEST, GETNEXT-REQUEST, GETBULK, SET-REQUEST, GET-RESPONSE and TRAP.</p>
+                <p>The packets (besides GETBULK and TRAP messages) are built up using the following schema :</p>
+                <div>
+                    <table style="width: 100%;mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                        <col style="width: 10%;" class="TableStyle-vTable-Column-Column1" />
+                        <col style="width: 71px;" class="TableStyle-vTable-Column-Column1" />
+                        <col style="width: 10%;" class="TableStyle-vTable-Column-Column1" />
+                        <col style="width: 10%;" class="TableStyle-vTable-Column-Column1" />
+                        <col style="width: 10%;" class="TableStyle-vTable-Column-Column1" />
+                        <col style="width: 10%;" class="TableStyle-vTable-Column-Column1" />
+                        <col style="width: 10%;" class="TableStyle-vTable-Column-Column1" />
+                        <col style="width: 10%;" class="TableStyle-vTable-Column-Column1" />
+                        <col style="width: 10%;" class="TableStyle-vTable-Column-Column1" />
+                        <col style="width: 10%;" class="TableStyle-vTable-Column-Column1" />
+                        <thead>
+                            <tr class="TableStyle-vTable-Head-Header1">
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep" colspan="2">
+                                    <p class="TableHead">SNMP Packet Header</p>
+                                </th>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep" colspan="4">
+                                    <p class="TableHead">PDU Header</p>
+                                </th>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd" colspan="4">
+                                    <p class="TableHead">PDU Body</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="Table">Version Nummer</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="Table">Community Name</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="Table">Paket Type (Get, GetNext, …)</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="Table">RequestID</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="Table">Error Status</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="Table">Error Index</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="Table">Variable Binding 1</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="Table">Variable Binding 2</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="Table">...</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                    <p class="Table">Variable Binding n</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>There is no fix length information, but instead each field is described by ASN.1 (Type-Length-Value-Format).</p>
+                <p>GETBULK and TRAP messages have a differing PDU header (see <span class="bold">Optional Protocol Fields</span>).</p>
+                <div>
+                    <table style="width: 100%;caption-side: top;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                        <col style="width: 130px;" />
+                        <col />
+                        <col />
+                        <thead>
+                            <tr>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                    <p class="TableHead">Protocol Field</p>
+                                </th>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                    <p class="TableHead">ASN.1 Data Type</p>
+                                </th>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                    <p class="TableHead">Description</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Length</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">—</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Total length (in bytes) of the SNMP message that is coded with the ASN.1 type SEQUENCE.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Version</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">INTEGER</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Version of the SMNP protocol as integer.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Community</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">OCTET STRING</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Community name as a string used to assign access rights.
+Typical values are <span class="bold">public</span> for read-only access or <span class="bold">private</span> for read/write access.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="Table">Packet Type</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="Table">—</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                    <p class="Table">ASN.1 type of the SNMP message:</p>
+                                    <div>
+                                        <table style="mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');margin-left: 0;margin-right: auto;" class="TableStyle_vTable" cellspacing="0">
+                                            <col style="width: 114px;" />
+                                            <col />
+                                            <col />
+                                            <thead>
+                                                <tr>
+                                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                                        <p class="TableHead">Value</p>
+                                                    </th>
+                                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                                        <p class="TableHead">Packet Type</p>
+                                                    </th>
+                                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                                        <p class="TableHead">Description</p>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                        <p class="Table">0xA0</p>
+                                                    </td>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                        <p class="Table">GET-REQUEST
+
+
+</p>
+                                                    </td>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                        <p class="Table">Is used to request a specific data record, a unique ID must be specified.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                        <p class="Table">0xA1</p>
+                                                    </td>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                        <p class="Table">GETNEXT-REQUEST</p>
+                                                    </td>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                        <p class="Table">Runs through the following data records, e.g. tables.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                        <p class="Table">0xA2</p>
+                                                    </td>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                        <p class="Table">GET-RESPONSE</p>
+                                                    </td>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                        <p class="Table">Receives the answer to one of the previously sent packets.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                        <p class="Table">0xA3</p>
+                                                    </td>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                        <p class="Table">SET-REQUEST</p>
+                                                    </td>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                        <p class="Table">Changes one or several data records.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                        <p class="Table">0xA4</p>
+                                                    </td>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                        <p class="Table">TRAP</p>
+                                                    </td>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                        <p class="Table">Unsolicited message if an event occurs, from the agent to a manager.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                                        <p class="Table">0xA5</p>
+                                                    </td>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                                        <p class="Table">GETBULK-REQUEST</p>
+                                                    </td>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                                        <p class="Table">Calls the defined number of data records at once, similar to several GETNEXT-REQUESTS.</p>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h2><a targets="TOGOptional" href="javascript:void(0)" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="TOGOptional"><img class="MCToggler_Image_Icon" src="../../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Optional Protocol Fields</a>
+                </h2>
+                <div style="display: none;" data-mc-target-name="TOGOptional">
+                    <p>Depending on the SNMP message type, other fields will follow:</p>
+                    <table style="width: 100%;caption-side: top;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                        <col style="width: 130px;" />
+                        <col />
+                        <col />
+                        <thead>
+                            <tr>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                    <p class="TableHead">Protocol Field</p>
+                                    <p class="TableHead">(optional)</p>
+                                </th>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                    <p class="TableHead">ASN.1 Data Type</p>
+                                </th>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                    <p class="TableHead">Description</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd" colspan="3">
+                                    <p colspan="6" class="TableBold">GET-REQUEST, GETNEXT-REQUEST, SET-REQUEST and GET-RESPONSE</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Request ID</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">INTEGER</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Request identifier to assign responses to queries (as integer).</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Error Status</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">INTEGER</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Shows for the response messages (GET-RESPONSE) whether and which error has occurred while processing a query (as integer):</p>
+                                    <div>
+                                        <table style="mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');margin-left: 0;margin-right: auto;" class="TableStyle_vTable" cellspacing="0">
+                                            <col style="width: 114px;" />
+                                            <col />
+                                            <col />
+                                            <thead>
+                                                <tr>
+                                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                                        <p class="TableHead">Value</p>
+                                                    </th>
+                                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                                        <p class="TableHead">Error Status</p>
+                                                    </th>
+                                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                                        <p class="TableHead">Description</p>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                        <p class="Table">0</p>
+                                                    </td>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                        <p class="Table">noError</p>
+                                                    </td>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                        <p class="Table">No error.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                        <p class="Table">1</p>
+                                                    </td>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                        <p class="Table">tooBig</p>
+                                                    </td>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                        <p class="Table">The requested data are too large for an SNMP message.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                        <p class="Table">2</p>
+                                                    </td>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                        <p class="Table">noSuchName</p>
+                                                    </td>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                        <p class="Table">The requested operation refers to an unknown variable.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                        <p class="Table">3</p>
+                                                    </td>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                        <p class="Table">badValue</p>
+                                                    </td>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                        <p class="Table">The SET-REQUEST includes a syntax error or an incorrect value.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                        <p class="Table">4</p>
+                                                    </td>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                        <p class="Table">readOnly</p>
+                                                    </td>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                        <p class="Table">The SET-REQUEST refers to a variable that must not be changed.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                                        <p class="Table">5</p>
+                                                    </td>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                                        <p class="Table">genError</p>
+                                                    </td>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                                        <p class="Table">A general error has occurred.</p>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <p class="Table">Is 0 (NoError) for all other message types.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Error Index</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">INTEGER</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">In case of an error, specifies for Response messages (GET-RESPONSE) the index of the variable bindings at which the error has occurred.</p>
+                                    <p class="Table">Is 0 (NoError) for all other message types.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Variable Bindings</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">SEQUENCE</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">List with variable bindings.</p>
+                                    <p class="Table">Every variable binding is a pair consisting of the name and the assigned value of a variable.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd" colspan="3">
+                                    <p colspan="6" class="TableBold">GETBULK-REQUEST</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Request ID</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">INTEGER</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">	Request identifier to assign responses to queries (as integer).</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Non-repeaters</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">INTEGER</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">	Number N of the variable bindings of this bulk message for which only one value is requested.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Max. Repetitions</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">INTEGER</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">	Number M of the values which are requested for each binding beginning with the variable binding N+1. These may include, for example, tables with several entries.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Variable Bindings</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">SEQUENCE</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">	List with variable bindings. Each variable binding represents a request for which one or several values are expected in the answer.</p>
+                                    <p class="Table">Every variable binding is a pair consisting of the name and the assigned value of a variable.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd" colspan="3">
+                                    <p class="TableBold">TRAP</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Enterprise</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">OBJECT IDENTIFIER</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Type of the device which has generated the trap.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Agent Address</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">	NetworkAddress	</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Address of the device which has generated the trap.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Generic Trap</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">INTEGER</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Type of the trap message:</p>
+                                    <div>
+                                        <table style="mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');margin-left: 0;margin-right: auto;" class="TableStyle_vTable" cellspacing="0">
+                                            <col style="width: 114px;" />
+                                            <col />
+                                            <col />
+                                            <thead>
+                                                <tr>
+                                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                                        <p class="TableHead">Value</p>
+                                                    </th>
+                                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                                        <p class="TableHead">Error Status</p>
+                                                    </th>
+                                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                                        <p class="TableHead">Description</p>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                        <p class="Table">0</p>
+                                                    </td>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                        <p class="Table">coldStart</p>
+                                                    </td>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                        <p class="Table">Shows the restart of a network user for which the configuration of the agent may change.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                        <p class="Table">1</p>
+                                                    </td>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                        <p class="Table">warmStart</p>
+                                                    </td>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                        <p class="Table">Shows the restart of a network user for which the configuration of the agent does not change.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                        <p class="Table">2</p>
+                                                    </td>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                        <p class="Table">linkDown</p>
+                                                    </td>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                        <p class="Table">Shows a faulty connection in the agent configuration.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                        <p class="Table">3</p>
+                                                    </td>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                        <p class="Table">linkUp</p>
+                                                    </td>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                        <p class="Table">Shows a successfully established connection in the agent configuration.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                        <p class="Table">4</p>
+                                                    </td>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                        <p class="Table">authenticationFailure</p>
+                                                    </td>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                        <p class="Table">Shows the receipt of a message that has not been authenticated correctly.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                        <p class="Table">5</p>
+                                                    </td>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                        <p class="Table">egpNeighborLoss</p>
+                                                    </td>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                        <p class="Table">Shows the end of a connection to a EGP partner because this one is marked as not connected.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                                        <p class="Table">6</p>
+                                                    </td>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                                        <p class="Table">enterpriseSpecific</p>
+                                                    </td>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                                        <p class="Table">Shows a company-specific event. In this case the Specific Trap field is evaluated.</p>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Specific Trap</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">INTEGER</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">	Type of a company-specific trap message where the Generic Trap field is enterpriseSpecific (6).</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Time stamp</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">TimeTicks</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Time period between the last restart of the network user and the generation of the trap.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="Table">Variable Bindings</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="Table">SEQUENCE</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                    <p class="Table">List with variable bindings.</p>
+                                    <p class="Table">Every variable binding is a pair consisting of the name and the assigned value of a variable.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h2 class="SectionSub"><a name="ProtocolValidation" id="ProtocolValidation"></a>Protocol Validation <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                <p>Ethernet packets containing the SNMP protocol are analyzed and checked for consistency. Observed irregularities are displayed in the <span class="bold">Protocol Validation</span> column of the <a href="../../Windows/Trace/TraceWindow.htm">Trace Window</a>.</p>
+                <div>
+                    <table style="width: 100%;mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                        <col />
+                        <col />
+                        <col />
+                        <thead>
+                            <tr>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                    <p class="TableHead">Protocol Validation ID</p>
+                                </th>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                    <p class="TableHead">Message</p>
+                                </th>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                    <p class="TableHead">Description</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">[SNMP-001]</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Version not found</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">The present SNMP packet does not include a <span class="bold">Version</span> field.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">[SNMP-002]</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Initial sequence not found</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">The present SNMP packet does not begin with a field of the SEQUENCE type.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">[SNMP-003]</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Version v# not supported</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">The SNMP version of the present packet is not supported. Only versions up to v2 are supported.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">[SNMP-004]</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Community not found</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">The present SNMP packet does not include a <span class="bold">Community</span> field.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="Table">[SNMP-005]</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="Table">Decoding token Id # not supported</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                    <p class="Table">
+The present packet includes an unknown field type and cannot be interpreted.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h2 class="SectionSub" data-mc-conditions="Targets.CANoe-DE-Family"><a name="PacketAPI" id="PacketAPI"></a>Programming <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                <div data-mc-conditions="Targets.CANoe-DE-Family">
+                    <h2>Initialization</h2>
+                    <p>During initialization of the SNMP protocol, the fields <span class="bold">SourcePort</span>=161 and <span class="bold">DestinationPort</span>=161 in the <a href="ProtocolUDP.htm#HeaderFormat">UDP</a> header are also set. The used port number can be configured in the <a href="../../Ribbon/File/Options/BussystemsProtocols/BussystemsProtocolsBussystems.htm#ProtocolID" class="GUI">Options</a> dialog.</p>
+                    <div>
+                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                            <col class="TableStyle-vTableSymbol-Column-Column1" />
+                            <col class="TableStyle-vTableSymbol-Column-Column2" />
+                            <tbody>
+                                <tr>
+                                    <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                        <p class="Table">
+                                            <img src="../../../../Resources/vImages/vInfo.png" style="width: 48px;height: 45px;" title="Note" alt="Note" />
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                        <p class="TableSymbolHead">Note</p>
+                                        <p class="Table">The direct access to protocol fields is not supported.</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <p class="LinkList">&#160;</p>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="FooterWhite">
+                <table class="FooterWhite" style="border-collapse: collapse;margin-left: auto;margin-right: auto;">
+                    <col style="width: 70px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col style="width: 16px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="buttons popup-container clearfix topicToolbarProxy topicToolbarProxyFooter _Skins_HTML5TopicToolbar mc-component nocontent">
+                                    <div class="button-group-container-left">
+                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo"><a href="../../../Shared/HowToUseOnlineHelp.htm" title="Tips for using the help" alt="Tips for using the help"><img src="../../../../Resources/vImages/vBackstage/vHelpInfo.png" /></a>
+                                </p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo" style="text-align: right;"><span class="mc-variable Vector.BuildTime variable">2024-04-8T20:56:42</span>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <table style="width: 100%;border-collapse: separate;border-spacing: 3px 0px;margin-left: auto;margin-right: auto;caption-side: top;">
+                <col />
+                <col />
+                <col />
+                <col data-mc-conditions="BuildProcess.HTML5Link" />
+                <tbody>
+                    <tr>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;">
+                            <p class="vec_Footer">©&#160;Vector Informatik GmbH</p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;text-align: right;">
+                            <p class="vec_FooterBold">
+                                <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE&#160;Product Families</MadCap:conditionalText> Version <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.VectorTestUnitRunner">18</MadCap:conditionalText></p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="../../../Shared/ContactCopyrightLicense.htm" class="vec_Footer MCXref xref xrefvec_Footer">Contact/Copyright/License</a>
+                            </p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="https://www.vector.com/int/en/company/get-info/privacy-policy/" target="_blank" class="vec_Footer">Data Privacy Notice</a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

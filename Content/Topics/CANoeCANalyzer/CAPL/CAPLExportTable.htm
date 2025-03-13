@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="CANoeDEFamily.xml" data-mc-path-to-help-system="../../../../" data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../Skins/Favicons/favicon-16x16.png" /><title>Description of the CAPL Export Table</title>
+        <link href="../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Resources/Stylesheets/vTableMasterPageHeader.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../Resources/Stylesheets/vStylesheet.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../Resources/Stylesheets/vTable.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../Resources/Stylesheets/vTableSymbol.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapGlobal.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapDom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapUtilities.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapXhr.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTextEffects.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSlideshow.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMessageBus.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMessageBus.CrossFrame.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapDefault.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMediaQueries.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAccessibility.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapHelpSystem.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAliasFile.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopicFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapFeedbackHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSkinHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.Breadcrumbs.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.MiniToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.SideMenu.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapIndex.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapGlossary.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapParser.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSearch.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapNavigateTopics.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapLms.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapELearning.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopic.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMicroContentComponent.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSearchHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopicElements.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTriPane.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/jscript" src="../../../Resources/vScripts/SyntaxHighlighting.js">
+        </script>
+        <script type="text/jscript" src="../../../Resources/vScripts/TabSwitch.js">
+        </script>
+        <script type="text/javascript" src="../../../Resources/vScripts/Vector.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../../CANoeDEFamily.htm#Topics/CANoeCANalyzer/CAPL/CAPLExportTable.htm">Open topic with navigation</a>
+        </p>
+        <div class="Body">
+            <div role="main" id="mc-main-content">
+                <div>
+                    <p class="AutoSearchFilterConcepts"><a name="aanchor24640"></a>
+                        <MadCap:concept term="SFCore" />
+                    </p>
+                    <p class="IndexConcept"><a name="kanchor8095"></a>
+                    </p>
+                    <p class="StructurePath"><a href="../../Shared/CAPL/CAPLIntroduction.htm" class="StructurePath">CAPL Introduction</a> » <a href="CAPLIncludeWindowsDLL.htm" class="StructurePath">CAPL&#160;DLL</a> » Export Table</p>
+                    <h1><span class="mc-variable System.Title variable">Description of the CAPL Export Table</span>
+                    </h1>
+                    <p class="MenuPath">&#160;</p>
+                    <p class="ToolAvailability" data-mc-conditions="BuildProcess.ToolAvailability"><a href="../../Shared/FeatureAvailability.htm" class="red" title="Feature availabilty for your product">Valid&#160;for</a>:&#160;&#160;CANoe&#160;DE<a name="aanchor24641"></a><MadCap:concept term="SFCANoeDE" />&#160;&#160;•&#160;&#160;CANoe:lite&#160;DE<a name="aanchor24642"></a><MadCap:concept term="SFCANoeLiteDE" />&#160;&#160;•&#160;&#160;CANoe4SW&#160;DE<a name="aanchor24643"></a><MadCap:concept term="SFCANoe4SWDE" />&#160;&#160;•&#160;&#160;CANoe4SW:lite&#160;DE<a name="aanchor24644"></a><MadCap:concept term="SFCANoe4SWLiteDE" /></p>
+                </div>
+                <p>Functions that have been created can be exported into CAPL code with the aid of a table function (<span class="bold">CAPL_DLL_INFO_LIST</span>).<br /></p>
+                <p>The first row of the table contains version information. This row must be defined in the following manner:</p>
+                <p class="SourceCode">{CDLL_VERSION_NAME, (CAPL_FARCALL)CDLL_VERSION, "", "", CAPL_DLL_CDECL, 0xabcd, CDLL_EXPORT },</p>
+                <div>
+                    <h2><a targets="TOGFunctions" href="javascript:void(0)" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="TOGFunctions"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Information and Examples on the Functions</a>
+                    </h2>
+                    <div style="display: none;" data-mc-target-name="TOGFunctions">
+                        <p>The description of a function for export has the following structure:</p>
+                        <table style="margin-left: 0;margin-right: auto;caption-side: top;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                            <col />
+                            <col />
+                            <col />
+                            <thead>
+                                <tr>
+                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Column</p>
+                                    </th>
+                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Description</p>
+                                    </th>
+                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                        <p class="TableHead">Comment</p>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">1</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Name of the function for export</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">—</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">2</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Address of the function in the DLL</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">—</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">3</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Name of the function category</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">—</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">4</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Text that describes the function</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">—</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">5</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Value type of the return parameter</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">—</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">6</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Number of function parameters</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">When using</p>
+                                        <ul>
+                                            <li>CAPL_DLL_INFO3: up to 10 parameters</li>
+                                            <li>CAPL_DLL_INFO4: up to 64 parameters</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">7</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Value type of the function parameter</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">—</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">8</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Dimensions of the function parameter</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">In order of the function parameters the parameters in octal format are characterized as follows:</p>
+                                        <p class="Table">\000: Scalar<br />\001: 1-dimensional Array<br />\002: 2-dimensional Array								</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                        <p class="Table">9</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                        <p class="Table">Name of the function parameter</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                        <p class="Table">—</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div>
+                            <table style="mc-table-style: url('../../../Resources/Stylesheets/vTableSymbol.css');margin-left: 0;margin-right: auto;" class="TableStyle-vTableSymbol" cellspacing="0">
+                                <col class="TableStyle-vTableSymbol-Column-Column1" />
+                                <col class="TableStyle-vTableSymbol-Column-Column2" />
+                                <tbody>
+                                    <tr>
+                                        <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                            <p class="Table">
+                                                <img src="../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                            </p>
+                                        </td>
+                                        <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                            <p class="TableSymbolHead">Example: Using the Export Table</p>
+                                            <p class="TableSourceCode">void CAPLEXPORT far CAPLPASCAL appPut(unsigned long x<br />{<br />data = x;<br />}<br /><br />{"dllPut",	(CAPL_FARCALL)appPut,	"CAPL_DLL","This function will save data from CAPL to DLL memory",'V', 1, "D", "\000", {"x"}},</p>
+                                            <div>
+                                                <table style="caption-side: top;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                                                    <col />
+                                                    <col />
+                                                    <thead>
+                                                        <tr>
+                                                            <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                                                <p class="TableHead">Element</p>
+                                                            </th>
+                                                            <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                                                <p class="TableHead">Description</p>
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                                <p class="Table">Function name</p>
+                                                            </td>
+                                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                                <p class="Table">dllPut</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                                <p class="Table">Function address</p>
+                                                            </td>
+                                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                                <p class="Table">appPut</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                                <p class="Table">Function category</p>
+                                                            </td>
+                                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                                <p class="Table">CAPL_DLL</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                                <p class="Table">Text</p>
+                                                            </td>
+                                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                                <p class="Table">This function will save data from CAPL to DLL memory</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                                <p class="Table">Return value</p>
+                                                            </td>
+                                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                                <p class="Table">V (void)</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                                <p class="Table">Number of function parameter</p>
+                                                            </td>
+                                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                                <p class="Table">1</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                                <p class="Table">Parameter types</p>
+                                                            </td>
+                                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                                <p class="Table">"D" (dword)</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                                <p class="Table">Parameter dimensions</p>
+                                                            </td>
+                                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                                <p class="Table">"\000" (scalar)</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                                                <p class="Table">Parameter name</p>
+                                                            </td>
+                                                            <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                                                <p class="Table">"x"</p>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div>
+                            <table style="mc-table-style: url('../../../Resources/Stylesheets/vTableSymbol.css');margin-left: 0;margin-right: auto;" class="TableStyle-vTableSymbol" cellspacing="0">
+                                <col class="TableStyle-vTableSymbol-Column-Column1" />
+                                <col class="TableStyle-vTableSymbol-Column-Column2" />
+                                <tbody>
+                                    <tr>
+                                        <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                            <p class="Table">
+                                                <img src="../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                            </p>
+                                        </td>
+                                        <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                            <p class="TableSymbolHead">Example: Using Array Parameters</p>
+                                            <p class="TableSourceCode">void CAPLEXPORT far CAPLPASCAL appGetDataTwoPars(unsigned long numberBytes,<br />unsigned char dataBlock[] )<br />{<br />&#160;&#160;unsigned int i;<br />&#160;&#160;for (i = 0; i &lt; numberBytes; i++) {<br />&#160;&#160;&#160;&#160;dataBlock[i] = dlldata[i];<br />&#160;&#160;}<br />}<br /><br />{"dllGetDataTwoPars", (CAPL_FARCALL)appGetDataTwoPars, "CAPL_DLL", "This function will get two datas from DLL into CAPL memory", 'V', 2, "DB", "\000\001", {"noOfBytes", "datablock"}},</p>
+                                            <div>
+                                                <table style="caption-side: top;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                                                    <col />
+                                                    <col />
+                                                    <thead>
+                                                        <tr>
+                                                            <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                                                <p class="TableHead">Element</p>
+                                                            </th>
+                                                            <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                                                <p class="TableHead">Description</p>
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                                <p class="Table">Function name</p>
+                                                            </td>
+                                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                                <p class="Table">dllGetDataTwoPars</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                                <p class="Table">Function address</p>
+                                                            </td>
+                                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                                <p class="Table">appGetDataTwoPars</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                                <p class="Table">Function category</p>
+                                                            </td>
+                                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                                <p class="Table">CAPL_DLL</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                                <p class="Table">Text</p>
+                                                            </td>
+                                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                                <p class="Table">This function will get two datas from DLL into CAPL memory</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                                <p class="Table">Return value</p>
+                                                            </td>
+                                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                                <p class="Table">V (void)</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                                <p class="Table">Number of function parameter</p>
+                                                            </td>
+                                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                                <p class="Table">2</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                                <p class="Table">Parameter types</p>
+                                                            </td>
+                                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                                <p class="Table">"DB" (dword and byte)</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                                <p class="Table">Parameter dimensions</p>
+                                                            </td>
+                                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                                <p class="Table">"\000\001" (scalar and 1-dimensional)</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                                                <p class="Table">Parameter name</p>
+                                                            </td>
+                                                            <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                                                <p class="Table">"noOfBytes" and "datablock"</p>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h2><a targets="TOGParamReturn" href="javascript:void(0)" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="TOGParamReturn"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Characters for Parameter Types and Return Value Types</a>
+                    </h2>
+                    <div style="display: none;" data-mc-target-name="TOGParamReturn">
+                        <p><a name="ParameterValueReturnValue" id="ParameterValueReturnValue"></a>The following types can be used as parameter values and return values:</p>
+                        <table style="margin-left: 0;margin-right: auto;caption-side: top;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                            <col />
+                            <col />
+                            <col />
+                            <col />
+                            <col />
+                            <col />
+                            <thead>
+                                <tr>
+                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Character</p>
+                                    </th>
+                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Value Type<br />in CAPL</p>
+                                    </th>
+                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Value Type<br />in C/C++</p>
+                                    </th>
+                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Value Type<br />in C99/C++11</p>
+                                    </th>
+                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                        <p class="TableHead"><a href="../../Shared/Interfaces/VModule/VModule.htm" class="red">vmodule</a>
+                                        </p>
+                                    </th>
+                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                        <p class="TableHead">Comment</p>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr valign="top">
+                                    <td colspan="1" rowspan="1" valign="middle" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableBold">V</p>
+                                    </td>
+                                    <td colspan="1" rowspan="1" valign="middle" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">void</p>
+                                    </td>
+                                    <td colspan="1" rowspan="1" valign="middle" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">void</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">void</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">void</p>
+                                    </td>
+                                    <td colspan="1" rowspan="1" valign="middle" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">—</p>
+                                    </td>
+                                </tr>
+                                <tr valign="top">
+                                    <td colspan="1" rowspan="1" valign="middle" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableBold">C</p>
+                                    </td>
+                                    <td colspan="1" rowspan="1" valign="middle" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">char</p>
+                                    </td>
+                                    <td colspan="1" rowspan="1" valign="middle" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">char</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">char</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">char</p>
+                                    </td>
+                                    <td colspan="1" rowspan="1" valign="middle" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">only for arrays, i.e. with parameter dimensions != 0</p>
+                                    </td>
+                                </tr>
+                                <tr valign="top">
+                                    <td colspan="1" rowspan="1" valign="middle" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableBold">B</p>
+                                    </td>
+                                    <td colspan="1" rowspan="1" valign="middle" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">byte</p>
+                                    </td>
+                                    <td colspan="1" rowspan="1" valign="middle" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">unsigned char</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">uint8_t</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">byte</p>
+                                    </td>
+                                    <td colspan="1" rowspan="1" valign="middle" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">only for arrays, i.e. with parameter dimensions != 0</p>
+                                    </td>
+                                </tr>
+                                <tr valign="top">
+                                    <td colspan="1" rowspan="1" valign="middle" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableBold">I</p>
+                                    </td>
+                                    <td colspan="1" rowspan="1" valign="middle" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">int</p>
+                                    </td>
+                                    <td colspan="1" rowspan="1" valign="middle" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">short</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">int16_t</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">int</p>
+                                    </td>
+                                    <td colspan="1" rowspan="1" valign="middle" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">only for arrays, i.e. with parameter dimensions != 0</p>
+                                    </td>
+                                </tr>
+                                <tr valign="top">
+                                    <td colspan="1" rowspan="1" valign="middle" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableBold">W</p>
+                                    </td>
+                                    <td colspan="1" rowspan="1" valign="middle" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">word</p>
+                                    </td>
+                                    <td colspan="1" rowspan="1" valign="middle" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">unsigned short</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">uint16_t</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">word</p>
+                                    </td>
+                                    <td colspan="1" rowspan="1" valign="middle" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">only for arrays, i.e. with parameter dimensions != 0</p>
+                                    </td>
+                                </tr>
+                                <tr valign="top">
+                                    <td colspan="1" rowspan="1" valign="middle" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableBold">L</p>
+                                    </td>
+                                    <td colspan="1" rowspan="1" valign="middle" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">long</p>
+                                    </td>
+                                    <td colspan="1" rowspan="1" valign="middle" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">long</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">int32_t</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">long</p>
+                                    </td>
+                                    <td colspan="1" rowspan="1" valign="middle" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">—</p>
+                                    </td>
+                                </tr>
+                                <tr valign="top">
+                                    <td colspan="1" rowspan="1" valign="middle" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableBold">D</p>
+                                    </td>
+                                    <td colspan="1" rowspan="1" valign="middle" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">dword</p>
+                                    </td>
+                                    <td colspan="1" rowspan="1" valign="middle" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">unsigned long</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">uint32_t</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">dword</p>
+                                    </td>
+                                    <td colspan="1" rowspan="1" valign="middle" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">—</p>
+                                    </td>
+                                </tr>
+                                <tr valign="top">
+                                    <td colspan="1" rowspan="1" valign="middle" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableBold">6</p>
+                                    </td>
+                                    <td colspan="1" rowspan="1" valign="middle" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">int64</p>
+                                    </td>
+                                    <td colspan="1" rowspan="1" valign="middle" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">long long</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">int64_t</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">int64</p>
+                                    </td>
+                                    <td colspan="1" rowspan="1" valign="middle" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">—</p>
+                                    </td>
+                                </tr>
+                                <tr valign="top">
+                                    <td colspan="1" rowspan="1" valign="middle" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="TableBold">U</p>
+                                    </td>
+                                    <td colspan="1" rowspan="1" valign="middle" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">qword</p>
+                                    </td>
+                                    <td colspan="1" rowspan="1" valign="middle" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">unsigned long long</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">uint64_t</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">qword</p>
+                                    </td>
+                                    <td colspan="1" rowspan="1" valign="middle" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">—</p>
+                                    </td>
+                                </tr>
+                                <tr valign="top">
+                                    <td colspan="1" rowspan="1" valign="middle" class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                        <p class="TableBold">F</p>
+                                    </td>
+                                    <td colspan="1" rowspan="1" valign="middle" class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                        <p class="Table">float</p>
+                                    </td>
+                                    <td colspan="1" rowspan="1" valign="middle" class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                        <p class="Table">double</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                        <p class="Table">double</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                        <p class="Table">float</p>
+                                    </td>
+                                    <td colspan="1" rowspan="1" valign="middle" class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                        <p class="Table">—</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div>
+                            <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                                <col class="TableStyle-vTableSymbol-Column-Column1" />
+                                <col class="TableStyle-vTableSymbol-Column-Column2" />
+                                <tbody>
+                                    <tr>
+                                        <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                            <p class="Table">
+                                                <img src="../../../Resources/vImages/vInfo.png" style="width: 48px;height: 45px;" title="Note" alt="Note" />
+                                            </p>
+                                        </td>
+                                        <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                            <p class="TableSymbolHead">Note</p>
+                                            <ul>
+                                                <li>Reference parameters can be used also in functions that were exported from CAPL DLLs. Therefore has to be declared the parameter of the function as pointer on the real data type. After that subtract 128 from the character that represents the data type in the CAPL export table. Then the function receives the address of the passed variable as value of the parameter.<br />Arrays cannot be passed as reference parameters</li>
+                                                <li>
+                                                    <p>The <span class="bold">Value Type</span> column in C/C++ applies to the Visual C++ compiler from <span class="Product">Microsoft</span> on <span class="Product">Windows</span> and is not suitable for the <span class="Product">GCC</span> and <span class="Product">Clang</span> compilers on <span class="Product">Linux</span>. For portable code please use the type specifications from the newer standards <span class="bold">C99</span> or <span class="bold">C++11</span>.</p>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div>
+                            <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                                <col class="TableStyle-vTableSymbol-Column-Column1" />
+                                <col class="TableStyle-vTableSymbol-Column-Column2" />
+                                <tbody>
+                                    <tr>
+                                        <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                            <p class="Table">
+                                                <img src="../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                            </p>
+                                        </td>
+                                        <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                            <p class="TableSymbolHead">Example Using Reference Parameters</p>
+                                            <p class="SourceCode">void CAPLEXPORT far CAPLPASCAL appSum(long i, long j, long* s)<br></br>{<br></br>*s = i + j;<br></br>}<br></br><br></br>{"sum", (CAPL_FARCALL) appSum, "CAPL_DLL", "Sum via <br></br>reference parameter", 'V', 3, {'L', 'L', 'L' - 128}, "", {"i", "j", "s"} },</p>
+                                            <div>
+                                                <table style="caption-side: top;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                                                    <col />
+                                                    <col />
+                                                    <thead>
+                                                        <tr>
+                                                            <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                                                <p class="TableHead">Element</p>
+                                                            </th>
+                                                            <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                                                <p class="TableHead">Description</p>
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                                <p class="Table">Function name</p>
+                                                            </td>
+                                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                                <p class="Table">sum</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                                <p class="Table">Function address</p>
+                                                            </td>
+                                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                                <p class="Table">appSum</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                                <p class="Table">Function category</p>
+                                                            </td>
+                                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                                <p class="Table">CAPL_DLL</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                                <p class="Table">Text</p>
+                                                            </td>
+                                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                                <p class="Table">Sum via reference parameter</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                                <p class="Table">Return value</p>
+                                                            </td>
+                                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                                <p class="Table">V (void)</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                                <p class="Table">Number of function parameter</p>
+                                                            </td>
+                                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                                <p class="Table">3</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                                <p class="Table">Parameter types</p>
+                                                            </td>
+                                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                                <p class="Table">'L', 'L', 'L' - 128 (long, long, long&amp;)</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                                <p class="Table">Parameter dimensions</p>
+                                                            </td>
+                                                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                                <p class="Table">"" (all scalar)</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                                                <p class="Table">Parameter name</p>
+                                                            </td>
+                                                            <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                                                <p class="Table">"i", "j", "s"</p>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <h2><a targets="TOGExport" href="javascript:void(0)" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="TOGExport"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Export of the DLL Function</a>
+                    </h2>
+                    <div style="display: none;" data-mc-target-name="TOGExport">
+                        <p><a name="ExportDLLFunctions" id="ExportDLLFunctions"></a>The export of the DLL functions can be done in two ways:</p>
+                        <ul>
+                            <li>assignment</li>
+                        </ul>
+                        <p class="SourceCodeIndent">CAPLEXPORT CAPL_DLL_INFO3 far * caplDllTable3 = table;</p>
+                        <ul>
+                            <li>function</li>
+                        </ul>
+                        <p class="SourceCodeIndent">unsigned long CAPLEXPORT __cdecl caplDllGetTable3(void(<br />{<br />&#160;&#160;return (unsigned long)CAPL_DLL_INFO_LIST3;<br />}</p>
+                        <div>
+                            <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                                <col class="TableStyle-vTableSymbol-Column-Column1" />
+                                <col class="TableStyle-vTableSymbol-Column-Column2" />
+                                <tbody>
+                                    <tr>
+                                        <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                            <p class="Table">
+                                                <img src="../../../Resources/vImages/vInfo.png" style="width: 48px;height: 45px;" title="Note" alt="Note" />
+                                            </p>
+                                        </td>
+                                        <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                            <p class="TableSymbolHead">Note</p>
+                                            <p class="Table">The return values (<span class="bold">int64, qword</span>) of the functions must be copied to the register pair <span class="bold">_EDX:_EAX</span>!</p>
+                                            <p class="Table">Many compilers (e.g. <span class="Product">Microsoft C++</span>) will do this by their own.</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div>
+                            <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                                <col class="TableStyle-vTableSymbol-Column-Column1" />
+                                <col class="TableStyle-vTableSymbol-Column-Column2" />
+                                <tbody>
+                                    <tr>
+                                        <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                            <p class="Table">
+                                                <img src="../../../Resources/vImages/vInfo.png" style="width: 48px;height: 45px;" title="Note" alt="Note" />
+                                            </p>
+                                        </td>
+                                        <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                            <p class="TableSymbolHead">Note on CAPL DLLs</p>
+                                            <p class="Table">If functions of this DLL are called in the realtime branch (<a href="../Windows/SimulationSetup/SimulationSetupWindow.htm" data-mc-conditions="Targets.CANoe-DE-Family">Simulation Setup</a>) the following must be observed:</p>
+                                            <ul>
+                                                <li>File accesses and calls of the Windows-API are not recommended!</li>
+                                                <li>"Hidden" Windows-API calls are also not recommended. The cores of many linked libraries are based on Windows-APIs.</li>
+                                                <li>Dynamic memory management based directly or indirectly on <span class="bold">GlobalAlloc[]</span> is not recommended. This means <span class="bold">nonew</span>, <span class="bold">new[]</span>, <span class="bold">delete</span>, <span class="bold">delete[]</span>, <span class="bold">malloc</span>, <span class="bold">free</span>, etc. Instead it is better to reserve memory statically before the measurement start.</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h2><a targets="TOGCAPLCallbackFunctions" href="javascript:void(0)" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="TOGCAPLCallbackFunctions"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />CAPL Callback Functions</a>
+                    </h2>
+                    <div style="display: none;" data-mc-target-name="TOGCAPLCallbackFunctions">
+                        <p><a name="CAPLCallbackFunctions" id="CAPLCallbackFunctions"></a>CAPL callback functions may be called independently by a CAPL DLL during a measurement run.<br />The interface for use of CAPL callback functions is described in the header files <span class="bold">VIA_CDLL.h</span> and <span class="bold">VIA.h</span>.<br />You will find the header files in this folder: <a href="javascript:startCANoeLauncher('&quot;SAMPLES:\\Programming\\CAPLdll&quot;')" class="ExecuteLink">Open Folder</a></p>
+                        <div>
+                            <h3>Classes and Functions of VIA_CDLL.h</h3>
+                            <ul>
+                                <li><span class="bold">VIACLIENT(void) VIARegisterCDLL (VIACapl* service)</span>
+                                    <br />This function is used to initialize the CAPL DLL. It is executed when the <span class="bold">register-CAPLDLL();</span> function is called from a CAPL program.<br />Since the DLL may be used simultaneously by multiple CAPL nodes, there is a need for clear differentiation in the CAPL DLL. To achieve this the <span class="bold">registerCAPLDLL();</span> function returns a handle to the CAPL node.</li>
+                                <li class="Bold">Methods of the Class VIACapl</li>
+                                <li class="Indent"><span class="bold">VIASTDDECL GetCaplHandle (uint32* handle)</span>
+                                    <br /><span class="bold">GetCaplHandle</span> determines the handle that is returned to the CAPL node by the <span class="bold">registerCAPLDLL();</span> function.<br />This handle must be passed from the CAPL node to the CAPL DLL with each function call.</li>
+                            </ul>
+                            <ul>
+                                <li class="Indent"><span class="bold">VIASTDDECL GetCaplFunction(VIACaplFunction** caplfct, const char* functionName)</span>
+                                    <br />This function creates a handle for the specified CAPL callback function. The handle must be given with each call of a callback function, and it remains valid up to the end of the measurement or until the <span class="bold">ReleaseCaplFunction</span> function is called.</li>
+                            </ul>
+                            <ul>
+                                <li class="Indent"><span class="bold">VIASTDDECL ReleaseCaplFunction(VIACaplFunction* caplfct)</span>
+                                    <br />This function call is used to release the acquired CAPL callback function handle (see function <span class="bold">GetCaplFunction</span>).<br />The release should be executed for each CAPL callback function at the end of the measurement.</li>
+                            </ul>
+                            <ul>
+                                <li class="Indent"><span class="bold">VIASTDDECL GetVersion (int32* major, int32* minor)</span>
+                                    <br />Returns the version of the interface object.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>The Class VIACaplFunction (VIA.h)</h3>
+                            <p>The <span class="bold">VIACaplFunction</span> class offers various methods for accessing CAPL functions:</p>
+                            <ul>
+                                <li><span class="bold">VIASTDDECL ParamSize (int32* size)</span>
+                                    <br />Returns the total number of bytes of all parameters of this CAPL function in <span class="bold">size</span>.</li>
+                            </ul>
+                            <ul>
+                                <li><span class="bold">VIASTDDECL ParamCount (int32* size)</span>
+                                    <br />Returns the number of parameters in the signature of this CAPL function in <span class="bold">size</span>.</li>
+                            </ul>
+                            <ul>
+                                <li><span class="bold">VIASTDDECL ParamType (char* type, int32 n<sup>th</sup>)</span>
+                                    <br />Returns the type of the <span class="bold">n<sup>th</sup></span> specified parameter (0,1,2,…) in the signature of this function in <span class="bold">type</span>.</li>
+                            </ul>
+                            <ul>
+                                <li><span class="bold">VIASTDDECL ResultType (char* type)</span>
+                                    <br />Returns the type of the return value in <span class="bold">type</span>.</li>
+                            </ul>
+                            <ul>
+                                <li><span class="bold">VIASTDDECL Call (uint32* result, void* params) =0;</span>
+                                    <br />Calls the CAPL function with the specified parameters.<br /><span class="bold">Params</span> is a pointer to the parameter list.<br /><span class="bold">Result</span> contains the return value of the CAPL function as uint32.</li>
+                            </ul>
+                            <ul>
+                                <li><span class="bold">VIASTDDECL CallReturnsDouble (double* result, void* params) = 0;</span>
+                                    <br />Calls the CAPL function with the specified parameters.<br /><span class="bold">Params</span> is a pointer to the parameter list.<br /><span class="bold">Result</span> contains the return value of the CAPL function as double.</li>
+                            </ul>
+                            <div>
+                                <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                                    <col class="TableStyle-vTableSymbol-Column-Column1" />
+                                    <col class="TableStyle-vTableSymbol-Column-Column2" />
+                                    <tbody>
+                                        <tr>
+                                            <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                                <p class="Table">
+                                                    <img src="../../../Resources/vImages/vInfo.png" style="width: 48px;height: 45px;" title="Note" alt="Note" />
+                                                </p>
+                                            </td>
+                                            <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                                <p class="TableSymbolHead">Note</p>
+                                                <p class="Table">The dimensions of array parameters cannot be requested. Overloaded callback functions must therefore differ in at least one parameter type.</p>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h2><a targets="TOGVersionControl" href="javascript:void(0)" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="TOGVersionControl"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Version Control</a>
+                    </h2>
+                    <div style="display: none;" data-mc-target-name="TOGVersionControl">
+                        <div>
+                            <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                                <col class="TableStyle-vTableSymbol-Column-Column1" />
+                                <col class="TableStyle-vTableSymbol-Column-Column2" />
+                                <tbody>
+                                    <tr>
+                                        <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                            <p class="Table">
+                                                <img src="../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                            </p>
+                                        </td>
+                                        <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                            <p class="TableSymbolHead"><a name="VersionControl" id="VersionControl"></a>Example: Definition of a Version Number</p>
+                                            <p>The DLL can export a version number, which is then evaluated in the <a href="../../Shared/CAPL/General/CompilerCommandsPragmaLibrary.htm"><span class="bold">#pragma library</span> command</a>. The version number must be an exported variable of type <span class="bold">unsigned long</span> with the name <span class="bold">caplDllLibraryVersion</span>.</p>
+                                            <p class="SourceCode">#define LIBRARY_VERSION 3<br />CAPLEXPORT unsigned long far caplDllLibraryVersion = LIBRARY_VERSION;</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div>
+                            <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                                <col class="TableStyle-vTableSymbol-Column-Column1" />
+                                <col class="TableStyle-vTableSymbol-Column-Column2" />
+                                <tbody>
+                                    <tr>
+                                        <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                            <p class="Table">
+                                                <img src="../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                            </p>
+                                        </td>
+                                        <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                            <p class="TableSymbolHead">Example: Check the Version Number</p>
+                                            <p>If the version number in the <a href="../../Shared/CAPL/General/CompilerCommandsPragmaLibrary.htm"><span class="bold">#pragma library</span> command</a> does not correspond with the exported version, the CAPL compiler issues a warning. The DLL can specify the warning text to be issued by exporting is as a text variable with the name <span class="bold">caplDllVersionCheckMessage</span>. If such a text variable is exported the CAPL compiler outputs the predefined text.</p>
+                                            <p class="SourceCode">CAPLEXPORT const char* far caplDllVersionCheckMessage = "Please write CAPL code for use of DLL version 3";</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div>
+                            <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                                <col class="TableStyle-vTableSymbol-Column-Column1" />
+                                <col class="TableStyle-vTableSymbol-Column-Column2" />
+                                <tbody>
+                                    <tr>
+                                        <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                            <p class="Table">
+                                                <img src="../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                            </p>
+                                        </td>
+                                        <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                            <p class="TableSymbolHead">Example: Error Message in case of missing Version Number</p>
+                                            <p>With an exported flag, the DLL can also instruct the compiler to issue an error when the DLL is used without a <span class="bold">#pragma library</span> directive and a version number in the program. This flag has to be a variable with the name <span class="bold">caplDllRequireVersionCheck</span>. </p>
+                                            <p class="SourceCode">CAPLEXPORT unsigned long far caplDllRequireVersionCheck = 1;</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <p class="LinkList">&#160;</p>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="FooterWhite">
+                <table class="FooterWhite" style="border-collapse: collapse;margin-left: auto;margin-right: auto;">
+                    <col style="width: 70px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col style="width: 16px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="buttons popup-container clearfix topicToolbarProxy topicToolbarProxyFooter _Skins_HTML5TopicToolbar mc-component nocontent">
+                                    <div class="button-group-container-left">
+                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo"><a href="../../Shared/HowToUseOnlineHelp.htm" title="Tips for using the help" alt="Tips for using the help"><img src="../../../Resources/vImages/vBackstage/vHelpInfo.png" /></a>
+                                </p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo" style="text-align: right;"><span class="mc-variable Vector.BuildTime variable">2024-04-8T20:56:42</span>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <table style="width: 100%;border-collapse: separate;border-spacing: 3px 0px;margin-left: auto;margin-right: auto;caption-side: top;">
+                <col />
+                <col />
+                <col />
+                <col data-mc-conditions="BuildProcess.HTML5Link" />
+                <tbody>
+                    <tr>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;">
+                            <p class="vec_Footer">©&#160;Vector Informatik GmbH</p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;text-align: right;">
+                            <p class="vec_FooterBold">
+                                <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE&#160;Product Families</MadCap:conditionalText> Version <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.VectorTestUnitRunner">18</MadCap:conditionalText></p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="../../Shared/ContactCopyrightLicense.htm" class="vec_Footer MCXref xref xrefvec_Footer">Contact/Copyright/License</a>
+                            </p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="https://www.vector.com/int/en/company/get-info/privacy-policy/" target="_blank" class="vec_Footer">Data Privacy Notice</a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

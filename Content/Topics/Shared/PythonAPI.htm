@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="" data-mc-search-type="Stem" data-mc-help-system-file-name="CANoeDEFamily.xml" data-mc-path-to-help-system="../../../" data-mc-toc-path="Programming Interfaces (APIs)|Python" data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.TestDataEditor,Targets.vTESTstudio" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../Skins/Favicons/favicon-16x16.png" /><title>Python Programming</title>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Resources/Stylesheets/vTableMasterPageHeader.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../Resources/Stylesheets/vStylesheet.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.needs-pie
+{
+	behavior: url('../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../Resources/Stylesheets/vTable.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../Resources/Stylesheets/vTableSymbol.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapGlobal.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapDom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapUtilities.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapXhr.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapTextEffects.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapSlideshow.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapMessageBus.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapMessageBus.CrossFrame.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapDefault.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapMediaQueries.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAccessibility.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapHelpSystem.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAliasFile.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapTopicFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapFeedbackHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapSkinHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapToc.Breadcrumbs.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapToc.MiniToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapToc.SideMenu.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapIndex.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapGlossary.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapParser.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapSearch.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapNavigateTopics.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapLms.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapELearning.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapTopic.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapMicroContentComponent.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapSearchHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapTopicElements.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapTriPane.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/jscript" src="../../Resources/vScripts/SyntaxHighlighting.js">
+        </script>
+        <script type="text/jscript" src="../../Resources/vScripts/TabSwitch.js">
+        </script>
+        <script type="text/javascript" src="../../Resources/vScripts/Vector.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../CANoeDEFamily.htm#Topics/Shared/PythonAPI.htm">Open topic with navigation</a>
+        </p>
+        <div class="Body">
+            <div role="main" id="mc-main-content">
+                <div>
+                    <p class="AutoSearchFilterConcepts"><a name="aanchor9325"></a>
+                        <MadCap:concept term="SFCore" />
+                    </p>
+                    <p><a name="kanchor2864"></a>
+                    </p>
+                    <p class="StructurePath"><a href="../CANoeCANalyzer/CANoeDEFamily.htm" class="StructurePath" data-mc-conditions="Targets.CANoe-DE-Family"><img src="../../Resources/vImages/vToolIcons/CANoeDEFamily_Icon16_15x15.png" alt="" style="width: 15;height: 15;" />&#160;CANoe&#160;DE&#160;Product&#160;Families</a> » … » <span class="mc-variable System.Title variable">Python Programming</span></p>
+                    <h1><span class="mc-variable System.Title variable">Python Programming</span>
+                    </h1>
+                    <p class="MenuPath">&#160;</p>
+                    <p class="ToolAvailability" data-mc-conditions="BuildProcess.ToolAvailability"><a href="FeatureAvailability.htm" class="red" title="Feature availabilty for your product">Valid&#160;for</a>:&#160;&#160;CANoe&#160;DE<a name="aanchor9326"></a><MadCap:concept term="SFCANoeDE" />&#160;&#160;•&#160;&#160;CANoe:lite&#160;DE<a name="aanchor9327"></a><MadCap:concept term="SFCANoeLiteDE" />&#160;&#160;•&#160;&#160;CANoe4SW&#160;DE<a name="aanchor9328"></a><MadCap:concept term="SFCANoe4SWDE" />&#160;&#160;•&#160;&#160;CANoe4SW:lite&#160;DE<a name="aanchor9329"></a><MadCap:concept term="SFCANoe4SWLiteDE" /></p>
+                </div>
+                <p>In your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> you can use Python<MadCap:conditionalText data-mc-conditions="Targets.CANoe-SE-Family,Targets.CANoe-DE-Family"> scripts</MadCap:conditionalText> for programming <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">application models</MadCap:conditionalText>.</p>
+                <p>For security reasons, no interpreter is shipped with you <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText>. Instead, the users or their organization are responsible for ensuring  that the Python interpreter is installed in the appropriate version for the <span class="bold">x86</span> and <span class="bold">x64</span> target architectures. A download is available from the <a href="https://www.python.org/downloads/" target="_blank" class="ExternalLink">official page</a>, among others. Your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> only provides special API extensions and thus an Embedded Domain Specific Language.</p>
+                <p data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">You can also use Python outside your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> to control your product via the integrated <a href="../COMInterface/COMInterface.htm">COM server</a>. However, this help page refers to application models. You can use the vector.canoe module only for application models and not for controlling the COM server.</p>
+                <p data-mc-conditions="Targets.CANoe-DE-Family">Use the <a href="../CANoeCANalyzer/Windows/CommunicationSetup/CommunicationSetup.htm" class="MCXref xref">Communication Setup</a> to integrate Python modules as an application model in your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText>. There you can specify a Python script as a new application model or create a new script. When creating a Python script, the required template is created automatically.</p>
+                <div>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                    <img src="../../Resources/vImages/vInfo.png" style="width: 48px;height: 45px;" title="Note" alt="Note" />
+                                </td>
+                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                    <p class="TableSymbolHead">Note on Python Version</p>
+                                    <p class="Table">Starting with <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> version <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">15</MadCap:conditionalText>, Python version 3.9.2 - 3.9.x is supported.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                    <img src="../../Resources/vImages/vInfo.png" style="width: 48px;height: 45px;" title="Note" alt="Note" />
+                                </td>
+                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                    <p class="TableSymbolHead">Note on Compatibility When Using Native Libraries</p>
+                                    <p class="Table">When using native Python libraries (so-called C extensions) in the Python scripts, the architecture and platform must match the used or set RT server.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                    <img src="../../Resources/vImages/vInfo.png" style="width: 48px;height: 45px;" title="Note" alt="Note" />
+                                </td>
+                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                    <p class="TableSymbolHead">Note on Handling Python Site Packages</p>
+                                    <p class="Table">When using Python site packages, the packages are installed in the same directory regardless of the architecture. As the architecture of the package must match the RT server, this can lead to errors.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div data-mc-conditions="Targets.CANoe-DE-Family">
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                    <img src="../../Resources/vImages/vInfo.png" style="width: 48px;height: 45px;" title="Note" alt="Note" />
+                                </td>
+                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                    <p class="TableSymbolHead">Note on Importing Python Modules With Dependencies on Dynamic Program Libraries (DLLs)</p>
+                                    <p class="Table">By importing Python modules, which in turn use DLLs, the RT kernel can crash when a measurement is repeatedly executed in your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText>.</p>
+                                    <p class="Table">If a crash occurs, you can prevent a new crash by setting <span class="SourceCode">ForceRtKernelRestart=1</span> in the *.cfg.ini file, which is located next to the <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> configuration. A restart of your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> is required.</p>
+                                    <p class="Table">You can also contact support with the names of the modules so that they can be added to a list of known problems. Your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> checks the loaded modules against this list and thus prevents a crash.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                    <img src="../../Resources/vImages/vInfo.png" style="width: 48px;height: 45px;" title="Note" alt="Note" />
+                                </td>
+                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                    <p class="TableSymbolHead">Note on Supported Modes</p>
+                                    <p class="Table">Distributed mode, standalone mode and Linux are supported.</p>
+                                    <p class="Table">A Python interpreter with version 3.9.x has to be installed manually on the machine that will be running the RT Server. Please note, that this is currently not possible on VN8900 devices. For Linux the Python interpreter must be installed relative to the <span class="SourceCode">/usr</span> folder. In these cases your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> synchronizes all Python files and Python packages that are located next to the configured Python models to the target system. Python packages are only considered if they contain a <span class="SourceCode">__init__.py</span> in each subfolder, system site packages are not synchronized.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                    <img src="../../Resources/vImages/vInfo.png" style="width: 48px;height: 45px;" title="Note" alt="Note" />
+                                </td>
+                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                    <p class="TableSymbolHead">Note on security vulnerabilities</p>
+                                    <p class="Table">Python installations can contain known and unknown vulnerabilities that manifest themselves in certain application models.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <hr class="Startpage" width="100%" size="0" align="center" />
+                <div>
+                    <table style="width: 100%;mc-table-style: url('../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                        <col style="width: 50%;" />
+                        <tbody>
+                            <tr>
+                                <th colspan="2" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="TableHead">Using Python</p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <div data-mc-conditions="Targets.CANoe-DE-Family">
+                                        <h2><a targets="PythonEditor" href="javascript:void(0)" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="PythonEditor"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Using a Python Editor</a>
+                                        </h2>
+                                        <div style="display: none;" data-mc-target-name="PythonEditor">
+                                            <p>You can edit Python scripts comfortably by using e.g. <span class="Product">Visual Studio Code</span> or <span class="Product">PyCharm</span> as development environment. To use <span class="Product">Visual Studio Code</span> for developing Python scripts in your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText>, open the <span class="GUI">External Programs</span> page in the <a href="../CANoeCANalyzer/Ribbon/File/Options/ExternalPrograms/ExternalProgramsTools.htm" class="GUI">Options</a> dialog and select <span class="bold">Edit_Python_Source_With_VisualStudioCode.vbs</span> from the Python file editor. You will find this file in the<span class="SourceCode"> Exec64\Scripts</span> subdirectory of the installation directory. Similarly, select <span class="bold">Edit_Python_Source_With_PyCharm.vbs</span> for <span class="Product">PyCharm</span>.</p>
+                                            <div>
+                                                <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                                                    <col class="TableStyle-vTableSymbol-Column-Column1" />
+                                                    <col class="TableStyle-vTableSymbol-Column-Column2" />
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                                                <img src="../../Resources/vImages/vInfo.png" style="width: 48px;height: 45px;" title="Note" alt="Note" />
+                                                            </td>
+                                                            <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                                                <p class="TableSymbolHead">Note</p>
+                                                                <p>The scripts provided enable a seamless connection to the Python API provided by your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> from your development environment, with correct auto-completion and syntax highlighting. With a directly specified editor path, the display may be incorrect.</p>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h2><a targets="EventProcedures" href="javascript:void(0)" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="EventProcedures"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Event Procedures</a>
+                                        </h2>
+                                        <div style="display: none;" data-mc-target-name="EventProcedures">
+                                            <p>To react to an event, you can provide methods with a special decorator. The methods are then called when the event occurs.</p>
+                                            <p>The following decorator is available in your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText>:</p>
+                                            <ul>
+                                                <li><span class="SourceCode">vector.canoe.on_key(char: str)</span>
+                                                </li>
+                                            </ul>
+                                            <div>
+                                                <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                                                    <col class="TableStyle-vTableSymbol-Column-Column1" />
+                                                    <col class="TableStyle-vTableSymbol-Column-Column2" />
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                                                <p class="Table">
+                                                                    <img src="../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                                                <p class="TableSymbolHead">Example</p>
+                                                                <div class="codeSnippet"><a class="codeSnippetCopyButton" role="button" href="javascript:void(0);">Copy</a>
+                                                                    <div class="codeSnippetCaption">The method is called when key 'a' is pressed:</div>
+                                                                    <div style="mc-code-lang: Python;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>@vector.canoe.<span style="color: #6f42c1; ">on_key</span>(<span style="color: #df5000; ">"a"</span>)<br /><span style="color: #a71d5d; ">def</span> <span style="color: #6f42c1; ">key_a_pressed</span>(self, char: str):<br />&#160;&#160;&#160;&#160;vector.canoe.<span style="color: #6f42c1; ">write</span>(<span style="color: #df5000; ">"key a pressed"</span>)</code></pre>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <p>In addition, timers based on simulation time can be created using the <span class="bold">vector.canoe.Timer</span>. These can be used like <span class="bold">threading.Timer</span>.</p>
+                                        </div>
+                                    </div>
+                                    <div data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">
+                                        <h2><a targets="Programming" href="javascript:void(0)" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Programming"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Programming Application Models</a>
+                                        </h2>
+                                        <div style="display: none;" data-mc-target-name="Programming">
+                                            <p>To program application models, specify a Python script. The script must contain exactly one class that has the <span class="bold">vector.canoe.measurement_script</span> decorator. The constructor required for the class is created implicitly.</p>
+                                            <p>At runtime this class is instantiated by your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> and its event procedures are registered automatically.</p>
+                                            <p>Test modules are not supported.</p>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h2><a targets="Access" href="javascript:void(0)" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Access"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Access to Distributed Objects</a>
+                                        </h2>
+                                        <div style="display: none;" data-mc-target-name="Access">
+                                            <p>For distributed objects, Python provides a generated API that you can use to access the distributed objects in the runtime environment. The API is generated below the Python package <span class="bold">application_layer</span> created for this purpose.</p>
+                                            <p>For this purpose, the data types in Python are mapped as follows:</p>
+                                            <ul>
+                                                <li>Integer data types to Python data type int.</li>
+                                                <li>Float and double to <span class="bold">float</span></li>
+                                                <li>String to <span class="bold">str</span></li>
+                                                <li>Bool to <span class="bold">bool</span></li>
+                                                <li>Bytes to <span class="bold">bytearray</span></li>
+                                                <li>Enum are mapped via derivatives of the <span class="bold">IntEnum</span> data type.</li>
+                                                <li>Arrays and lists are mapped via classes that behave like native Python lists, but additionally check the minimum and maximum size. However, native lists may also be passed when setting values.</li>
+                                                <li>Structs are mapped via classes with one property per struct member.</li>
+                                                <li>Optional struct members can have <span class="bold">None</span> as value.</li>
+                                                <li>Unions are mapped via classes with one property per union member. At any time, only one member has a valid value. When setting a property, this changes automatically. The discriminator property can be used to query which member has a valid value.</li>
+                                                <li>The names of the Python data types for Enum, Array, List, Struct and Union data types correspond to the definition in your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText>. According to the namespaces, these are generated in the Python packages with the same names.</li>
+                                                <li>Dependent on the defined conversions the corresponding representations may be accessed by the properties <span class="bold">impl_value</span>, <span class="bold">phys_value</span>, <span class="bold">raw_value</span> and <span class="bold">symb_value</span>.</li>
+                                            </ul>
+                                            <p>The distributed objects are mapped in Python as follows:</p>
+                                            <ul>
+                                                <li>For distributed objects defined before the measurement, Python objects with the same name are created in the Python package matching the namespace.</li>
+                                                <li>The creation of dynamic distributed objects is currently not supported.</li>
+                                                <li>For data members, events, and methods, properties of the same name are created on the Python object.</li>
+                                            </ul>
+                                            <p>The values can be read and written as described below:</p>
+                                            <ul>
+                                                <li>Currently, the values of data members, events and fields can be read and written.</li>
+                                                <li>When reading a value without defined conversions, a copy of the value must be created using the <span class="SourceCode">copy</span> method.</li>
+                                                <li>When writing a value without defined conversions, complex values must always be set as a whole.</li>
+                                                <li>When reading or writing a value with defined conversions, one of the properties impl_value, phys_value, raw_value and symb_value must be used.</li>
+                                                <li>Handlers can be registered directly at the member using the method <span class="SourceCode">register_on_change_handler</span> or <span class="SourceCode">register_on_update_handler</span>.</li>
+                                            </ul>
+                                            <div class="Indent">
+                                                <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                                                    <col class="TableStyle-vTableSymbol-Column-Column1" />
+                                                    <col class="TableStyle-vTableSymbol-Column-Column2" />
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                                                <p class="Table">
+                                                                    <img src="../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                                                <p class="TableSymbolHead">Example</p>
+                                                                <div class="codeSnippet"><a class="codeSnippetCopyButton" role="button" href="javascript:void(0);">Copy</a>
+                                                                    <div style="mc-code-lang: Python;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code><span style="color: #a71d5d; ">import</span> vector.canoe<br /><span style="color: #a71d5d; ">from</span> application_layer <span style="color: #a71d5d; ">import</span> Mirrors<br /><span style="color: #969896; "># Read the value of provided data member "CurrentPosition" of the object "RightMirror" in namespace "Mirrors"</span><br />pos = Mirrors.RightMirror.CurrentPosition.<span style="color: #6f42c1; ">copy</span>()<br /><br /><span style="color: #969896; "># change value and write it back</span><br />pos.x = <span style="color: #0086b3; ">10</span><br />Mirrors.RightMirror.CurrentPosition = pos<br /><br /><span style="color: #969896; "># define a and register an on-change handler for consumed data member "CurrentPositionLeft" of the object "Controller" in Namespace "Mirrors"</span><br /><span style="color: #a71d5d; ">def</span> <span style="color: #6f42c1; ">OnControllerCurrentPositionLeft</span>():<br />&#160;&#160;pos = Mirrors.Controller.CurrentPositionLeft.<span style="color: #6f42c1; ">copy</span>()<br />&#160;&#160;vector.canoe.<span style="color: #6f42c1; ">write</span>(<span style="color: #6f42c1; ">str</span>(pos.x))<br /><br />Mirrors.Controller.CurrentPositionLeft.<span style="color: #6f42c1; ">register_on_change_handler</span>(OnControllerCurrentPositionLeft)</code></pre>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <p>Methods can be called and implemented as follows:</p>
+                                            <ul>
+                                                <li>For <span class="bold">provided</span> methods, you can use the <span class="SourceCode">set_call_handler</span> method to register a callback that contains the implementation of the method. The signature of the callback is essentially the same as the defined method. However, for primitive data types, implemented in Python as so-called immutables, and for optional parameters, instances of a generic data type are passed in the case of <span class="bold">Out</span> and <span class="bold">InOut</span> parameters. This data type allows both reading and changing the parameter via a <span class="bold">value</span> property, which has the original data type as its data type.</li>
+                                                <li>For <span class="bold">consumed</span> methods, you can use the <span class="SourceCode">call_async</span> method to make an asynchronous call. The method <span class="SourceCode">call_async</span> expects all <span class="bold">In</span> and all <span class="bold">InOut</span> parameters. As the last parameter, you must specify a callback that will be invoked when the response is received. If present, the callback receives the return value as the first parameter. Subsequently it receives all <span class="bold">Out</span> and <span class="bold">InOut</span> parameters.</li>
+                                                <li>For<span class="bold"> internal</span> methods, you can use the <span class="SourceCode">call_sync</span> method to make a synchronous call. The method <span class="SourceCode">call_sync</span> expects all <span class="bold">In</span>, <span class="bold">InOut</span> and <span class="bold">Out</span> parameters.</li>
+                                            </ul>
+                                            <div class="Indent">
+                                                <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                                                    <col class="TableStyle-vTableSymbol-Column-Column1" />
+                                                    <col class="TableStyle-vTableSymbol-Column-Column2" />
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                                                <p class="Table">
+                                                                    <img src="../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                                                <p class="TableSymbolHead">Example</p>
+                                                                <div class="codeSnippet"><a class="codeSnippetCopyButton" role="button" href="javascript:void(0);">Copy</a>
+                                                                    <div style="mc-code-lang: Python;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code><span style="color: #a71d5d; ">import</span> vector.canoe<br /><span style="color: #a71d5d; ">from</span> application_layer <span style="color: #a71d5d; ">import</span> Mirrors<br /><br />@vector.canoe.measurement_script<br /><span style="color: #6f42c1; "><span style="color: #a71d5d; ">class</span> MirrorControlModel:</span><br /><span style="color: #a71d5d; ">def</span> <span style="color: #6f42c1; ">initialize</span>(self):<br />&#160;&#160;<span style="color: #969896; "># register implementation for provided method "Adjust" of object "LeftMirror" in Namespace "Mirrors"</span><br />&#160;&#160;Mirrors.LeftMirror.Adjust.<span style="color: #6f42c1; ">set_call_handler</span>(self.Adjust_implementation)<br /><br /><span style="color: #a71d5d; ">def</span> <span style="color: #6f42c1; ">Adjust_implementation</span>(self, deltaX:int, deltaY: int) -&gt; int:<br />&#160;&#160;<span style="color: #a71d5d; ">return</span> <span style="color: #0086b3; ">0</span><br /><br /><span style="color: #a71d5d; ">def</span> <span style="color: #6f42c1; ">start</span>(self):<br />&#160;&#160;<span style="color: #969896; "># call consumed method “Adjust” of object "MirrorAdjustment" in Namespace "Mirrors"</span><br />&#160;&#160;Mirrors.MirrorAdjustment.Adjust.<span style="color: #6f42c1; ">call_async</span>(-<span style="color: #0086b3; ">50</span>, <span style="color: #0086b3; ">0</span>, <span style="color: #a71d5d; ">lambda</span> result: vector.canoe.<span style="color: #6f42c1; ">write</span>(<span style="color: #df5000; ">"result: "</span> + <span style="color: #6f42c1; ">str</span>(result)))</code></pre>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="LinkList">&#160;</p>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="FooterWhite">
+                <table class="FooterWhite" style="border-collapse: collapse;margin-left: auto;margin-right: auto;">
+                    <col style="width: 70px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col style="width: 16px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="buttons popup-container clearfix topicToolbarProxy topicToolbarProxyFooter _Skins_HTML5TopicToolbar mc-component nocontent">
+                                    <div class="button-group-container-left">
+                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo"><a href="HowToUseOnlineHelp.htm" title="Tips for using the help" alt="Tips for using the help"><img src="../../Resources/vImages/vBackstage/vHelpInfo.png" /></a>
+                                </p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo" style="text-align: right;"><span class="mc-variable Vector.BuildTime variable">2024-04-8T20:56:42</span>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <table style="width: 100%;border-collapse: separate;border-spacing: 3px 0px;margin-left: auto;margin-right: auto;caption-side: top;">
+                <col />
+                <col />
+                <col />
+                <col data-mc-conditions="BuildProcess.HTML5Link" />
+                <tbody>
+                    <tr>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;">
+                            <p class="vec_Footer">©&#160;Vector Informatik GmbH</p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;text-align: right;">
+                            <p class="vec_FooterBold">
+                                <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE&#160;Product Families</MadCap:conditionalText> Version <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.VectorTestUnitRunner">18</MadCap:conditionalText></p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="ContactCopyrightLicense.htm" class="vec_Footer MCXref xref xrefvec_Footer">Contact/Copyright/License</a>
+                            </p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="https://www.vector.com/int/en/company/get-info/privacy-policy/" target="_blank" class="vec_Footer">Data Privacy Notice</a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="" data-mc-search-type="Stem" data-mc-help-system-file-name="CANoeDEFamily.xml" data-mc-path-to-help-system="../../../../../" data-mc-conditions="Targets.CANoe-DE-Family" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../Skins/Favicons/favicon-16x16.png" /><title>Data Types for Distributed Objects</title>
+        <link href="../../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Resources/Stylesheets/vTableMasterPageHeader.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../../Resources/Stylesheets/vStylesheet.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../../Resources/Stylesheets/vTablePageTOC.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../../Resources/Stylesheets/vTableSymbol.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapGlobal.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapDom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapUtilities.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapXhr.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTextEffects.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSlideshow.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMessageBus.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMessageBus.CrossFrame.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapDefault.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMediaQueries.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapAccessibility.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapHelpSystem.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapAliasFile.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopicFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapFeedbackHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSkinHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.Breadcrumbs.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.MiniToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.SideMenu.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapIndex.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapGlossary.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapParser.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSearch.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapNavigateTopics.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapLms.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapELearning.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopic.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMicroContentComponent.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSearchHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopicElements.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTriPane.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/jscript" src="../../../../Resources/vScripts/SyntaxHighlighting.js">
+        </script>
+        <script type="text/jscript" src="../../../../Resources/vScripts/TabSwitch.js">
+        </script>
+        <script type="text/javascript" src="../../../../Resources/vScripts/Vector.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../../../CANoeDEFamily.htm#Topics/CANoeCANalyzer/CommunicationConcept/Programming/CCPDOs.htm">Open topic with navigation</a>
+        </p>
+        <div class="Body">
+            <div role="main" id="mc-main-content">
+                <div>
+                    <p class="StructurePath"><a href="../../CANoeDEFamily.htm" class="StructurePath" data-mc-conditions="Targets.CANoe-DE-Family"><img src="../../../../Resources/vImages/vToolIcons/CANoeDEFamily_Icon16_15x15.png" alt="" style="width: 15;height: 15;" />&#160;CANoe&#160;DE&#160;Product&#160;Families</a> » <a href="../CC.htm" class="StructurePath MCXref xref xrefStructurePath">Communication Concept</a> » <a href="CCP.htm" class="StructurePath">Programming</a> » <span class="mc-variable System.Title variable">Data Types for Distributed Objects</span></p>
+                    <h1><span class="mc-variable System.Title variable">Data Types for Distributed Objects</span>
+                    </h1>
+                    <p class="MenuPath">&#160;</p>
+                    <p class="ToolAvailability" data-mc-conditions="BuildProcess.ToolAvailability"><a href="../../../Shared/FeatureAvailability.htm" class="red" title="Feature availabilty for your product">Valid&#160;for</a>:&#160;&#160;CANoe&#160;DE<a name="aanchor3896"></a><MadCap:concept term="SFCANoeDE" />&#160;&#160;•&#160;&#160;CANoe:lite&#160;DE<a name="aanchor3897"></a><MadCap:concept term="SFCANoeLiteDE" />&#160;&#160;•&#160;&#160;CANoe4SW&#160;DE<a name="aanchor3898"></a><MadCap:concept term="SFCANoe4SWDE" />&#160;&#160;•&#160;&#160;CANoe4SW:lite&#160;DE<a name="aanchor3899"></a><MadCap:concept term="SFCANoe4SWLiteDE" /></p>
+                    <p class="AutoSearchFilterConcepts"><a name="aanchor3900"></a>
+                        <MadCap:concept term="SFCore" />
+                    </p>
+                    <p class="IndexConcept"><a name="kanchor1188"></a>
+                    </p>
+                </div>
+                <div>
+                    <p class="TableCOM"><a name="Shortcuts" id="Shortcuts"></a><span class="red">ON THIS&#160;PAGE:</span>
+                    </p>
+                    <table style="mc-table-style: url('../../../../Resources/Stylesheets/vTablePageTOC.css');" class="TableStyle-vTablePageTOC" cellspacing="2">
+                        <col class="TableStyle-vTablePageTOC-Column-Column1" />
+                        <col class="TableStyle-vTablePageTOC-Column-Column1" />
+                        <col class="TableStyle-vTablePageTOC-Column-Column1" />
+                        <tbody>
+                            <tr class="TableStyle-vTablePageTOC-Body-Body1">
+                                <td class="TableStyle-vTablePageTOC-BodyB-Column1-Body1">
+                                    <p class="PageTOC"><a href="#BMCAPL" class="PageTOC">CAPL</a>
+                                    </p>
+                                    <p class="PageTOCResult"><a href="#BMCAPLObjects" class="PageTOC">Objects</a>
+                                    </p>
+                                    <p class="PageTOCResult"><a href="#BMCAPLMonitoringObjects" class="PageTOC">Monitoring Objects</a>
+                                    </p>
+                                    <p class="PageTOCResult"><a href="#BMCAPLReferences" class="PageTOC">References</a>
+                                    </p>
+                                    <p class="PageTOCResult"><a href="#BMCAPLContainers" class="PageTOC">Containers</a>
+                                    </p>
+                                    <p class="PageTOCResult"><a href="#BMCAPLInterfaces" class="PageTOC">Interfaces and Blueprints</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle-vTablePageTOC-BodyB-Column1-Body1">
+                                    <p class="PageTOC"><a href="#BMCSharp" class="PageTOC">C#</a>
+                                    </p>
+                                    <p class="PageTOCResult"><a href="#BMCSharpObjects" class="PageTOC">Objects</a>
+                                    </p>
+                                    <p class="PageTOCResult"><a href="#BMCSharpMonitoringObjects" class="PageTOC">Monitoring Objects</a>
+                                    </p>
+                                    <p class="PageTOCResult"><a href="#BMCSharpReferences" class="PageTOC">References</a>
+                                    </p>
+                                    <p class="PageTOCResult"><a href="#BMCSharpConstants" class="PageTOC">Constants</a>
+                                    </p>
+                                    <p class="PageTOCResult"><a href="#BMCSharpInterfaces" class="PageTOC">Interfaces and Blueprints</a>
+                                    </p>
+                                    <p class="PageTOCResult"><a href="#BMCSharpValue" class="PageTOC">Value and Call Handlers</a>
+                                    </p>
+                                    <p class="PageTOCResult"><a href="#BMCSharpContainers" class="PageTOC">Containers</a>
+                                    </p>
+                                    <p class="PageTOCResult"><a href="#BMCSharpImplementation" class="PageTOC">Implementation Classes</a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle-vTablePageTOC-BodyA-Column1-Body1">
+                                    <p class="PageTOC"><a href="#BMPython" class="PageTOC">Python</a>
+                                    </p>
+                                    <p class="PageTOCResult"><a href="#BMPythonObjects" class="PageTOC">Objects</a>
+                                    </p>
+                                    <p class="PageTOCResult"><a href="#BMPythonValue" class="PageTOC">Value and Call Handler</a>
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h2 class="SectionMain"><a name="BMCAPL" id="BMCAPL"></a>CAPL <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                <p>Most distributed object types in <a href="../../../Shared/CAPL/CAPLIntroduction.htm">CAPL</a> can represent an invalid value. If variables of such types are not initialized on declaration, they are assigned to their invalid value. Some operations might also result in invalid values, e.g. if a cast or lookup fails. You can check the validity of a value by using the <span class="SourceCode">IsValid</span> selector. Accessing members of an invalid value causes an error message in the <a href="../../Windows/Write/WriteWindow.htm">Write Window</a> and a returned default value (e.g. empty string). In <span class="MCExpanding MCExpanding_Open expanding expandingToolAvailability"><a href="javascript:void(0)" class="MCExpandingHead MCExpandingHotSpot expandingHead MCExpandingHotSpot_ MCExpandingHotSpot_ToolAvailability MCHotSpotImage">test modules<img class="MCExpanding_Image_Icon" src="../../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" /></a><span class="MCExpandingBody expandingBody">valid for <span class="Product">CANoe&#160;DE</span><MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">, </MadCap:conditionalText><span class="Product">CANoe:lite&#160;DE</span></span></span> it will also cause an error in test system to be reported.</p>
+                <p>The types can be used for local variables, global variables and parameters. The types are not available for values of <span class="bold">maps</span>.</p>
+                <h2 class="SectionSub"><a name="BMCAPLObjects" id="BMCAPLObjects"></a>Objects <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                <p>Objects from <a href="../../../vCDL/vCDLStartpage.htm">vCDL</a> have a <a href="../../../CAPLFunctions/DistributedObjects/Objects/CAPLfunctiondistObjRef.htm" class="SourceCode">distObjRef</a> type in CAPL (<span class="SourceCode">distObjRef *</span> or <span class="SourceCode">distObjRef &lt;Interface Name&gt;</span>). The interface name can be partially qualified if it is unambiguous. The <span class="SourceCode">distObjRef</span> types preserve the ordering of interfaces in the data model. Conversions to types higher in the hierarchy are implicit. Conversions to types lower in the hierarchy require an explicit cast, which will check the dynamic type to determine if the conversion is valid. If the conversion is invalid, the cast expression has an invalid value, but no CAPL runtime error is generated.</p>
+                <p>Statically declared objects can be referenced in CAPL through their qualified name. The name binding rules are the same as for communication objects, which means that <span class="bold">using namespace</span> directives are applicable and partially qualified names can be used if there are no conflicts. Expressions that reference static distributed objects are constant and of <span class="SourceCode">distObjRef</span> type with the most derived interface.</p>
+                <div>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                    <p class="Table">
+                                        <img src="../../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                    </p>
+                                </td>
+                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                    <p class="TableSymbolHead">Example</p>
+                                    <p class="TableSourceCode">//&#160;Example.vcdl<br />version 1.3;<br />namespace SomeNamespace {<br />&#160;&#160;interface SomeInterface {<br />&#160;&#160;&#160;&#160;internal data int32 SomeMember;<br />&#160;&#160;}<br />&#160;&#160;object SomeObject : SomeInterface {}<br />}</p>
+                                    <p class="TableSourceCode">// Example.can<br />on start {<br />&#160;&#160;distObjRef SomeInterface obj = SomeObject;<br />&#160;&#160;$obj.SomeMember = 42;<br />}</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h2 class="SectionSub"><a name="BMCAPLMonitoringObjects" id="BMCAPLMonitoringObjects"></a>Monitoring Objects <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                <p>Monitoring objects have a <a href="../../../CAPLFunctions/DistributedObjects/Objects/CAPLfunctionMonitoringDistObjRef.htm" class="SourceCode">monitoringDistObjRef</a> type in CAPL (<span class="SourceCode">monitoringDistObjRef *</span> or <span class="SourceCode">monitoringDistObjRef &lt;Interface Name&gt;</span>). The reading and connection APIs are the same as for normal objects. The writing APIs (e.g. writing data member values, calling methods, or using publish-subscribe and announce) are not available.</p>
+                <p>The <span class="SourceCode">value_update</span> and <span class="SourceCode">value_change</span> handlers can also be used for member values of monitoring objects. However, the values of the <span class="SourceCode">this</span> object are read-only.</p>
+                <p>There are special type handler for monitoring objects <a href="../../../CAPLFunctions/DistributedObjects/EventProcedures/CAPLfunctionOnAnyMonitoredValueUpdate.htm" class="SourceCode">any_monitored_value_update</a> and <a href="../../../CAPLFunctions/DistributedObjects/EventProcedures/CAPLfunctionOnAnyMonitoredValueChange .htm" class="SourceCode">any_monitored_value_change</a>.</p>
+                <div>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                    <p class="Table">
+                                        <img src="../../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                    </p>
+                                </td>
+                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                    <p class="TableSymbolHead">Example</p>
+                                    <p class="TableSourceCode">// Example.vcdl<br />version 1.4;<br />namespace SomeNamespace {<br />&#160;&#160;[Binding="Abstract"]<br />&#160;&#160;interface SomeInterface {<br />&#160;&#160;&#160;&#160;provided data int32 SomeMember;<br />&#160;&#160;}<br />&#160;&#160;SomeInterface ProvidingObject;<br />&#160;&#160;reverse&lt;SomeInterface&gt; ConsumingObject;<br />&#160;&#160;[Monitoring] SomeInterface MonitoringObject;<br />}</p>
+                                    <p class="TableSourceCode">// Example.can<br />on key 'a' {<br />&#160;&#160;$ProvidingObject.SomeMember = 42;<br />}<br />on value_update MonitoringObject.SomeMember {<br />&#160;&#160;Write("monitored value update: %d", $this);<br />}</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h2 class="SectionSub"><a name="BMCAPLReferences" id="BMCAPLReferences"></a>References <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                <p>References to Objects in vCDL have a <a href="../../../CAPLFunctions/DistributedObjects/Objects/CAPLfunctiondistObjReferenceRef.htm" class="SourceCode">distObjReferenceRef</a> type in CAPL (<span class="SourceCode">distObjReferenceRef *</span> or <span class="SourceCode">distObjReferenceRef &lt;Interface Name&gt;</span>). The interface name can be partially qualified if it is unambiguous. References are not covariant in their value type, as they are mutable. The wildcard type can be downcasted to a more specialized type with a runtime check.</p>
+                <p>The name binding rules for statically declared references are the same as for objects.</p>
+                <p>It is possible to directly access the members of the referenced object at the reference. The values at these members are mutable as long as the target of the reference is valid. If the target becomes invalid these values will be immutable.</p>
+                <div>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                    <p class="Table">
+                                        <img src="../../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                    </p>
+                                </td>
+                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                    <p class="TableSymbolHead">Example</p>
+                                    <p class="TableSourceCode">// Example.vcdl<br />version 1.3;<br />namespace SomeNamespace {<br />&#160;&#160;interface SomeInterface {<br />&#160;&#160;&#160;&#160;internal data int32 SomeMember;<br />&#160;&#160;}<br />&#160;&#160;object SomeObject : SomeInterface {}<br />&#160;&#160;reference&lt;SomeInterface&gt; SomeReference;<br />}</p>
+                                    <p class="TableSourceCode">// Example.can<br />on start {<br />&#160;&#160;distObjReferenceRef SomeInterface ref = SomeReference;<br />&#160;&#160;ref.SetTarget(SomeObject);<br />&#160;&#160;$ref.SomeMember = 42;<br />}</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h2 class="SectionSub"><a name="BMCAPLContainers" id="BMCAPLContainers"></a>Containers <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                <p>Containers of objects or references in vCDL have a <a href="../../../CAPLFunctions/DistributedObjects/Objects/CAPLfunctiondistObjContainerRef.htm" class="SourceCode">distObjContainerRef</a> type in CAPL (<span class="SourceCode">distObjContainerRef *</span> or <span class="SourceCode">distObjContainerRef &lt;Typedef Name&gt;</span>). The <span class="SourceCode">typedef</span> name must be fully qualified. Containers are not covariant in their value type, as they are mutable. The wildcard type can be downcasted to a more specialized type with a runtime check.</p>
+                <p>The name binding rules for statically declared containers are the same as for objects.</p>
+                <p>The members of the CAPL container type depend on which kind of container (array or list) and value type (object, reference, or container) is used in vCDL.</p>
+                <div>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                    <p class="Table">
+                                        <img src="../../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                    </p>
+                                </td>
+                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                    <p class="TableSymbolHead">Example</p>
+                                    <p class="TableSourceCode">// Example.vcdl<br />version 1.3;<br />namespace SomeNamespace {<br />&#160;&#160;interface SomeInterface {<br />&#160;&#160;&#160;&#160;internal data int32 SomeMember;<br />&#160;&#160;}<br />&#160;&#160;object SomeObject : SomeInterface {}<br />&#160;&#160;typedef SomeContainerType = list&lt;reference&lt;SomeInterface&gt;&gt;;<br />&#160;&#160;SomeContainerType SomeContainer;<br />}</p>
+                                    <p class="TableSourceCode">// Example.can<br />on start {<br />&#160;&#160;distObjContainerRef SomeNamespace::SomeContainerType c = SomeContainer;<br />&#160;&#160;c.PushBack(SomeObject);<br />&#160;&#160;$c[0].SomeMember = 42;<br />}</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h2 class="SectionSub"><a name="BMCAPLInterfaces" id="BMCAPLInterfaces"></a>Interfaces and Blueprints <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                <p>Object interfaces are represented in CAPL with singleton types (<span class="SourceCode"><a href="../../../CAPLFunctions/DistributedObjects/Objects/CAPLfunctiondistObjInterface.htm">distObjInterface</a> &lt;Interface Name&gt;</span>). They are used to create and destroy dynamic objects. They are not available for declarations. As there is only one value, they cannot represent an invalid value.</p>
+                <p>Object blueprints (<span class="SourceCode"><a href="../../../CAPLFunctions/DistributedObjects/Objects/CAPLfunctiondistObjBlueprint.htm">distObjBlueprint</a> *</span> or <span class="SourceCode">distObjBlueprint &lt;Interface Name&gt;</span>) are also created at the interface singletons. They are used to configure the attributes and virtual networks for dynamic objects.</p>
+                <div>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                    <p class="Table">
+                                        <img src="../../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                    </p>
+                                </td>
+                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                    <p class="TableSymbolHead">Example</p>
+                                    <p class="TableSourceCode">// Example.vcdl<br />version 1.3;<br />namespace SomeNamespace {<br />&#160;&#160;interface SomeInterface {<br />&#160;&#160;&#160;&#160;internal data int32 SomeMember;<br />&#160;&#160;}<br />}</p>
+                                    <p class="TableSourceCode">// Example.can<br />on start {<br />&#160;&#160;distObjRef SomeInterface obj;<br />&#160;&#160;distObjBlueprint SomeInterface bp;<br /><br />&#160;&#160;bp = SomeInterface.CreateObjectBlueprint();<br />&#160;&#160;obj = SomeInterface.CreateObject(bp, "SomeNamespace::SomeObject");<br /><br />&#160;&#160;$obj.SomeMember = 42;<br /><br />&#160;&#160;SomeInterface.DestroyObject(obj);<br />}</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h2 class="SectionMain"><a name="BMCSharp" id="BMCSharp"></a>C# <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                <p>Statically declared distributed objects can be referenced in C# through their qualified name. If no naming conflicts exist, the distributed object can also be accessed from top level directly.</p>
+                <h2 class="SectionSub"><a name="BMCSharpObjects" id="BMCSharpObjects"></a>Objects <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                <p>For local variables or parameters, it is recommended to use the interface type of the desired object. This can either be the C# interface for the distributed object itself, or the C# interface for the interface declared via vCDL. Do not use the class type of the interface declared via vCDL, as explained in the section <a href="#BMCSharpInterfaces" class="bold">Interfaces and Blueprints</a>.</p>
+                <p>Interfaces of distributed objects can be found in the user-given namespace. For <span class="bold">inline</span> defined distributed objects, the interface name will be the name of the distributed object, with a capital I in front and an "_interface_" with an additional counter at the back.</p>
+                <p>Please take note that type conversions towards base types are not yet fully supported, as the structure in vCDL allows multiple parents, whereas C# does not support this style of hierarchy.</p>
+                <p>Statically declared objects can be referenced in C# through their qualified name. The name binding rules are the same as for communication objects, which means that using namespace directives are applicable and partially qualified names can be used if there are no conflicts. Expressions that reference static distributed objects are accessing static singleton classes which then re-direct to the .Instance property and its sub-properties for member access.</p>
+                <div>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                    <p class="Table">
+                                        <img src="../../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                    </p>
+                                </td>
+                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                    <p class="TableSymbolHead">Example</p>
+                                    <p class="TableSourceCode">//&#160;Example.vcdl<br />version 1.3;<br />namespace SomeNamespace {<br />&#160;&#160;interface SomeInterface {<br />&#160;&#160;&#160;&#160;internal data int32 SomeMember;<br />&#160;&#160;}<br />&#160;&#160;object SomeObject : SomeInterface {}<br />}</p>
+                                    <p class="TableSourceCode">//&#160;Example.cs<br />public override void Main(){<br />&#160;&#160;SomeNamespace.SomeObject.SomeMember.Value = 42;<br />}</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h2 class="SectionSub"><a name="BMCSharpMonitoringObjects" id="BMCSharpMonitoringObjects"></a>Monitoring Objects <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                <p>The monitoring variant of an interface uses the <span class="bold">_Monitoring</span> or <span class="bold">_ReverseMonitoring</span> suffix. The reading and connection APIs are the same as for normal objects. The writing APIs (e.g. writing data member values, calling methods, or using publish-subscribe and announce) are not available.</p>
+                <p>The <span class="SourceCode">OnUpdate</span> and <span class="SourceCode">OnChange</span> handlers can also be used for member values of monitoring objects.</p>
+                <div>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                    <p class="Table">
+                                        <img src="../../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                    </p>
+                                </td>
+                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                    <p class="TableSymbolHead">Example</p>
+                                    <p class="TableSourceCode">// Example.vcdl<br />version 1.4;<br />namespace SomeNamespace {<br />&#160;&#160;[Binding="Abstract"]<br />&#160;&#160;interface SomeInterface {<br />&#160;&#160;&#160;&#160;provided data int32 SomeMember;<br />&#160;&#160;}<br />&#160;&#160;SomeInterface ProvidingObject;<br />&#160;&#160;reverse&lt;SomeInterface&gt; ConsumingObject;<br />&#160;&#160;[Monitoring] SomeInterface MonitoringObject;<br />}</p>
+                                    <p class="TableSourceCode">// Example.cs<br />using Vector.Tools;<br />using Vector.CANoe.Runtime;<br />public class test : MeasurementScript {<br />&#160;&#160;[OnKey('a')]<br />&#160;&#160;public void OnKeyMethod(char c) {<br />&#160;&#160;&#160;&#160;SomeNamespace.ProvidingObject.SomeMember.Value = 42;<br />&#160;&#160;}<br />&#160;&#160;[OnUpdate(SomeNamespace.MonitoringObject.MemberIDs.SomeMember)]<br />&#160;&#160;public void OnUpdateMethod() {<br />&#160;&#160;&#160;&#160;Output.WriteLine("monitored value update: {0}", SomeNamespace.MonitoringObject.SomeMember.Value);<br />&#160;&#160;}<br />}</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h2 class="SectionSub"><a name="BMCSharpConstants" id="BMCSharpConstants"></a>Constants <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                <p>Constants from <a href="../../../vCDL/vCDLStartpage.htm">vCDL</a> can be referenced in C# by using their qualified names. Currently only constants with primitive types are supported.</p>
+                <div>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                    <p class="Table">
+                                        <img src="../../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                    </p>
+                                </td>
+                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                    <p class="TableSymbolHead">Example</p>
+                                    <p class="TableSourceCode">// Example.vcdl<br />version 2.0;<br />namespace SomeNamespace {<br />&#160;&#160;const int32 SomeConst = 42;<br />}</p>
+                                    <p class="TableSourceCode">// Example.cs<br />using Vector.Tools;<br />using Vector.CANoe.Runtime;<br />public class test : MeasurementScript {<br />&#160;&#160;[OnKey('a')]<br />&#160;&#160;public void OnKeyMethod(char c) {<br />&#160;&#160;&#160;&#160;Output.WriteLine("{0}", SomeNamespace.SomeConst.Value);<br />&#160;&#160;}<br />}</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h2 class="SectionSub"><a name="BMCSharpReferences" id="BMCSharpReferences"></a>References <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                <p>References to Objects in vCDL have, similar to statically declared distributed objects, an interface and access class generated in the user-given namespace.</p>
+                <p>The name binding rules for statically declared references are the same as for objects.</p>
+                <p>It is possible to directly access the members of the referenced object at the reference. The values at these members are mutable as long as the target of the reference is valid. If the target becomes invalid these values will be immutable.</p>
+                <div>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                    <p class="Table">
+                                        <img src="../../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                    </p>
+                                </td>
+                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                    <p class="TableSymbolHead">Example</p>
+                                    <p class="TableSourceCode">// Example.vcdl<br />version 1.4;<br /><br />namespace MyNamespace<br />{<br />&#160;&#160;interface IReferenced<br />&#160;&#160;{<br />&#160;&#160;&#160;&#160;provided data int32 mData;<br />&#160;&#160;}<br /><br />&#160;&#160;interface ITest<br />&#160;&#160;{<br />&#160;&#160;&#160;&#160;reference&lt;IReferenced&gt; mReference;<br />&#160;&#160;}<br /><br />&#160;&#160;reference&lt;IReferenced&gt; ReferenceObject;<br /><br />&#160;&#160;IReferenced MyTarget;<br />&#160;&#160;ITest TestObject;<br />}</p>
+                                    <p class="TableSourceCode">// Example.cs<br />&#160;&#160;public override void Start()<br />&#160;&#160;{<br />&#160;&#160;&#160;&#160;// Check whether the reference has a valid target<br />&#160;&#160;&#160;&#160;if (MyReference.HasTarget)<br />&#160;&#160;&#160;&#160;{<br />&#160;&#160;&#160;&#160;&#160;&#160;// Access the referenced object via the .Target property<br />&#160;&#160;&#160;&#160;&#160;&#160;var realValue = MyReference.Target.mData.Value;<br />&#160;&#160;&#160;&#160;}<br />&#160;&#160;&#160;&#160;else<br />&#160;&#160;&#160;&#160;{<br />&#160;&#160;&#160;&#160;&#160;&#160;// Set a target either as object ...<br />&#160;&#160;&#160;&#160;&#160;&#160;MyReference.SetTarget(MyTarget.Instance);<br />&#160;&#160;&#160;&#160;&#160;&#160;// ... or by path<br />&#160;&#160;&#160;&#160;&#160;&#160;MyReference.SetTargetByPath("MyNamespace::MyTarget");<br />&#160;&#160;&#160;&#160;}<br />&#160;&#160;&#160;&#160;// Clear the referenced object<br />&#160;&#160;&#160;&#160;MyReference.ResetTarget();<br />&#160;&#160;&#160;&#160;// Read access is still possible without a valid target, it gets the last available value<br />&#160;&#160;&#160;&#160;var mDataLastValue = MyReference.mData.Value;<br />&#160;&#160;}</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h2 class="SectionSub"><a name="BMCSharpInterfaces" id="BMCSharpInterfaces"></a>Interfaces and Blueprints <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                <p>Interfaces defined via vCDL are represented in C# as</p>
+                <ul>
+                    <li>a C# interface located in the user-given namespace, which can be used as a parameter or variable type</li>
+                    <li>a static class with suffix <span class="bold">_Objects</span>, which is not eligible as value type but serves the purpose to hold the object factory for dynamic distributed objects and blueprints and the member IDs for the interface handlers. The factory is used to create and destroy dynamic objects and object blueprints, which are used to configure the attributes and virtual networks for dynamic objects.</li>
+                </ul>
+                <div>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                    <p class="Table">
+                                        <img src="../../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                    </p>
+                                </td>
+                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                    <p class="TableSymbolHead">Example</p>
+                                    <p class="TableSourceCode">//&#160;Example.vcdl<br />version 1.3;<br />namespace SomeNamespace {<br />&#160;&#160;interface SomeInterface {<br />&#160;&#160;&#160;&#160;internal data int32 SomeMember;<br />&#160;&#160;}<br />}</p>
+                                    <p class="TableSourceCode">//&#160;Example.cs<br />public override void Main() {<br />&#160;&#160;var bp = SomeNamespace.SomeInterface_Objects.ObjectFactory.CreateObjectBlueprint();<br />&#160;&#160;var obj = SomeNamespace.SomeInterface_Objects.ObjectFactory.CreateObject(bp,”SomeNamespace::SomeObject");<br />&#160;&#160;obj.SomeMember.Value = 42;<br />&#160;&#160;SomeNamespace.SomeInterface_Objects.ObjectFactory.DestroyObject(obj);<br />}</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>Further there are namespaces within the user-given namespace with the name of an interface and a "_Types" or "_Reverse_Types" appended. This contains the interfaces for members as well as classes with the names of the members, which in turn contain type classes for call contexts that can be used as parameters in handler methods.</p>
+                <h2 class="SectionSub"><a name="BMCSharpValue" id="BMCSharpValue"></a>Value and Call Handlers <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                <p>The assignment of the handlers <span class="SourceCode">[OnCall]</span>, <span class="SourceCode">[OnCalling]</span>, <span class="SourceCode">[OnCalled]</span>, <span class="SourceCode">[OnReturned]</span>, <span class="SourceCode">[OnReturning]</span> is different for distributed objects as it was for communication objects in C#. The registration is done via MemberIDs, which can be found at the statically declared distributed object for each member. These MemberIDs represent constant strings containing the base type and static access path.</p>
+                <p>Please note that handler assignment is only possible for statically declared objects.</p>
+                <div>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                    <p class="Table">
+                                        <img src="../../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                    </p>
+                                </td>
+                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                    <p class="TableSymbolHead">Example</p>
+                                    <p class="TableSourceCode">//&#160;Example.vcdl<br />version 1.3;<br />namespace SomeNamespace {<br />&#160;&#160;interface SomeInterface {<br />&#160;&#160;&#160;&#160;internal data int32 SomeMember;<br />&#160;&#160;}<br />&#160;&#160;object SomeObject : SomeInterface;<br />}</p>
+                                    <p class="TableSourceCode">//&#160;Example.can<br />[OnChange(SomeObject.MemberIDs.SomeMember)]<br />public void OnChangeMethod()<br />{<br />&#160;&#160;// React to change of SomeMembers value<br />}<br /></p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h2 class="SectionSub"><a name="BMCSharpContainers" id="BMCSharpContainers"></a>Containers <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                <p>Containers in C# like objects and references have an interface and accessor class generated in the user-given namespace. Those inherit from internal runtime classes providing the functionality. Depending on the kind of container (array or list) corresponding parent interfaces are implemented.</p>
+                <p>The name binding rules for statically declared containers are the same as for objects.</p>
+                <div>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                    <p class="Table">
+                                        <img src="../../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                    </p>
+                                </td>
+                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                    <p class="TableSymbolHead">Example</p>
+                                    <p class="TableSourceCode">//Example vCDL<br />version 1.4;<br /><br />namespace MyNamespace<br />{<br />&#160;&#160;interface ITest<br />&#160;&#160;{<br />&#160;&#160;&#160;&#160;provided data int32 mData;<br />&#160;&#160;}<br />&#160;&#160;typedef MyContainerType = list&lt;array&lt;ITest, 10&gt;&gt;[initialSize=5];<br />&#160;&#160;ITest TestDO;<br />&#160;&#160;MyContainerType MyContainer;<br />}</p>
+                                    <p class="TableSourceCode">// Example.cs<br />public override void Start()<br />{<br />&#160;&#160;var blueprint = ITest_Objects.ObjectFactory.CreateObjectBlueprint();<br /><br />&#160;&#160;// Gather all objects in the container depth first<br />&#160;&#160;var allObjects = MyContainer.AllObjects;<br /><br />&#160;&#160;// Adds an Element at the end (only for list types)<br />&#160;&#160;MyContainer.AddElement(blueprint);<br />&#160;&#160;// Deletes the last element of the container (only for list types)<br />&#160;&#160;MyContainer.DeleteElement();<br />&#160;&#160;// As MyContainer is static, index operations must be made on the .Instance Property<br />&#160;&#160;var arrayOnIndex1 = MyContainer.Instance[1];<br /><br />&#160;&#160;// The length is available as readonly property<br />&#160;&#160;var length = MyContainer.Length;<br />}</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h2 class="SectionSub"><a name="BMCSharpImplementation" id="BMCSharpImplementation"></a>Implementation Classes <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                <p>In C# you can implement the provider side methods and field getters or setters of a distributed object by implementing an abstract class of the corresponding type and register it as an implementation at either the object instance or the interface’s <span class="bold">_Objects</span> class. The implementations are then used whenever an asynchronous call of the consumer side is made.</p>
+                <p>The abstract class has an <span class="bold">.Instance</span> property, which references the object the implementation was registered at. In case the implementation was registered at an interface, the property references the object the call was routed to.</p>
+                <p>Therefore, it is forbidden to use one implementation instance multiple times. This will lead to an <span class="bold">ArgumentException</span> being thrown from the <span class="SourceCode">RegisterImplementation()</span> call.</p>
+                <div>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                    <p class="Table">
+                                        <img src="../../../../Resources/vImages/vInfo.png" style="width: 48px;height: 45px;" title="Note" alt="Note" />
+                                    </p>
+                                </td>
+                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                    <p class="TableSymbolHead">Note</p>
+                                    <p class="Table">No call order is guaranteed for multiple registrations of different implementations on the same interface or its base interface. Likewise, the order is not guaranteed in interaction with <span class="SourceCode">OnAnyCall</span> handlers.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                    <p class="Table">
+                                        <img src="../../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                    </p>
+                                </td>
+                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                    <p class="TableSymbolHead">Example</p>
+                                    <p class="TableSourceCode">//Example vCDL<br />version 1.4;<br /><br />namespace MyNamespace<br />{<br />&#160;&#160;[Binding="Abstract"]<br />&#160;&#160;interface IProvider<br />&#160;&#160;{<br />&#160;&#160;&#160;&#160;provided data int32 mData;<br />&#160;&#160;&#160;&#160;provided field float mField {get;set;}<br />&#160;&#160;&#160;&#160;provided method void mMethod(int64 param);<br />&#160;&#160;}<br />&#160;&#160;IProvider Provider;<br />&#160;&#160;reverse&lt;IProvider&gt; Consumer;<br />}</p>
+                                    <p class="TableSourceCode">// Example.cs<br /><br />// Implementation for all types of IProvider<br />// Preferably implement the abstract class _ImplementationBase instead of the interface<br />public class MyImplementation : MyNamespace.IProvider_ImplementationBase<br />{<br />&#160;&#160;public override void  mMethod(long param)<br />&#160;&#160;{<br />&#160;&#160;&#160;&#160;// Access to other (non-implementable) members<br />&#160;&#160;&#160;&#160;mData.Value = (param &gt;= int.MinValue &amp;&amp; param &lt;= int.MinValue) ? (int) param : 0;<br />&#160;&#160;}<br /><br />&#160;&#160;public override float mField<br />&#160;&#160;{<br />&#160;&#160;&#160;&#160;// Through the .Instance or "base" you can get and set the fields value<br />&#160;&#160;&#160;&#160;get =&gt; Instance.mField.Value; //base.mField;<br />&#160;&#160;&#160;&#160;set =&gt; base.mField = value;<br />&#160;&#160;}<br /><br />&#160;&#160;// In some contexts it is specified that field setters<br />&#160;&#160;// return the value that was set to the field.<br />&#160;&#160;// The choice which setter implementation is used is done automatically by <span class="mc-variable Vector.Product variable">CANoe</span>.<br />&#160;&#160;public override float mField_Set(float newValue)<br />&#160;&#160;{<br />&#160;&#160;&#160;&#160;base.mField = newValue;<br />&#160;&#160;&#160;&#160;return newValue;<br />&#160;&#160;}<br />}<br /><br />// The main Application Model<br />public class AppModel : MeasurementScript<br />{<br />&#160;&#160;/// &lt;summary&gt;Notification that the measurement starts.&lt;/summary&gt;<br />&#160;&#160;public override void Start()<br />&#160;&#160;{<br />&#160;&#160;&#160;&#160;var implInstance  = new MyImplementation();<br />&#160;&#160;&#160;&#160;var implInterface = new MyImplementation();<br />&#160;&#160;&#160;&#160;// Registration at a single Distributed Object Instance<br />&#160;&#160;&#160;&#160;Provider.RegisterImplementation(implInstance);<br />&#160;&#160;&#160;&#160;// Registration at the interface<br />&#160;&#160;&#160;&#160;MyNamespace.IProvider_Objects.RegisterImplementation(implInterface);<br />&#160;&#160;&#160;&#160;// This would lead to an error as implInterface is re-used<br />&#160;&#160;&#160;&#160;// Provider.RegisterImplementation(implInterface);<br />&#160;&#160;}<br />}</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <h2 class="SectionMain"><a name="BMPython" id="BMPython"></a>Python <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                    <p>Depending on the data model, a Python package called <span class="bold">application_layer</span> is created, which can be imported within a <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> model.</p>
+                    <h2 class="SectionSub"><a name="BMPythonObjects" id="BMPythonObjects"></a>Objects <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                    <p>Statically declared objects can be referenced in Python by their qualified name.</p>
+                    <div>
+                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                            <col class="TableStyle-vTableSymbol-Column-Column1" />
+                            <col class="TableStyle-vTableSymbol-Column-Column2" />
+                            <tbody>
+                                <tr>
+                                    <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                        <p class="Table">
+                                            <img src="../../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                        <p class="TableSymbolHead">Example</p>
+                                        <p class="TableSourceCode">// Example.vcdl<br />version 1.3;<br />namespace SomeNamespace {<br />&#160;&#160;interface SomeInterface {<br />&#160;&#160;&#160;&#160;internal data int32 SomeMember;<br />&#160;&#160;}<br />&#160;&#160;object SomeObject : SomeInterface {}<br />}</p>
+                                        <p class="TableSourceCode">// example.py<br />from application_layer import *<br />def set_value():<br />&#160;&#160;SomeNamespace.SomeObject.SomeMember = 42</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <h2 class="SectionSub"><a name="BMPythonValue" id="BMPythonValue"></a>Value and Call Handler <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                    <p>For the <span class="SourceCode">OnChange</span>, <span class="SourceCode">OnUpdate</span> and <span class="SourceCode">OnCall</span> events, for example, handlers can be registered for the <span class="SourceCode">OnChange event</span> on the member using the <span class="SourceCode">register_on_change_handler</span> method  and unregistered using <span class="SourceCode">unregister_on_change_handler</span>. In addition, there are decorators for the first two. Please note that a handler assignment is only possible for statically declared objects.</p>
+                    <div>
+                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                            <col class="TableStyle-vTableSymbol-Column-Column1" />
+                            <col class="TableStyle-vTableSymbol-Column-Column2" />
+                            <tbody>
+                                <tr>
+                                    <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                        <p class="Table">
+                                            <img src="../../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                        <p class="TableSymbolHead">Example</p>
+                                        <p class="TableSourceCode">// Example.vcdl<br />version 1.3;<br />namespace SomeNamespace {<br />&#160;&#160;interface SomeInterface {<br />&#160;&#160;&#160;&#160;internal data int32 SomeMember;<br />&#160;&#160;}<br />&#160;&#160;object SomeObject : SomeInterface;<br />}</p>
+                                        <p class="TableSourceCode">// example.py<br />&#160;&#160;@vector.canoe.on_change(SomeObject.SomeMember)<br />&#160;&#160;def on_change(self):<br />&#160;&#160;&#160;&#160;pass  # React to change of SomeMember’s value</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <p class="LinkList">&#160;</p>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="FooterWhite">
+                <table class="FooterWhite" style="border-collapse: collapse;margin-left: auto;margin-right: auto;">
+                    <col style="width: 70px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col style="width: 16px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="buttons popup-container clearfix topicToolbarProxy topicToolbarProxyFooter _Skins_HTML5TopicToolbar mc-component nocontent">
+                                    <div class="button-group-container-left">
+                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo"><a href="../../../Shared/HowToUseOnlineHelp.htm" title="Tips for using the help" alt="Tips for using the help"><img src="../../../../Resources/vImages/vBackstage/vHelpInfo.png" /></a>
+                                </p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo" style="text-align: right;"><span class="mc-variable Vector.BuildTime variable">2024-04-8T20:56:42</span>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <table style="width: 100%;border-collapse: separate;border-spacing: 3px 0px;margin-left: auto;margin-right: auto;caption-side: top;">
+                <col />
+                <col />
+                <col />
+                <col data-mc-conditions="BuildProcess.HTML5Link" />
+                <tbody>
+                    <tr>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;">
+                            <p class="vec_Footer">©&#160;Vector Informatik GmbH</p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;text-align: right;">
+                            <p class="vec_FooterBold">
+                                <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE&#160;Product Families</MadCap:conditionalText> Version <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.VectorTestUnitRunner">18</MadCap:conditionalText></p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="../../../Shared/ContactCopyrightLicense.htm" class="vec_Footer MCXref xref xrefvec_Footer">Contact/Copyright/License</a>
+                            </p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="https://www.vector.com/int/en/company/get-info/privacy-policy/" target="_blank" class="vec_Footer">Data Privacy Notice</a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

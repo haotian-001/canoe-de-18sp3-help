@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="" data-mc-search-type="Stem" data-mc-help-system-file-name="CANoeDEFamily.xml" data-mc-path-to-help-system="../../../../../" data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../Skins/Favicons/favicon-16x16.png" /><title>CAN Statistics Window</title>
+        <link href="../../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Resources/Stylesheets/vTableMasterPageHeader.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../../Resources/Stylesheets/vStylesheet.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../../Resources/Stylesheets/vTable.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../../Resources/Stylesheets/vTableSymbol.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapGlobal.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapDom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapUtilities.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapXhr.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTextEffects.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSlideshow.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMessageBus.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMessageBus.CrossFrame.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapDefault.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMediaQueries.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapAccessibility.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapHelpSystem.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapAliasFile.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopicFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapFeedbackHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSkinHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.Breadcrumbs.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.MiniToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.SideMenu.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapIndex.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapGlossary.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapParser.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSearch.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapNavigateTopics.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapLms.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapELearning.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopic.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMicroContentComponent.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSearchHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopicElements.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTriPane.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/jscript" src="../../../../Resources/vScripts/SyntaxHighlighting.js">
+        </script>
+        <script type="text/jscript" src="../../../../Resources/vScripts/TabSwitch.js">
+        </script>
+        <script type="text/javascript" src="../../../../Resources/vScripts/Vector.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../../../CANoeDEFamily.htm#Topics/CANoeCANalyzer/Windows/StatisticsMonitor/CANStatisticsMonitor.htm">Open topic with navigation</a>
+        </p>
+        <div class="Body">
+            <div role="main" id="mc-main-content">
+                <p class="StructurePath"><a href="../../CANoeDEFamily.htm" class="StructurePath" data-mc-conditions="Targets.CANoe-DE-Family"><img src="../../../../Resources/vImages/vToolIcons/CANoeDEFamily_Icon16_15x15.png" alt="" style="width: 15;height: 15;" />&#160;CANoe&#160;DE&#160;Product&#160;Families</a> » <a href="../WindowsAnalysis.htm" class="StructurePath">Analysis Windows</a> » <span class="mc-variable System.Title variable">CAN Statistics Window</span></p>
+                <h1><a name="kanchor9665"></a><span class="mc-variable System.Title variable">CAN Statistics Window</span>
+                </h1>
+                <p class="MenuPath"><a href="../../Ribbon/Ribbon.htm" class="MenuPath">Ribbon</a>|<a href="../../Ribbon/RibbonAnalysis.htm" class="MenuPath" data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">Analysis Tab</a>|Statistics|View / New</p>
+                <p class="ToolAvailability" data-mc-conditions="BuildProcess.ToolAvailability"><a href="../../../Shared/FeatureAvailability.htm" class="red" title="Feature availabilty for your product">Valid&#160;for</a>:&#160;&#160;CANoe&#160;DE<a name="aanchor29817"></a><MadCap:concept term="SFCANoeDE" /></p>
+                <p class="AutoSearchFilterConcepts"><a name="aanchor29818"></a>
+                    <MadCap:concept term="SFCore" />
+                </p>
+                <table style="width: 100%;mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                    <col style="width: 50%;" />
+                    <col style="width: 50%;" />
+                    <tbody>
+                        <tr>
+                            <th colspan="2" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="TableHead">General</p>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p><a href="../../../../Resources/Images/CANoeCANalyzer/StatisticsWindowCAN.png" class="MCTopicPopup MCTopicPopupHotSpot a" title="CAN Statistics Window"><img src="../../../../Resources/Images/CANoeCANalyzer/StatisticsWindowCANPreview.png" title="CAN Statistics Window" alt="CAN Statistics Window" /></a>
+                                </p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p>The <a href="../../CAN/CAN.htm">CAN</a> Statistics Window displays statistics about bus activities during measurement.</p>
+                                <p>This Statistics Window can be inserted into the Measurement Setup via the context menus of the relevant function blocks (Trace etc.). To show the window use the <span class="GUI">Show Window</span> context menu command. All CAN bus events that arrive at the input of the Measurement Setup are evaluated for this purpose.</p>
+                                <p>If a database is assigned to a CAN channel, statistics can also be evaluated individually for each available CAN node and partly for available CAN messages.</p>
+                                <p>CAN statistics can also be evaluated by using <a href="../../../Shared/SystemVariables/SysVarStatistics.htm">statistics system variables</a>.</p>
+                                <p>Various <a href="../../../CAPLFunctions/CAN/CAPLfunctionsCANOverview.htm#StatisticsAPI">statistic CAPL functions</a> are available.</p>
+                                <p>In the <a href="../../Ribbon/File/Options/Measurement/MeasurementPerformance.htm"><span class="GUI">Options</span></a> dialog you can activate/deactivate the calculation of all bus statistics values.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="TableHead">Available Statistics</p>
+                            </th>
+                            <th class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="TableHead">Description</p>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                <div>
+                                    <table style="width: 100%;mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                                        <col style="width: 33%;" />
+                                        <col />
+                                        <thead>
+                                            <tr>
+                                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                                    <p class="TableHead">Statistics</p>
+                                                </th>
+                                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                                    <p class="TableHead">Function</p>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                    <p>Burst Time [ms]</p>
+                                                </td>
+                                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                    <p>Duration of a message burst in milliseconds.<br />The <span class="bold">Current/Last</span> value shows the longest measured time in the last sampling interval (1&#160;second).<br /></p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                    <p>Bursts [total]</p>
+                                                </td>
+                                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                    <p>Total number of message bursts.</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                    <p>Busload [%]</p>
+                                                </td>
+                                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                    <p>Busload in percent for a sampling interval of one second.</p>
+                                                    <p><a targets="TOGBusLoadCalculation" href="javascript:void(0)" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="TOGBusLoadCalculation"><img class="MCToggler_Image_Icon" src="../../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Hints for busload calculation</a>
+                                                    </p>
+                                                    <div style="display: none;" data-mc-target-name="TOGBusLoadCalculation">
+                                                        <h2>Calculation by the Hardware</h2>
+                                                        <p>The total busload (row <span class="GUI">Busload</span>) is calculated on the CAN hardware and considers all events on the CAN bus, <span class="bold">including Error Frames</span>.</p>
+                                                        <div>
+                                                            <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                                                                <col class="TableStyle-vTableSymbol-Column-Column1" />
+                                                                <col class="TableStyle-vTableSymbol-Column-Column2" />
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                                                            <p class="Table">
+                                                                                <img src="../../../../Resources/vImages/vInfo.png" style="width: 48px;height: 45px;" title="Note" alt="Note" />
+                                                                            </p>
+                                                                        </td>
+                                                                        <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                                                            <p class="TableSymbolHead">Note</p>
+                                                                            <p class="Table">If there is no value available from the hardware  (e.g. in offline mode, when no statistic events are logged), the calculation from the software is used for the total busload counter.</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                        <h2>Calculation by the Software</h2>
+                                                        <p>The busload for the counter of a single network node is calculated by the software. In that case are considered only events that passed the <a href="../../Ribbon/Hardware/NetworkHardware/NetworkHardwareCANControllerAcceptanceFilter.htm">Acceptance Filter</a>.</p>
+                                                        <div>
+                                                            <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                                                                <col class="TableStyle-vTableSymbol-Column-Column1" />
+                                                                <col class="TableStyle-vTableSymbol-Column-Column2" />
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                                                            <p class="Table">
+                                                                                <img src="../../../../Resources/vImages/vInfo.png" style="width: 48px;height: 45px;" title="Note" alt="Note" />
+                                                                            </p>
+                                                                        </td>
+                                                                        <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                                                            <p class="TableSymbolHead">Note</p>
+                                                                            <p class="Table">Because of technical reasons the Error Frames are not considered in the software calculation.</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                        <p>The difference between hardware calculated busload and software calculated busload you can see in the row <span class="bold">Unknown events</span>.</p>
+                                                        <div>
+                                                            <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                                                                <col class="TableStyle-vTableSymbol-Column-Column1" />
+                                                                <col class="TableStyle-vTableSymbol-Column-Column2" />
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                                                            <p class="Table">
+                                                                                <img src="../../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                                                            </p>
+                                                                        </td>
+                                                                        <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                                                            <p class="TableSymbolHead">Example</p>
+                                                                            <p class="Table">If all messages with the ID 100 are blocked by the Acceptance Filter, these could not be considered by the software calculation. If these messages represent 5% of the total busload, these 5% are not listed in the row of the network node that has sent this messages but in the row <span class="bold">Unknown events</span>.</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                    <p>Chip State</p>
+                                                </td>
+                                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                    <p>Error status information on the individual CAN controllers and the momentary readings of their respective error counters. The following states may occur:</p>
+                                                    <ul>
+                                                        <li><span class="bold">ACTIVE</span> (normal state)<br />The microcontroller reacts to bus errors by sending out an Error Frame consisting of 6 dominant bits.</li>
+                                                        <li><span class="bold">WARNING</span>
+                                                            <br />The microcontroller has reached the warning stage (96 Error Frames).<br />This is displayed in the Bus Statistics Window. The controller is still <span class="bold">Error Active</span>.</li>
+                                                        <li><span class="bold">PASSIVE</span>
+                                                            <br />The controller has entered the <span class="bold">Error Passive</span> state.<br />It reacts to bus errors with an Error Frame consisting of 6 recessive bits.<br />Please refer to the CAN specification for further details on this behavior.</li>
+                                                        <li><span class="bold">OFF</span>
+                                                            <br />The microcontroller has been disconnected from the bus.<br />It is not reactivated until a restart has been executed</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                    <p>Error Frames [fr/s]</p>
+                                                </td>
+                                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                    <p>Number of Error Frames in frames per second.</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                    <p>Error Frames [total]</p>
+                                                </td>
+                                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                    <p>Total number of Error Frames.</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                    <p>Ext. Data [fr/s]</p>
+                                                </td>
+                                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                    <p>Number of Data messages with extended CAN identifier in messages per second.</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                    <p>Ext. Data [total]</p>
+                                                </td>
+                                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                    <p>Total number of Data messages with extended CAN identifier.</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                    <p>Ext. Remote [fr/s]</p>
+                                                </td>
+                                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                    <p>Number of Remote messages with extended CAN identifier in messages per second.</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                    <p>Ext. Remote [total]</p>
+                                                </td>
+                                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                    <p>Total number of Remote messages with standard CAN identifier.</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                    <p>Frames per Burst [total]</p>
+                                                </td>
+                                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                    <p>Number of messages in a burst.<br />The <span class="bold">Current/Last</span> value shows the longest measured time in the last sampling interval (1&#160;second).<br /></p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                    <p>Min. Send Dist. [ms]</p>
+                                                </td>
+                                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                    <p>Minimum distance between two consecutive messages in milliseconds.<br /></p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                    <p>Std. Data [fr/s]</p>
+                                                </td>
+                                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                    <p>Number of Data messages with standard CAN identifier in messages per second.</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                    <p>Std. Data [total]</p>
+                                                </td>
+                                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                    <p>Total number of Data messages with standard CAN identifier.</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                    <p>Std. Remote [fr/s]</p>
+                                                </td>
+                                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                    <p>Number of Remote messages with standard CAN identifier in messages per second.</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                    <p>Std. Remote [total]</p>
+                                                </td>
+                                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                    <p>Total number of Remote messages with extended CAN identifier.</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                    <p>Transceiver Delay [ns]</p>
+                                                </td>
+                                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                    <p>Shows the measured transmission delay of the CAN transceiver, used for transmitter delay compensation when transmitting CAN FD frames with BRS = 1.</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                                    <p>Transceiver Errors</p>
+                                                </td>
+                                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                                    <p>Transitions to <span class="bold">Single Wire</span> mode.</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                <p>An available CAN channel can be selected from the CAN channel selection list. The selection list shows the current CAN channel, followed by the corresponding name of<MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family"> the CAN network in the Simulation Setup</MadCap:conditionalText>. Selecting the <span class="bold">CAN All</span> option in the channel list provides an overview of the <span class="bold">Current/Last</span> columns for all available CAN channels.</p>
+                                <p>The <span class="bold">Current/Last</span> column shows the current or most recently derived statistical value. The <span class="bold">Min</span>, <span class="bold">Max</span> and <span class="bold">Avg</span> columns show the corresponding minimum, maximum and average statistical values. All channels can be reset when <span class="bold">CAN All</span> is selected; otherwise only the selected CAN channel is reset.</p>
+                                <p>In the configuration dialog (context menu/right mouse button) you can adjust the windows <span class="bold">refresh rate</span>. In the <span class="bold">Available Statistics</span> area you control via the check boxes which statistics are shown and which not.</p>
+                                <p>If a measurement is running, the currently displayed values can be paused by clicking the pause toolbar button or by the context menu command <span class="bold">Pause Statistics</span>.</p>
+                                <div>
+                                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                                        <tbody>
+                                            <tr>
+                                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                                    <p class="Table">
+                                                        <img src="../../../../Resources/vImages/vInfo.png" style="width: 48px;height: 45px;" title="Note" alt="Note" />
+                                                    </p>
+                                                </td>
+                                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                                    <p class="TableSymbolHead">Note</p>
+                                                    <p class="Table">When using <span class="bold">virtual CAN channels</span> the following data is not evaluated:</p>
+                                                    <ul>
+                                                        <li>The frame duration is not emulated. Therefore no busload data and no data for the minimum transmission distance are available. The displayed burst length may be wrong.</li>
+                                                        <li><span class="bold">Controller State</span> (Active, Error passive, Bus off, ...) is not emulated.</li>
+                                                        <li><span class="bold">Chip State</span> always shows <span class="bold">Active</span> after starting with virtual channels. Since the controller can always send and receive messages it is correct to display <span class="bold">Active</span>.</li>
+                                                        <li>When <span class="bold">Error Frames</span> occur the display doesn't change; it still shows <span class="bold">Active</span>. In this case the indication is not absolutely correct.</li>
+                                                    </ul>
+                                                    <p class="StartList" data-mc-conditions="Targets.CANoe-DE-Family">If CAN channels are assigned to the <a href="../../Interfaces/SILKit.htm">SIL Kit</a>, the following data is not evaluated:</p>
+                                                    <ul data-mc-conditions="Targets.CANoe-DE-Family">
+                                                        <li>
+                                                            <p class="ListItem">Bursts</p>
+                                                        </li>
+                                                        <li>
+                                                            <p class="ListItem">Burst Time</p>
+                                                        </li>
+                                                        <li>
+                                                            <p class="ListItem">Chip State</p>
+                                                        </li>
+                                                        <li>
+                                                            <p class="ListItem">Error Frames</p>
+                                                        </li>
+                                                        <li>
+                                                            <p class="ListItem">Frames per Burst</p>
+                                                        </li>
+                                                        <li>
+                                                            <p class="ListItem">Transceiver Errors</p>
+                                                        </li>
+                                                        <li>
+                                                            <p class="ListItem">Min. Send Dist</p>
+                                                        </li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <p>
+                                    <p>Via the context menu or the toolbar you have further functions:</p>
+                                    <table style="margin-left: 0;margin-right: auto;caption-side: top;mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                                        <col />
+                                        <col />
+                                        <tr valign="top" data-mc-conditions="">
+                                            <td valign="middle" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                <p align="center">
+                                                    <img src="../../../../Resources/Images/CANoeCANalyzer/StatisticsConfiguration.png" title="Configuration" alt="Configuration" />
+                                                </p>
+                                            </td>
+                                            <td valign="middle" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                <p valign="middle"><span class="GUI">Configuration</span>
+                                                    <br />Opens the configuration dialog.</p>
+                                            </td>
+                                        </tr>
+                                        <tr valign="top">
+                                            <td valign="middle" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                <p align="center">
+                                                    <img src="../../../../Resources/Images/CANoeCANalyzer/StatisticsCollapseAll.png" title="Collapse All" alt="Collapse All" />
+                                                </p>
+                                            </td>
+                                            <td valign="middle" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                <p valign="middle"><span class="GUI">Collapse All</span>
+                                                    <br />Collapses all statistics.</p>
+                                            </td>
+                                        </tr>
+                                        <tr valign="top">
+                                            <td valign="middle" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                <p align="center">
+                                                    <img src="../../../../Resources/Images/CANoeCANalyzer/StatisticsExpandAll.png" title="Expand All" alt="Expand All" />
+                                                </p>
+                                            </td>
+                                            <td valign="middle" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                <p valign="middle"><span class="GUI">Expand All</span>
+                                                    <br />Expands all statistics.</p>
+                                            </td>
+                                        </tr>
+                                        <tr valign="top">
+                                            <td valign="middle" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                <p align="center">
+                                                    <img src="../../../../Resources/Images/CANoeCANalyzer/StatisticsResetAll.png" title="Reset All Statistics" alt="Reset All Statistics" />
+                                                </p>
+                                            </td>
+                                            <td valign="middle" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                <p valign="middle"><span class="GUI">Reset All Statistics</span>
+                                                    <br />Resets all statistics.</p>
+                                            </td>
+                                        </tr>
+                                        <tr valign="top">
+                                            <td valign="middle" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                <p align="center">
+                                                    <img src="../../../../Resources/Images/CANoeCANalyzer/StatisticsPause.png" title="Pause Statistics" alt="Pause Statistics" />
+                                                </p>
+                                            </td>
+                                            <td valign="middle" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                <p valign="middle"><span class="GUI">Pause Statistics</span>
+                                                    <br />Freezes all statistics during a meassurement.</p>
+                                            </td>
+                                        </tr>
+                                        <tr valign="top" data-mc-conditions="">
+                                            <td valign="middle" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                <p align="center">
+                                                    <img src="../../../../Resources/Images/CANoeCANalyzer/StatisticsColumnWidth.png" title="Adapt Columns Width" alt="Adapt Columns Width" />
+                                                </p>
+                                            </td>
+                                            <td valign="middle" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                <p valign="middle"><span class="GUI">Adapt Columns Width</span>
+                                                    <br />Adapts the widths of all columns to the current values.</p>
+                                            </td>
+                                        </tr>
+                                        <tr valign="top" data-mc-conditions="">
+                                            <td valign="middle" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                <p align="center">&#160;</p>
+                                            </td>
+                                            <td valign="middle" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                <p valign="middle"><span class="GUI">Sort</span>
+                                                    <br />Sorts statistics <span class="GUI">Alphabetically</span> or <span class="GUI">Logically</span>.</p>
+                                            </td>
+                                        </tr>
+                                        <tr valign="top" data-mc-conditions="">
+                                            <td colspan="1" rowspan="1" valign="middle" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                <p align="center">&#160;</p>
+                                            </td>
+                                            <td colspan="1" rowspan="1" valign="middle" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                <p><span class="GUI">Copy to Clipboard</span>
+                                                    <br />Copies selected values to the clip board.</p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="LinkList"><a href="LINStatisticsMonitor.htm" class="LinkList">LIN Statistics Window</a>&#160;&#160;•&#160;&#160;<a href="FlexRayStatisticsMonitor.htm" class="LinkList">FlexRay Statistics Window</a></p>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="FooterWhite">
+                <table class="FooterWhite" style="border-collapse: collapse;margin-left: auto;margin-right: auto;">
+                    <col style="width: 70px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col style="width: 16px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="buttons popup-container clearfix topicToolbarProxy topicToolbarProxyFooter _Skins_HTML5TopicToolbar mc-component nocontent">
+                                    <div class="button-group-container-left">
+                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo"><a href="../../../Shared/HowToUseOnlineHelp.htm" title="Tips for using the help" alt="Tips for using the help"><img src="../../../../Resources/vImages/vBackstage/vHelpInfo.png" /></a>
+                                </p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo" style="text-align: right;"><span class="mc-variable Vector.BuildTime variable">2024-04-8T20:56:42</span>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <table style="width: 100%;border-collapse: separate;border-spacing: 3px 0px;margin-left: auto;margin-right: auto;caption-side: top;">
+                <col />
+                <col />
+                <col />
+                <col data-mc-conditions="BuildProcess.HTML5Link" />
+                <tbody>
+                    <tr>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;">
+                            <p class="vec_Footer">©&#160;Vector Informatik GmbH</p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;text-align: right;">
+                            <p class="vec_FooterBold">
+                                <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE&#160;Product Families</MadCap:conditionalText> Version <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.VectorTestUnitRunner">18</MadCap:conditionalText></p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="../../../Shared/ContactCopyrightLicense.htm" class="vec_Footer MCXref xref xrefvec_Footer">Contact/Copyright/License</a>
+                            </p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="https://www.vector.com/int/en/company/get-info/privacy-policy/" target="_blank" class="vec_Footer">Data Privacy Notice</a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

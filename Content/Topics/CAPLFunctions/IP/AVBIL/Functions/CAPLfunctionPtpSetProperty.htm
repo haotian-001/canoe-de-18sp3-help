@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="" data-mc-search-type="Stem" data-mc-help-system-file-name="CANoeDEFamily.xml" data-mc-path-to-help-system="../../../../../../" data-mc-conditions="Targets.CANoe-DE-Family,Targets.vTESTstudio" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../../Skins/Favicons/favicon-16x16.png" /><title>PtpSetProperty</title>
+        <link href="../../../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Resources/Stylesheets/vTableMasterPageHeader.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../../../Resources/Stylesheets/vStylesheet.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../../../Resources/Stylesheets/vTableSymbol.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../../../Resources/Stylesheets/vTableLight.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapGlobal.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapDom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapUtilities.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapXhr.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapTextEffects.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapSlideshow.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapMessageBus.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapMessageBus.CrossFrame.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapDefault.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapMediaQueries.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapAccessibility.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapHelpSystem.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapAliasFile.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapTopicFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapFeedbackHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapSkinHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapToc.Breadcrumbs.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapToc.MiniToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapToc.SideMenu.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapIndex.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapGlossary.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapParser.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapSearch.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapNavigateTopics.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapLms.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapELearning.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapTopic.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapMicroContentComponent.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapSearchHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapTopicElements.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapTriPane.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/jscript" src="../../../../../Resources/vScripts/SyntaxHighlighting.js">
+        </script>
+        <script type="text/jscript" src="../../../../../Resources/vScripts/TabSwitch.js">
+        </script>
+        <script type="text/javascript" src="../../../../../Resources/vScripts/Vector.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../../../../CANoeDEFamily.htm#Topics/CAPLFunctions/IP/AVBIL/Functions/CAPLfunctionPtpSetProperty.htm">Open topic with navigation</a>
+        </p>
+        <div class="Body">
+            <div role="main" id="mc-main-content">
+                <p class="StructurePath"><a href="../../../CAPLfunctions.htm" class="StructurePath MCXref xref xrefStructurePath">CAPL Functions</a> » <a href="../../CAPLEthernetStartPage.htm" class="StructurePath">Ethernet</a> » <a href="../CAPLfunctionsAVBILOverview.htm" class="StructurePath">AVB IL</a> » <span class="mc-variable System.Title variable">PtpSetProperty</span></p>
+                <h1><a name="aanchor19114"></a>
+                    <MadCap:concept term="AVBIL" /><a name="kanchor6385"></a><span class="mc-variable System.Title variable">PtpSetProperty</span>
+                </h1>
+                <p class="MenuPath">&#160;</p>
+                <p class="ToolAvailability" data-mc-conditions="BuildProcess.ToolAvailability"><a href="../../../../Shared/FeatureAvailability.htm" class="red" title="Feature availabilty for your product">Valid&#160;for</a>:&#160;&#160;CANoe&#160;DE<a name="aanchor19115"></a><MadCap:concept term="SFCANoeDE" />&#160;&#160;•&#160;&#160;CANoe4SW&#160;DE<a name="aanchor19116"></a><MadCap:concept term="SFCANoe4SWDE" /></p>
+                <p class="AutoSearchFilterConcepts"><a name="aanchor19117"></a>
+                    <MadCap:concept term="SFCAPLFunctions" />
+                </p>
+                <div data-mc-target-name="DIVCAPLFunctionSyntax">
+                    <h2 class="CommandPage">Function Syntax</h2>
+                    <p class="Syntax">long <span class="mc-variable System.Title variable">PtpSetProperty</span>(char propertyName[], int64 value); // form 1</p>
+                    <p class="Syntax">long <span class="mc-variable System.Title variable">PtpSetProperty</span>(char propertyName[], dword length, byte value[]); // form 2</p>
+                </div>
+                <div data-mc-target-name="DIVCAPLDescription">
+                    <h2 class="CommandPage">Description</h2>
+                    <p>The behavior of the PTP layer can be configured using properties.
+You can statically configure the port role of a simulated node. This function allows for configuring properties to pre-set a  configuration for the time-aware end station.</p>
+                    <p>For example you can set the <span class="bold">PortRole</span> property to <span class="bold">SlavePort (2)</span> for a node in its <span class="bold">on prestart</span> CAPL event handler.</p>
+                </div>
+                <div data-mc-target-name="DIVCAPLParameters">
+                    <h2 class="CommandPage">Parameters</h2>
+                    <table style="margin-left: 0;margin-right: auto;width: 100%;mc-table-style: url('../../../../../Resources/Stylesheets/vTableLight.css');" class="TableStyle-vTableLight" cellspacing="0">
+                        <col style="width: 80px;" class="TableStyle-vTableLight-Column-Column1" />
+                        <col class="TableStyle-vTableLight-Column-Column1" />
+                        <tbody>
+                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                <td id="name" class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <p class="TableBold">propertyName</p>
+                                </td>
+                                <td id="descr" class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                    <p class="Table">Name of the property to be set.</p>
+                                    <div>
+                                        <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../../../../Resources/Stylesheets/vTableLight.css');" class="TableStyle-vTableLight" cellspacing="0">
+                                            <col class="TableStyle-vTableLight-Column-Column1" />
+                                            <col class="TableStyle-vTableLight-Column-Column1" />
+                                            <thead>
+                                                <tr class="TableStyle-vTableLight-Head-Header1">
+                                                    <th class="TableStyle-vTableLight-HeadE-Column1-Header1">
+                                                        <p class="TableHead">Name</p>
+                                                    </th>
+                                                    <th class="TableStyle-vTableLight-HeadD-Column1-Header1">
+                                                        <p class="TableHead">Description</p>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="TableStyle-vTableLight-Body-Body1">
+                                                    <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                        <p class="Table">PortRole</p>
+                                                    </td>
+                                                    <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                        <p class="Table">Values (Integer):</p>
+                                                        <p class="Table">0 = Auto select (Role is selected by BMCA) (Default)</p>
+                                                        <p class="Table">1 = MasterPort,</p>
+                                                        <p class="Table">2 = SlavePort,</p>
+                                                        <p class="Table">3 = PassivePort,</p>
+                                                        <p class="Table">4 = DisabledPort</p>
+                                                        <p class="Table">Values &gt; 0: By choosing a static PortRole the node will skip BMCA. The clock of such a node can therefore either be synchronizing other clocks (if the PortRole value is MasterPort) or be synchronized (PortRole is SlavePort) if connected to a node whose PortRole is MasterPort.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-vTableLight-Body-Body1">
+                                                    <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                        <p class="Table">PortNumber</p>
+                                                    </td>
+                                                    <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                        <p class="Table">Values (Integer): 1 to 65535, Default: 1</p>
+                                                        <p class="Table">This property affects sent Sync and Sync-follow-up messages of that node (when its PortRole is MasterPort).</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-vTableLight-Body-Body1">
+                                                    <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                        <p class="Table">LogSyncInterval</p>
+                                                    </td>
+                                                    <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                        <p class="Table">Values (Integer): -128 to 127, Default: -3 (equates to 0.125 s)</p>
+                                                        <p class="Table">This property modifies the time interval which is used for sending Sync (and Sync-follow-up) messages by the node. It can also be set implicitly over a <span class="bold">Message interval request TLV</span> (see 802.1AS-2011 10.5.4) sent out by another node on the network. In this case the actual <span class="bold">LogSyncInterval</span> is deduced from the payload of that <span class="bold">gPTP</span> Signaling message.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-vTableLight-Body-Body1">
+                                                    <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                        <p class="Table">Priority1</p>
+                                                    </td>
+                                                    <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                        <p class="Table">Values (Integer): 0 to 0xFF, Default: 0xFA</p>
+                                                        <p class="Table">Sets the <span class="bold">Priority1</span> value of the System Identity.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-vTableLight-Body-Body1">
+                                                    <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                        <p class="Table">ClockClass</p>
+                                                    </td>
+                                                    <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                        <p class="Table">Values (Integer): 0 to 0xFF, Default: 0xF8</p>
+                                                        <p class="Table">Sets the <span class="bold">ClockClass</span> value of the System Identity.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-vTableLight-Body-Body1">
+                                                    <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                        <p class="Table">ClockAccuracy</p>
+                                                    </td>
+                                                    <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                        <p class="Table">Values (Integer): 0 to 0xFF, Default: 0xFE</p>
+                                                        <p class="Table">Sets the <span class="bold">ClockAccuracy</span> value of the System Identity.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-vTableLight-Body-Body1">
+                                                    <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                        <p class="Table">OffsetScaledLogVariance</p>
+                                                    </td>
+                                                    <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                        <p class="Table">Values (Integer): 0 to 65535, Default: 1</p>
+                                                        <p class="Table">Sets the <span class="bold">OffsetScaledLogVariance</span> value of the System Identity.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-vTableLight-Body-Body1">
+                                                    <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                        <p class="Table">Priority2</p>
+                                                    </td>
+                                                    <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                        <p class="Table">Values (Integer): 0 to 0xFF, Default: 0xF8</p>
+                                                        <p class="Table">Sets the <span class="bold">Priority2</span> value of the System Identity.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-vTableLight-Body-Body1">
+                                                    <td class="TableStyle-vTableLight-BodyE-Column1-Body1">VlanId</td>
+                                                    <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                        <p class="Table">Values (Integer):</p>
+                                                        <ul>
+                                                            <li>0 			= No VLAN used (Default)</li>
+                                                            <li>1 to 4094 = VLAN ID
+</li>
+                                                        </ul>
+                                                        <p class="Table">Sets the <span class="bold">VLAN ID</span> (VID) used for the gPTP communication.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-vTableLight-Body-Body1">
+                                                    <td class="TableStyle-vTableLight-BodyE-Column1-Body1">VlanPriority</td>
+                                                    <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                        <p class="Table">Values (Integer): 0 to 7, Default: 0</p>
+                                                        <p class="Table">Sets the <span class="bold">VLAN Priority</span> (PCP – Priority Code Point) used for the gPTP communication.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-vTableLight-Body-Body1">
+                                                    <td class="TableStyle-vTableLight-BodyE-Column1-Body1">RequestLogSyncInterval</td>
+                                                    <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                        <p class="Table">This property cannot be set within the <span class="bold">on preStart</span> event handler.</p>
+                                                        <p class="Table">Values (Integer):</p>
+                                                        <ul>
+                                                            <li>
+-127 to 125 	= 	Sync interval requested.</li>
+                                                            <li>127			= 	Instructs the port that 							receives this TLV to stop 						sending time-									synchronization event 						messages.</li>
+                                                            <li>126			=	Instructs the port that 							receives this TLV to reset 					its current <span class="bold">LogSyncInterval</span> 					to the initial value.</li>
+                                                            <li>-128			=	Instructs the port that 							receives this TLV not to 						change the mean time 						interval between 								successive time-								synchronization event 						messages.
+Sets the time sync interval requested from the port of the time aware system connected to this node.</li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-vTableLight-Body-Body1">
+                                                    <td class="TableStyle-vTableLight-BodyE-Column1-Body1">RequestLogPdelayReqInterval</td>
+                                                    <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                        <p class="Table">This property cannot be set within the <span class="bold">on preStart</span> event handler.</p>
+                                                        <p class="Table">Values (Integer):</p>
+                                                        <ul>
+                                                            <li>
+-127 to 125 	= 	Propagation delay request 					interval requested.</li>
+                                                            <li>127			= 	Instructs the port that 							receives this TLV to stop 						sending link delay 								measurement messages.</li>
+                                                            <li>126			=	Instructs the port that 							receives this TLV to reset 					its current <span class="bold">										LogPdelayReqInterval</span> 						to the initial value.</li>
+                                                            <li>-128			=	Instructs the port that 							receives this TLV not to 						change the mean time 						interval between 								successive propagation 						delay request messages.
+Sets the propagation delay request interval requested from the port of the time aware system connected to this node.</li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-vTableLight-Body-Body1">
+                                                    <td class="TableStyle-vTableLight-BodyE-Column1-Body1">RequestLogAnnounceInterval</td>
+                                                    <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                        <p class="Table">This property cannot be set within the <span class="bold">on preStart</span> event handler.</p>
+                                                        <p class="Table">Values (Integer):</p>
+                                                        <ul>
+                                                            <li>
+-127 to 125 	= 	Announce interval 								requested.</li>
+                                                            <li>127			= 	Instructs the port that 							receives this TLV to stop 						sending announce 								messages.</li>
+                                                            <li>126			=	Instructs the port that 							receives this TLV to reset 					its current 										<span class="bold">LogAnnounceInterval</span> 							to the initial value.</li>
+                                                            <li>-128			=	Instructs the port that 							receives this TLV not to 						change the mean time 						interval between 								successive announce 							messages.
+Sets the announce interval requested from the port of the time aware system connected to this node.</li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-vTableLight-Body-Body1">
+                                                    <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                        <p class="Table">DestinationAddress</p>
+                                                        <p class="Table">(since <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family"><span class="Product">CANoe:lite&#160;DE</span> 11.0</MadCap:conditionalText>)</p>
+                                                    </td>
+                                                    <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                        <p class="Table">Sets the destination MAC address of PTP messages originating from the node. The function overload with the byte array type for the value parameter must be used. Set the <span class="bold">length</span> parameter to 6 and <span class="bold">value</span> parameter to the address in network byte order.
+
+</p>
+                                                        <p class="Table">If this property is not set, the default address 01:80:C2:00:00:0E will be used (Individual LAN Scope group address / Nearest Bridge group address, see IEEE 801.1AS).</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-vTableLight-Body-Body1">
+                                                    <td class="TableStyle-vTableLight-BodyE-Column1-Body1">LogPdelayReqInterval</td>
+                                                    <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                        <p class="Table">Values (Integer): -128 to 127, Default: 0 (equates to 1 s)</p>
+                                                        <p class="Table">
+This property modifies the time interval which is used for sending Pdelay_Req messages by the node. It can also be set implicitly over a Message interval request TLV (see 802.1AS-2011 10.5.4) sent out by another node on the network. In this case the actual <span class="bold">LogPdelayReqInterval</span> is deduced from the payload of that gPTP Signaling message.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-vTableLight-Body-Body1">
+                                                    <td class="TableStyle-vTableLight-BodyE-Column1-Body1">LogAnnounceInterval</td>
+                                                    <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                        <p class="Table">Values (Integer): -128 to 127, Default: 0 (equates to 1 s)
+</p>
+                                                        <p class="Table">This property modifies the time interval which is used for sending Announce messages by the node. It can also be set implicitly over a Message interval request TLV (see 802.1AS-2011 10.5.4) sent out by another node on the network. In this case the actual <span class="bold">LogAnnounceReqInterval</span> is deduced from the payload of that gPTP Signaling message.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-vTableLight-Body-Body1">
+                                                    <td class="TableStyle-vTableLight-BodyB-Column1-Body1">
+                                                        <p class="Table">StartTime</p>
+                                                    </td>
+                                                    <td class="TableStyle-vTableLight-BodyA-Column1-Body1">
+                                                        <p class="Table">Values: 0 to 0x7FFFFFFFFFFFFFFF</p>
+                                                        <p class="Table">Unit: ns (nanoseconds)</p>
+                                                        <p class="Table">Sets the gPTP time the time-aware end station’s clock will start up with (either on measurement start after the <span class="SourceCode">on start</span> event handler or when the clock is (re-)started manually by a call to <a href="CAPLfunctionAvbILControlStart.htm">AvbIlControlStart</a>).</p>
+                                                        <p class="Table">The time can only be set when the clock is not running (between <a href="CAPLfunctionAvbILControlInit.htm">AvbIlControlInit</a>/<a href="CAPLfunctionAvbILControlStop.htm">AvbIlControlStop</a> and <a href="CAPLfunctionAvbILControlStart.htm">AvbIlControlStart</a>).</p>
+                                                        <p class="Table">After the clock is stopped the next time it is started again it will revert to the default setting unless this property is set again.</p>
+                                                        <p class="Table">By default (when this property is not set) the clock will startup using the current absolute simulation time.</p>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                <td id="name" class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <p class="TableBold">value</p>
+                                </td>
+                                <td id="descr" class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                    <p class="Table">New value of the property.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                <td id="name" class="TableStyle-vTableLight-BodyB-Column1-Body1">
+                                    <p colspan="4" class="TableBold">length</p>
+                                </td>
+                                <td id="descr" class="TableStyle-vTableLight-BodyA-Column1-Body1">
+                                    <p colspan="4" class="Table">Size of the property (Array) in bytes.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div data-mc-target-name="DIVCAPLReturnValues">
+                    <h2 class="CommandPage">Return&#160;Values</h2>
+                    <table style="margin-left: 0;margin-right: auto;width: 100%;mc-table-style: url('../../../../../Resources/Stylesheets/vTableLight.css');" class="TableStyle-vTableLight" cellspacing="0">
+                        <col style="width: 80px;" class="TableStyle-vTableLight-Column-Column1" />
+                        <col class="TableStyle-vTableLight-Column-Column1" />
+                        <tbody>
+                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                <td id="name" class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <p class="TableBold">0</p>
+                                </td>
+                                <td id="descr" class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                    <p class="Table">The function succeeded.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                <td id="name" class="TableStyle-vTableLight-BodyB-Column1-Body1">
+                                    <p class="TableBold">≠0</p>
+                                </td>
+                                <td id="descr" class="TableStyle-vTableLight-BodyA-Column1-Body1">
+                                    <p class="Table">Error code</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div data-mc-target-name="DIVCAPLExample">
+                    <h2 class="CommandPage">Example</h2>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                    <p class="Table">
+                                        <img src="../../../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                    </p>
+                                </td>
+                                <td id="content" class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                    <p class="SourceCode">on preStart<br />{<br />&#160;&#160;// Sets the port role to slave<br />&#160;&#160;if (PtpSetProperty("PortRole", 2) != 0)<br />&#160;&#160;{<br />&#160;&#160;&#160;&#160;Stop();<br />&#160;&#160;&#160;&#160;return;<br />&#160;&#160;}<br />}</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="LinkList"><a class="MCHelpControl MCHelpControl-Concept conceptLink" data-mc-concepts="AVBIL" href="javascript:void(0);" data-mc-topics="AvbAccept|CAPLfunctionAvbAccept.htm#aanchor22198||AvbCloseListener|CAPLfunctionAvbCloseListener.htm#aanchor9033||AvbCloseTalker|CAPLfunctionAvbCloseTalker.htm#aanchor27560||AvbConnect|CAPLfunctionAvbConnect.htm#aanchor22951||AvbGetLastError|CAPLfunctionAvbGetLastError.htm#aanchor24763||AvbGetLastErrorText|CAPLfunctionAvbGetLastErrorText.htm#aanchor31670||AvbGetMediaType|CAPLfunctionAvbGetMediaType.htm#aanchor17871||AvbGetProtocol|CAPLfunctionAvbGetProtocol.htm#aanchor12292||AvbGetStreamId|CAPLfunctionAvbGetStreamId.htm#aanchor4408||AvbGetStreamSourceAddress|CAPLfunctionAvbGetStreamSourceAddress.htm#aanchor2856||AvbGetStreamUniqueId|CAPLfunctionAvbGetStreamUniqueId.htm#aanchor28546||AvbILControlInit|CAPLfunctionAvbILControlInit.htm#aanchor11850||AvbILControlResume|CAPLfunctionAvbILControlResume.htm#aanchor16421||AvbILControlStart|CAPLfunctionAvbILControlStart.htm#aanchor25425||AvbILControlStop|CAPLfunctionAvbILControlStop.htm#aanchor13943||AvbILControlWait|CAPLfunctionAvbILControlWait.htm#aanchor479||AvbListen|CAPLfunctionAvbListen.htm#aanchor8055||AvbOpenListener|CAPLfunctionAvbOpenListener.htm#aanchor19236||AvbOpenTalker|CAPLfunctionAvbOpenTalker.htm#aanchor10423||AvbReceive|CAPLfunctionAvbReceive.htm#aanchor27800||AvbSend|CAPLfunctionAvbSend.htm#aanchor11687||AvbSetMediaType|CAPLfunctionAvbSetMediaType.htm#aanchor25444||AvbSetProperty|CAPLfunctionAvbSetProperty.htm#aanchor27486||AvbSetProtocol|CAPLfunctionAvbSetProtocol.htm#aanchor31498||AvbSetVerbosity|CAPLfunctionAvbSetVerbosity.htm#aanchor30305||OnAvbConnect|CAPLfunctionOnAvbConnect.htm#aanchor16656||OnAvbListen|CAPLfunctionOnAvbListen.htm#aanchor7030||OnAvbReceive|CAPLfunctionOnAvbReceive.htm#aanchor13839||OnAvbSend|CAPLfunctionOnAvbSend.htm#aanchor5532||OnAvbSendPrepare|CAPLfunctionOnAvbSendPrepare.htm#aanchor27023||OnPtpSendPrepare|CAPLfunctionOnPtpSendPrepare.htm#aanchor25360||PtpSetProperty|#aanchor19114||PtpSimulationTimespanFromPtpTimespan|CAPLfunctionPtpSimulationTimespanFromPtpTimespan.htm#aanchor15771||PtpTimeFromSimulationTime|CAPLfunctionPtpTimeFromSimulationTime.htm#aanchor10770||PtpTimeNow|CAPLfunctionPtpTimeNow.htm#aanchor20181"><span class="MCHelpControl-ConceptHotSpot_"><img class="MCHelpControl_Image_Icon" src="../../../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="14" width="16" alt="Concept Link Icon" />See Also</span></a>
+                </p>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="FooterWhite">
+                <table class="FooterWhite" style="border-collapse: collapse;margin-left: auto;margin-right: auto;">
+                    <col style="width: 70px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col style="width: 16px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col data-mc-conditions="" />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="buttons popup-container clearfix topicToolbarProxy topicToolbarProxyFooter _Skins_HTML5TopicToolbar mc-component nocontent">
+                                    <div class="button-group-container-left">
+                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo"><a href="../../../../Shared/HowToUseOnlineHelp.htm" title="Tips for using the help" alt="Tips for using the help"><img src="../../../../../Resources/vImages/vBackstage/vHelpInfo.png" /></a>
+                                </p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo">•&#160;&#160;Technical&#160;References are only&#160;available&#160;in&#160;English</p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo" style="text-align: right;"><span class="mc-variable Vector.BuildTime variable">2024-04-8T20:56:42</span>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <table style="width: 100%;border-collapse: separate;border-spacing: 3px 0px;margin-left: auto;margin-right: auto;caption-side: top;">
+                <col />
+                <col />
+                <col />
+                <col data-mc-conditions="BuildProcess.HTML5Link" />
+                <tbody>
+                    <tr>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;">
+                            <p class="vec_Footer">©&#160;Vector Informatik GmbH</p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;text-align: right;">
+                            <p class="vec_FooterBold">
+                                <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE&#160;Product Families</MadCap:conditionalText> Version <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.VectorTestUnitRunner">18</MadCap:conditionalText></p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="../../../../Shared/ContactCopyrightLicense.htm" class="vec_Footer MCXref xref xrefvec_Footer">Contact/Copyright/License</a>
+                            </p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="https://www.vector.com/int/en/company/get-info/privacy-policy/" target="_blank" class="vec_Footer">Data Privacy Notice</a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

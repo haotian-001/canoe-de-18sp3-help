@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="CANoeDEFamily.xml" data-mc-path-to-help-system="../../../../../" data-mc-conditions="Targets.CANalyzer,Targets.vTESTstudio,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../Skins/Favicons/favicon-16x16.png" /><title>Conditional Compilation</title>
+        <link href="../../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Resources/Stylesheets/vTableMasterPageHeader.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../../Resources/Stylesheets/vStylesheet.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../../Resources/Stylesheets/vTableSymbol.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapGlobal.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapDom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapUtilities.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapXhr.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTextEffects.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSlideshow.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMessageBus.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMessageBus.CrossFrame.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapDefault.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMediaQueries.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapAccessibility.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapHelpSystem.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapAliasFile.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopicFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapFeedbackHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSkinHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.Breadcrumbs.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.MiniToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.SideMenu.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapIndex.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapGlossary.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapParser.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSearch.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapNavigateTopics.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapLms.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapELearning.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopic.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMicroContentComponent.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSearchHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopicElements.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTriPane.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/jscript" src="../../../../Resources/vScripts/SyntaxHighlighting.js">
+        </script>
+        <script type="text/jscript" src="../../../../Resources/vScripts/TabSwitch.js">
+        </script>
+        <script type="text/javascript" src="../../../../Resources/vScripts/Vector.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../../../CANoeDEFamily.htm#Topics/Shared/CAPL/General/ConditionalCompilation.htm">Open topic with navigation</a>
+        </p>
+        <div class="Body">
+            <div role="main" id="mc-main-content">
+                <div>
+                    <p class="AutoSearchFilterConcepts"><a name="aanchor30261"></a>
+                        <MadCap:concept term="SFCore" />
+                    </p>
+                    <p><a name="kanchor9795"></a>
+                    </p>
+                    <p class="StructurePath"><a href="../../../CANoeCANalyzer/CANoeDEFamily.htm" class="StructurePath" data-mc-conditions="Targets.CANoe-DE-Family"><img src="../../../../Resources/vImages/vToolIcons/CANoeDEFamily_Icon16_15x15.png" alt="" style="width: 15;height: 15;" />&#160;CANoe&#160;DE&#160;Product&#160;Families</a> » <a href="../CAPLIntroduction.htm" class="StructurePath">CAPL Introduction</a> » <span class="mc-variable System.Title variable">Conditional Compilation</span></p>
+                    <h1><span class="mc-variable System.Title variable">Conditional Compilation</span>
+                    </h1>
+                    <p class="MenuPath">&#160;</p>
+                    <p class="ToolAvailability" data-mc-conditions="BuildProcess.ToolAvailability"><a href="../../FeatureAvailability.htm" class="red" title="Feature availabilty for your product">Valid&#160;for</a>:&#160;&#160;CANoe&#160;DE<a name="aanchor30262"></a><MadCap:concept term="SFCANoeDE" />&#160;&#160;•&#160;&#160;CANoe:lite&#160;DE<a name="aanchor30263"></a><MadCap:concept term="SFCANoeLiteDE" />&#160;&#160;•&#160;&#160;CANoe4SW&#160;DE<a name="aanchor30264"></a><MadCap:concept term="SFCANoe4SWDE" />&#160;&#160;•&#160;&#160;CANoe4SW:lite&#160;DE<a name="aanchor30265"></a><MadCap:concept term="SFCANoe4SWLiteDE" /></p>
+                </div>
+                <div>
+                    <p>Some lines within a function, an <span class="bold">include </span>section or a <span class="bold">variable </span>section can only be compiled if certain conditions are fulfilled. For this purpose, write <span class="bold">#if &lt;Condition&gt;</span> before the lines concerned and then <span class="bold">#endif</span> after them.</p>
+                    <div>
+                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                            <col class="TableStyle-vTableSymbol-Column-Column1" />
+                            <col class="TableStyle-vTableSymbol-Column-Column2" />
+                            <tbody>
+                                <tr>
+                                    <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                        <p class="Table">
+                                            <img src="../../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                        <p class="TableSymbolHead">Example</p>
+                                        <p class="TableSourceCode">on message *<br />{<br />#if MEASUREMENT_SETUP<br />&#160;&#160;output(this);<br />#endif<br />}</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p>A host of predefined conditions are available and can be linked together into an overall condition as desired using brackets and logic <a href="Expressions.htm#Operators">operators</a> such as <span class="bold">||</span> and <span class="bold">&amp;&amp;</span>. You can also use numbers and relational operators such <span class="bold">&lt;</span> and <span class="bold">==</span> in the condition.</p>
+                </div>
+                <div>
+                    <h2 class="SectionSub">Predefined Conditions</h2>
+                    <ul>
+                        <li>
+                            <p class="TableBold">MEASUREMENT_SETUP</p>
+                            <p data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">true (1), if the CAPL <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">program</MadCap:conditionalText> is part of the <a href="../../../CANoeCANalyzer/Windows/MeasurementSetup/MeasurementSetupWindow.htm" class="MCXref xref" data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">Measurement Setup</a> of <span class="Product">CANoe</span></p>
+                        </li>
+                        <li>
+                            <p class="TableBold">SIMULATION</p>
+                            <p data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">true (1), if the CAPL <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">program</MadCap:conditionalText> is <span class="bold">not</span> part of the <a href="../../../CANoeCANalyzer/Windows/MeasurementSetup/MeasurementSetupWindow.htm" class="MCXref xref" data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">Measurement Setup</a> of <span class="Product">CANoe</span></p>
+                        </li>
+                        <li>
+                            <p class="TableBold">ANALYSIS</p>
+                            <p data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">true (1), if the CAPL <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">program</MadCap:conditionalText> is part of the <a href="../../../CANoeCANalyzer/Windows/MeasurementSetup/MeasurementSetupWindow.htm" class="MCXref xref" data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">Measurement Setup</a> of <span class="Product">CANoe</span> (in <span class="Product">CANoe</span>, <span class="bold">ANALYSIS</span> is the same as <span class="bold">MEASUREMENT_SETUP</span>, whereas in <span class="Product">CANalyzer</span> the values might be different)</p>
+                        </li>
+                        <li data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.vTESTstudio">
+                            <p class="TableBold">TEST_NODE</p>
+                            <p>true, if the CAPL <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">program</MadCap:conditionalText> is a CAPL test node or a test library</p>
+                        </li>
+                        <li data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.vTESTstudio">
+                            <p class="TableBold">CANOE</p>
+                            <p>true, if the CAPL <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">program</MadCap:conditionalText> is compiled for <span class="Product">CANoe</span></p>
+                        </li>
+                        <li data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">
+                            <p class="TableBold">CANOE_LT</p>
+                            <p>true, if the CAPL <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">program</MadCap:conditionalText> is compiled for <span class="Product">CANoe</span> <span class="Product">LT</span></p>
+                        </li>
+                        <li>
+                            <p class="TableBold">CAPL_ON_BOARD</p>
+                            <p>true, if the CAPL <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">program</MadCap:conditionalText> is compiled for the execution on a network interface</p>
+                        </li>
+                        <li>
+                            <p class="TableBold">EXTENDED_REAL_TIME</p>
+                            <p>true, if the CAPL <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">program</MadCap:conditionalText> is compiled for the execution in the <a href="../../../CANoeCANalyzer/Interfaces/ExtendedRealTime/ExtendedRealTime.htm">Extended Real Time</a> part</p>
+                        </li>
+                        <li>
+                            <p class="TableBold">TOOL_MAJOR_VERSION</p>
+                            <p>main version of your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText>, e.g. <span class="bold">7</span> for version <span class="bold">7</span>.5 SP3</p>
+                        </li>
+                        <li>
+                            <p class="TableBold">TOOL_MINOR_VERSION</p>
+                            <p>subversion of your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText>, e.g. <span class="bold">5</span> for version 7.<span class="bold">5</span> SP3</p>
+                        </li>
+                        <li>
+                            <p class="TableBold">TOOL_SERVICE_PACK</p>
+                            <p>service pack of your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText>, e.g. <span class="bold">3</span> for version 7.5 SP<span class="bold">3</span></p>
+                        </li>
+                        <li data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.vTESTstudio">
+                            <p class="TableBold">DEBUG</p>
+                            <p>true, if CAPL debugging is activated</p>
+                        </li>
+                        <li data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">
+                            <p class="TableBold">X64</p>
+                            <p>true, if the CAPL <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">program</MadCap:conditionalText> is located in the <a href="../../../CANoeCANalyzer/Windows/SimulationSetup/SimulationSetupWindow.htm" class="MCXref xref" data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">Simulation Setup</a><MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family"> or Test Setup</MadCap:conditionalText> and the 64-bit variant of the RT kernel (Linux or Windows64) is used (in this case e.g. the <span class="bold">#pragma library</span> instruction command has to reference a 64bit DLL).</p>
+                        </li>
+                        <li data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">
+                            <p class="TableBold">LINUX</p>
+                            <p>true, if the CAPL <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">program</MadCap:conditionalText> is part of the <a href="../../../CANoeCANalyzer/Windows/SimulationSetup/SimulationSetupWindow.htm" class="MCXref xref" data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">Simulation Setup</a> or Test Setup and the Linux variant of the <a href="../../../CANoeCANalyzer/RTSetup/RTSetupOverview.htm">RT kernel</a> is used.</p>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                    <p class="Table">
+                                        <img src="../../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                    </p>
+                                </td>
+                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                    <p class="TableSymbolHead">Example</p>
+                                    <p class="TableSourceCode">#if (TOOL_MAJOR_VERSION == 7 &amp;&amp; TOOL_MINOR_VERSION == 5 &amp;&amp; TOOL_SERVICE_PACK &lt; 2) || CANALYZER<br />#pragma message("This program needs at least CANoe 7.5 SP 3")<br />#endif</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>You can add additional sections with other conditions by using <span class="bold">#elif &lt;Condition&gt;</span> or <span class="bold">#else</span>. You can also nest conditions.</p>
+                <div>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                    <p class="Table">
+                                        <img src="../../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                    </p>
+                                </td>
+                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                    <p class="TableSymbolHead">Example</p>
+                                    <p class="TableSourceCode">#if TOOL_MAJOR_VERSION == 7<br />&#160;&#160;#if TOOL_MINOR_VERSION == 5<br />&#160;&#160;&#160;&#160;write("CANoe 7.5");<br />&#160;&#160;#else<br />&#160;&#160;&#160;&#160;write("Unknown CANoe 7.x");<br />&#160;&#160;#endif<br />#elif TOOL_MAJOR_VERSION == 8<br />&#160;&#160;write("Unknown CANoe 8.x");<br />#else<br />&#160;&#160;write("Unknown CANoe version");<br />#endif</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>Beginning with version <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">12</MadCap:conditionalText>.0 SP3 you can define your own constants for conditions by using <span class="bold">#define &lt;Condition&gt;</span>.</p>
+                <div>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                    <img src="../../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                </td>
+                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                    <p class="TableSymbolHead">Example</p>
+                                    <p class="TableSourceCode">variables<br />{<br />&#160;&#160;#define DEBUG_OUTPUTS<br />}<br /><br />on message EngineState<br />{<br />#if DEBUG_OUTPUTS<br />&#160;&#160;if (this.State == 3)<br />&#160;&#160;{<br />&#160;&#160;&#160;&#160;write(“State 3 reached”);<br />&#160;&#160;}<br />#endif<br />}</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>Please note:</p>
+                <ul>
+                    <li>In contrast to C/C++, <span class="bold">#define</span> is no macro definition. It is not possible to assign a value to the constant or to use the constant outside <span class="bold">#if</span>/<span class="bold">#elif</span>.</li>
+                    <li>A <span class="bold">#define</span> in a <span class="bold">variables</span> section is valid from its position on for the rest of the file. If it is located in an included file, it is valid for the included file as of the <span class="bold">#include</span> instruction.</li>
+                    <li>A <span class="bold">#define</span> in an <span class="bold">includes</span> section is taken into account only in a main file; it will be ignored in an included file. It is also valid from its position on for the rest of the file as well as for included files after the <span class="bold">#define</span>.</li>
+                    <li>A <span class="bold">#define</span> in other functions or handlers are only applicable for the function itself.</li>
+                    <li>There is no <span class="bold">#undef</span> or a similar type to remove a constant.</li>
+                    <li>You also cannot exclude function declarations from the compile. <span class="bold">#if</span> can only be used within functions.</li>
+                </ul>
+                <div data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                    <p class="Table">
+                                        <img src="../../../../Resources/vImages/vInfo.png" style="width: 48px;height: 45px;" title="Note" alt="Note" />
+                                    </p>
+                                </td>
+                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                    <p class="TableSymbolHead">Note</p>
+                                    <ul>
+                                        <li>
+                                            <p class="ListItem">Conditional compiling is supported starting with version 7.5.</p>
+                                        </li>
+                                        <li>
+                                            <p class="ListItem">CAPL <MadCap:conditionalText data-mc-conditions="Targets.CANoe-SE-Family,Targets.CANoe-DE-Family,Targets.CANalyzer">programs</MadCap:conditionalText> which are to be translated with older program versions cannot use conditional compiling.</p>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="LinkList">&#160;</p>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="FooterWhite">
+                <table class="FooterWhite" style="border-collapse: collapse;margin-left: auto;margin-right: auto;">
+                    <col style="width: 70px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col style="width: 16px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="buttons popup-container clearfix topicToolbarProxy topicToolbarProxyFooter _Skins_HTML5TopicToolbar mc-component nocontent">
+                                    <div class="button-group-container-left">
+                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo"><a href="../../HowToUseOnlineHelp.htm" title="Tips for using the help" alt="Tips for using the help"><img src="../../../../Resources/vImages/vBackstage/vHelpInfo.png" /></a>
+                                </p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo" style="text-align: right;"><span class="mc-variable Vector.BuildTime variable">2024-04-8T20:56:42</span>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <table style="width: 100%;border-collapse: separate;border-spacing: 3px 0px;margin-left: auto;margin-right: auto;caption-side: top;">
+                <col />
+                <col />
+                <col />
+                <col data-mc-conditions="BuildProcess.HTML5Link" />
+                <tbody>
+                    <tr>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;">
+                            <p class="vec_Footer">©&#160;Vector Informatik GmbH</p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;text-align: right;">
+                            <p class="vec_FooterBold">
+                                <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE&#160;Product Families</MadCap:conditionalText> Version <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.VectorTestUnitRunner">18</MadCap:conditionalText></p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="../../ContactCopyrightLicense.htm" class="vec_Footer MCXref xref xrefvec_Footer">Contact/Copyright/License</a>
+                            </p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="https://www.vector.com/int/en/company/get-info/privacy-policy/" target="_blank" class="vec_Footer">Data Privacy Notice</a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

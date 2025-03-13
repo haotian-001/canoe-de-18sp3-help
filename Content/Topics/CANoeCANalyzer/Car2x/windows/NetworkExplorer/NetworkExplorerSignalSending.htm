@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="topic" data-mc-search-type="Stem" data-mc-help-system-file-name="CANoeDEFamily.xml" data-mc-path-to-help-system="../../../../../../" data-mc-conditions="Targets.CANoe-DE-Family,Targets.vTESTstudio" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../../Skins/Favicons/favicon-16x16.png" /><title>Configure Sending Behavior (Car2x Network Explorer)</title>
+        <link href="../../../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Resources/Stylesheets/vTableMasterPageHeader.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../../../Resources/Stylesheets/vStylesheet.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../../../Resources/Stylesheets/vTableLight.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../../../Resources/Stylesheets/vTable.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../../../Resources/Stylesheets/vTableSymbol.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapGlobal.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapDom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapUtilities.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapXhr.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapTextEffects.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapSlideshow.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapMessageBus.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapMessageBus.CrossFrame.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapDefault.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapMediaQueries.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapAccessibility.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapHelpSystem.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapAliasFile.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapTopicFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapFeedbackHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapSkinHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapToc.Breadcrumbs.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapToc.MiniToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapToc.SideMenu.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapIndex.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapGlossary.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapParser.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapSearch.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapNavigateTopics.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapLms.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapELearning.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapTopic.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapMicroContentComponent.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapSearchHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapTopicElements.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapTriPane.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/jscript" src="../../../../../Resources/vScripts/SyntaxHighlighting.js">
+        </script>
+        <script type="text/jscript" src="../../../../../Resources/vScripts/TabSwitch.js">
+        </script>
+        <script type="text/javascript" src="../../../../../Resources/vScripts/Vector.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../../../../CANoeDEFamily.htm#Topics/CANoeCANalyzer/Car2x/windows/NetworkExplorer/NetworkExplorerSignalSending.htm">Open topic with navigation</a>
+        </p>
+        <div class="Body">
+            <div role="main" id="mc-main-content">
+                <div>
+                    <p class="StructurePath"><a href="NetworkExplorer.htm" class="StructurePath MCXref xref xrefStructurePath">Car2x Network Explorer</a> » Configure Sending Behavior<br /><a href="../../Car2x.htm" class="StructurePath">Car2x</a> » <a href="../../procedures/c2xProcedures.htm" class="StructurePath">Procedures</a> » Configure Sending Behavior</p>
+                    <h1>Configure Sending Behavior</h1>
+                    <p class="MenuPath">&#160;</p>
+                    <p class="ToolAvailability" data-mc-conditions="BuildProcess.ToolAvailability"><a href="../../../../Shared/FeatureAvailability.htm" class="red" title="Feature availabilty for your product">Valid&#160;for</a>:&#160;&#160;CANoe&#160;DE<a name="aanchor3692"></a><MadCap:concept term="SFCANoeDE" /></p>
+                    <p class="AutoSearchFilterConcepts"><a name="aanchor3693"></a>
+                        <MadCap:concept term="SFCore" />
+                    </p>
+                    <p class="IndexConcept"><a name="kanchor1145"></a>
+                    </p>
+                </div>
+                <div>
+                    <h2>General</h2>
+                    <p>With the Car2x Network Explorer, network nodes can be configured in such a way that enables cyclic sending of messages.</p>
+                </div>
+                <div>
+                    <h2>Attributes View</h2>
+                    <p>The <span class="GUI">Attributes</span> view is located in the bottom left corner of the Car2x Network Explorer. A distinction is made between node attributes, general attributes and stack attributes. Node attributes influence the transmission behavior for the complete node, general attributes influence the send behavior and stack attributes influence the message structure.</p>
+                </div>
+                <div>
+                    <h2>Adding Attributes</h2>
+                    <p>The <span class="GUI">Attributes </span>view is empty for databases created with Version 8.5 SP4 or earlier. No node attributes are available for databases created with Version 12.0 SP4 or lower. To add attributes to the database, the <span class="GUI">Add Attributes</span> button <img src="../../../../../Resources/Images/Shared/Car2x/car2xIconNetworkExplorer_addattributes.png" style="vertical-align: text-bottom;" /> must be clicked once.</p>
+                </div>
+                <div>
+                    <h2>Configuring Attributes</h2>
+                    <p>If a message with attributes is added to a network node, these attributes apply to this network node, effectively immediately.</p>
+                </div>
+                <div>
+                    <table style="mc-table-style: url('../../../../../Resources/Stylesheets/vTable.css');width: 100%;margin-left: 0;margin-right: auto;" class="TableStyle_vTable" cellspacing="0">
+                        <col class="TableStyle-vTable-Column-Column1" style="width: 260px;" />
+                        <col class="TableStyle-vTable-Column-Column1" />
+                        <thead>
+                            <tr class="TableStyle-vTable-Head-Header1">
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd" colspan="2">
+                                    <p class="TableHead">Node Attributes</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="TableBold">Stack Values</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table"><span class="bold">On</span>: Fields are automatically set correctly by the <a href="../../procedures/c2xProceduresSimStim/c2xConfigureStackBehaviorEU.htm">stack</a> (depending on the application message and event). Stack attributes in Car2x Network Explorer for manual configuration are deactivated. </p>
+                                    <p class="Table"><span class="bold">Off</span>: Fields are not set automatically. Stack attributes in Car2x Network Explorer for manual configuration are enabled. </p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="TableBold">Stack Timing</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table"><span class="bold">On</span>: The timing of the application message is controlled by the stack (depending on application message and event). The general attributes <span class="bold">Send Type</span> and <span class="bold">Cycle Time</span> are deactivated.</p>
+                                    <p class="Table"><span class="bold">Off</span>: The timing of the application message is controlled by the general attributes <span class="bold">Send Type</span> and <span class="bold">Cycle Time</span>. </p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="TableBold">Use GNSS Sysvar</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table"><span class="bold">On</span>: The system-defined system variable GNSS::ATH1 is used to set Latitude, Longitude, Heading, Speed and Elevation in the CAM, DENM, US BSM and CN BSM application messages. GNSS::ATH1 is filled with real position data when using a <span class="Product">VN4610</span> with GNSS receiver, but can also be filled via CAPL. If a scenario is available, it will be ported to the real GNSS position. Can only be activated for one node.</p>
+                                    <p class="Table"><span class="bold">Off</span>: Latitude, Longitude, Heading, Speed and Elevation in the application messages CAM, DENM, US BSM and CN BSM are filled via the data of the existing scenario. If no scenario exists, the values remain empty.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="TableBold">Message Sending</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table"><span class="bold">Active</span>: The node sends messages.</p>
+                                    <p class="Table"><span class="bold">Inactive</span>: The node sends no messages. But it is active, which means that the CAPL code is running and any callbacks and tests are working.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="TableBold"><a name="ScenarioStart" id="ScenarioStart"></a>Start Node On</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table"><span class="bold">Measurement Start</span>: The node is immediately active at the start of measurement.</p>
+                                    <p class="Table"><span class="bold">Scenario Start</span>: The node starts itself on scenario start.</p>
+                                    <p class="Table"><span class="bold">C2xStartNode Command</span>: The node is disabled at the start of measurement and will not send any messages. The node can be activated by executing the CAPL function <a href="../../../../CAPLFunctions/Car2x/Functions/CAPLfunctionC2xStartNode.htm">C2xStartNode</a>.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="TableBold">Station ID</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Sets the field for the station ID of the vehicle in the application messages. </p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="TableBold">Vehicle Length</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Sets the field for the length of the vehicle in the application message.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="TableBold">Vehicle Width</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Sets the field for the width of the vehicle in the application message.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="TableBold">Station Type</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                    <p class="Table">Sets the station type field (e.g. Passenger Car) in the extended header and in the application message.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <table style="mc-table-style: url('../../../../../Resources/Stylesheets/vTable.css');width: 100%;margin-left: 0;margin-right: auto;" class="TableStyle_vTable" cellspacing="0">
+                        <col class="TableStyle-vTable-Column-Column1" style="width: 260px;" />
+                        <col class="TableStyle-vTable-Column-Column1" />
+                        <thead>
+                            <tr class="TableStyle-vTable-Head-Header1">
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd" colspan="2">
+                                    <p class="TableHead">General Attributes</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="TableBold">Send Type</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <ul>
+                                        <li>NoMsgSendType: No send behavior is defined for the network node.</li>
+                                        <li>Cyclic: Cyclic send behavior is defined for the network node.</li>
+                                        <li>
+                                            <p>CyclicIfActive: A cyclic transmission behavior is defined for the network node if it has been activated. An activation can be done e.g. via the Scenario Editor timeline or via the CAPL function C2xEnableMsg</p>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="TableBold">Cycle Time</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Cycle time in milliseconds for sending messages.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="TableBold">Certificate Name</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">If the messages are to have a security header, the name of a certificate that was previously added to the configuration must be entered here.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="TableBold">Certificate Signer Type</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <ul>
+                                        <li>Unsecured: A security header is inserted into the message, but the payload is not signed.</li>
+                                        <li>Digest: The security header contains only the digest of the certificate.</li>
+                                        <li>Certificate: The security header contains the full certificate.</li>
+                                        <li>CertificateChain: The security header contains the full chain of certificates.</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="TableBold">Certificate Sendtime [ms]</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Specifies the time period, in milliseconds, after which the certificate is included in a message. If the <span class="GUI">Certificate Name</span> and the <span class="GUI">Certificate Matching</span> fields are empty, this has no effect.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="TableBold">Certificate Matching</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Specifies which certificates are used at a change of certificate. For example, if certificates are available named </p>
+                                    <ul>
+                                        <li>ITS_Cert_1, </li>
+                                        <li>ITS_Cert_2, </li>
+                                        <li>ITS_Cert_3, and </li>
+                                        <li>V2x_Cert_1, </li>
+                                    </ul>
+                                    <p class="Table"><span class="Keyboard">ITS</span> can be entered in this field. Only the certificates beginning with ITS are then considered at a change of certificate.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="TableBold">Certificate Change Time [minute]</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Specifies the time period, in minutes, after which a certificate will be changed. If the <span class="GUI">Certificate Name</span> and the <span class="GUI">Certificate Matching</span> fields are empty, this has no effect.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="TableBold">Initial Content</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">If the application message is to be pre-filled with a specific payload (BTP), this can be specified here by selecting the associated, binary-coded file (.per). The message will then be initialized with the corresponding content.</p>
+                                    <p class="Table"><span class="bold">Note</span>: For better portability of the configuration, the binary-coded file (.per) should be stored within the configuration folder (e.g. in a subfolder).</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="TableBold">Vehicle Class</p>
+                                    <p class="TableBold">(CN stack only)</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Specifies the value of the <span class="GUI">bsmFrame::vehicleClass::classification</span> field of the BasicSafetyMessage message. The value of this attribute is used only if the <span class="bold">Stack Values</span> attribute is enabled.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="TableBold">Priority AID (Vehicle Events)</p>
+                                    <p class="TableBold">(CN stack only)</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                    <p>If the BasicSafetyMessage contains at least one set Vehicle Event flag (in the <span class="GUI">bsmFrame.safetyExt.events</span> field), this Application Identifier (AID) value is used in DSMP and Security Header. If this condition is not met, AID values specified in the CN Stack Attributes table for the BasicSafetyMessage are used. The value of this attribute is used only if the <span class="bold">Stack Values</span> attribute is enabled.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <table style="mc-table-style: url('../../../../../Resources/Stylesheets/vTable.css');margin-left: 0;margin-right: auto;width: 100%;" class="TableStyle_vTable" cellspacing="0">
+                        <col class="TableStyle-vTable-Column-Column1" style="width: 260px;" />
+                        <col class="TableStyle-vTable-Column-Column1" style="width: 753px;" />
+                        <thead>
+                            <tr class="TableStyle-vTable-Head-Header1">
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd" colspan="2">
+                                    <p class="TableHead">Stack Attributes US</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="TableBold">wssv3 – Provider Service ID</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Specifies the <a href="../../protocols/AIDandPSID.htm"><span class="GUI">Provider Service ID</span></a>. Must match the Provider Service ID in the WSMP Header.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="TableBold">wssv3 – Generation Time</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">If this parameter is present, the optional field <span class="GUI">Generation Time</span> is set to a correct value automatically when sending a message. If this attribute is not present, the Generation Time is not set when sending.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="TableBold">wsmp – Version</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Sets the <span class="GUI">Version</span> field in the WSMP Header.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="TableBold">wsmp – Provider Service ID</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Specifies the <span class="GUI"><a href="../../protocols/AIDandPSID.htm">Provider Service ID</a></span>. Must match the Provider Service ID in the wssv3 Header.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="TableBold">wsmp – WAVE Element ID</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                    <p class="Table">Sets the <span class="GUI">WAVE Element ID</span> field in the WSMP Header.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <table style="mc-table-style: url('../../../../../Resources/Stylesheets/vTable.css');margin-left: 0;margin-right: auto;width: 100%;" class="TableStyle_vTable" cellspacing="0">
+                        <col class="TableStyle-vTable-Column-Column1" style="width: 260px;" />
+                        <col class="TableStyle-vTable-Column-Column1" style="width: 753px;" />
+                        <thead>
+                            <tr class="TableStyle-vTable-Head-Header1">
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd" colspan="2">
+                                    <p class="TableHead">Stack Attributes EU</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="TableBold">geo_bh – Version</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Sets the <span class="GUI">Version </span>field in the Basic Header.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="TableBold">geo_ch – Next Header</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p>Sets the <span class="GUI">Next Header</span> field in the Common Header (e.g. BTP-A).</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="TableBold">geo_ch – Header Type</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Sets the <span class="GUI">Header Type</span> field in the Common Header (e.g. Beacon).</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="TableBold">geo_ch – Header Subtype</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                    <p class="Table">Sets the <span class="GUI">Header Subtype</span> field in the Common Header (e.g.Circular Area).</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <table style="mc-table-style: url('../../../../../Resources/Stylesheets/vTable.css');margin-left: 0;margin-right: auto;width: 100%;" class="TableStyle_vTable" cellspacing="0">
+                        <col class="TableStyle-vTable-Column-Column1" style="width: 260px;" />
+                        <col class="TableStyle-vTable-Column-Column1" style="width: 753px;" />
+                        <thead>
+                            <tr class="TableStyle-vTable-Head-Header1">
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd" colspan="2">
+                                    <p class="TableHead">Stack Attributes CN</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="TableBold">al  – Protocol Type</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Defines the Protocol Type in the Adaption Layer.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="TableBold">dsmp – Version</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p>Sets the version field in DSMP.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="TableBold">dsmp  – AID</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p>Defines the Application Identifier in DSMP.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="TableBold">cnsh20 – AID</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                    <p class="Table">Defines the application identifier in the security header.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <h2>Database Template</h2>
+                    <p>The database templates are located next to the demo directroy in <span class="bold">Templates\Database\Car2xTemplate.xml</span>. Values that are changed or added are taken into account when <span class="GUI">Add Attribute</span> <img src="../../../../../Resources/Images/Shared/Car2x/car2xIconNetworkExplorer_addattributes.png" style="vertical-align: text-bottom;" /> is clicked in the future.</p>
+                </div>
+                <div>
+                    <h2>CAPL</h2>
+                    <p>If other values of the message are to be cyclically changed, a network node must be inserted for this. The <a href="../../../../CAPLFunctions/Car2x/Functions/CAPLfunctionC2xSetSignal.htm" class="SourceCode">C2xSetSignal</a> and <a href="../../../../CAPLFunctions/Car2x/Functions/CAPLfunctionC2xRegisterCallback.htm" class="SourceCode">C2xRegisterCallback</a> functions&#160;can be used to change signals before sending a message.</p>
+                </div>
+                <div>
+                    <h2>Supported protocols</h2>
+                    <p>The signal sending concept currently supports messages according to the following protocols:</p>
+                    <ul>
+                        <li>IEEE 1609.2 / IEEE 1609.3 with application messages according to SAE J2735.</li>
+                        <li>ETSI EN 302 636-4-1 / ETSI TS 103 097 with the application messages ETSI EN 302 637-2 (CAM) and ETSI EN 302 637-3 (DENM).</li>
+                        <li>GB/T 31024.3 with the application messages according to C-SAE 0053.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Node Attributes – How to do it</h2>
+                    <p>This section shows an overview of the functionality and possible combinations of some node attributes. The examples are always seen from the perspective of a "Device Under Test (DuT)" network node. In addition, a pre-created CANoe.Car2x configuration with one scenario (DuT and SimVehicle) is assumed. The SimVehicle brakes relatively strongly before the DuT and triggers an Emergency Electronic Brake Light Warning.</p>
+                    <div>
+                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                            <col class="TableStyle-vTableSymbol-Column-Column1" />
+                            <col class="TableStyle-vTableSymbol-Column-Column2" />
+                            <tbody>
+                                <tr>
+                                    <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                        <p class="Table">
+                                            <img src="../../../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                        <p class="TableSymbolHead">Example 1: Simulation of a scenario</p>
+                                        <div>
+                                            <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../../../../Resources/Stylesheets/vTableLight.css');" class="TableStyle-vTableLight" cellspacing="0">
+                                                <col class="TableStyle-vTableLight-Column-Column1" style="width: 160px;" />
+                                                <col class="TableStyle-vTableLight-Column-Column1" />
+                                                <tbody>
+                                                    <tr class="TableStyle-vTableLight-Body-Body1">
+                                                        <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                            <p class="TableHead">Configuration:</p>
+                                                        </td>
+                                                        <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                            <ul>
+                                                                <li>Stack Values: ON (for EU databases)</li>
+                                                                <li>Timing: ON (for EU databases)</li>
+                                                                <li>Use GNSS Sysvars: Off</li>
+                                                                <li>Message Sending: Active</li>
+                                                                <li>Start Node On: Measurement Start or Scenario Start</li>
+                                                            </ul>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-vTableLight-Body-Body1">
+                                                        <td class="TableStyle-vTableLight-BodyB-Column1-Body1">
+                                                            <p class="TableHead">Result:</p>
+                                                        </td>
+                                                        <td class="TableStyle-vTableLight-BodyA-Column1-Body1">
+                                                            <p class="Table">When the measurement is started, the configured scenario is simulated.</p>
+                                                            <p class="Table">The position data for the application messages are taken from the scenario.</p>
+                                                            <ul>
+                                                                <li>For EU databases, the remaining values of the messages are filled automatically and the messages are sent with correct timing.</li>
+                                                                <li>For US and CN databases, this must be done manually (e.g. in a CAPL script in the preTx function).</li>
+                                                            </ul>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                            <col class="TableStyle-vTableSymbol-Column-Column1" />
+                            <col class="TableStyle-vTableSymbol-Column-Column2" />
+                            <tbody>
+                                <tr>
+                                    <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                        <p class="Table">
+                                            <img src="../../../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                        <p class="TableSymbolHead">Example 2: Stimulation of a V2X control unit in HiL</p>
+                                        <div>
+                                            <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../../../../Resources/Stylesheets/vTableLight.css');" class="TableStyle-vTableLight" cellspacing="0">
+                                                <col class="TableStyle-vTableLight-Column-Column1" style="width: 160px;" />
+                                                <col class="TableStyle-vTableLight-Column-Column1" />
+                                                <tbody>
+                                                    <tr class="TableStyle-vTableLight-Body-Body1">
+                                                        <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                            <p class="TableHead">Configuration:</p>
+                                                        </td>
+                                                        <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                            <ul>
+                                                                <li>Use GNSS Sysvars: On</li>
+                                                                <li>Message Sending: Inactive</li>
+                                                                <li>Start Node On: Measurement Start or Scenario Start</li>
+                                                            </ul>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-vTableLight-Body-Body1">
+                                                        <td class="TableStyle-vTableLight-BodyB-Column1-Body1">
+                                                            <p class="TableHead">Result:</p>
+                                                        </td>
+                                                        <td class="TableStyle-vTableLight-BodyA-Column1-Body1">
+                                                            <p class="Table">When the measurement starts, the configured scenario is started in real, ported to the position received via the system variable GNSS::ATH1.</p>
+                                                            <p class="Table">The position can be generated by a GNSS generator and set to the system variable in CAPL.</p>
+                                                            <p class="Table">The DuT node itself does not send any messages anymore (no longer needed since there is a real V2X controller in HiL).</p>
+                                                            <p class="Table">Nevertheless, evaluations and tests can be performed for this node.</p>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                            <col class="TableStyle-vTableSymbol-Column-Column1" />
+                            <col class="TableStyle-vTableSymbol-Column-Column2" />
+                            <tbody>
+                                <tr>
+                                    <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                        <p class="Table">
+                                            <img src="../../../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                        <p class="TableSymbolHead">Example 3: Stimulation of a real V2X vehicle (e.g. on a test track)</p>
+                                        <div>
+                                            <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../../../../Resources/Stylesheets/vTableLight.css');" class="TableStyle-vTableLight" cellspacing="0">
+                                                <col class="TableStyle-vTableLight-Column-Column1" style="width: 160px;" />
+                                                <col class="TableStyle-vTableLight-Column-Column1" />
+                                                <tbody>
+                                                    <tr class="TableStyle-vTableLight-Body-Body1">
+                                                        <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                            <p class="TableHead">Configuration:</p>
+                                                        </td>
+                                                        <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                            <ul>
+                                                                <li>Use GNSS Sysvars: On</li>
+                                                                <li>Message Sending: Inactive</li>
+                                                                <li>Start Node On: Scenario Start or C2xStartNode Command.</li>
+                                                            </ul>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-vTableLight-Body-Body1">
+                                                        <td class="TableStyle-vTableLight-BodyB-Column1-Body1">
+                                                            <p class="TableHead">Result:</p>
+                                                        </td>
+                                                        <td class="TableStyle-vTableLight-BodyA-Column1-Body1">
+                                                            <p class="Table">The configured scenario is started real at scenario start or via CAPL function, ports to the position received via the GNSS::ATH1 system variable; this is filled from the GNSS receiver of the <span class="Product">VN4610</span>.</p>
+                                                            <p class="Table">The DuT-node itself does not send any more messages (not needed anymore because there is a real vehicle with V2X control unit).</p>
+                                                            <p class="Table">Nevertheless, evaluations and tests can be performed for this node.</p>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                            <col class="TableStyle-vTableSymbol-Column-Column1" />
+                            <col class="TableStyle-vTableSymbol-Column-Column2" />
+                            <tbody>
+                                <tr>
+                                    <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                        <p class="Table">
+                                            <img src="../../../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                        <p class="TableSymbolHead">Example 4: Use CANoe.Car2x and the VN4610 to turn a normal vehicle into a V2X vehicle</p>
+                                        <div>
+                                            <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../../../../Resources/Stylesheets/vTableLight.css');" class="TableStyle-vTableLight" cellspacing="0">
+                                                <col class="TableStyle-vTableLight-Column-Column1" style="width: 160px;" />
+                                                <col class="TableStyle-vTableLight-Column-Column1" />
+                                                <tbody>
+                                                    <tr class="TableStyle-vTableLight-Body-Body1">
+                                                        <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                            <p class="TableHead">Configuration:</p>
+                                                        </td>
+                                                        <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                            <ul>
+                                                                <li>Stack Values: ON (for EU databases)</li>
+                                                                <li>Timing: ON (for EU databases)</li>
+                                                                <li>Use GNSS Sysvars: ON</li>
+                                                                <li>Message Sending: Active</li>
+                                                                <li>Start Node On: Measurement Start</li>
+                                                            </ul>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-vTableLight-Body-Body1">
+                                                        <td class="TableStyle-vTableLight-BodyB-Column1-Body1">
+                                                            <p class="TableHead">Result:</p>
+                                                        </td>
+                                                        <td class="TableStyle-vTableLight-BodyA-Column1-Body1">
+                                                            <p class="Table">The node is started in real mode at the start of measurement.</p>
+                                                            <p class="Table">The position data for the application messages are filled via the system variable GNSS::ATH1; this is filled from the GNSS receiver of the <span class="Product">VN4610</span>.</p>
+                                                            <ul>
+                                                                <li>For EU databases, the remaining values of the messages are filled automatically and the messages are sent with correct timing.</li>
+                                                                <li>For US and CN databases, this must be done manually (e.g. in a CAPL script in the preTx function).</li>
+                                                            </ul>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <p class="LinkList">&#160;</p>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="FooterWhite">
+                <table class="FooterWhite" style="border-collapse: collapse;margin-left: auto;margin-right: auto;">
+                    <col style="width: 70px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col style="width: 16px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="buttons popup-container clearfix topicToolbarProxy topicToolbarProxyFooter _Skins_HTML5TopicToolbar mc-component nocontent">
+                                    <div class="button-group-container-left">
+                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo"><a href="../../../../Shared/HowToUseOnlineHelp.htm" title="Tips for using the help" alt="Tips for using the help"><img src="../../../../../Resources/vImages/vBackstage/vHelpInfo.png" /></a>
+                                </p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo" style="text-align: right;"><span class="mc-variable Vector.BuildTime variable">2024-10-8T21:20:34</span>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <table style="width: 100%;border-collapse: separate;border-spacing: 3px 0px;margin-left: auto;margin-right: auto;caption-side: top;">
+                <col />
+                <col />
+                <col />
+                <col data-mc-conditions="BuildProcess.HTML5Link" />
+                <tbody>
+                    <tr>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;">
+                            <p class="vec_Footer">©&#160;Vector Informatik GmbH</p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;text-align: right;">
+                            <p class="vec_FooterBold">
+                                <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;(Desktop Editions &amp; Test Bench Editions)</MadCap:conditionalText> Version <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.VectorTestUnitRunner">18 SP3</MadCap:conditionalText></p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="../../../../Shared/ContactCopyrightLicense.htm" class="vec_Footer MCXref xref xrefvec_Footer">Contact/Copyright/License</a>
+                            </p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="https://www.vector.com/int/en/company/get-info/privacy-policy/" target="_blank" class="vec_Footer">Data Privacy Notice</a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

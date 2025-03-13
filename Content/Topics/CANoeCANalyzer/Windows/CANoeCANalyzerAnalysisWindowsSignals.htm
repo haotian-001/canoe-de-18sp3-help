@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="" data-mc-search-type="Stem" data-mc-help-system-file-name="CANoeDEFamily.xml" data-mc-path-to-help-system="../../../../" data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../Skins/Favicons/favicon-16x16.png" /><title>Analysis Windows: Valid/Invalid Signals</title>
+        <link href="../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Resources/Stylesheets/vTableMasterPageHeader.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../Resources/Stylesheets/vStylesheet.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../Resources/Stylesheets/vTableSymbol.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapGlobal.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapDom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapUtilities.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapXhr.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTextEffects.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSlideshow.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMessageBus.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMessageBus.CrossFrame.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapDefault.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMediaQueries.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAccessibility.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapHelpSystem.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAliasFile.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopicFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapFeedbackHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSkinHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.Breadcrumbs.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.MiniToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.SideMenu.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapIndex.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapGlossary.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapParser.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSearch.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapNavigateTopics.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapLms.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapELearning.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopic.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMicroContentComponent.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSearchHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopicElements.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTriPane.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/jscript" src="../../../Resources/vScripts/SyntaxHighlighting.js">
+        </script>
+        <script type="text/jscript" src="../../../Resources/vScripts/TabSwitch.js">
+        </script>
+        <script type="text/javascript" src="../../../Resources/vScripts/Vector.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../../CANoeDEFamily.htm#Topics/CANoeCANalyzer/Windows/CANoeCANalyzerAnalysisWindowsSignals.htm">Open topic with navigation</a>
+        </p>
+        <div class="Body">
+            <div role="main" id="mc-main-content">
+                <p class="StructurePath"><a href="../CANoeDEFamily.htm" class="StructurePath" data-mc-conditions="Targets.CANoe-DE-Family"><img src="../../../Resources/vImages/vToolIcons/CANoeDEFamily_Icon16_15x15.png" alt="" style="width: 15;height: 15;" />&#160;CANoe&#160;DE&#160;Product&#160;Families</a> » <a href="Windows.htm" class="StructurePath">Windows</a> » <span class="mc-variable System.Title variable">Analysis Windows: Valid/Invalid Signals</span></p>
+                <h1><a name="kanchor2458"></a><span class="mc-variable System.Title variable">Analysis Windows: Valid/Invalid Signals</span>
+                </h1>
+                <p class="MenuPath">&#160;</p>
+                <p class="ToolAvailability" data-mc-conditions="BuildProcess.ToolAvailability"><a href="../../Shared/FeatureAvailability.htm" class="red" title="Feature availabilty for your product">Valid&#160;for</a>:&#160;&#160;CANoe&#160;DE<a name="aanchor8015"></a><MadCap:concept term="SFCANoeDE" />&#160;&#160;•&#160;&#160;CANoe4SW&#160;DE<a name="aanchor8016"></a><MadCap:concept term="SFCANoe4SWDE" /></p>
+                <p class="AutoSearchFilterConcepts"><a name="aanchor8017"></a>
+                    <MadCap:concept term="SFCore" />
+                </p>
+                <p>Invalid signals can occur in the following windows:</p>
+                <ul>
+                    <li><a href="Graphics/GraphicsWindow.htm">Graphics Window</a>
+                    </li>
+                    <li><a href="Data/DataWindow.htm">Data Window</a>
+                    </li>
+                    <li data-mc-conditions="Targets.CANoe-DE-Family"><a href="SignalGenerator/SignalGeneratorOverview.htm">Signal generators and signal replay</a>
+                    </li>
+                    <li><a href="../VisualSequencer/VisualSequencer.htm">Visual Sequencer</a>
+                    </li>
+                    <li data-mc-conditions="Targets.CANoe-DE-Family"><a href="StateTracker/StateTracker.htm">State Tracker</a>
+                    </li>
+                    <li><a href="StartValues/StartValuesWindow.htm">Start Value Window</a>
+                    </li>
+                </ul>
+                <p>The behavior <span class="bold">does not</span> apply to signals for which filtering is possible in the <a href="Trace/TraceExplorer.htm">Trace Explorer</a>. Because the Trace Window is message based, signals cannot be examined independently of their message. The same applies to signals in the <a href="../FunctionBlocks/IG/IGJ1587.htm">Interactive Generator</a>, their corresponding <a href="../FunctionBlocks/IG/IDD_VG_CFG_DLG.htm">Signal Generators</a>, and the signals in the user-defined filter of the trigger.</p>
+                <div>
+                    <h2>Background</h2>
+                    <p>In your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText>, an attempt is made to sustain the linking of a signal that is configured in an analysis window to the definition in a database as long as possible. That is, even if changes are made in the database that directly or indirectly affect the signal, an attempt is made to consider these changes and to sustain the link. For example, it is possible to shift the signal from one message to another if the signal is unique within your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText>.</p>
+                    <p>If the configured signal is not assigned uniquely to a signal of a database, the signal is displayed as an <span class="bold">invalid signal</span> in the window (icon, tooltip, grayed type). In the case of an invalid signal, settings can no longer be changed. However, it can be deleted from the window. For an invalid signal, the differentiation features used for the explicit qualification do not change until the signal becomes valid.</p>
+                    <div>
+                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                            <col class="TableStyle-vTableSymbol-Column-Column1" />
+                            <col class="TableStyle-vTableSymbol-Column-Column2" />
+                            <tbody>
+                                <tr>
+                                    <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                        <p class="Table">
+                                            <img src="../../../Resources/vImages/vInfo.png" style="width: 48px;height: 45px;" title="Note" alt="Note" />
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                        <p class="TableSymbolHead">Note</p>
+                                        <p class="Table">Please note that system variables can not be moved from one namespace to another, even if the name of the system variable is unique. Moved system variables will be displayed as invalid.</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <h2>When does a signal become invalid</h2>
+                <div>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                    <p class="Table">
+                                        <img src="../../../Resources/vImages/vFAQ.png" style="width: 48px;height: 45px;" title="FAQ" alt="FAQ" />
+                                    </p>
+                                </td>
+                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                    <p class="TableSymbolHead">FAQ | Signals are invalid after replacement of a database that attaches to several networks</p>
+                                    <p data-mc-conditions="">A database attaches to two networks. In the analysis window, the same signal is configured from each of the two networks. Because your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> must consider the different network, the signals configured in the analysis window <span class="bold">behave differently if they are handled in a different order</span>. That is, the signals can become invalid.</p>
+                                    <p data-mc-conditions="">In order to replace databases that are assigned to more than one network, start by deleting the old database on the networks in the <a href="SimulationSetup/SimulationSetupWindow.htm" data-mc-conditions="Targets.CANoe-DE-Family">Simulation Setup</a> and then add the new database to the same networks in reverse order.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                    <p class="Table">
+                                        <img src="../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                    </p>
+                                </td>
+                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                    <p class="TableSymbolHead"><a targets="TOGExample1" href="javascript:void(0)" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="TOGExample1"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Example</a>
+                                    </p>
+                                    <div style="display: none;" data-mc-target-name="TOGExample1">
+                                        <p data-mc-conditions="">Replacement of database A with database B on network 1 and network 2. Signal A is contained in both databases. For this reason, the signal name is not unique and the network must be considered for differentiation. In the Graphics Window, Signal A is configured from each of the two networks.</p>
+                                        <h2 data-mc-conditions="">Correct procedure, note the order!</h2>
+                                        <ol>
+                                            <li value="1" data-mc-conditions="">Remove database A on network 1<br />Signal A, network 1: Invalid<br />Signal A, network 2: Valid -&gt; Signal A<br />The signal of network 2 is prepared to keep the link to the database, irrespective of the networks, because the signal name is unique. The signal of network 1 is invalid.</li>
+                                            <li value="2" data-mc-conditions="">Remove database A on network 2<br />Signal A, network 1: Invalid<br />Signal A: Valid<br />When the database is removed from network 2, both signals are invalid.</li>
+                                            <li value="3" data-mc-conditions="">Add database B on network 2<br />Signal A, network 1: Invalid<br />Signal A: Valid<br />When the database is added on network 2, the second signal becomes valid because the signal name is unique. The signal in the Graphics Window is linked to the signal from the database.</li>
+                                            <li value="4" data-mc-conditions="">Add database B to network 1<br />Signal A, network 1: Valid<br />Signal A: Valid -&gt; Signal A, network 2</li>
+                                        </ol>
+                                        <p data-mc-conditions=""><span class="bold">Result</span>: The signals configured in the Graphics Window now correspond exactly to the signals before these changes were made.</p>
+                                        <h2 data-mc-conditions="">Incorrect procedure</h2>
+                                        <ol>
+                                            <li value="1" data-mc-conditions="">Remove database A on network 1<br />Signal A, network 1: Invalid<br />Signal A, network 2: Valid -&gt; Signal A<br />The signal of network 2 is prepared to keep the link to the database, irrespective of the networks, because the signal name is unique. The signal of network 1 becomes invalid.</li>
+                                            <li value="2" data-mc-conditions="">Remove database A on network 2<br />Signal A, network 1: Invalid<br />Signal A: Invalid<br />If the database of network 2 is removed, both signals are invalid.</li>
+                                            <li value="3" data-mc-conditions="">Add database B on network 1<br />Signal A, network 1: Valid -&gt; Signal A<br />Signal A: Valid</li>
+                                            <li value="4" data-mc-conditions="">Add database B on network 2<br />Signal A: Valid -&gt; Signal A, network 1<br />Signal A: Valid -&gt; Signal A, network 1</li>
+                                        </ol>
+                                        <p data-mc-conditions=""><span class="bold">Result</span>: The signal of network 2 was assigned to the signal of network 1.</p>
+                                        <h2 data-mc-conditions="">Reason</h2>
+                                        <p>As long as a signal name is unique within your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText>, the maximum possible flexibility with respect to database changes should be provided. Thus, for example, it must be possible for a signal with a unique name to remain valid independent of the database. (The database has been replaced, but contains a signal with the same name.)</p>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                    <p class="Table">
+                                        <img src="../../../Resources/vImages/vFAQ.png" style="width: 48px;height: 45px;" title="FAQ" alt="FAQ" />
+                                    </p>
+                                </td>
+                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                    <p class="TableSymbolHead">FAQ | Signals are invalid after replacement of a database that attaches to one network</p>
+                                    <p data-mc-conditions="">A database attaches to one network. This database is removed and another is added that contains a signal with the same signal name. A signal from the first database is configured in the analysis window.</p>
+                                    <p data-mc-conditions="">To replace databases that are assigned to one network, start by deleting the old database in the <a href="SimulationSetup/SimulationSetupWindow.htm" data-mc-conditions="Targets.CANoe-DE-Family">Simulation Setup</a> and then add the new database on the same network.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                    <p class="Table">
+                                        <img src="../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                    </p>
+                                </td>
+                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                    <p class="TableSymbolHead"><a targets="TOGExample2" href="javascript:void(0)" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="TOGExample2"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Example</a>
+                                    </p>
+                                    <div style="display: none;" data-mc-target-name="TOGExample2">
+                                        <p>Replacement of database A with database B on network 1. Signal A is contained in both databases. In the Graphics Window, signal A is configured from database A.</p>
+                                        <h2>Correct procedure, note the order!</h2>
+                                        <p>Database A was added to network 1:</p>
+                                        <ol>
+                                            <li value="1">Remove database A on network 1<br />Signal A: Invalid</li>
+                                            <li value="2">Add database B on network 1<br />Signal A: Valid<br /></li>
+                                        </ol>
+                                        <p><span class="bold">Result</span>: The signal configured in the Graphics Window remains valid and now corresponds to the signal from the new database.</p>
+                                        <h2>Incorrect procedure</h2>
+                                        <p>Database A was added to network 1:</p>
+                                        <ol>
+                                            <li value="1">Add database B on network 1<br />Signal A: Valid -&gt; Signal A, database A<br />If the second data is added first, the signal name is no longer unique and the database must be considered when linking the signal.</li>
+                                            <li value="2">Remove database A on network 1<br />Signal A, database A: Invalid<br />Even if the first database is now removed, the database name was needed nevertheless for differentiation purposes, and the configured signal becomes invalid.<br /></li>
+                                        </ol>
+                                        <p><span class="bold">Result</span>: The signal configured in the Graphics Window becomes invalid.</p>
+                                        <h2>Reason</h2>
+                                        <p>As long as a signal name is unique within your <a href="SimulationSetup/SimulationSetupWindow.htm" data-mc-conditions="Targets.CANoe-DE-Family">Simulation Setup</a>, the maximum possible flexibility with respect to database changes should be provided. If the signal name is not unique, however, the differentiation feature must be considered. In this example, the differentiation feature is the database</p>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="LinkList"><a href="CANoeCANalyzerDataGraphicSignals.htm" class="LinkList">Missing Measurement Values for Signals in Data and Graphics Window</a>&#160;&#160;•&#160;&#160;<a href="../Analysis/AnalysisFeatures.htm" class="LinkList">Analysis Function Overview</a></p>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="FooterWhite">
+                <table class="FooterWhite" style="border-collapse: collapse;margin-left: auto;margin-right: auto;">
+                    <col style="width: 70px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col style="width: 16px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="buttons popup-container clearfix topicToolbarProxy topicToolbarProxyFooter _Skins_HTML5TopicToolbar mc-component nocontent">
+                                    <div class="button-group-container-left">
+                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo"><a href="../../Shared/HowToUseOnlineHelp.htm" title="Tips for using the help" alt="Tips for using the help"><img src="../../../Resources/vImages/vBackstage/vHelpInfo.png" /></a>
+                                </p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo" style="text-align: right;"><span class="mc-variable Vector.BuildTime variable">2024-04-8T20:56:42</span>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <table style="width: 100%;border-collapse: separate;border-spacing: 3px 0px;margin-left: auto;margin-right: auto;caption-side: top;">
+                <col />
+                <col />
+                <col />
+                <col data-mc-conditions="BuildProcess.HTML5Link" />
+                <tbody>
+                    <tr>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;">
+                            <p class="vec_Footer">©&#160;Vector Informatik GmbH</p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;text-align: right;">
+                            <p class="vec_FooterBold">
+                                <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE&#160;Product Families</MadCap:conditionalText> Version <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.VectorTestUnitRunner">18</MadCap:conditionalText></p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="../../Shared/ContactCopyrightLicense.htm" class="vec_Footer MCXref xref xrefvec_Footer">Contact/Copyright/License</a>
+                            </p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="https://www.vector.com/int/en/company/get-info/privacy-policy/" target="_blank" class="vec_Footer">Data Privacy Notice</a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

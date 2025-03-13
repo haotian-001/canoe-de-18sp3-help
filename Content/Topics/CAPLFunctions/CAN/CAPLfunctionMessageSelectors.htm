@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="vCAPLBrowser" data-mc-search-type="Stem" data-mc-help-system-file-name="CANoeDEFamily.xml" data-mc-path-to-help-system="../../../../" data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.vTESTstudio" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../Skins/Favicons/favicon-16x16.png" /><title>CAN Message Selectors</title>
+        <link href="../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Resources/Stylesheets/vTableMasterPageHeader.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../Resources/Stylesheets/vStylesheet.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../Resources/Stylesheets/vTableSymbol.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../Resources/Stylesheets/vTable.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapGlobal.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapDom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapUtilities.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapXhr.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTextEffects.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSlideshow.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMessageBus.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMessageBus.CrossFrame.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapDefault.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMediaQueries.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAccessibility.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapHelpSystem.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAliasFile.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopicFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapFeedbackHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSkinHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.Breadcrumbs.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.MiniToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.SideMenu.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapIndex.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapGlossary.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapParser.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSearch.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapNavigateTopics.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapLms.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapELearning.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopic.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMicroContentComponent.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSearchHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopicElements.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTriPane.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/jscript" src="../../../Resources/vScripts/SyntaxHighlighting.js">
+        </script>
+        <script type="text/jscript" src="../../../Resources/vScripts/TabSwitch.js">
+        </script>
+        <script type="text/javascript" src="../../../Resources/vScripts/Vector.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../../CANoeDEFamily.htm#Topics/CAPLFunctions/CAN/CAPLfunctionMessageSelectors.htm">Open topic with navigation</a>
+        </p>
+        <div class="Body">
+            <div role="main" id="mc-main-content">
+                <p class="StructurePath"><a href="../CAPLfunctions.htm" class="StructurePath MCXref xref xrefStructurePath">CAPL Functions</a> » <a href="CAPLfunctionsCANOverview.htm" class="StructurePath">CAN</a> » <span class="mc-variable System.Title variable">CAN Message Selectors</span></p>
+                <h1><a name="kanchor8265"></a><span class="mc-variable System.Title variable">CAN Message Selectors</span>
+                </h1>
+                <p class="MenuPath">&#160;</p>
+                <p class="ToolAvailability" data-mc-conditions="BuildProcess.ToolAvailability"><a href="../../Shared/FeatureAvailability.htm" class="red" title="Feature availabilty for your product">Valid&#160;for</a>:&#160;&#160;CANoe&#160;DE<a name="aanchor25167"></a><MadCap:concept term="SFCANoeDE" />&#160;&#160;•&#160;&#160;CANoe:lite&#160;DE<a name="aanchor25168"></a><MadCap:concept term="SFCANoeLiteDE" />&#160;&#160;•&#160;&#160;CANoe4SW&#160;DE<a name="aanchor25169"></a><MadCap:concept term="SFCANoe4SWDE" />&#160;&#160;•&#160;&#160;CANoe4SW:lite&#160;DE<a name="aanchor25170"></a><MadCap:concept term="SFCANoe4SWLiteDE" /></p>
+                <p class="AutoSearchFilterConcepts"><a name="aanchor25171"></a>
+                    <MadCap:concept term="SFCAPLFunctions" />
+                </p>
+                <div>
+                    <h2 class="CommandPage">Selectors</h2>
+                    <p>You can access control information of the <a href="../../Shared/CAPL/General/DeclarationOfMessages.htm">CAN message object</a> using the following selectors:</p>
+                    <div>
+                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                            <col />
+                            <col />
+                            <col />
+                            <col />
+                            <thead>
+                                <tr>
+                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Keyword</p>
+                                    </th>
+                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Description</p>
+                                    </th>
+                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Type</p>
+                                    </th>
+                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                        <p class="TableHead">Access&#160;<br />Limitation</p>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th colspan="4" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p colspan="4" class="TableHead">Identification</p>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Selectors/CAPLSelectorCAN.htm" class="MCTopicPopup MCTopicPopupHotSpot a aPopup" data-mc-width="auto" data-mc-height="auto">CAN</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Transmission channel or channel through which the frame has been received.</p>
+                                        <p class="Table">Value range: 1..32
+</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">word</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">—</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">MsgChannel</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Transmission channel or channel through which the frame has been received.</p>
+                                        <p class="Table">Value range: 1..32
+</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">word</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">—</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Selectors/CAPLSelectorID.htm" class="MCTopicPopup MCTopicPopupHotSpot a aPopup" data-mc-width="auto" data-mc-height="auto">ID</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="../../Shared/CAPL/General/DeclarationOfMessages.htm">Message identifier</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">dword</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">—</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">name</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">(unqualified) symbolic name of the message from the database (since version 7.2)</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">char[]</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">read only</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Selectors/CAPLSelectorDIR.htm" class="MCTopicPopup MCTopicPopupHotSpot a aPopup" data-mc-width="auto" data-mc-height="auto">DIR</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Direction of transmission, event classification;</p>
+                                        <p class="Table">possible values: Rx, Tx, TXREQUEST</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">byte</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">—</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Selectors/CAPLSelectorRTR.htm" class="MCTopicPopup MCTopicPopupHotSpot a aPopup" data-mc-width="auto" data-mc-height="auto">RTR</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Remote Transmission Request;</p>
+                                        <p class="Table">possible values: 0 (no RTR), 1 (RTR)</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">byte</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">—</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Selectors/CAPLSelectorTYPE.htm" class="MCTopicPopup MCTopicPopupHotSpot a aPopup" data-mc-width="auto" data-mc-height="auto">TYPE</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Combination of DIR and RTR for an efficient evaluation. (TYPE = (RTR &lt;&lt; 8) | DIR )</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">word</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">—</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Selectors/CAPLSelectorDLC.htm" class="MCTopicPopup MCTopicPopupHotSpot a aPopup" data-mc-width="auto" data-mc-height="auto">DLC</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="../../Shared/CAPL/General/DataFieldLegth.htm">The data field length</a> of a message is coded with the DLC (Data Length Code).</p>
+                                        <p class="Table">Value range: 0..15</p>
+                                        <ul>
+                                            <li>Data field length:<br />CAN messages: 0..8</li>
+                                            <li>CAN FD messages: 0..64</li>
+                                            <li>J1939 parameter groups: 0..1785</li>
+                                        </ul>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">byte</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">—</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">DataLength</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Data length in bytes.</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">byte</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">—</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th colspan="4" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p colspan="4" class="TableHead">Message Times and Lengths</p>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Selectors/CAPLSelectorTIMENS.htm" class="MCTopicPopup MCTopicPopupHotSpot a aPopup" data-mc-width="auto" data-mc-height="auto">TIME_NS</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Point in time, units: nanoseconds</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">int64</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">read only</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><a href="Selectors/CAPLSelectorTIME.htm">TIME</a>
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Point in time, units: 10 microseconds</p>
+                                        <p class="Table">This selector is not available when executing CAPL code directly on network interfaces. Therefore you must use <span class="bold">Time_ns</span>.</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">dword</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">—</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">SOF</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Start-of-Frame time stamp in ns.</p>
+                                        <p class="Table">For some CAN hardware this value is not available (value <span class="bold">0</span>). In such a case a software calculation is required<MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family"> (see <a href="../../CANoeCANalyzer/Ribbon/File/Options/BussystemsProtocols/BussystemsProtocolsBussystems.htm">Options</a> dialog)</MadCap:conditionalText>.</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">int64</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">read only</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">FrameLen</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Frame duration in ns.</p>
+                                        <p class="Table">Note, that the frame duration always includes three bits of the Interframe Space.<br />For some CAN hardware this value is not available (value <span class="bold">0</span>). In such a case a software calculation is required<MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family"> (see <a href="../../CANoeCANalyzer/Ribbon/File/Options/BussystemsProtocols/BussystemsProtocolsBussystems.htm">Options</a> dialog)</MadCap:conditionalText>.</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">dword</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">read only</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Bitcount</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Number of bits of a CAN/CAN FD message (incl. IFS bits).</p>
+                                        <p class="Table">For some CAN hardware this value is not available (value <span class="bold">0</span>). In such a case a software calculation is required<MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family"> (see <a href="../../CANoeCANalyzer/Ribbon/File/Options/BussystemsProtocols/BussystemsProtocolsBussystems.htm">Options</a> dialog)</MadCap:conditionalText>.</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">word</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">—</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th colspan="4" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p colspan="4" class="TableHead">Data Access</p>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Byte(x)</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Message data byte (unsigned 8&#160;bit); possible values for x<a href="javascript:void(0)" class="MCTextPopup popup popupHead">*<span class="MCTextPopupBody MCTextPopupBody_Closed needs-pie popupBody" aria-hidden="true"><span class="MCTextPopupArrow"> </span>x sets the datafield byte for the beginning of the value.</span></a>: 0…63</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">byte</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">—</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Word(x)</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Message data word (unsigned 16&#160;bit); possible values for x<a href="javascript:void(0)" class="MCTextPopup popup popupHead">*<span class="MCTextPopupBody MCTextPopupBody_Closed needs-pie popupBody" aria-hidden="true"><span class="MCTextPopupArrow"> </span>x sets the datafield byte for the beginning of the value.</span></a>: 0…62</p>
+                                        <p class="Table">The index is byte-oriented; for example, word(1) references to the data beginning at byte 1 and consists of byte 1…2 (16&#160;bit).</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">word</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">—</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">DWord(x)</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Message data word (unsigned 32 bit); possible values for x<a href="javascript:void(0)" class="MCTextPopup popup popupHead">*<span class="MCTextPopupBody MCTextPopupBody_Closed needs-pie popupBody" aria-hidden="true"><span class="MCTextPopupArrow"> </span>x sets the datafield byte for the beginning of the value.</span></a>: 0…60</p>
+                                        <p class="Table">The index is byte-oriented; for example, dword(1) references to the data beginning at byte 1 and consists of byte 1…4 (32&#160;bit).</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">dword</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">—</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">QWord(x)</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Message data word (unsigned 64&#160;bit); possible values for x<a href="javascript:void(0)" class="MCTextPopup popup popupHead">*<span class="MCTextPopupBody MCTextPopupBody_Closed needs-pie popupBody" aria-hidden="true"><span class="MCTextPopupArrow"> </span>x sets the datafield byte for the beginning of the value.</span></a>: 0…56</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">qword</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">—</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">char(x)</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Message data byte (signed 8&#160;bit); possible values for x<a href="javascript:void(0)" class="MCTextPopup popup popupHead">*<span class="MCTextPopupBody MCTextPopupBody_Closed needs-pie popupBody" aria-hidden="true"><span class="MCTextPopupArrow"> </span>x sets the datafield byte for the beginning of the value.</span></a>: 0…63</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">char</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">—</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">int(x)</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Message data word (signed 16&#160;bit); possible values for x<a href="javascript:void(0)" class="MCTextPopup popup popupHead">*<span class="MCTextPopupBody MCTextPopupBody_Closed needs-pie popupBody" aria-hidden="true"><span class="MCTextPopupArrow"> </span>x sets the datafield byte for the beginning of the value.</span></a>: 0…62</p>
+                                        <p class="Table">The index is byte-oriented; for example, int(1) references to the data beginning at byte 1 and consists of byte 1…2 (16&#160;bit).</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">int</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">—</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">long(x)</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Message data word (signed 32&#160;bit); possible values for x<a href="javascript:void(0)" class="MCTextPopup popup popupHead">*<span class="MCTextPopupBody MCTextPopupBody_Closed needs-pie popupBody" aria-hidden="true"><span class="MCTextPopupArrow"> </span>x sets the datafield byte for the beginning of the value.</span></a>: 0…60</p>
+                                        <p class="Table">The index is byte-oriented; for example, long(1) references to the data beginning at byte 1 and consists of byte 1…4 (32&#160;bit).</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">long</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">—</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">int64(x)</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Message data word (signed 64&#160;bit); possible values for x<a href="javascript:void(0)" class="MCTextPopup popup popupHead">*<span class="MCTextPopupBody MCTextPopupBody_Closed needs-pie popupBody" aria-hidden="true"><span class="MCTextPopupArrow"> </span>x sets the datafield byte for the beginning of the value.</span></a>: 0…56</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">int64</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">—</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">float(x)</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Message data interpreted as IEEE float (32 bit); possible values for x<a href="javascript:void(0)" class="MCTextPopup popup popupHead">*<span class="MCTextPopupBody MCTextPopupBody_Closed needs-pie popupBody" aria-hidden="true"><span class="MCTextPopupArrow"> </span>x sets the datafield byte for the beginning of the value.</span></a>: 0…60</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">double<a href="javascript:void(0)" class="MCTextPopup popup popupHead">*<span class="MCTextPopupBody MCTextPopupBody_Closed needs-pie popupBody" aria-hidden="true"><span class="MCTextPopupArrow"> </span>In CAPL, both float and double are the same data type (64bit IEEE double)</span></a></p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">—</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">double(x)</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Message data interpreted as IEEE double (64 bit); possible values for x<a href="javascript:void(0)" class="MCTextPopup popup popupHead">*<span class="MCTextPopupBody MCTextPopupBody_Closed needs-pie popupBody" aria-hidden="true"><span class="MCTextPopupArrow"> </span>x sets the datafield byte for the beginning of the value.</span></a>: 0…56</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">double<a href="javascript:void(0)" class="MCTextPopup popup popupHead">*<span class="MCTextPopupBody MCTextPopupBody_Closed needs-pie popupBody" aria-hidden="true"><span class="MCTextPopupArrow"> </span>In CAPL, both float and double are the same data type (64bit IEEE double)</span></a></p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">—</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th colspan="4" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p colspan="4" class="TableHead">Flags</p>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">MsgFlags</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p>Transmit and receive flags. If more than one flag is set, then their values will be logically ORed.</p>
+                                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');" width="100%" class="TableStyle_vTable" cellspacing="0">
+                                            <col style="width: 90px;" />
+                                            <col />
+                                            <tr valign="top">
+                                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                    <p class="Table">0x02</p>
+                                                </td>
+                                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                    <p class="Table">The transmit buffer will be emptied before transmitting the message - the message is not blocked by other messages.</p>
+                                                </td>
+                                            </tr>
+                                            <tr valign="top">
+                                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                    <p class="Table">0x04</p>
+                                                </td>
+                                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                    <p class="Table">The NERR flag of the CAN transceiver was active at message reception (system is in single wire mode)</p>
+                                                </td>
+                                            </tr>
+                                            <tr valign="top">
+                                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                    <p class="Table">0x08</p>
+                                                </td>
+                                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                    <p class="Table">The message will be sent or was received in <span class="bold">high voltage</span> mode</p>
+                                                </td>
+                                            </tr>
+                                            <tr valign="top">
+                                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                    <p class="Table">0x10</p>
+                                                </td>
+                                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                    <p class="Table">Remote Frame</p>
+                                                </td>
+                                            </tr>
+                                            <tr valign="top">
+                                                <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                    <p class="Table">0x40</p>
+                                                </td>
+                                                <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                    <p class="Table">Transmit Acknowledge (equal to DIR==Tx)</p>
+                                                </td>
+                                            </tr>
+                                            <tr valign="top">
+                                                <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                    <p class="Table">0x80</p>
+                                                </td>
+                                                <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                    <p class="Table">Transmit Request (equal to DIR==TXREQUEST)</p>
+                                                </td>
+                                            </tr>
+                                            <tr valign="top">
+                                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                    <p class="Table">All others</p>
+                                                </td>
+                                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                    <p class="Table">Reserved</p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">dword</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">read only</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">SIMULATED</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Message has been sent by a simulated CAPL node; possible values: 0 (no), 1 (yes)</p>
+                                        <p data-mc-conditions="Targets.CANoe-DE-Family">Please note the <a href="../../CAPLBrowser/General/CAPLBrowserRXSemantics.htm" target="_blank">semantics of Rx</a> for CAPL nodes in the Simulation Setup.</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">byte</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">—</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">FDF</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">FD Format Indicator</p>
+                                        <p class="Table">0 = Classic CAN message<br />1 = CAN FD message</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">char</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">—</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">BRS</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Bitrate Switch</p>
+                                        <p class="Table">Only for CAN FD messages.</p>
+                                        <p class="Table">0: Use arbitration bitrate for data segment<br />1: use data bitrate for data segment</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">char</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">—</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">ESI</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Error State Indicator</p>
+                                        <p class="Table">Read/Write:<br />0 = 	ESI not set<br />1 =	ESI set</p>
+                                        <p class="Table">Write:<br />2 =	CAN controller sets ESI automatically depending on the state of the controller</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">char</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">—</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">SRR_INV</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Inverted SRR. <span class="small">(This value is only available for some CAN hardware and a specific driver.)</span></p>
+                                        <p class="Table">Value range: 0, 1</p>
+                                        <p class="Table">Default: 0</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">char</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">—</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">R0</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Level of the R0 bit on the bus. <span class="small">(This value is only available for some CAN hardware and a specific driver.)</span></p>
+                                        <p class="Table">Value range: 0, 1</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">char</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">read only</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">R1</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Level of the R1 bit on the bus. <span class="small">(This value is only available for some CAN hardware and a specific driver.)</span></p>
+                                        <p class="Table">Value range: 0, 1</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">char</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">read only</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">TxFailed</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">When sending a message you can use <span class="bold">TxReqCount</span> to set the number of transmission attempts (single shot mode).</p>
+                                        <p class="Table">If it wasn't possible to send the message and <a href="../../CANoeCANalyzer/Ribbon/Hardware/NetworkHardware/NetworkHardwareCANControllerOptions.htm">transmission error notification</a> is active you will be notified in the <a href="../../CANoeCANalyzer/Windows/Trace/TraceWindow.htm">Trace Window</a> and in CAPL with a TXReq message and the <span class="bold">TxFailed</span> message selector.</p>
+                                        <p class="Table">Value range: 0, 1</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">char</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">read only</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th colspan="4" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="TableHead">PDU Access</p>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p>GetPDU(n, P)</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Retrieve the PDU with index <span class="bold">n</span> in this message.</p>
+                                        <p class="Table">The first PDU has index n = 0, the last PDU has index n = PDUCount() - 1.</p>
+                                        <p class="Table">The parameter <span class="bold">P</span> must be of type <span class="bold">PDU *</span>.</p>
+                                        <p class="Table">Return values other than 0 indicate an error.</p>
+                                        <p class="TableBold">Return Values:</p>
+                                        <p class="Table">0: Data access successful.</p>
+                                        <p class="Table">-1: Wrong bus system.</p>
+                                        <p class="Table">-2: This frame does not support accessing PDUs.</p>
+                                        <p class="Table">-3: The PDU object is invalid.</p>
+                                        <p class="Table">-4: PDU is not of RX type.</p>
+                                        <p class="Table">-5: Parameter too small (e.g. array has too less bytes)</p>
+                                        <p class="Table">-6: Message or PDU is not available (any more)</p>
+                                        <p class="Table">-7: PDU index out of bound. Use selector PDUCount() to detemine the number of PDUs.</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p>long</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p>read only</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p>IsContainer()</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Returns 1 if at least one AUTOSAR ContainerIPdu is mapped to this message, 0 otherwise.</p>
+                                        <p class="Table">Negative return values indicate an error. See selector <span class="bold">GetPDU()</span> for possible error codes.</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p>long</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p>read only</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p>PDUCount()</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Returns the number of all PDUs in this message.</p>
+                                        <p class="Table">The return value includes mapped PDU even with unset update bit.</p>
+                                        <p class="Table">The return value includes all contained PDUs in ContainerIPdu, but not the ContainerIPdu.</p>
+                                        <p class="Table">Negative return values indicate an error. See selector <span class="bold">GetPDU()</span> for possible error codes.</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p>long</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p>read only</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p>PDUOffset(n)</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Returns the byte offset of the start of the PDU with index <span class="bold">n</span> in the payload of the message data.</p>
+                                        <p class="Table">Negative return values indicate an error. See selector <span class="bold">GetPDU()</span> for possible error codes.</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p>long</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p>read only</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th colspan="4" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p colspan="4" class="TableHead">Other Properties</p>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">FrameCRC</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Checksum of the message.</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">dword</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">read only</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">TxReqCount</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Number of transmission attempts for a message. <span class="small">(This value is only available for some CAN hardware and a specific driver.)</span><br />With <span class="bold">0</span> the message will be repeated until it has been sent successfully once.</p>
+                                        <p class="Table">See also <a href="../../CANoeCANalyzer/Ribbon/Hardware/NetworkHardware/NetworkHardwareCANControllerOptions.htm">transmission error notification</a>.</p>
+                                        <p class="Table">Value range: 0…15</p>
+                                        <p class="Table">Default: 0</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">char</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">—</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">TxCountRequired</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Number of required transmission attempts for a message (only valid for <span class="bold">TxReqCount &gt; 0</span>).</p>
+                                        <p class="Table">Value range: 0…15</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">char</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">read only</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                        <p class="Table">StuffCount</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                        <p class="Table">Contains the stuff count of a CAN FD ISO-message. For other message formats the value is 0.
+</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                        <p class="Table">byte</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                        <p class="Table">read only</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <table style="width: 100%;mc-table-style: url('../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                    <p class="Table">
+                                        <img src="../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                    </p>
+                                </td>
+                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                    <p class="TableSymbolHead">Example: Data Access</p>
+                                    <p class="BoldBlue">
+                                        <img src="../../../Resources/Images/CAPLFunctions/CAPLBrowserMessageSelectors.png" />
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <h2 class="CommandPage">Symbolic Constants</h2>
+                    <p>To achieve independence from the actual coding of DIR and RTR the following symbolic constants can be used:</p>
+                    <div>
+                        <h2>For DIR</h2>
+                        <div>
+                            <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');" width="100%" class="TableStyle_vTable" cellspacing="0">
+                                <col style="width: 160px;" />
+                                <col />
+                                <tr valign="top">
+                                    <th colspan="1" rowspan="1" bgcolor="#DCDCDC" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Rx</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Message was received (DIR == Rx)</p>
+                                    </td>
+                                </tr>
+                                <tr valign="top">
+                                    <th colspan="1" rowspan="1" bgcolor="#DCDCDC" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Tx</p>
+                                    </th>
+                                    <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Message was transmitted (DIR == Tx)</p>
+                                    </td>
+                                </tr>
+                                <tr valign="top">
+                                    <th colspan="1" rowspan="1" bgcolor="#DCDCDC" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">TXREQUEST</p>
+                                    </th>
+                                    <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Transmission request was set for message (DIR == TXREQUEST)</p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div>
+                        <h2>For TYPE</h2>
+                        <div>
+                            <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');" width="100%" class="TableStyle_vTable" cellspacing="0">
+                                <col style="width: 160px;" />
+                                <col />
+                                <tr valign="top">
+                                    <th colspan="1" rowspan="1" bgcolor="#DCDCDC" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">RXREMOTE</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Remote message was received ((DIR == RX) &amp;&amp; RTR)</p>
+                                    </td>
+                                </tr>
+                                <tr valign="top">
+                                    <th colspan="1" rowspan="1" bgcolor="#DCDCDC" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">TXREMOTE</p>
+                                    </th>
+                                    <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Remote message was transmitted ((DIR == Tx) &amp;&amp; RTR)</p>
+                                    </td>
+                                </tr>
+                                <tr valign="top">
+                                    <th colspan="1" rowspan="1" bgcolor="#DCDCDC" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">TXREQUESTREMOTE</p>
+                                    </th>
+                                    <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Transmission request was set for remote message ((DIR == TXREQUEST) &amp;&amp; RTR)</p>
+                                    </td>
+                                </tr>
+                                <tr valign="top">
+                                    <th colspan="1" rowspan="1" bgcolor="#DCDCDC" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">RXDATA</p>
+                                    </th>
+                                    <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Data message was received ((DIR == Rx) &amp;&amp; !RTR)</p>
+                                    </td>
+                                </tr>
+                                <tr valign="top">
+                                    <th colspan="1" rowspan="1" bgcolor="#DCDCDC" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">TXDATA</p>
+                                    </th>
+                                    <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Data message was transmitted ((DIR == Tx) &amp;&amp; !RTR)</p>
+                                    </td>
+                                </tr>
+                                <tr valign="top">
+                                    <th colspan="1" rowspan="1" bgcolor="#DCDCDC" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">TXREQUESTDATA</p>
+                                    </th>
+                                    <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Transmission request was set for data message ((DIR == TXREQUEST) &amp;&amp; !RTR)</p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <p class="LinkList"><a href="../J1939/CAPLfunctionsJ1939DefinePG.htm" class="LinkList">Defining Parameter Groups</a>
+                </p>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="FooterWhite">
+                <table class="FooterWhite" style="border-collapse: collapse;margin-left: auto;margin-right: auto;">
+                    <col style="width: 70px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col style="width: 16px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col data-mc-conditions="" />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="buttons popup-container clearfix topicToolbarProxy topicToolbarProxyFooter _Skins_HTML5TopicToolbar mc-component nocontent">
+                                    <div class="button-group-container-left">
+                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo"><a href="../../Shared/HowToUseOnlineHelp.htm" title="Tips for using the help" alt="Tips for using the help"><img src="../../../Resources/vImages/vBackstage/vHelpInfo.png" /></a>
+                                </p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo">•&#160;&#160;Technical&#160;References are only&#160;available&#160;in&#160;English</p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo" style="text-align: right;"><span class="mc-variable Vector.BuildTime variable">2024-04-8T20:56:42</span>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <table style="width: 100%;border-collapse: separate;border-spacing: 3px 0px;margin-left: auto;margin-right: auto;caption-side: top;">
+                <col />
+                <col />
+                <col />
+                <col data-mc-conditions="BuildProcess.HTML5Link" />
+                <tbody>
+                    <tr>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;">
+                            <p class="vec_Footer">©&#160;Vector Informatik GmbH</p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;text-align: right;">
+                            <p class="vec_FooterBold">
+                                <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE&#160;Product Families</MadCap:conditionalText> Version <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.VectorTestUnitRunner">18</MadCap:conditionalText></p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="../../Shared/ContactCopyrightLicense.htm" class="vec_Footer MCXref xref xrefvec_Footer">Contact/Copyright/License</a>
+                            </p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="https://www.vector.com/int/en/company/get-info/privacy-policy/" target="_blank" class="vec_Footer">Data Privacy Notice</a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

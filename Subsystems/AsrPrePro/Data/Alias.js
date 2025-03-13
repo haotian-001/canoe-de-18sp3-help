@@ -1,0 +1,10 @@
+var xmlAliasData = "";
+xmlAliasData += '<?xml version=\"1.0\" encoding=\"utf-8\"?>';
+xmlAliasData += '<CatapultAliasFile>';
+xmlAliasData += '    <Map Name=\"ASR_PrePro_Wiz_GUI00\" Link=\"Topics/GUI/AsrPreProGUI00.htm\" ResolvedId=\"10000\" />';
+xmlAliasData += '    <Map Name=\"ASR_PrePro_Wiz_GUI01\" Link=\"Topics/GUI/AsrPreProGUI01.htm\" ResolvedId=\"10001\" />';
+xmlAliasData += '    <Map Name=\"ASR_PrePro_Wiz_GUI02\" Link=\"Topics/GUI/AsrPreProGUI02.htm\" ResolvedId=\"10002\" />';
+xmlAliasData += '    <Map Name=\"ASR_PrePro_Wiz_GUI03\" Link=\"Topics/GUI/AsrPreProGUI03.htm\" ResolvedId=\"10003\" />';
+xmlAliasData += '    <Map Name=\"ASR_PrePro_Wiz_GUI04\" Link=\"Topics/GUI/AsrPreProGUI04.htm\" ResolvedId=\"10004\" />';
+xmlAliasData += '</CatapultAliasFile>';
+MadCap.Utilities.Xhr._FilePathToXmlStringMap.Add('Alias', xmlAliasData);

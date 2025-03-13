@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="" data-mc-search-type="Stem" data-mc-help-system-file-name="CANoeDEFamily.xml" data-mc-path-to-help-system="../../../../" data-mc-conditions="Targets.CANoe-DE-Family" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../Skins/Favicons/favicon-16x16.png" /><title>Google Protocol Buffers (GoogleProtobuf) Serialization</title>
+        <link href="../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Resources/Stylesheets/vTableMasterPageHeader.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../Resources/Stylesheets/vStylesheet.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../Resources/Stylesheets/vTableSymbol.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../Resources/Stylesheets/vTable.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapGlobal.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapDom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapUtilities.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapXhr.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTextEffects.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSlideshow.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMessageBus.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMessageBus.CrossFrame.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapDefault.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMediaQueries.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAccessibility.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapHelpSystem.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAliasFile.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopicFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapFeedbackHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSkinHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.Breadcrumbs.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.MiniToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.SideMenu.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapIndex.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapGlossary.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapParser.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSearch.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapNavigateTopics.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapLms.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapELearning.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopic.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMicroContentComponent.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSearchHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopicElements.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTriPane.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/jscript" src="../../../Resources/vScripts/SyntaxHighlighting.js">
+        </script>
+        <script type="text/jscript" src="../../../Resources/vScripts/TabSwitch.js">
+        </script>
+        <script type="text/javascript" src="../../../Resources/vScripts/Vector.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../../CANoeDEFamily.htm#Topics/CANoeCANalyzer/Connectivity/GPBSerialization.htm">Open topic with navigation</a>
+        </p>
+        <div class="Body">
+            <div role="main" id="mc-main-content">
+                <div>
+                    <p class="StructurePath"><a href="../CANoeDEFamily.htm" class="StructurePath" data-mc-conditions="Targets.CANoe-DE-Family"><img src="../../../Resources/vImages/vToolIcons/CANoeDEFamily_Icon16_15x15.png" alt="" style="width: 15;height: 15;" />&#160;CANoe&#160;DE&#160;Product&#160;Families</a> » <a href="Connectivity.htm" class="StructurePath">Connectivity</a> » GPB Serialization</p>
+                    <h1>GPB Serialization</h1>
+                    <p class="MenuPath">&#160;</p>
+                    <p class="ToolAvailability" data-mc-conditions="BuildProcess.ToolAvailability"><a href="../../Shared/FeatureAvailability.htm" class="red" title="Feature availabilty for your product">Valid&#160;for</a>:&#160;&#160;CANoe&#160;DE<a name="aanchor4058"></a><MadCap:concept term="SFCANoeDE" />&#160;&#160;•&#160;&#160;CANoe:lite&#160;DE<a name="aanchor4059"></a><MadCap:concept term="SFCANoeLiteDE" />&#160;&#160;•&#160;&#160;CANoe4SW&#160;DE<a name="aanchor4060"></a><MadCap:concept term="SFCANoe4SWDE" />&#160;&#160;•&#160;&#160;CANoe4SW:lite&#160;DE<a name="aanchor4061"></a><MadCap:concept term="SFCANoe4SWLiteDE" /></p>
+                    <p class="AutoSearchFilterConcepts"><a name="aanchor4062"></a>
+                        <MadCap:concept term="SFCore" />
+                    </p>
+                </div>
+                <p>On this page you will find information about Google Protocol Buffers serialization (short: <span class="bold">GoogleProtobuf</span> Serialization) in your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> and related products. Basic information about <span class="bold">GoogleProtobuf</span> can be found on the internet.</p>
+                <div>
+                    <h2 class="SectionMain">GoogleProtobuf in your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText></h2>
+                    <ul>
+                        <li>
+                            <p>In <span class="bold">GoogleProtobuf</span>, the sent data is serialized using one or more <span class="bold">proto</span> files that are automatically created when the user-specific <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> data model is imported.</p>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <p>These automatically generated <span class="bold">proto</span> files are imported for (de-)serialization. The workflow is illustrated in the following image:</p>
+                        </li>
+                    </ul>
+                    <p>
+                        <img src="../../../Resources/Images/CANoeCANalyzer/Connectivity/MQTTdoWorkflow_700x306.png" style="width: 700;height: 306;" />
+                    </p>
+                    <p>For each data model configuration, a set of proto files with the syntax <span class="bold">proto2</span> and <span class="bold">proto3</span> is automatically created in the folder where your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> configuration file (CFG file) is located during data model (re-)import. The proto2 files are automatically imported into the serializer for use immediately after they are built.</p>
+                    <p>The <span class="bold">proto</span> files are created and imported for each interface/DO member that contains the attribute [Serialization="GoogleProtobuf"]. Here, the attribute can be locally defined or inherited. For more information about the generation of the proto files, refer to the section <a href="#BMGenerateProtoFilesViaCANoe">Generation of the Proto Files by your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText></a>.</p>
+                    <p>You can import the automatically created <span class="bold">proto</span> files into the <span class="bold">Protobuf</span> serializer of your application/device to be able to communicate with your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> via <span class="bold">GoogleProtobuf</span>.</p>
+                </div>
+                <div>
+                    <h3 class="SectionMain">Supported Data Types</h3>
+                    <p>The following table shows all data types available in your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> for <span class="bold">GoogleProtobuf</span> (de)serialization and their mapping to <span class="bold">GoogleProtobuf</span> data types.</p>
+                    <div>
+                        <table style="mc-table-style: url('../../../Resources/Stylesheets/vTable.css');margin-left: 0;margin-right: auto;" class="TableStyle_vTable" cellspacing="0">
+                            <col />
+                            <col />
+                            <thead>
+                                <tr>
+                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                        <p>CANoe Data Model Data Types</p>
+                                    </th>
+                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                        <p>GoogleProtobuf Data Types</p>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">uintx
+  (with x &lt;= 32 ) </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">uint32</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">uintx
+  (with x &gt; 32 )</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">uint64</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">intx
+  (with x &lt;= 32 )</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">int32</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">intx
+  (with x &gt; 32 )</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">int64</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">float</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">float</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">double</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">double</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">bool</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">bool</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">string</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">string</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">bytes</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">bytes</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">enum</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">enum</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">array/list</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">message
+ with repeated field</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">union</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">message
+ with oneof field</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                        <p class="Table">struct</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                        <p class="Table">message</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <h3 class="SectionSub">Note on the Use of Enums</h3>
+                    <p>Currently, <span class="bold">GoogleProtobuf</span> serialization for enums is only possible when using statically created distributed objects (DOs). Therefore, all objects used must already be created/instantiated in the vCDL file used for the data model if enums are to be used.</p>
+                    <div>
+                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                            <col class="TableStyle-vTableSymbol-Column-Column1" />
+                            <col class="TableStyle-vTableSymbol-Column-Column2" />
+                            <tbody>
+                                <tr>
+                                    <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                        <p class="Table">
+                                            <img src="../../../Resources/vImages/vInfo.png" style="width: 48px;height: 45px;" title="Note" alt="Note" />
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                        <p class="TableSymbolHead">Note</p>
+                                        <p class="Table">All DO/interface member data types are encapsulated in message-definitions in the proto file, also the primitive/simple data types uint32, uint64, int32, int64, float, double, bool, string and bytes.</p>
+                                        <p>The <span class="bold">Protobuf</span> message types for primitive/simple data types use the following nomenclature (proto2-syntax in this case):</p>
+                                        <p class="SourceCode">message SimpleDataTypeNameType<br />{<br />&#160;&#160;required SimpleDataTypeName SimpleDataTypeNameField = 1;<br />}</p>
+                                        <p>For int64, this would lead to the following:</p>
+                                        <p class="SourceCode">message int64Type<br />{<br />&#160;&#160;required int64 int64Field = 1;<br />}</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="SectionMain"><a name="BMGenerateProtoFilesViaCANoe" id="BMGenerateProtoFilesViaCANoe"></a>Generation of the Proto Files by your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText></h3>
+                    <h3>There are three types of generated proto files:</h3>
+                    <ol>
+                        <li value="1">
+                            <p><span class="bold">simple_data_types_proto2.proto</span> and <span class="bold">simple_data_types_proto3.proto</span>. These files contain the <span class="bold">Protobuf</span> message type definitions for simple/native data types like int, uint, float, double, bool, string and bytes. Each <span class="bold">Protobuf</span> message type definition contains a single field with the simple/native data type.</p>
+                        </li>
+                        <li value="2">
+                            <p><span class="bold">non_complex_array_data_types_proto2.proto</span> and <span class="bold">non_complex_array_data_types_proto3.proto</span>. These files contain the <span class="bold">Protobuf</span> message type definitions for (nested) array data types with a simple/native base data type. The general nomenclature for the message type name of arrays is <span class="bold">DataTypeName_array_x</span> where <span class="bold">DataTypeName</span> is the name of the data type and <span class="bold">x</span> is the nesting level, which is <span class="bold">1</span> for a non-nested array, <span class="bold">2</span> for a singly nested array (array in array) etc.</p>
+                        </li>
+                        <li value="3">
+                            <p><span class="bold">NamespacePath_proto2.proto</span> and <span class="bold">NamespacePath_proto3.proto</span>, which contain the user-defined complex data types (enums, structs, unions and arrays of structs or unions). Here, <span class="bold">NamespacePath</span> is the user-defined namespace (path) in which the complex data type is defined. One <span class="bold">proto</span> file is built for each namespace. The namespace is also used as GoogleProtobuf package specifier in the corresponding proto file. Arrays of complex data types are defined in the <span class="bold">proto</span> file where the base type is also defined.</p>
+                        </li>
+                    </ol>
+                    <div>
+                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                            <col class="TableStyle-vTableSymbol-Column-Column1" />
+                            <col class="TableStyle-vTableSymbol-Column-Column2" />
+                            <tbody>
+                                <tr>
+                                    <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                        <p class="Table">
+                                            <img src="../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                        <p class="TableSymbolHead">Example</p>
+                                        <p class="Table">If a complex data type is defined in the (nested) namespace<span class="bold"> test::random::example</span> , the <span class="bold">proto</span> files will be named <span class="bold">test_random_example_proto2.proto</span> and <span class="bold">test_random_example_proto3.proto</span> and the package specifier in both files will be <span class="bold">package test.random.example ;</span>.</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <ul>
+                        <li>
+                            <p>For complex data types with n members , e.g. a <span class="bold">struct</span> with <span class="bold">n</span> fields, the (unique) field numbers in the corresponding <span class="bold">Protobuf</span> message types are chosen as <span class="bold">1,2,…,n</span> assigned in the order of the members of the struct. Deviation from this order for structs is possible by using the <span class="SourceCode">SerializationAttributes::GoogleProtobuf::MessageFieldIndex</span> attribute (see section <a href="#BMAttributesGoogleProtbufSer">Attributes for GoogleProtobuf Serialization</a>).</p>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <p>A mutual import of two <span class="bold">proto</span> files is not possible. A setup like in the table below would lead to an import error in the Protobuf importer due to the cyclic dependency. Therefore, you must avoid such mutual dependencies of different namespaces in the data model namespace structure for <span class="bold">GoogleProtobuf</span>. In the example given here, there would be (at least) two proto2 files named <span class="bold">A_proto2.proto</span> and <span class="bold">B_proto2.proto</span>. However, <span class="bold">A_proto2.proto</span> imports <span class="bold">B_proto2.proto</span>, which in turn includes <span class="bold">A_proto2.proto</span>, this is where the import error occurs.</p>
+                        </li>
+                    </ul>
+                    <table style="mc-table-style: url('../../../Resources/Stylesheets/vTable.css');margin-left: 0;margin-right: auto;" class="TableStyle_vTable" cellspacing="0">
+                        <col />
+                        <col />
+                        <thead>
+                            <tr>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                    <p>Namespace A</p>
+                                </th>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                    <p>Namespace B</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">Struct1 [contains struct3]</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Struct3 [contains struct2]</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="Table">Struct2</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                    <p class="Table">—</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <h2 class="SectionMain"><a name="BMAttributesGoogleProtbufSer" id="BMAttributesGoogleProtbufSer"></a>Attributes for GoogleProtobuf Serialization</h2>
+                    <p>The following table shows attributes that can be used in the definition of the data model to specify properties of serialization using <span class="bold">GoogleProtobuf</span>:</p>
+                    <div>
+                        <table style="mc-table-style: url('../../../Resources/Stylesheets/vTable.css');margin-left: 0;margin-right: auto;" class="TableStyle_vTable" cellspacing="0">
+                            <col class="TableStyle-vTable-Column-Column1" />
+                            <col class="TableStyle-vTable-Column-Column1" />
+                            <col class="TableStyle-vTable-Column-Column1" />
+                            <thead>
+                                <tr class="TableStyle-vTable-Head-Header1">
+                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Attribute</p>
+                                    </th>
+                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                        <p class="TableHead">Values</p>
+                                    </th>
+                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                        <p class="TableHead">Description</p>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="TableStyle-vTable-Body-Body1">
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">optional</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p>Can be written to <span class="bold">struct member</span>. These members can be assigned either a <span class="bold">value</span> or <span class="bold">null</span> in the test. Struct members that are set to <span class="bold">null</span> are not transmitted in the serialization. At the receiver, all values that are not transmitted are assigned a data type-specific default value. These default values are defined in the <span class="bold">Protobuf</span> standard. In the case of a <span class="bold">struct</span> with the attribute <span class="bold">optional</span>, all <span class="bold">members</span> of this struct are set to their default value.</p>
+                                        <p>In <span class="bold">Proto2</span> syntax this attribute corresponds to the keyword <span class="bold">optional</span>. All <span class="bold">struct members</span> without this attribute become <span class="bold">protobuf</span> message fields with the <span class="bold">required</span> keyword. In the standard <span class="bold">Proto3</span> these keywords no longer exist, here all <span class="bold">struct members</span> are treated as <span class="bold">optional members</span> from <span class="bold">Proto2</span>.</p>
+                                        <p>Under this table you can find <a href="#BMExampleAttributeOptional">examples for using the <span class="bold">optional</span> attribute</a>.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-vTable-Body-Body1">
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">SerializationAttributes::GoogleProtobuf::ScalarValueMode</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <ul>
+                                            <li>Default</li>
+                                            <li>Normal</li>
+                                            <li>Signed</li>
+                                            <li>Fixed</li>
+                                        </ul>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p>With this attribute you can specify how a <span class="bold">struct member</span> of data type <span class="bold">int</span> or <span class="bold">uint</span> is to be encoded. This allows for more efficient coding in certain cases. For more information, see the <span class="bold">GoogleProtobuf</span> standard.</p>
+                                        <p>The <span class="bold">GoogleProtobuf</span> data types used for serialization (depending on the attribute value and member data type used) can be found in the table below. <span class="bold">Default</span> is treated like <span class="bold">Normal</span> here.</p>
+                                        <p>Overview of the resulting <span class="bold">GoogleProtobuf</span> data types depending on the selected attribute values (left column) and the usage of member data types (1st row):</p>
+                                        <table style="mc-table-style: url('../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                                            <col />
+                                            <col />
+                                            <col />
+                                            <tbody>
+                                                <tr>
+                                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                        <p class="Table">—</p>
+                                                    </th>
+                                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                        <p class="Table">uint</p>
+                                                    </th>
+                                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                        <p class="Table">int</p>
+                                                    </th>
+                                                </tr>
+                                                <tr>
+                                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                        <p class="Table">Normal</p>
+                                                    </th>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                        <p class="Table">uint</p>
+                                                    </td>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                        <p class="Table">int</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                        <p class="Table">Signed</p>
+                                                    </th>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                                        <p class="Table">uint</p>
+                                                    </td>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                                        <p class="Table">sint</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                                        <p class="Table">Fixed</p>
+                                                    </th>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                                        <p class="Table">fixed</p>
+                                                    </td>
+                                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                                        <p class="Table">sfixed</p>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-vTable-Body-Body1">
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                        <p class="Table">SerializationAttributes::GoogleProtobuf::MessageFieldIndex</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                        <p class="Table">Uint32</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                        <p class="Table">To achieve user-defined numbering within the <span class="bold">Proto</span> files, you can specify field numbers for <span class="bold">struct members</span> in the vCDL file, with the help of this attribute. For members without this attribute, counting continues after the largest field number given to a message member above it. Be careful not to assign a value to the attribute that has been used before, this would result in an import error of the <span class="bold">Proto</span> file.</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                            <col class="TableStyle-vTableSymbol-Column-Column1" />
+                            <col class="TableStyle-vTableSymbol-Column-Column2" />
+                            <tbody>
+                                <tr>
+                                    <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                        <p class="Table">
+                                            <img src="../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                        <p class="TableSymbolHead"><a name="BMExampleAttributeOptional" id="BMExampleAttributeOptional"></a>Example for the Attribute Optional</p>
+                                        <p>This example shows how to work with a <span class="bold">struct</span> that contains a <span class="bold">member</span> with the attribute <span class="bold">optional</span>. The data model is defined in the vCDL file. The application model is defined in the three possible languages C#, CAPL and Python each in equivalent form. You can use all three application models in your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> configuration.</p>
+                                        <p>After starting the measurement, you can press the keys A, B, C, D, E or F to trigger an assignment of the <span class="bold">struct members</span> to be sent. The received data is then output for each active application model.</p>
+                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0)" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />vCDL</a></span>
+                                            <div class="MCDropDownBody dropDownBody">
+                                                <p class="TableSourceCode">version 1.4;<br /><br />import module "MQTT";<br /><br />namespace DemoOptional<br />{<br /><br />&#160;&#160;struct MyDataStruct<br />&#160;&#160;{<br />&#160;&#160;&#160;&#160;int32 myRequiredStructMember;<br /><br />&#160;&#160;&#160;&#160;[optional]<br />&#160;&#160;&#160;&#160;int32 myOptionalStructMember;<br />&#160;&#160;}<br /><br />&#160;&#160;[Binding="MQTT"]<br />&#160;&#160;[MQTTBinding::ClientId="CANoe"]<br />&#160;&#160;[MQTTBinding::Topic="myTopic"]<br />&#160;&#160;[Serialization="GoogleProtobuf"]<br />&#160;&#160;object Client<br />&#160;&#160;{<br />&#160;&#160;&#160;&#160;provided data MyDataStruct myProvidedData;<br />&#160;&#160;&#160;&#160;consumed data MyDataStruct myConsumedData;<br />&#160;&#160;}<br />}<br /></p>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0)" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />C#</a></span>
+                                                <div class="MCDropDownBody dropDownBody">
+                                                    <p class="SourceCode">using System;<br />using Vector.Tools;<br />using Vector.CANoe.Runtime;<br />using Vector.CANoe.Sockets;<br />using Vector.CANoe.Threading;<br />using Vector.Diagnostics;<br />using NetworkDB;<br />using NetworkDB._SystemDataTypes;<br /><br />using IServiceProvider = Vector.CANoe.Runtime.IServiceProvider;<br /><br /><br />public class ExampleForOptional : MeasurementScript<br />{<br />&#160;&#160;[OnKey('a')]<br />&#160;&#160;public void setRequiredAndOptionalValue(char key)<br />&#160;&#160;{<br />&#160;&#160;&#160;&#160;Output.WriteLine("Setting required member to 4 and optional member to 5.");<br /><br />&#160;&#160;&#160;&#160;DemoOptional.Client.myProvidedData.myRequiredStructMember = 4;<br />&#160;&#160;&#160;&#160;DemoOptional.Client.myProvidedData.myOptionalStructMember = 5;<br />&#160;&#160;}<br /><br />&#160;&#160;[OnKey('b')]<br />&#160;&#160;public void setOnlyRequiredValue(char key)<br />&#160;&#160;{<br />&#160;&#160;&#160;&#160;Output.WriteLine("Setting required member to 6 and optional member to null.");<br /><br />&#160;&#160;&#160;&#160;DemoOptional.Client.myProvidedData.myRequiredStructMember = 6;<br />&#160;&#160;&#160;&#160;DemoOptional.Client.myProvidedData.myOptionalStructMember = null;<br />}&#160;&#160;<br /><br />&#160;&#160;[OnUpdate(DemoOptional.Client.MemberIDs.myConsumedData)]<br />&#160;&#160;public void printReceivedData()<br />&#160;&#160;{<br />&#160;&#160;&#160;&#160;Output.WriteLine("Value required member: " + DemoOptional.Client.myConsumedData.myRequiredStructMember);<br />&#160;&#160;&#160;&#160;if (DemoOptional.Client.myConsumedData.myOptionalStructMember.HasValue)<br />&#160;&#160;&#160;&#160;{<br />&#160;&#160;&#160;&#160;&#160;&#160;Output.WriteLine("Value optional member: " + DemoOptional.Client.myConsumedData.myOptionalStructMember);<br />&#160;&#160;&#160;&#160;}<br />&#160;&#160;&#160;&#160;else<br />&#160;&#160;&#160;&#160;{<br />&#160;&#160;&#160;&#160;&#160;&#160;Output.WriteLine("Optional member is not set.");<br />&#160;&#160;&#160;&#160;}<br />&#160;&#160;}<br />}</p>
+                                                </div>
+                                            </div>
+                                            <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0)" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />CAPL</a></span>
+                                                <div class="MCDropDownBody dropDownBody">
+                                                    <p class="TableSourceCode">includes<br />{<br /><br />}<br />variables<br />{<br /><br />}<br /><br />on key 'c'<br />{<br />&#160;&#160;write("Setting required member to 7 and optional member to 8.");<br /><br />&#160;&#160;$DemoOptional::Client.myProvidedData.myRequiredStructMember = 7;<br />&#160;&#160;$DemoOptional::Client.myProvidedData.myOptionalStructMember = 8;<br />}<br /><br />on key 'd'<br />{<br />&#160;&#160;write("Setting required member to 9 and set optional member invalid.");<br /><br />&#160;&#160;$DemoOptional::Client.myProvidedData.myRequiredStructMember = 9;<br />&#160;&#160;$DemoOptional::Client.myProvidedData.myOptionalStructMember.SetInvalid();<br />}<br /><br /><br /><br />on value_update DemoOptional::Client.myConsumedData<br />{<br />&#160;&#160;write("Value required member: %i", $DemoOptional::Client.myConsumedData.myRequiredStructMember);<br />&#160;&#160;if ($DemoOptional::Client.myConsumedData.myOptionalStructMember.IsValid)<br />&#160;&#160;{<br />&#160;&#160;&#160;&#160;write("Value optional member: %i", $DemoOptional::Client.myConsumedData.myOptionalStructMember);<br />&#160;&#160;}<br />&#160;&#160;else<br />&#160;&#160;{<br />&#160;&#160;&#160;&#160;write("Optional member is not set.");<br />&#160;&#160;}<br />}</p>
+                                                </div>
+                                            </div>
+                                            <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0)" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Python</a></span>
+                                                <div class="MCDropDownBody dropDownBody">
+                                                    <p class="TableSourceCode">import vector.canoe<br />import application_layer<br /><br /><br />@vector.canoe.measurement_script<br />class PythonApplicationModel:<br />&#160;&#160;@vector.canoe.on_key("e")<br />&#160;&#160;def setRequiredAndOptionalValue(self, key: str):<br /><br />&#160;&#160;&#160;&#160;vector.canoe.write("Setting required member to 10 and optional member to 11")<br /><br />&#160;&#160;&#160;&#160;application_layer.DemoOptional.Client.myProvidedData.myRequiredStructMember = 10<br />&#160;&#160;&#160;&#160;application_layer.DemoOptional.Client.myProvidedData.myOptionalStructMember = 11<br /><br />&#160;&#160;@vector.canoe.on_key("f")<br />&#160;&#160;def setOnlyRequiredValue(self, key: str):<br /><br />&#160;&#160;&#160;&#160;vector.canoe.write("Setting required member to 12 and optional member to None")<br /><br />&#160;&#160;&#160;&#160;application_layer.DemoOptional.Client.myProvidedData.myRequiredStructMember = 12<br />&#160;&#160;&#160;&#160;application_layer.DemoOptional.Client.myProvidedData.myOptionalStructMember = (<br />&#160;&#160;&#160;&#160;&#160;&#160;None<br />&#160;&#160;&#160;&#160;)<br /><br />&#160;&#160;@vector.canoe.on_update(application_layer.DemoOptional.Client.myConsumedData)<br />&#160;&#160;def printReceivedData(self):<br /><br />&#160;&#160;&#160;&#160;vector.canoe.write(<br />&#160;&#160;&#160;&#160;&#160;&#160;"Value required member: "<br />&#160;&#160;&#160;&#160;&#160;&#160;+ str(<br /><br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;application_layer.DemoOptional.Client.myConsumedData.myRequiredStructMember.copy()<br />&#160;&#160;&#160;&#160;&#160;&#160;)<br />&#160;&#160;&#160;&#160;)<br /><br />&#160;&#160;&#160;&#160;if (<br />&#160;&#160;&#160;&#160;&#160;&#160;application_layer.DemoOptional.Client.myConsumedData.myOptionalStructMember.copy()<br />&#160;&#160;&#160;&#160;&#160;&#160;!= None<br />&#160;&#160;&#160;&#160;):<br />&#160;&#160;&#160;&#160;&#160;&#160;vector.canoe.write(<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"Value optional member: "<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;+ str(<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;application_layer.DemoOptional.Client.myConsumedData.myOptionalStructMember.copy()<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;)<br />&#160;&#160;&#160;&#160;&#160;&#160;)<br /><br />&#160;&#160;&#160;&#160;else:<br />&#160;&#160;&#160;&#160;&#160;&#160;vector.canoe.write("Optional member is not set.")</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <p class="LinkList">&#160;</p>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="FooterWhite">
+                <table class="FooterWhite" style="border-collapse: collapse;margin-left: auto;margin-right: auto;">
+                    <col style="width: 70px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col style="width: 16px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="buttons popup-container clearfix topicToolbarProxy topicToolbarProxyFooter _Skins_HTML5TopicToolbar mc-component nocontent">
+                                    <div class="button-group-container-left">
+                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo"><a href="../../Shared/HowToUseOnlineHelp.htm" title="Tips for using the help" alt="Tips for using the help"><img src="../../../Resources/vImages/vBackstage/vHelpInfo.png" /></a>
+                                </p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo" style="text-align: right;"><span class="mc-variable Vector.BuildTime variable">2024-04-8T20:56:42</span>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <table style="width: 100%;border-collapse: separate;border-spacing: 3px 0px;margin-left: auto;margin-right: auto;caption-side: top;">
+                <col />
+                <col />
+                <col />
+                <col data-mc-conditions="BuildProcess.HTML5Link" />
+                <tbody>
+                    <tr>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;">
+                            <p class="vec_Footer">©&#160;Vector Informatik GmbH</p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;text-align: right;">
+                            <p class="vec_FooterBold">
+                                <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE&#160;Product Families</MadCap:conditionalText> Version <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.VectorTestUnitRunner">18</MadCap:conditionalText></p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="../../Shared/ContactCopyrightLicense.htm" class="vec_Footer MCXref xref xrefvec_Footer">Contact/Copyright/License</a>
+                            </p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="https://www.vector.com/int/en/company/get-info/privacy-policy/" target="_blank" class="vec_Footer">Data Privacy Notice</a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

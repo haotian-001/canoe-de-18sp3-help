@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="" data-mc-search-type="Stem" data-mc-help-system-file-name="CANoeDEFamily.xml" data-mc-path-to-help-system="../../../" data-mc-toc-path="Programming Interfaces (APIs)" data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../Skins/Favicons/favicon-16x16.png" /><title>Vector Communication Description Language (vCDL)</title>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Resources/Stylesheets/vTableMasterPageHeader.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../Resources/Stylesheets/vStylesheet.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.needs-pie
+{
+	behavior: url('../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../Resources/Stylesheets/vTable.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapGlobal.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapDom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapUtilities.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapXhr.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapTextEffects.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapSlideshow.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapMessageBus.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapMessageBus.CrossFrame.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapDefault.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapMediaQueries.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAccessibility.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapHelpSystem.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAliasFile.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapTopicFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapFeedbackHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapSkinHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapToc.Breadcrumbs.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapToc.MiniToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapToc.SideMenu.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapIndex.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapGlossary.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapParser.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapSearch.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapNavigateTopics.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapLms.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapELearning.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapTopic.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapMicroContentComponent.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapSearchHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapTopicElements.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapTriPane.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/jscript" src="../../Resources/vScripts/SyntaxHighlighting.js">
+        </script>
+        <script type="text/jscript" src="../../Resources/vScripts/TabSwitch.js">
+        </script>
+        <script type="text/javascript" src="../../Resources/vScripts/Vector.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../CANoeDEFamily.htm#Topics/vCDL/vCDLStartpage.htm">Open topic with navigation</a>
+        </p>
+        <div class="Body">
+            <div role="main" id="mc-main-content">
+                <div>
+                    <p class="StructurePath"><a href="../CANoeCANalyzer/CANoeDEFamily.htm" class="StructurePath" data-mc-conditions="Targets.CANoe-DE-Family"><img src="../../Resources/vImages/vToolIcons/CANoeDEFamily_Icon16_15x15.png" alt="" style="width: 15;height: 15;" />&#160;CANoe&#160;DE&#160;Product&#160;Families</a> » vCDL</p>
+                    <h1><span class="mc-variable System.Title variable">Vector Communication Description Language (vCDL)</span>
+                    </h1>
+                    <p class="MenuPath">&#160;</p>
+                    <p class="ToolAvailability" data-mc-conditions="BuildProcess.ToolAvailability"><a href="../Shared/FeatureAvailability.htm" class="red" title="Feature availabilty for your product">Valid&#160;for</a>:&#160;&#160;CANoe&#160;DE<a name="aanchor25524"></a><MadCap:concept term="SFCANoeDE" />&#160;&#160;•&#160;&#160;CANoe:lite&#160;DE<a name="aanchor25525"></a><MadCap:concept term="SFCANoeLiteDE" />&#160;&#160;•&#160;&#160;CANoe4SW&#160;DE<a name="aanchor25526"></a><MadCap:concept term="SFCANoe4SWDE" />&#160;&#160;•&#160;&#160;CANoe4SW:lite&#160;DE<a name="aanchor25527"></a><MadCap:concept term="SFCANoe4SWLiteDE" /></p>
+                    <p class="AutoSearchFilterConcepts"><a name="aanchor25528"></a>
+                        <MadCap:concept term="SFCore" />
+                    </p>
+                    <p class="IndexConcept"><a name="kanchor8400"></a>
+                    </p>
+                </div>
+                <p data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">vCDL is a tool for the simple, text-based configuration of application layer objects.</p>
+                <p>If you are new to vCDL, it is recommended to read the help page by page to get an overview of its capabilities. The syntax is similar to well-known languages like C++, C#, and Java — with some deviations. Its purpose is data modeling only thus missing procedural elements such as loops. Nevertheless, attributes can impact the behavior of the modeled data during measurement.</p>
+                <p>If you have already worked with vCDL in the past, you have most likely done so with vCDL 1.4 or older. vCDL 2.0 is compatible with vCDL 1.4 in most respects, but brings some changes. vCDL 2.0 supports only distributed objects, for example. It is best to start with an existing vCDL file and change the version in the first line to 2.0. You can then read the meaning of the errors output by the version adjustment in the help.</p>
+                <h2>Why the introduction of version 2.0?</h2>
+                <p>When vCDL 1.0 was released back in 2018, several design choices were based on assumptions as no language with similar purpose had existed before. Over the next years many new features were added while vCDL was kept backwards compatible posing restrictions on new designs. Additionally, the vCDL compiler had difficulties keeping up with files continuously growing in size.</p>
+                <p>All these aspects combined led to the decision to create a revised major version of vCDL. Our main goal was removing as many design flaws and inconsistencies as possible while keeping it close to the original vCDL. This of course led to breaking changes meaning that some vCDL 1.x files require changes to be used as vCDL 2.0. Rest assured that each breaking change has been analyzed extensively before considered necessary to improve the overall design of vCDL 2.0. On the other hand, the redesign of the vCDL 2.0 compiler enables various <a href="../vCDL20/Concept/vCDLComparison.htm">new features</a> that would not have been possible with a potential vCDL 1.5 version.</p>
+                <p> It is recommended to create new vCDL files with version 2.0.</p>
+                <hr width="100%" size="0" align="center" />
+                <p>Select here which vCDL version you are working with.</p>
+                <div>
+                    <table style="border-left-style: none;border-left-width: 0px;border-left-color: #ffffff;border-right-style: none;border-right-width: 0px;border-right-color: #ffffff;border-top-style: none;border-top-width: 0px;border-top-color: #ffffff;border-bottom-style: none;border-bottom-width: 0px;border-bottom-color: #ffffff;margin-left: 0;margin-right: auto;">
+                        <col style="width: 50%;" />
+                        <col style="width: 50%;" />
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <h3>2.0</h3>
+                                        <table style="mc-table-style: url('../../Resources/Stylesheets/vTable.css');margin-left: 0;margin-right: auto;width: 100%;" class="TableStyle_vTable" cellspacing="0">
+                                            <col class="TableStyle-vTable-Column-Column1" />
+                                            <thead>
+                                                <tr class="TableStyle-vTable-Head-Header1">
+                                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                                        <p class="TableHead">Quick Access</p>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="TableStyle-vTable-Body-Body1">
+                                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd" style="background-color: #b70032;">
+                                                        <ul>
+                                                            <li class="ComfortWhite"><a href="../vCDL20/Concept/vCDLComparison.htm" class="ListWhite">Comparison vCDL 1.4 and vCDL 2.0</a>
+                                                            </li>
+                                                            <li class="ComfortWhite"><a href="../vCDL20/Concept/vCDLConcept.htm" class="ListWhite">Basic Concepts</a>
+                                                            </li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div>
+                                        <table style="mc-table-style: url('../../Resources/Stylesheets/vTable.css');margin-left: 0;margin-right: auto;width: 100%;" class="TableStyle_vTable" cellspacing="0">
+                                            <col class="TableStyle-vTable-Column-Column1" />
+                                            <thead>
+                                                <tr class="TableStyle-vTable-Head-Header1">
+                                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                                        <p class="TableHead">Language</p>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="TableStyle-vTable-Body-Body1">
+                                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                                        <ul>
+                                                            <li><a href="../vCDL20/Language/vCDLAttributes.htm">Attributes</a>
+                                                            </li>
+                                                            <li><a href="../vCDL20/Language/vCDLDataTypes.htm">Data Types</a>
+                                                            </li>
+                                                            <li><a href="../vCDL20/Language/vCDLDistributedObjects.htm">Distributed Objects</a>
+                                                            </li>
+                                                            <li><a href="../vCDL20/Language/vCDLSystemVariables.htm">System Variables</a>
+                                                            </li>
+                                                            <li><a href="../vCDL20/Language/vCDLRefinements.htm">Refinements</a>
+                                                            </li>
+                                                            <li><a href="../vCDL20/Language/vCDLPreprocessor.htm">Preprocessor</a>
+                                                            </li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <p class="TableBold">Example</p>
+                                        <p class="TableSourceCode"><span class="CodeKeyword">version</span> <span class="CodeNumericalLiteral">2.0</span>;<br /><br /><span class="CodeKeyword">import module</span> <span class="CodeStringLiteral">"Abstract"</span>;<br /><br /><span class="CodeKeyword">namespace</span> System<br />{<br />&#160;&#160;<span class="CodeKeyword">struct</span> Wheel<br />&#160;&#160;{<br />&#160;&#160;&#160;&#160;<span class="CodeDataType">float</span> Pressure;<br />&#160;&#160;&#160;&#160;<span class="CodeDataType">int</span>&#160;&#160; RPM;<br />&#160;&#160;}<br /><br />&#160;&#160;[<span class="CodeAttributeKey_Namespace">Binding</span>=<span class="CodeStringLiteral">"Abstract"</span>]<br />&#160;&#160;<span class="CodeKeyword">interface</span> ICar<br />&#160;&#160;{<br />&#160;&#160;&#160;&#160;<span class="CodeKeyword">provided data</span> Wheel FrontLeft;<br />&#160;&#160;&#160;&#160;<span class="CodeKeyword">provided data</span> Wheel FrontRight;<br />&#160;&#160;&#160;&#160;<span class="CodeKeyword">provided data</span> Wheel RearLeft;<br />&#160;&#160;&#160;&#160;<span class="CodeKeyword">provided data</span> Wheel RearRight;<br /><br />&#160;&#160;&#160;&#160;<span class="CodeKeyword">provided field</span> <span class="CodeDataType">int</span> SteeringAngle = <span class="CodeNumericalLiteral">0</span>;<br /><br />&#160;&#160;&#160;&#160;<span class="CodeKeyword">consumed data</span> <span class="CodeDataType">bytes</span> TrafficData;<br />&#160;&#160;}<br /><br />&#160;&#160;<span class="CodeKeyword">typedef</span> ICarStimulator = <span class="CodeKeyword">reverse</span>&lt;ICar&gt;;<br /><br />&#160;&#160;ICar RedCar;<br /><br />&#160;&#160;ICarStimulator CarStimulator;<br />}</p>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <h3>1.4 (deprecated)</h3>
+                                        <table style="mc-table-style: url('../../Resources/Stylesheets/vTable.css');margin-left: 0;margin-right: auto;width: 100%;" class="TableStyle_vTable" cellspacing="0" data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">
+                                            <col class="TableStyle-vTable-Column-Column1" />
+                                            <thead>
+                                                <tr class="TableStyle-vTable-Head-Header1">
+                                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                                        <p class="TableHead">Quick Access</p>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="TableStyle-vTable-Body-Body1">
+                                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd" style="background-color: #b70032;">
+                                                        <ul>
+                                                            <li class="ComfortWhite" data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family"><a href="Concept/vCDLMotivation.htm" class="ListWhite">Motivation and Delimitationg</a>
+                                                            </li>
+                                                            <li class="ComfortWhite" data-mc-conditions="Targets.CANoe-DE-Family"><a href="Concept/vCDLFunctionalScope.htm" class="ListWhite">Funktional Scope</a>
+                                                            </li>
+                                                            <li class="ComfortWhite" data-mc-conditions="Targets.CANoe-DE-Family"><a href="Concept/vCDLIntegration.htm" class="ListWhite">Integration</a>
+                                                            </li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div>
+                                        <table style="mc-table-style: url('../../Resources/Stylesheets/vTable.css');margin-left: 0;margin-right: auto;width: 100%;" class="TableStyle_vTable" cellspacing="0">
+                                            <col class="TableStyle-vTable-Column-Column1" />
+                                            <thead>
+                                                <tr class="TableStyle-vTable-Head-Header1">
+                                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                                        <p class="TableHead">General</p>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="TableStyle-vTable-Body-Body1">
+                                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                                        <ul>
+                                                            <li><a href="Concept/vCDLSyntax.htm">Structure and Syntax</a>
+                                                            </li>
+                                                            <li data-mc-conditions="Targets.CANoe-DE-Family"><a href="../../../Subsystems/VectorToolsEnvironment/Content/Topics/vCDLEditor/vCDLEditor.htm">vCDL Editor</a>
+                                                            </li>
+                                                            <li><a href="Language/vCDLLanguage.htm">Language</a> (only available in English)</li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div>
+                                            <p class="TableBold">Example</p>
+                                            <p class="Table" data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">Valid for <span class="Product">CANoe&#160;DE</span><MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">, </MadCap:conditionalText><span class="Product">CANoe:lite&#160;DE</span></p>
+                                            <p class="TableSourceCode"><span class="CodeKeyword">version</span> <span class="CodeNumericalLiteral">1.4</span>;<br /><span class="CodeKeyword">namespace</span> Audio<br />{<br />&#160;&#160;<span class="CodeKeyword">service</span> CDPlayer<br />&#160;&#160;{<br />&#160;&#160;&#160;&#160;<span class="CodeKeyword">consumer</span> TouchScreen, Dashboard;<br />&#160;&#160;&#160;&#160;<span class="CodeKeyword">provider</span> Console;<br /><br />&#160;&#160;&#160;&#160;<span class="CodeKeyword">field</span> uint16 NumberOfTracks { <span class="CodeKeyword">get</span>; }<br />&#160;&#160;&#160;&#160;<span class="CodeKeyword">field</span> uint16 CurrentTrack; <span class="CodeComment">// get, set and notify implied</span><br />&#160;&#160;&#160;&#160;<span class="CodeDataType">void</span> NextTrack();<br />&#160;&#160;&#160;&#160;<span class="CodeDataType">void</span> PrevTrack();<br /><br />&#160;&#160;&#160;&#160;<span class="CodeKeyword">binding</span> <span class="CodeAttributeKey_Namespace">Abstract</span>;<br />&#160;&#160;}<br />}</p>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="LinkList">&#160;</p>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="FooterWhite">
+                <table class="FooterWhite" style="border-collapse: collapse;margin-left: auto;margin-right: auto;">
+                    <col style="width: 70px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col style="width: 16px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="buttons popup-container clearfix topicToolbarProxy topicToolbarProxyFooter _Skins_HTML5TopicToolbar mc-component nocontent">
+                                    <div class="button-group-container-left">
+                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo"><a href="../Shared/HowToUseOnlineHelp.htm" title="Tips for using the help" alt="Tips for using the help"><img src="../../Resources/vImages/vBackstage/vHelpInfo.png" /></a>
+                                </p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo" style="text-align: right;"><span class="mc-variable Vector.BuildTime variable">2024-04-8T20:56:42</span>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <table style="width: 100%;border-collapse: separate;border-spacing: 3px 0px;margin-left: auto;margin-right: auto;caption-side: top;">
+                <col />
+                <col />
+                <col />
+                <col data-mc-conditions="BuildProcess.HTML5Link" />
+                <tbody>
+                    <tr>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;">
+                            <p class="vec_Footer">©&#160;Vector Informatik GmbH</p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;text-align: right;">
+                            <p class="vec_FooterBold">
+                                <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE&#160;Product Families</MadCap:conditionalText> Version <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.VectorTestUnitRunner">18</MadCap:conditionalText></p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="../Shared/ContactCopyrightLicense.htm" class="vec_Footer MCXref xref xrefvec_Footer">Contact/Copyright/License</a>
+                            </p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="https://www.vector.com/int/en/company/get-info/privacy-policy/" target="_blank" class="vec_Footer">Data Privacy Notice</a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

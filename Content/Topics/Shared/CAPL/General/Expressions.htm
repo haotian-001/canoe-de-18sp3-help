@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="CANoeDEFamily.xml" data-mc-path-to-help-system="../../../../../" data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.vTESTstudio,Targets.CANoe-SE-Family" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../Skins/Favicons/favicon-16x16.png" /><title>Instructions, Expressions, Operators in CAPL</title>
+        <link href="../../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Resources/Stylesheets/vTableMasterPageHeader.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../../Resources/Stylesheets/vStylesheet.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../../Resources/Stylesheets/vTable.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../../Resources/Stylesheets/vTableSymbol.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapGlobal.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapDom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapUtilities.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapXhr.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTextEffects.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSlideshow.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMessageBus.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMessageBus.CrossFrame.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapDefault.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMediaQueries.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapAccessibility.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapHelpSystem.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapAliasFile.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopicFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapFeedbackHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSkinHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.Breadcrumbs.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.MiniToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.SideMenu.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapIndex.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapGlossary.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapParser.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSearch.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapNavigateTopics.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapLms.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapELearning.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopic.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMicroContentComponent.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSearchHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopicElements.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTriPane.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/jscript" src="../../../../Resources/vScripts/SyntaxHighlighting.js">
+        </script>
+        <script type="text/jscript" src="../../../../Resources/vScripts/TabSwitch.js">
+        </script>
+        <script type="text/javascript" src="../../../../Resources/vScripts/Vector.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../../../CANoeDEFamily.htm#Topics/Shared/CAPL/General/Expressions.htm">Open topic with navigation</a>
+        </p>
+        <div class="Body">
+            <div role="main" id="mc-main-content">
+                <div>
+                    <p class="AutoSearchFilterConcepts"><a name="aanchor21427"></a>
+                        <MadCap:concept term="SFCore" />
+                    </p>
+                    <p class="IndexConcept"><a name="kanchor7123"></a><a name="kanchor7124"></a>
+                    </p>
+                    <p class="StructurePath"><a href="../CAPLIntroduction.htm" class="StructurePath">CAPL Introduction</a> » <span class="mc-variable System.Title variable">Instructions, Expressions, Operators in CAPL</span></p>
+                    <h1><span class="mc-variable System.Title variable">Instructions, Expressions, Operators in CAPL</span>
+                    </h1>
+                    <p class="MenuPath">&#160;</p>
+                    <p class="ToolAvailability" data-mc-conditions="BuildProcess.ToolAvailability"><a href="../../FeatureAvailability.htm" class="red" title="Feature availabilty for your product">Valid&#160;for</a>:&#160;&#160;CANoe&#160;DE<a name="aanchor21428"></a><MadCap:concept term="SFCANoeDE" />&#160;&#160;•&#160;&#160;CANoe:lite&#160;DE<a name="aanchor21429"></a><MadCap:concept term="SFCANoeLiteDE" />&#160;&#160;•&#160;&#160;CANoe4SW&#160;DE<a name="aanchor21430"></a><MadCap:concept term="SFCANoe4SWDE" />&#160;&#160;•&#160;&#160;CANoe4SW:lite&#160;DE<a name="aanchor21431"></a><MadCap:concept term="SFCANoe4SWLiteDE" /></p>
+                </div>
+                <p>The CAPL syntax is based on the programming language C. The following instructions, expressions and operators are permitted as in C:</p>
+                <div>
+                    <h2 class="SectionSub"><a targets="TOGInstructions" href="javascript:void(0)" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="TOGInstructions"><img class="MCToggler_Image_Icon" src="../../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Instructions</a>
+                    </h2>
+                    <div style="display: none;" data-mc-target-name="TOGInstructions">
+                        <p>The following instructions are <a href="Keywords.htm">keywords</a>.</p>
+                        <ul>
+                            <li>
+                                <p class="Bold"><a name="Instructions" id="Instructions"></a>Instruction blocks: { ... }</p>
+                                <div>
+                                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                                        <tbody>
+                                            <tr>
+                                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                                    <p class="Table">
+                                                        <img src="../../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                                    </p>
+                                                </td>
+                                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                                    <p class="TableSymbolHead">Example</p>
+                                                    <p class="TableSourceCode">{<br />&#160;temp = msg.sig_1;<br />&#160;msg.sig_1 = msg.sig_2;<br />&#160;msg.sig_2 = temp;<br />}</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </li>
+                            <li>
+                                <p class="Bold">if { ... } and if {...} else { ... }</p>
+                                <div>
+                                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                                        <tbody>
+                                            <tr>
+                                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                                    <p class="Table">
+                                                        <img src="../../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                                    </p>
+                                                </td>
+                                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                                    <p class="TableSymbolHead">Example</p>
+                                                    <p class="TableSourceCode">if (count &lt; 50) count++;<br />...<br />if (x &lt; y) min = x; else min = y;</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </li>
+                            <li>
+                                <p class="Bold">switch, case, default</p>
+                                <div>
+                                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                                        <tbody>
+                                            <tr>
+                                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                                    <p class="Table">
+                                                        <img src="../../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                                    </p>
+                                                </td>
+                                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                                    <p class="TableSymbolHead">Example</p>
+                                                    <p class="TableSourceCode">switch (component) {<br />&#160;case(1) :<br />&#160;&#160;@comp_1 = value; break;<br />&#160;case(2) :<br />&#160;&#160;@comp_2 = value; break;<br />&#160;default :<br />&#160;&#160;write("error: wrong parameter (%d)",component); stop();<br />&#160;&#160;break;<br />}</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </li>
+                            <li>
+                                <p class="Bold">for.., while.., do..while loops</p>
+                                <div>
+                                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                                        <tbody>
+                                            <tr>
+                                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                                    <p class="Table">
+                                                        <img src="../../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                                    </p>
+                                                </td>
+                                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                                    <p class="TableSymbolHead">Example</p>
+                                                    <p class="TableSourceCode">for (i = 0; i &lt; 100; i++) sum += array[i];<br />...<br />while(pos &lt; msg.DLC) {<br />&#160;sum_even += msg.byte(pos++);<br />&#160;sum_odd += msg.byte(pos++);<br />}<br />...<br />do {<br />&#160;sum = sum += array[i];<br />} while (i &lt; 100 &amp;&amp; sum &lt;= 1000);</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </li>
+                            <li>
+                                <p class="Bold">continue and break</p>
+                                <div>
+                                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                                        <tbody>
+                                            <tr>
+                                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                                    <p class="Table">
+                                                        <img src="../../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                                    </p>
+                                                </td>
+                                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                                    <p class="TableSymbolHead">Example</p>
+                                                    <p class="TableSourceCode">for (i = 0; i &lt; 100; i++) {<br />&#160;if (array[i] == 0) continue;<br />&#160;array[i] = 1/array[i];<br />}<br />...<br />all_valid = 1;<br />len = elCount(is_valid);<br />for (i = 0; i &lt; len; i++) {<br />&#160;&#160;if (is_valid[i] == 0) {<br />&#160;&#160;all_valid = 0; <br />&#160;&#160;break;<br />&#160;}<br />}<br />if (all_valid) <span class="Highlight">...</span></p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </li>
+                            <li>
+                                <p class="Bold">return</p>
+                                <div>
+                                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                                        <tbody>
+                                            <tr>
+                                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                                    <p class="Table">
+                                                        <img src="../../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                                    </p>
+                                                </td>
+                                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                                    <p class="TableSymbolHead">Example</p>
+                                                    <p class="TableSourceCode">double sqr(double x) {<br />&#160;return(x * x);<br />}</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="SectionSub"><a targets="TOGExpressions" href="javascript:void(0)" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="TOGExpressions"><img class="MCToggler_Image_Icon" src="../../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Expressions</a>
+                    </h2>
+                    <div style="display: none;" data-mc-target-name="TOGExpressions">
+                        <p>In evaluating expressions containing LONG, DWORD, INT, WORD, CHAR and BYTE, an implicit type conversion is performed. The following rules apply:</p>
+                        <ul>
+                            <li>8 bit variables are first converted to 32 bit (CHAR -&gt; LONG, BYTE -&gt; DWORD)</li>
+                            <li>16 bit variables are first converted to 32 bit (INT -&gt; LONG, WORD -&gt; DWORD)</li>
+                        </ul>
+                        <p>If an expression contains a 64 bit operand, the other operand can be converted to 64 bit (if necessary).</p>
+                        <div>
+                            <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                                <col class="TableStyle-vTableSymbol-Column-Column1" />
+                                <col class="TableStyle-vTableSymbol-Column-Column2" />
+                                <tbody>
+                                    <tr>
+                                        <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                            <p class="Table">
+                                                <img src="../../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                            </p>
+                                        </td>
+                                        <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                            <p class="TableSymbolHead">Example "?"</p>
+                                            <p class="TableSourceCode">min = x &lt; y ? x : y;</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>The float type can be implicitly converted to an integer type. This conversion is saturating, i.e. values that lie outside the integer range are mapped to the largest or smallest possible value. An exception to this rule is the conversion to integers with less than 32 bits. For these types, a saturating conversion is first carried out to the corresponding signed 32-bit wide type and the resulting value is then truncated.</p>
+                        <div>
+                            <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                                <col class="TableStyle-vTableSymbol-Column-Column1" />
+                                <col class="TableStyle-vTableSymbol-Column-Column2" />
+                                <tbody>
+                                    <tr>
+                                        <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                            <p class="Table">
+                                                <img src="../../../../Resources/vImages/vInfo.png" style="width: 48px;height: 45px;" title="Note" alt="Note" />
+                                            </p>
+                                        </td>
+                                        <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                            <p class="TableSymbolHead">Note</p>
+                                            <p class="Table">In versions prior to <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANalyzer,Targets.CANoe-SE-Family">17.3</MadCap:conditionalText>, implicit conversions that were applied at compile time (e.g. when initializing a variable or constant) were not saturated.</p>
+                                            <p class="Table">If such conversions exist in the CAPL code, the CAPL compiler issues a warning as of version <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANalyzer,Targets.CANoe-SE-Family">17.3</MadCap:conditionalText>.</p>
+                                            <p class="Table">This only affects integer values that have been initialized with a float constant.</p>
+                                            <p class="Table">The changed conversion (from version <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANalyzer,Targets.CANoe-SE-Family">17.3</MadCap:conditionalText>) may have an effect on the executed code because the value in the variable or constant is then different. However, this is only rarely the case on the Windows operating system.</p>
+                                            <p class="Table">An example would be the following initialization:</p>
+                                            <p class="TableSourceCodeIndent">const dword d = 10000000000000000000.0;</p>
+                                            <p class="Table">With the old behavior you get <span class="SourceCode">0</span> as the result (under Windows); with the new behavior you get <span class="SourceCode">4294967295</span>.</p>
+                                            <p class="Table">To restore the old behavior, you can set the switch <span class="SourceCode">LegacyNumericInitializations</span> in the file <span class="SourceCode">&lt;configuration directory&gt;/Exec64/ConfigFileSwitches.cfg.ini</span> to <span class="SourceCode">1</span>. This file is created when a configuration is saved from version <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANalyzer,Targets.CANoe-SE-Family">17.3</MadCap:conditionalText>.</p>
+                                            <p class="Table">Only set the switch to <span class="SourceCode">1</span> if you have an old CAPL program which now issues a warning <span class="bold">and</span> you cannot change the CAPL program (i.e. the old (actually incorrect) value is used).</p>
+                                            <p class="Table">We recommend adapting the CAPL program, i.e. simply using an integer constant instead of the float constant.</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="SectionSub"><a targets="TOGOperators" href="javascript:void(0)" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="TOGOperators"><img class="MCToggler_Image_Icon" src="../../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Operators</a>
+                    </h2>
+                    <div style="display: none;" data-mc-target-name="TOGOperators">
+                        <p><a name="Operators" id="Operators"></a>In CAPL, the same arithmetic, logical and bitwise operators are provided to you ( +,*, +=, *=, ||, ++, etc.) as in C.</p>
+                        <p>For a bitwise comparison the <span class="bold">^</span> operator is available.</p>
+                        <p>At equality the bit will be set to 0, otherwise to 1.</p>
+                        <div>
+                            <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                                <col class="TableStyle-vTableSymbol-Column-Column1" />
+                                <col class="TableStyle-vTableSymbol-Column-Column2" />
+                                <tbody>
+                                    <tr>
+                                        <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                            <p class="Table">
+                                                <img src="../../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                            </p>
+                                        </td>
+                                        <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                            <p class="TableSymbolHead">Example</p>
+                                            <p class="TableSourceCode">Result = (value1 ^ value2)</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>If you want to negate all bits, you have to use the <span class="bold">~</span> operator additionally.</p>
+                        <p>With this all bits with value 1 will be set to 0 an vice versa.</p>
+                        <div>
+                            <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                                <col class="TableStyle-vTableSymbol-Column-Column1" />
+                                <col class="TableStyle-vTableSymbol-Column-Column2" />
+                                <tbody>
+                                    <tr>
+                                        <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                            <p class="Table">
+                                                <img src="../../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                            </p>
+                                        </td>
+                                        <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                            <p class="TableSymbolHead">Example</p>
+                                            <p class="TableSourceCode">Result = ~(value1 ^ value2)</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>You can perform a type conversion explicitly with the <span class="bold">Cast</span> operator (as in C). A <span class="bold">Cast </span>with entry of a message denotation can be used to assign different identifiers to messages.</p>
+                        <div>
+                            <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                                <col class="TableStyle-vTableSymbol-Column-Column1" />
+                                <col class="TableStyle-vTableSymbol-Column-Column2" />
+                                <tbody>
+                                    <tr>
+                                        <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                            <p class="Table">
+                                                <img src="../../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                            </p>
+                                        </td>
+                                        <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                            <p class="TableSymbolHead">Example for Message-Denotation</p>
+                                            <p class="TableSourceCode">on message 0x100</p>
+                                            <p class="TableSourceCode">{<br /> &#160;&#160;message 0x101 msg;<br /> &#160;&#160;msg = (message 0x101) this;<br /> &#160;&#160;output (msg);&#160;&#160;&#160;<span class="Highlight">//message with id 0x101 will send to bus</span><br />}</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div>
+                            <h2>Logical Operators</h2>
+                            <table style="caption-side: top;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                                <col />
+                                <col />
+                                <thead>
+                                    <tr>
+                                        <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                            <p class="TableHead">Symbol</p>
+                                        </th>
+                                        <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                            <p class="TableHead">Meaning</p>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tr valign="top">
+                                    <td valign="middle" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">==</p>
+                                    </td>
+                                    <td valign="middle" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">equal</p>
+                                    </td>
+                                </tr>
+                                <tr valign="top">
+                                    <td valign="middle" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">!=</p>
+                                    </td>
+                                    <td valign="middle" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">not equal</p>
+                                    </td>
+                                </tr>
+                                <tr valign="top">
+                                    <td valign="middle" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">&lt;</p>
+                                    </td>
+                                    <td valign="middle" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">less than</p>
+                                    </td>
+                                </tr>
+                                <tr valign="top">
+                                    <td valign="middle" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">&lt;=</p>
+                                    </td>
+                                    <td valign="middle" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">less than or equal</p>
+                                    </td>
+                                </tr>
+                                <tr valign="top">
+                                    <td valign="middle" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">&gt;</p>
+                                    </td>
+                                    <td valign="middle" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">greater than</p>
+                                    </td>
+                                </tr>
+                                <tr valign="top">
+                                    <td valign="middle" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">&gt;=</p>
+                                    </td>
+                                    <td valign="middle" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">greater than or equal</p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div>
+                            <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                                <col class="TableStyle-vTableSymbol-Column-Column1" />
+                                <col class="TableStyle-vTableSymbol-Column-Column2" />
+                                <tbody>
+                                    <tr>
+                                        <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                            <p class="Table">
+                                                <img src="../../../../Resources/vImages/vInfo.png" style="width: 48px;height: 45px;" title="Note" alt="Note" />
+                                            </p>
+                                        </td>
+                                        <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                            <p class="TableSymbolHead">Note to Comparison</p>
+                                            <p class="Table">A <span class="bold">signed comparison</span> is executed if one operand is of data type signed and one of data type unsigned.</p>
+                                            <p class="Table">An <span class="bold">unsigned comparison</span> is only executed if both operands are of data type unsigned.</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <p class="LinkList"><a href="../../../CAPLFunctions/Other/CAPLFunctionsWriteFormatExpressions.htm" class="LinkList MCXref xref xrefLinkList">Write Format Expressions</a>
+                </p>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="FooterWhite">
+                <table class="FooterWhite" style="border-collapse: collapse;margin-left: auto;margin-right: auto;">
+                    <col style="width: 70px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col style="width: 16px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="buttons popup-container clearfix topicToolbarProxy topicToolbarProxyFooter _Skins_HTML5TopicToolbar mc-component nocontent">
+                                    <div class="button-group-container-left">
+                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo"><a href="../../HowToUseOnlineHelp.htm" title="Tips for using the help" alt="Tips for using the help"><img src="../../../../Resources/vImages/vBackstage/vHelpInfo.png" /></a>
+                                </p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo" style="text-align: right;"><span class="mc-variable Vector.BuildTime variable">2024-04-8T20:56:42</span>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <table style="width: 100%;border-collapse: separate;border-spacing: 3px 0px;margin-left: auto;margin-right: auto;caption-side: top;">
+                <col />
+                <col />
+                <col />
+                <col data-mc-conditions="BuildProcess.HTML5Link" />
+                <tbody>
+                    <tr>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;">
+                            <p class="vec_Footer">©&#160;Vector Informatik GmbH</p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;text-align: right;">
+                            <p class="vec_FooterBold">
+                                <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE&#160;Product Families</MadCap:conditionalText> Version <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.VectorTestUnitRunner">18</MadCap:conditionalText></p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="../../ContactCopyrightLicense.htm" class="vec_Footer MCXref xref xrefvec_Footer">Contact/Copyright/License</a>
+                            </p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="https://www.vector.com/int/en/company/get-info/privacy-policy/" target="_blank" class="vec_Footer">Data Privacy Notice</a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

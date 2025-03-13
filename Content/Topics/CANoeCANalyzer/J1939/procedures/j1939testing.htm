@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="topic" data-mc-search-type="Stem" data-mc-help-system-file-name="CANoeDEFamily.xml" data-mc-path-to-help-system="../../../../../" data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../Skins/Favicons/favicon-16x16.png" /><title>Testing in a J1939 Network</title>
+        <link href="../../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Resources/Stylesheets/vTableMasterPageHeader.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../../Resources/Stylesheets/vStylesheet.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../../Resources/Stylesheets/vTableSymbol.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../../Resources/Stylesheets/vTable.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapGlobal.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapDom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapUtilities.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapXhr.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTextEffects.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSlideshow.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMessageBus.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMessageBus.CrossFrame.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapDefault.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMediaQueries.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapAccessibility.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapHelpSystem.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapAliasFile.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopicFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapFeedbackHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSkinHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.Breadcrumbs.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.MiniToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.SideMenu.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapIndex.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapGlossary.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapParser.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSearch.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapNavigateTopics.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapLms.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapELearning.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopic.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMicroContentComponent.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSearchHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopicElements.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTriPane.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/jscript" src="../../../../Resources/vScripts/SyntaxHighlighting.js">
+        </script>
+        <script type="text/jscript" src="../../../../Resources/vScripts/TabSwitch.js">
+        </script>
+        <script type="text/javascript" src="../../../../Resources/vScripts/Vector.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../../../CANoeDEFamily.htm#Topics/CANoeCANalyzer/J1939/procedures/j1939testing.htm">Open topic with navigation</a>
+        </p>
+        <div class="Body">
+            <div role="main" id="mc-main-content">
+                <p class="StructurePath"><a href="../startpageJ1939.htm" class="StructurePath">J1939</a> » <span class="mc-variable System.Title variable">Testing in a J1939 Network</span></p>
+                <h1><span class="mc-variable System.Title variable">Testing in a J1939 Network</span>
+                </h1>
+                <p class="MenuPath">&#160;</p>
+                <p class="ToolAvailability" data-mc-conditions="BuildProcess.ToolAvailability"><a href="../../../Shared/FeatureAvailability.htm" class="red" title="Feature availabilty for your product">Valid&#160;for</a>:&#160;&#160;CANoe&#160;DE<a name="aanchor9546"></a><MadCap:concept term="SFCANoeDE" /></p>
+                <p class="AutoSearchFilterConcepts"><a name="aanchor9547"></a>
+                    <MadCap:concept term="SFCore" />
+                </p>
+                <p><a name="kanchor2917"></a>
+                </p>
+                <div>
+                    <h2 class="SectionMain">Introduction</h2>
+                    <p>Tests for J1939 ECUs are set up according to the same principle as for all other bus systems or protocols:</p>
+                    <ol>
+                        <li value="1">A bus environment is created in which the Device Under Test (DUT) can operate.  For example, some devices rely on other devices to provide them with certain messages. For example, an ABS device needs information about the speeds of all wheels.</li>
+                        <li value="2">The tester stimulates the DUT by placing certain messages on the bus.</li>
+                        <li value="3">Optionally, the tester can also initiate electrical voltages or currents representing sensors directly connected to DUT. For this, however, your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> must be expanded by a VT System.</li>
+                        <li value="4">In the next step the tester checks the reactions of the DUT. The reaction of the DUT is composed of data that the DUT sends in the form of CAN frames. Optionally, you can also check the voltage and/or current at DUT outputs. For this purpose your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> must be expanded by a VT System (just like in the previous step).</li>
+                        <li value="5">If the DUT response is as expected, the test step can be marked as successful. Otherwise, the test step is marked as faulty.</li>
+                    </ol>
+                </div>
+                <div>
+                    <h2 class="SectionMain">Possible Solutions</h2>
+                    <p>The following explains how you can implement the points listed in the introduction in concrete terms.</p>
+                    <h3 class="SectionSub">Simulating a J1939 ECU for the Necessary Bus Environment</h3>
+                    <p>Devices that are necessary for stimulating the DUT can be simulated by a simulation node in your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText>.</p>
+                    <p>To do this, create a network node in the database for the device. Assign the modeling library <span class="bold">J1939_IL.dll</span> to this node and configure its transmission behavior by assigning messages.</p>
+                    <p>Now open the configuration dialog of the simulation node and assign the network node from the database to it.</p>
+                    <p>This already defines the basis - the simulated node sends the configured cyclic messages and you only have to make sure that messages are filled with correct data.</p>
+                    <p>You can do this either by setting the signal values or by defining the payload of a message directly. Setting the signal values can be done with the <span class="SourceCode">J1939ILSetSignal</span> function in a CAPL program, a Signal Generator, in the Symbol Explorer or via a self-configured panel. The payload can only be set in a CAPL program with the help of the <span class="SourceCode">J1939ILSetMsgRawData</span> function.</p>
+                    <p>To send a message spontaneously to the DUT during a test, you can use the CAPL functions <span class="SourceCode">output</span> and <span class="SourceCode">J1939ILSetMsgEvent</span>. If you want to influence the parameters of the J1939 transport protocol or the components of the J1939-NAME, you can use the CAPL function <span class="SourceCode">J1939ILSetNodeProperty</span>. You can use the functions <span class="SourceCode">J1939ILActivateDTC</span>, <span class="SourceCode">J1939ILAddDTC</span> and further functions from the DTC Support group to fill diagnostic messages with corresponding DTCs.</p>
+                    <p>For more information on how to include the J1939 IL for a test, see the <a href="../j1939IL/j1939ILOverview.htm" class="MCXref xref">Interaction Layer (J1939)</a> page.</p>
+                    <h3 class="SectionSub">Stimulating the Physical Inputs of the DUT</h3>
+                    <p>To connect physical inputs of the DUT, a <span class="Product">VT System</span> must be connected. You only have to set system variables in your test and the connected <span class="Product">VT System</span> converts the value of the variables into the voltage or current.</p>
+                    <h3 class="SectionSub">Checking the Behavior of the DUT</h3>
+                    <p>There are several options available when checking the response:</p>
+                    <p>The easiest way to control the reaction of the DUT is "manually": Either in the Trace Window, Graphics Window or Data Window. Or you prepare raw data with the help of a simple CAPL program and output results in a panel you compiled. This is fast, but error-prone.</p>
+                    <p>To check the reactions of the DUT automatically, you can create a test module in your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> or execute a test unit created with it. In the test module or test unit you have, among other things, special CAPL functions at your disposal with which you can wait for a specific event or for a combination of several events. These include both the general functions such as <span class="SourceCode"><a href="../../../CAPLFunctions/Test/Functions/CAPLfunctionTestWaitForSignalMatch.htm"><span class="SourceCode">TestWaitForSignalMatch</span></a></span> or <span class="SourceCode"><a href="../../../CAPLFunctions/Test/Functions/CAPLfunctionTestWaitForMessage.htm">TestWaitForMessage</a></span> and the J1939-specific functions such as <span class="SourceCode"><a href="../../../CAPLFunctions/Test/Functions/CAPLfunctionTestWaitForJ1939PG.htm">TestWaitForJ1939PG</a></span> and <span class="SourceCode"><a href="../../../CAPLFunctions/Test/Functions/CAPLfunctionTestWaitForJ1939DTC.htm">TestWaitForJ1939DTC</a></span>.</p>
+                    <p>When the called TestWaitForJ1939xxx function returns, you can use the <span class="SourceCode"><a href="../../../CAPLFunctions/Test/Functions/CAPLfunctionTestGetWaitJ1939PGData.htm">TestGetWaitJ1939PGData</a></span> function to get the data of the parameter group that triggered the wait condition and then analyze it.</p>
+                    <p>In addition to such test functions, your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> also provides you with checks that, once started, continuously check whether the DUT complies with a certain aspect of the defined transmission model or J1939 protocol. Several checks can check their respective conditions in parallel.</p>
+                    <h3 class="SectionSub">General Checks</h3>
+                    <p>The following general checks also provide J1939 support:</p>
+                    <ul>
+                        <li><a href="../../../TestCommands/CheckDescriptions/CDCycleTime.htm">Cycle Time Checks</a>
+                        </li>
+                        <li><a href="../../../TestCommands/CheckDescriptions/CDDLC.htm">DLC Check</a>
+                        </li>
+                        <li><a href="../../../TestCommands/CheckDescriptions/CDFallback.htm">Fallback</a>
+                        </li>
+                        <li><a href="../../../TestCommands/CheckDescriptions/CDMessageDistance.htm">Message Distance</a>
+                        </li>
+                        <li><a href="../../../TestCommands/CheckDescriptions/CDNodeActive.htm">Node Active</a>
+                        </li>
+                        <li><a href="../../../TestCommands/CheckDescriptions/CDOccurrenceCount.htm">Occurrence Count</a>
+                        </li>
+                        <li><a href="../../../TestCommands/CheckDescriptions/CDOccurrenceDistance.htm">Occurrence Distance</a>
+                        </li>
+                        <li><a href="../../../TestCommands/CheckDescriptions/CDOccurrenceOfMessages.htm">Occurrence Of Messages</a>
+                        </li>
+                    </ul>
+                    <h2 class="SectionSub">Special Checks</h2>
+                    <p>In addition, there are special checks that check J1939-specific regulations (such as transport protocols):</p>
+                    <ul>
+                        <li><a href="../../../TestCommands/CheckDescriptions/CDJ1939AddressClaiming.htm">J1939 Address Claiming</a>
+                        </li>
+                        <li><a href="../../../TestCommands/CheckDescriptions/CDJ1939BAM.htm">J1939 BAM</a>
+                        </li>
+                        <li><a href="../../../TestCommands/CheckDescriptions/CDJ1939RequestCheck.htm">J1939 Request Check</a>
+                        </li>
+                        <li><a href="../../../TestCommands/CheckDescriptions/CDJ1939Request2Check.htm">J1939 Request2 Check</a>
+                        </li>
+                        <li><a href="../../../TestCommands/CheckDescriptions/CDJ1939RTSCTS.htm">J1939 RTS/CTS</a>
+                        </li>
+                        <li><a href="../../../TestCommands/CheckDescriptions/CDJ193976FunctionalSafetyCheck.htm">J1939-76 Functional Safety Check</a>
+                        </li>
+                    </ul>
+                    <div>
+                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                            <col class="TableStyle-vTableSymbol-Column-Column1" />
+                            <col class="TableStyle-vTableSymbol-Column-Column2" />
+                            <tbody>
+                                <tr>
+                                    <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                        <p class="Table">
+                                            <img src="../../../../Resources/vImages/vInfo.png" style="width: 48px;height: 45px;" title="Note" alt="Note" />
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                        <p class="TableSymbolHead">Note</p>
+                                        <p class="Table">All the above mentioned checks can be used both in CAPL and in the table editor of <span class="Product">vTESTstudio</span>).</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <h3 class="SectionSub">Test Commands</h3>
+                    <p>In addition to checks, there is another type of test, test commands.</p>
+                    <p>Test commands are test modules that combine a stimulation of the DUT and a test of the DUT response to the stimulation.</p>
+                    <p>The main difference between checks and test commands:</p>
+                    <p>While checks run in the background, test commands allow you to provoke a specific behavior and check that behavior at the same time.</p>
+                    <p>The following test commands are available:</p>
+                    <table style="mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                    <p class="TableHead">Name </p>
+                                </th>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                    <p class="TableHead">Task</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">J1939 Request </p>
+                                    <p class="Table">J1939 Request2 </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Check whether a J1939 request is answered correctly.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">J1939 Address Claiming Conflict</p>
+                                    <p class="Table">J1939 Commanded Address </p>
+                                    <p class="Table">J1939 Request  Address Claiming </p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">Check if address claiming is supported correctly.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="Table">J1939 Wait For DTC</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                    <p class="Table">Wait until a DM message with defined SPNs is received.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div>
+                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                            <col class="TableStyle-vTableSymbol-Column-Column1" />
+                            <col class="TableStyle-vTableSymbol-Column-Column2" />
+                            <tbody>
+                                <tr>
+                                    <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                        <p class="Table">
+                                            <img src="../../../../Resources/vImages/vInfo.png" style="width: 48px;height: 45px;" title="Note" alt="Note" />
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                        <p class="TableSymbolHead">Note</p>
+                                        <p class="Table">Test commands are only available in the table editor in <span class="Product">vTESTstudio</span>.</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                            <col class="TableStyle-vTableSymbol-Column-Column1" />
+                            <col class="TableStyle-vTableSymbol-Column-Column2" />
+                            <tbody>
+                                <tr>
+                                    <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                        <p class="Table">
+                                            <img src="../../../../Resources/vImages/vInfo.png" style="width: 48px;height: 45px;" title="Note" alt="Note" />
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                        <p class="TableSymbolHead">Note</p>
+                                        <p class="Table">The <a href="../j1939tsl/j1939tslOverview.htm">J1939 Test Service Library</a> is no longer being developed and should therefore no longer be used.</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <h2 class="SectionSub">Manipulation of Transport Protocols</h2>
+                        <p>You have the option of intervening in the flow of <a href="TestingTransportProtocols.htm">Transport Protocols</a>. With a series of <a href="../../../CAPLFunctions/J1939/J1939InteractionLayer/CAPLfunctionsJ1939ILOverview.htm#FaultInjectionTP">CAPL funktionen</a>, you can specifically block the transmission of transport protocol messages or delay them as required. With the functions for blocking and delaying individual messages, you can specifically test simple scenarios. However, if the test scenario becomes more complex, these functions are no longer sufficient. Your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> therefore offers you the option of freezing transport protocols and continuing execution in order to inject your own manipulated TP messages in a targeted manner. The functions <a href="../../../CAPLFunctions/J1939/J1939InteractionLayer/Functions/CAPLfunctionJ1939ILFreezeTp.htm" class="SourceCode">J1939ILFreezeTp</a>, <a href="../../../CAPLFunctions/J1939/J1939InteractionLayer/Functions/CAPLfunctionJ1939ILUnfreezeTp.htm" class="SourceCode">J1939ILUnfreezeTp</a> and <a href="../../../CAPLFunctions/J1939/J1939InteractionLayer/Functions/CAPLfunctionJ1939ILKillTp.htm" class="SourceCode">J1939KillTp</a> are available for this purpose.</p>
+                        <div>
+                            <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                                <col class="TableStyle-vTableSymbol-Column-Column1" />
+                                <col class="TableStyle-vTableSymbol-Column-Column2" />
+                                <tbody>
+                                    <tr>
+                                        <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                            <p class="Table">
+                                                <img src="../../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                            </p>
+                                        </td>
+                                        <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                            <p class="TableSymbolHead">Example</p>
+                                            <p class="Table">The <a href="../../../SampConf/J1939/CANoe/MoreExamples/TransportProtocol/TransportProtocolCN.htm">Transport Protocol (J1939)</a> sample configuration demonstrates how the J1939 transport protocols are used in <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText>.</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <p class="LinkList">&#160;</p>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="FooterWhite">
+                <table class="FooterWhite" style="border-collapse: collapse;margin-left: auto;margin-right: auto;">
+                    <col style="width: 70px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col style="width: 16px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="buttons popup-container clearfix topicToolbarProxy topicToolbarProxyFooter _Skins_HTML5TopicToolbar mc-component nocontent">
+                                    <div class="button-group-container-left">
+                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo"><a href="../../../Shared/HowToUseOnlineHelp.htm" title="Tips for using the help" alt="Tips for using the help"><img src="../../../../Resources/vImages/vBackstage/vHelpInfo.png" /></a>
+                                </p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo" style="text-align: right;"><span class="mc-variable Vector.BuildTime variable">2024-04-8T20:56:42</span>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <table style="width: 100%;border-collapse: separate;border-spacing: 3px 0px;margin-left: auto;margin-right: auto;caption-side: top;">
+                <col />
+                <col />
+                <col />
+                <col data-mc-conditions="BuildProcess.HTML5Link" />
+                <tbody>
+                    <tr>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;">
+                            <p class="vec_Footer">©&#160;Vector Informatik GmbH</p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;text-align: right;">
+                            <p class="vec_FooterBold">
+                                <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE&#160;Product Families</MadCap:conditionalText> Version <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.VectorTestUnitRunner">18</MadCap:conditionalText></p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="../../../Shared/ContactCopyrightLicense.htm" class="vec_Footer MCXref xref xrefvec_Footer">Contact/Copyright/License</a>
+                            </p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="https://www.vector.com/int/en/company/get-info/privacy-policy/" target="_blank" class="vec_Footer">Data Privacy Notice</a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

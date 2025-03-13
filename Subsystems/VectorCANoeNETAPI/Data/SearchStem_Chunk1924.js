@@ -1,0 +1,1 @@
+define({"thconfiguration":{"beginauthenticateasserverwithconfiguration":[6423,6431,6447,6450],},"the":{}});

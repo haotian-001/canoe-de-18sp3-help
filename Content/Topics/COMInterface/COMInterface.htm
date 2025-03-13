@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="CANoeDEFamily.xml" data-mc-path-to-help-system="../../../" data-mc-toc-path="Programming Interfaces (APIs)" data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../Skins/Favicons/favicon-16x16.png" /><title>COM Interface</title>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Resources/Stylesheets/vTableMasterPageHeader.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../Resources/Stylesheets/vStylesheet.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.needs-pie
+{
+	behavior: url('../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../Resources/Stylesheets/vTableLight.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../Resources/Stylesheets/vTable.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../Resources/Stylesheets/vTableSymbol.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapGlobal.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapDom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapUtilities.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapXhr.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapTextEffects.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapSlideshow.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapMessageBus.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapMessageBus.CrossFrame.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapDefault.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapMediaQueries.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAccessibility.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapHelpSystem.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAliasFile.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapTopicFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapFeedbackHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapSkinHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapToc.Breadcrumbs.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapToc.MiniToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapToc.SideMenu.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapIndex.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapGlossary.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapParser.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapSearch.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapNavigateTopics.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapLms.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapELearning.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapTopic.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapMicroContentComponent.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapSearchHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapTopicElements.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapTriPane.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/jscript" src="../../Resources/vScripts/SyntaxHighlighting.js">
+        </script>
+        <script type="text/jscript" src="../../Resources/vScripts/TabSwitch.js">
+        </script>
+        <script type="text/javascript" src="../../Resources/vScripts/Vector.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../CANoeDEFamily.htm#Topics/COMInterface/COMInterface.htm">Open topic with navigation</a>
+        </p>
+        <div class="Body">
+            <div role="main" id="mc-main-content">
+                <div>
+                    <p class="AutoSearchFilterConcepts"><a name="aanchor3147"></a>
+                        <MadCap:concept term="SFCOMInterface" />
+                    </p>
+                    <p class="IndexConcept"><a name="kanchor940"></a>
+                    </p>
+                    <p class="StructurePath"><a href="../CANoeCANalyzer/CANoeDEFamily.htm" class="StructurePath" data-mc-conditions="Targets.CANoe-DE-Family"><img src="../../Resources/vImages/vToolIcons/CANoeDEFamily_Icon16_15x15.png" alt="" style="width: 15;height: 15;" />&#160;CANoe&#160;DE&#160;Product&#160;Families</a> » <a href="#" class="StructurePath MCXref xref xrefStructurePath selected">COM Interface</a></p>
+                    <h1>Technical Reference:COM&#160;Interface</h1>
+                    <p class="MenuPath">&#160;</p>
+                    <p class="ToolAvailability" data-mc-conditions="BuildProcess.ToolAvailability"><a href="../Shared/FeatureAvailability.htm" class="red" title="Feature availabilty for your product">Valid&#160;for</a>:&#160;&#160;CANoe&#160;DE<a name="aanchor3148"></a><MadCap:concept term="SFCANoeDE" />&#160;&#160;•&#160;&#160;CANoe:lite&#160;DE<a name="aanchor3149"></a><MadCap:concept term="SFCANoeLiteDE" />&#160;&#160;•&#160;&#160;CANoe4SW&#160;DE<a name="aanchor3150"></a><MadCap:concept term="SFCANoe4SWDE" />&#160;&#160;•&#160;&#160;CANoe4SW:lite&#160;DE<a name="aanchor3151"></a><MadCap:concept term="SFCANoe4SWLiteDE" /></p>
+                </div>
+                <div>
+                    <table style="margin-left: 0;margin-right: auto;width: 100%;">
+                        <col />
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <p class="Table">With the help of the COM&#160;Interface you can control your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> from external programs.</p>
+                                    <p class="Table">Besides applications, scripts also come into consideration as external programs.</p>
+                                    <p class="Table">Certainly the most well-known script and programming languages available to you are Python, PowerShell, C# and Visual Basic.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <hr class="Startpage" width="100%" size="0" align="center" />
+                <div>
+                    <table style="border-left-style: none;border-left-width: 0px;border-left-color: #ffffff;border-right-style: none;border-right-width: 0px;border-right-color: #ffffff;border-top-style: none;border-top-width: 0px;border-top-color: #ffffff;border-bottom-style: none;border-bottom-width: 0px;border-bottom-color: #ffffff;margin-left: 0;margin-right: auto;">
+                        <col style="width: 33%;" />
+                        <col style="width: 33%;" />
+                        <col style="width: 33%;" />
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <table style="mc-table-style: url('../../Resources/Stylesheets/vTable.css');margin-left: 0;margin-right: auto;width: 100%;" class="TableStyle_vTable" cellspacing="0">
+                                            <col class="TableStyle-vTable-Column-Column1" />
+                                            <thead>
+                                                <tr class="TableStyle-vTable-Head-Header1">
+                                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                                        <p class="TableHead">Quick Access</p>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="TableStyle-vTable-Body-Body1">
+                                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd" style="background-color: #b70032;">
+                                                        <ul>
+                                                            <li class="ComfortWhite"><a href="COMObjectHierarchy.htm" class="ListWhite">Object Hierarchy</a>
+                                                            </li>
+                                                            <li class="ComfortWhite"><a href="Programming/COMProgramming.htm" class="ListWhite MCXref xref xrefListWhite">COM Programming</a>
+                                                            </li>
+                                                            <li class="ComfortWhite"><a href="../SampConf/Programming/SampConfsProgramming.htm" class="ListWhite MCXref xref xrefListWhite">Sample Configurations Programming</a>
+                                                            </li>
+                                                            <li class="ComfortWhite"><a href="Samples/COMSamples.htm" class="ListWhite">COM Samples</a>
+                                                            </li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div>
+                                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                                            <col class="TableStyle-vTableSymbol-Column-Column1" />
+                                            <col class="TableStyle-vTableSymbol-Column-Column2" />
+                                            <tbody>
+                                                <tr>
+                                                    <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                                        <p class="Table">
+                                                            <img src="../../Resources/vImages/vNotice_48x45.png" style="width: 48;height: 45;" title="Note" alt="Note" />
+                                                        </p>
+                                                    </td>
+                                                    <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                                        <p class="TableSymbolHead">Notice!</p>
+                                                        <ul>
+                                                            <li>
+                                                                <p class="Table">Please note that you can integrate this product as a subsystem into higher-level systems by using the product's automation interface.</p>
+                                                                <p class="Table">In case you use this automation interface, Vector Informatik GmbH hereby declares that Vector's warranty shall be limited to the correction of defects, and Vector Informatik GmbH hereby expressly disclaims any liability over and above the refunding of the price paid for this software, since Vector does not have any influence on the implementations of the higher-level system, which may be defective.</p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="Table">When starting your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> by use of a script (or similar) the disclaimer might not be displayed.</p>
+                                                                <p class="Table">To activate the display of the disclaimer in self-written scripts you can use the following sample code.</p>
+                                                            </li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div>
+                                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                                            <col class="TableStyle-vTableSymbol-Column-Column1" />
+                                            <col class="TableStyle-vTableSymbol-Column-Column2" />
+                                            <tbody>
+                                                <tr>
+                                                    <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                                        <p class="Table">
+                                                            <img src="../../Resources/vImages/vInfo.png" style="width: 48px;height: 45px;" title="Note" alt="Note" />
+                                                        </p>
+                                                    </td>
+                                                    <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                                        <p class="TableSymbolHead"><a name="ProductCOMName" id="ProductCOMName"></a>Product Name in Sample Code</p>
+                                                        <p class="Table">When the product name is referenced in sample code, e.g.</p>
+                                                        <p class="TableSourceCodeIndent">Set App = CreateObject( "&lt;product COM name&gt;.Application")</p>
+                                                        <p class="Table">you have to replace <span class="SourceCode">&lt;product COM name&gt;</span> by the appropriate application Name, see table:</p>
+                                                        <table style="width: 100%;mc-table-style: url('../../Resources/Stylesheets/vTableLight.css');" class="TableStyle-vTableLight" cellspacing="0">
+                                                            <col class="TableStyle-vTableLight-Column-Column1" />
+                                                            <col class="TableStyle-vTableLight-Column-Column1" />
+                                                            <tbody>
+                                                                <tr class="TableStyle-vTableLight-Body-Body1">
+                                                                    <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                                        <p class="TableBold">Product</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                                        <p class="TableBold"><span class="SourceCode">&lt;product COM name&gt;</span>
+                                                                        </p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-vTableLight-Body-Body1">
+                                                                    <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                                        <p class="Table"><span class="Product">CANalyzer</span>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                                        <p class="TableSyntax">CANalyzer</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-vTableLight-Body-Body1">
+                                                                    <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                                        <p class="Table"><span class="Product">CANoe&#160;DE</span>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                                        <p class="TableSyntax">CANoe</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-vTableLight-Body-Body1">
+                                                                    <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                                        <p class="Table"><span class="Product">CANoe:lite&#160;DE</span>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                                        <p class="TableSyntax">CANoe</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-vTableLight-Body-Body1">
+                                                                    <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                                        <p class="Table"><span class="Product">CANoe4SW&#160;DE</span>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                                        <p class="TableSyntax">CANoe4SW</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-vTableLight-Body-Body1">
+                                                                    <td class="TableStyle-vTableLight-BodyB-Column1-Body1">
+                                                                        <p class="Table"><span class="Product">CANoe4SW:lite&#160;DE</span>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-vTableLight-BodyA-Column1-Body1">
+                                                                        <p class="TableSyntax">CANoe4SW</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <table style="mc-table-style: url('../../Resources/Stylesheets/vTable.css');margin-left: 0;margin-right: auto;width: 100%;" class="TableStyle_vTable" cellspacing="0">
+                                            <col class="TableStyle-vTable-Column-Column1" />
+                                            <thead>
+                                                <tr class="TableStyle-vTable-Head-Header1">
+                                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                                        <p class="TableHead">Configuration</p>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="TableStyle-vTable-Body-Body1">
+                                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                                        <ul>
+                                                            <li><a href="COMSettings.htm">Computer Configuration</a>
+                                                            </li>
+                                                            <li><a href="COMDCOMSettings.htm">Settings for Distributed COM</a>
+                                                            </li>
+                                                            <li><a href="Samples/COMSamples.htm">COM Samples</a>
+                                                            </li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div>
+                                        <table style="mc-table-style: url('../../Resources/Stylesheets/vTable.css');margin-left: 0;margin-right: auto;width: 100%;" class="TableStyle_vTable" cellspacing="0">
+                                            <col class="TableStyle-vTable-Column-Column1" />
+                                            <thead>
+                                                <tr class="TableStyle-vTable-Head-Header1">
+                                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                                        <p class="TableHead">Functions and Control</p>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="TableStyle-vTable-Body-Body1">
+                                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                                        <ul>
+                                                            <li><a href="COMObjectHierarchy.htm">Object Hierarchy</a>
+                                                            </li>
+                                                            <li><a href="Programming/COMProgrammingTips.htm#BMCAPLObjectFiles">CAPL Object Files</a>
+                                                            </li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div>
+                                        <table style="mc-table-style: url('../../Resources/Stylesheets/vTable.css');margin-left: 0;margin-right: auto;width: 100%;" class="TableStyle_vTable" cellspacing="0">
+                                            <col class="TableStyle-vTable-Column-Column1" />
+                                            <thead>
+                                                <tr class="TableStyle-vTable-Head-Header1">
+                                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                                        <p class="TableHead"><a href="Programming/COMProgramming.htm" class="red MCXref xref xrefred">COM Programming</a>
+                                                        </p>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="TableStyle-vTable-Body-Body1">
+                                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                                        <ul>
+                                                            <li><a href="Programming/COMProgrammingCpp.htm">Programming with C++</a>
+                                                            </li>
+                                                            <li><a href="Programming/COMProgrammingRAD.htm">Programming with RAD Tools</a>
+                                                                <br />(<span class="bold">Rapid Application Development</span>)</li>
+                                                            <li><a href="Programming/COMProgrammingScripts.htm">Programming with Scripts</a>
+                                                            </li>
+                                                            <li><a href="Programming/COMProgrammingVisualBasicSample.htm">Visual Basic Example</a>
+                                                            </li>
+                                                            <li><a href="../SampConf/Programming/SampConfsProgramming.htm" class="MCXref xref">Sample Configurations Programming</a>
+                                                            </li>
+                                                            <li><a href="javascript:startDemoLoader('AN-AND-1-117_CANalyzer_CANoe_as_a_COM_server.pdf')" class="ExecuteLink">Application Note: CANoe/CANalyzer as a COM Server</a>
+                                                            </li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div>
+                                        <table style="mc-table-style: url('../../Resources/Stylesheets/vTable.css');margin-left: 0;margin-right: auto;width: 100%;" class="TableStyle_vTable" cellspacing="0">
+                                            <col class="TableStyle-vTable-Column-Column1" />
+                                            <thead>
+                                                <tr class="TableStyle-vTable-Head-Header1">
+                                                    <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                                        <p class="TableHead">Tips &amp; Tricks</p>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="TableStyle-vTable-Body-Body1">
+                                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                                        <ul>
+                                                            <li><a href="Programming/COMProgrammingTips.htm">Tips &amp; Tricks</a>
+                                                            </li>
+                                                            <li><a href="COMTroubleshooting.htm">Troubleshooting</a>
+                                                            </li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <table style="width: 100%;mc-table-style: url('../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                                            <col class="TableStyle-vTableSymbol-Column-Column1" />
+                                            <col class="TableStyle-vTableSymbol-Column-Column2" />
+                                            <tbody>
+                                                <tr>
+                                                    <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                                        <p class="Table">
+                                                            <img src="../../Resources/vImages/vExample.png" alt="Example" title="Example" />
+                                                        </p>
+                                                    </td>
+                                                    <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                                        <p class="TableSymbolHead">VBScript sample to demonstrate the usage of the disclaimers in scripts and VisualBasic programs</p>
+                                                        <div>
+                                                            <div class="codeSnippet"><a class="codeSnippetCopyButton" role="button" href="javascript:void(0);">Copy</a>
+                                                                <div style="mc-code-lang: VB;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code><span style="color: #969896; ">' get the ToolInfo object</span><br /><span style="color: #a71d5d; ">set</span> tool&#160;&#160;= CreateObject(<span style="color: #df5000; ">"CANutil.ToolInfo"</span>)<br /><br /><span style="color: #969896; ">' show disclaimer (language, strict, beta, education)</span><br /><span style="color: #a71d5d; ">dim</span> language, <span style="color: #a71d5d; ">strict</span>, beta, education<br />language&#160;&#160;= 1<br /><span style="color: #a71d5d; ">strict</span>&#160;&#160;&#160;&#160;= 1<br />beta&#160;&#160;&#160;&#160;&#160;&#160;= 0<br />education = 0<br /><br /><span style="color: #a71d5d; ">if</span> tool.ShowDisclaimer(language, <span style="color: #a71d5d; ">strict</span>, beta, education) &lt;&gt; 1 <span style="color: #a71d5d; ">Then</span><br />&#160;&#160;wscript.quit<br /><span style="color: #a71d5d; ">end</span> <span style="color: #a71d5d; ">if</span><br /><br /><span style="color: #969896; ">' release the ToolInfo object</span><br /><span style="color: #a71d5d; ">set</span> tool&#160;&#160;= <span style="color: #63a35c; ">nothing</span></code></pre>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="LinkList">&#160;</p>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="FooterWhite">
+                <table class="FooterWhite" style="border-collapse: collapse;margin-left: auto;margin-right: auto;">
+                    <col style="width: 70px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col style="width: 16px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col data-mc-conditions="" />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="buttons popup-container clearfix topicToolbarProxy topicToolbarProxyFooter _Skins_HTML5TopicToolbar mc-component nocontent">
+                                    <div class="button-group-container-left">
+                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo"><a href="../Shared/HowToUseOnlineHelp.htm" title="Tips for using the help" alt="Tips for using the help"><img src="../../Resources/vImages/vBackstage/vHelpInfo.png" /></a>
+                                </p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo">•&#160;&#160;Technical&#160;References are only&#160;available&#160;in&#160;English</p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo" style="text-align: right;"><span class="mc-variable Vector.BuildTime variable">2024-04-8T20:56:42</span>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <table style="width: 100%;border-collapse: separate;border-spacing: 3px 0px;margin-left: auto;margin-right: auto;caption-side: top;">
+                <col />
+                <col />
+                <col />
+                <col data-mc-conditions="BuildProcess.HTML5Link" />
+                <tbody>
+                    <tr>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;">
+                            <p class="vec_Footer">©&#160;Vector Informatik GmbH</p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;text-align: right;">
+                            <p class="vec_FooterBold">
+                                <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE&#160;Product Families</MadCap:conditionalText> Version <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.VectorTestUnitRunner">18</MadCap:conditionalText></p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="../Shared/ContactCopyrightLicense.htm" class="vec_Footer MCXref xref xrefvec_Footer">Contact/Copyright/License</a>
+                            </p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="https://www.vector.com/int/en/company/get-info/privacy-policy/" target="_blank" class="vec_Footer">Data Privacy Notice</a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,1187 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="CANoeDEFamily.xml" data-mc-path-to-help-system="../../../../../" data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.vTESTstudio" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../Skins/Favicons/favicon-16x16.png" /><title>diagGetCommParameter</title>
+        <link href="../../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Resources/Stylesheets/vTableMasterPageHeader.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../../Resources/Stylesheets/vStylesheet.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../../Resources/Stylesheets/vTableLight.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../../Resources/Stylesheets/vTableSymbol.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapGlobal.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapDom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapUtilities.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapXhr.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTextEffects.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSlideshow.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMessageBus.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMessageBus.CrossFrame.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapDefault.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMediaQueries.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapAccessibility.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapHelpSystem.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapAliasFile.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopicFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapFeedbackHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSkinHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.Breadcrumbs.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.MiniToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.SideMenu.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapIndex.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapGlossary.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapParser.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSearch.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapNavigateTopics.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapLms.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapELearning.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopic.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMicroContentComponent.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSearchHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopicElements.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTriPane.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/jscript" src="../../../../Resources/vScripts/SyntaxHighlighting.js">
+        </script>
+        <script type="text/jscript" src="../../../../Resources/vScripts/TabSwitch.js">
+        </script>
+        <script type="text/javascript" src="../../../../Resources/vScripts/Vector.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../../../CANoeDEFamily.htm#Topics/CAPLFunctions/Diagnostics/Functions/CAPLfunctionDiagGetCommParameter.htm">Open topic with navigation</a>
+        </p>
+        <div class="Body">
+            <div role="main" id="mc-main-content">
+                <p class="StructurePath"><a href="../../CAPLfunctions.htm" class="StructurePath MCXref xref xrefStructurePath">CAPL Functions</a> » <a href="../CAPLfunctionsDiagnosticsOverview.htm" class="StructurePath">Diagnostics</a> » <span class="mc-variable System.Title variable">diagGetCommParameter</span></p>
+                <h1><a name="aanchor3348"></a>
+                    <MadCap:concept term="CAPLDiagnostics" /><a name="kanchor1017"></a><span class="mc-variable System.Title variable">diagGetCommParameter</span>
+                </h1>
+                <p class="MenuPath">&#160;</p>
+                <p class="ToolAvailability" data-mc-conditions="BuildProcess.ToolAvailability"><a href="../../../Shared/FeatureAvailability.htm" class="red" title="Feature availabilty for your product">Valid&#160;for</a>:&#160;&#160;CANoe&#160;DE<a name="aanchor3349"></a><MadCap:concept term="SFCANoeDE" /></p>
+                <p class="AutoSearchFilterConcepts"><a name="aanchor3350"></a>
+                    <MadCap:concept term="SFCAPLFunctions" />
+                </p>
+                <div data-mc-target-name="DIVCAPLFunctionSyntax">
+                    <h2 class="CommandPage">Function Syntax</h2>
+                    <p class="Syntax">long diagGetCommParameter (char paramName[]); // form 1</p>
+                    <p class="Syntax">long diagGetCommParameter( char paramName[], dword index,
+                char buffer[], dword bufferLen); // form 2</p>
+                    <p class="Syntax">long DiagGetCommParameter(char ecuQualifier[], long isTester, char paramName[]); // form 3</p>
+                    <p class="Syntax">long DiagGetCommParameter(char ecuQualifier[], long isTester, char paramName[], dword index, char buffer[], dword bufferLen); // form 4</p>
+                </div>
+                <div data-mc-target-name="DIVCAPLDescription">
+                    <h2 class="CommandPage">Description</h2>
+                    <p>Returns the value of a numeric/textual communication parameter of the given or currently active diagnostic description. The values are read from the diagnostic description if they cannot be set in the configuration dialog.</p>
+                </div>
+                <div data-mc-target-name="DIVCAPLParameters">
+                    <h2 class="CommandPage">Parameters</h2>
+                    <table style="margin-left: 0;margin-right: auto;width: 100%;mc-table-style: url('../../../../Resources/Stylesheets/vTableLight.css');" class="TableStyle-vTableLight" cellspacing="0">
+                        <col style="width: 80px;" class="TableStyle-vTableLight-Column-Column1" />
+                        <col class="TableStyle-vTableLight-Column-Column1" />
+                        <tbody>
+                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                <td id="name" class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <p class="TableBold">qualifier</p>
+                                </td>
+                                <td id="descr" class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                    <p class="Table">The following qualifiers can be used  (form 1):</p>
+                                    <table style="width: 100%;mc-table-style: url('../../../../Resources/Stylesheets/vTableLight.css');" class="TableStyle-vTableLight" cellspacing="0">
+                                        <col style="width: 202px;" class="TableStyle-vTableLight-Column-Column1" />
+                                        <col style="width: 149px;" class="TableStyle-vTableLight-Column-Column1" />
+                                        <col class="TableStyle-vTableLight-Column-Column1" />
+                                        <thead>
+                                            <tr class="TableStyle-vTableLight-Head-Header1">
+                                                <th class="TableStyle-vTableLight-HeadE-Column1-Header1">
+                                                    <p class="TableHead">Qualifier</p>
+                                                </th>
+                                                <th class="TableStyle-vTableLight-HeadE-Column1-Header1">
+                                                    <p class="TableHead">Available in</p>
+                                                </th>
+                                                <th class="TableStyle-vTableLight-HeadD-Column1-Header1">
+                                                    <p class="TableHead">Description</p>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">CANoe.AddressMode</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">&#160;</td>
+                                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                    <p class="Table">ISO TP address mode:</p>
+                                                    <ul>
+                                                        <li>0: Normal</li>
+                                                        <li>1: Extended</li>
+                                                        <li>2: NormalFixed</li>
+                                                        <li>3: Mixed</li>
+                                                        <li>&lt;0: No ISO TP</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">CANoe.TxId</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">[0 1*]</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                    <p class="Table">CAN Id for transmitted frames</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">CANoe.RxId</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">[0 1*]</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                    <p class="Table">CAN Id for received frames</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">CANoe.BaseAddress</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">[1*]</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                    <p class="Table">TP base address</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">CANoe.EcuAddr</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">[1 2 3]</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                    <p class="Table">Number of this node</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">CANoe.TgtAddr</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">[1 2 3]</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                    <p class="Table">Target node number</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">CANoe.AddrExt</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">[3]</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                    <p class="Table">Address extension byte</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                <td class="TableStyle-vTableLight-BodyB-Column1-Body1">
+                                                    <p class="Table">CANoe.TxPrio</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyB-Column1-Body1">
+                                                    <p class="Table">[2 3]</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyA-Column1-Body1">
+                                                    <p class="Table">Frame transmit priority</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <table style="width: 100%;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                                        <tbody>
+                                            <tr>
+                                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                                    <p class="Table">
+                                                        <img src="../../../../Resources/vImages/vInfo.png" style="width: 48px;height: 45px;" title="Note" alt="Note" />
+                                                    </p>
+                                                </td>
+                                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                                    <p class="TableSymbolHead">Note</p>
+                                                    <p class="Table">1*: Extended address can be operated on two different types:</p>
+                                                    <ul>
+                                                        <li>With base address</li>
+                                                        <li>With free assignment of the TX- and RX-Id</li>
+                                                    </ul>
+                                                    <p class="Table">The parameter values are each determined from the viewing angle of the corresponding node. Therefore, in an ECU simulation with normal addressing, the TX-Id represents the RX-Id, which is included in the tester node.</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <h2 class="SectionSub">Further qualifiers, independent of address mode (form 1):</h2>
+                                    <table style="width: 100%;caption-side: top;mc-table-style: url('../../../../Resources/Stylesheets/vTableLight.css');" class="TableStyle-vTableLight" cellspacing="0">
+                                        <col style="width: 210px;" class="TableStyle-vTableLight-Column-Column1" />
+                                        <col class="TableStyle-vTableLight-Column-Column1" />
+                                        <thead>
+                                            <tr class="TableStyle-vTableLight-Head-Header1">
+                                                <th class="TableStyle-vTableLight-HeadE-Column1-Header1">
+                                                    <p class="TableHead">Qualifier</p>
+                                                </th>
+                                                <th class="TableStyle-vTableLight-HeadD-Column1-Header1">
+                                                    <p class="TableHead">Description</p>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">CANoe.UudtId</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                    <p class="Table">If the ECU delivers responses also via UUDT frames, their CAN-Id can be determined here as well.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">CANoe.Blocksize</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                    <p class="Table">ISO TP parameter, number of consecutive frames between two flow control frames.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">CANoe.STmin</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                    <p class="Table">ISO TP parameter, minimum interval [ms] between sent consecutive frames, which the sender should maintain.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">CANoe.FCDelay</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                    <p class="Table">ISO TP parameter, delay of flow control frames sent.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                <td colspan="2" class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                    <p colspan="2">Timing Parameter with ISO 15765-3:</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">CANoe.S3ClientTime</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                    <p class="Table">Time the diagnostic client (=tester) should wait before sending a tester present request.<br />This value is also returned for the deprecated qualifier CANoe.S3Time.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">CANoe.S3ServerTime</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                    <p class="Table">Timeout in the diagnostic server for leaving a non-default session.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">CANoe.P3TimePhys</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                    <p class="Table">Minimum waiting time after physical transmitting of a request.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">CANoe.P3TimeFunc</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                    <p class="Table">Minimum waiting time after functional transmitting of a request.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                <td colspan="2" class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                    <p class="Table">&#160;</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">CANoe.Padding</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                    <table style="width: 100%;caption-side: top;mc-table-style: url('../../../../Resources/Stylesheets/vTableLight.css');" class="TableStyle-vTableLight" cellspacing="0">
+                                                        <col style="width: 83px;" class="TableStyle-vTableLight-Column-Column1" />
+                                                        <col class="TableStyle-vTableLight-Column-Column1" />
+                                                        <thead>
+                                                            <tr class="TableStyle-vTableLight-Head-Header1">
+                                                                <th colspan="2" class="TableStyle-vTableLight-HeadD-Column1-Header1">
+                                                                    <p class="TableHead">Values</p>
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                                    <p class="Table">-1</p>
+                                                                </td>
+                                                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                                    <p class="Table">No padding (i.e. DLC variable)</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                                    <p class="Table">0..255</p>
+                                                                </td>
+                                                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                                    <p class="Table">Use this value to pad to DLC=8.</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                                    <p class="Table">&lt;-1</p>
+                                                                </td>
+                                                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                                    <p class="Table">Normal diagnostic error codes.</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                                <td class="TableStyle-vTableLight-BodyB-Column1-Body1">
+                                                                    <p class="Table">rest</p>
+                                                                </td>
+                                                                <td class="TableStyle-vTableLight-BodyA-Column1-Body1">
+                                                                    <p class="Table">reserved</p>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">CANoe.UseAllFC</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                    <table style="width: 100%;caption-side: top;mc-table-style: url('../../../../Resources/Stylesheets/vTableLight.css');" class="TableStyle-vTableLight" cellspacing="0">
+                                                        <col style="width: 83px;" class="TableStyle-vTableLight-Column-Column1" />
+                                                        <col class="TableStyle-vTableLight-Column-Column1" />
+                                                        <thead>
+                                                            <tr class="TableStyle-vTableLight-Head-Header1">
+                                                                <th colspan="2" class="TableStyle-vTableLight-HeadD-Column1-Header1">
+                                                                    <p class="TableHead">Values</p>
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                                    <p class="Table">0</p>
+                                                                </td>
+                                                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                                    <p class="Table">Use the values of the first flow control frame only.</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                                <td class="TableStyle-vTableLight-BodyB-Column1-Body1">
+                                                                    <p class="Table">1</p>
+                                                                </td>
+                                                                <td class="TableStyle-vTableLight-BodyA-Column1-Body1">
+                                                                    <p class="Table">Use the values from ALL flow control frames.</p>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">CANoe.UseFFPrio</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                    <table style="width: 100%;caption-side: top;mc-table-style: url('../../../../Resources/Stylesheets/vTableLight.css');" class="TableStyle-vTableLight" cellspacing="0">
+                                                        <col style="width: 83px;" class="TableStyle-vTableLight-Column-Column1" />
+                                                        <col class="TableStyle-vTableLight-Column-Column1" />
+                                                        <thead>
+                                                            <tr class="TableStyle-vTableLight-Head-Header1">
+                                                                <th colspan="2" class="TableStyle-vTableLight-HeadD-Column1-Header1">
+                                                                    <p class="TableHead">Values</p>
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                                    <p class="Table">0</p>
+                                                                </td>
+                                                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                                    <p class="Table">Use the TX priority given.</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                                <td class="TableStyle-vTableLight-BodyB-Column1-Body1">
+                                                                    <p class="Table">1</p>
+                                                                </td>
+                                                                <td class="TableStyle-vTableLight-BodyA-Column1-Body1">
+                                                                    <p class="Table">Use the priority of the received "first frame" as priority of flow control frame.</p>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">CANoe.FirstSN</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                    <p class="Table">0..15: The sequence number sent in the first "consecutive frame".</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">CANoe.BSOff</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                    <p class="Table">0..255: Block size value indicating "do not expect further flow controls".</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">CANoe.FixedFrameLength</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                    <p class="Table">0..8: All CAN frames should have at least this many bytes.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                <td class="TableStyle-vTableLight-BodyB-Column1-Body1">
+                                                    <p class="Table">CANoe.MaxMessageLength</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyA-Column1-Body1">
+                                                    <p class="Table">Maximum accepted length of a ISO TP message.</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <h2 class="SectionSub">Diagnostics over IP – (form as indicated for each parameter):</h2>
+                                    <table style="width: 100%;caption-side: top;mc-table-style: url('../../../../Resources/Stylesheets/vTableLight.css');" class="TableStyle-vTableLight" cellspacing="0">
+                                        <col style="width: 210px;" class="TableStyle-vTableLight-Column-Column1" />
+                                        <col class="TableStyle-vTableLight-Column-Column1" />
+                                        <col class="TableStyle-vTableLight-Column-Column1" />
+                                        <tbody>
+                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">DoIP.VEHICLE_Adapter</p>
+                                                    <p class="Table">(replaces DoIP.VEHICLE_Interface)</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">See <a href="CAPLfunctionDoIPSetVehicleAdapter.htm">DoIP_SetVehicleAdapter</a></p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                    <p class="Table">form 2</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">DoIP.TESTER_Adapter</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">See <a href="CAPLfunctionDoIPSetTesterAdapter.htm">DoIP_SetTesterAdapter</a></p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                    <p class="Table">form 2</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">DoIP.VEHICLE_Address</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">See <a href="CAPLfunctionDoIPSetVehicleAddress.htm">DoIP_SetVehicleAddress</a></p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                    <p class="Table">form 2</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">DoIP.VEHICLE_LogicalAddress</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">Returns the logical DoIP address of the DoIP entity.</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                    <p class="Table">form 1</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">DoIP.VEHICLE_UDP_Data</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">See <a href="CAPLfunctionDoIPSetVehicleUdpPort.htm">DoIP_SetVehicleUdpPor</a>t</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                    <p class="Table">form 1</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">DoIP.VEHICLE_TCP_Data</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">See <a href="CAPLfunctionDoIPSetVehicleTcpPort.htm">DoIP_SetVehicleTcpPort</a></p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                    <p class="Table">form 1</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">DoIP.TESTER_LogicalAddress</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">Returns the logical DoIP address of the test equipment.</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                    <p class="Table">form 1</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">DoIP.TESTER_UDP_Data</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">See <a href="CAPLfunctionDoIPSetTesterUdpPort.htm">DoIP_SetTesterUdpPort</a></p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                    <p class="Table">form 1</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">DoIP.T_TCP_Generic_Inactivity</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">See <a href="CAPLfunctionDoIPGetSetGenericTimeout.htm">DoIP_SetGenericTimeout</a></p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                    <p class="Table">form 1</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">DoIP.T_TCP_Initial_Inactivity</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">See <a href="CAPLfunctionDoIPGetSetInitialTimeout.htm">DoIP_SetInitialTimeout</a></p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                    <p class="Table">form 1</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">DoIP.T_TCP_Alive_Check</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">See <a href="CAPLfunctionDoIPGetSetAliveCheckTimeout.htm">DoIP_SetAliveCheckTimeout</a></p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                    <p class="Table">form 1</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">DoIP.VehicleSimulationVIN</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">Returns the VIN from <a href="../../../CANoeCANalyzer/Diagnostics/DoIP/DiagnosticsDoIPNetworkSettings.htm">Vehicle Simulation Parameter</a> area as text in parameter <span class="bold">buffer</span>.</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                    <p class="Table">form 2</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">DoIP.VehicleSimulationEID</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">Returns the EID from <a href="../../../CANoeCANalyzer/Diagnostics/DoIP/DiagnosticsDoIPNetworkSettings.htm">Vehicle Simulation Parameter</a> area as text in parameter <span class="bold">buffer</span>.</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                    <p class="Table">form 2</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">DoIP.VehicleSimulationGID</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">Returns the GID from <a href="../../../CANoeCANalyzer/Diagnostics/DoIP/DiagnosticsDoIPNetworkSettings.htm">Vehicle Simulation Parameter</a> area as text in parameter <span class="bold">buffer</span>.</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                    <p class="Table">form 2</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">DoIP.Protocol</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">Configured DoIP protocol, see <a href="CAPLfunctionDoIPSetProtocol.htm">DoIP_SetProtocol</a>.</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                    <p class="Table">form 1</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">DoIP.TESTER_PreferIPv6</p>
+                                                    <p class="Table">DoIP.VEHICLE_PreferIPv6</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">Returns <span class="bold">6</span> if the IPv6 address of the local adapter shall be preferred. See <a href="CAPLfunctionDoIPSetLocalIPaddressVersion.htm">DoIP_SetLocalIPaddressVersion</a>.</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                    <p class="Table">form 1</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">DoIP.ActivationLineStartuptime</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">Returns the time configured for that the activation line shall be active at the start of measurement before the vehicle can be accessed. See <a href="../../../CANoeCANalyzer/Diagnostics/DoIP/DiagnosticsDoIPActivationLine.htm">Activation Line (DoIP)</a>.</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                    <p class="Table">form 1</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">DoIP.GatewayAddress</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">Returns the logical address of the gateway entity that is used to reach the target. See <a href="CAPLfunctionDoIPSetGatewayLogicalAddress.htm">DoIP_SetGatewayLogicalAddress</a>.</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                    <p class="Table">form 1</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">DoIP.FunctionalAddress</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">Returns the logical address used for functional communication. Use <a href="CAPLfunctionDoIPAddECU.htm">DoIP_AddECU</a> in a vehicle simulation to allow reception of such requests, and <a href="CAPLfunctionDoIPSetVehicleLogicalAddress.htm">DoIP_SetVehicleLogicalAddress</a> in a tester to send a request functionally.</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                    <p class="Table">form 1</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">DoIP.ReconnectDelay</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">See <a href="CAPLfunctionDoIPGetSetReconnectDelay.htm">DoIP_Set/GetReconnectDelay</a></p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                    <p class="Table">form 1</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">DoIP.ReconnectInterval</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">See <a href="CAPLfunctionDoIPGetSetReconnectInterval.htm">DoIP_GetReconnectInterval and DoIP_SetReconnectInterval.</a></p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                    <p class="Table">form 1</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">DoIP.ReconnectMaxAttempts</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">See <a href="CAPLfunctionDoIPGetSetReconnectInterval.htm">DoIP_GetReconnectInterval and DoIP_SetReconnectInterval.</a></p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                    <p class="Table">form 1</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">DoIP.ActivationLineSysvar</p>
+                                                    <p class="Table">DoIP.ActivationLineSysvar-Namespace</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">Return the system variable configured for the DoIP activation line. See <a href="../../../CANoeCANalyzer/Diagnostics/DoIP/DiagnosticsDoIPActivationLine.htm">Activation Line (DoIP)</a> for details.</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                    <p class="Table">form 2</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">DoIP.TESTER_IPAddress</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">Returns IP address the tester shall use for sending. Use <a href="CAPLfunctionDoIPSetLocalIPaddress.htm">DoIP_SetLocalIPaddress</a> in a tester node.</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                    <p class="Table">form 2</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                <td class="TableStyle-vTableLight-BodyB-Column1-Body1">
+                                                    <p class="Table">DoIP.VEHICLE_IPAddress</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyB-Column1-Body1">
+                                                    <p class="Table">Returns the IP address the vehicle simulation shall listen on. Use <a href="CAPLfunctionDoIPSetLocalIPaddress.htm">DoIP_SetLocalIPaddress</a> in a vehicle Simulation.</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyA-Column1-Body1">
+                                                    <p class="Table">form 2</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <h2 class="SectionSub">K-Line (form 1, all timing parameters in microseconds)</h2>
+                                    <div data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">
+                                        <table style="width: 100%;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                                            <col class="TableStyle-vTableSymbol-Column-Column1" />
+                                            <col class="TableStyle-vTableSymbol-Column-Column2" />
+                                            <tbody>
+                                                <tr>
+                                                    <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                                        <p class="Table">
+                                                            <img src="../../../../Resources/vImages/vInfo.png" style="width: 48px;height: 45px;" title="Note" alt="Note" />
+                                                        </p>
+                                                    </td>
+                                                    <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                                        <p class="TableSymbolHead">Note</p>
+                                                        <p class="Table">For details and an example please refer to the reference implementation of the K-Line CAPL Callback Interface for diagnostics that is installed under</p>
+                                                        <p class="TableSyntax">&lt;application&gt;\Reusable\CAPL_Includes\Diagnostics\<a href="javascript:startDemoLoader('&quot;Reusable\\CAPL_Includes\\Diagnostics&quot;')" class="ExecuteLink" data-mc-exclude-action="unbind" data-mc-conditions="Targets.CANoe-DE-Family">CCI_KLine.cin</a></p>
+                                                        <p class="Table">and can be included in CAPL programs with</p>
+                                                        <p class="TableSourceCode">#include "Diagnostics\CCI_KLine.cin"</p>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <table style="width: 100%;caption-side: top;mc-table-style: url('../../../../Resources/Stylesheets/vTableLight.css');" class="TableStyle-vTableLight" cellspacing="0">
+                                        <col style="width: 210px;" class="TableStyle-vTableLight-Column-Column1" />
+                                        <col class="TableStyle-vTableLight-Column-Column1" />
+                                        <tbody>
+                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">KLine.5BaudAddress</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                    <p class="Table">Address sent in the 5 baud wakeup pattern.<br />See <a href="../../KLine/Functions/CAPLfunctionKLineSet5BaudAddressTester.htm">KLine_Set5BaudAddressTester</a></p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">KLine.Baudrate</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                    <p class="Table">Configured baudrate</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">KLine.DataBits</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                    <p class="Table">Number of data bits configured</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">KLine.EcuAddress</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                    <p class="Table">Address of the ECU</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">KLine.ForceLengthByte</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                    <p class="Table">Shall an address byte be sent always?<br />See <a href="../../KLine/Functions/CAPLfunctionKLineSetHeaderFormat.htm">KLine_SetHeaderFormat</a></p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">KLine.FunctionalAddress</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                    <p class="Table">Address of the functional group</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">KLine.InitType</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                    <p class="Table">Initialization mode used.<br />See <a href="../../KLine/Functions/CAPLfunctionKLineSetInitType.htm">KLine_SetInitType</a>&gt;</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">KLine.P3min</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                    <p class="Table">K-Line timing parameter P3.<br />See <a href="../../KLine/Functions/CAPLfunctionKLineSetP3Tester.htm">KLine_SetP3Teste</a>r</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">KLine.P4min</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                    <p class="Table">K-Line timing parameter P4.<br />See <a href="../../KLine/Functions/CAPLfunctionKLineSetP4Tester.htm">KLine_SetP4Tester</a></p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">KLine.Parity</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                    <p class="Table">UART configuration parameter.<br />See <a href="../../KLine/Functions/CAPLfunctionKLineSetUARTParameter.htm">KLine_SetUARTParameter</a></p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">KLine.StopBits</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                    <p class="Table">UART configuration parameter.<br />See <a href="../../KLine/Functions/CAPLfunctionKLineSetUARTParameter.htm">KLine_SetUARTParameter</a></p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">KLine.TIdle</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                    <p class="Table">K-Line idle time.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">KLine.TIniL</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                    <p class="Table">Fast initialization parameter.<br />See <a href="../../KLine/Functions/CAPLfunctionKLineSetWakeUpTimesTester.htm">KLine_SetWakeUpTimesTester</a> and <a href="../../KLine/Functions/CAPLfunctionKLineFastInitPatternReceived.htm">_KLine_FastInitPatternReceived</a></p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">KLine.TWup</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                    <p class="Table">Fast initialization parameter<br />See <a href="../../KLine/Functions/CAPLfunctionKLineSetWakeUpTimesTester.htm">KLine_SetWakeUpTimesTester</a> and <a href="../../KLine/Functions/CAPLfunctionKLineFastInitPatternReceived.htm">_KLine_FastInitPatternReceived</a></p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">KLine.TesterAddress</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                    <p class="Table">Address the tester shall use.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">KLine.UartConfig</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                    <p class="Table">Encoded UART parameters, see KLine.DataBits, KLine.Parity and KLine.StopBits</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">KLine.W1max</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                    <p class="Table">K-Line timing parameter W1 (max) for 5 baud init pattern</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">KLine.W2max</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                    <p class="Table">K-Line timing parameter W2 (max) for 5 baud init pattern</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">KLine.W3max</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                    <p class="Table">K-Line timing parameter W3 (max) for 5 baud init pattern</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">KLine.W4max</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                    <p class="Table">K-Line timing parameter W4 (max) for 5 baud init pattern <a href="../../KLine/Functions/CAPLfunctionKLineSetW4Tester.htm">KLine_SetW4Tester</a></p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                <td class="TableStyle-vTableLight-BodyB-Column1-Body1">
+                                                    <p class="Table">KLine.W4min</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyA-Column1-Body1">
+                                                    <p class="Table">K-Line timing parameter W4 (min) for 5 baud init pattern <a href="../../KLine/Functions/CAPLfunctionKLineSetW4Tester.htm">KLine_SetW4Tester</a></p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                <td id="name" class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <p class="TableBold">index</p>
+                                </td>
+                                <td id="descr" class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                    <p class="Table">Set to 0.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                <td id="name" class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <p class="TableBold">buffer</p>
+                                </td>
+                                <td id="descr" class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                    <p class="Table">Buffer to retrieve string parameters.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                <td id="name" class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <p class="TableBold">bufferLen</p>
+                                </td>
+                                <td id="descr" class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                    <p class="Table">Size of the buffer in bytes.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                <td id="name" class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <p colspan="4" class="TableBold">ecuQualifier</p>
+                                </td>
+                                <td id="descr" class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                    <p colspan="4" class="Table">Qualifier of the ECU or target as set in the diagnostic configuration dialog for the respective diagnostic description.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                <td id="name" class="TableStyle-vTableLight-BodyB-Column1-Body1">
+                                    <p colspan="4" class="TableBold">isTester</p>
+                                </td>
+                                <td id="descr" class="TableStyle-vTableLight-BodyA-Column1-Body1">
+                                    <ul>
+                                        <li colspan="4">0: The node asking for the communication parameter is an ECU simulation</li>
+                                        <li colspan="4">1: The node asking for the communication parameter is a tester</li>
+                                        <li colspan="4">other: reserved</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div data-mc-target-name="DIVCAPLReturnValues">
+                    <h2 class="CommandPage">Return&#160;Values</h2>
+                    <p class="Table"><a href="../CAPLfunctionsDiagnosticsErrorCode.htm">Error code</a> or value of the parameter.</p>
+                </div>
+                <div data-mc-target-name="DIVCAPLExample">
+                    <h2 class="CommandPage">Example</h2>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                    <p class="Table">
+                                        <img src="../../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                    </p>
+                                </td>
+                                <td id="content" class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                    <p class="Table">You can find examples for this function in the CAPL callback interface (CCI) reference implementations.<br />See <a href="../CAPLfunctionsDiagnosticsConnectionCommunicationLayer.htm">Diagnostics: Connection of the Communication Layer</a> for details.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="LinkList"><a href="../CAPLfunctionsDiagnosticsConnectionCommunicationLayer.htm" class="LinkList">Connection of the Communication Layer / Reference Implementations</a>&#160;&#160;•&#160;&#160;<a href="../CAPLfunctionsDiagnosticsExpandedFunctions.htm" class="LinkList">Expanded Functions in CAPL</a></p>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="FooterWhite">
+                <table class="FooterWhite" style="border-collapse: collapse;margin-left: auto;margin-right: auto;">
+                    <col style="width: 70px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col style="width: 16px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col data-mc-conditions="" />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="buttons popup-container clearfix topicToolbarProxy topicToolbarProxyFooter _Skins_HTML5TopicToolbar mc-component nocontent">
+                                    <div class="button-group-container-left">
+                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo"><a href="../../../Shared/HowToUseOnlineHelp.htm" title="Tips for using the help" alt="Tips for using the help"><img src="../../../../Resources/vImages/vBackstage/vHelpInfo.png" /></a>
+                                </p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo">•&#160;&#160;Technical&#160;References are only&#160;available&#160;in&#160;English</p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo" style="text-align: right;"><span class="mc-variable Vector.BuildTime variable">2024-04-8T20:56:42</span>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <table style="width: 100%;border-collapse: separate;border-spacing: 3px 0px;margin-left: auto;margin-right: auto;caption-side: top;">
+                <col />
+                <col />
+                <col />
+                <col data-mc-conditions="BuildProcess.HTML5Link" />
+                <tbody>
+                    <tr>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;">
+                            <p class="vec_Footer">©&#160;Vector Informatik GmbH</p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;text-align: right;">
+                            <p class="vec_FooterBold">
+                                <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE&#160;Product Families</MadCap:conditionalText> Version <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.VectorTestUnitRunner">18</MadCap:conditionalText></p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="../../../Shared/ContactCopyrightLicense.htm" class="vec_Footer MCXref xref xrefvec_Footer">Contact/Copyright/License</a>
+                            </p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="https://www.vector.com/int/en/company/get-info/privacy-policy/" target="_blank" class="vec_Footer">Data Privacy Notice</a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

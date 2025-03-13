@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="" data-mc-search-type="Stem" data-mc-help-system-file-name="CANoeDEFamily.xml" data-mc-path-to-help-system="../../../../" data-mc-conditions="Targets.CANoe-DE-Family" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../Skins/Favicons/favicon-16x16.png" /><title>Working with the I2C protocol</title>
+        <link href="../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Resources/Stylesheets/vTableMasterPageHeader.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../Resources/Stylesheets/vStylesheet.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../Resources/Stylesheets/vTableSymbol.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../Resources/Stylesheets/vTable.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../Resources/Stylesheets/vTableMiniTOC.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapGlobal.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapDom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapUtilities.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapXhr.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTextEffects.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSlideshow.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMessageBus.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMessageBus.CrossFrame.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapDefault.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMediaQueries.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAccessibility.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapHelpSystem.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAliasFile.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopicFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapFeedbackHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSkinHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.Breadcrumbs.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.MiniToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.SideMenu.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapIndex.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapGlossary.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapParser.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSearch.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapNavigateTopics.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapLms.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapELearning.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopic.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMicroContentComponent.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSearchHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopicElements.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTriPane.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/jscript" src="../../../Resources/vScripts/SyntaxHighlighting.js">
+        </script>
+        <script type="text/jscript" src="../../../Resources/vScripts/TabSwitch.js">
+        </script>
+        <script type="text/javascript" src="../../../Resources/vScripts/Vector.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../../CANoeDEFamily.htm#Topics/CANoeCANalyzer/Sensor/SensorUsageI2C.htm">Open topic with navigation</a>
+        </p>
+        <div class="Body">
+            <div role="main" id="mc-main-content">
+                <div>
+                    <p class="StructurePath"><a href="../CANoeDEFamily.htm" class="StructurePath" data-mc-conditions="Targets.CANoe-DE-Family"><img src="../../../Resources/vImages/vToolIcons/CANoeDEFamily_Icon16_15x15.png" alt="" style="width: 15;height: 15;" />&#160;CANoe&#160;DE&#160;Product&#160;Families</a> » <a href="Sensor.htm" class="StructurePath">Option&#160;Sensor</a> » <a href="SensorI2CProtocol.htm" class="StructurePath">I2C Protocol</a> » <span class="mc-variable System.Title variable">Working with the I2C protocol</span></p>
+                    <h1><span class="mc-variable System.Title variable">Working with the I2C protocol</span>
+                    </h1>
+                    <p class="MenuPath">&#160;</p>
+                    <p class="ToolAvailability" data-mc-conditions="BuildProcess.ToolAvailability"><a href="../../Shared/FeatureAvailability.htm" class="red" title="Feature availabilty for your product">Valid&#160;for</a>:&#160;&#160;CANoe&#160;DE<a name="aanchor28705"></a><MadCap:concept term="SFCANoeDE" /></p>
+                    <p class="AutoSearchFilterConcepts"><a name="aanchor28706"></a>
+                        <MadCap:concept term="SFCore" />
+                    </p>
+                    <p class="IndexConcept"><a name="kanchor9342"></a>
+                    </p>
+                </div>
+                <p class="TableCOM"><a name="Shortcuts" id="Shortcuts"></a><span class="red">ON THIS&#160;PAGE:</span>
+                </p>
+                <div>
+                    <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableMiniTOC.css');" class="TableStyle-vTableMiniTOC" cellspacing="2">
+                        <col class="TableStyle-vTableMiniTOC-Column-Column1" />
+                        <tbody>
+                            <tr class="TableStyle-vTableMiniTOC-Body-Body1">
+                                <td style="background-color: #f0f5f5;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;" class="TableStyle-vTableMiniTOC-BodyD-Column1-Body1">
+                                    <p class="TableTextSmall"><a href="#OverviewSystemVariables" class="Tab">Overview of the I2C System Variables</a>
+                                    </p>
+                                    <div class="Indent">
+                                        <p class="TableTextSmall"><a href="#OverviewSystemVariables" class="Tab">Variables and their Members</a>
+                                        </p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTableMiniTOC-Body-Body1">
+                                <td style="background-color: #f0f5f5;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;" class="TableStyle-vTableMiniTOC-BodyD-Column1-Body1">
+                                    <p class="TableTextSmall"><a href="#SimulationSlave" class="Tab">Simulating a Slave</a>
+                                    </p>
+                                    <div class="Indent">
+                                        <p class="TableTextSmall"><a href="#ConfigurationSlaveSimulation" class="Tab">Configuration of the Slave Simulation</a>
+                                        </p>
+                                        <p class="TableTextSmall"><a href="#BehaviorSimSlaveBasicMode" class="Tab">Behavior of the Simulated Slave</a>
+                                        </p>
+                                        <p class="TableTextSmall"><a href="#PrepareSlaveAnswer" class="Tab">Preparing the Slave Replies</a>
+                                        </p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTableMiniTOC-Body-Body1">
+                                <td style="background-color: #f0f5f5;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;" class="TableStyle-vTableMiniTOC-BodyD-Column1-Body1">
+                                    <p class="TableTextSmall"><a href="#SimulationMaster" class="Tab">Simulating a Master</a>
+                                    </p>
+                                    <div class="Indent">
+                                        <p class="TableTextSmall"><a href="#ConfigurationMasterSimulation" class="Tab">Configuration of the Master Simulation</a>
+                                        </p>
+                                        <p class="TableTextSmall"><a href="#BehaviorSimMaster" class="Tab">Behavior of the Simulated Master</a>
+                                        </p>
+                                        <p><a href="#TransmitFrames" class="Tab">Sending Frames</a>
+                                        </p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTableMiniTOC-Body-Body1">
+                                <td style="background-color: #f0f5f5;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;" class="TableStyle-vTableMiniTOC-BodyD-Column1-Body1">
+                                    <p class="TableTextSmall"><a href="#AnalysisCommunication" class="Tab">Analysis of the communication between Real Devices</a>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTableMiniTOC-Body-Body1">
+                                <td style="background-color: #f0f5f5;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;" class="TableStyle-vTableMiniTOC-BodyA-Column1-Body1">
+                                    <p class="TableTextSmall"><a href="#FrameLayout" class="Tab">Representation of Frames in CANoe</a>
+                                    </p>
+                                    <div class="Indent">
+                                        <p class="TableTextSmall"><a href="#RawFrames" class="Tab">Raw Frames</a>
+                                        </p>
+                                        <p class="TableTextSmall"><a href="#ConfiguredFrames" class="Tab">Configured Frames</a>
+                                        </p>
+                                        <p class="TableTextSmall"><a href="#LowLevelEvents" class="Tab">Low Level Frames</a>
+                                        </p>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h2 class="SectionMain"><a name="OverviewSystemVariables" id="OverviewSystemVariables"></a>Overview of the I2C System Variables <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                <p>If you have configured an I2C network in the <a href="SensorConfigurationI2C.htm" class="GUI">Sensor Configuration</a> dialog, the corresponding <a href="../../Shared/SystemVariables/SysVar.htm">system variables</a> are automatically created.</p>
+                <h2 class="SectionSub">Variables and their Members <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                <ul>
+                    <li><a targets="TOGError" href="javascript:void(0)" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="TOGError"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Error</a>
+                    </li>
+                    <div style="display: none;" data-mc-target-name="TOGError">
+                        <table style="width: 100%;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');margin-left: 0;margin-right: auto;" class="TableStyle_vTable" cellspacing="0">
+                            <col class="TableStyle-vTable-Column-Column1" style="width: 100px;" />
+                            <col class="TableStyle-vTable-Column-Column1" />
+                            <tbody>
+                                <tr class="TableStyle-vTable-Body-Body1">
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Name</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Error</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-vTable-Body-Body1">
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Namespace</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">SENSOR::I2C::ExampleChannel</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-vTable-Body-Body1">
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Function	</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">The errors concerning this channel are reported in these variables.</p>
+                                        <p class="Table"><a href="SensorErrorCodes.htm">Overview of the possible error codes.</a>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-vTable-Body-Body1">
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Time stamp</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">The time stamp of this event usually corresponds to the end of the frame that has caused the error.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-vTable-Body-Body1">
+                                    <th class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                        <p class="Table">Member</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                        <p class="Table">—</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <li><a targets="TOGRawFrameStart" href="javascript:void(0)" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="TOGRawFrameStart"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />RawFrameStart</a>
+                    </li>
+                    <div style="display: none;" data-mc-target-name="TOGRawFrameStart">
+                        <table style="width: 100%;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');margin-left: 0;margin-right: auto;" class="TableStyle_vTable" cellspacing="0">
+                            <col class="TableStyle-vTable-Column-Column1" style="width: 100px;" />
+                            <col class="TableStyle-vTable-Column-Column1" />
+                            <tbody>
+                                <tr class="TableStyle-vTable-Body-Body1">
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Name	</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">RawFrameStart</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-vTable-Body-Body1">
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Namespace	</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">SENSOR::I2C::ExampleChannel</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-vTable-Body-Body1">
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Function	</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">This event signalizes the start of a communication sequence. It occurs when a START or a REPEATED START condition has been detected on the bus. The value of the variable indicates which of the previously mentioned conditions has occurred.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-vTable-Body-Body1">
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Time stamp	</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">The time stamp of this event corresponds to the occurrence of the START or REPEATED START condition on the bus.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-vTable-Body-Body1">
+                                    <th class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                        <p class="Table">Member	</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                        <p class="Table">—</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <li><a targets="TOGRawFrameRawFrameAddress" href="javascript:void(0)" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="TOGRawFrameRawFrameAddress"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />RawFrameRawFrameAddress</a>
+                    </li>
+                    <div style="display: none;" data-mc-target-name="TOGRawFrameRawFrameAddress">
+                        <table style="width: 100%;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');margin-left: 0;margin-right: auto;" class="TableStyle_vTable" cellspacing="0">
+                            <col class="TableStyle-vTable-Column-Column1" style="width: 100px;" />
+                            <col class="TableStyle-vTable-Column-Column1" />
+                            <tbody>
+                                <tr class="TableStyle-vTable-Body-Body1">
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Name	</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">RawFrameAddress</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-vTable-Body-Body1">
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Namespace	</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">SENSOR::I2C::ExampleChannel</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-vTable-Body-Body1">
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Function	</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">This event occurs immediately after the slave address has been transmitted on the bus. Depending on the address type this happens after the first byte (7 bit address) or after the second byte (10 bit address).</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-vTable-Body-Body1">
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Time stamp	</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">The time stamp of this event corresponds to the end of the address byte(s).</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-vTable-Body-Body1">
+                                    <th class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                        <p class="Table">Member	</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                        <ul>
+                                            <li><span class="bold">AddressTypes</span>
+                                                <br />Indicates if a 7 bit or a 10 bit address was transmitted.</li>
+                                            <li><span class="bold">SlaveAddress</span>
+                                                <br />Contains the current slave address.</li>
+                                            <li><span class="bold">ReadWriteBit</span>
+                                                <br />Indicates if the following data bytes are written or read by the master.</li>
+                                            <li><span class="bold">Acknowledge1</span>
+                                                <br />This member contains the acknowledge of the first address byte.</li>
+                                            <li><span class="bold">Acknowledge2</span>
+                                                <br />This member contains the acknowledge of the second address byte. This value is only relevant when a 10 bit address was transmitted.</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <li><a targets="TOGRawFrameWriteData" href="javascript:void(0)" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="TOGRawFrameWriteData"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />RawFrameWriteData</a>
+                    </li>
+                    <div style="display: none;" data-mc-target-name="TOGRawFrameWriteData">
+                        <table style="width: 100%;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');margin-left: 0;margin-right: auto;" class="TableStyle_vTable" cellspacing="0">
+                            <col class="TableStyle-vTable-Column-Column1" style="width: 100px;" />
+                            <col class="TableStyle-vTable-Column-Column1" />
+                            <tbody>
+                                <tr class="TableStyle-vTable-Body-Body1">
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Name	</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">RawFrameWriteData</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-vTable-Body-Body1">
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Namespace	</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">SENSOR::I2C::ExampleChannel</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-vTable-Body-Body1">
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Function	</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">This event contains data bytes that have been written from the master to the slave.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-vTable-Body-Body1">
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Time stamp	</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">The time stamp of this event corresponds to the end of the last written data byte.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-vTable-Body-Body1">
+                                    <th class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                        <p class="Table">Member	</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                        <ul>
+                                            <li><span class="bold">NumBytes</span>
+                                                <br />Number of written bytes.</li>
+                                            <li><span class="bold">RawData</span>
+                                                <br />An array containing the written bytes.</li>
+                                            <li><span class="bold">Acknowledges</span>
+                                                <br />An array containing the acknowledges for each byte.</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <li><a targets="TOGRawFrameReadData" href="javascript:void(0)" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="TOGRawFrameReadData"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />RawFrameReadData</a>
+                    </li>
+                    <div style="display: none;" data-mc-target-name="TOGRawFrameReadData">
+                        <table style="width: 100%;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');margin-left: 0;margin-right: auto;" class="TableStyle_vTable" cellspacing="0">
+                            <col class="TableStyle-vTable-Column-Column1" style="width: 100px;" />
+                            <col class="TableStyle-vTable-Column-Column1" />
+                            <tbody>
+                                <tr class="TableStyle-vTable-Body-Body1">
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Name	</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">RawFrameReadData</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-vTable-Body-Body1">
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Namespace	</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">SENSOR::I2C::ExampleChannel</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-vTable-Body-Body1">
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Function	</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">This event contains data bytes that have been read by the master from the slave.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-vTable-Body-Body1">
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Time stamp	</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">The time stamp of this event corresponds to the end of the last read data byte.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-vTable-Body-Body1">
+                                    <th class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                        <p class="Table">Member	</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                        <ul>
+                                            <li><span class="bold">NumBytes</span>
+                                                <br />Number of read bytes.</li>
+                                            <li><span class="bold">RawData</span>
+                                                <br />An array containing the read bytes.</li>
+                                            <li><span class="bold">Acknowledges</span>
+                                                <br />An array containing the acknowledges for each byte.</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <li><a targets="TOGRawFrameEnd" href="javascript:void(0)" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="TOGRawFrameEnd"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />RawFrameEnd</a>
+                    </li>
+                    <div style="display: none;" data-mc-target-name="TOGRawFrameEnd">
+                        <table style="width: 100%;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');margin-left: 0;margin-right: auto;" class="TableStyle_vTable" cellspacing="0">
+                            <col class="TableStyle-vTable-Column-Column1" style="width: 100px;" />
+                            <col class="TableStyle-vTable-Column-Column1" />
+                            <tbody>
+                                <tr class="TableStyle-vTable-Body-Body1">
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Name	</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">RawFrameEnd</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-vTable-Body-Body1">
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Namespace	</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">SENSOR::I2C::ExampleChannel</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-vTable-Body-Body1">
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Function	</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">This event signalizes the end of a communication sequence. It occurs when a STOP condition has been detected on the bus. The value of the variable indicates which of the previously mentioned conditions has occurred.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-vTable-Body-Body1">
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Time stamp	</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">The time stamp of this event corresponds to the occurrence of the STOP condition on the bus.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-vTable-Body-Body1">
+                                    <th class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                        <p class="Table">Member	</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                        <p class="Table">—</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <li><a targets="TOGDataByte" href="javascript:void(0)" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="TOGDataByte"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />DataByte</a>
+                    </li>
+                    <div style="display: none;" data-mc-target-name="TOGDataByte">
+                        <table style="width: 100%;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');margin-left: 0;margin-right: auto;" class="TableStyle_vTable" cellspacing="0">
+                            <col class="TableStyle-vTable-Column-Column1" style="width: 100px;" />
+                            <col class="TableStyle-vTable-Column-Column1" />
+                            <tbody>
+                                <tr class="TableStyle-vTable-Body-Body1">
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Name	</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">DataByte</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-vTable-Body-Body1">
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Namespace	</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">SENSOR::I2C::ExampleChannel</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-vTable-Body-Body1">
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Function	</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">This event signalizes the transmission of a data byte between the master and a slave.</p>
+                                        <div>
+                                            <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                                                <col class="TableStyle-vTableSymbol-Column-Column1" />
+                                                <col class="TableStyle-vTableSymbol-Column-Column2" />
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                                            <p class="Table">
+                                                                <img src="../../../Resources/vImages/vInfo.png" style="width: 48px;height: 45px;" title="Note" alt="Note" />
+                                                            </p>
+                                                        </td>
+                                                        <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                                            <p class="TableSymbolHead">Note</p>
+                                                            <p class="Table">This event is only available if the option “generate low level events” is enabled in the Sensor configuration dialog.</p>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-vTable-Body-Body1">
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Time stamp	</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">The time stamp of this event corresponds to the end of the transmitted data byte.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-vTable-Body-Body1">
+                                    <th class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                        <p class="Table">Member	</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                        <ul>
+                                            <li><span class="bold">Acknowledge</span>
+                                                <br />The acknowledge produced by the receiver of this byte (ACK or NACK).</li>
+                                            <li><span class="bold">StartOfByteTime</span>
+                                                <br />The time stamp of the data byte’s beginning.</li>
+                                            <li><span class="bold">Value</span>
+                                                <br />The value of the data byte.</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <li><a targets="TOGExampleFrame" href="javascript:void(0)" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="TOGExampleFrame"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />ExampleFrame</a>
+                    </li>
+                    <div style="display: none;" data-mc-target-name="TOGExampleFrame">
+                        <table style="width: 100%;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');margin-left: 0;margin-right: auto;" class="TableStyle_vTable" cellspacing="0">
+                            <col class="TableStyle-vTable-Column-Column1" style="width: 100px;" />
+                            <col class="TableStyle-vTable-Column-Column1" />
+                            <tbody>
+                                <tr class="TableStyle-vTable-Body-Body1">
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Name	</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">ExampleFrame</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-vTable-Body-Body1">
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Namespace	</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">SENSOR::I2C::ExampleChannel::ExampleSlave</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-vTable-Body-Body1">
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Function	</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">This event will occur when received raw frame data matches a user configured frame. It provides a high level signal based interpretation of the data.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-vTable-Body-Body1">
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Time stamp	</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">The time stamp of this events corresponds to the STOP condition that ended this frame.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-vTable-Body-Body1">
+                                    <th class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                        <p class="Table">Member</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                        <ul>
+                                            <li><span class="bold">AddressType</span>
+                                                <br />The number of bits of the slave address (7 or 10).</li>
+                                            <li><span class="bold">SlaveAddress</span>
+                                                <br />The address of the slave the master has communicated with.</li>
+                                            <li><span class="bold">StartOfFrameTime</span>
+                                                <br />The time stamp of the START condition that started this frame.</li>
+                                            <li><span class="bold">WriteSequence</span> (optional)<br />Contains all signals defined for this sequence.</li>
+                                            <li><span class="bold">ReadSequence</span> (optional)<br />Contains all signals defined for this sequence.</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <li><a targets="TOGExampleFrameStim" href="javascript:void(0)" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="TOGExampleFrameStim"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />ExampleFrame_Stim</a>
+                    </li>
+                    <div style="display: none;" data-mc-target-name="TOGExampleFrameStim">
+                        <table style="width: 100%;mc-table-style: url('../../../Resources/Stylesheets/vTable.css');margin-left: 0;margin-right: auto;" class="TableStyle_vTable" cellspacing="0">
+                            <col class="TableStyle-vTable-Column-Column1" style="width: 100px;" />
+                            <col class="TableStyle-vTable-Column-Column1" />
+                            <tbody>
+                                <tr class="TableStyle-vTable-Body-Body1">
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Name	</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">ExampleFrame _Stim</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-vTable-Body-Body1">
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Namespace	</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">SENSOR::I2C::ExampleChannel::ExampleSlave</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-vTable-Body-Body1">
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Function	</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">This variable can be used to trigger bus communication of simulated masters/slaves. It contains all frame signals that can be stimulated. If a frame does not contain a signal, this variable is not created. If you simulate an I2C master, you can initiate sending the corresponding frame by modifying this variable. If you simulate an I2C slave, you can modify the replies of the slave to the requests of the master.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-vTable-Body-Body1">
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Time stamp	</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">	The time stamp of this event corresponds to the point of time when the user changed any of the variable's members or set the TX trigger.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-vTable-Body-Body1">
+                                    <th class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                        <p class="Table">Member</p>
+                                    </th>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                        <ul>
+                                            <li><span class="bold">TxTrigger</span>
+                                                <br />Writing to this member triggers the transmission of the frame.</li>
+                                            <li><span class="bold">WriteSequence</span> (optional)<br />Contains all writable signals for this sequence.</li>
+                                            <li><span class="bold">ReadSequence</span> (optional)<br />Contains all writable signals for this sequence.</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </ul>
+                <h2 class="SectionMain"><a name="SimulationSlave" id="SimulationSlave"></a>Simulating a Slave <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                <p>For testing I2C masters, it is possible to simulate I2C slaves. This allows you to stimulate the master with predetermined values and analyze its outputs.</p>
+                <h2 class="SectionSub"><a name="ConfigurationSlaveSimulation" id="ConfigurationSlaveSimulation"></a>Configuration of the Slave Simulation <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                <p>For the simulation of an I2C slave, it is necessary to set slave mode to <span class="bold">simulated</span> in the <a href="SensorConfigurationI2C.htm" class="GUI">Sensor Configuration</a> dialog.</p>
+                <h2 class="SectionSub"><a name="BehaviorSimSlaveBasicMode" id="BehaviorSimSlaveBasicMode"></a>Behavior of the Simulated Slave <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                <p>The behavior of the simulated I2C slave is based on a simple model. It has a queue containing predefined replies to master requests. You can fill this queue by calling <a href="../../CAPLFunctions/Sensor/CAPLfunctionsSensorOverview.htm">CAPL functions</a> or modifying system variables with desired values. Once the master starts reading data from the slave, the simulated slave outputs the first reply from the queue. Once the communication is finished, the slave jumps to the next element in the queue. If there are no more elements in the queue, the simulated slave always replies using the last sent element.</p>
+                <h2 class="SectionSub"><a name="PrepareSlaveAnswer" id="PrepareSlaveAnswer"></a>Preparing the Slave Replies <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                <p>There are two ways to define replies in the simulated I2C slave:</p>
+                <ul>
+                    <li><span class="bold">Sending via system variable</span>
+                        <br />To do so, set the TX trigger member of a stimulation frame system variable, for example via <a href="../../CAPLFunctions/Sensor/CAPLfunctionsSensorOverview.htm">CAPL</a> or in a panel. The prerequisite for this process is that you have configured at least one suitable frame in the <a href="SensorConfigurationI2C.htm" class="GUI">Sensor Configuration</a> dialog.</li>
+                    <li><span class="bold">Sending via CAPL function</span>
+                        <br />To do so, call the <a href="../../CAPLFunctions/Sensor/Functions/CAPLfunctionQueueFrame.htm" class="SourceCode">QueueFrame</a> function on the namespace of the slave. You can transfer a byte array to this function which will be added to the reply queue of the slave.</li>
+                </ul>
+                <h2 class="SectionMain"><a name="SimulationMaster" id="SimulationMaster"></a>Simulating a Master <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                <p>For analyzing and testing sensors, it is possible to simulate an I2C master. This allows you to stimulate the slave and also display and evaluate the sent data.</p>
+                <h2 class="SectionSub"><a name="ConfigurationMasterSimulation" id="ConfigurationMasterSimulation"></a>Configuration of the Master Simulation <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                <p>For the simulation of an I2C master, it is necessary to set the master mode to <span class="GUI">simulated</span> in the <a href="SensorConfigurationI2C.htm" class="GUI">Sensor Configuration</a> dialog.</p>
+                <h2 class="SectionSub"><a name="BehaviorSimMaster" id="BehaviorSimMaster"></a>Behavior of the Simulated Master <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                <p>An simulated I2C master does not send any frames to the slaves on its own. Instead, you must actively initiate the sending process.</p>
+                <h2 class="SectionSub"><a name="TransmitFrames" id="TransmitFrames"></a>Sending Frames <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                <p>The following options are available for sending frames to the I2C slaves:</p>
+                <ul>
+                    <li><span class="GUI">Sending via system variable</span>
+                        <br />To do so, set the TX trigger of a stimulation frame system variable, for example via <a href="../../CAPLFunctions/Sensor/CAPLfunctionsSensorOverview.htm">CAPL</a> or in a panel. This will include the related frame into the sending queue of the master and send it to the slave. The prerequisite for this process is that you have configured at least one suitable frame in the <a href="SensorConfigurationI2C.htm" class="GUI">Sensor Configuration</a> dialog.</li>
+                    <li><span class="GUI">Sending via CAPL function</span>
+                        <br />To do so, call the <a href="../../CAPLFunctions/Sensor/Functions/CAPLfunctionQueueReadFrame.htm" class="SourceCode">QueueReadFrame</a>, <a href="../../CAPLFunctions/Sensor/Functions/CAPLfunctionQueueWriteFrame.htm" class="SourceCode">QueueWriteFrame</a> or <a href="../../CAPLFunctions/Sensor/Functions/CAPLfunctionQueueCombinedFrame.htm" class="SourceCode">QueueCombinedFrame</a> function on the namespace of the slave.</li>
+                </ul>
+                <h2 class="SectionMain"><a name="AnalysisCommunication" id="AnalysisCommunication"></a>Analysis of the Communication between Real Devices <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                <p>The communication between a real I2C master and a real I2C slave can be logged and analyzed it in realtime. The mode of the master and that of the slave must both be set to <span class="GUI">real</span> in the <a href="SensorConfigurationSPI.htm" class="GUI">Sensor Configuration</a> dialog. The data received from the master and the slave will then be reported in your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> via the corresponding system variables.</p>
+                <h2 class="SectionMain"><a name="FrameLayout" id="FrameLayout"></a>Representation of Frames <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                <h2 class="SectionSub"><a name="RawFrames" id="RawFrames"></a>Raw Frames <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                <p>Whenever communication occurs on the bus, corresponding raw frame events will be generated. These events will be reported in the following way:</p>
+                <ul>
+                    <li>When the master creates a START or a REPEATED START condition on the bus, the event <span class="bold">RawFrameStart</span> will be generated.</li>
+                    <li>After the slave address has been transmitted by the master, a <span class="bold">RawFrameAddress</span> event will be generated.</li>
+                    <li>Then <span class="bold">RawFrameReadData</span> or <span class="bold">RawFrameWriteData</span> events will be reported for each data byte transmitted on the bus.</li>
+                    <li>When the master creates a STOP condition, a <span class="bold">RawFrameEnd</span> event will be generated.</li>
+                </ul>
+                <div>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                    <p class="Table">
+                                        <img src="../../../Resources/vImages/vInfo.png" style="width: 48px;height: 45px;" title="Note" alt="Note" />
+                                    </p>
+                                </td>
+                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                    <p class="TableSymbolHead">Note</p>
+                                    <p class="Table">You have to explicitly activate the generation of raw frame events in the <a href="SensorConfigurationI2C.htm#Channel" class="GUI">Sensor Configuration</a> dialog. Otherwise only configured frames will be reported.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h2 class="SectionSub"><a name="ConfiguredFrames" id="ConfiguredFrames"></a>Configured Frames <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                <p>In addition to the raw frame events you can configure custom frames in the <a href="SensorConfigurationI2C.htm" class="GUI">Sensor Configuration</a> dialog. This allows to perform an interpretation of the raw frame data on signal level.</p>
+                <p>A configured frame usually consists of a write sequence followed by a read sequence. If required you may omit one of the two sequences. This way you can configure a frame that only has a write or a read sequence.</p>
+                <p>
+                    <img src="../../../Resources/Images/Shared/SensorConfigApp/I2CConfiguredFrames.png" />
+                </p>
+                <p>Each sequence can be up to eight bytes long and may contain an arbitrary number of signals. The signals will be available as system variables and provide various convenience settings (e.g. automatic bit order interpretation, scaling with factor and offset).</p>
+                <p>To allow your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> matching received raw data to configured frames, all frames must be uniquely identifiable. This can be achieved by making sure that:</p>
+                <ul>
+                    <li>Configured frames have different sequence lengths</li>
+                    <li>Configured frames with identical sequences have constants (e.g. register addresses) with different values.</li>
+                </ul>
+                <h2 class="SectionSub"><a name="LowLevelEvents" id="LowLevelEvents"></a>Low Level Events <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                <p>In some cases it may be required to have more detailed information on the bus communication than the raw frame events provide. For this purpose you can enable the generation of low level events in the <a href="SensorConfigurationI2C.htm" class="GUI">Sensor Configuration</a> dialog. Once this setting is active, every transmitted data byte will be reported with an exact start and end time stamp.</p>
+                <p class="LinkList">&#160;</p>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="FooterWhite">
+                <table class="FooterWhite" style="border-collapse: collapse;margin-left: auto;margin-right: auto;">
+                    <col style="width: 70px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col style="width: 16px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="buttons popup-container clearfix topicToolbarProxy topicToolbarProxyFooter _Skins_HTML5TopicToolbar mc-component nocontent">
+                                    <div class="button-group-container-left">
+                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo"><a href="../../Shared/HowToUseOnlineHelp.htm" title="Tips for using the help" alt="Tips for using the help"><img src="../../../Resources/vImages/vBackstage/vHelpInfo.png" /></a>
+                                </p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo" style="text-align: right;"><span class="mc-variable Vector.BuildTime variable">2024-04-8T20:56:42</span>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <table style="width: 100%;border-collapse: separate;border-spacing: 3px 0px;margin-left: auto;margin-right: auto;caption-side: top;">
+                <col />
+                <col />
+                <col />
+                <col data-mc-conditions="BuildProcess.HTML5Link" />
+                <tbody>
+                    <tr>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;">
+                            <p class="vec_Footer">©&#160;Vector Informatik GmbH</p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;text-align: right;">
+                            <p class="vec_FooterBold">
+                                <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE&#160;Product Families</MadCap:conditionalText> Version <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.VectorTestUnitRunner">18</MadCap:conditionalText></p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="../../Shared/ContactCopyrightLicense.htm" class="vec_Footer MCXref xref xrefvec_Footer">Contact/Copyright/License</a>
+                            </p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="https://www.vector.com/int/en/company/get-info/privacy-policy/" target="_blank" class="vec_Footer">Data Privacy Notice</a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="" data-mc-search-type="Stem" data-mc-help-system-file-name="CANoeDEFamily.xml" data-mc-path-to-help-system="../../../../" data-mc-toc-path="" data-mc-conditions="Targets.CANoe-DE-Family" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../Skins/Favicons/favicon-16x16.png" /><title>Distributed Software Debugging</title>
+        <link href="../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Resources/Stylesheets/vTableMasterPageHeader.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../Resources/Stylesheets/vStylesheet.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../Resources/Stylesheets/vTableSymbol.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../Resources/Stylesheets/vTablePageTOC.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../Resources/Stylesheets/vTable.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapGlobal.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapDom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapUtilities.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapXhr.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTextEffects.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSlideshow.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMessageBus.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMessageBus.CrossFrame.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapDefault.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMediaQueries.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAccessibility.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapHelpSystem.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAliasFile.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopicFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapFeedbackHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSkinHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.Breadcrumbs.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.MiniToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.SideMenu.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapIndex.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapGlossary.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapParser.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSearch.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapNavigateTopics.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapLms.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapELearning.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopic.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMicroContentComponent.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSearchHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopicElements.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTriPane.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/jscript" src="../../../Resources/vScripts/SyntaxHighlighting.js">
+        </script>
+        <script type="text/jscript" src="../../../Resources/vScripts/TabSwitch.js">
+        </script>
+        <script type="text/javascript" src="../../../Resources/vScripts/Vector.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../../CANoeDEFamily.htm#Topics/CANoeCANalyzer/DSD/DSD.htm">Open topic with navigation</a>
+        </p>
+        <div class="Body">
+            <div role="main" id="mc-main-content">
+                <div>
+                    <p class="StructurePath"><a href="../CANoeDEFamily.htm" class="StructurePath" data-mc-conditions="Targets.CANoe-DE-Family"><img src="../../../Resources/vImages/vToolIcons/CANoeDEFamily_Icon16_15x15.png" alt="" style="width: 15;height: 15;" />&#160;CANoe&#160;DE&#160;Product&#160;Families</a> » <span class="mc-variable System.Title variable">Distributed Software Debugging</span></p>
+                    <h1><span class="mc-variable System.Title variable">Distributed Software Debugging</span>
+                    </h1>
+                    <p class="MenuPath"><a href="../Ribbon/Ribbon.htm" class="MenuPath">Ribbon</a>: <a href="../Ribbon/RibbonFile.htm" class="MenuPath">File Tab</a>|<a href="../Ribbon/File/Options.htm" class="MenuPath">Options</a>|External Programs|Distributed Debugging</p>
+                    <p class="ToolAvailability" data-mc-conditions="BuildProcess.ToolAvailability"><a href="../../Shared/FeatureAvailability.htm" class="red" title="Feature availabilty for your product">Valid&#160;for</a>:&#160;&#160;CANoe&#160;DE<a name="aanchor28980"></a><MadCap:concept term="SFCANoeDE" />&#160;&#160;•&#160;&#160;CANoe:lite&#160;DE<a name="aanchor28981"></a><MadCap:concept term="SFCANoeLiteDE" />&#160;&#160;•&#160;&#160;CANoe4SW&#160;DE<a name="aanchor28982"></a><MadCap:concept term="SFCANoe4SWDE" />&#160;&#160;•&#160;&#160;CANoe4SW:lite&#160;DE<a name="aanchor28983"></a><MadCap:concept term="SFCANoe4SWLiteDE" /></p>
+                    <p class="AutoSearchFilterConcepts"><a name="aanchor28984"></a>
+                        <MadCap:concept term="SFCore" />
+                    </p>
+                    <p class="IndexConcept"><a name="kanchor9421"></a>
+                    </p>
+                </div>
+                <p class="TableCOM"><a name="Shortcuts" id="Shortcuts"></a><span class="red">ON THIS&#160;PAGE:</span>
+                </p>
+                <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTablePageTOC.css');" class="TableStyle-vTablePageTOC" cellspacing="2">
+                    <col style="width: 50%;" class="TableStyle-vTablePageTOC-Column-Column1" />
+                    <col style="width: 50%;" class="TableStyle-vTablePageTOC-Column-Column1" />
+                    <tbody>
+                        <tr class="TableStyle-vTablePageTOC-Body-Body1">
+                            <td class="TableStyle-vTablePageTOC-BodyB-Column1-Body1">
+                                <p class="PageTOC"><a href="#BMIntroduction" class="PageTOC">Introduction</a>
+                                </p>
+                                <p class="PageTOC"><a href="#BMSetup" class="PageTOC">Setup</a>
+                                </p>
+                                <p class="PageTOC"><a href="#BMActivation" class="PageTOC">Activation in your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText></a>
+                                </p>
+                                <p class="PageTOC"><a href="#BMHandling" class="PageTOC">Handling of the Plugin:</a>
+                                </p>
+                                <div class="Indent">
+                                    <p class="PageTOC"><a href="#BMvs" class="PageTOC">Visual Studio Plugin Handling</a>
+                                    </p>
+                                    <p class="PageTOC"><a href="#BMBreakPoints" class="PageTOC">Breakpoints in Visual Studio</a>
+                                    </p>
+                                    <p class="PageTOC"><a href="#BMvsCode" class="PageTOC">Visual Studio Code Handling</a>
+                                    </p>
+                                </div>
+                            </td>
+                            <td class="TableStyle-vTablePageTOC-BodyA-Column1-Body1">
+                                <p class="PageTOC"><a href="#BMWatchExpressions" class="PageTOC">Watch Expressions</a>
+                                </p>
+                                <div class="Indent">
+                                    <p class="PageTOC"><a href="#BMDynamic" class="PageTOC">Dynamic Distributed Objects</a>
+                                    </p>
+                                    <p class="PageTOC"><a href="#BMStatic" class="PageTOC">Static Distributed Objects</a>
+                                    </p>
+                                    <p class="PageTOC"><a href="#BMNaming" class="PageTOC">Naming of the Distributed Objects</a>
+                                    </p>
+                                </div>
+                                <p class="PageTOC"><a href="#BMNotes" class="PageTOC">Final Notes</a>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h2 class="SectionMain"><a name="BMIntroduction" id="BMIntroduction"></a>Introduction <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                <p>The distributed debugging feature enables the coupling of a development environment (IDE) with your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText>. For example, software SUTs (SUT = System Under Test), running within an IDE can be analyzed more precisely with the feature.</p>
+                <p>The connection works via a TCP-based communication channel that is independent of communication protocols such as MQTT or SIL Adapters. For example, a software SUT can communicate with your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> via the SIL Adapter and simultaneously be analyzed Distributed Software Debugging. Two functions are available to you, which can also be used simultaneously:</p>
+                <ol>
+                    <li value="1"><span class="bold">CANoe Coupling</span> is the time coupling between debugger and your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> simulation. For example, when the debugger in the SUT breaks, your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> simulation is also stopped. <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> simulation and SUT thus remain coupled in time and do not diverge logically.</li>
+                    <li value="2"><span class="bold">Watch Expression Transfer</span> allows the transfer of watch expressions (stack variables, global variables, ...) to your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText>, where they are mapped to <a href="../CommunicationConcept/CCDistributedObjects.htm">Distributed Objects (DOs)</a>. This allows debugging values/watch expressions of the SUT to be analyzed and displayed in the context of the rest of your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> simulation.</li>
+                </ol>
+                <h2 class="SectionMain"><a name="BMSetup" id="BMSetup"></a>Setup <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                <p>The feature is installed as a plugin in the respective development environment. Plugins are currently available for Visual Studio 2017, Visual Studio 2019 and Visual Studio Code with Windows and Linux. The plugins are located in your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> installation folder <a href="javascript:startDemoLoader('&quot;EXEC:..\\Installer Additional Components\\DistributedDebugging&quot;')" class="ExecuteLink">Open Setup Folder</a>. The plugin name <span class="bold">vsc</span> stands for <span class="bold">Visual Studio Code</span> and <span class="bold">vs</span> for <span class="bold">Visual Studio</span>. For the Visual Studio setup, a double click on the VSIX file is sufficient, which opens the VSIX installer and initiates the setup. For the VSIX file setup under Visual Studio Code you have to select the VSIX file within Visual Studio Code in the <span class="GUI">Extension</span> menu with the <span class="GUI">Install from VSIX</span> command.</p>
+                <p>In Linux environments, the extension must build local dependencies. To enable this, you must install a current (LTS) node-js version (≥10), a corresponding current npm version (≥6), and a node-gyp version on the target system. In addition, the Linux system used must provide a glibc version ≥ 2.27.</p>
+                <p>On Debian systems, you can execute the following command to do this:</p>
+                <p class="SourceCode">sudo apt install nodejs npm node-gyp</p>
+                <p>The latest versions with which the Visual Studio Code plugin has been tested on Linux are:</p>
+                <ul>
+                    <li>node-js : 16.13.0</li>
+                    <li>npm : 8.1.0</li>
+                    <li>node-gyp : 7.1.2</li>
+                </ul>
+                <p>If the extension cannot be initialized on Linux, you can try to set the environment variable LD_LIBRARY_PATH for the Visual Studio Code process to the /build/Release/ folder of the extension, e.g. by starting VS Code this way:</p>
+                <p class="SourceCode">env LD_LIBRARY_PATH=~/.vscode/extensions/vector-informatik-gmbh.vsc-vector-debug-linux-VERSIONNUMBER/build/Release/ code</p>
+                <p>VERSIONNUMBER is the version number of the plugin (e.g. 1.5.22). You have to customize the path to your own system.</p>
+                <h2 class="SectionMain"><a name="BMActivation" id="BMActivation"></a>Activation in your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                <p>To be able to use the feature, activate it after setup of the plugin in your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText>. In the <span class="GUI">Options</span> dialog of your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> under <span class="GUI">External Programs | Distributed Debugging</span>, activate the <span class="GUI">Distributed Software Debugging Integration</span> check box therefor. You can also set the port to which the IDE plugin should connect. This port (as well as the IP address of the host on which your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> is running) must also be set accordingly in the IDE. The default port is 2828, and the default IP address to which the plugin tries to connect is <span class="bold">localhost</span>. If the IP address and port are correct, the plugin automatically connects to your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> when Visual Studio (Code) is started. In the case of your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText>, care should be taken to ensure that your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> is in the <span class="GUI">Simulated Bus</span> and in <span class="GUI">Online Mode</span>, as the feature is only available for these mode.</p>
+                <h2 class="SectionMain"><a name="BMHandling" id="BMHandling"></a>Handling of the Plugin <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                <p>The following guide shows images from Visual Studio 2017 and Visual Studio Code. Please note that these images may look different depending on the IDE version (e.g. Visual Studio 2019) and menu commands may be in different places.</p>
+                <p>After setup of the plugin and opening the IDE you can see the connection state to your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> in the status bar at the bottom right (Visual Studio Code) or at the bottom left and in the Vector Debug Output (Visual Studio). However, the status bar at the bottom left in Visual Studio shows the connection state only if it changes, i.e. if in doubt, look in the <span class="GUI">Vector Debug Output</span> window or check if the menu commands (<span class="GUI">Start CANoe Measurement, Stop CANoe Measurement etc.</span>) are no longer inactive when you expand the Vector Debug menu in the top menu bar (grayed out means no connection).</p>
+                <p>Visual Studio:</p>
+                <p>
+                    <img src="../../../Resources/Images/CANoeCANalyzer/DSD/DSDvs.png" />
+                </p>
+                <p>Visual Studio Code:</p>
+                <p>
+                    <img src="../../../Resources/Images/CANoeCANalyzer/DSD/DSDvsc.png" />
+                </p>
+                <p>To change the URL to connect to your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText>, in the case of Visual Studio, open the <span class="GUI">Vector Debug Options</span> dialog from the <span class="GUI">Vector Debug</span> menu in the top menu bar (possibly hidden under the <span class="GUI">Extensions</span> menu in Visual Studio 2019). In the case of Visual Studio Code, the dialog can be accessed under the <span class="GUI">Run and Debug</span> menu command under <span class="GUI">CANOE COUPLING|Configure connection to CANoe</span>. Alternatively, the dialog can be found in the settings under <span class="GUI">Settings | Extensions | Vector Debug</span>.</p>
+                <p>Visual Studio:</p>
+                <p>
+                    <img src="../../../Resources/Images/CANoeCANalyzer/DSD/DSDvsVectorDebug.png" />
+                </p>
+                <p>Visual Studio Code:</p>
+                <p>
+                    <img src="../../../Resources/Images/CANoeCANalyzer/DSD/DSDvscVectorDebug.png" />
+                </p>
+                <p><a targets="TOGVisualStudio" href="javascript:void(0)" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="TOGVisualStudio"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Visual Studio Plugin Handling</a>
+                </p>
+                <div style="display: none;" data-mc-target-name="TOGVisualStudio">
+                    <p><a name="BMvs" id="BMvs"></a>In Visual Studio 2017, you can open the <span class="GUI">Options</span> dialog of the Distributed Debugging plugin directly in the <span class="GUI">Vector Debug</span> menu via <span class="GUI">Vector Debug Options</span>. In Visual Studio 2019, you open the <span class="GUI">Options</span> dialog via <span class="GUI">Extensions | Vector Debug | Vector Debug Options</span>.</p>
+                    <p>The <span class="GUI">Vector Debug</span> menu includes the following functions:</p>
+                    <ul>
+                        <li><span class="bold">Start CANoe Measurement</span>:<br />Starts the CANoe measurement.</li>
+                        <li><span class="bold">Stop CANoe Measurement</span>:<br />Stops the CANoe measurement.</li>
+                        <li><span class="bold">CANoe Coupling</span>:<br />Couples general sequence events with an external <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> instance. When the debugger is in interrupt mode, a running <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> simulation is also interrupted. When the debugger continues, the <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> simulation is also resumed.</li>
+                        <li><span class="bold">Step Coupling</span>:<br />Expands the CANoe Coupling feature to include coupling on step commands. When executing a step over/in/out your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> continues the simulation for approximately the time span the debugger needs for the step.</li>
+                        <li><span class="bold">Watch Expression Transfer to CANoe</span>:<br />If active, the breakpoints can be provided with the <span class="GUI">Watch Expression Transfer</span> function and the <span class="bold">Auto-Continue</span> function (<a href="#BMBreakPoints">see</a>).</li>
+                        <li class="Bold">Vector Debug Options</li>
+                    </ul>
+                    <p>The <span class="GUI">Vector Debug Options</span> dialog includes the following features:</p>
+                    <ul>
+                        <li class="IndentBold">CANoe coupling features</li>
+                        <li class="IndentIndent"><span class="bold">CANoe coupling activated</span>:<br />Corresponds to <span class="GUI">CANoe Coupling</span> from the <span class="GUI">Options</span> dialog.</li>
+                        <li class="IndentIndent"><span class="bold">Start CANoe measurement automatically when debugging is started</span>:Specifies whether the <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> measurement is started automatically when debugging starts.</li>
+                        <li class="IndentIndent"><span class="bold">Step coupling activated</span>:<br />Corresponds to  <span class="GUI">Step Coupling</span> from the <span class="GUI">Options</span> dialog.</li>
+                        <li class="IndentIndent"><span class="bold">Stop CANoe measurement automatically when debugging is stopped</span>:<br />Specifies whether the <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> measurement is stopped automatically when debugging stops.</li>
+                        <li class="IndentIndent"><span class="bold">Stop CANoe measurement automatically when program ends</span>:<br />Specifies whether the <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> measurement is stopped automatically when program ends.</li>
+                        <li class="IndentBold">CANoe Endpoint</li>
+                        <li class="IndentIndent">URL: Address and port of the <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> endpoint, with which a connection for synchronization is to be established.</li>
+                        <li class="IndentBold">Watch expression transfer to CANoe</li>
+                        <li class="IndentIndent"><span class="bold">Activate feature to send Watch Expressions to CANoe</span>:<br />Corresponds to <span class="GUI">Watch Expression transfer to CANoe</span> from the <span class="GUI">Vector Debug</span> menu, see <span class="bold">CANoe Coupling</span>.</li>
+                        <li class="IndentIndent"><span class="bold">Send all local expressions in current stack frame</span>:<br />When a breakpoint is reached and <span class="GUI">Watch Expression Transfer</span> is active, all local expressions from the current stack frame are sent to your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> at that breakpoint.</li>
+                        <li class="IndentIndent"><span class="bold">Send watch expression updates while stepping</span>:<br />If activated, watch expressions are sent to your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> after each debug step. Which watch expressions are sent depends on the corresponding setting (see <span class="GUI">Send all local expressions in current stack frame</span> and <span class="GUI">Watch expressions to send to CANoe</span>).</li>
+                        <li class="IndentIndent"><span class="bold">Watch expressions to send to CANoe</span>:<br />List of watch expressions, that are sent to your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText>. The expressions are either comma-separated directly in the options dialog or listed one below the other with the String Collection Editor to the right of the option. Besides variable names, mathematical, logical and functional expressions can be used here. The expressions used here are customized as described under Watch Expressions and used as names of the DOs in your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText>.</li>
+                    </ul>
+                    <div>
+                        <h2 class="SectionMain"><a name="BMBreakPoints" id="BMBreakPoints"></a>Breakpoints in Visual Studio <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                        <p>The Distributed Debugging plugin can be used to activate the <span class="GUI">Watch Expression Transfer</span> and <span class="GUI">Auto-Continue</span> features for breakpoints. With Watch Expression Transfer, the corresponding watch expressions (stack variables, global variables,...) are sent to your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> when the breakpoint is triggered. With <span class="GUI">Auto-Continue</span> the debugger continues the execution of the program directly after the Watch Expressions have been sent. There are therefore 3 states for a breakpoint:</p>
+                        <ul>
+                            <li>No watch expressions are sent to your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> and <span class="GUI">Auto-Continue</span> is thus also deactivated.</li>
+                            <li>Watch Expressions are sent to your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> and <span class="bold">Auto-Continue</span> is deactivated.</li>
+                            <li>Watch Expressions are sent to your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> and <span class="bold">Auto-Continue</span> is activated.</li>
+                        </ul>
+                        <p>The desired state of a breakpoint is selected with a right click on the corresponding breakpoint under <span class="GUI">Configure Vector Debug Breakpoint Settings</span>. See the figure below:</p>
+                        <p>
+                            <img src="../../../Resources/Images/CANoeCANalyzer/DSD/DSDBreakpoints.png" />
+                        </p>
+                        <div>
+                            <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                                <col class="TableStyle-vTableSymbol-Column-Column1" />
+                                <col class="TableStyle-vTableSymbol-Column-Column2" />
+                                <tbody>
+                                    <tr>
+                                        <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                            <p class="Table">
+                                                <img src="../../../Resources/vImages/vInfo.png" style="width: 48px;height: 45px;" title="Note" alt="Note" />
+                                            </p>
+                                        </td>
+                                        <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                            <p class="TableSymbolHead">Note</p>
+                                            <p class="Table">The Watch Expression Transfer feature must first be activated globally in the Vector Debug settings with the option <span class="GUI">Watch Expression Transfer to CANoe</span> to configure a breakpoint (<a href="#BMvs">see</a>).</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>Which watch expressions are sent to your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> is defined in the Watch Expression Transfer Settings (<a href="#BMvs">see</a>).</p>
+                        <p>The current state of the breakpoint can be queried via <span class="GUI">Query Vector Debug Breakpoint Settings</span>. This is displayed in the Vector Debug Output Window.</p>
+                        <div>
+                            <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                                <col class="TableStyle-vTableSymbol-Column-Column1" />
+                                <col class="TableStyle-vTableSymbol-Column-Column2" />
+                                <tbody>
+                                    <tr>
+                                        <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                            <p class="Table">
+                                                <img src="../../../Resources/vImages/vInfo.png" style="width: 48px;height: 45px;" title="Note" alt="Note" />
+                                            </p>
+                                        </td>
+                                        <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                            <p class="TableSymbolHead">Note</p>
+                                            <ul>
+                                                <li>It should be noted that when debugging, execution is stopped at the breakpoint before the code in the corresponding line is executed. Variables defined on the breakpoint line will therefore not have the defined value as a watch expression on that breakpoint.</li>
+                                                <li>The Watch Expression Transfer feature changes the Visual Studio breakpoint tag. If extensions are installed which also work with the breakpoint tag, this could lead to unwanted interactions/problems.</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <p><a targets="TOGVisualStudioCode" href="javascript:void(0)" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="TOGVisualStudioCode"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Visual Studio Code Handling</a>
+                </p>
+                <div style="display: none;" data-mc-target-name="TOGVisualStudioCode">
+                    <p><a name="BMvsCode" id="BMvsCode"></a>The Distributed Debugging plugin can be found in Visual Studio Code in the <span class="GUI">Execution</span> view. The <span class="GUI">Execute</span> icon in the activity bar on the side of VS Code (key combination <span class="Keyboard">&lt;Ctrl&gt;+&lt;Shift&gt;+&lt;D&gt;</span>) opens the <span class="GUI">Execution</span> view. If VS Code is connected to your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText>, the <span class="GUI">CANOE COUPLING</span> and the <span class="bold">CANOE WATCHES</span> panel look like this:</p>
+                    <p>
+                        <img src="../../../Resources/Images/CANoeCANalyzer/DSD/DSDCANoeCoupling.png" />
+                    </p>
+                    <p>The following functions can be found under <span class="GUI">CANOE COUPLING</span>:</p>
+                    <ul>
+                        <li><span class="bold">Start CANoe Measurement</span>:<br />Starts the <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> measurement.</li>
+                        <li><span class="bold">Stop CANoe Measurement</span>:<br />Stopps the <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> measurement.</li>
+                        <li><span class="bold">CANoe Coupling</span>:<br />Couples general sequence events with an external <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> instance. When the debugger is in interrupt mode, a running <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> simulation is also interrupted. When the debugger continues, the <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> simulation is also resumed.</li>
+                        <li><span class="bold">Step Coupling</span>:<br />Expands the CANoe Coupling feature to include coupling on step commands. When executing a step over/in/out your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> continues the simulation for approximately the time span the debugger needs for the step.</li>
+                    </ul>
+                    <div>
+                        <div>
+                            <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                                <col class="TableStyle-vTableSymbol-Column-Column1" />
+                                <col class="TableStyle-vTableSymbol-Column-Column2" />
+                                <tbody>
+                                    <tr>
+                                        <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                            <p class="Table">
+                                                <img src="../../../Resources/vImages/vInfo.png" style="width: 48px;height: 45px;" title="Note" alt="Note" />
+                                            </p>
+                                        </td>
+                                        <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                            <p class="TableSymbolHead">Note</p>
+                                            <p class="Table">To enable the Watch Expression Transfer feature for Visual Studio Code, the type <span class="bold">field</span> in the launch.json file under <span class="bold">configurations</span> must be changed to <span class="bold">vector_cppdbg</span> (Open Source Debugger, e.g. GDB/MinGW) or <span class="bold">vector_cppvsdbg</span> (Visual Studio Debugger). The Watch Expression Transfer feature is therefore currently only available for the C/C++ languages in the case of Visual Studio Code.</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>The following functions are available in the <span class="GUI">CANOE WATCHES</span> panel when the Watch Expression Transfer feature is enabled:</p>
+                        <ul>
+                            <li>
+                                <p class="ListItem"><span class="GUI">Watch Expression Transfer to CANoe</span>
+                                </p>
+                                <p>This option specifies whether the configured watch expressions should be sent to your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> as soon as a breakpoint is hit. The option applies to all breakpoints globally in the same way. There are the options <span class="bold">deactivated</span>, <span class="bold">activated</span>, and <span class="bold">activated + Auto-Continue</span>, where in case of the last option the execution of the program automatically continues after the watch expressions have been sent to your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText>.</p>
+                            </li>
+                            <li>
+                                <p class="ListItem"><span class="GUI">Send all locals in current stack frame</span>
+                                </p>
+                                <p>When a breakpoint is reached and <span class="GUI">Watch Expression Transfer to <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText></span> is active, all local expressions from the current stack frame are sent to your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> at this breakpoint.</p>
+                            </li>
+                            <li>
+                                <p class="ListItem"><span class="GUI">Expression to transfer</span>
+                                </p>
+                                <p>In these fields any watch expressions can be configured, which are to be sent to your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText>. Besides variable names, mathematical, logical and functional expressions can be usage here. The expressions used here are customized as described under Watch Expressions and used as names of the DOs in your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText>.</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <p>If VS Code is not connected to your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText>, a link appears that can be used to directly access the <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> endpoint setting in the Workspace Settings. Alternatively the settings can be found under <span class="GUI">Settings | Extensions | Vector Debug</span>. Here you can find the following settings (some of them are also adjustable via the CANOE COUPLING and CANOE WATCHES panels):</p>
+                    <ul>
+                        <li><span class="bold">CANoe Endpoint</span>
+                            <br />Address and port of the <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> endpoint, with which to connect.</li>
+                        <li><span class="bold">Couple Execution</span>
+                            <br />Corresponds to <span class="GUI">CANoe Coupling</span> from the <span class="GUI">Execution</span> view, see <span class="GUI">CANoe Coupling</span>.</li>
+                        <li><span class="bold">Couple Steps</span>
+                            <br />Corresponds to <span class="GUI">Step Coupling</span> from the <span class="GUI">Execution</span> view, see <span class="GUI">Step Coupling</span>.</li>
+                        <li><span class="bold">Start CANoe Measurement Automatically With Debugging</span>
+                            <br />Specifies whether the <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> measurement is started automatically when debugging starts.</li>
+                        <li><span class="bold">Stop CANoe Measurement Automatically With Debugging</span>
+                            <br />Specifies whether the <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> measurement is stopped automatically when debugging stops.</li>
+                        <li><span class="bold">Stop CANoe Measurement Automatically With Program End</span>
+                            <br />Specifies whether the <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> measurement is stopped automatically when program ends.</li>
+                        <li><span class="bold">Watch Expression Transfer Send All Local Expressions In Current Stack Frame</span>
+                            <br />Specifies whether to send all local expressions from the current stack frame to your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> at a hit breakpoint.</li>
+                        <li><span class="bold">Watch Expression Transfer Send Updates While Stepping</span>
+                            <br />Specifies whether the configured watch expressions should be sent to your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> at each step when stepping with the debugger.</li>
+                        <li><span class="bold">Watch Expression Transfer To CANoe</span>
+                            <br />Specifies whether watch expressions should be sent to your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> when a breakpoint is hit, and whether the debugger should automatically continue executing the program afterwards.</li>
+                        <li><span class="bold">Watch Expression Transfer Watch Expressions To Send</span>
+                            <br />List of watch expressions to be sent to your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText>.</li>
+                    </ul>
+                </div>
+                <h3 class="SectionMain"><a name="BMWatchExpressions" id="BMWatchExpressions"></a>Watch Expressions <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h3>
+                <p>All expressions recognized as valid by the debugger are allowed as watch expressions. That means simple variables as well as logical, mathematical or functional expressions are allowed.</p>
+                <p>The Watch Expressions are represented in your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> as DOs. The DOs can be generated dynamically during the measurement or predefined as static DOs.</p>
+                <h3 class="SectionSub"><a name="BMDynamic" id="BMDynamic"></a>Dynamic Distributed Objects <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h3>
+                <p>As soon as a watch expression is sent to your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> for the first time during the current measurement, a dynamic DO is created with the name of the watch expression. These dynamic DOs are then displayed in the Trace Window, among other places, and can be displayed in the Graphics Window, for example (by dragging their Value field into the Graphics Window). See figure <span class="bold">Dynamic DOs in the Trace Window</span>:</p>
+                <p>
+                    <img src="../../../Resources/Images/CANoeCANalyzer/DSD/DSDDynamicDOs.png" />
+                </p>
+                <p>Watch Expressions are mapped to the string data type by default in your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText>. The following mapping rules are exceptions:</p>
+                <table style="mc-table-style: url('../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                    <tbody>
+                        <tr>
+                            <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="TableHead">Watch Expression Data Type</p>
+                            </th>
+                            <th class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="TableHead">Distributed Object Member Data Type</p>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">(const) (signed) int (&amp;)</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">int64</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">(const) unsigned int (&amp;)</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">uint64</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">(const) (signed) short (int) (&amp;)</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">int64</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">(const) unsigned short (int) (&amp;)</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">uint64</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">(const) (signed) long (int) (&amp;)</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">int64</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">(const) unsigned long (int) (&amp;)</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">uint64</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">(const) (signed) long long (int) (&amp;)</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">int64</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">(const) unsigned long long (int) (&amp;)</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">uint64</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">(const) float (&amp;)</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">double</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">(const) double (&amp;)</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">double</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">(const) long double (&amp;)</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">double</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">(const) __int8 (&amp;)</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">int64</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">(const) unsigned __int8 (&amp;)</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">uint64</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">(const) __int16 (&amp;)</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">int64</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">(const) unsigned __int16 (&amp;)</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">uint64</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">(const) __int32 (&amp;)</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">int64</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">(const) unsigned __int32 (&amp;)</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">int64</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">(const) __int64 (&amp;)</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">int64</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">(const) unsigned __int64 (&amp;)</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">int64</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">(const) int8_t (&amp;)</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">int64</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">(const) uint8_t (&amp;)</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">uint64</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">(const) int16_t (&amp;)</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">int64</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">(const) uint16_t (&amp;)</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">uint64</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">(const) int32_t (&amp;)</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">int64</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">(const) uint32_t (&amp;)</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">uint64</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">(const) int64_t (&amp;)</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">int64</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">(const) uint64_t (&amp;)</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">uint64</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                <p class="Table">(const) bool (&amp;)</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                <p class="Table">uint64</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>It is also possible to make a type conversion in the Watch Expression itself. For example, an integer can be represented as a double in your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> with the Watch Expression static_cast&lt;double&gt;(integerVariable).</p>
+                <h3 class="SectionSub"><a name="BMStatic" id="BMStatic"></a>Static Distributed Objects <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h3>
+                <p>Static DOs are defined by means of <a href="../../vCDL/vCDLStartpage.htm">vCDL file</a> before measurement start and are then available as application layer objects in your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> (see example below). This allows them to be conveniently used in application models or tests, for example. A static DO must have the same name as the Watch Expression that is to be mapped to the static DO (<a href="#BMNaming">see</a>).</p>
+                <div>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                    <p class="Table">
+                                        <img src="../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                    </p>
+                                </td>
+                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                    <p class="TableSymbolHead">Example</p>
+                                    <p class="SourceCode">version 1.4;<br />namespace DistDebugExample {<br /> [Binding="DistributedDebugging"]<br /> [CommunicationPattern="SendReceive"]<br /> interface IIntWatchExpression{<br /> consumed data int64 expression;<br /> }<br /> IIntWatchExpression integerValue;<br /> }</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                    <p class="Table">
+                                        <img src="../../../Resources/vImages/vInfo.png" style="width: 48px;height: 45px;" title="Note" alt="Note" />
+                                    </p>
+                                </td>
+                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                    <p class="TableSymbolHead">Note</p>
+                                    <p class="Table">The static DOs must contain exactly one (data) member with the attributes <span class="SourceCode">[Binding = „DistributedDebugging“]</span> and <span class="SourceCode">[CommunicationPattern=“SendReceive“]</span>, which is updated with the value of the Watch Expression. This member may have the following data types: Int, UInt, Bool, Float/Double or String.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>When mapping watch expressions to static DOs, an attempt is made to convert/cast the watch expression, which always arrives from the debugger as a string, into the data type of the static DO. If this conversion is not possible, a corresponding error message is displayed in the Write Window. Since watch expressions from the debugger always arrive as strings, mapping to the DO member data type <span class="bold">String</span> is always possible.</p>
+                <div>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                    <p class="Table">
+                                        <img src="../../../Resources/vImages/vInfo.png" style="width: 48px;height: 45px;" title="Note" alt="Note" />
+                                    </p>
+                                </td>
+                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                    <p class="TableSymbolHead">Notes</p>
+                                    <ul>
+                                        <li>In the case of mapping to a static DO member with the <span class="bold">bool</span> data type, numbers not equal to 0 are mapped to <span class="bold">True</span> and the number 0 is mapped to <span class="bold">False</span>.</li>
+                                        <li>The Distributed Debugging feature automatically imports a so-called system vCDL, in which the interface for the dynamic DOs (DistributedDebugging::IWatchExpression) and prebuilt interfaces for static DOs with members of the types Int64, UInt64, Bool, Double and String (DistributedDebugging: :IIntWatchExpression, DistributedDebugging::IUIntWatchExpression, DistributedDebugging::IBoolWatchExpression, DistributedDebugging::IDoubleWatchExpression, DistributedDebugging::IStringWatchExpression) are predefined. From the predefined interfaces for static DOs, DOs can be instantiated. The predefined interfaces can be accessed by writing <span class="bold">import module "DistributedDebugging";</span> at the top of the user-defined vCDL (if the Distributed Debugging feature is activated). For user-defined interfaces for static DOs, care should be taken to ensure that the <span class="bold">DistributedDebugging</span> namespace is already preassigned by the system vCDL and cannot be used by the user.</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h3 class="SectionSub"><a name="BMNaming" id="BMNaming"></a>Naming of the Distributed Objects <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h3>
+                <p>Regardless of whether static or dynamic DOs are used, the names of the DOs are derived from the names of the watch expressions. When defining the static DOs, the names of the DOs can therefore not be freely selected. It should be noted that special characters in the Watch Expressions are converted in the order of the following table:</p>
+                <table style="mc-table-style: url('../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                    <tbody>
+                        <tr>
+                            <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="TableHead">Special Characters in Watch Expression</p>
+                            </th>
+                            <th class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="TableHead">Substitute</p>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">::</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">_</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">:</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">_</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">.</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">_</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">+</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">_plus_</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">-&gt;</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">__</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">-</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">_minus_</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">[</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">_</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">]</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">_</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">(</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">_</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">)</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">_</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">* (leading)</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">_</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">* (not leading)</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">_multiplied_by_</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">^</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">_</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">/</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">_divided_by_</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">\</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">_</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">==</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">_eq_</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">&lt;=</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">_le_</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">&gt;=</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">_ge_</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">&lt;</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">_lt_</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">&gt;</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">_gt_</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">!=</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">_ne_</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">=</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">_</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">#</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">_</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">~</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">_</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">|</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">_</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">{</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">_</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">}</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">_</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">!</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">_not_</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table"> (Space)</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">_</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">&amp;</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">_</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">$</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">_</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">§</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">_</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                <p class="Table">%</p>
+                            </td>
+                            <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                <p class="Table">_</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                    <p class="Table">
+                                        <img src="../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                    </p>
+                                </td>
+                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                    <p class="TableSymbolHead">Example</p>
+                                    <p class="Table">The Watch Expression</p>
+                                    <p class="SourceCode">static_cast&lt;double&gt;(integerVariable)</p>
+                                    <p class="Table">becomes</p>
+                                    <p class="SourceCode">static_cast_lt_double_gt__integerVariable_</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h3 class="SectionMain"><a name="BMNotes" id="BMNotes"></a>Final Notes <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h3>
+                <p>When the Visual Studio Debugger runs into a breakpoint, the window of Visual Studio / Visual Studio Code is automatically brought to the foreground depending on the setting. This also applies to breakpoints where <span class="GUI">Auto-Continue</span> is activated, since the program stops briefly here as well and the Distributed Debugging plugin then gives the debugger the command to continue program execution. Starting with Visual Studio 2019, this can be disabled. Under <span class="GUI">Tools | Options | Debugging | General</span> <span class="bold">|</span> <span class="GUI">Bring Visual Studio to the foreground when breaking in the debugger</span> (penultimate item) can be deactivated. This option is not yet available in Visual Studio 2017. It is recommended to place the windows of your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> and Visual Studio next to each other.</p>
+                <p>In the case of Visual Studio Code, this can be disabled under <span class="GUI">Settings | Features | Debug | Focus Window On Break</span> by deactivating this option.</p>
+                <p>To disable the distributed debugging plugin for an IDE instance, it is recommended to set the CANoe endpoint to an invalid value (<a href="#BMvs">see</a>).</p>
+                <p class="LinkList">&#160;</p>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="FooterWhite">
+                <table class="FooterWhite" style="border-collapse: collapse;margin-left: auto;margin-right: auto;">
+                    <col style="width: 70px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col style="width: 16px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="buttons popup-container clearfix topicToolbarProxy topicToolbarProxyFooter _Skins_HTML5TopicToolbar mc-component nocontent">
+                                    <div class="button-group-container-left">
+                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo"><a href="../../Shared/HowToUseOnlineHelp.htm" title="Tips for using the help" alt="Tips for using the help"><img src="../../../Resources/vImages/vBackstage/vHelpInfo.png" /></a>
+                                </p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo" style="text-align: right;"><span class="mc-variable Vector.BuildTime variable">2024-04-8T20:56:42</span>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <table style="width: 100%;border-collapse: separate;border-spacing: 3px 0px;margin-left: auto;margin-right: auto;caption-side: top;">
+                <col />
+                <col />
+                <col />
+                <col data-mc-conditions="BuildProcess.HTML5Link" />
+                <tbody>
+                    <tr>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;">
+                            <p class="vec_Footer">©&#160;Vector Informatik GmbH</p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;text-align: right;">
+                            <p class="vec_FooterBold">
+                                <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE&#160;Product Families</MadCap:conditionalText> Version <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.VectorTestUnitRunner">18</MadCap:conditionalText></p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="../../Shared/ContactCopyrightLicense.htm" class="vec_Footer MCXref xref xrefvec_Footer">Contact/Copyright/License</a>
+                            </p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="https://www.vector.com/int/en/company/get-info/privacy-policy/" target="_blank" class="vec_Footer">Data Privacy Notice</a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

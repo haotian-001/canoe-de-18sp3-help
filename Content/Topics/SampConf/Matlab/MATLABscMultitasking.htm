@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="CANoeDEFamily.xml" data-mc-path-to-help-system="../../../../" data-mc-conditions="Targets.CANoe-DE-Family" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../Skins/Favicons/favicon-16x16.png" /><title>MATLAB Integration: Multitasking</title>
+        <link href="../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Resources/Stylesheets/vTableMasterPageHeader.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../Resources/Stylesheets/vStylesheet.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../Resources/Stylesheets/vTableSymbol.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapGlobal.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapDom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapUtilities.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapXhr.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTextEffects.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSlideshow.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMessageBus.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMessageBus.CrossFrame.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapDefault.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMediaQueries.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAccessibility.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapHelpSystem.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAliasFile.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopicFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapFeedbackHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSkinHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.Breadcrumbs.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.MiniToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.SideMenu.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapIndex.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapGlossary.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapParser.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSearch.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapNavigateTopics.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapLms.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapELearning.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopic.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMicroContentComponent.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSearchHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopicElements.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTriPane.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/jscript" src="../../../Resources/vScripts/SyntaxHighlighting.js">
+        </script>
+        <script type="text/jscript" src="../../../Resources/vScripts/TabSwitch.js">
+        </script>
+        <script type="text/javascript" src="../../../Resources/vScripts/Vector.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../../CANoeDEFamily.htm#Topics/SampConf/Matlab/MATLABscMultitasking.htm">Open topic with navigation</a>
+        </p>
+        <div class="Body">
+            <div role="main" id="mc-main-content">
+                <p class="StructurePath"><a href="../CANoeCANalyzerSampleConfigurations.htm" class="StructurePath">Sample Configurations</a> » <a href="SampConfsMatlab.htm" class="StructurePath">MATLAB/Simulink</a> » <a href="SampConfsMatlab.htm#AdditionalComponentsCANoe" class="StructurePath">MATLAB Integration</a> » <span class="mc-variable System.Title variable">MATLAB Integration: Multitasking</span></p>
+                <h1><a name="aanchor21327"></a>
+                    <MadCap:concept term="MATLABSampleConfigurations" /><span class="mc-variable System.Title variable">MATLAB Integration: Multitasking</span>
+                </h1>
+                <p class="MenuPath">&#160;</p>
+                <p class="ToolAvailability" data-mc-conditions="BuildProcess.ToolAvailability"><a href="../../Shared/FeatureAvailability.htm" class="red" title="Feature availabilty for your product">Valid&#160;for</a>:&#160;&#160;CANoe&#160;DE<a name="aanchor21328"></a><MadCap:concept term="SFCANoeDE" />&#160;&#160;•&#160;&#160;CANoe:lite&#160;DE<a name="aanchor21329"></a><MadCap:concept term="SFCANoeLiteDE" /></p>
+                <p class="AutoSearchFilterConcepts"><a name="aanchor21330"></a>
+                    <MadCap:concept term="SFSampConf" />
+                </p>
+                <div>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                    <p class="TableHead">
+                                        <img src="../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                    </p>
+                                </td>
+                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                    <p class="Table">This sample configuration is only available after you have installed the MATLAB Integration Package:&#160;<a href="javascript:startDemoLoader('&quot;EXEC:..\\Installer Additional Components\\Matlab&quot;')" class="ExecuteLink">Open Setup Folder</a></p>
+                                    <p>See further:&#160;<a href="../../CANoeCANalyzer/Interfaces/MATLAB/MATLAB.htm">MATLAB Integration</a> and <a href="../../CANoeCANalyzer/Interfaces/MATLAB/Setup/MATLABSetupIntroduction.htm">MATLAB Integration Setup Introduction</a></p>
+                                    <p class="Table">Click on the blue link to load the sample configuration in your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText>.</p>
+                                    <div class="Indent"><span class="bold">Multitasking</span> – <span class="bold"><a href="javascript:startCANoeSubToolLauncherEN('Vector CANoe Matlab Integration Package', '&quot;SAMPLES:\\MultitaskingDemo\\MATLAB MultitaskingDemo.cfg&quot;')" class="ExecuteLink">MATLAB MultitaskingDemo.cfg</a></span><br />Shows the effects of the multitasking mode. (MATLAB Integration Package installation required).</div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h2>Introduction</h2>
+                <p>After opening the sample configuration, start the measurement.</p>
+                <h2 class="SectionMain">The Simulink Model</h2>
+                <p>The model consists of one continuous task (sine wave blocks) and 4 discrete tasks with different sample times, as depicted in the following figure. The first task (red) has a sample time of <span class="bold">0.5</span> s and outputs a sine wave to your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText>, while the other tasks have sample times of <span class="bold">1</span> s (green), <span class="bold">2</span> s (dark blue), and <span class="bold">2.5</span> s (light blue) and route two system variables through the model.</p>
+                <p>To simulate a bigger model where computation time matters, additional <span class="bold">S-Function</span> blocks are added. These <span class="bold">S-Functions</span> read their input value and approximately consume that amount of CPU time in seconds:</p>
+                <ul>
+                    <li>Task <span class="bold">0</span> takes about <span class="bold">0.1</span> s</li>
+                    <li>Task <span class="bold">1</span> takes <span class="bold">0.2</span> s</li>
+                    <li>Task <span class="bold">2</span> takes <span class="bold">0.4</span> s</li>
+                    <li>Task <span class="bold">3</span> has a variable execution time. After <span class="bold">3</span> samples of <span class="bold">0.5</span> s, one sample takes <span class="bold">1.5</span> s.</li>
+                </ul>
+                <p>
+                    <img src="../../../Resources/Images/SampConf/MATLABMultitask_800x558.png" style="width: 800;height: 558;" />
+                </p>
+                <div>
+                    <h2 class="SectionMain">The CANoe Configuration</h2>
+                    <h2><a name="Shortcuts" id="Shortcuts"></a>Desktops</h2>
+                    <p>This configuration contains the following desktops:</p>
+                    <div>
+                        <table style="width: 100%;border-collapse: separate;border-spacing: 2px 0px;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-top-style: none;border-top-width: 1px;border-bottom-style: none;border-bottom-width: 1px;margin-left: 0;margin-right: auto;">
+                            <col style="width: 120px;">
+                            </col>
+                            <col style="width: 120px;">
+                            </col>
+                            <col>
+                            </col>
+                            <tbody>
+                                <tr>
+                                    <td style="background-color: #F0F5F5;vertical-align: middle;border-left-style: solid;border-left-width: 1px;border-left-color: #bebebe;border-right-style: solid;border-right-width: 1px;border-right-color: #bebebe;border-top-style: solid;border-top-width: 1px;border-top-color: #bebebe;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #00a2e8;padding-left: 2pt;padding-right: 5pt;padding-top: 1pt;padding-bottom: 1pt;">
+                                        <p class="Table"><a href="#Multitaskting" class="Tab">Multitasking</a>
+                                        </p>
+                                    </td>
+                                    <td style="background-color: #F0F5F5;vertical-align: middle;border-left-style: solid;border-left-width: 1px;border-left-color: #bebebe;border-right-style: solid;border-right-width: 1px;border-right-color: #bebebe;border-top-style: solid;border-top-width: 1px;border-top-color: #bebebe;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #00a2e8;padding-left: 2pt;padding-right: 5pt;padding-top: 1pt;padding-bottom: 1pt;">
+                                        <p class="Table"><a href="#Paramaterization" class="Tab">Parameterization</a>
+                                        </p>
+                                    </td>
+                                    <td style="vertical-align: middle;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #00a2e8;padding-left: 5pt;padding-right: 5pt;padding-top: 2pt;padding-bottom: 2pt;">
+                                        <p class="Table">&#160;</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <h2 class="NavigationL"><a name="Multitaskting" id="Multitaskting"></a>Multitasking <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                        <p>On this desktop the input system variables of the model can be set in <span class="GUI">Panel1</span>. The corresponding output values can be observed in the <span class="GUI">Data</span> window. Furthermore the <span class="GUI">Data</span> window shows the currently active task and the task information of all tasks. The <span class="GUI">Graphics</span> window also shows the currently active task.</p>
+                    </div>
+                    <div>
+                        <h2 class="NavigationL"><a name="Paramaterization" id="Paramaterization"></a>Parameterization <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                        <p>On this desktop the amplitude of the block <span class="GUI">Sine Wave</span> can be changed in the Panel. The <span class="GUI">Graphics</span> window shows the signal before and after the rate transition block.</p>
+                        <p>After starting the simulation, modify the values of the input system variables and observe the output.</p>
+                        <ul>
+                            <li>Increasing <span class="GUI">In</span> will increase <span class="GUI">Out</span> in two steps.</li>
+                            <li class="Indent">First, <span class="GUI">Out</span> is increased as soon as Task <span class="bold">1</span> is executed.</li>
+                            <li class="Indent">Then, the change has to pass two rate transitions (to Task <span class="bold">3</span> and back), after that the value is added to the result again.</li>
+                            <li>Increasing <span class="GUI">In2</span> has the same effect, but the first change is delayed until Task <span class="bold">2</span> is executed.</li>
+                            <li><span class="GUI">In3</span> acts as an amplitude of a sine wave.</li>
+                            <li class="Indent">As soon as this value is unequal <span class="bold">0</span>, the sine value is subtracted from <span class="GUI">Out2</span>.</li>
+                            <li class="Indent">The value is updated every <span class="bold">2.5</span> s.</li>
+                            <li class="Indent">The changes are also propagated to Task <span class="bold">1</span>, where it influences <span class="GUI">Out</span>.</li>
+                        </ul>
+                        <p>In the <span class="GUI">Graphics</span> window, one can observe the scheduling of the tasks (see the figure below):</p>
+                        <ul>
+                            <li>At t = 0.5</li>
+                            <li class="Indent">all tasks are due</li>
+                            <li class="Indent">scheduler first schedules Task <span class="bold">0</span>, which takes <span class="bold">0.1</span> s</li>
+                            <li class="Indent">at t = 0.6, it schedules Task <span class="bold">1</span>, which takes <span class="bold">0.2</span> s</li>
+                            <li class="Indent">at t = 0.8, it schedulers Task <span class="bold">2</span>, which takes <span class="bold">0.4</span> s</li>
+                            <li>At t = 1.0</li>
+                            <li class="Indent">task <span class="bold">0</span> is due again, but Task <span class="bold">2</span> is not yet finished (red circle in the figure)</li>
+                            <li class="Indent">task <span class="bold">2</span> is preempted, Task <span class="bold">0</span> is executed and Task <span class="bold">2</span> is continued at t = 1.1</li>
+                            <li>At t = 1.3</li>
+                            <li class="Indent">task <span class="bold">3</span> is scheduled</li>
+                            <li class="Indent">during its execution, it is preempted two times (green circles in the figure)</li>
+                            <li>At t = 2.2</li>
+                            <li class="Indent">all tasks are completed, the emulated processor goes idle until t = 2.5</li>
+                        </ul>
+                        <p>
+                            <img src="../../../Resources/Images/SampConf/MATLABMultitaskGraphics_800x257.png" style="width: 800;height: 257;">
+                            </img>
+                        </p>
+                        <p>Due to the input to the <span class="GUI">S-Function</span> block, the fourth execution of Task <span class="bold">3</span> takes longer than its previous executions. It is due at t = 8.0 (first time due at t = 0.5, then each <span class="bold">2.5</span> s), and during its execution, it is preempted several times. Therefore, at t = 10.5, Task <span class="bold">3</span> is due again, but its previous execution is not yet finished. Instead of passing the task to the scheduler, the overrun counter is increased now.</p>
+                        <p>On the <span class="GUI">Parameterization</span> desktop, one can observe the output signal of the <span class="GUI">Sine Wave</span> block before <span class="bold">Sine_Continuous</span> and after <span class="bold">Sine_Task3</span> the rate transposition block. These signals are executed at the beginning of the execution of the corresponding tasks. Because the continuous blocks are computed in Task <span class="bold">0</span>, <span class="bold">Sine_Continuous</span> is updated every <span class="bold">0.5</span> seconds with only a small jitter. <span class="bold">Sine_Task3</span> should be updated every <span class="bold">2.5</span> seconds. However, due to the fact that Task <span class="bold">3</span> is often delayed by higher prior task, this update shows a large jitter.</p>
+                    </div>
+                </div>
+                <p class="LinkList"><a class="MCHelpControl MCHelpControl-Concept conceptLink" data-mc-concepts="MATLABSampleConfigurations" href="javascript:void(0);" data-mc-topics="MATLAB Integration: Analysis|MATLABscAnalysisConf.htm#aanchor26718||MATLAB Integration: CAPL Call|MATLABSamConfCAPLCall.htm#aanchor27743||MATLAB Integration: CAPL Handler|MATLABSamConfCAPLHandler.htm#aanchor18273||MATLAB Integration: HIL Signal Access|MATLABscHILSigAccConf.htm#aanchor19465||MATLAB Integration: HIL Sine Parameterization|MATLABscHILSinParamConf.htm#aanchor2768||MATLAB Integration: Multitasking|#aanchor21327||MATLAB Integration: Offline Mode|MATLABscOfflineMode.htm#aanchor28817||MATLAB Integration: Simple System|MATLABscSimpSysConf.htm#aanchor15700||MATLAB Integration: State Flow System|MATLABscStateFlowConf.htm#aanchor4944||MATLAB Integration: Trigger|MATLABscTriggerSampleConf.htm#aanchor2755||MATLAB Integration: Using Different Targets|MATLABscUsingDifferentTargets.htm#aanchor18677"><span class="MCHelpControl-ConceptHotSpot_"><img class="MCHelpControl_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="14" width="16" alt="Concept Link Icon" />See Also</span></a>
+                </p>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="FooterWhite">
+                <table class="FooterWhite" style="border-collapse: collapse;margin-left: auto;margin-right: auto;">
+                    <col style="width: 70px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col style="width: 16px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="buttons popup-container clearfix topicToolbarProxy topicToolbarProxyFooter _Skins_HTML5TopicToolbar mc-component nocontent">
+                                    <div class="button-group-container-left">
+                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo"><a href="../../Shared/HowToUseOnlineHelp.htm" title="Tips for using the help" alt="Tips for using the help"><img src="../../../Resources/vImages/vBackstage/vHelpInfo.png" /></a>
+                                </p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo" style="text-align: right;"><span class="mc-variable Vector.BuildTime variable">2024-04-8T20:56:42</span>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <table style="width: 100%;border-collapse: separate;border-spacing: 3px 0px;margin-left: auto;margin-right: auto;caption-side: top;">
+                <col />
+                <col />
+                <col />
+                <col data-mc-conditions="BuildProcess.HTML5Link" />
+                <tbody>
+                    <tr>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;">
+                            <p class="vec_Footer">©&#160;Vector Informatik GmbH</p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;text-align: right;">
+                            <p class="vec_FooterBold">
+                                <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE&#160;Product Families</MadCap:conditionalText> Version <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.VectorTestUnitRunner">18</MadCap:conditionalText></p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="../../Shared/ContactCopyrightLicense.htm" class="vec_Footer MCXref xref xrefvec_Footer">Contact/Copyright/License</a>
+                            </p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="https://www.vector.com/int/en/company/get-info/privacy-policy/" target="_blank" class="vec_Footer">Data Privacy Notice</a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

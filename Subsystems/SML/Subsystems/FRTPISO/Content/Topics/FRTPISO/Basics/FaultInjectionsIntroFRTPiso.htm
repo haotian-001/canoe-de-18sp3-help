@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="" data-mc-search-type="Stem" data-mc-help-system-file-name="FRTPISO.xml" data-mc-path-to-help-system="../../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../Skins/Favicons/favicon-16x16.png" /><title>Fault Injections - Introduction</title>
+        <link href="../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Resources/Stylesheets/vTableMasterPageHeader.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../Resources/Stylesheets/vStylesheet.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../Resources/Stylesheets/vTableSymbol.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/jscript" src="../../../Resources/vScripts/SyntaxHighlighting.js">
+        </script>
+        <script type="text/jscript" src="../../../Resources/vScripts/TabSwitch.js">
+        </script>
+        <script type="text/javascript" src="../../../Resources/vScripts/Vector.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../../FRTPISO.htm#Topics/FRTPISO/Basics/FaultInjectionsIntroFRTPiso.htm">Open topic with navigation</a>
+        </p>
+        <div class="Body">
+            <div role="main" id="mc-main-content">
+                <p class="StructurePath">
+                    <MadCap:conditionalText data-mc-conditions="FlexRayTP.ISO"><a href="../FlexRayTPFRTPiso.htm" class="StructurePath">ISO FlexRay TP</a>
+                    </MadCap:conditionalText> » Basics »  <span class="mc-variable System.Title variable">Fault Injections - Introduction</span></p>
+                <h1><a name="kanchor44"></a><span class="mc-variable System.Title variable">Fault Injections - Introduction</span>
+                </h1>
+                <p class="MenuPath">&#160;</p>
+                <p class="AutoSearchFilterConcepts"><a name="aanchor82"></a>
+                    <MadCap:concept term="SFsml" />
+                </p>
+                <div>
+                    <h3>Introduction</h3>
+                    <p>The following functions (all beginning with the prefix <span class="bold">FrTPFI_</span>) allow, before a transmission or reception is starting, to define some miss-behavior for the TP DLL per connection. Thus, failures can be injected for the C-PDUs that are to be sent by the DLL in order to test the peer.</p>
+                    <p>&#160;</p>
+                    <h3>Categories</h3>
+                    <p>The following categories of failures exist:</p>
+                    <div>
+                        <ul>
+                            <li><span class="bold">Delay a Tx C-PDU</span>
+                                <br />The sending of any C-PDU will additionally be delayed.</li>
+                        </ul>
+                        <ul>
+                            <li><span class="bold">Double a Tx C-PDU</span>
+                                <br />Any C-PDU will be transmitted twice, whereas the doubled C-PDU can optionally be delayed.</li>
+                        </ul>
+                        <ul>
+                            <li><span class="bold">Drop a Tx C-PDU</span>
+                                <br />Any C-PDU will not be sent on the bus, although the DLL assumes that it was sent.</li>
+                        </ul>
+                        <ul>
+                            <li><span class="bold">Miss-interpret a Rx FC or ACK-RETRY</span>
+                                <br />Any received Flow Control or Acknowledge Frame can be miss-interpreted.</li>
+                        </ul>
+                    </div>
+                    <p>Thereby Data Frames (DF: STF, CF and LF) are distinguished versus Flow Control (FC) and Acknowledge (ACK_RET) C-PDUs.</p>
+                    <p>&#160;</p>
+                    <h3>Restrictions</h3>
+                    <p>Each of the functions can define exactly one failure. Thus, it is not possible to define e.g. the dropping of the <MadCap:conditionalText data-mc-conditions="FlexRayTP.ISO">STF</MadCap:conditionalText> and the <MadCap:conditionalText data-mc-conditions="FlexRayTP.ISO">LF</MadCap:conditionalText> simultaneously.</p>
+                    <p>But when the failure was injected (e.g. the <MadCap:conditionalText data-mc-conditions="FlexRayTP.ISO">STF</MadCap:conditionalText> was dropped), a new one (dropping the <MadCap:conditionalText data-mc-conditions="FlexRayTP.ISO">LF</MadCap:conditionalText>) can immediately be defined.</p>
+                    <p>But, any two different functions can be used in order to define simultaneously different fault injections (e.g. to define dropping a Data Frame n and doubling any other Data Frame m; n ≠ m).</p>
+                    <div>
+                        <table style="width: 100%;mc-table-style: url('../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                            <col class="TableStyle-vTableSymbol-Column-Column1" />
+                            <col class="TableStyle-vTableSymbol-Column-Column2" />
+                            <tbody>
+                                <tr>
+                                    <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                        <img src="../../../Resources/vImages/vCrossRef.png" />
+                                    </td>
+                                    <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                        <p class="BoldBlue">Cross&#160;Reference</p>
+                                        <p class="Table">For manipulation of the receiver status see function <MadCap:conditionalText data-mc-conditions="FlexRayTP.ISO"><a href="../Functions/FlexRayTPFunctionsFRTPiso.htm"><a href="../Functions/CAPLfunctionSetReceiverStatusFRTPiso.htm">FrTP_SetReceiverStatus</a></a></MadCap:conditionalText>.</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="FooterWhite">
+                <table class="FooterWhite" style="border-collapse: collapse;margin-left: auto;margin-right: auto;">
+                    <col style="width: 70px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col style="width: 16px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col data-mc-conditions="BuildProcess.TechnicalReferenceOnly" />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="buttons popup-container clearfix topicToolbarProxy topicToolbarProxyFooter _Skins_HTML5TopicToolbar mc-component nocontent">
+                                    <div class="button-group-container-left">
+                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo"><a href="javascript:startCANoeLauncher('HELP:H2H_01_0086_HowToUseOnlineHelp')"><img src="../../../Resources/vImages/vBackstage/vHelpInfo.png" /></a>
+                                </p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo">•&#160;&#160;Technical&#160;References are only&#160;available&#160;in&#160;English</p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo" style="text-align: right;"><span class="mc-variable Vector.BuildTime variable">2024-04-8T21:00:31</span>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <table style="width: 100%;border-collapse: separate;border-spacing: 3px 0px;margin-left: auto;margin-right: auto;caption-side: top;">
+                <col />
+                <col />
+                <col />
+                <col data-mc-conditions="BuildProcess.HTML5Link" />
+                <tbody>
+                    <tr>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;">
+                            <p class="vec_Footer">©&#160;Vector Informatik GmbH</p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;text-align: right;">
+                            <p class="vec_FooterBold">Version — <MadCap:conditionalText data-mc-conditions="FlexRayTP.ISO">ISO FlexRay TP</MadCap:conditionalText></p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="javascript:startCANoeLauncher('HELP:H2H_01_0085_ContactCopyrightLicense')" class="ListWhite" data-mc-conditions="vConditions.HTML5Link">Contact/Copyright/Licenses</a>
+                            </p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="https://www.vector.com/int/en/company/get-info/privacy-policy/" target="_blank" class="vec_Footer">Data Privacy Notice</a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

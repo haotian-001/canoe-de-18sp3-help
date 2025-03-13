@@ -1,0 +1,4264 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Python.xml" data-mc-path-to-help-system="../../" data-mc-toc-path="Python" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../Skins/Favicons/browserconfig.xml" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../Skins/Favicons/favicon-16x16.png" /><title>
+   vector.canoe.threading — Python API  documentation
+  </title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Resources/Stylesheets/vTableMasterPageHeader.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../Resources/Stylesheets/vStylesheet.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.needs-pie
+{
+	behavior: url('../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <style>/*&lt;meta /&gt;*/
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.needs-pie
+{
+	behavior: url('../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="_static/pygments.css" rel="stylesheet" type="text/css" />
+        <link href="_static/alabaster.css" rel="stylesheet" type="text/css" />
+        <link href="_static/custom.css" rel="stylesheet" type="text/css" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../Skins/Favicons/favicon-16x16.png" />
+        <link href="vector_canoe_tfs.html" rel="next" title="vector.canoe.tfs" />
+        <link href="vector_canoe.html" rel="prev" title="vector.canoe" />
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js">
+        </script>
+        <script src="_static/jquery.js">
+        </script>
+        <script src="_static/underscore.js">
+        </script>
+        <script src="_static/doctools.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapGlobal.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapDom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapUtilities.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapXhr.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapTextEffects.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapSlideshow.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapMessageBus.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapMessageBus.CrossFrame.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapDefault.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapMediaQueries.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAccessibility.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapHelpSystem.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAliasFile.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapTopicFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapFeedbackHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapSkinHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapToc.Breadcrumbs.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapToc.MiniToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapToc.SideMenu.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapIndex.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapGlossary.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapParser.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapSearch.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapNavigateTopics.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapLms.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapELearning.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapTopic.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapMicroContentComponent.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapSearchHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapTopicElements.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapTriPane.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/jscript" src="../Resources/vScripts/SyntaxHighlighting.js">
+        </script>
+        <script type="text/jscript" src="../Resources/vScripts/TabSwitch.js">
+        </script>
+        <script type="text/javascript" src="../Resources/vScripts/Vector.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../Python.htm#html/vector_canoe_threading.html">Open topic with navigation</a>
+        </p>
+        <div class="Body">
+            <table style="mc-table-style: url('../Resources/Stylesheets/vTableMasterPageHeader.css');margin-left: auto;margin-right: 0;" class="TableStyle-vTableMasterPageHeader" cellspacing="0" data-mc-conditions="BuildProcess.CHMLink">
+                <col />
+                <tbody>
+                    <tr class="TableStyle-vTableMasterPageHeader-Body-Body1" style="height: 26px;">
+                        <td class="TableStyle-vTableMasterPageHeader-BodyA--Body1" style="background-color: #ffffff;padding-left: 0px;padding-right: 3px;padding-top: 0px;padding-bottom: 0px;">
+                            <div class="buttons popup-container clearfix topicToolbarProxy _Skins_HTML5TopicToolbar mc-component nocontent" style="text-align: right; mc-topic-toolbar-items: ExpandAll CollapseAll Print Back Forward Home QuickSearch RemoveHighlight;">
+                                <div class="button-group-container-left">
+                                    <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                        <div>
+                                            <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                <div class="button-icon"> </div>
+                                            </div>
+                                        </div>
+                                    </button>
+                                    <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                        <div>
+                                            <div role="img" class="button-icon-wrapper">
+                                                <div class="button-icon"> </div>
+                                            </div>
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div role="main" id="mc-main-content"><a name="aanchor2"></a>
+                <MadCap:concept term="SFApiPython" />
+                <div class="document">
+                    <div class="documentwrapper">
+                        <div class="body" role="main">
+                            <div class="section" id="vector-canoe-threading">
+                                <h1>
+       vector.canoe.threading
+       <a class="headerlink" href="#vector-canoe-threading" title="Permalink to this headline">
+        ¶
+       </a></h1><span class="target" id="module-vector.canoe.threading"></span>
+                                <dl class="py class">
+                                    <dt class="sig sig-object py" id="vector.canoe.threading.SignalingErrorCode"><em class="property"><span class="pre">
+          class
+         </span></em><span class="sig-name descname"><span class="pre">
+          SignalingErrorCode
+         </span></span><span class="sig-paren">
+         (
+        </span><em class="sig-param"><span class="n"><span class="pre">
+           value
+          </span></span></em><span class="sig-paren">
+         )
+        </span><a class="headerlink" href="#vector.canoe.threading.SignalingErrorCode" title="Permalink to this definition">
+         ¶
+        </a>
+                                    </dt>
+                                    <dd>
+                                        <p>
+         Bases:
+         <code class="xref py py-class docutils literal notranslate"><span class="pre">
+           enum.IntEnum
+          </span></code></p>
+                                        <p>
+         An enumeration.
+        </p>
+                                        <dl class="py attribute">
+                                            <dt class="sig sig-object py" id="vector.canoe.threading.SignalingErrorCode.FAILURE"><span class="sig-name descname"><span class="pre">
+            FAILURE
+           </span></span><em class="property"><span class="pre">
+            =
+           </span><span class="pre">
+            -1
+           </span></em><a class="headerlink" href="#vector.canoe.threading.SignalingErrorCode.FAILURE" title="Permalink to this definition">
+           ¶
+          </a>
+                                            </dt>
+                                            <dd>
+                                            </dd>
+                                        </dl>
+                                        <dl class="py attribute">
+                                            <dt class="sig sig-object py" id="vector.canoe.threading.SignalingErrorCode.SUCCESS"><span class="sig-name descname"><span class="pre">
+            SUCCESS
+           </span></span><em class="property"><span class="pre">
+            =
+           </span><span class="pre">
+            1
+           </span></em><a class="headerlink" href="#vector.canoe.threading.SignalingErrorCode.SUCCESS" title="Permalink to this definition">
+           ¶
+          </a>
+                                            </dt>
+                                            <dd>
+                                            </dd>
+                                        </dl>
+                                        <dl class="py attribute">
+                                            <dt class="sig sig-object py" id="vector.canoe.threading.SignalingErrorCode.TIMEOUT"><span class="sig-name descname"><span class="pre">
+            TIMEOUT
+           </span></span><em class="property"><span class="pre">
+            =
+           </span><span class="pre">
+            0
+           </span></em><a class="headerlink" href="#vector.canoe.threading.SignalingErrorCode.TIMEOUT" title="Permalink to this definition">
+           ¶
+          </a>
+                                            </dt>
+                                            <dd>
+                                            </dd>
+                                        </dl>
+                                    </dd>
+                                </dl>
+                                <dl class="py class">
+                                    <dt class="sig sig-object py" id="vector.canoe.threading.UserEvent"><em class="property"><span class="pre">
+          class
+         </span></em><span class="sig-name descname"><span class="pre">
+          UserEvent
+         </span></span><a class="headerlink" href="#vector.canoe.threading.UserEvent" title="Permalink to this definition">
+         ¶
+        </a>
+                                    </dt>
+                                    <dd>
+                                        <p>
+         Bases:
+         <code class="xref py py-class docutils literal notranslate"><span class="pre">
+           object
+          </span></code></p>
+                                        <p>
+         Models an event that the user can manually wait on and trigger.
+        </p>
+                                        <dl class="py method">
+                                            <dt class="sig sig-object py" id="vector.canoe.threading.UserEvent.join"><span class="sig-name descname"><span class="pre">
+            join
+           </span></span><span class="sig-paren">
+           (
+          </span><span class="sig-paren">
+           )
+          </span><a class="headerlink" href="#vector.canoe.threading.UserEvent.join" title="Permalink to this definition">
+           ¶
+          </a>
+                                            </dt>
+                                            <dd>
+                                                <p>
+           Creates a function object describing the event of a user event being set, similar to
+           <a class="reference internal" href="#vector.canoe.threading.UserEvent.set" title="vector.canoe.threading.UserEvent.set"><code class="xref py py-func docutils literal notranslate"><span class="pre">
+              set()
+             </span></code></a>
+           .
+          </p>
+                                                <p>
+           To await this event, pass it to
+           <a class="reference internal" href="#vector.canoe.threading.wait_for_all_joined_events" title="vector.canoe.threading.wait_for_all_joined_events"><code class="xref py py-func docutils literal notranslate"><span class="pre">
+              wait_for_all_joined_events()
+             </span></code></a>
+           or
+           <a class="reference internal" href="#vector.canoe.threading.wait_for_any_joined_event" title="vector.canoe.threading.wait_for_any_joined_event"><code class="xref py py-func docutils literal notranslate"><span class="pre">
+              wait_for_any_joined_event()
+             </span></code></a>
+           as part of a list.
+This function does not wait by itself.
+          </p>
+                                                <dl class="field-list simple">
+                                                    <dt class="field-odd">
+            Returns
+           </dt>
+                                                    <dd class="field-odd">
+                                                        <p>
+             a lambda function containing the joined event.
+            </p>
+                                                    </dd>
+                                                    <dt class="field-even">
+            Return type
+           </dt>
+                                                    <dd class="field-even">
+                                                        <p>
+             Callable[[], int]
+            </p>
+                                                    </dd>
+                                                </dl>
+                                            </dd>
+                                        </dl>
+                                        <dl class="py method">
+                                            <dt class="sig sig-object py" id="vector.canoe.threading.UserEvent.set"><span class="sig-name descname"><span class="pre">
+            set
+           </span></span><span class="sig-paren">
+           (
+          </span><span class="sig-paren">
+           )
+          </span><a class="headerlink" href="#vector.canoe.threading.UserEvent.set" title="Permalink to this definition">
+           ¶
+          </a>
+                                            </dt>
+                                            <dd>
+                                                <p>
+           Signals the user event.
+Consequently resolves a possibly-active wait condition on this event.
+If such a wait condition is active, the corresponding code will be executed immediately.
+The current function is therefore interrupted and the code will be executed at a later point in time after the set method call.
+          </p>
+                                                <p>
+           This method cannot be called on background thread without
+           <a class="reference internal" href="#vector.canoe.threading.UserEvent.wait" title="vector.canoe.threading.UserEvent.wait"><code class="xref py py-func docutils literal notranslate"><span class="pre">
+              wait()
+             </span></code></a>
+           on the same UserEvent object.
+Will also signal all events with the same id in the current test module.
+          </p>
+                                                <p>
+           This method signals all user events with the same ID.
+:returns: a SignalingErrorCode with the following values:
+          </p>
+                                                <blockquote>
+                                                    <div>
+                                                        <ul class="simple">
+                                                            <li>
+                                                                <p>
+               SUCCESS, Event was signaled successfully
+              </p>
+                                                            </li>
+                                                            <li>
+                                                                <p>
+               FAILURE, Event could not be signaled
+              </p>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </blockquote>
+                                                <dl class="field-list simple">
+                                                    <dt class="field-odd">
+            Return type
+           </dt>
+                                                    <dd class="field-odd">
+                                                        <p><a class="reference internal" href="#vector.canoe.threading.SignalingErrorCode" title="vector.canoe.threading.SignalingErrorCode">
+              SignalingErrorCode
+             </a>
+                                                        </p>
+                                                    </dd>
+                                                </dl>
+                                            </dd>
+                                        </dl>
+                                        <dl class="py method">
+                                            <dt class="sig sig-object py" id="vector.canoe.threading.UserEvent.wait"><span class="sig-name descname"><span class="pre">
+            wait
+           </span></span><span class="sig-paren">
+           (
+          </span><em class="sig-param"><span class="n"><span class="pre">
+             time_out_ms
+            </span></span><span class="p"><span class="pre">
+             :
+            </span></span><span class="n"><span class="pre">
+             int
+            </span></span></em><span class="sig-paren">
+           )
+          </span><a class="headerlink" href="#vector.canoe.threading.UserEvent.wait" title="Permalink to this definition">
+           ¶
+          </a>
+                                            </dt>
+                                            <dd>
+                                                <p>
+           Waits for the set method to be called on the event instance.
+Should this event not occur before the expiration of the time time_out_ms, the wait condition is resolved nevertheless.
+          </p>
+                                                <dl class="field-list simple">
+                                                    <dt class="field-odd">
+            Parameters
+           </dt>
+                                                    <dd class="field-odd">
+                                                        <p><strong>
+              time_out_ms
+             </strong>
+             (
+             <em>
+              int
+             </em>
+             ) – The timeout in milliseconds after which the wait ends.
+A value of 0 disables the timeout for this wait.
+            </p>
+                                                    </dd>
+                                                    <dt class="field-even">
+            Returns
+           </dt>
+                                                    <dd class="field-even">
+                                                        <p>
+                                                            <p>
+              A WaitingErrorCode with the following values:
+             </p>
+                                                            <ul class="simple">
+                                                                <li>
+                                                                    <p>
+                CONSTRAINT_VIOLATION, Resume due to constraint violation
+               </p>
+                                                                </li>
+                                                                <li>
+                                                                    <p>
+                GENERAL_ERROR, General error, for example, functionality is not available
+               </p>
+                                                                </li>
+                                                                <li>
+                                                                    <p>
+                TIMEOUT, Resume due to timeout
+               </p>
+                                                                </li>
+                                                                <li>
+                                                                    <p>
+                EVENT_OCCURRED, Resume due to event occurred (value has been reached)
+               </p>
+                                                                </li>
+                                                            </ul>
+                                                        </p>
+                                                    </dd>
+                                                    <dt class="field-odd">
+            Return type
+           </dt>
+                                                    <dd class="field-odd">
+                                                        <p><a class="reference internal" href="#vector.canoe.threading.WaitingErrorCode" title="vector.canoe.threading.WaitingErrorCode">
+              WaitingErrorCode
+             </a>
+                                                        </p>
+                                                    </dd>
+                                                </dl>
+                                            </dd>
+                                        </dl>
+                                    </dd>
+                                </dl>
+                                <dl class="py class">
+                                    <dt class="sig sig-object py" id="vector.canoe.threading.WaitForNextCallResult"><em class="property"><span class="pre">
+          class
+         </span></em><span class="sig-name descname"><span class="pre">
+          WaitForNextCallResult
+         </span></span><span class="sig-paren">
+         (
+        </span><em class="sig-param"><span class="n"><span class="pre">
+           wait_result
+          </span></span><span class="p"><span class="pre">
+           :
+          </span></span><span class="n"><a class="reference internal" href="#vector.canoe.threading.WaitingErrorCode" title="vector.canoe.threading.WaitingErrorCode"><span class="pre">
+            vector.canoe.threading.WaitingErrorCode
+           </span></a></span></em>
+        ,
+        <em class="sig-param"><span class="n"><span class="pre">
+           call_context
+          </span></span><span class="p"><span class="pre">
+           :
+          </span></span><span class="n"><span class="pre">
+           object
+          </span></span></em><span class="sig-paren">
+         )
+        </span><a class="headerlink" href="#vector.canoe.threading.WaitForNextCallResult" title="Permalink to this definition">
+         ¶
+        </a></dt>
+                                    <dd>
+                                        <p>
+         Bases:
+         <code class="xref py py-class docutils literal notranslate"><span class="pre">
+           NamedTuple
+          </span></code></p>
+                                        <p>
+         The result of a call to wait_for_next_call of the form (wait_result, call_context).
+        </p>
+                                        <dl class="field-list simple">
+                                            <dt class="field-odd">
+          Wait_result
+         </dt>
+                                            <dd class="field-odd">
+                                                <p>
+           a
+           <a class="reference internal" href="#vector.canoe.threading.WaitingErrorCode" title="vector.canoe.threading.WaitingErrorCode"><code class="xref py py-class docutils literal notranslate"><span class="pre">
+              WaitingErrorCode
+             </span></code></a></p>
+                                            </dd>
+                                            <dt class="field-even">
+          Call_context
+         </dt>
+                                            <dd class="field-even">
+                                                <p>
+           a call context object of the call that resolved the wait.
+If no call occurred, this is None.
+          </p>
+                                            </dd>
+                                        </dl>
+                                        <dl class="py attribute">
+                                            <dt class="sig sig-object py" id="vector.canoe.threading.WaitForNextCallResult.call_context"><span class="sig-name descname"><span class="pre">
+            call_context
+           </span></span><em class="property"><span class="pre">
+            :
+           </span><span class="pre">
+            object
+           </span></em><a class="headerlink" href="#vector.canoe.threading.WaitForNextCallResult.call_context" title="Permalink to this definition">
+           ¶
+          </a>
+                                            </dt>
+                                            <dd>
+                                                <p>
+           Alias for field number 1
+          </p>
+                                            </dd>
+                                        </dl>
+                                        <dl class="py attribute">
+                                            <dt class="sig sig-object py" id="vector.canoe.threading.WaitForNextCallResult.wait_result"><span class="sig-name descname"><span class="pre">
+            wait_result
+           </span></span><em class="property"><span class="pre">
+            :
+           </span><a class="reference internal" href="#vector.canoe.threading.WaitingErrorCode" title="vector.canoe.threading.WaitingErrorCode"><span class="pre">
+             vector.canoe.threading.WaitingErrorCode
+            </span></a></em><a class="headerlink" href="#vector.canoe.threading.WaitForNextCallResult.wait_result" title="Permalink to this definition">
+           ¶
+          </a>
+                                            </dt>
+                                            <dd>
+                                                <p>
+           Alias for field number 0
+          </p>
+                                            </dd>
+                                        </dl>
+                                    </dd>
+                                </dl>
+                                <dl class="py class">
+                                    <dt class="sig sig-object py" id="vector.canoe.threading.WaitingErrorCode"><em class="property"><span class="pre">
+          class
+         </span></em><span class="sig-name descname"><span class="pre">
+          WaitingErrorCode
+         </span></span><span class="sig-paren">
+         (
+        </span><em class="sig-param"><span class="n"><span class="pre">
+           value
+          </span></span></em><span class="sig-paren">
+         )
+        </span><a class="headerlink" href="#vector.canoe.threading.WaitingErrorCode" title="Permalink to this definition">
+         ¶
+        </a>
+                                    </dt>
+                                    <dd>
+                                        <p>
+         Bases:
+         <code class="xref py py-class docutils literal notranslate"><span class="pre">
+           enum.IntEnum
+          </span></code></p>
+                                        <p>
+         Return codes of waiting functions of this module.
+        </p>
+                                        <dl class="simple">
+                                            <dt>
+          The following values are possible:
+         </dt>
+                                            <dd>
+                                                <ul class="simple">
+                                                    <li>
+                                                        <p>
+             JOIN_ERROR, Error joining events to the event stack
+            </p>
+                                                    </li>
+                                                    <li>
+                                                        <p>
+             CONSTRAINT_VIOLATION, Resume due to constraint violation
+            </p>
+                                                    </li>
+                                                    <li>
+                                                        <p>
+             GENERAL_ERROR, General error, for example, functionality is not available
+            </p>
+                                                    </li>
+                                                    <li>
+                                                        <p>
+             TIMEOUT, Resume due to timeout
+            </p>
+                                                    </li>
+                                                    <li>
+                                                        <p>
+             EVENT_OCCURRED, Resume due to event occurred (value has been reached)
+            </p>
+                                                    </li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                        <dl class="py attribute">
+                                            <dt class="sig sig-object py" id="vector.canoe.threading.WaitingErrorCode.CONSTRAINT_VIOLATION"><span class="sig-name descname"><span class="pre">
+            CONSTRAINT_VIOLATION
+           </span></span><em class="property"><span class="pre">
+            =
+           </span><span class="pre">
+            -2
+           </span></em><a class="headerlink" href="#vector.canoe.threading.WaitingErrorCode.CONSTRAINT_VIOLATION" title="Permalink to this definition">
+           ¶
+          </a>
+                                            </dt>
+                                            <dd>
+                                            </dd>
+                                        </dl>
+                                        <dl class="py attribute">
+                                            <dt class="sig sig-object py" id="vector.canoe.threading.WaitingErrorCode.EVENT_OCCURRED"><span class="sig-name descname"><span class="pre">
+            EVENT_OCCURRED
+           </span></span><em class="property"><span class="pre">
+            =
+           </span><span class="pre">
+            1
+           </span></em><a class="headerlink" href="#vector.canoe.threading.WaitingErrorCode.EVENT_OCCURRED" title="Permalink to this definition">
+           ¶
+          </a>
+                                            </dt>
+                                            <dd>
+                                            </dd>
+                                        </dl>
+                                        <dl class="py attribute">
+                                            <dt class="sig sig-object py" id="vector.canoe.threading.WaitingErrorCode.GENERAL_ERROR"><span class="sig-name descname"><span class="pre">
+            GENERAL_ERROR
+           </span></span><em class="property"><span class="pre">
+            =
+           </span><span class="pre">
+            -1
+           </span></em><a class="headerlink" href="#vector.canoe.threading.WaitingErrorCode.GENERAL_ERROR" title="Permalink to this definition">
+           ¶
+          </a>
+                                            </dt>
+                                            <dd>
+                                            </dd>
+                                        </dl>
+                                        <dl class="py attribute">
+                                            <dt class="sig sig-object py" id="vector.canoe.threading.WaitingErrorCode.JOIN_ERROR"><span class="sig-name descname"><span class="pre">
+            JOIN_ERROR
+           </span></span><em class="property"><span class="pre">
+            =
+           </span><span class="pre">
+            -3
+           </span></em><a class="headerlink" href="#vector.canoe.threading.WaitingErrorCode.JOIN_ERROR" title="Permalink to this definition">
+           ¶
+          </a>
+                                            </dt>
+                                            <dd>
+                                            </dd>
+                                        </dl>
+                                        <dl class="py attribute">
+                                            <dt class="sig sig-object py" id="vector.canoe.threading.WaitingErrorCode.TIMEOUT"><span class="sig-name descname"><span class="pre">
+            TIMEOUT
+           </span></span><em class="property"><span class="pre">
+            =
+           </span><span class="pre">
+            0
+           </span></em><a class="headerlink" href="#vector.canoe.threading.WaitingErrorCode.TIMEOUT" title="Permalink to this definition">
+           ¶
+          </a>
+                                            </dt>
+                                            <dd>
+                                            </dd>
+                                        </dl>
+                                    </dd>
+                                </dl>
+                                <dl class="py function">
+                                    <dt class="sig sig-object py" id="vector.canoe.threading.join_change"><span class="sig-name descname"><span class="pre">
+          join_change
+         </span></span><span class="sig-paren">
+         (
+        </span><em class="sig-param"><span class="n"><span class="pre">
+           value_entity
+          </span></span></em><span class="sig-paren">
+         )
+        </span>
+        →
+        <span class="pre">
+         Callable
+        </span><span class="p"><span class="pre">
+          [
+         </span></span><span class="p"><span class="pre">
+          ]
+         </span></span><span class="p"><span class="pre">
+          ,
+         </span></span><span class="pre">
+         int
+        </span><span class="p"><span class="pre">
+          ]
+         </span></span><a class="headerlink" href="#vector.canoe.threading.join_change" title="Permalink to this definition">
+         ¶
+        </a></dt>
+                                    <dd>
+                                        <p>
+         Creates a function object describing the event of a value entity changing its value, similar to
+         <a class="reference internal" href="#vector.canoe.threading.wait_for_change" title="vector.canoe.threading.wait_for_change"><code class="xref py py-func docutils literal notranslate"><span class="pre">
+            wait_for_change()
+           </span></code></a>
+         .
+Updates to the same value are ignored.
+        </p>
+                                        <p>
+         To await this event, pass it to
+         <a class="reference internal" href="#vector.canoe.threading.wait_for_all_joined_events" title="vector.canoe.threading.wait_for_all_joined_events"><code class="xref py py-func docutils literal notranslate"><span class="pre">
+            wait_for_all_joined_events()
+           </span></code></a>
+         or
+         <a class="reference internal" href="#vector.canoe.threading.wait_for_any_joined_event" title="vector.canoe.threading.wait_for_any_joined_event"><code class="xref py py-func docutils literal notranslate"><span class="pre">
+            wait_for_any_joined_event()
+           </span></code></a>
+         as part of a list.
+This function does not wait by itself.
+        </p>
+                                        <dl class="field-list simple">
+                                            <dt class="field-odd">
+          Parameters
+         </dt>
+                                            <dd class="field-odd">
+                                                <p><strong>
+            value_entity
+           </strong>
+           – Value entity of a distributed object.
+          </p>
+                                            </dd>
+                                            <dt class="field-even">
+          Returns
+         </dt>
+                                            <dd class="field-even">
+                                                <p>
+           a lambda function containing the joined event.
+          </p>
+                                            </dd>
+                                            <dt class="field-odd">
+          Return type
+         </dt>
+                                            <dd class="field-odd">
+                                                <p>
+           Callable[[], int]
+          </p>
+                                            </dd>
+                                        </dl>
+                                    </dd>
+                                </dl>
+                                <dl class="py function">
+                                    <dt class="sig sig-object py" id="vector.canoe.threading.join_change_count_greater"><span class="sig-name descname"><span class="pre">
+          join_change_count_greater
+         </span></span><span class="sig-paren">
+         (
+        </span><em class="sig-param"><span class="n"><span class="pre">
+           value_entity
+          </span></span></em>
+        ,
+        <em class="sig-param"><span class="n"><span class="pre">
+           count
+          </span></span><span class="p"><span class="pre">
+           :
+          </span></span><span class="n"><span class="pre">
+           int
+          </span></span></em><span class="sig-paren">
+         )
+        </span>
+        →
+        <span class="pre">
+         Callable
+        </span><span class="p"><span class="pre">
+          [
+         </span></span><span class="p"><span class="pre">
+          ]
+         </span></span><span class="p"><span class="pre">
+          ,
+         </span></span><span class="pre">
+         int
+        </span><span class="p"><span class="pre">
+          ]
+         </span></span><a class="headerlink" href="#vector.canoe.threading.join_change_count_greater" title="Permalink to this definition">
+         ¶
+        </a></dt>
+                                    <dd>
+                                        <p>
+         Creates a function object describing the event of a value entity’s change counter reaching a certain value, similar to
+         <a class="reference internal" href="#vector.canoe.threading.wait_for_change_count_greater" title="vector.canoe.threading.wait_for_change_count_greater"><code class="xref py py-func docutils literal notranslate"><span class="pre">
+            wait_for_change_count_greater()
+           </span></code></a>
+         .
+        </p>
+                                        <p>
+         To await this event, pass it to
+         <a class="reference internal" href="#vector.canoe.threading.wait_for_all_joined_events" title="vector.canoe.threading.wait_for_all_joined_events"><code class="xref py py-func docutils literal notranslate"><span class="pre">
+            wait_for_all_joined_events()
+           </span></code></a>
+         or
+         <a class="reference internal" href="#vector.canoe.threading.wait_for_any_joined_event" title="vector.canoe.threading.wait_for_any_joined_event"><code class="xref py py-func docutils literal notranslate"><span class="pre">
+            wait_for_any_joined_event()
+           </span></code></a>
+         as part of a list.
+This function does not wait by itself.
+        </p>
+                                        <dl class="field-list simple">
+                                            <dt class="field-odd">
+          Parameters
+         </dt>
+                                            <dd class="field-odd">
+                                                <ul class="simple">
+                                                    <li>
+                                                        <p><strong>
+              value_entity
+             </strong>
+             – Value entity of a distributed object.
+            </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>
+              count
+             </strong>
+             (
+             <em>
+              int
+             </em>
+             ) – value the change counter has to reach for the event to trigger.
+            </p>
+                                                    </li>
+                                                </ul>
+                                            </dd>
+                                            <dt class="field-even">
+          Raises
+         </dt>
+                                            <dd class="field-even">
+                                                <p><strong>
+            ValueError
+           </strong>
+           – if the count is less than 0.
+          </p>
+                                            </dd>
+                                            <dt class="field-odd">
+          Returns
+         </dt>
+                                            <dd class="field-odd">
+                                                <p>
+           a lambda function containing the joined event.
+          </p>
+                                            </dd>
+                                            <dt class="field-even">
+          Return type
+         </dt>
+                                            <dd class="field-even">
+                                                <p>
+           Callable[[], int]
+          </p>
+                                            </dd>
+                                        </dl>
+                                    </dd>
+                                </dl>
+                                <dl class="py function">
+                                    <dt class="sig sig-object py" id="vector.canoe.threading.join_change_flag"><span class="sig-name descname"><span class="pre">
+          join_change_flag
+         </span></span><span class="sig-paren">
+         (
+        </span><em class="sig-param"><span class="n"><span class="pre">
+           value_entity
+          </span></span></em><span class="sig-paren">
+         )
+        </span>
+        →
+        <span class="pre">
+         Callable
+        </span><span class="p"><span class="pre">
+          [
+         </span></span><span class="p"><span class="pre">
+          ]
+         </span></span><span class="p"><span class="pre">
+          ,
+         </span></span><span class="pre">
+         int
+        </span><span class="p"><span class="pre">
+          ]
+         </span></span><a class="headerlink" href="#vector.canoe.threading.join_change_flag" title="Permalink to this definition">
+         ¶
+        </a></dt>
+                                    <dd>
+                                        <p>
+         Creates a function object describing the event of a value entity’s change flag to be set, similar to
+         <a class="reference internal" href="#vector.canoe.threading.wait_for_change_flag" title="vector.canoe.threading.wait_for_change_flag"><code class="xref py py-func docutils literal notranslate"><span class="pre">
+            wait_for_change_flag()
+           </span></code></a>
+         .
+        </p>
+                                        <p>
+         To await this event, pass it to
+         <a class="reference internal" href="#vector.canoe.threading.wait_for_all_joined_events" title="vector.canoe.threading.wait_for_all_joined_events"><code class="xref py py-func docutils literal notranslate"><span class="pre">
+            wait_for_all_joined_events()
+           </span></code></a>
+         or
+         <a class="reference internal" href="#vector.canoe.threading.wait_for_any_joined_event" title="vector.canoe.threading.wait_for_any_joined_event"><code class="xref py py-func docutils literal notranslate"><span class="pre">
+            wait_for_any_joined_event()
+           </span></code></a>
+         as part of a list.
+This function does not wait by itself.
+        </p>
+                                        <dl class="field-list simple">
+                                            <dt class="field-odd">
+          Parameters
+         </dt>
+                                            <dd class="field-odd">
+                                                <p><strong>
+            value_entity
+           </strong>
+           – Value entity of a distributed object.
+          </p>
+                                            </dd>
+                                            <dt class="field-even">
+          Returns
+         </dt>
+                                            <dd class="field-even">
+                                                <p>
+           a lambda function containing the joined event.
+          </p>
+                                            </dd>
+                                            <dt class="field-odd">
+          Return type
+         </dt>
+                                            <dd class="field-odd">
+                                                <p>
+           Callable[[], int]
+          </p>
+                                            </dd>
+                                        </dl>
+                                    </dd>
+                                </dl>
+                                <dl class="py function">
+                                    <dt class="sig sig-object py" id="vector.canoe.threading.join_for_answer"><span class="sig-name descname"><span class="pre">
+          join_for_answer
+         </span></span><span class="sig-paren">
+         (
+        </span><em class="sig-param"><span class="n"><span class="pre">
+           call_context
+          </span></span></em><span class="sig-paren">
+         )
+        </span>
+        →
+        <span class="pre">
+         Callable
+        </span><span class="p"><span class="pre">
+          [
+         </span></span><span class="p"><span class="pre">
+          ]
+         </span></span><span class="p"><span class="pre">
+          ,
+         </span></span><span class="pre">
+         int
+        </span><span class="p"><span class="pre">
+          ]
+         </span></span><a class="headerlink" href="#vector.canoe.threading.join_for_answer" title="Permalink to this definition">
+         ¶
+        </a></dt>
+                                    <dd>
+                                        <p>
+         Creates a function object describing the event of a method call receiving an answer, similar to
+         <a class="reference internal" href="#vector.canoe.threading.wait_for_answer" title="vector.canoe.threading.wait_for_answer"><code class="xref py py-func docutils literal notranslate"><span class="pre">
+            wait_for_answer()
+           </span></code></a>
+         .
+        </p>
+                                        <p>
+         To await this event, pass it to
+         <a class="reference internal" href="#vector.canoe.threading.wait_for_all_joined_events" title="vector.canoe.threading.wait_for_all_joined_events"><code class="xref py py-func docutils literal notranslate"><span class="pre">
+            wait_for_all_joined_events()
+           </span></code></a>
+         or
+         <a class="reference internal" href="#vector.canoe.threading.wait_for_any_joined_event" title="vector.canoe.threading.wait_for_any_joined_event"><code class="xref py py-func docutils literal notranslate"><span class="pre">
+            wait_for_any_joined_event()
+           </span></code></a>
+         as part of a list.
+This function does not wait by itself.
+        </p>
+                                        <dl class="field-list simple">
+                                            <dt class="field-odd">
+          Parameters
+         </dt>
+                                            <dd class="field-odd">
+                                                <p><strong>
+            call_context
+           </strong>
+           – the call context whose answer triggers the event.
+          </p>
+                                            </dd>
+                                            <dt class="field-even">
+          Returns
+         </dt>
+                                            <dd class="field-even">
+                                                <p>
+           a lambda function containing the joined event.
+          </p>
+                                            </dd>
+                                            <dt class="field-odd">
+          Return type
+         </dt>
+                                            <dd class="field-odd">
+                                                <p>
+           Callable[[], int]
+          </p>
+                                            </dd>
+                                        </dl>
+                                    </dd>
+                                </dl>
+                                <dl class="py function">
+                                    <dt class="sig sig-object py" id="vector.canoe.threading.join_for_next_call"><span class="sig-name descname"><span class="pre">
+          join_for_next_call
+         </span></span><span class="sig-paren">
+         (
+        </span><em class="sig-param"><span class="n"><span class="pre">
+           provided_method
+          </span></span></em><span class="sig-paren">
+         )
+        </span>
+        →
+        <span class="pre">
+         Callable
+        </span><span class="p"><span class="pre">
+          [
+         </span></span><span class="p"><span class="pre">
+          ]
+         </span></span><span class="p"><span class="pre">
+          ,
+         </span></span><span class="pre">
+         int
+        </span><span class="p"><span class="pre">
+          ]
+         </span></span><a class="headerlink" href="#vector.canoe.threading.join_for_next_call" title="Permalink to this definition">
+         ¶
+        </a></dt>
+                                    <dd>
+                                        <p>
+         Creates a function object describing the event of a method being called, similar to
+         <a class="reference internal" href="#vector.canoe.threading.wait_for_next_call" title="vector.canoe.threading.wait_for_next_call"><code class="xref py py-func docutils literal notranslate"><span class="pre">
+            wait_for_next_call()
+           </span></code></a>
+         .
+        </p>
+                                        <p>
+         To await this event, pass it to
+         <a class="reference internal" href="#vector.canoe.threading.wait_for_all_joined_events" title="vector.canoe.threading.wait_for_all_joined_events"><code class="xref py py-func docutils literal notranslate"><span class="pre">
+            wait_for_all_joined_events()
+           </span></code></a>
+         or
+         <a class="reference internal" href="#vector.canoe.threading.wait_for_any_joined_event" title="vector.canoe.threading.wait_for_any_joined_event"><code class="xref py py-func docutils literal notranslate"><span class="pre">
+            wait_for_any_joined_event()
+           </span></code></a>
+         as part of a list.
+This function does not wait by itself.
+        </p>
+                                        <dl class="field-list simple">
+                                            <dt class="field-odd">
+          Parameters
+         </dt>
+                                            <dd class="field-odd">
+                                                <p><strong>
+            provided_method
+           </strong>
+           – the provided method whose next call triggers the event.
+          </p>
+                                            </dd>
+                                            <dt class="field-even">
+          Returns
+         </dt>
+                                            <dd class="field-even">
+                                                <p>
+           a lambda function containing the joined event.
+          </p>
+                                            </dd>
+                                            <dt class="field-odd">
+          Return type
+         </dt>
+                                            <dd class="field-odd">
+                                                <p>
+           Callable[[], int]
+          </p>
+                                            </dd>
+                                        </dl>
+                                    </dd>
+                                </dl>
+                                <dl class="py function">
+                                    <dt class="sig sig-object py" id="vector.canoe.threading.join_impl_value"><span class="sig-name descname"><span class="pre">
+          join_impl_value
+         </span></span><span class="sig-paren">
+         (
+        </span><em class="sig-param"><span class="n"><span class="pre">
+           value_entity
+          </span></span></em>
+        ,
+        <em class="sig-param"><span class="n"><span class="pre">
+           awaited_value
+          </span></span></em>
+        ,
+        <em class="sig-param"><span class="n"><span class="pre">
+           wait_for_value_update
+          </span></span><span class="p"><span class="pre">
+           :
+          </span></span><span class="n"><span class="pre">
+           bool
+          </span></span><span class="o"><span class="pre">
+           =
+          </span></span><span class="default_value"><span class="pre">
+           False
+          </span></span></em><span class="sig-paren">
+         )
+        </span>
+        →
+        <span class="pre">
+         int
+        </span><a class="headerlink" href="#vector.canoe.threading.join_impl_value" title="Permalink to this definition">
+         ¶
+        </a></dt>
+                                    <dd>
+                                        <p>
+         Creates a function object describing the event of a value entity’s impl value to reach a given value, similar to
+         <a class="reference internal" href="#vector.canoe.threading.wait_for_impl_value" title="vector.canoe.threading.wait_for_impl_value"><code class="xref py py-func docutils literal notranslate"><span class="pre">
+            wait_for_impl_value()
+           </span></code></a>
+         .
+        </p>
+                                        <p>
+         To await this event, pass it to
+         <a class="reference internal" href="#vector.canoe.threading.wait_for_all_joined_events" title="vector.canoe.threading.wait_for_all_joined_events"><code class="xref py py-func docutils literal notranslate"><span class="pre">
+            wait_for_all_joined_events()
+           </span></code></a>
+         or
+         <a class="reference internal" href="#vector.canoe.threading.wait_for_any_joined_event" title="vector.canoe.threading.wait_for_any_joined_event"><code class="xref py py-func docutils literal notranslate"><span class="pre">
+            wait_for_any_joined_event()
+           </span></code></a>
+         as part of a list.
+This function does not wait by itself.
+        </p>
+                                        <dl class="field-list simple">
+                                            <dt class="field-odd">
+          Parameters
+         </dt>
+                                            <dd class="field-odd">
+                                                <ul class="simple">
+                                                    <li>
+                                                        <p><strong>
+              value_entity
+             </strong>
+             – Value entity of a distributed object.
+            </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>
+              awaited_value
+             </strong>
+             – The value the value entity should reach to trigger the event. Its datatype must match the value entity’s datatype.
+            </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>
+              wait_for_value_update
+             </strong>
+             (
+             <em>
+              bool
+             </em><em>
+              ,
+             </em><em>
+              optional
+             </em>
+             ) – A value indicating whether the value of the value entity should be compared
+to awaited_value immediately when the wait starts, defaults to False
+            </p>
+                                                    </li>
+                                                </ul>
+                                            </dd>
+                                            <dt class="field-even">
+          Returns
+         </dt>
+                                            <dd class="field-even">
+                                                <p>
+           a lambda function containing the joined event.
+          </p>
+                                            </dd>
+                                            <dt class="field-odd">
+          Return type
+         </dt>
+                                            <dd class="field-odd">
+                                                <p>
+           Callable[[], int]
+          </p>
+                                            </dd>
+                                        </dl>
+                                    </dd>
+                                </dl>
+                                <dl class="py function">
+                                    <dt class="sig sig-object py" id="vector.canoe.threading.join_impl_value_in_range"><span class="sig-name descname"><span class="pre">
+          join_impl_value_in_range
+         </span></span><span class="sig-paren">
+         (
+        </span><em class="sig-param"><span class="n"><span class="pre">
+           value_entity
+          </span></span></em>
+        ,
+        <em class="sig-param"><span class="n"><span class="pre">
+           low_limit
+          </span></span><span class="p"><span class="pre">
+           :
+          </span></span><span class="n"><span class="pre">
+           Union
+          </span><span class="p"><span class="pre">
+            [
+           </span></span><span class="pre">
+           int
+          </span><span class="p"><span class="pre">
+            ,
+           </span></span><span class="pre">
+           float
+          </span><span class="p"><span class="pre">
+            ]
+           </span></span></span></em>
+        ,
+        <em class="sig-param"><span class="n"><span class="pre">
+           high_limit
+          </span></span><span class="p"><span class="pre">
+           :
+          </span></span><span class="n"><span class="pre">
+           Union
+          </span><span class="p"><span class="pre">
+            [
+           </span></span><span class="pre">
+           int
+          </span><span class="p"><span class="pre">
+            ,
+           </span></span><span class="pre">
+           float
+          </span><span class="p"><span class="pre">
+            ]
+           </span></span></span></em>
+        ,
+        <em class="sig-param"><span class="n"><span class="pre">
+           wait_for_value_update
+          </span></span><span class="p"><span class="pre">
+           :
+          </span></span><span class="n"><span class="pre">
+           bool
+          </span></span><span class="o"><span class="pre">
+           =
+          </span></span><span class="default_value"><span class="pre">
+           False
+          </span></span></em><span class="sig-paren">
+         )
+        </span>
+        →
+        <span class="pre">
+         int
+        </span><a class="headerlink" href="#vector.canoe.threading.join_impl_value_in_range" title="Permalink to this definition">
+         ¶
+        </a></dt>
+                                    <dd>
+                                        <p>
+         Creates a function object describing the event of a value entity’s impl value to reach a certain range of values, similar to
+         <a class="reference internal" href="#vector.canoe.threading.wait_for_impl_value_in_range" title="vector.canoe.threading.wait_for_impl_value_in_range"><code class="xref py py-func docutils literal notranslate"><span class="pre">
+            wait_for_impl_value_in_range()
+           </span></code></a>
+         .
+        </p>
+                                        <p>
+         To await this event, pass it to
+         <a class="reference internal" href="#vector.canoe.threading.wait_for_all_joined_events" title="vector.canoe.threading.wait_for_all_joined_events"><code class="xref py py-func docutils literal notranslate"><span class="pre">
+            wait_for_all_joined_events()
+           </span></code></a>
+         or
+         <a class="reference internal" href="#vector.canoe.threading.wait_for_any_joined_event" title="vector.canoe.threading.wait_for_any_joined_event"><code class="xref py py-func docutils literal notranslate"><span class="pre">
+            wait_for_any_joined_event()
+           </span></code></a>
+         as part of a list.
+This function does not wait by itself.
+        </p>
+                                        <dl class="field-list simple">
+                                            <dt class="field-odd">
+          Parameters
+         </dt>
+                                            <dd class="field-odd">
+                                                <ul class="simple">
+                                                    <li>
+                                                        <p><strong>
+              value_entity
+             </strong>
+             – Value entity of a distributed object.
+            </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>
+              low_limit
+             </strong>
+             (
+             <em>
+              Union
+             </em><em>
+              [
+             </em><em>
+              int
+             </em><em>
+              ,
+             </em><em>
+              float
+             </em><em>
+              ]
+             </em>
+             ) – Lower limit of the value. Its datatype must match the value entity’s datatype.
+            </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>
+              high_limit
+             </strong>
+             (
+             <em>
+              Union
+             </em><em>
+              [
+             </em><em>
+              int
+             </em><em>
+              ,
+             </em><em>
+              float
+             </em><em>
+              ]
+             </em>
+             ) – Upper limit of the value. Its datatype must match the value entity’s datatype.
+            </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>
+              wait_for_value_update
+             </strong>
+             (
+             <em>
+              bool
+             </em><em>
+              ,
+             </em><em>
+              optional
+             </em>
+             ) – A value indicating whether the value of the value entity should be compared
+to awaited_value immediately when the wait starts, defaults to False
+            </p>
+                                                    </li>
+                                                </ul>
+                                            </dd>
+                                            <dt class="field-even">
+          Returns
+         </dt>
+                                            <dd class="field-even">
+                                                <p>
+           a lambda function containing the joined event.
+          </p>
+                                            </dd>
+                                            <dt class="field-odd">
+          Return type
+         </dt>
+                                            <dd class="field-odd">
+                                                <p>
+           Callable[[], int]
+          </p>
+                                            </dd>
+                                        </dl>
+                                    </dd>
+                                </dl>
+                                <dl class="py function">
+                                    <dt class="sig sig-object py" id="vector.canoe.threading.join_impl_value_outside_range"><span class="sig-name descname"><span class="pre">
+          join_impl_value_outside_range
+         </span></span><span class="sig-paren">
+         (
+        </span><em class="sig-param"><span class="n"><span class="pre">
+           value_entity
+          </span></span></em>
+        ,
+        <em class="sig-param"><span class="n"><span class="pre">
+           low_limit
+          </span></span><span class="p"><span class="pre">
+           :
+          </span></span><span class="n"><span class="pre">
+           Union
+          </span><span class="p"><span class="pre">
+            [
+           </span></span><span class="pre">
+           int
+          </span><span class="p"><span class="pre">
+            ,
+           </span></span><span class="pre">
+           float
+          </span><span class="p"><span class="pre">
+            ]
+           </span></span></span></em>
+        ,
+        <em class="sig-param"><span class="n"><span class="pre">
+           high_limit
+          </span></span><span class="p"><span class="pre">
+           :
+          </span></span><span class="n"><span class="pre">
+           Union
+          </span><span class="p"><span class="pre">
+            [
+           </span></span><span class="pre">
+           int
+          </span><span class="p"><span class="pre">
+            ,
+           </span></span><span class="pre">
+           float
+          </span><span class="p"><span class="pre">
+            ]
+           </span></span></span></em>
+        ,
+        <em class="sig-param"><span class="n"><span class="pre">
+           wait_for_value_update
+          </span></span><span class="p"><span class="pre">
+           :
+          </span></span><span class="n"><span class="pre">
+           bool
+          </span></span><span class="o"><span class="pre">
+           =
+          </span></span><span class="default_value"><span class="pre">
+           False
+          </span></span></em><span class="sig-paren">
+         )
+        </span>
+        →
+        <span class="pre">
+         int
+        </span><a class="headerlink" href="#vector.canoe.threading.join_impl_value_outside_range" title="Permalink to this definition">
+         ¶
+        </a></dt>
+                                    <dd>
+                                        <p>
+         Creates a function object describing the event of a value entity’s impl value to reach a value outside given range of values, similar to
+         <a class="reference internal" href="#vector.canoe.threading.wait_for_impl_value_outside_range" title="vector.canoe.threading.wait_for_impl_value_outside_range"><code class="xref py py-func docutils literal notranslate"><span class="pre">
+            wait_for_impl_value_outside_range()
+           </span></code></a>
+         .
+        </p>
+                                        <p>
+         To await this event, pass it to
+         <a class="reference internal" href="#vector.canoe.threading.wait_for_all_joined_events" title="vector.canoe.threading.wait_for_all_joined_events"><code class="xref py py-func docutils literal notranslate"><span class="pre">
+            wait_for_all_joined_events()
+           </span></code></a>
+         or
+         <a class="reference internal" href="#vector.canoe.threading.wait_for_any_joined_event" title="vector.canoe.threading.wait_for_any_joined_event"><code class="xref py py-func docutils literal notranslate"><span class="pre">
+            wait_for_any_joined_event()
+           </span></code></a>
+         as part of a list.
+This function does not wait by itself.
+        </p>
+                                        <dl class="field-list simple">
+                                            <dt class="field-odd">
+          Parameters
+         </dt>
+                                            <dd class="field-odd">
+                                                <ul class="simple">
+                                                    <li>
+                                                        <p><strong>
+              value_entity
+             </strong>
+             – Value entity of a distributed object.
+            </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>
+              low_limit
+             </strong>
+             (
+             <em>
+              Union
+             </em><em>
+              [
+             </em><em>
+              int
+             </em><em>
+              ,
+             </em><em>
+              float
+             </em><em>
+              ]
+             </em>
+             ) – Lower limit of the value. Its datatype must match the value entity’s datatype.
+            </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>
+              high_limit
+             </strong>
+             (
+             <em>
+              Union
+             </em><em>
+              [
+             </em><em>
+              int
+             </em><em>
+              ,
+             </em><em>
+              float
+             </em><em>
+              ]
+             </em>
+             ) – Upper limit of the value. Its datatype must match the value entity’s datatype.
+            </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>
+              wait_for_value_update
+             </strong>
+             (
+             <em>
+              bool
+             </em><em>
+              ,
+             </em><em>
+              optional
+             </em>
+             ) – A value indicating whether the value of the value entity should be compared
+to awaited_value immediately when the wait starts, defaults to False
+            </p>
+                                                    </li>
+                                                </ul>
+                                            </dd>
+                                            <dt class="field-even">
+          Returns
+         </dt>
+                                            <dd class="field-even">
+                                                <p>
+           a lambda function containing the joined event.
+          </p>
+                                            </dd>
+                                            <dt class="field-odd">
+          Return type
+         </dt>
+                                            <dd class="field-odd">
+                                                <p>
+           Callable[[], int]
+          </p>
+                                            </dd>
+                                        </dl>
+                                    </dd>
+                                </dl>
+                                <dl class="py function">
+                                    <dt class="sig sig-object py" id="vector.canoe.threading.join_phys_value"><span class="sig-name descname"><span class="pre">
+          join_phys_value
+         </span></span><span class="sig-paren">
+         (
+        </span><em class="sig-param"><span class="n"><span class="pre">
+           value_entity
+          </span></span></em>
+        ,
+        <em class="sig-param"><span class="n"><span class="pre">
+           awaited_value
+          </span></span><span class="p"><span class="pre">
+           :
+          </span></span><span class="n"><span class="pre">
+           Union
+          </span><span class="p"><span class="pre">
+            [
+           </span></span><span class="pre">
+           int
+          </span><span class="p"><span class="pre">
+            ,
+           </span></span><span class="pre">
+           float
+          </span><span class="p"><span class="pre">
+            ]
+           </span></span></span></em>
+        ,
+        <em class="sig-param"><span class="n"><span class="pre">
+           wait_for_value_update
+          </span></span><span class="p"><span class="pre">
+           :
+          </span></span><span class="n"><span class="pre">
+           bool
+          </span></span><span class="o"><span class="pre">
+           =
+          </span></span><span class="default_value"><span class="pre">
+           False
+          </span></span></em><span class="sig-paren">
+         )
+        </span>
+        →
+        <span class="pre">
+         int
+        </span><a class="headerlink" href="#vector.canoe.threading.join_phys_value" title="Permalink to this definition">
+         ¶
+        </a></dt>
+                                    <dd>
+                                        <p>
+         Creates a function object describing the event of a value entity’s phys value to reach a given value, similar to
+         <a class="reference internal" href="#vector.canoe.threading.wait_for_phys_value" title="vector.canoe.threading.wait_for_phys_value"><code class="xref py py-func docutils literal notranslate"><span class="pre">
+            wait_for_phys_value()
+           </span></code></a>
+         .
+        </p>
+                                        <p>
+         To await this event, pass it to
+         <a class="reference internal" href="#vector.canoe.threading.wait_for_all_joined_events" title="vector.canoe.threading.wait_for_all_joined_events"><code class="xref py py-func docutils literal notranslate"><span class="pre">
+            wait_for_all_joined_events()
+           </span></code></a>
+         or
+         <a class="reference internal" href="#vector.canoe.threading.wait_for_any_joined_event" title="vector.canoe.threading.wait_for_any_joined_event"><code class="xref py py-func docutils literal notranslate"><span class="pre">
+            wait_for_any_joined_event()
+           </span></code></a>
+         as part of a list.
+This function does not wait by itself.
+        </p>
+                                        <dl class="field-list simple">
+                                            <dt class="field-odd">
+          Parameters
+         </dt>
+                                            <dd class="field-odd">
+                                                <ul class="simple">
+                                                    <li>
+                                                        <p><strong>
+              value_entity
+             </strong>
+             – Value entity of a distributed object.
+            </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>
+              awaited_value
+             </strong>
+             (
+             <em>
+              Union
+             </em><em>
+              [
+             </em><em>
+              int
+             </em><em>
+              ,
+             </em><em>
+              float
+             </em><em>
+              ]
+             </em>
+             ) – The value the value entity should reach to trigger the event. Its datatype must match the value entity’s datatype.
+            </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>
+              wait_for_value_update
+             </strong>
+             (
+             <em>
+              bool
+             </em><em>
+              ,
+             </em><em>
+              optional
+             </em>
+             ) – A value indicating whether the value of the value entity should be compared
+to awaited_value immediately when the wait starts, defaults to False
+            </p>
+                                                    </li>
+                                                </ul>
+                                            </dd>
+                                            <dt class="field-even">
+          Returns
+         </dt>
+                                            <dd class="field-even">
+                                                <p>
+           a lambda function containing the joined event.
+          </p>
+                                            </dd>
+                                            <dt class="field-odd">
+          Return type
+         </dt>
+                                            <dd class="field-odd">
+                                                <p>
+           Callable[[], int]
+          </p>
+                                            </dd>
+                                        </dl>
+                                    </dd>
+                                </dl>
+                                <dl class="py function">
+                                    <dt class="sig sig-object py" id="vector.canoe.threading.join_phys_value_in_range"><span class="sig-name descname"><span class="pre">
+          join_phys_value_in_range
+         </span></span><span class="sig-paren">
+         (
+        </span><em class="sig-param"><span class="n"><span class="pre">
+           value_entity
+          </span></span></em>
+        ,
+        <em class="sig-param"><span class="n"><span class="pre">
+           low_limit
+          </span></span><span class="p"><span class="pre">
+           :
+          </span></span><span class="n"><span class="pre">
+           Union
+          </span><span class="p"><span class="pre">
+            [
+           </span></span><span class="pre">
+           int
+          </span><span class="p"><span class="pre">
+            ,
+           </span></span><span class="pre">
+           float
+          </span><span class="p"><span class="pre">
+            ]
+           </span></span></span></em>
+        ,
+        <em class="sig-param"><span class="n"><span class="pre">
+           high_limit
+          </span></span><span class="p"><span class="pre">
+           :
+          </span></span><span class="n"><span class="pre">
+           Union
+          </span><span class="p"><span class="pre">
+            [
+           </span></span><span class="pre">
+           int
+          </span><span class="p"><span class="pre">
+            ,
+           </span></span><span class="pre">
+           float
+          </span><span class="p"><span class="pre">
+            ]
+           </span></span></span></em>
+        ,
+        <em class="sig-param"><span class="n"><span class="pre">
+           wait_for_value_update
+          </span></span><span class="p"><span class="pre">
+           :
+          </span></span><span class="n"><span class="pre">
+           bool
+          </span></span><span class="o"><span class="pre">
+           =
+          </span></span><span class="default_value"><span class="pre">
+           False
+          </span></span></em><span class="sig-paren">
+         )
+        </span>
+        →
+        <span class="pre">
+         int
+        </span><a class="headerlink" href="#vector.canoe.threading.join_phys_value_in_range" title="Permalink to this definition">
+         ¶
+        </a></dt>
+                                    <dd>
+                                        <p>
+         Creates a function object describing the event of a value entity’s phys value to reach a certain range of values, similar to
+         <a class="reference internal" href="#vector.canoe.threading.wait_for_phys_value_in_range" title="vector.canoe.threading.wait_for_phys_value_in_range"><code class="xref py py-func docutils literal notranslate"><span class="pre">
+            wait_for_phys_value_in_range()
+           </span></code></a>
+         .
+        </p>
+                                        <p>
+         To await this event, pass it to
+         <a class="reference internal" href="#vector.canoe.threading.wait_for_all_joined_events" title="vector.canoe.threading.wait_for_all_joined_events"><code class="xref py py-func docutils literal notranslate"><span class="pre">
+            wait_for_all_joined_events()
+           </span></code></a>
+         or
+         <a class="reference internal" href="#vector.canoe.threading.wait_for_any_joined_event" title="vector.canoe.threading.wait_for_any_joined_event"><code class="xref py py-func docutils literal notranslate"><span class="pre">
+            wait_for_any_joined_event()
+           </span></code></a>
+         as part of a list.
+This function does not wait by itself.
+        </p>
+                                        <dl class="field-list simple">
+                                            <dt class="field-odd">
+          Parameters
+         </dt>
+                                            <dd class="field-odd">
+                                                <ul class="simple">
+                                                    <li>
+                                                        <p><strong>
+              value_entity
+             </strong>
+             – Value entity of a distributed object.
+            </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>
+              low_limit
+             </strong>
+             (
+             <em>
+              Union
+             </em><em>
+              [
+             </em><em>
+              int
+             </em><em>
+              ,
+             </em><em>
+              float
+             </em><em>
+              ]
+             </em>
+             ) – Lower limit of the value. Its datatype must match the value entity’s datatype.
+            </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>
+              high_limit
+             </strong>
+             (
+             <em>
+              Union
+             </em><em>
+              [
+             </em><em>
+              int
+             </em><em>
+              ,
+             </em><em>
+              float
+             </em><em>
+              ]
+             </em>
+             ) – Upper limit of the value. Its datatype must match the value entity’s datatype.
+            </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>
+              wait_for_value_update
+             </strong>
+             (
+             <em>
+              bool
+             </em><em>
+              ,
+             </em><em>
+              optional
+             </em>
+             ) – A value indicating whether the value of the value entity should be compared
+to awaited_value immediately when the wait starts, defaults to False
+            </p>
+                                                    </li>
+                                                </ul>
+                                            </dd>
+                                            <dt class="field-even">
+          Returns
+         </dt>
+                                            <dd class="field-even">
+                                                <p>
+           a lambda function containing the joined event.
+          </p>
+                                            </dd>
+                                            <dt class="field-odd">
+          Return type
+         </dt>
+                                            <dd class="field-odd">
+                                                <p>
+           Callable[[], int]
+          </p>
+                                            </dd>
+                                        </dl>
+                                    </dd>
+                                </dl>
+                                <dl class="py function">
+                                    <dt class="sig sig-object py" id="vector.canoe.threading.join_phys_value_outside_range"><span class="sig-name descname"><span class="pre">
+          join_phys_value_outside_range
+         </span></span><span class="sig-paren">
+         (
+        </span><em class="sig-param"><span class="n"><span class="pre">
+           value_entity
+          </span></span></em>
+        ,
+        <em class="sig-param"><span class="n"><span class="pre">
+           low_limit
+          </span></span><span class="p"><span class="pre">
+           :
+          </span></span><span class="n"><span class="pre">
+           Union
+          </span><span class="p"><span class="pre">
+            [
+           </span></span><span class="pre">
+           int
+          </span><span class="p"><span class="pre">
+            ,
+           </span></span><span class="pre">
+           float
+          </span><span class="p"><span class="pre">
+            ]
+           </span></span></span></em>
+        ,
+        <em class="sig-param"><span class="n"><span class="pre">
+           high_limit
+          </span></span><span class="p"><span class="pre">
+           :
+          </span></span><span class="n"><span class="pre">
+           Union
+          </span><span class="p"><span class="pre">
+            [
+           </span></span><span class="pre">
+           int
+          </span><span class="p"><span class="pre">
+            ,
+           </span></span><span class="pre">
+           float
+          </span><span class="p"><span class="pre">
+            ]
+           </span></span></span></em>
+        ,
+        <em class="sig-param"><span class="n"><span class="pre">
+           wait_for_value_update
+          </span></span><span class="p"><span class="pre">
+           :
+          </span></span><span class="n"><span class="pre">
+           bool
+          </span></span><span class="o"><span class="pre">
+           =
+          </span></span><span class="default_value"><span class="pre">
+           False
+          </span></span></em><span class="sig-paren">
+         )
+        </span>
+        →
+        <span class="pre">
+         int
+        </span><a class="headerlink" href="#vector.canoe.threading.join_phys_value_outside_range" title="Permalink to this definition">
+         ¶
+        </a></dt>
+                                    <dd>
+                                        <p>
+         Creates a function object describing the event of a value entity’s phys value to reach a value outside given range of values, similar to
+         <a class="reference internal" href="#vector.canoe.threading.wait_for_phys_value_outside_range" title="vector.canoe.threading.wait_for_phys_value_outside_range"><code class="xref py py-func docutils literal notranslate"><span class="pre">
+            wait_for_phys_value_outside_range()
+           </span></code></a>
+         .
+        </p>
+                                        <p>
+         To await this event, pass it to
+         <a class="reference internal" href="#vector.canoe.threading.wait_for_all_joined_events" title="vector.canoe.threading.wait_for_all_joined_events"><code class="xref py py-func docutils literal notranslate"><span class="pre">
+            wait_for_all_joined_events()
+           </span></code></a>
+         or
+         <a class="reference internal" href="#vector.canoe.threading.wait_for_any_joined_event" title="vector.canoe.threading.wait_for_any_joined_event"><code class="xref py py-func docutils literal notranslate"><span class="pre">
+            wait_for_any_joined_event()
+           </span></code></a>
+         as part of a list.
+This function does not wait by itself.
+        </p>
+                                        <dl class="field-list simple">
+                                            <dt class="field-odd">
+          Parameters
+         </dt>
+                                            <dd class="field-odd">
+                                                <ul class="simple">
+                                                    <li>
+                                                        <p><strong>
+              value_entity
+             </strong>
+             – Value entity of a distributed object.
+            </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>
+              low_limit
+             </strong>
+             (
+             <em>
+              Union
+             </em><em>
+              [
+             </em><em>
+              int
+             </em><em>
+              ,
+             </em><em>
+              float
+             </em><em>
+              ]
+             </em>
+             ) – Lower limit of the value. Its datatype must match the value entity’s datatype.
+            </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>
+              high_limit
+             </strong>
+             (
+             <em>
+              Union
+             </em><em>
+              [
+             </em><em>
+              int
+             </em><em>
+              ,
+             </em><em>
+              float
+             </em><em>
+              ]
+             </em>
+             ) – Upper limit of the value. Its datatype must match the value entity’s datatype.
+            </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>
+              wait_for_value_update
+             </strong>
+             (
+             <em>
+              bool
+             </em><em>
+              ,
+             </em><em>
+              optional
+             </em>
+             ) – A value indicating whether the value of the value entity should be compared
+to awaited_value immediately when the wait starts, defaults to False
+            </p>
+                                                    </li>
+                                                </ul>
+                                            </dd>
+                                            <dt class="field-even">
+          Returns
+         </dt>
+                                            <dd class="field-even">
+                                                <p>
+           a lambda function containing the joined event.
+          </p>
+                                            </dd>
+                                            <dt class="field-odd">
+          Return type
+         </dt>
+                                            <dd class="field-odd">
+                                                <p>
+           Callable[[], int]
+          </p>
+                                            </dd>
+                                        </dl>
+                                    </dd>
+                                </dl>
+                                <dl class="py function">
+                                    <dt class="sig sig-object py" id="vector.canoe.threading.join_update"><span class="sig-name descname"><span class="pre">
+          join_update
+         </span></span><span class="sig-paren">
+         (
+        </span><em class="sig-param"><span class="n"><span class="pre">
+           value_entity
+          </span></span></em><span class="sig-paren">
+         )
+        </span>
+        →
+        <span class="pre">
+         Callable
+        </span><span class="p"><span class="pre">
+          [
+         </span></span><span class="p"><span class="pre">
+          ]
+         </span></span><span class="p"><span class="pre">
+          ,
+         </span></span><span class="pre">
+         int
+        </span><span class="p"><span class="pre">
+          ]
+         </span></span><a class="headerlink" href="#vector.canoe.threading.join_update" title="Permalink to this definition">
+         ¶
+        </a></dt>
+                                    <dd>
+                                        <p>
+         Creates a function object describing the event of a value entity updating its value, similar to
+         <a class="reference internal" href="#vector.canoe.threading.wait_for_update" title="vector.canoe.threading.wait_for_update"><code class="xref py py-func docutils literal notranslate"><span class="pre">
+            wait_for_update()
+           </span></code></a>
+         .
+        </p>
+                                        <p>
+         To await this event, pass it to
+         <a class="reference internal" href="#vector.canoe.threading.wait_for_all_joined_events" title="vector.canoe.threading.wait_for_all_joined_events"><code class="xref py py-func docutils literal notranslate"><span class="pre">
+            wait_for_all_joined_events()
+           </span></code></a>
+         or
+         <a class="reference internal" href="#vector.canoe.threading.wait_for_any_joined_event" title="vector.canoe.threading.wait_for_any_joined_event"><code class="xref py py-func docutils literal notranslate"><span class="pre">
+            wait_for_any_joined_event()
+           </span></code></a>
+         as part of a list.
+This function does not wait by itself.
+        </p>
+                                        <dl class="field-list simple">
+                                            <dt class="field-odd">
+          Parameters
+         </dt>
+                                            <dd class="field-odd">
+                                                <p><strong>
+            value_entity
+           </strong>
+           – Value entity of a distributed object.
+          </p>
+                                            </dd>
+                                            <dt class="field-even">
+          Returns
+         </dt>
+                                            <dd class="field-even">
+                                                <p>
+           a lambda function containing the joined event.
+          </p>
+                                            </dd>
+                                            <dt class="field-odd">
+          Return type
+         </dt>
+                                            <dd class="field-odd">
+                                                <p>
+           Callable[[], int]
+          </p>
+                                            </dd>
+                                        </dl>
+                                    </dd>
+                                </dl>
+                                <dl class="py function">
+                                    <dt class="sig sig-object py" id="vector.canoe.threading.join_update_count_greater"><span class="sig-name descname"><span class="pre">
+          join_update_count_greater
+         </span></span><span class="sig-paren">
+         (
+        </span><em class="sig-param"><span class="n"><span class="pre">
+           value_entity
+          </span></span></em>
+        ,
+        <em class="sig-param"><span class="n"><span class="pre">
+           count
+          </span></span><span class="p"><span class="pre">
+           :
+          </span></span><span class="n"><span class="pre">
+           int
+          </span></span></em><span class="sig-paren">
+         )
+        </span>
+        →
+        <span class="pre">
+         Callable
+        </span><span class="p"><span class="pre">
+          [
+         </span></span><span class="p"><span class="pre">
+          ]
+         </span></span><span class="p"><span class="pre">
+          ,
+         </span></span><span class="pre">
+         int
+        </span><span class="p"><span class="pre">
+          ]
+         </span></span><a class="headerlink" href="#vector.canoe.threading.join_update_count_greater" title="Permalink to this definition">
+         ¶
+        </a></dt>
+                                    <dd>
+                                        <p>
+         Creates a function object describing the event of a value entity’s update counter reaching a certain value, similar to
+         <a class="reference internal" href="#vector.canoe.threading.wait_for_update_count_greater" title="vector.canoe.threading.wait_for_update_count_greater"><code class="xref py py-func docutils literal notranslate"><span class="pre">
+            wait_for_update_count_greater()
+           </span></code></a>
+         .
+        </p>
+                                        <p>
+         To await this event, pass it to
+         <a class="reference internal" href="#vector.canoe.threading.wait_for_all_joined_events" title="vector.canoe.threading.wait_for_all_joined_events"><code class="xref py py-func docutils literal notranslate"><span class="pre">
+            wait_for_all_joined_events()
+           </span></code></a>
+         or
+         <a class="reference internal" href="#vector.canoe.threading.wait_for_any_joined_event" title="vector.canoe.threading.wait_for_any_joined_event"><code class="xref py py-func docutils literal notranslate"><span class="pre">
+            wait_for_any_joined_event()
+           </span></code></a>
+         as part of a list.
+This function does not wait by itself.
+        </p>
+                                        <dl class="field-list simple">
+                                            <dt class="field-odd">
+          Parameters
+         </dt>
+                                            <dd class="field-odd">
+                                                <ul class="simple">
+                                                    <li>
+                                                        <p><strong>
+              value_entity
+             </strong>
+             – Value entity of a distributed object.
+            </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>
+              count
+             </strong>
+             (
+             <em>
+              int
+             </em>
+             ) – value the update counter has to reach for the event to trigger.
+            </p>
+                                                    </li>
+                                                </ul>
+                                            </dd>
+                                            <dt class="field-even">
+          Raises
+         </dt>
+                                            <dd class="field-even">
+                                                <p><strong>
+            ValueError
+           </strong>
+           – if the count is less than 0.
+          </p>
+                                            </dd>
+                                            <dt class="field-odd">
+          Returns
+         </dt>
+                                            <dd class="field-odd">
+                                                <p>
+           a lambda function containing the joined event.
+          </p>
+                                            </dd>
+                                            <dt class="field-even">
+          Return type
+         </dt>
+                                            <dd class="field-even">
+                                                <p>
+           Callable[[], int]
+          </p>
+                                            </dd>
+                                        </dl>
+                                    </dd>
+                                </dl>
+                                <dl class="py function">
+                                    <dt class="sig sig-object py" id="vector.canoe.threading.join_update_flag"><span class="sig-name descname"><span class="pre">
+          join_update_flag
+         </span></span><span class="sig-paren">
+         (
+        </span><em class="sig-param"><span class="n"><span class="pre">
+           value_entity
+          </span></span></em><span class="sig-paren">
+         )
+        </span>
+        →
+        <span class="pre">
+         Callable
+        </span><span class="p"><span class="pre">
+          [
+         </span></span><span class="p"><span class="pre">
+          ]
+         </span></span><span class="p"><span class="pre">
+          ,
+         </span></span><span class="pre">
+         int
+        </span><span class="p"><span class="pre">
+          ]
+         </span></span><a class="headerlink" href="#vector.canoe.threading.join_update_flag" title="Permalink to this definition">
+         ¶
+        </a></dt>
+                                    <dd>
+                                        <p>
+         Creates a function object describing the event of a value entity’s update flag to be set, similar to
+         <a class="reference internal" href="#vector.canoe.threading.wait_for_update_flag" title="vector.canoe.threading.wait_for_update_flag"><code class="xref py py-func docutils literal notranslate"><span class="pre">
+            wait_for_update_flag()
+           </span></code></a>
+         .
+        </p>
+                                        <p>
+         To await this event, pass it to
+         <a class="reference internal" href="#vector.canoe.threading.wait_for_all_joined_events" title="vector.canoe.threading.wait_for_all_joined_events"><code class="xref py py-func docutils literal notranslate"><span class="pre">
+            wait_for_all_joined_events()
+           </span></code></a>
+         or
+         <a class="reference internal" href="#vector.canoe.threading.wait_for_any_joined_event" title="vector.canoe.threading.wait_for_any_joined_event"><code class="xref py py-func docutils literal notranslate"><span class="pre">
+            wait_for_any_joined_event()
+           </span></code></a>
+         as part of a list.
+This function does not wait by itself.
+        </p>
+                                        <dl class="field-list simple">
+                                            <dt class="field-odd">
+          Parameters
+         </dt>
+                                            <dd class="field-odd">
+                                                <p><strong>
+            value_entity
+           </strong>
+           – Value entity of a distributed object.
+          </p>
+                                            </dd>
+                                            <dt class="field-even">
+          Returns
+         </dt>
+                                            <dd class="field-even">
+                                                <p>
+           a lambda function containing the joined event.
+          </p>
+                                            </dd>
+                                            <dt class="field-odd">
+          Return type
+         </dt>
+                                            <dd class="field-odd">
+                                                <p>
+           Callable[[], int]
+          </p>
+                                            </dd>
+                                        </dl>
+                                    </dd>
+                                </dl>
+                                <dl class="py function">
+                                    <dt class="sig sig-object py" id="vector.canoe.threading.wait_for_all_joined_events"><span class="sig-name descname"><span class="pre">
+          wait_for_all_joined_events
+         </span></span><span class="sig-paren">
+         (
+        </span><em class="sig-param"><span class="n"><span class="pre">
+           joined_events
+          </span></span><span class="p"><span class="pre">
+           :
+          </span></span><span class="n"><span class="pre">
+           list
+          </span></span></em>
+        ,
+        <em class="sig-param"><span class="n"><span class="pre">
+           timeout
+          </span></span><span class="p"><span class="pre">
+           :
+          </span></span><span class="n"><span class="pre">
+           int
+          </span></span></em><span class="sig-paren">
+         )
+        </span>
+        →
+        <span class="pre">
+         int
+        </span><a class="headerlink" href="#vector.canoe.threading.wait_for_all_joined_events" title="Permalink to this definition">
+         ¶
+        </a></dt>
+                                    <dd>
+                                        <p>
+         Waits for a list of “joined events.”
+Only accepts events as returned from the join functions in this module.
+The wait condition is resolved if all of the joined events were signaled.
+Should not all events occur before the expiration of the time aTimeout, the wait condition is resolved nevertheless.
+        </p>
+                                        <dl class="field-list simple">
+                                            <dt class="field-odd">
+          Parameters
+         </dt>
+                                            <dd class="field-odd">
+                                                <ul class="simple">
+                                                    <li>
+                                                        <p><strong>
+              joined_events
+             </strong>
+             (
+             <em>
+              list
+             </em><em>
+              [
+             </em><em>
+              Callable
+             </em><em>
+              [
+             </em><em>
+              [
+             </em><em>
+              ]
+             </em><em>
+              ,
+             </em><em>
+              int
+             </em><em>
+              ]
+             </em><em>
+              ]
+             </em>
+             ) – The events to wait on.
+            </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>
+              timeout
+             </strong>
+             (
+             <em>
+              int
+             </em>
+             ) – Maximum time that should be waited [ms]. A timeout of 0 waits indefinitely.
+            </p>
+                                                    </li>
+                                                </ul>
+                                            </dd>
+                                            <dt class="field-even">
+          Returns
+         </dt>
+                                            <dd class="field-even">
+                                                <p>
+           a
+           <a class="reference internal" href="#vector.canoe.threading.WaitingErrorCode" title="vector.canoe.threading.WaitingErrorCode"><code class="xref py py-class docutils literal notranslate"><span class="pre">
+              WaitingErrorCode
+             </span></code></a>
+           return code if the wait failed, the index of the final resolving event otherwise. Indices start at 1.
+          </p>
+                                            </dd>
+                                            <dt class="field-odd">
+          Return type
+         </dt>
+                                            <dd class="field-odd">
+                                                <p>
+           int
+          </p>
+                                            </dd>
+                                        </dl>
+                                    </dd>
+                                </dl>
+                                <dl class="py function">
+                                    <dt class="sig sig-object py" id="vector.canoe.threading.wait_for_answer"><span class="sig-name descname"><span class="pre">
+          wait_for_answer
+         </span></span><span class="sig-paren">
+         (
+        </span><em class="sig-param"><span class="n"><span class="pre">
+           call_context
+          </span></span></em>
+        ,
+        <em class="sig-param"><span class="n"><span class="pre">
+           timeout
+          </span></span><span class="p"><span class="pre">
+           :
+          </span></span><span class="n"><span class="pre">
+           int
+          </span></span></em><span class="sig-paren">
+         )
+        </span>
+        →
+        <a class="reference internal" href="#vector.canoe.threading.WaitingErrorCode" title="vector.canoe.threading.WaitingErrorCode"><span class="pre">
+          vector.canoe.threading.WaitingErrorCode
+         </span></a><a class="headerlink" href="#vector.canoe.threading.wait_for_answer" title="Permalink to this definition">
+         ¶
+        </a></dt>
+                                    <dd>
+                                        <p>
+         Waits for the answer to a method call.
+The call must have been created through call_async on a consumed method.
+        </p>
+                                        <p>
+         If the wait is successful, the call context properties for the return value and the out parameters can be read.
+        </p>
+                                        <dl class="field-list simple">
+                                            <dt class="field-odd">
+          Parameters
+         </dt>
+                                            <dd class="field-odd">
+                                                <ul class="simple">
+                                                    <li>
+                                                        <p><strong>
+              call_context
+             </strong>
+             – Call context for a call.
+            </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>
+              timeout
+             </strong>
+             (
+             <em>
+              int
+             </em>
+             ) – Timeout in milliseconds.
+            </p>
+                                                    </li>
+                                                </ul>
+                                            </dd>
+                                            <dt class="field-even">
+          Returns
+         </dt>
+                                            <dd class="field-even">
+                                                <p>
+           a
+           <a class="reference internal" href="#vector.canoe.threading.WaitingErrorCode" title="vector.canoe.threading.WaitingErrorCode"><code class="xref py py-class docutils literal notranslate"><span class="pre">
+              WaitingErrorCode
+             </span></code></a>
+           return code
+          </p>
+                                            </dd>
+                                            <dt class="field-odd">
+          Return type
+         </dt>
+                                            <dd class="field-odd">
+                                                <p><a class="reference internal" href="#vector.canoe.threading.WaitingErrorCode" title="vector.canoe.threading.WaitingErrorCode">
+            WaitingErrorCode
+           </a>
+                                                </p>
+                                            </dd>
+                                        </dl>
+                                    </dd>
+                                </dl>
+                                <dl class="py function">
+                                    <dt class="sig sig-object py" id="vector.canoe.threading.wait_for_any_joined_event"><span class="sig-name descname"><span class="pre">
+          wait_for_any_joined_event
+         </span></span><span class="sig-paren">
+         (
+        </span><em class="sig-param"><span class="n"><span class="pre">
+           joined_events
+          </span></span><span class="p"><span class="pre">
+           :
+          </span></span><span class="n"><span class="pre">
+           list
+          </span></span></em>
+        ,
+        <em class="sig-param"><span class="n"><span class="pre">
+           timeout
+          </span></span><span class="p"><span class="pre">
+           :
+          </span></span><span class="n"><span class="pre">
+           int
+          </span></span></em><span class="sig-paren">
+         )
+        </span>
+        →
+        <span class="pre">
+         int
+        </span><a class="headerlink" href="#vector.canoe.threading.wait_for_any_joined_event" title="Permalink to this definition">
+         ¶
+        </a></dt>
+                                    <dd>
+                                        <p>
+         Waits for a list of “joined events.”
+Only accepts events as returned from the join functions in this module.
+Each individual of these events can resolve the wait state.
+Should none of the events occur before the expiration of the time aTimeout, the wait condition is resolved nevertheless.
+        </p>
+                                        <dl class="field-list simple">
+                                            <dt class="field-odd">
+          Parameters
+         </dt>
+                                            <dd class="field-odd">
+                                                <ul class="simple">
+                                                    <li>
+                                                        <p><strong>
+              joined_events
+             </strong>
+             (
+             <em>
+              list
+             </em><em>
+              [
+             </em><em>
+              Callable
+             </em><em>
+              [
+             </em><em>
+              [
+             </em><em>
+              ]
+             </em><em>
+              ,
+             </em><em>
+              int
+             </em><em>
+              ]
+             </em><em>
+              ]
+             </em>
+             ) – The events to wait on.
+            </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>
+              timeout
+             </strong>
+             (
+             <em>
+              int
+             </em>
+             ) – Maximum time that should be waited [ms]. A timeout of 0 waits indefinitely.
+            </p>
+                                                    </li>
+                                                </ul>
+                                            </dd>
+                                            <dt class="field-even">
+          Returns
+         </dt>
+                                            <dd class="field-even">
+                                                <p>
+           a
+           <a class="reference internal" href="#vector.canoe.threading.WaitingErrorCode" title="vector.canoe.threading.WaitingErrorCode"><code class="xref py py-class docutils literal notranslate"><span class="pre">
+              WaitingErrorCode
+             </span></code></a>
+           return code if the wait failed, the index of the resolving event otherwise. Indices start at 1.
+          </p>
+                                            </dd>
+                                            <dt class="field-odd">
+          Return type
+         </dt>
+                                            <dd class="field-odd">
+                                                <p>
+           int
+          </p>
+                                            </dd>
+                                        </dl>
+                                    </dd>
+                                </dl>
+                                <dl class="py function">
+                                    <dt class="sig sig-object py" id="vector.canoe.threading.wait_for_change"><span class="sig-name descname"><span class="pre">
+          wait_for_change
+         </span></span><span class="sig-paren">
+         (
+        </span><em class="sig-param"><span class="n"><span class="pre">
+           value_entity
+          </span></span></em>
+        ,
+        <em class="sig-param"><span class="n"><span class="pre">
+           timeout
+          </span></span><span class="p"><span class="pre">
+           :
+          </span></span><span class="n"><span class="pre">
+           int
+          </span></span></em><span class="sig-paren">
+         )
+        </span>
+        →
+        <a class="reference internal" href="#vector.canoe.threading.WaitingErrorCode" title="vector.canoe.threading.WaitingErrorCode"><span class="pre">
+          vector.canoe.threading.WaitingErrorCode
+         </span></a><a class="headerlink" href="#vector.canoe.threading.wait_for_change" title="Permalink to this definition">
+         ¶
+        </a></dt>
+                                    <dd>
+                                        <p>
+         Waits for the next change of a value entity.
+This is equivalent to calling wait_for_change_count_greater(value, value_entity.get_change_count(), timeoutMs).
+        </p>
+                                        <p>
+         Note that only changes which occur while the function waits are considered.
+If you want to wait for changes which may occur earlier, or if you want to wait for several changes, use
+         <a class="reference internal" href="#vector.canoe.threading.wait_for_change_flag" title="vector.canoe.threading.wait_for_change_flag"><code class="xref py py-func docutils literal notranslate"><span class="pre">
+            wait_for_change_flag()
+           </span></code></a>
+         or
+         <a class="reference internal" href="#vector.canoe.threading.wait_for_change_count_greater" title="vector.canoe.threading.wait_for_change_count_greater"><code class="xref py py-func docutils literal notranslate"><span class="pre">
+            wait_for_change_count_greater()
+           </span></code></a>
+         .
+        </p>
+                                        <dl class="field-list simple">
+                                            <dt class="field-odd">
+          Parameters
+         </dt>
+                                            <dd class="field-odd">
+                                                <ul class="simple">
+                                                    <li>
+                                                        <p><strong>
+              value_entity
+             </strong>
+             – Value entity of a communication object or distributed object.
+            </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>
+              timeout
+             </strong>
+             (
+             <em>
+              int
+             </em>
+             ) – Timeout in milliseconds.
+            </p>
+                                                    </li>
+                                                </ul>
+                                            </dd>
+                                            <dt class="field-even">
+          Returns
+         </dt>
+                                            <dd class="field-even">
+                                                <p>
+           a
+           <a class="reference internal" href="#vector.canoe.threading.WaitingErrorCode" title="vector.canoe.threading.WaitingErrorCode"><code class="xref py py-class docutils literal notranslate"><span class="pre">
+              WaitingErrorCode
+             </span></code></a>
+           return code
+          </p>
+                                            </dd>
+                                            <dt class="field-odd">
+          Return type
+         </dt>
+                                            <dd class="field-odd">
+                                                <p><a class="reference internal" href="#vector.canoe.threading.WaitingErrorCode" title="vector.canoe.threading.WaitingErrorCode">
+            WaitingErrorCode
+           </a>
+                                                </p>
+                                            </dd>
+                                        </dl>
+                                    </dd>
+                                </dl>
+                                <dl class="py function">
+                                    <dt class="sig sig-object py" id="vector.canoe.threading.wait_for_change_count_greater"><span class="sig-name descname"><span class="pre">
+          wait_for_change_count_greater
+         </span></span><span class="sig-paren">
+         (
+        </span><em class="sig-param"><span class="n"><span class="pre">
+           value_entity
+          </span></span></em>
+        ,
+        <em class="sig-param"><span class="n"><span class="pre">
+           count
+          </span></span><span class="p"><span class="pre">
+           :
+          </span></span><span class="n"><span class="pre">
+           int
+          </span></span></em>
+        ,
+        <em class="sig-param"><span class="n"><span class="pre">
+           timeout
+          </span></span><span class="p"><span class="pre">
+           :
+          </span></span><span class="n"><span class="pre">
+           int
+          </span></span></em><span class="sig-paren">
+         )
+        </span>
+        →
+        <a class="reference internal" href="#vector.canoe.threading.WaitingErrorCode" title="vector.canoe.threading.WaitingErrorCode"><span class="pre">
+          vector.canoe.threading.WaitingErrorCode
+         </span></a><a class="headerlink" href="#vector.canoe.threading.wait_for_change_count_greater" title="Permalink to this definition">
+         ¶
+        </a></dt>
+                                    <dd>
+                                        <p>
+         Waits for the change counter of a value entity to reach a certain value.
+Each value entity contains a change counter which is reset to 0 at measurement start.
+You can read out the counter with value_entity.change_count.
+        </p>
+                                        <dl class="field-list simple">
+                                            <dt class="field-odd">
+          Parameters
+         </dt>
+                                            <dd class="field-odd">
+                                                <ul class="simple">
+                                                    <li>
+                                                        <p><strong>
+              value_entity
+             </strong>
+             – Value entity of a communication object or distributed object.
+            </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>
+              count
+             </strong>
+             (
+             <em>
+              int
+             </em>
+             ) – Change count to be reached.
+            </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>
+              timeout
+             </strong>
+             (
+             <em>
+              int
+             </em>
+             ) – Timeout in milliseconds.
+            </p>
+                                                    </li>
+                                                </ul>
+                                            </dd>
+                                            <dt class="field-even">
+          Returns
+         </dt>
+                                            <dd class="field-even">
+                                                <p>
+           a
+           <a class="reference internal" href="#vector.canoe.threading.WaitingErrorCode" title="vector.canoe.threading.WaitingErrorCode"><code class="xref py py-class docutils literal notranslate"><span class="pre">
+              WaitingErrorCode
+             </span></code></a>
+           return code
+          </p>
+                                            </dd>
+                                            <dt class="field-odd">
+          Return type
+         </dt>
+                                            <dd class="field-odd">
+                                                <p><a class="reference internal" href="#vector.canoe.threading.WaitingErrorCode" title="vector.canoe.threading.WaitingErrorCode">
+            WaitingErrorCode
+           </a>
+                                                </p>
+                                            </dd>
+                                        </dl>
+                                    </dd>
+                                </dl>
+                                <dl class="py function">
+                                    <dt class="sig sig-object py" id="vector.canoe.threading.wait_for_change_flag"><span class="sig-name descname"><span class="pre">
+          wait_for_change_flag
+         </span></span><span class="sig-paren">
+         (
+        </span><em class="sig-param"><span class="n"><span class="pre">
+           value_entity
+          </span></span></em>
+        ,
+        <em class="sig-param"><span class="n"><span class="pre">
+           timeout
+          </span></span><span class="p"><span class="pre">
+           :
+          </span></span><span class="n"><span class="pre">
+           int
+          </span></span></em><span class="sig-paren">
+         )
+        </span>
+        →
+        <a class="reference internal" href="#vector.canoe.threading.WaitingErrorCode" title="vector.canoe.threading.WaitingErrorCode"><span class="pre">
+          vector.canoe.threading.WaitingErrorCode
+         </span></a><a class="headerlink" href="#vector.canoe.threading.wait_for_change_flag" title="Permalink to this definition">
+         ¶
+        </a></dt>
+                                    <dd>
+                                        <p>
+         Waits for the change flag of a value entity to be set.
+Each value entity has a change flag which is set when the value changes and reset through an explicit call to value_entity.clear_change_flag().
+        </p>
+                                        <p>
+         Use this function instead of
+         <a class="reference internal" href="#vector.canoe.threading.wait_for_change" title="vector.canoe.threading.wait_for_change"><code class="xref py py-func docutils literal notranslate"><span class="pre">
+            wait_for_change()
+           </span></code></a>
+         if an undetermined number of changes may occur between
+a point where you reset the flag and a point where at least one change must have occurred.
+        </p>
+                                        <dl class="field-list simple">
+                                            <dt class="field-odd">
+          Parameters
+         </dt>
+                                            <dd class="field-odd">
+                                                <ul class="simple">
+                                                    <li>
+                                                        <p><strong>
+              value_entity
+             </strong>
+             – Value entity of a communication object or distributed object.
+            </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>
+              timeout
+             </strong>
+             (
+             <em>
+              int
+             </em>
+             ) – Timeout in milliseconds.
+            </p>
+                                                    </li>
+                                                </ul>
+                                            </dd>
+                                            <dt class="field-even">
+          Returns
+         </dt>
+                                            <dd class="field-even">
+                                                <p>
+           a
+           <a class="reference internal" href="#vector.canoe.threading.WaitingErrorCode" title="vector.canoe.threading.WaitingErrorCode"><code class="xref py py-class docutils literal notranslate"><span class="pre">
+              WaitingErrorCode
+             </span></code></a>
+           return code
+          </p>
+                                            </dd>
+                                            <dt class="field-odd">
+          Return type
+         </dt>
+                                            <dd class="field-odd">
+                                                <p><a class="reference internal" href="#vector.canoe.threading.WaitingErrorCode" title="vector.canoe.threading.WaitingErrorCode">
+            WaitingErrorCode
+           </a>
+                                                </p>
+                                            </dd>
+                                        </dl>
+                                    </dd>
+                                </dl>
+                                <dl class="py function">
+                                    <dt class="sig sig-object py" id="vector.canoe.threading.wait_for_impl_value"><span class="sig-name descname"><span class="pre">
+          wait_for_impl_value
+         </span></span><span class="sig-paren">
+         (
+        </span><em class="sig-param"><span class="n"><span class="pre">
+           value_entity
+          </span></span></em>
+        ,
+        <em class="sig-param"><span class="n"><span class="pre">
+           awaited_value
+          </span></span></em>
+        ,
+        <em class="sig-param"><span class="n"><span class="pre">
+           timeout
+          </span></span><span class="p"><span class="pre">
+           :
+          </span></span><span class="n"><span class="pre">
+           int
+          </span></span></em><span class="sig-paren">
+         )
+        </span>
+        →
+        <span class="pre">
+         int
+        </span><a class="headerlink" href="#vector.canoe.threading.wait_for_impl_value" title="Permalink to this definition">
+         ¶
+        </a></dt>
+                                    <dd>
+                                        <p>
+         Waits for the impl encoding of a value entity to reach a certain value.
+        </p>
+                                        <dl class="field-list simple">
+                                            <dt class="field-odd">
+          Parameters
+         </dt>
+                                            <dd class="field-odd">
+                                                <ul class="simple">
+                                                    <li>
+                                                        <p><strong>
+              value_entity
+             </strong>
+             – Value entity of a distributed object.
+            </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>
+              awaited_value
+             </strong>
+             – The value the value entity should reach to trigger the event. Its datatype must match the value entity’s datatype.
+            </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>
+              timeout
+             </strong>
+             (
+             <em>
+              int
+             </em>
+             ) – Timeout in milliseconds.
+            </p>
+                                                    </li>
+                                                </ul>
+                                            </dd>
+                                            <dt class="field-even">
+          Returns
+         </dt>
+                                            <dd class="field-even">
+                                                <p>
+           a
+           <a class="reference internal" href="#vector.canoe.threading.WaitingErrorCode" title="vector.canoe.threading.WaitingErrorCode"><code class="xref py py-class docutils literal notranslate"><span class="pre">
+              WaitingErrorCode
+             </span></code></a>
+           return code
+          </p>
+                                            </dd>
+                                            <dt class="field-odd">
+          Return type
+         </dt>
+                                            <dd class="field-odd">
+                                                <p><a class="reference internal" href="#vector.canoe.threading.WaitingErrorCode" title="vector.canoe.threading.WaitingErrorCode">
+            WaitingErrorCode
+           </a>
+                                                </p>
+                                            </dd>
+                                        </dl>
+                                    </dd>
+                                </dl>
+                                <dl class="py function">
+                                    <dt class="sig sig-object py" id="vector.canoe.threading.wait_for_impl_value_in_range"><span class="sig-name descname"><span class="pre">
+          wait_for_impl_value_in_range
+         </span></span><span class="sig-paren">
+         (
+        </span><em class="sig-param"><span class="n"><span class="pre">
+           value_entity
+          </span></span></em>
+        ,
+        <em class="sig-param"><span class="n"><span class="pre">
+           low_limit
+          </span></span><span class="p"><span class="pre">
+           :
+          </span></span><span class="n"><span class="pre">
+           Union
+          </span><span class="p"><span class="pre">
+            [
+           </span></span><span class="pre">
+           int
+          </span><span class="p"><span class="pre">
+            ,
+           </span></span><span class="pre">
+           float
+          </span><span class="p"><span class="pre">
+            ]
+           </span></span></span></em>
+        ,
+        <em class="sig-param"><span class="n"><span class="pre">
+           high_limit
+          </span></span><span class="p"><span class="pre">
+           :
+          </span></span><span class="n"><span class="pre">
+           Union
+          </span><span class="p"><span class="pre">
+            [
+           </span></span><span class="pre">
+           int
+          </span><span class="p"><span class="pre">
+            ,
+           </span></span><span class="pre">
+           float
+          </span><span class="p"><span class="pre">
+            ]
+           </span></span></span></em>
+        ,
+        <em class="sig-param"><span class="n"><span class="pre">
+           timeout
+          </span></span><span class="p"><span class="pre">
+           :
+          </span></span><span class="n"><span class="pre">
+           int
+          </span></span></em><span class="sig-paren">
+         )
+        </span>
+        →
+        <span class="pre">
+         int
+        </span><a class="headerlink" href="#vector.canoe.threading.wait_for_impl_value_in_range" title="Permalink to this definition">
+         ¶
+        </a></dt>
+                                    <dd>
+                                        <p>
+         Waits for the impl encoding of a value entity to reach a certain range of values.
+If this condition is already met when this function is called, it returns immediately without waiting.
+        </p>
+                                        <dl class="field-list simple">
+                                            <dt class="field-odd">
+          Parameters
+         </dt>
+                                            <dd class="field-odd">
+                                                <ul class="simple">
+                                                    <li>
+                                                        <p><strong>
+              value_entity
+             </strong>
+             – Value entity of a distributed object.
+            </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>
+              low_limit
+             </strong>
+             (
+             <em>
+              Union
+             </em><em>
+              [
+             </em><em>
+              int
+             </em><em>
+              ,
+             </em><em>
+              float
+             </em><em>
+              ]
+             </em>
+             ) – Lower limit of the value. Its datatype must match the value entity’s datatype.
+            </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>
+              high_limit
+             </strong>
+             (
+             <em>
+              Union
+             </em><em>
+              [
+             </em><em>
+              int
+             </em><em>
+              ,
+             </em><em>
+              float
+             </em><em>
+              ]
+             </em>
+             ) – Upper limit of the value. Its datatype must match the value entity’s datatype.
+            </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>
+              timeout
+             </strong>
+             (
+             <em>
+              int
+             </em>
+             ) – Timeout in milliseconds.
+            </p>
+                                                    </li>
+                                                </ul>
+                                            </dd>
+                                            <dt class="field-even">
+          Returns
+         </dt>
+                                            <dd class="field-even">
+                                                <p>
+           a
+           <a class="reference internal" href="#vector.canoe.threading.WaitingErrorCode" title="vector.canoe.threading.WaitingErrorCode"><code class="xref py py-class docutils literal notranslate"><span class="pre">
+              WaitingErrorCode
+             </span></code></a>
+           return code
+          </p>
+                                            </dd>
+                                            <dt class="field-odd">
+          Return type
+         </dt>
+                                            <dd class="field-odd">
+                                                <p><a class="reference internal" href="#vector.canoe.threading.WaitingErrorCode" title="vector.canoe.threading.WaitingErrorCode">
+            WaitingErrorCode
+           </a>
+                                                </p>
+                                            </dd>
+                                        </dl>
+                                    </dd>
+                                </dl>
+                                <dl class="py function">
+                                    <dt class="sig sig-object py" id="vector.canoe.threading.wait_for_impl_value_outside_range"><span class="sig-name descname"><span class="pre">
+          wait_for_impl_value_outside_range
+         </span></span><span class="sig-paren">
+         (
+        </span><em class="sig-param"><span class="n"><span class="pre">
+           value_entity
+          </span></span></em>
+        ,
+        <em class="sig-param"><span class="n"><span class="pre">
+           low_limit
+          </span></span><span class="p"><span class="pre">
+           :
+          </span></span><span class="n"><span class="pre">
+           Union
+          </span><span class="p"><span class="pre">
+            [
+           </span></span><span class="pre">
+           int
+          </span><span class="p"><span class="pre">
+            ,
+           </span></span><span class="pre">
+           float
+          </span><span class="p"><span class="pre">
+            ]
+           </span></span></span></em>
+        ,
+        <em class="sig-param"><span class="n"><span class="pre">
+           high_limit
+          </span></span><span class="p"><span class="pre">
+           :
+          </span></span><span class="n"><span class="pre">
+           Union
+          </span><span class="p"><span class="pre">
+            [
+           </span></span><span class="pre">
+           int
+          </span><span class="p"><span class="pre">
+            ,
+           </span></span><span class="pre">
+           float
+          </span><span class="p"><span class="pre">
+            ]
+           </span></span></span></em>
+        ,
+        <em class="sig-param"><span class="n"><span class="pre">
+           timeout
+          </span></span><span class="p"><span class="pre">
+           :
+          </span></span><span class="n"><span class="pre">
+           int
+          </span></span></em><span class="sig-paren">
+         )
+        </span>
+        →
+        <span class="pre">
+         int
+        </span><a class="headerlink" href="#vector.canoe.threading.wait_for_impl_value_outside_range" title="Permalink to this definition">
+         ¶
+        </a></dt>
+                                    <dd>
+                                        <p>
+         Waits for the impl encoding of a value entity to reach a value outside given range of values.
+If this condition is already met when this function is called, it returns immediately without waiting.
+        </p>
+                                        <dl class="field-list simple">
+                                            <dt class="field-odd">
+          Parameters
+         </dt>
+                                            <dd class="field-odd">
+                                                <ul class="simple">
+                                                    <li>
+                                                        <p><strong>
+              value_entity
+             </strong>
+             – Value entity of a distributed object.
+            </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>
+              low_limit
+             </strong>
+             (
+             <em>
+              Union
+             </em><em>
+              [
+             </em><em>
+              int
+             </em><em>
+              ,
+             </em><em>
+              float
+             </em><em>
+              ]
+             </em>
+             ) – Lower limit of the value. Its datatype must match the value entity’s datatype.
+            </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>
+              high_limit
+             </strong>
+             (
+             <em>
+              Union
+             </em><em>
+              [
+             </em><em>
+              int
+             </em><em>
+              ,
+             </em><em>
+              float
+             </em><em>
+              ]
+             </em>
+             ) – Upper limit of the value. Its datatype must match the value entity’s datatype.
+            </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>
+              timeout
+             </strong>
+             (
+             <em>
+              int
+             </em>
+             ) – Timeout in milliseconds.
+            </p>
+                                                    </li>
+                                                </ul>
+                                            </dd>
+                                            <dt class="field-even">
+          Returns
+         </dt>
+                                            <dd class="field-even">
+                                                <p>
+           a
+           <a class="reference internal" href="#vector.canoe.threading.WaitingErrorCode" title="vector.canoe.threading.WaitingErrorCode"><code class="xref py py-class docutils literal notranslate"><span class="pre">
+              WaitingErrorCode
+             </span></code></a>
+           return code
+          </p>
+                                            </dd>
+                                            <dt class="field-odd">
+          Return type
+         </dt>
+                                            <dd class="field-odd">
+                                                <p><a class="reference internal" href="#vector.canoe.threading.WaitingErrorCode" title="vector.canoe.threading.WaitingErrorCode">
+            WaitingErrorCode
+           </a>
+                                                </p>
+                                            </dd>
+                                        </dl>
+                                    </dd>
+                                </dl>
+                                <dl class="py function">
+                                    <dt class="sig sig-object py" id="vector.canoe.threading.wait_for_next_call"><span class="sig-name descname"><span class="pre">
+          wait_for_next_call
+         </span></span><span class="sig-paren">
+         (
+        </span><em class="sig-param"><span class="n"><span class="pre">
+           provided_method
+          </span></span></em>
+        ,
+        <em class="sig-param"><span class="n"><span class="pre">
+           timeout
+          </span></span><span class="p"><span class="pre">
+           :
+          </span></span><span class="n"><span class="pre">
+           int
+          </span></span></em><span class="sig-paren">
+         )
+        </span>
+        →
+        <a class="reference internal" href="#vector.canoe.threading.WaitForNextCallResult" title="vector.canoe.threading.WaitForNextCallResult"><span class="pre">
+          vector.canoe.threading.WaitForNextCallResult
+         </span></a><a class="headerlink" href="#vector.canoe.threading.wait_for_next_call" title="Permalink to this definition">
+         ¶
+        </a></dt>
+                                    <dd>
+                                        <p>
+         Waits for the next call of the method.
+        </p>
+                                        <p>
+         If the wait was successful, information about the call is accessible as part of the return value.
+        </p>
+                                        <dl class="field-list simple">
+                                            <dt class="field-odd">
+          Parameters
+         </dt>
+                                            <dd class="field-odd">
+                                                <ul class="simple">
+                                                    <li>
+                                                        <p><strong>
+              provided_method
+             </strong>
+             – Method provider where the call is awaited.
+            </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>
+              timeout
+             </strong>
+             (
+             <em>
+              int
+             </em>
+             ) – Timeout in milliseconds.
+            </p>
+                                                    </li>
+                                                </ul>
+                                            </dd>
+                                            <dt class="field-even">
+          Returns
+         </dt>
+                                            <dd class="field-even">
+                                                <p>
+           a
+           <a class="reference internal" href="#vector.canoe.threading.WaitForNextCallResult" title="vector.canoe.threading.WaitForNextCallResult"><code class="xref py py-class docutils literal notranslate"><span class="pre">
+              WaitForNextCallResult
+             </span></code></a>
+           named tuple of the form (wait_result, call_context).
+The wait_result is a
+           <a class="reference internal" href="#vector.canoe.threading.WaitingErrorCode" title="vector.canoe.threading.WaitingErrorCode"><code class="xref py py-class docutils literal notranslate"><span class="pre">
+              WaitingErrorCode
+             </span></code></a>
+           return code
+The call_context is the call context for the method call if there was one during the wait, or None if there was not.
+          </p>
+                                            </dd>
+                                            <dt class="field-odd">
+          Return type
+         </dt>
+                                            <dd class="field-odd">
+                                                <p>
+           NextCallResult
+          </p>
+                                            </dd>
+                                        </dl>
+                                    </dd>
+                                </dl>
+                                <dl class="py function">
+                                    <dt class="sig sig-object py" id="vector.canoe.threading.wait_for_phys_value"><span class="sig-name descname"><span class="pre">
+          wait_for_phys_value
+         </span></span><span class="sig-paren">
+         (
+        </span><em class="sig-param"><span class="n"><span class="pre">
+           value_entity
+          </span></span></em>
+        ,
+        <em class="sig-param"><span class="n"><span class="pre">
+           awaited_value
+          </span></span><span class="p"><span class="pre">
+           :
+          </span></span><span class="n"><span class="pre">
+           Union
+          </span><span class="p"><span class="pre">
+            [
+           </span></span><span class="pre">
+           int
+          </span><span class="p"><span class="pre">
+            ,
+           </span></span><span class="pre">
+           float
+          </span><span class="p"><span class="pre">
+            ]
+           </span></span></span></em>
+        ,
+        <em class="sig-param"><span class="n"><span class="pre">
+           timeout
+          </span></span><span class="p"><span class="pre">
+           :
+          </span></span><span class="n"><span class="pre">
+           int
+          </span></span></em><span class="sig-paren">
+         )
+        </span>
+        →
+        <span class="pre">
+         int
+        </span><a class="headerlink" href="#vector.canoe.threading.wait_for_phys_value" title="Permalink to this definition">
+         ¶
+        </a></dt>
+                                    <dd>
+                                        <p>
+         Waits for the phys encoding of a value entity to reach a certain value.
+        </p>
+                                        <dl class="field-list simple">
+                                            <dt class="field-odd">
+          Parameters
+         </dt>
+                                            <dd class="field-odd">
+                                                <ul class="simple">
+                                                    <li>
+                                                        <p><strong>
+              value_entity
+             </strong>
+             – Value entity of a distributed object.
+            </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>
+              awaited_value
+             </strong>
+             (
+             <em>
+              Union
+             </em><em>
+              [
+             </em><em>
+              int
+             </em><em>
+              ,
+             </em><em>
+              float
+             </em><em>
+              ]
+             </em>
+             ) – The value the value entity should reach to trigger the event. Its datatype must match the value entity’s datatype.
+            </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>
+              timeout
+             </strong>
+             (
+             <em>
+              int
+             </em>
+             ) – Timeout in milliseconds.
+            </p>
+                                                    </li>
+                                                </ul>
+                                            </dd>
+                                            <dt class="field-even">
+          Returns
+         </dt>
+                                            <dd class="field-even">
+                                                <p>
+           a
+           <a class="reference internal" href="#vector.canoe.threading.WaitingErrorCode" title="vector.canoe.threading.WaitingErrorCode"><code class="xref py py-class docutils literal notranslate"><span class="pre">
+              WaitingErrorCode
+             </span></code></a>
+           return code
+          </p>
+                                            </dd>
+                                            <dt class="field-odd">
+          Return type
+         </dt>
+                                            <dd class="field-odd">
+                                                <p><a class="reference internal" href="#vector.canoe.threading.WaitingErrorCode" title="vector.canoe.threading.WaitingErrorCode">
+            WaitingErrorCode
+           </a>
+                                                </p>
+                                            </dd>
+                                        </dl>
+                                    </dd>
+                                </dl>
+                                <dl class="py function">
+                                    <dt class="sig sig-object py" id="vector.canoe.threading.wait_for_phys_value_in_range"><span class="sig-name descname"><span class="pre">
+          wait_for_phys_value_in_range
+         </span></span><span class="sig-paren">
+         (
+        </span><em class="sig-param"><span class="n"><span class="pre">
+           value_entity
+          </span></span></em>
+        ,
+        <em class="sig-param"><span class="n"><span class="pre">
+           low_limit
+          </span></span><span class="p"><span class="pre">
+           :
+          </span></span><span class="n"><span class="pre">
+           Union
+          </span><span class="p"><span class="pre">
+            [
+           </span></span><span class="pre">
+           int
+          </span><span class="p"><span class="pre">
+            ,
+           </span></span><span class="pre">
+           float
+          </span><span class="p"><span class="pre">
+            ]
+           </span></span></span></em>
+        ,
+        <em class="sig-param"><span class="n"><span class="pre">
+           high_limit
+          </span></span><span class="p"><span class="pre">
+           :
+          </span></span><span class="n"><span class="pre">
+           Union
+          </span><span class="p"><span class="pre">
+            [
+           </span></span><span class="pre">
+           int
+          </span><span class="p"><span class="pre">
+            ,
+           </span></span><span class="pre">
+           float
+          </span><span class="p"><span class="pre">
+            ]
+           </span></span></span></em>
+        ,
+        <em class="sig-param"><span class="n"><span class="pre">
+           timeout
+          </span></span><span class="p"><span class="pre">
+           :
+          </span></span><span class="n"><span class="pre">
+           int
+          </span></span></em><span class="sig-paren">
+         )
+        </span>
+        →
+        <span class="pre">
+         int
+        </span><a class="headerlink" href="#vector.canoe.threading.wait_for_phys_value_in_range" title="Permalink to this definition">
+         ¶
+        </a></dt>
+                                    <dd>
+                                        <p>
+         Waits for the phys encoding of a value entity to reach a certain range of values.
+If this condition is already met when this function is called, it returns immediately without waiting.
+        </p>
+                                        <dl class="field-list simple">
+                                            <dt class="field-odd">
+          Parameters
+         </dt>
+                                            <dd class="field-odd">
+                                                <ul class="simple">
+                                                    <li>
+                                                        <p><strong>
+              value_entity
+             </strong>
+             – Value entity of a distributed object.
+            </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>
+              low_limit
+             </strong>
+             (
+             <em>
+              Union
+             </em><em>
+              [
+             </em><em>
+              int
+             </em><em>
+              ,
+             </em><em>
+              float
+             </em><em>
+              ]
+             </em>
+             ) – Lower limit of the value. Its datatype must match the value entity’s datatype.
+            </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>
+              high_limit
+             </strong>
+             (
+             <em>
+              Union
+             </em><em>
+              [
+             </em><em>
+              int
+             </em><em>
+              ,
+             </em><em>
+              float
+             </em><em>
+              ]
+             </em>
+             ) – Upper limit of the value. Its datatype must match the value entity’s datatype.
+            </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>
+              timeout
+             </strong>
+             (
+             <em>
+              int
+             </em>
+             ) – Timeout in milliseconds.
+            </p>
+                                                    </li>
+                                                </ul>
+                                            </dd>
+                                            <dt class="field-even">
+          Returns
+         </dt>
+                                            <dd class="field-even">
+                                                <p>
+           a
+           <a class="reference internal" href="#vector.canoe.threading.WaitingErrorCode" title="vector.canoe.threading.WaitingErrorCode"><code class="xref py py-class docutils literal notranslate"><span class="pre">
+              WaitingErrorCode
+             </span></code></a>
+           return code
+          </p>
+                                            </dd>
+                                            <dt class="field-odd">
+          Return type
+         </dt>
+                                            <dd class="field-odd">
+                                                <p><a class="reference internal" href="#vector.canoe.threading.WaitingErrorCode" title="vector.canoe.threading.WaitingErrorCode">
+            WaitingErrorCode
+           </a>
+                                                </p>
+                                            </dd>
+                                        </dl>
+                                    </dd>
+                                </dl>
+                                <dl class="py function">
+                                    <dt class="sig sig-object py" id="vector.canoe.threading.wait_for_phys_value_outside_range"><span class="sig-name descname"><span class="pre">
+          wait_for_phys_value_outside_range
+         </span></span><span class="sig-paren">
+         (
+        </span><em class="sig-param"><span class="n"><span class="pre">
+           value_entity
+          </span></span></em>
+        ,
+        <em class="sig-param"><span class="n"><span class="pre">
+           low_limit
+          </span></span><span class="p"><span class="pre">
+           :
+          </span></span><span class="n"><span class="pre">
+           Union
+          </span><span class="p"><span class="pre">
+            [
+           </span></span><span class="pre">
+           int
+          </span><span class="p"><span class="pre">
+            ,
+           </span></span><span class="pre">
+           float
+          </span><span class="p"><span class="pre">
+            ]
+           </span></span></span></em>
+        ,
+        <em class="sig-param"><span class="n"><span class="pre">
+           high_limit
+          </span></span><span class="p"><span class="pre">
+           :
+          </span></span><span class="n"><span class="pre">
+           Union
+          </span><span class="p"><span class="pre">
+            [
+           </span></span><span class="pre">
+           int
+          </span><span class="p"><span class="pre">
+            ,
+           </span></span><span class="pre">
+           float
+          </span><span class="p"><span class="pre">
+            ]
+           </span></span></span></em>
+        ,
+        <em class="sig-param"><span class="n"><span class="pre">
+           timeout
+          </span></span><span class="p"><span class="pre">
+           :
+          </span></span><span class="n"><span class="pre">
+           int
+          </span></span></em><span class="sig-paren">
+         )
+        </span>
+        →
+        <span class="pre">
+         int
+        </span><a class="headerlink" href="#vector.canoe.threading.wait_for_phys_value_outside_range" title="Permalink to this definition">
+         ¶
+        </a></dt>
+                                    <dd>
+                                        <p>
+         Waits for the phys encoding of a value entity to reach a value outside given range of values.
+If this condition is already met when this function is called, it returns immediately without waiting.
+        </p>
+                                        <dl class="field-list simple">
+                                            <dt class="field-odd">
+          Parameters
+         </dt>
+                                            <dd class="field-odd">
+                                                <ul class="simple">
+                                                    <li>
+                                                        <p><strong>
+              value_entity
+             </strong>
+             – Value entity of a distributed object.
+            </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>
+              low_limit
+             </strong>
+             (
+             <em>
+              Union
+             </em><em>
+              [
+             </em><em>
+              int
+             </em><em>
+              ,
+             </em><em>
+              float
+             </em><em>
+              ]
+             </em>
+             ) – Lower limit of the value. Its datatype must match the value entity’s datatype.
+            </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>
+              high_limit
+             </strong>
+             (
+             <em>
+              Union
+             </em><em>
+              [
+             </em><em>
+              int
+             </em><em>
+              ,
+             </em><em>
+              float
+             </em><em>
+              ]
+             </em>
+             ) – Upper limit of the value. Its datatype must match the value entity’s datatype.
+            </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>
+              timeout
+             </strong>
+             (
+             <em>
+              int
+             </em>
+             ) – Timeout in milliseconds.
+            </p>
+                                                    </li>
+                                                </ul>
+                                            </dd>
+                                            <dt class="field-even">
+          Returns
+         </dt>
+                                            <dd class="field-even">
+                                                <p>
+           a
+           <a class="reference internal" href="#vector.canoe.threading.WaitingErrorCode" title="vector.canoe.threading.WaitingErrorCode"><code class="xref py py-class docutils literal notranslate"><span class="pre">
+              WaitingErrorCode
+             </span></code></a>
+           return code
+          </p>
+                                            </dd>
+                                            <dt class="field-odd">
+          Return type
+         </dt>
+                                            <dd class="field-odd">
+                                                <p><a class="reference internal" href="#vector.canoe.threading.WaitingErrorCode" title="vector.canoe.threading.WaitingErrorCode">
+            WaitingErrorCode
+           </a>
+                                                </p>
+                                            </dd>
+                                        </dl>
+                                    </dd>
+                                </dl>
+                                <dl class="py function">
+                                    <dt class="sig sig-object py" id="vector.canoe.threading.wait_for_timeout"><span class="sig-name descname"><span class="pre">
+          wait_for_timeout
+         </span></span><span class="sig-paren">
+         (
+        </span><em class="sig-param"><span class="n"><span class="pre">
+           timeout_in_ms
+          </span></span><span class="p"><span class="pre">
+           :
+          </span></span><span class="n"><span class="pre">
+           int
+          </span></span></em><span class="sig-paren">
+         )
+        </span><a class="headerlink" href="#vector.canoe.threading.wait_for_timeout" title="Permalink to this definition">
+         ¶
+        </a>
+                                    </dt>
+                                    <dd>
+                                        <p>
+         Waits for a specified time span to pass.
+        </p>
+                                        <dl class="field-list simple">
+                                            <dt class="field-odd">
+          Parameters
+         </dt>
+                                            <dd class="field-odd">
+                                                <p><strong>
+            timeout_in_ms
+           </strong>
+           (
+           <em>
+            int
+           </em>
+           ) – The maximum time in milliseconds to wait.
+          </p>
+                                            </dd>
+                                            <dt class="field-even">
+          Returns
+         </dt>
+                                            <dd class="field-even">
+                                                <p>
+                                                    <p>
+            A WaitingErrorCode with the following values:
+           </p>
+                                                    <ul class="simple">
+                                                        <li>
+                                                            <p>
+              CONSTRAINT_VIOLATION, Resume due to constraint violation
+             </p>
+                                                        </li>
+                                                        <li>
+                                                            <p>
+              GENERAL_ERROR, General error, for example, functionality is not available
+             </p>
+                                                        </li>
+                                                        <li>
+                                                            <p>
+              TIMEOUT, Resume due to timeout
+             </p>
+                                                        </li>
+                                                    </ul>
+                                                </p>
+                                            </dd>
+                                            <dt class="field-odd">
+          Return type
+         </dt>
+                                            <dd class="field-odd">
+                                                <p><a class="reference internal" href="#vector.canoe.threading.WaitingErrorCode" title="vector.canoe.threading.WaitingErrorCode">
+            WaitingErrorCode
+           </a>
+                                                </p>
+                                            </dd>
+                                        </dl>
+                                    </dd>
+                                </dl>
+                                <dl class="py function">
+                                    <dt class="sig sig-object py" id="vector.canoe.threading.wait_for_update"><span class="sig-name descname"><span class="pre">
+          wait_for_update
+         </span></span><span class="sig-paren">
+         (
+        </span><em class="sig-param"><span class="n"><span class="pre">
+           value_entity
+          </span></span></em>
+        ,
+        <em class="sig-param"><span class="n"><span class="pre">
+           timeout
+          </span></span><span class="p"><span class="pre">
+           :
+          </span></span><span class="n"><span class="pre">
+           int
+          </span></span></em><span class="sig-paren">
+         )
+        </span>
+        →
+        <a class="reference internal" href="#vector.canoe.threading.WaitingErrorCode" title="vector.canoe.threading.WaitingErrorCode"><span class="pre">
+          vector.canoe.threading.WaitingErrorCode
+         </span></a><a class="headerlink" href="#vector.canoe.threading.wait_for_update" title="Permalink to this definition">
+         ¶
+        </a></dt>
+                                    <dd>
+                                        <p>
+         Waits for the next update of a value entity.
+This is equivalent to calling wait_for_update_count_greater(value, value_entity.get_update_count(), timeoutMs).
+        </p>
+                                        <p>
+         Note that only updates which occur while the function waits are considered.
+If you want to wait for updates which may occur earlier, or if you want to wait for several updates, use
+         <a class="reference internal" href="#vector.canoe.threading.wait_for_update_flag" title="vector.canoe.threading.wait_for_update_flag"><code class="xref py py-func docutils literal notranslate"><span class="pre">
+            wait_for_update_flag()
+           </span></code></a>
+         or
+         <a class="reference internal" href="#vector.canoe.threading.wait_for_update_count_greater" title="vector.canoe.threading.wait_for_update_count_greater"><code class="xref py py-func docutils literal notranslate"><span class="pre">
+            wait_for_update_count_greater()
+           </span></code></a>
+         .
+        </p>
+                                        <dl class="field-list simple">
+                                            <dt class="field-odd">
+          Parameters
+         </dt>
+                                            <dd class="field-odd">
+                                                <ul class="simple">
+                                                    <li>
+                                                        <p><strong>
+              value_entity
+             </strong>
+             – Value entity of a communication object or distributed object.
+            </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>
+              timeout
+             </strong>
+             (
+             <em>
+              int
+             </em>
+             ) – Timeout in milliseconds.
+            </p>
+                                                    </li>
+                                                </ul>
+                                            </dd>
+                                            <dt class="field-even">
+          Returns
+         </dt>
+                                            <dd class="field-even">
+                                                <p>
+           a
+           <a class="reference internal" href="#vector.canoe.threading.WaitingErrorCode" title="vector.canoe.threading.WaitingErrorCode"><code class="xref py py-class docutils literal notranslate"><span class="pre">
+              WaitingErrorCode
+             </span></code></a>
+           return code
+          </p>
+                                            </dd>
+                                            <dt class="field-odd">
+          Return type
+         </dt>
+                                            <dd class="field-odd">
+                                                <p><a class="reference internal" href="#vector.canoe.threading.WaitingErrorCode" title="vector.canoe.threading.WaitingErrorCode">
+            WaitingErrorCode
+           </a>
+                                                </p>
+                                            </dd>
+                                        </dl>
+                                    </dd>
+                                </dl>
+                                <dl class="py function">
+                                    <dt class="sig sig-object py" id="vector.canoe.threading.wait_for_update_count_greater"><span class="sig-name descname"><span class="pre">
+          wait_for_update_count_greater
+         </span></span><span class="sig-paren">
+         (
+        </span><em class="sig-param"><span class="n"><span class="pre">
+           value_entity
+          </span></span></em>
+        ,
+        <em class="sig-param"><span class="n"><span class="pre">
+           count
+          </span></span><span class="p"><span class="pre">
+           :
+          </span></span><span class="n"><span class="pre">
+           int
+          </span></span></em>
+        ,
+        <em class="sig-param"><span class="n"><span class="pre">
+           timeout
+          </span></span><span class="p"><span class="pre">
+           :
+          </span></span><span class="n"><span class="pre">
+           int
+          </span></span></em><span class="sig-paren">
+         )
+        </span>
+        →
+        <a class="reference internal" href="#vector.canoe.threading.WaitingErrorCode" title="vector.canoe.threading.WaitingErrorCode"><span class="pre">
+          vector.canoe.threading.WaitingErrorCode
+         </span></a><a class="headerlink" href="#vector.canoe.threading.wait_for_update_count_greater" title="Permalink to this definition">
+         ¶
+        </a></dt>
+                                    <dd>
+                                        <p>
+         Waits for the update counter of a value entity to reach a certain value.
+Each value entity contains an update counter which is reset to 0 at measurement start.
+You can read out the counter with value_entity.update_count.
+        </p>
+                                        <dl class="field-list simple">
+                                            <dt class="field-odd">
+          Parameters
+         </dt>
+                                            <dd class="field-odd">
+                                                <ul class="simple">
+                                                    <li>
+                                                        <p><strong>
+              value_entity
+             </strong>
+             – Value entity of a communication object or distributed object.
+            </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>
+              count
+             </strong>
+             (
+             <em>
+              int
+             </em>
+             ) – Change count to be reached.
+            </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>
+              timeout
+             </strong>
+             (
+             <em>
+              int
+             </em>
+             ) – Timeout in milliseconds.
+            </p>
+                                                    </li>
+                                                </ul>
+                                            </dd>
+                                            <dt class="field-even">
+          Returns
+         </dt>
+                                            <dd class="field-even">
+                                                <p>
+           a
+           <a class="reference internal" href="#vector.canoe.threading.WaitingErrorCode" title="vector.canoe.threading.WaitingErrorCode"><code class="xref py py-class docutils literal notranslate"><span class="pre">
+              WaitingErrorCode
+             </span></code></a>
+           return code
+          </p>
+                                            </dd>
+                                            <dt class="field-odd">
+          Return type
+         </dt>
+                                            <dd class="field-odd">
+                                                <p><a class="reference internal" href="#vector.canoe.threading.WaitingErrorCode" title="vector.canoe.threading.WaitingErrorCode">
+            WaitingErrorCode
+           </a>
+                                                </p>
+                                            </dd>
+                                        </dl>
+                                    </dd>
+                                </dl>
+                                <dl class="py function">
+                                    <dt class="sig sig-object py" id="vector.canoe.threading.wait_for_update_flag"><span class="sig-name descname"><span class="pre">
+          wait_for_update_flag
+         </span></span><span class="sig-paren">
+         (
+        </span><em class="sig-param"><span class="n"><span class="pre">
+           value_entity
+          </span></span></em>
+        ,
+        <em class="sig-param"><span class="n"><span class="pre">
+           timeout
+          </span></span><span class="p"><span class="pre">
+           :
+          </span></span><span class="n"><span class="pre">
+           int
+          </span></span></em><span class="sig-paren">
+         )
+        </span>
+        →
+        <a class="reference internal" href="#vector.canoe.threading.WaitingErrorCode" title="vector.canoe.threading.WaitingErrorCode"><span class="pre">
+          vector.canoe.threading.WaitingErrorCode
+         </span></a><a class="headerlink" href="#vector.canoe.threading.wait_for_update_flag" title="Permalink to this definition">
+         ¶
+        </a></dt>
+                                    <dd>
+                                        <p>
+         Waits for the update flag of a value entity to be set.
+Each value entity has an update flag which is set when the value is updated and reset through an explicit call to value_entity.clear_change_flag().
+        </p>
+                                        <p>
+         Use this function instead of
+         <a class="reference internal" href="#vector.canoe.threading.wait_for_update" title="vector.canoe.threading.wait_for_update"><code class="xref py py-func docutils literal notranslate"><span class="pre">
+            wait_for_update()
+           </span></code></a>
+         if an undetermined number of updates may occur between
+a point where you reset the flag and a point where at least one update must have occurred.
+        </p>
+                                        <dl class="field-list simple">
+                                            <dt class="field-odd">
+          Parameters
+         </dt>
+                                            <dd class="field-odd">
+                                                <ul class="simple">
+                                                    <li>
+                                                        <p><strong>
+              value_entity
+             </strong>
+             – Value entity of a communication object or distributed object.
+            </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>
+              timeout
+             </strong>
+             (
+             <em>
+              int
+             </em>
+             ) – Timeout in milliseconds.
+            </p>
+                                                    </li>
+                                                </ul>
+                                            </dd>
+                                            <dt class="field-even">
+          Returns
+         </dt>
+                                            <dd class="field-even">
+                                                <p>
+           a
+           <a class="reference internal" href="#vector.canoe.threading.WaitingErrorCode" title="vector.canoe.threading.WaitingErrorCode"><code class="xref py py-class docutils literal notranslate"><span class="pre">
+              WaitingErrorCode
+             </span></code></a>
+           return code
+          </p>
+                                            </dd>
+                                            <dt class="field-odd">
+          Return type
+         </dt>
+                                            <dd class="field-odd">
+                                                <p><a class="reference internal" href="#vector.canoe.threading.WaitingErrorCode" title="vector.canoe.threading.WaitingErrorCode">
+            WaitingErrorCode
+           </a>
+                                                </p>
+                                            </dd>
+                                        </dl>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearer">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="FooterWhite">
+                <table class="FooterWhite" style="border-collapse: collapse;margin-left: auto;margin-right: auto;">
+                    <col style="width: 70px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col style="width: 16px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col data-mc-conditions="" />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="buttons popup-container clearfix topicToolbarProxy topicToolbarProxyFooter _Skins_HTML5TopicToolbar mc-component nocontent">
+                                    <div class="button-group-container-left">
+                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo"><a href="javascript:startCANoe4SWLauncher ('HELP:H2H_01_0086_HowToUseOnlineHelp')" title="Tips for using the help" alt="Tips for using the help"><img class="vec_Footer" src="../Resources/vImages/vBackstage/vHelpInfo.png" /></a>
+                                </p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo">•&#160;&#160;Technical&#160;References are only&#160;available&#160;in&#160;English</p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo" style="text-align: right;"><span class="mc-variable Vector.BuildTime variable">2024-04-8T21:03:39</span>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <table style="width: 100%;border-collapse: separate;border-spacing: 3px 0px;margin-left: auto;margin-right: auto;caption-side: top;">
+                <col />
+                <col />
+                <col />
+                <col data-mc-conditions="BuildProcess.HTML5Link" />
+                <tbody>
+                    <tr>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;">
+                            <p class="vec_Footer">©&#160;Vector Informatik GmbH</p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;text-align: right;">
+                            <p class="vec_FooterBold">CANoe Version <span class="bold">18</span>&#160;&#160;•&#160;&#160;Powered by Sphinx 4.0.3 &amp; Alabaster 0.7.12</p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="../../../../Content/Topics/Shared/ContactCopyrightLicense.htm" class="vec_Footer" data-mc-conditions="vConditions.HTML5Link">Contact/Copyright/License</a>
+                            </p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="https://www.vector.com/int/en/company/get-info/privacy-policy/" target="_blank" class="vec_Footer">Data Privacy Notice</a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

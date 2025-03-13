@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="" data-mc-search-type="Stem" data-mc-help-system-file-name="CANoeDEFamily.xml" data-mc-path-to-help-system="../../../../../" data-mc-conditions="Targets.CANoe-DE-Family" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../Skins/Favicons/favicon-16x16.png" /><title>Jenkins as CANoe Test Controller</title>
+        <link href="../../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Resources/Stylesheets/vTableMasterPageHeader.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../../Resources/Stylesheets/vStylesheet.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../../Resources/Stylesheets/vTableSymbol.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapGlobal.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapDom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapUtilities.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapXhr.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTextEffects.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSlideshow.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMessageBus.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMessageBus.CrossFrame.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapDefault.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMediaQueries.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapAccessibility.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapHelpSystem.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapAliasFile.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopicFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapFeedbackHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSkinHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.Breadcrumbs.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.MiniToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.SideMenu.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapIndex.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapGlossary.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapParser.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSearch.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapNavigateTopics.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapLms.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapELearning.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopic.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMicroContentComponent.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSearchHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopicElements.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTriPane.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/jscript" src="../../../../Resources/vScripts/SyntaxHighlighting.js">
+        </script>
+        <script type="text/jscript" src="../../../../Resources/vScripts/TabSwitch.js">
+        </script>
+        <script type="text/javascript" src="../../../../Resources/vScripts/Vector.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../../../CANoeDEFamily.htm#Topics/CANoeCANalyzer/Test/TestFeatureSet/TFSJenkinsTestController.htm">Open topic with navigation</a>
+        </p>
+        <div class="Body">
+            <div role="main" id="mc-main-content">
+                <div>
+                    <p class="AutoSearchFilterConcepts"><a name="aanchor6157"></a>
+                        <MadCap:concept term="SFCore" />
+                    </p>
+                    <p class="IndexConcept"><a name="kanchor1852"></a>
+                    </p>
+                    <p class="StructurePath">Test » Test Feature Set (TFS) » <span class="mc-variable System.Title variable">Jenkins as CANoe Test Controller</span></p>
+                    <h1><span class="mc-variable System.Title variable">Jenkins as CANoe Test Controller</span>
+                    </h1>
+                    <p class="MenuPath">&#160;</p>
+                    <p class="ToolAvailability" data-mc-conditions="BuildProcess.ToolAvailability"><a href="../../../Shared/FeatureAvailability.htm" class="red" title="Feature availabilty for your product">Valid&#160;for</a>:&#160;&#160;CANoe&#160;DE<a name="aanchor6158"></a><MadCap:concept term="SFCANoeDE" />&#160;&#160;•&#160;&#160;CANoe:lite&#160;DE<a name="aanchor6159"></a><MadCap:concept term="SFCANoeLiteDE" /></p>
+                </div>
+                <div>
+                    <p><a href="../../../Shared/Glossary.htm#Jenkins" class="Glossary">»Jenkins</a> is a widely used continuous integration and delivery platform.</p>
+                    <p>Using the <a href="../../../COMInterface/COMInterface.htm" class="MCXref xref">COM Interface</a> you are able to integrate jobs into your <span class="Product">Jenkins</span> infrastructure.</p>
+                    <p>The following text provides basic information and hints on how to do so. It also provides a simple step-by-step example.</p>
+                    <div>
+                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                            <col class="TableStyle-vTableSymbol-Column-Column1" />
+                            <col class="TableStyle-vTableSymbol-Column-Column2" />
+                            <tbody>
+                                <tr>
+                                    <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                        <p class="Table">
+                                            <img src="../../../../Resources/vImages/vInfo.png" style="width: 48px;height: 45px;" title="Note" alt="Note" />
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                        <p class="TableSymbolHead">Important Note</p>
+                                        <p class="Table">For licensing reasons, the test setup described here is only permitted when testing real hardware!</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p>This page focuses on <span class="Product">Jenkins</span>. But the general ideas are applicable to other continuous integration systems. Since the tool integration is based on simple operating system mechanisms, you can easily adapt the approach to other tools.</p>
+                </div>
+                <div>
+                    <h2 class="SectionMain">Integration Strategies</h2>
+                    <p>For several use cases a binary decision might be sufficient. This can be achieved by a simple batch script returning <span class="bold">errorlevel</span> information. This information can be used to decide whether the <span class="Product">Jenkins</span> job was successful. You can specify additional files produced by the simulation such as test reports and logging files to get a detailed view of the simulation result. The general result as well as the additional files can be directly accessed through the Jenkins web interface.</p>
+                    <p>If your simulation is running tests, <span class="Product">Jenkins</span> provides a more specific view on <span class="bold">JUnit</span> test results. To benefit from this feature you can provide a simple transformation from tool test results to <span class="bold">JUnit</span> test results.</p>
+                    <p>The following sections provide a step-by-step example on how to integrate a simulation into Jenkins.</p>
+                </div>
+                <div>
+                    <h2 class="SectionMain">Sample Configuration</h2>
+                    <p>You can easily adjust the <a href="../../../SampConf/TFS/CentralLockingSystemOverviewCN.htm">Central Locking System</a> sample configuration for usage in <span class="Product">Jenkins</span>.</p>
+                    <p>The script <span class="bold">StartAutomaticTests.bat</span> can be directly started without parameters: <a href="javascript:startCANoeLauncher('&quot;SAMPLES:\\TestFeatureSet\\CentralLockingSystem\\CANoe\\Script&quot;')" class="ExecuteLink">Open Folder</a></p>
+                    <p>The file parametrizes the <a href="../../../Shared/Glossary.htm#VBScript" class="Glossary">»VBScript</a> <span class="bold">AutomaticTest.vbs</span> which controls your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText>:</p>
+                    <ul>
+                        <li>it starts your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText></li>
+                        <li>runs the simulation and the test modules of <span class="bold">CentralLockingSystemNET.cfg</span></li>
+                        <li>reports information to a log file (<span class="bold">AutomaticTests.log</span>) and on the console</li>
+                        <li>it closes your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> at the end</li>
+                        <li>reports test success as <span class="bold">errorlevel</span> variable.</li>
+                    </ul>
+                    <p>Try it: open a command prompt in the <span class="bold">CentralLockingSystem</span> directory and type <span class="bold">Script\StartAutomaticTestsBinary.bat</span>. It should report <span class="bold">all test modules successfully executed</span>.</p>
+                </div>
+                <div>
+                    <h2 class="SectionSub"><a name="JenkinsConfiguration" id="JenkinsConfiguration"></a>Jenkins Configuration</h2>
+                    <p>Now you can use the <span class="bold">StartAutomaticTests script</span> in <span class="Product">Jenkins</span>.</p>
+                    <div>
+                        <h3>Preconditions:</h3>
+                        <ul>
+                            <li>Install <span class="Product">Jenkins</span> on the computer (<span class="Product">Jenkins</span> server) executing the tests.</li>
+                            <li>Install your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> and drivers on the same computer (<span class="Product">Jenkins</span> server).</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                            <col class="TableStyle-vTableSymbol-Column-Column1" />
+                            <col class="TableStyle-vTableSymbol-Column-Column2" />
+                            <tbody>
+                                <tr>
+                                    <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                        <p class="Table">
+                                            <img src="../../../../Resources/vImages/vStep.png" style="width: 48px;height: 45px;" title="Procedure" alt="Procedure" />
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                        <p class="TableSymbolHead">In Jenkins Administration Web UI:</p>
+                                        <div class="Procedure">
+                                            <ol>
+                                                <li value="1">Create New item.</li>
+                                                <li value="2">Select ( * ) Freestyle project.</li>
+                                                <li value="3">Set a project name <span class="bold">Execute CANoe sample</span>.</li>
+                                                <li value="4">Open the <span class="Product">Jenkins</span> <span class="bold">Advanced project options</span> and set <span class="bold">[ ] Use custom workspace</span> to the <span class="bold">CentralLockingSystem</span> folder and set the <span class="bold">CentralLockingSystem</span> sample configuration folder.</li>
+                                                <li value="5"><span class="bold">Add build step: Execute Windows batch command</span>
+                                                    <br />Set <span class="bold">Command</span> to file path <span class="bold">Script\StartAutomaticTestsBinary.bat</span></li>
+                                            </ol>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p>Now, you can run the <span class="Product">Jenkins</span> job, and it reports success or failure of the tests.</p>
+                    <p>To see the complete reports of test modules, you switch to the <span class="Product">Jenkins</span> job configuration and <span class="bold">add post-build action: Archive the artifacts</span>. The configuration file places the test report files directly into the configuration directory. So you set <span class="bold">Files to archive</span> to <span class="GUI">**\*.vtestreport</span>.</p>
+                    <p>The next job execution will link the test reports as <span class="bold">Build artifacts</span> on the job execution page.</p>
+                </div>
+                <div>
+                    <h2 class="SectionSub">Advanced Options in Jenkins</h2>
+                    <p>Instead of copying the configuration file to your <span class="Product">Jenkins</span> system, you can retrieve it from a source code management system (SCM).</p>
+                    <p>Instead of running the tests manually you can use a trigger (e.g. on changes in SCM) or periodically or after other <span class="Product">Jenkins</span> jobs.</p>
+                    <p>You can parameterize the test job to pass the parameters on job start, so different settings can be used. They can be passed to the execution script. You could also choose different configurations. The <span class="bold">StartAutomaticTests.bat</span> already contains parameters for the configuration file and the logging file.</p>
+                    <p>You can set up a number of <span class="Product">Jenkins</span> slaves to execute tests in parallel or sequentially. Each machine needs a <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> installation, too.</p>
+                </div>
+                <div>
+                    <h2 class="SectionSub">Use Jenkins JUnit-Plugin to Report Test Cases</h2>
+                    <p>The sample job developed (see <a href="#JenkinsConfiguration">Jenkins Configuration</a>)&#160;reports success or failure in binary form. You can only see how many tests were executed and how many reported a failure by inspecting the test reports linked to the job.</p>
+                    <p>This sample shows how you can directly and easily track the number of executed and failed test cases in <span class="Product">Jenkins</span> Web-UI.</p>
+                    <p>So you create a new <span class="Product">Jenkins</span> job, using a different batch file, since you want it to always report success when the script is executed without errors.</p>
+                    <p>This sample uses the <span class="Product">Jenkins-XUnit-Plugin</span>. Please install it using the <span class="Product">Jenkins-WebUI</span>.</p>
+                    <div>
+                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                            <col class="TableStyle-vTableSymbol-Column-Column1" />
+                            <col class="TableStyle-vTableSymbol-Column-Column2" />
+                            <tbody>
+                                <tr>
+                                    <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                        <p class="Table">
+                                            <img src="../../../../Resources/vImages/vStep.png" style="width: 48px;height: 45px;" title="Procedure" alt="Procedure" />
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                        <p class="TableSymbolHead">In Jenkins Administration Web UI:</p>
+                                        <div class="Procedure">
+                                            <ol>
+                                                <li value="1">Create New item.</li>
+                                                <li value="2">Select ( * ) Freestyle project.</li>
+                                                <li value="3">Set a project name <span class="bold">Execute CANoe sample and evaluate test results</span>.</li>
+                                                <li value="4">Open the <span class="Product">Jenkins</span> <span class="bold">[Advanced project options]</span> and set <span class="bold">[ ] Use custom workspace</span> to the <span class="bold">CentralLockingSystem</span> folder and set the <span class="bold">CentralLockingSystem</span> sample configuration folder.</li>
+                                                <li value="5"><span class="bold">Add build step: Execute Windows batch command</span>.<br />Set <span class="bold">Command</span> to <span class="bold">Script\StartAutomaticTests.bat</span>.</li>
+                                                <li value="6"><span class="GUI">Add build step: Execute Windows batch command</span>.<br />Set <span class="GUI">Command</span> to <span class="GUI">Script\XmlExportAll.bat</span>.</li>
+                                                <li value="7">Add post-build action: Archive the artifacts Set Files to archive to <span class="GUI">**\*.vtestreport</span>.</li>
+                                                <li value="8"><span class="bold">Add post-build action</span> to your <span class="Product">Jenkins</span> job.<br />Select action <span class="bold">Publish xUnit test result report</span>.</li>
+                                                <li value="9">Add <span class="bold">Custom Tool</span><br />Configure <span class="bold">Custom Tool Pattern</span> to <span class="bold">*.xml</span> and <span class="bold">Custom stylesheet</span> to <span class="bold">Exec64\testunit_report\xunit-impl\xunit.xslt</span>.</li>
+                                            </ol>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p>The execution script <span class="bold">StartAutomaticTests.bat</span> will not report failing tests using the error level variable anymore. Instead you use an additional post process step to transform the test reports to a form that can be interpreted by the <span class="bold">Jenkins-xUnit</span> plugin (steps 7 and 8).</p>
+                    <p>Now you get a nice graphical view of the number of executed and successful tests in the <span class="Product">Jenkins</span> Web-UI:</p>
+                    <p>
+                        <img src="../../../../Resources/Images/CANoeCANalyzer/TFSJenkinsTestController.png" />
+                    </p>
+                    <div>
+                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                            <col class="TableStyle-vTableSymbol-Column-Column1" />
+                            <col class="TableStyle-vTableSymbol-Column-Column2" />
+                            <tbody>
+                                <tr>
+                                    <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                        <p class="Table">
+                                            <img src="../../../../Resources/vImages/vInfo.png" style="width: 48px;height: 45px;" title="Note" alt="Note" />
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                        <p class="TableSymbolHead"> More Control</p>
+                                        <p class="Table">As an alternative to the <span class="bold">xUnit</span> transformation, you can also choose your own transformation processor or even decide to extract the information needed directly from the script controlling execution instead of using the test report.</p>
+                                        <p class="Table"><span class="bold">Exec64\testunit_report\xunit-impl\xunit_msxml.bat</span> calls <span class="bold">xunit_msxml.vbs</span> to transform the test report XML files to <span class="bold">JUnit</span> compatible format. It uses <a href="../../../Shared/Glossary.htm#MSXML" class="Glossary">»MSXML</a>, which is installed with your tool, so it should be available on your system.</p>
+                                        <p class="Table">They can be used in <span class="Product">Jenkins</span> by appending a new build step after the script execution: <span class="bold">Add build step: Execute Windows batch command. Command</span>: <span class="SourceCode">Exec64\testunit_report\xunit-impl\xunit_msxml.bat reportNETTester.xml reportNETTester.junit.xml</span></p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="SectionSub">View CANoe XML Test Report Files in Jenkins</h2>
+                    <p>If your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> configuration uses XML/HTML report files, you can view the HTML reports directly in <span class="Product">Jenkins</span>. In this case remove the build step XmlExportAll.bat, which transforms the *.vtestreport to *.xml and change the files to archive to from *.vtestreport to *.html:</p>
+                    <div>
+                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                            <col class="TableStyle-vTableSymbol-Column-Column1" />
+                            <col class="TableStyle-vTableSymbol-Column-Column2" />
+                            <tbody>
+                                <tr>
+                                    <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                        <p class="Table">
+                                            <img src="../../../../Resources/vImages/vStep.png" style="width: 48px;height: 45px;" title="Procedure" alt="Procedure" />
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                        <div class="Procedure">
+                                            <ul>
+                                                <li>This command is not necessary: <span style="text-decoration: line-through;">Set Command to Script\XmlExportAll.bat</span></li>
+                                            </ul>
+                                            <ol>
+                                                <li value="1"><span class="GUI">Add post-build action</span>: <span class="GUI">Archive the artifacts Set Files to archive to **\*.html</span>.</li>
+                                            </ol>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p>Due to security reasons a "Content Security Policy" in <span class="Product">Jenkins</span> does not allow to display the HTML files including their embedded *.css styles. To have the reports displayed correctly you need to relax the <span class="Product">Jenkins</span> security policy:</p>
+                    <div>
+                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                            <col class="TableStyle-vTableSymbol-Column-Column1" />
+                            <col class="TableStyle-vTableSymbol-Column-Column2" />
+                            <tbody>
+                                <tr>
+                                    <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                        <p class="Table">
+                                            <img src="../../../../Resources/vImages/vStep.png" style="width: 48px;height: 45px;" title="Procedure" alt="Procedure" />
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                        <div class="Procedure">
+                                            <p>Install the <span class="Product">Jenkins</span> <span class="bold">HTML Publisher Plugin</span>.<br />After that execute in the <span class="Product">Jenkins</span> Script Console the following line:</p>
+                                            <p class="SourceCode">System.setProperty("hudson.model.DirectoryBrowserSupport.CSP", "sandbox; 'unsafe-inline';")</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="SectionSub">Extensibility</h2>
+                    <p>The sample script can be extended to use only specific or all test configurations of a configuration.</p>
+                    <p>This sample uses the API to run test modules. It can easily be extended to run test unit, too.</p>
+                    <p>It can switch <span class="bold">on</span> or <span class="bold">off</span> specific test configurations, test modules or single test cases.</p>
+                    <p>It can also control the execution of test units.</p>
+                    <p>It can do the <span class="bold">JUnit</span> transformation directly based on the report filenames inquired via COM API.</p>
+                    <p>If you are running <a href="../../Interfaces/VN8900/VN8900.htm" class="Product MCXref xref xrefProduct">VN8900</a> standalone tests, you can also invoke and observe them using <span class="Product">Jenkins</span>. Check the help of the <span class="Product">Standalone&#160;Manager</span> for <span class="bold">Command Line Interface</span> options.</p>
+                </div>
+                <div>
+                    <h2 class="SectionSub">Limitations</h2>
+                    <p>Your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> requires an interactive session; therefore, the <span class="Product">Jenkins</span> agent cannot be run as a service in <span class="Product">Windows</span>.</p>
+                </div>
+                <div>
+                    <h2 class="SectionSub">Virtual Machines</h2>
+                    <p class="Table">Running your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> in a virtual machine is possible.</p>
+                    <ul>
+                        <li>
+                            <p class="Table">Note that operation with Vector hardware may be affected by virtualization (e.g., higher latencies may occur).</p>
+                        </li>
+                        <li>
+                            <p class="Table">Make sure your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> can acquire a license and has access to the hardware required by the tests.</p>
+                        </li>
+                    </ul>
+                </div>
+                <p class="LinkList">&#160;</p>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="FooterWhite">
+                <table class="FooterWhite" style="border-collapse: collapse;margin-left: auto;margin-right: auto;">
+                    <col style="width: 70px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col style="width: 16px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="buttons popup-container clearfix topicToolbarProxy topicToolbarProxyFooter _Skins_HTML5TopicToolbar mc-component nocontent">
+                                    <div class="button-group-container-left">
+                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo"><a href="../../../Shared/HowToUseOnlineHelp.htm" title="Tips for using the help" alt="Tips for using the help"><img src="../../../../Resources/vImages/vBackstage/vHelpInfo.png" /></a>
+                                </p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo" style="text-align: right;"><span class="mc-variable Vector.BuildTime variable">2024-04-8T20:56:42</span>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <table style="width: 100%;border-collapse: separate;border-spacing: 3px 0px;margin-left: auto;margin-right: auto;caption-side: top;">
+                <col />
+                <col />
+                <col />
+                <col data-mc-conditions="BuildProcess.HTML5Link" />
+                <tbody>
+                    <tr>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;">
+                            <p class="vec_Footer">©&#160;Vector Informatik GmbH</p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;text-align: right;">
+                            <p class="vec_FooterBold">
+                                <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE&#160;Product Families</MadCap:conditionalText> Version <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.VectorTestUnitRunner">18</MadCap:conditionalText></p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="../../../Shared/ContactCopyrightLicense.htm" class="vec_Footer MCXref xref xrefvec_Footer">Contact/Copyright/License</a>
+                            </p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="https://www.vector.com/int/en/company/get-info/privacy-policy/" target="_blank" class="vec_Footer">Data Privacy Notice</a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

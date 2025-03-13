@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="CANoeDEFamily.xml" data-mc-path-to-help-system="../../../../../../" data-mc-conditions="Targets.CANoe-DE-Family" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../../Skins/Favicons/favicon-16x16.png" /><title>Basic MQTT Connectivity</title>
+        <link href="../../../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Resources/Stylesheets/vTableMasterPageHeader.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../../../Resources/Stylesheets/vStylesheet.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../../../Resources/Stylesheets/vTableSymbol.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapGlobal.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapDom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapUtilities.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapXhr.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapTextEffects.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapSlideshow.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapMessageBus.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapMessageBus.CrossFrame.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapDefault.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapMediaQueries.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapAccessibility.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapHelpSystem.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapAliasFile.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapTopicFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapFeedbackHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapSkinHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapToc.Breadcrumbs.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapToc.MiniToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapToc.SideMenu.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapIndex.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapGlossary.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapParser.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapSearch.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapNavigateTopics.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapLms.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapELearning.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapTopic.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapMicroContentComponent.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapSearchHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapTopicElements.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapTriPane.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/jscript" src="../../../../../Resources/vScripts/SyntaxHighlighting.js">
+        </script>
+        <script type="text/jscript" src="../../../../../Resources/vScripts/TabSwitch.js">
+        </script>
+        <script type="text/javascript" src="../../../../../Resources/vScripts/Vector.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../../../../CANoeDEFamily.htm#Topics/SampConf/Connectivity/CANoe/MQTTConnectivityBasic/MQTTConnectivityBasic.htm">Open topic with navigation</a>
+        </p>
+        <div class="Body">
+            <div role="main" id="mc-main-content">
+                <div>
+                    <p class="StructurePath"><a href="../../../CANoeCANalyzerSampleConfigurations.htm" class="StructurePath MCXref xref xrefStructurePath">Sample Configurations</a> » <a href="../../SampConfsConnectivity.htm" class="StructurePath">Connectivity</a> » <span class="mc-variable System.Title variable">Basic MQTT Connectivity</span></p>
+                    <h1><span class="mc-variable System.Title variable">Basic MQTT Connectivity</span>
+                    </h1>
+                    <p class="MenuPath">&#160;</p>
+                    <p class="ToolAvailability" data-mc-conditions="BuildProcess.ToolAvailability"><a href="../../../../Shared/FeatureAvailability.htm" class="red" title="Feature availabilty for your product">Valid&#160;for</a>:&#160;&#160;CANoe&#160;DE<a name="aanchor7234"></a><MadCap:concept term="SFCANoeDE" />&#160;&#160;•&#160;&#160;CANoe:lite&#160;DE<a name="aanchor7235"></a><MadCap:concept term="SFCANoeLiteDE" />&#160;&#160;•&#160;&#160;CANoe4SW&#160;DE<a name="aanchor7236"></a><MadCap:concept term="SFCANoe4SWDE" />&#160;&#160;•&#160;&#160;CANoe4SW:lite&#160;DE<a name="aanchor7237"></a><MadCap:concept term="SFCANoe4SWLiteDE" /></p>
+                    <p class="AutoSearchFilterConcepts"><a name="aanchor7238"></a>
+                        <MadCap:concept term="SFSampConf" />
+                    </p>
+                    <p class="IndexConcept"><a name="kanchor2247"></a><a name="kanchor2248"></a>
+                    </p>
+                </div>
+                <div>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                    <p class="TableHead">
+                                        <img src="../../../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                    </p>
+                                </td>
+                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                    <p class="Table">Click on the blue link to load the sample configuration in your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText>.</p>
+                                    <ul>
+                                        <li>
+                                            <div>
+                                                <p><span class="bold">Basic MQTT Connectivity</span>
+                                                </p>
+                                                <ul>
+                                                    <li>CANoe&#160;DE<a name="aanchor7239"></a><MadCap:concept term="SFCANoeDE" />: <span class="bold"><a href="javascript:startCANoeLauncher('&quot;SAMPLES:\\Connectivity\\MQTT\\BasicConnectivity\\CANoe\\MQTTBasicConnectivity.cfg&quot;')" class="ExecuteLink">MQTTBasicConnectivity.cfg</a></span></li>
+                                                    <li>CANoe:lite&#160;DE<a name="aanchor7240"></a><MadCap:concept term="SFCANoeLiteDE" />: <span class="bold"><a href="javascript:startCANoeLiteLauncher('&quot;SAMPLES:\\Connectivity\\MQTT\\BasicConnectivity\\CANoeLite\\MQTTBasicConnectivity.cfg&quot;')" class="ExecuteLink">MQTTBasicConnectivity.cfg</a></span></li>
+                                                    <li>CANoe4SW&#160;DE<a name="aanchor7241"></a><MadCap:concept term="SFCANoe4SWDE" />: <span class="bold"><a href="javascript:startCANoe4SWLauncher('&quot;SAMPLES:\\Connectivity\\MQTT\\BasicConnectivity\\CANoe4SW\\MQTTBasicConnectivity.cfg&quot;')" class="ExecuteLink">MQTTBasicConnectivity.cfg</a></span></li>
+                                                    <li>CANoe4SW:lite&#160;DE<a name="aanchor7242"></a><MadCap:concept term="SFCANoe4SWLiteDE" />: <span class="bold"><a href="javascript:startCANoe4SWLiteLauncher('&quot;SAMPLES:\\Connectivity\\MQTT\\BasicConnectivity\\CANoe4SWLite\\MQTTBasicConnectivity.cfg&quot;')" class="ExecuteLink">MQTTBasicConnectivity.cfg</a></span></li>
+                                                </ul>
+                                                <p>Shows how your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> can be used in connection with the IoT protocol  <span class="bold">MQTT</span>.</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>The sample configuration reuses the example from <a href="../../../../CANoeCANalyzer/Connectivity/MQTTModelingDOsExamples.htm">Help</a> and expands it by a climate control unit and three additional temperature sensors. A speed for the ventilator is determined and set with this.</p>
+                <div>
+                    <h2>Introduction</h2>
+                    <p>When the configuration is loaded, you will see a schematically represented living room with four temperature sensors, a humidity sensor and a fan. All of this together represents a control circuit which is to keep the temperature at a constant 20&#160;°C.</p>
+                    <p>You can activate or deactivate <span class="GUI">Automatic</span> mode for the fan. To simulate a rise in temperature manually, you can use the controller for the individual temperature sensors accordingly. Ventilator operation is not initiated here – only the speed is increased.</p>
+                    <div>
+                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                            <col class="TableStyle-vTableSymbol-Column-Column1" />
+                            <col class="TableStyle-vTableSymbol-Column-Column2" />
+                            <tbody>
+                                <tr>
+                                    <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                        <p class="Table">
+                                            <img src="../../../../../Resources/vImages/vInfo.png" style="width: 48px;height: 45px;" title="Note" alt="Note" />
+                                        </p>
+                                    </td>
+                                    <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                        <p class="TableSymbolHead">Note</p>
+                                        <p class="Table">To use the configuration a MQTT broker is needed. The internal broker <span class="bold">CANoe Hosted</span> is used, but if desired a local MQTT broker can also be used. A download is e.g. available under the following address:&#160;<a href="https://mosquitto.org/download/" class="ExternalLink" target="_blank">https://mosquitto.org/download/</a></p>
+                                        <p class="Table">Under <span class="GUI"><a href="../../../../CANoeCANalyzer/Ribbon/File/Options/Extensions/ExtensionsConnectivity.htm">Options|Extensions|Connectivity</a></span> you can adjust the TCP port of the internal MQTT broker in the <span class="GUI">CANoe Hosted</span> area. The usual TCP port for MQTT is 1883.</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div>
+                    <h2><a name="Shortcuts" id="Shortcuts"></a>Desktops</h2>
+                    <p>This configuration contains the following desktops:</p>
+                    <div>
+                        <table style="width: 100%;border-collapse: separate;border-spacing: 2px 0px;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-top-style: none;border-top-width: 1px;border-bottom-style: none;border-bottom-width: 1px;margin-left: 0;margin-right: auto;">
+                            <col style="width: 120px;">
+                            </col>
+                            <col style="width: 120px;">
+                            </col>
+                            <col style="width: 120px;">
+                            </col>
+                            <col>
+                            </col>
+                            <tbody>
+                                <tr>
+                                    <td style="background-color: #F0F5F5;vertical-align: middle;border-left-style: solid;border-left-width: 1px;border-left-color: #bebebe;border-right-style: solid;border-right-width: 1px;border-right-color: #bebebe;border-top-style: solid;border-top-width: 1px;border-top-color: #bebebe;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #00a2e8;padding-left: 2pt;padding-right: 5pt;padding-top: 1pt;padding-bottom: 1pt;">
+                                        <p class="Table"><a href="#MQTTLivingRoom" class="Tab">MQTT Living Room</a>
+                                        </p>
+                                    </td>
+                                    <td style="background-color: #F0F5F5;vertical-align: middle;border-left-style: solid;border-left-width: 1px;border-left-color: #bebebe;border-right-style: solid;border-right-width: 1px;border-right-color: #bebebe;border-top-style: solid;border-top-width: 1px;border-top-color: #bebebe;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #00a2e8;padding-left: 2pt;padding-right: 5pt;padding-top: 1pt;padding-bottom: 1pt;">
+                                        <p class="Table"><a href="#Modeling" class="Tab">Modeling</a>
+                                        </p>
+                                    </td>
+                                    <td style="background-color: #F0F5F5;vertical-align: middle;border-left-style: solid;border-left-width: 1px;border-left-color: #bebebe;border-right-style: solid;border-right-width: 1px;border-right-color: #bebebe;border-top-style: solid;border-top-width: 1px;border-top-color: #bebebe;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #00a2e8;padding-left: 2pt;padding-right: 5pt;padding-top: 1pt;padding-bottom: 1pt;">
+                                        <p class="Table"><a href="#BMFanTest" class="Tab">FanTest</a>
+                                        </p>
+                                    </td>
+                                    <td style="vertical-align: middle;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #00a2e8;padding-left: 5pt;padding-right: 5pt;padding-top: 2pt;padding-bottom: 2pt;">
+                                        <p class="Table">&#160;</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <h2 class="NavigationM"><a name="MQTTLivingRoom" id="MQTTLivingRoom"></a>MQTT Living Room <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                        <p>Three <span class="GUI">Trace</span> windows and the <span class="GUI">Write</span> window can also be seen on this desktop. The <span class="bold">living room</span> with its four temperature sensors, ventilator and humidity sensor are shown on the right-hand side.</p>
+                        <p>The <span class="GUI">ClimateControl</span> panel can be used to change the temperature in the room for each individual sensor. This change results in the ventilator beginning to rotate. If the temperature continues rising, this causes the ventilator to rotate faster.</p>
+                        <p>If <span class="GUI">Automatic</span> mode is deactivated, none of the values are being controlled.</p>
+                        <p>If <span class="GUI">Automatic</span> mode is activated, the temperature for the sensors is randomly adjusted in a range of 0&#160;°C to 10&#160;°C. If a temperature is over 20&#160;°C, the ventilator begins cooling. Attempts are repeatedly made to control the temperature down to 20&#160;°C for each temperature sensor here.</p>
+                        <p>The sensor which is sending its values can be seen in the <span class="GUI">MQTTLivingRoom</span> panel. The connecting line is colored red here if the sensor is sending a value to the ventilator. The illustration shown is simplified, as the value is not transferred directly to the ventilator, but first to the MQTT broker and from there to the ventilator.</p>
+                    </div>
+                    <div>
+                        <h2 class="NavigationM"><a name="Modeling" id="Modeling"></a>Modeling <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                        <p>The <span class="GUI">Communication Setup</span>, <span class="GUI">Measurement Setup</span> and <span class="GUI">Write</span> window are found on this desktop. The Communication Setup can be seen here. The <span class="bold">vCDL</span> language is used as the data source for modeling. A script in the <span class="bold">C#</span> language serves to operate the simulation.</p>
+                    </div>
+                    <div>
+                        <h2 class="NavigationM"><a name="BMFanTest" id="BMFanTest"></a>FanTest <a href="#Shortcuts" class="TopOfPage">[▲ back]</a></h2>
+                        <p>This desktop shows the use of tests in combination with <span class="Product">vTESTstudio</span> and MQTT.</p>
+                        <p>Using the <span class="GUI">ThresholdSetting</span> panel, you can enter the average temperature at which the fan starts to move. 
+				The test is executed at the beginning of the measurement. You can restart the test <span class="GUI">Fan Test</span> by clicking on <img src="../../../../../Resources/vImages/vIcons/play_16.png" />.</p>
+                        <p>The test checks whether:</p>
+                        <ul>
+                            <li>
+                                <p class="ListItem">at an average temperature &gt; 30 °C the fan rotates</p>
+                            </li>
+                            <li>
+                                <p class="ListItem">at an average temperature &lt; 30 °C the fan speed is 0</p>
+                            </li>
+                        </ul>
+                        <p>The <span class="GUI">Trace</span> window named <span class="GUI">Fan Test Trace</span> shows the individual steps of the test execution.
+				</p>
+                    </div>
+                </div>
+                <p class="LinkList">&#160;</p>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="FooterWhite">
+                <table class="FooterWhite" style="border-collapse: collapse;margin-left: auto;margin-right: auto;">
+                    <col style="width: 70px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col style="width: 16px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="buttons popup-container clearfix topicToolbarProxy topicToolbarProxyFooter _Skins_HTML5TopicToolbar mc-component nocontent">
+                                    <div class="button-group-container-left">
+                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo"><a href="../../../../Shared/HowToUseOnlineHelp.htm" title="Tips for using the help" alt="Tips for using the help"><img src="../../../../../Resources/vImages/vBackstage/vHelpInfo.png" /></a>
+                                </p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo" style="text-align: right;"><span class="mc-variable Vector.BuildTime variable">2024-04-8T20:56:42</span>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <table style="width: 100%;border-collapse: separate;border-spacing: 3px 0px;margin-left: auto;margin-right: auto;caption-side: top;">
+                <col />
+                <col />
+                <col />
+                <col data-mc-conditions="BuildProcess.HTML5Link" />
+                <tbody>
+                    <tr>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;">
+                            <p class="vec_Footer">©&#160;Vector Informatik GmbH</p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;text-align: right;">
+                            <p class="vec_FooterBold">
+                                <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE&#160;Product Families</MadCap:conditionalText> Version <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.VectorTestUnitRunner">18</MadCap:conditionalText></p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="../../../../Shared/ContactCopyrightLicense.htm" class="vec_Footer MCXref xref xrefvec_Footer">Contact/Copyright/License</a>
+                            </p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="https://www.vector.com/int/en/company/get-info/privacy-policy/" target="_blank" class="vec_Footer">Data Privacy Notice</a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

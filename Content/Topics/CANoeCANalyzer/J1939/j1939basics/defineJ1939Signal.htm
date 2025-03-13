@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="topic" data-mc-search-type="Stem" data-mc-help-system-file-name="CANoeDEFamily.xml" data-mc-path-to-help-system="../../../../../" data-mc-conditions="BuildProcess.J1939CANdbPluginDouble,Targets.CANalyzer,Targets.CANoe-DE-Family" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../Skins/Favicons/favicon-16x16.png" /><title>Define a J1939 Signal</title>
+        <link href="../../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Resources/Stylesheets/vTableMasterPageHeader.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../../Resources/Stylesheets/vStylesheet.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../../Resources/Stylesheets/vTable.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../../Resources/Stylesheets/vTableSymbol.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapGlobal.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapDom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapUtilities.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapXhr.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTextEffects.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSlideshow.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMessageBus.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMessageBus.CrossFrame.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapDefault.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMediaQueries.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapAccessibility.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapHelpSystem.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapAliasFile.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopicFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapFeedbackHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSkinHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.Breadcrumbs.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.MiniToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.SideMenu.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapIndex.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapGlossary.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapParser.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSearch.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapNavigateTopics.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapLms.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapELearning.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopic.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMicroContentComponent.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSearchHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopicElements.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTriPane.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/jscript" src="../../../../Resources/vScripts/SyntaxHighlighting.js">
+        </script>
+        <script type="text/jscript" src="../../../../Resources/vScripts/TabSwitch.js">
+        </script>
+        <script type="text/javascript" src="../../../../Resources/vScripts/Vector.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../../../CANoeDEFamily.htm#Topics/CANoeCANalyzer/J1939/j1939basics/defineJ1939Signal.htm">Open topic with navigation</a>
+        </p>
+        <div class="Body">
+            <div role="main" id="mc-main-content">
+                <p class="StructurePath"><a href="../../CANoeDEFamily.htm" class="StructurePath"><span class="mc-variable Vector.Product variable">CANoe</span></a> » <a href="../startpageJ1939.htm" class="StructurePath">J1939</a> » <a href="defineJ1939DB.htm" class="StructurePath">Define a J1939 Database</a> » <span class="mc-variable System.Title variable">Define a J1939 Signal</span></p>
+                <h1><a name="kanchor239"></a><span class="mc-variable System.Title variable">Define a J1939 Signal</span>
+                </h1>
+                <p class="MenuPath">&#160;</p>
+                <p class="ToolAvailability" data-mc-conditions="BuildProcess.ToolAvailability"><a href="../../../Shared/FeatureAvailability.htm" class="red" title="Feature availabilty for your product">Valid&#160;for</a>:&#160;&#160;CANoe&#160;DE<a name="aanchor852"></a><MadCap:concept term="SFCANoeDE" /></p>
+                <p class="AutoSearchFilterConcepts"><a name="aanchor853"></a>
+                    <MadCap:concept term="SFCore" />
+                </p>
+                <p>For <a href="j1939Basics.htm">J1939</a> signal values are only valid within a defined value range. Particular values are reserved and identify an invalid or not available signal.</p>
+                <p>For J1939 signals, there are two additional signal attributes available:</p>
+                <h2>Signal Attribute SigType</h2>
+                <p>The valid value range and the interpretation of the signal value is specified with the attribute <span class="bold">SigType</span>. By using <span class="bold">SigType </span>it is possible to display only valid signal values in the Graphics Window. If the attribute is not defined the entire value range is valid.</p>
+                <p>The attribute is defined as follows:</p>
+                <div style="text-align: left;">
+                    <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                        <col />
+                        <col />
+                        <thead>
+                            <tr>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                    <p class="TableHead">Attribute Definition</p>
+                                </th>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                    <p class="TableHead">Value</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">Attribute type </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Signal</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">Name </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">SigType</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">Type</p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Enum</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">Value </p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Default<br />Range<br />RangeSigned<br />ASCII<br />Discrete<br />Control<br />ReferencePGN<br />DTC<br />StringDelimiter<br />StringLength<br />StringLengthCtrl<br />MessageCounter<br />MessageChecksum</p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <p>The order of the enumeration values must not be changed. The values have the following value range and interpretation:</p>
+                <ul>
+                    <li><span class="bold">Default</span>: normal signal, no protocol-specific interpretation</li>
+                    <li><span class="bold">Range</span>
+                    </li>
+                </ul>
+                <div class="Indent">
+                    <p>Signals with the attribute value <span class="bold">Range</span> are interpreted according to SAE J1939-71. The available value range is restricted due to coding additional information. The attribute value can only be used for signals of value type <span class="bold">Unsigned</span>.</p>
+                </div>
+                <div align="left" class="Indent">
+                    <table style="margin-left: 0;margin-right: auto;caption-side: top;mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                        <col />
+                        <col />
+                        <col />
+                        <col />
+                        <thead>
+                            <tr>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                    <p>&#160;</p>
+                                </th>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                    <p class="TableHead">1 Byte</p>
+                                </th>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                    <p class="TableHead">2 Byte</p>
+                                </th>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                    <p class="TableHead">4 Byte</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">valid signal</p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">0..FAh</p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">0..FAFFh</p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">0..FAFFFFFFh</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">parameter specific</p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">FBh</p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">FB00h..FBFFh</p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">FB000000h..FBFFFFFFh</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">reserved</p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">FCh..FDh</p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">FC00h..FDFFh</p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">FC000000h..FDFFFFFFh</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">error</p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">FEh</p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">FE00h..FEFFh</p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">FE000000h..FEFFFFFFh</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">not available</p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">FFh</p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">FF00h..FFFFh</p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">FF000000h..FFFFFFFFh</p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <ul>
+                    <li><span class="bold">RangeSigned</span>
+                    </li>
+                </ul>
+                <div class="Indent">
+                    <p>Signals with the attribute value <span class="bold">RangeSigned</span> are interpreted according to NMEA2000® appendix B4. The available value range is restricted due to coding additional information. The attribute value can only be used for signals of value type <span class="bold">Signed</span>.</p>
+                </div>
+                <div align="left" class="Indent">
+                    <table style="margin-left: 0;margin-right: auto;caption-side: top;mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                        <col />
+                        <col />
+                        <col />
+                        <col />
+                        <thead>
+                            <tr>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">&#160;</th>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                    <p class="TableHead">1 Byte</p>
+                                </th>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                    <p class="TableHead">2 Byte</p>
+                                </th>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                    <p class="TableHead">4 Byte</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">valid signal</p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">0..7Ch</p>
+                                <p class="Table">80h..FFh</p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">0..7FFCh</p>
+                                <p class="Table">8000h..FFFFh</p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">0..7FFFFFFCh</p>
+                                <p class="Table">80000000h..FFFFFFFFh</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">parameter specific</p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">7Dh</p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">7FFDh</p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">7FFFFFFDh</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">error</p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">7Eh</p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">7FFEh</p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">7FFFFFFEh</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">not available</p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">7Fh</p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">7FFFh</p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">7FFFFFFFh</p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <ul>
+                    <li><span class="bold">ASCII</span>
+                    </li>
+                </ul>
+                <div class="Indent"><span>A signal of this type contains a string of fix length. The length of the string is defined by the size of the signal.</span>
+                </div>
+                <div class="Indent">&#160;</div>
+                <div align="left" class="Indent">
+                    <table style="margin-left: 0;margin-right: auto;caption-side: top;width: 204;mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                        <col />
+                        <col />
+                        <thead>
+                            <tr>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">&#160;</th>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                    <p class="TableHead">1 Byte</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">valid signal</p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">01h..FEh</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">error</p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">00h</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">not available</p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">FFh</p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <ul>
+                    <li><span class="bold">Discrete</span>
+                    </li>
+                </ul>
+                <div align="left" class="Indent">
+                    <table style="margin-left: 0;margin-right: auto;caption-side: top;mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                        <col />
+                        <col />
+                        <thead>
+                            <tr>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">&#160;</th>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                    <p class="TableHead">2 Bit</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">not active</p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">0</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">active</p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">1</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">error</p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">2</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">not available</p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">3</p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <ul>
+                    <li><span class="bold">Control</span>
+                    </li>
+                </ul>
+                <div align="left" class="Indent">
+                    <table style="margin-left: 0;margin-right: auto;caption-side: top;mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                        <col />
+                        <col />
+                        <thead>
+                            <tr>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">&#160;</th>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                    <p class="TableHead">2 Bit</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">deactivate</p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">0</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">activate</p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">1</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">reserved</p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">2</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">do not change</p>
+                            </td>
+                            <td colspan="1" rowspan="1" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">3</p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <ul>
+                    <li><span class="bold">ReferencePGN</span>
+                        <br />The signal contains a PGN, i.E. the RQST (PGN EA00h) Parameter Group contains a signal with the requested PGN. The Trace Window and Data Window shows the name of the Parameter Group from the database.</li>
+                </ul>
+                <ul>
+                    <li><span class="bold">DTC</span>
+                        <br />The signal contains a diagnostic trouble code (32 bit, inclusive SPN, FMI and OC). The Trace Window and Data Window show the name of the signal depending on the SPN. The Conversion Method Version 4 or Version 1, depending on the Conversion Method Bit, is used.</li>
+                </ul>
+                <ul>
+                    <li><span class="bold">StringDelimiter</span>
+                        <br />String of variable length which ends with a delimiter ("*" or "2Ah"). The length of the signal in the database must be set to 8 bit (minimum length of a string signal).</li>
+                </ul>
+                <ul>
+                    <li><span class="bold">StringLength</span>
+                        <br />String of variable length which contains the number of characters in the first or first two bytes (Intel format). The signal size in the database must be set to 8 bit for 1 byte length or 16 bit for 2 byte length (minimum length of a string signal).</li>
+                </ul>
+                <ul>
+                    <li><span class="bold">StringLengthCtrl</span>
+                        <br />String of variable length which contains the signal length in bytes (including the size and control bytes) in the first or first two bytes (Intel format) and a control byte (0=Unicode (UTF16), 1=ASCII) after the length. The signal size in the database must be set to 16 bit for 1 byte length or 24 bit for 2 byte length (minimum length of a string signal).</li>
+                </ul>
+                <div>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                    <p class="Table">
+                                        <img src="../../../../Resources/vImages/vInfo.png" style="width: 48px;height: 45px;" title="Note" alt="Note" />
+                                    </p>
+                                </td>
+                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                    <p class="TableSymbolHead">Note - Access to Signals with various Length in CAPL</p>
+                                    <p class="Table">CAPL does not provide any additional support by access to the signals with <span class="bold">SigType</span> like <span class="bold">StringDelimiter</span>, <span class="bold">StringLength</span> or <span class="bold">StringLengthCtrl</span>. You have to calculate the content of such signals by iterating them over the corresponding message byte by byte.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h2>Signal Attribute SPN</h2>
+                <p>With the attribute <span class="bold">SPN</span>, the <span class="bold">S</span>uspect <span class="bold">P</span>arameter <span class="bold">N</span>umber is defined; see table below. The SPN is specified in the J1939 specification. This attribute is used, for example, by the <a href="../blocks/diagmonitor/dmOverview.htm" data-mc-exclude-action="unbind" data-mc-conditions="BuildProcess.J1939CANdbExclude">J1939 DTC Monitor</a>.</p>
+                <div style="text-align: left;">
+                    <table style="width: 33.203%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');" width="33.203%" class="TableStyle_vTable" cellspacing="0">
+                        <col />
+                        <col />
+                        <thead>
+                            <tr>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                    <p class="TableHead">Attribute defintion</p>
+                                </th>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                    <p class="TableHead">Value</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" style="width: 49.412%;" width="49.412%" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">Attribute type </p>
+                            </td>
+                            <td colspan="1" rowspan="1" style="width: 50.588%;" width="50.588%" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Signal</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" style="width: 49.412%;" width="49.412%" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">Name </p>
+                            </td>
+                            <td colspan="1" rowspan="1" style="width: 50.588%;" width="50.588%" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">SPN</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" style="width: 49.412%;" width="49.412%" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">Type</p>
+                            </td>
+                            <td colspan="1" rowspan="1" style="width: 50.588%;" width="50.588%" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">Integer</p>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td colspan="1" rowspan="1" style="width: 49.412%;" width="49.412%" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                <p class="Table">Value </p>
+                            </td>
+                            <td colspan="1" rowspan="1" style="width: 50.588%;" width="50.588%" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                <p class="Table">0..524287</p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <p class="LinkList"><a href="j1939PGandPGN.htm" class="LinkList">J1939 Parameter Group</a>&#160;&#160;•&#160;&#160;<a href="j1939PGandPGN.htm" class="LinkList">J1939 PGN</a>&#160;&#160;•&#160;&#160;<a href="defineJ1939PG.htm" class="LinkList">Define a J1939 PG</a>&#160;&#160;•&#160;&#160;<a href="j1939CanDbAttributes.htm" class="LinkList">Overview J1939 Database Attributes</a></p>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="FooterWhite">
+                <table class="FooterWhite" style="border-collapse: collapse;margin-left: auto;margin-right: auto;">
+                    <col style="width: 70px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col style="width: 16px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="buttons popup-container clearfix topicToolbarProxy topicToolbarProxyFooter _Skins_HTML5TopicToolbar mc-component nocontent">
+                                    <div class="button-group-container-left">
+                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo"><a href="../../../Shared/HowToUseOnlineHelp.htm" title="Tips for using the help" alt="Tips for using the help"><img src="../../../../Resources/vImages/vBackstage/vHelpInfo.png" /></a>
+                                </p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo" style="text-align: right;"><span class="mc-variable Vector.BuildTime variable">2024-04-8T20:56:42</span>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <table style="width: 100%;border-collapse: separate;border-spacing: 3px 0px;margin-left: auto;margin-right: auto;caption-side: top;">
+                <col />
+                <col />
+                <col />
+                <col data-mc-conditions="BuildProcess.HTML5Link" />
+                <tbody>
+                    <tr>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;">
+                            <p class="vec_Footer">©&#160;Vector Informatik GmbH</p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;text-align: right;">
+                            <p class="vec_FooterBold">
+                                <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE&#160;Product Families</MadCap:conditionalText> Version <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.VectorTestUnitRunner">18</MadCap:conditionalText></p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="../../../Shared/ContactCopyrightLicense.htm" class="vec_Footer MCXref xref xrefvec_Footer">Contact/Copyright/License</a>
+                            </p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="https://www.vector.com/int/en/company/get-info/privacy-policy/" target="_blank" class="vec_Footer">Data Privacy Notice</a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

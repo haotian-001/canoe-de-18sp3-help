@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="topic" data-mc-search-type="Stem" data-mc-help-system-file-name="CANoeDEFamily.xml" data-mc-path-to-help-system="../../../../../" data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta name="msapplication-config" content="../../../../../Skins/Favicons/browserconfig.xml" />
+        <meta name="copyright" value="Copyright © 2002 Vector Informatik GmbH  -   Option J1939" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../Skins/Favicons/favicon-16x16.png" /><title>J1939 CAN FD</title>
+        <link href="../../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Resources/Stylesheets/vTableMasterPageHeader.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../../Resources/Stylesheets/vStylesheet.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../../Resources/Stylesheets/vTable.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapGlobal.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapDom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapUtilities.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapXhr.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTextEffects.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSlideshow.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMessageBus.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMessageBus.CrossFrame.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapDefault.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMediaQueries.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapAccessibility.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapHelpSystem.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapAliasFile.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopicFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapFeedbackHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSkinHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.Breadcrumbs.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.MiniToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.SideMenu.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapIndex.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapGlossary.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapParser.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSearch.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapNavigateTopics.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapLms.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapELearning.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopic.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMicroContentComponent.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSearchHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopicElements.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTriPane.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/jscript" src="../../../../Resources/vScripts/SyntaxHighlighting.js">
+        </script>
+        <script type="text/jscript" src="../../../../Resources/vScripts/TabSwitch.js">
+        </script>
+        <script type="text/javascript" src="../../../../Resources/vScripts/Vector.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../../../CANoeDEFamily.htm#Topics/CANoeCANalyzer/J1939/J1939CANfd/1939CANfd.htm">Open topic with navigation</a>
+        </p>
+        <div class="Body">
+            <div role="main" id="mc-main-content">
+                <p class="StructurePath"><a href="../startpageJ1939.htm" class="StructurePath">J1939</a> » <span class="mc-variable System.Title variable">J1939 CAN FD</span></p>
+                <h1><span class="mc-variable System.Title variable">J1939 CAN FD</span>
+                </h1>
+                <p class="MenuPath">&#160;</p>
+                <p class="ToolAvailability" data-mc-conditions="BuildProcess.ToolAvailability"><a href="../../../Shared/FeatureAvailability.htm" class="red" title="Feature availabilty for your product">Valid&#160;for</a>:&#160;&#160;CANoe&#160;DE<a name="aanchor3947"></a><MadCap:concept term="SFCANoeDE" /></p>
+                <p class="AutoSearchFilterConcepts"><a name="aanchor3948"></a>
+                    <MadCap:concept term="SFCore" />
+                </p>
+                <p><a name="kanchor1199"></a>
+                </p>
+                <div>
+                    <h2 class="SectionMain">J1939 CAN FD</h2>
+                    <p>Your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> starting with version 15.3 supports J1939 based on CAN FD according to the specifications SAE J1939-17 and SAE J1939-22. CAN FD enables transmission rates of the user data of up to 2000 kBaud with a length of up to 64 bytes. This increases the throughput compared to classical CAN (250 or 500 kBaud, 8 bytes), so that either the busload can be reduced or the number of participants can be increased.</p>
+                </div>
+                <div>
+                    <h2 class="SectionMain">Technical Background</h2>
+                    <p>CAN FD is backward compatible to classical CAN, because the arbitration phase still takes place at 500 kBaud and indicates whether the data is to be transmitted using CAN FD or classical CAN. To signal the usage of CAN FD to the receiver, the FDF bit (FD Format Indicator) is set in the check box of the CAN frame.</p>
+                    <p>A CAN FD frame can transport 0 - 64 bytes of user data. How long a frame is, is specified by the Data Length Code (DLC), which is located in the check box of the CAN FD frame. The DLC can have values from 0-15. The length is not proportional to the DLC and can be taken from the table below:</p>
+                    <table style="mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                        <tbody>
+                            <tr>
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">DLC</p>
+                                </th>
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">0</p>
+                                </th>
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">1</p>
+                                </th>
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">2</p>
+                                </th>
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">3</p>
+                                </th>
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">4</p>
+                                </th>
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">5</p>
+                                </th>
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">6</p>
+                                </th>
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">7</p>
+                                </th>
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">8</p>
+                                </th>
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">9</p>
+                                </th>
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">10</p>
+                                </th>
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">11</p>
+                                </th>
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">12</p>
+                                </th>
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">13</p>
+                                </th>
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table">14</p>
+                                </th>
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Table">15</p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="Table">Length (Bytes)</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="Table">0</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="Table">1</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="Table">2</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="Table">3</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="Table">4</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="Table">5</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="Table">6</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="Table">7</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="Table">8</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="Table">12</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="Table">16</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="Table">20</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="Table">24</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="Table">32</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="Table">48</p>
+                                </td>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                    <p class="Table">64</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>In a J1939 CAN FD network there are the following message types:</p>
+                    <ul>
+                        <li>
+                            <p class="ListItem"><span class="bold">CBFF – Classical Base Frame Format</span>
+                            </p>
+                            <p class="ListItem">CAN Frame 11 Bit Identifier</p>
+                        </li>
+                        <li>
+                            <p class="ListItem"><span class="bold">CEFF – Classical Extended Frame Format</span>
+                            </p>
+                            <p class="ListItem">CAN Frame 29 Bit Identifier</p>
+                        </li>
+                        <li>
+                            <p class="ListItem"><span class="bold">FBFF – Flexible Data Rate Base Frame Format</span>
+                            </p>
+                            <p class="ListItem">CAN FD Frame 11 Bit Identifier</p>
+                        </li>
+                        <li>
+                            <p class="ListItem"><span class="bold">FEFF – Flexible Data Rate Extended Frame Format</span>
+                            </p>
+                            <p class="ListItem">CAN FD Frame 29 Bit Identifier</p>
+                        </li>
+                    </ul>
+                    <p>In J1939 CAN FD three Protocol Data Units (PDU) are distinguished:</p>
+                    <ul>
+                        <li>
+                            <p class="TableBold">D_PDU1</p>
+                            <p class="ListItem">FEFF, Destination Specific</p>
+                        </li>
+                        <li>
+                            <p class="TableBold">D_PDU2</p>
+                            <p class="ListItem">FEFF, Broadcast</p>
+                        </li>
+                        <li>
+                            <p class="TableBold">D_PDU3</p>
+                            <p class="ListItem">FBFF, Broadcast</p>
+                        </li>
+                    </ul>
+                    <p>Even though it is possible to send classical CAN frames in the CAN FD network, the J1939 CAN FD standard refrains from doing so with a single exception, the Address Claimed message. Only FBFF and FEFF messages are expected according to the following schemes.</p>
+                    <div>
+                        <h3 class="SectionSub">D_PDU3</h3>
+                        <table style="mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th colspan="19" class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                        <p class="Table" style="text-align: center;">FBFF</p>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td colspan="3" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">AppPI</p>
+                                    </td>
+                                    <td colspan="8" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">SA</p>
+                                    </td>
+                                    <td colspan="8" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Data Field</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">&#160;</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">&#160;</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">&#160;</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">&#160;</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">&#160;</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">&#160;</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">&#160;</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">&#160;</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">&#160;</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">&#160;</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">&#160;</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">&#160;</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">&#160;</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">&#160;</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">&#160;</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">&#160;</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">&#160;</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">&#160;</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">&#160;</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">3</p>
+                                    </td>
+                                    <td colspan="8" class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">8</p>
+                                    </td>
+                                    <td colspan="8" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd" style="text-align: center;">
+                                        <p class="Table">0-512 Bit</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="11" class="TableStyle_vTable_Body_0_0_RowEnd_ColSep" style="text-align: center;">
+                                        <p class="Table">11-bit Identifier</p>
+                                    </td>
+                                    <td colspan="8" class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd" style="text-align: center;">
+                                        <p class="Table">Data</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <ul>
+                            <li><span class="bold">AppPI</span>: Application Protocol Indicator</li>
+                            <li><span class="bold">SA</span>: Source Address</li>
+                            <li><span class="bold">Data Field</span>: Payload</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="SectionSub">D_PDU1 (PF: 0-239) and D_PDU2 (PF: 240-255)</h3>
+                        <table style="mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th colspan="37" class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                        <p class="Table" style="text-align: center;">FEFF</p>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td colspan="3" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Prio</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">EDP</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">DP</p>
+                                    </td>
+                                    <td colspan="8" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">PF</p>
+                                    </td>
+                                    <td colspan="8" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">PS (DA)</p>
+                                    </td>
+                                    <td colspan="8" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">SA</p>
+                                    </td>
+                                    <td colspan="8" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Data Field</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">&#160;</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">&#160;</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">&#160;</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">&#160;</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">&#160;</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">&#160;</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">&#160;</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">&#160;</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">&#160;</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">&#160;</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">&#160;</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">&#160;</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">&#160;</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">&#160;</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">&#160;</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">&#160;</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">&#160;</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">&#160;</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">&#160;</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">&#160;</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">&#160;</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">&#160;</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">&#160;</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">&#160;</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">&#160;</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">&#160;</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">&#160;</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">&#160;</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">&#160;</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">&#160;</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">&#160;</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">&#160;</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">&#160;</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">&#160;</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">&#160;</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">&#160;</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">&#160;</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">3</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">1</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">1</p>
+                                    </td>
+                                    <td colspan="8" class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">8</p>
+                                    </td>
+                                    <td colspan="8" class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">8</p>
+                                    </td>
+                                    <td colspan="8" class="TableStyle_vTable_Body_0_0_RowSep_ColSep" style="text-align: center;">
+                                        <p class="Table">8</p>
+                                    </td>
+                                    <td colspan="8" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd" style="text-align: center;">
+                                        <p class="Table">0-512 Bit</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="29" class="TableStyle_vTable_Body_0_0_RowEnd_ColSep" style="text-align: center;">
+                                        <p class="Table">29-bit Identifier</p>
+                                    </td>
+                                    <td colspan="8" class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd" style="text-align: center;">
+                                        <p class="Table">Data</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <ul>
+                            <li><span class="bold">Prio</span>: Priority</li>
+                            <li><span class="bold">EDP</span>: Extended Data Page</li>
+                            <li><span class="bold">DP</span>: Data Page</li>
+                            <li><span class="bold">PF</span>: PDU Format</li>
+                            <li><span class="bold">PS</span>: PDU Specific / Destination Address (D_PDU1)</li>
+                            <li><span class="bold">SA</span>: Source Address</li>
+                            <li><span class="bold">Data Field</span>: Payload</li>
+                        </ul>
+                        <p>In a J1939 Classical CAN network, a CEFF frame is used to transmit a single parameter group (PG). In contrast, in a J1939 CAN FD network more than one PG can be transported using both an FBFF frame and an FEFF frame. These frames are therefore also called <span class="bold">Multi-PG Data Frame</span>. The Multi-PG messages can be sent either to a specific target address or as a broadcast.</p>
+                        <p>The data field of a Multi-PG can contain none, one or more parameter groups (PG), so-called<span class="bold"> Contained-PGs</span> (C-PGs). The Contained-PGs correspond to the PGs from previous J1939 Classical CAN networks as defined e.g. in J1939-71. Since C-PGs do not always use exactly the specified length of the CAN FD message, a special <span class="bold">Padding Service C-PG</span> is placed after the last C-PG, which fills the message to the end.</p>
+                        <table style="mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                            <tbody>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">CAN ID</p>
+                                    </td>
+                                    <td colspan="5" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Contained-PGs</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                        <p class="Table">11Bit or 29 Bit </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                        <p class="Table">C-PG 1</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                        <p class="Table">C-PG 2</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                        <p class="Table">…</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                        <p class="Table">C-PG n</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                        <p class="Table">Padding Service C-PG</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>A header with a length of 4 bytes is placed before each C-PG. The header contains the <span class="bold">Type of Service</span> (TOS), <span class="bold">Service Header</span> and <span class="bold">Payload Length</span>.</p>
+                        <p>Currently, three services are defined in J1939-22:</p>
+                        <table style="mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                            <tbody>
+                                <tr>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Type of Service</p>
+                                    </th>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Meaning of the following C-PG</p>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">0</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">Padding Service C-PG</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">1</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">SAE J1939 PG followed by manufacturer-specific backup data</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                        <p class="Table">2</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                        <p class="Table">SAE J1939 PG optionally followed by SAE defined backup data</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>The structure of the C-PG (TOS=1 or TOS=2) is as follows:</p>
+                        <table style="mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                            <tbody>
+                                <tr>
+                                    <td colspan="4" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><span class="bold">C-PG
+ Header</span> (4 Bytes)</p>
+                                    </td>
+                                    <td colspan="2" class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table"><span class="bold">C-PG
+ Payload</span> (0-60 Bytes)</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">TOS</p>
+                                    </th>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Trailer Format</p>
+                                    </th>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">C-PGN</p>
+                                    </th>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">C-PG Payload Length</p>
+                                    </th>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">PG Data</p>
+                                    </th>
+                                    <th class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">C-PG
+ Assurance Data</p>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">3 Bits</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">3 Bits</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">18 Bits</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">8 Bits</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">&#160;</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">0 to 64 bits</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                        <p class="Table">1 or 2</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                        <p class="Table">All bits are 0</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                        <p class="Table">—</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">—</td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">—</td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">—</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>The structure of the <span class="bold">Padding Service C-PG</span> (TOS=0) is as follows:</p>
+                        <table style="mc-table-style: url('../../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                            <tbody>
+                                <tr>
+                                    <td colspan="2" class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table"><span class="bold">C-PG
+ Header</span> (3 Bytes)</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table"><span class="bold">C-PG
+ Payload</span> (0-12
+ Bytes)</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">TOS</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">Service
+ Header </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">—</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">3 Bits</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                        <p class="Table">21 Bits </p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                        <p class="Table">0 to 12 Bytes</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                        <p class="Table">All bits are 0</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                        <p class="Table">All bits are 0</p>
+                                    </td>
+                                    <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                        <p class="Table">All bits have the value AAh</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <p class="LinkList"><a href="1939CANfdConfiguration.htm" class="LinkList MCXref xref xrefLinkList">Use J1939 CAN FD</a>
+                </p>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="FooterWhite">
+                <table class="FooterWhite" style="border-collapse: collapse;margin-left: auto;margin-right: auto;">
+                    <col style="width: 70px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col style="width: 16px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="buttons popup-container clearfix topicToolbarProxy topicToolbarProxyFooter _Skins_HTML5TopicToolbar mc-component nocontent">
+                                    <div class="button-group-container-left">
+                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo"><a href="../../../Shared/HowToUseOnlineHelp.htm" title="Tips for using the help" alt="Tips for using the help"><img src="../../../../Resources/vImages/vBackstage/vHelpInfo.png" /></a>
+                                </p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo" style="text-align: right;"><span class="mc-variable Vector.BuildTime variable">2024-04-8T20:56:42</span>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <table style="width: 100%;border-collapse: separate;border-spacing: 3px 0px;margin-left: auto;margin-right: auto;caption-side: top;">
+                <col />
+                <col />
+                <col />
+                <col data-mc-conditions="BuildProcess.HTML5Link" />
+                <tbody>
+                    <tr>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;">
+                            <p class="vec_Footer">©&#160;Vector Informatik GmbH</p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;text-align: right;">
+                            <p class="vec_FooterBold">
+                                <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE&#160;Product Families</MadCap:conditionalText> Version <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.VectorTestUnitRunner">18</MadCap:conditionalText></p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="../../../Shared/ContactCopyrightLicense.htm" class="vec_Footer MCXref xref xrefvec_Footer">Contact/Copyright/License</a>
+                            </p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="https://www.vector.com/int/en/company/get-info/privacy-policy/" target="_blank" class="vec_Footer">Data Privacy Notice</a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

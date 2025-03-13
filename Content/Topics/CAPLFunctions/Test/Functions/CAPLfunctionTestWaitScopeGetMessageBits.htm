@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="CANoeDEFamily.xml" data-mc-path-to-help-system="../../../../../" data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.vTESTstudio" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../Skins/Favicons/favicon-16x16.png" /><title>testWaitScopeGetMessageBits</title>
+        <link href="../../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Resources/Stylesheets/vTableMasterPageHeader.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../../Resources/Stylesheets/vStylesheet.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../../Resources/Stylesheets/vTableSymbol.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../../Resources/Stylesheets/vTableLight.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapGlobal.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapDom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapUtilities.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapXhr.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTextEffects.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSlideshow.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMessageBus.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMessageBus.CrossFrame.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapDefault.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMediaQueries.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapAccessibility.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapHelpSystem.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapAliasFile.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopicFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapFeedbackHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSkinHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.Breadcrumbs.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.MiniToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapToc.SideMenu.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapIndex.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapGlossary.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapParser.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSearch.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapNavigateTopics.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapLms.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapELearning.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopic.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapMicroContentComponent.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapSearchHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTopicElements.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapTriPane.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/jscript" src="../../../../Resources/vScripts/SyntaxHighlighting.js">
+        </script>
+        <script type="text/jscript" src="../../../../Resources/vScripts/TabSwitch.js">
+        </script>
+        <script type="text/javascript" src="../../../../Resources/vScripts/Vector.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../../../CANoeDEFamily.htm#Topics/CAPLFunctions/Test/Functions/CAPLfunctionTestWaitScopeGetMessageBits.htm">Open topic with navigation</a>
+        </p>
+        <div class="Body">
+            <div role="main" id="mc-main-content">
+                <p class="StructurePath"><a href="../../CAPLfunctions.htm" class="StructurePath MCXref xref xrefStructurePath">CAPL Functions</a> » <a href="../../Scope/CAPLfunctionsScopeOverview.htm" class="StructurePath">Scope</a> » <span class="mc-variable System.Title variable">testWaitScopeGetMessageBits</span></p>
+                <h1><a name="aanchor21340"></a>
+                    <MadCap:concept term="CAPLTFS" /><a name="kanchor7099"></a><span class="mc-variable System.Title variable">testWaitScopeGetMessageBits</span>
+                </h1>
+                <p class="MenuPath">&#160;</p>
+                <p class="ToolAvailability" data-mc-conditions="BuildProcess.ToolAvailability"><a href="../../../Shared/FeatureAvailability.htm" class="red" title="Feature availabilty for your product">Valid&#160;for</a>:&#160;&#160;CANoe&#160;DE<a name="aanchor21341"></a><MadCap:concept term="SFCANoeDE" />&#160;&#160;•&#160;&#160;CANoe4SW&#160;DE<a name="aanchor21342"></a><MadCap:concept term="SFCANoe4SWDE" /></p>
+                <p class="AutoSearchFilterConcepts"><a name="aanchor21343"></a>
+                    <MadCap:concept term="SFCAPLFunctions" />
+                </p>
+                <div data-mc-target-name="DIVCAPLFunctionSyntax">
+                    <h2 class="CommandPage">Function Syntax</h2>
+                    <p class="Syntax">long testWaitScopeGetMessageBits(message msg, ScopeAnalysisSetup setup, dword arraySize, scopeBitData signalData1[], scopeBitData signalData2[], scopeBitData signalData3[]);</p>
+                </div>
+                <div data-mc-target-name="DIVCAPLDescription">
+                    <h2 class="CommandPage">Description</h2>
+                    <p>A CAN message stored in the scope buffer will be parsed. For each bit of the message the signal voltage levels, the bit length, and the bit type will be returned.</p>
+                </div>
+                <div data-mc-target-name="DIVCAPLParameters">
+                    <h2 class="CommandPage">Parameters</h2>
+                    <table style="margin-left: 0;margin-right: auto;width: 100%;mc-table-style: url('../../../../Resources/Stylesheets/vTableLight.css');" class="TableStyle-vTableLight" cellspacing="0">
+                        <col style="width: 80px;" class="TableStyle-vTableLight-Column-Column1" />
+                        <col class="TableStyle-vTableLight-Column-Column1" />
+                        <tbody>
+                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                <td id="name" class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <p colspan="4" class="TableBold">msg</p>
+                                </td>
+                                <td id="descr" class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                    <p colspan="4" class="Table">
+The message the bits are fetched.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                <td id="name" class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <p colspan="4" class="TableBold">setup</p>
+                                </td>
+                                <td id="descr" class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                    <p class="Table">The parameter is used to configure the signal parser and has the following format.</p>
+                                    <p class="Table">&#160;</p>
+                                    <p class="TableBold">ScopeAnalysisSetup Selectors</p>
+                                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableLight.css');" class="TableStyle-vTableLight" cellspacing="0">
+                                        <col class="TableStyle-vTableLight-Column-Column1" />
+                                        <col class="TableStyle-vTableLight-Column-Column1" />
+                                        <col class="TableStyle-vTableLight-Column-Column1" />
+                                        <thead>
+                                            <tr class="TableStyle-vTableLight-Head-Header1">
+                                                <th class="TableStyle-vTableLight-HeadE-Column1-Header1">
+                                                    <p class="TableHead">Keyword</p>
+                                                </th>
+                                                <th class="TableStyle-vTableLight-HeadE-Column1-Header1">
+                                                    <p class="TableHead">Description</p>
+                                                </th>
+                                                <th class="TableStyle-vTableLight-HeadD-Column1-Header1">
+                                                    <p class="TableHead">Type</p>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">samplePoint</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">Sample point in percent. At this point the signal level will be measured.
+Classic CAN: Value will be used for all bits of the message.
+CAN FD: Value will be used for the bits of the arbitration phase.</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                    <p class="Table">char</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                <td class="TableStyle-vTableLight-BodyB-Column1-Body1">
+                                                    <p class="Table">samplePointDataPhase</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyB-Column1-Body1">
+                                                    <p class="Table">Sample point in percent. At this point the signal level will be measured.<br />Classic CAN: Value will not be used.<br />CAN FD: Value will be used for the bits of the data phase.</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyA-Column1-Body1">
+                                                    <p class="Table">char</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                <td id="name" class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <p colspan="4" class="TableBold">arraySize</p>
+                                </td>
+                                <td id="descr" class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                    <p class="Table">[in] the size of the arrays signalData1, signalData2, and signalData3</p>
+                                    <p class="Table">[out] the number of bits parsed and stored in the signalData-arrays.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                <td id="name" class="TableStyle-vTableLight-BodyB-Column1-Body1">
+                                    <p class="TableBold">signalData1, signalData2, signalData3</p>
+                                </td>
+                                <td id="descr" class="TableStyle-vTableLight-BodyA-Column1-Body1">
+                                    <p class="Table">If the function was successfull, the three arrays will contain information of all bits of the message.</p>
+                                    <ul>
+                                        <li><span class="bold">signalData1</span>: The data of each bit for CAN high</li>
+                                        <li><span class="bold">signalData2</span>: The data of each bit for CAN low</li>
+                                        <li><span class="bold">signalData3</span>: The data of each bit for CAN diff (CAN high - CAN low, or CAN low – CAN high as configured in the scope configuration).</li>
+                                    </ul>
+                                    <p class="TableBold">scopeBitData Selectors</p>
+                                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableLight.css');" class="TableStyle-vTableLight" cellspacing="0">
+                                        <col class="TableStyle-vTableLight-Column-Column1" />
+                                        <col class="TableStyle-vTableLight-Column-Column1" />
+                                        <col class="TableStyle-vTableLight-Column-Column1" />
+                                        <thead>
+                                            <tr class="TableStyle-vTableLight-Head-Header1">
+                                                <th class="TableStyle-vTableLight-HeadE-Column1-Header1">
+                                                    <p class="TableHead">Keyword</p>
+                                                </th>
+                                                <th class="TableStyle-vTableLight-HeadE-Column1-Header1">
+                                                    <p class="TableHead">Description</p>
+                                                </th>
+                                                <th class="TableStyle-vTableLight-HeadD-Column1-Header1">
+                                                    <p class="TableHead">Type</p>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">type</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">Type of the bit<MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family">, see <span class="SourceCode">&lt;application&gt;\Reusable\CAPL_Includes\Scope\</span><a href="javascript:startDemoLoader('&quot;Reusable\\CAPL_Includes\\Scope&quot;')" class="ExecuteLink" data-mc-exclude-action="unbind" data-mc-conditions="Targets.CANoe-DE-Family">ScopeBitAnalyse.cin</a></MadCap:conditionalText></p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                    <p class="Table">word</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">typeEx</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">0: data bit, 1: stuff bit</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                    <p class="Table">word</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">bitValue</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">Logical bit value (0, or 1)</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                    <p class="Table">byte</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">startTime</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">Time stamp of bit start in ns</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                    <p class="Table">qword</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">bitLength</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">Length of the bit in ns</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                    <p class="Table">long</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">signalVoltage</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                                    <p class="Table">Signal voltage at the sampling point</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                                    <p class="Table">float</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                                <td class="TableStyle-vTableLight-BodyB-Column1-Body1">
+                                                    <p>signalPolarity</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyB-Column1-Body1">
+                                                    <p class="Table">Signal polarity:<br />0 = CAN high - CAN low<br />1 = CAN low - CAN high</p>
+                                                </td>
+                                                <td class="TableStyle-vTableLight-BodyA-Column1-Body1">
+                                                    <p class="Table">byte</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div data-mc-target-name="DIVCAPLReturnValues">
+                    <h2 class="CommandPage">Return&#160;Values</h2>
+                    <table style="margin-left: 0;margin-right: auto;width: 100%;mc-table-style: url('../../../../Resources/Stylesheets/vTableLight.css');" class="TableStyle-vTableLight" cellspacing="0">
+                        <col style="width: 80px;" class="TableStyle-vTableLight-Column-Column1" />
+                        <col class="TableStyle-vTableLight-Column-Column1" />
+                        <tbody>
+                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                <td id="name" class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <p class="TableBold">1</p>
+                                </td>
+                                <td id="descr" class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                    <p class="Table">success</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                <td id="name" class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <p class="TableBold">0</p>
+                                </td>
+                                <td id="descr" class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                    <p class="Table">timeout</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                <td id="name" class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <p class="TableBold">-1</p>
+                                </td>
+                                <td id="descr" class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                    <p class="Table">general error</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                <td id="name" class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <p class="TableBold">-2</p>
+                                </td>
+                                <td id="descr" class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                    <p class="Table">scope drift compensation error</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                <td id="name" class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <p class="TableBold">-3</p>
+                                </td>
+                                <td id="descr" class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                    <p class="Table">scope has no measurement data</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                <td id="name" class="TableStyle-vTableLight-BodyE-Column1-Body1">
+                                    <p class="TableBold">-100</p>
+                                </td>
+                                <td id="descr" class="TableStyle-vTableLight-BodyD-Column1-Body1">
+                                    <p class="Table">bit analyzer parser error</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTableLight-Body-Body1">
+                                <td id="name" class="TableStyle-vTableLight-BodyB-Column1-Body1">
+                                    <p class="TableBold">-105</p>
+                                </td>
+                                <td id="descr" class="TableStyle-vTableLight-BodyA-Column1-Body1">
+                                    <p class="Table">array size to small</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div data-mc-target-name="DIVCAPLExample">
+                    <h2 class="CommandPage">Example</h2>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                    <p class="Table">
+                                        <img src="../../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                    </p>
+                                </td>
+                                <td id="content" class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                    <p class="TableSourceCode">dword arraySize = 200;<br />message 0x111 msg1;<br />long res;<br />long evtNo;<br />ScopeBitData data1[200];<br />ScopeBitData data2[200];<br />ScopeBitData data3[200];<br />ScopeAnalysisSetup setupAnalyse;<br /><br />//------------------------------<br />//Connect to scope<br />//------------------------------<br />res = scopeConnect();<br />res = testWaitForScopeEvent(eScopeConnected, 8000);<br /><br />if(res &gt; 0)<br />{<br />&#160;&#160;testStep("Wait For Event", "Waiting for Message 0x111");<br />&#160;&#160;testJoinMessageEvent(msg1.id);<br />&#160;&#160;evtNo = TestWaitForAnyJoinedEvent(2000);<br />&#160;&#160;res = TestGetWaitEventMsgData(msg1);<br /><br />&#160;&#160;if(res != 0)<br />&#160;&#160;{<br />&#160;&#160;&#160;&#160;testStepFail("Wait For Event", "No event received");<br />&#160;&#160;&#160;&#160;res = scopeDisconnect();<br />&#160;&#160;&#160;&#160;res =testWaitForScopeEvent(eScopeDisconnected, 8000);<br />&#160;&#160;&#160;&#160;return;<br />&#160;&#160;}<br />&#160;&#160;else<br />&#160;&#160;{<br />&#160;&#160;&#160;&#160;testStepPass("Wait For Event", "Event received");<br />&#160;&#160;}<br /><br />res = scopeTriggerNow();<br />if(res &gt; 0)<br />&#160;&#160;{<br />&#160;&#160;&#160;&#160;res =(testWaitForScopeEvent(eScopeTriggered, 5000));<br /><br />&#160;&#160;&#160;&#160;if(res &gt; 0)<br />&#160;&#160;&#160;&#160;{<br />&#160;&#160;&#160;&#160;&#160;&#160;setupAnalyse.samplePoint = 70;<br />&#160;&#160;&#160;&#160;&#160;&#160;res = testWaitScopeGetMessageBits(msg1, setupAnalyse, arraySize, data1, data2, data3);<br /><br />&#160;&#160;&#160;&#160;&#160;&#160;if(res &gt; 0 || res == -105)<br />&#160;&#160;&#160;&#160;&#160;&#160;{<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;int i;<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;for(i = 0; i &lt; arraySize;++i)<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;write("CANH: StarTime%.6f s, Type: %d, TypeExt: %d, BitLength: %d, Voltage: %.6f, BitValue: %d", data1[i].StartTime /1000000000., data1[i].type, data1[i].typeEx, data1[i].bitLength, data1[i].signalVoltage,data1[i].bitValue);<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;write("CANL: StarTime%.6f s, Type: %d, TypeExt: %d, BitLength: %d, Voltage: %.6f, BitValue: %d", data2[i].StartTime /1000000000., data2[i].type, data2[i].typeEx, data2[i].bitLength, data2[i].signalVoltage,data2[i].bitValue);<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;write("CANDiff: StarTime%.6f s, Type: %d, TypeExt: %d, BitLength: %d, Voltage: %.6f, BitValue: %d", data3[i].StartTime /1000000000., data3[i].type, data3[i].typeEx, data3[i].bitLength, data3[i].signalVoltage,data3[i].bitValue);<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;if(i &gt; 5) //write only first 5 results<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;break; }<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}<br />&#160;&#160;&#160;&#160;&#160;&#160;}<br />&#160;&#160;&#160;&#160;}<br />&#160;&#160;}<br />}<br />res = scopeDisconnect();<br />res =testWaitForScopeEvent(eScopeDisconnected, 8000);</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="LinkList">&#160;</p>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="FooterWhite">
+                <table class="FooterWhite" style="border-collapse: collapse;margin-left: auto;margin-right: auto;">
+                    <col style="width: 70px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col style="width: 16px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col data-mc-conditions="" />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="buttons popup-container clearfix topicToolbarProxy topicToolbarProxyFooter _Skins_HTML5TopicToolbar mc-component nocontent">
+                                    <div class="button-group-container-left">
+                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo"><a href="../../../Shared/HowToUseOnlineHelp.htm" title="Tips for using the help" alt="Tips for using the help"><img src="../../../../Resources/vImages/vBackstage/vHelpInfo.png" /></a>
+                                </p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo">•&#160;&#160;Technical&#160;References are only&#160;available&#160;in&#160;English</p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo" style="text-align: right;"><span class="mc-variable Vector.BuildTime variable">2024-04-8T20:56:42</span>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <table style="width: 100%;border-collapse: separate;border-spacing: 3px 0px;margin-left: auto;margin-right: auto;caption-side: top;">
+                <col />
+                <col />
+                <col />
+                <col data-mc-conditions="BuildProcess.HTML5Link" />
+                <tbody>
+                    <tr>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;">
+                            <p class="vec_Footer">©&#160;Vector Informatik GmbH</p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;text-align: right;">
+                            <p class="vec_FooterBold">
+                                <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE&#160;Product Families</MadCap:conditionalText> Version <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.VectorTestUnitRunner">18</MadCap:conditionalText></p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="../../../Shared/ContactCopyrightLicense.htm" class="vec_Footer MCXref xref xrefvec_Footer">Contact/Copyright/License</a>
+                            </p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="https://www.vector.com/int/en/company/get-info/privacy-policy/" target="_blank" class="vec_Footer">Data Privacy Notice</a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

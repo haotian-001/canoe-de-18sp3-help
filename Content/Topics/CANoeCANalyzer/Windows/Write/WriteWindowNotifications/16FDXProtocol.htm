@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="CANoeDEFamily.xml" data-mc-path-to-help-system="../../../../../../" data-mc-conditions="Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.VectorTestUnitRunner" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../../Skins/Favicons/favicon-16x16.png" /><title>FDX Protocol</title>
+        <link href="../../../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Resources/Stylesheets/vTableMasterPageHeader.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../../../Resources/Stylesheets/vStylesheet.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../../../Resources/Stylesheets/vTable.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapGlobal.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapDom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapUtilities.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapXhr.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapTextEffects.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapSlideshow.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapMessageBus.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapMessageBus.CrossFrame.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapDefault.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapMediaQueries.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapAccessibility.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapHelpSystem.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapAliasFile.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapTopicFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapFeedbackHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapSkinHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapToc.Breadcrumbs.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapToc.MiniToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapToc.SideMenu.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapIndex.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapGlossary.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapParser.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapSearch.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapNavigateTopics.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapLms.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapELearning.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapTopic.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapMicroContentComponent.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapSearchHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapTopicElements.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapTriPane.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/jscript" src="../../../../../Resources/vScripts/SyntaxHighlighting.js">
+        </script>
+        <script type="text/jscript" src="../../../../../Resources/vScripts/TabSwitch.js">
+        </script>
+        <script type="text/javascript" src="../../../../../Resources/vScripts/Vector.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../../../../CANoeDEFamily.htm#Topics/CANoeCANalyzer/Windows/Write/WriteWindowNotifications/16FDXProtocol.htm">Open topic with navigation</a>
+        </p>
+        <div class="Body">
+            <div role="main" id="mc-main-content">
+                <div>
+                    <p class="StructurePath"><a href="../../../CANoeDEFamily.htm" class="StructurePath" data-mc-conditions="Targets.CANoe-DE-Family"><img src="../../../../../Resources/vImages/vToolIcons/CANoeDEFamily_Icon16_15x15.png" alt="" style="width: 15;height: 15;" />&#160;CANoe&#160;DE&#160;Product&#160;Families</a> » <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family"><a href="../WriteWindow.htm" class="StructurePath">Write Window</a>  » </MadCap:conditionalText><a href="../WriteWindowNotifications.htm" class="StructurePath">Notifications</a> » <span class="mc-variable System.Title variable">FDX Protocol</span></p>
+                    <h1><span class="mc-variable System.Title variable">FDX Protocol</span>
+                    </h1>
+                    <p class="MenuPath">&#160;</p>
+                    <p class="AutoSearchFilterConcepts"><a name="aanchor13194"></a>
+                        <MadCap:concept term="SFCore" />
+                    </p>
+                    <p class="ToolAvailability" data-mc-conditions="BuildProcess.ToolAvailability"><a href="../../../../Shared/FeatureAvailability.htm" class="red" title="Feature availabilty for your product">Valid&#160;for</a>:&#160;&#160;CANoe&#160;DE<a name="aanchor13195"></a><MadCap:concept term="SFCANoeDE" />&#160;&#160;•&#160;&#160;CANoe:lite&#160;DE<a name="aanchor13196"></a><MadCap:concept term="SFCANoeLiteDE" />&#160;&#160;•&#160;&#160;CANoe4SW&#160;DE<a name="aanchor13197"></a><MadCap:concept term="SFCANoe4SWDE" />&#160;&#160;•&#160;&#160;CANoe4SW:lite&#160;DE<a name="aanchor13198"></a><MadCap:concept term="SFCANoe4SWLiteDE" /></p>
+                    <p class="IndexConcept"><a name="kanchor3996"></a>
+                    </p>
+                </div>
+                <div>
+                    <table style="width: 100%;mc-table-style: url('../../../../../Resources/Stylesheets/vTable.css');margin-left: 0;margin-right: auto;caption-side: top;mc-table-style-original: url('../../../../../Resources/Stylesheets/vTable.css');" class="TableStyle_vTable" cellspacing="0">
+                        <col style="width: 100px;" class="TableStyle-vTable-Column-Column1" />
+                        <col class="TableStyle-vTable-Column-Column1" />
+                        <thead>
+                            <tr class="TableStyle-vTable-Head-Header1">
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd" colspan="2">
+                                    <p class="TableHead">[16] <span class="mc-variable System.Title variable">FDX Protocol</span></p>
+                                </th>
+                            </tr>
+                            <tr class="TableStyle-vTable-Head-Header1">
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColSep">
+                                    <p class="TableHead">ID</p>
+                                </th>
+                                <th class="TableStyle_vTable_Head_0_0_RowSep_ColEnd">
+                                    <p class="TableHead">Notification / Description</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a name="Code16-0001" id="Code16-0001"></a>16-0001</p>
+                                </th>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Bold">FDX description file parse error - &lt;filename&gt;&lt;data group&gt;&lt;data item&gt;: file not found</p>
+                                    <p class="Table">The indicated FDX description file could not be opened. Please check the list of description files specified in <a href="../../../Ribbon/File/Options.htm" class="GUI">Options</a> dialog (<span class="GUI">Extensions</span>|<a href="../../../Ribbon/File/Options/Extensions/ExtensionsFDX.htm" class="GUI">FDX Protocol</a>).</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a name="Code16-0002" id="Code16-0002"></a>16-0002</p>
+                                </th>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Bold">FDX description file parse error - &lt;filename&gt;&lt;data group&gt;&lt;data item&gt;: &lt;XML syntax error&gt;</p>
+                                    <p>A general XML syntax error occurred while reading the indicated FDX description file that was specified in in <a href="../../../Ribbon/File/Options.htm" class="GUI">Options</a> dialog (<span class="GUI">Extensions</span>|<a href="../../../Ribbon/File/Options/Extensions/ExtensionsFDX.htm" class="GUI">FDX Protocol</a>).</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a name="Code16-0003" id="Code16-0003"></a>16-0003</p>
+                                </th>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Bold">FDX description file parse error - &lt;filename&gt;&lt;data group&gt;&lt;data item&gt;: undefined group id</p>
+                                    <p class="Table">A <span class="bold">&lt;datagroup&gt;</span> element without a specified <span class="bold">groupID</span> attribute was found in the indicated FDX description file.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a name="Code16-0004" id="Code16-0004"></a>16-0004</p>
+                                </th>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Bold">FDX description file parse error - &lt;filename&gt;&lt;data group&gt;&lt;data item&gt;: invalid group id "&lt;ID&gt;"</p>
+                                    <p class="Table">An invalid group ID was specified in the indicated FDX description file. Values in the range from 0 to 65535 are allowed.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a name="Code16-0005" id="Code16-0005"></a>16-0005</p>
+                                </th>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Bold">FDX description file parse error - &lt;filename&gt;&lt;data group&gt;&lt;data item&gt;: duplicate group id "&lt;ID&gt;"</p>
+                                    <p class="Table">A group ID that is already being used in another data group is specified in the indicated FDX description file.</p>
+                                    <p class="Table">Please note that group IDs must be unique on a global basis, i.e., including across multiple description files.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a name="Code16-0006" id="Code16-0006"></a>16-0006</p>
+                                </th>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Bold">FDX description file parse error - &lt;filename&gt;&lt;data group&gt;&lt;data item&gt;: undefined group size</p>
+                                    <p class="Table">The <span class="bold">size</span> attribute is missing in the indicated data group of the indicated FDX description file.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a name="Code16-0007" id="Code16-0007"></a>16-0007</p>
+                                </th>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Bold">FDX description file parse error - &lt;filename&gt;&lt;data group&gt;&lt;data item&gt;: invalid group size "&lt;group size&gt;"</p>
+                                    <p class="Table">An invalid value is specified for the <span class="bold">size</span> attribute in the indicated data group of the indicated FDX description file.</p>
+                                    <p class="Table">Please note that the group size must not exceed a value of 65535 bytes. Also note that the total transmitted IP packet must not exceed 65535 bytes.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a name="Code16-0008" id="Code16-0008"></a>16-0008</p>
+                                </th>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Bold">FDX description file parse error - &lt;filename&gt;&lt;data group&gt;&lt;data item&gt;: undefined item data type</p>
+                                    <p class="Table">The <span class="bold">type</span> attribute is not specified for the <span class="bold">&lt;item&gt;</span> element defined in the indicated FDX description file.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a name="Code16-0009" id="Code16-0009"></a>16-0009</p>
+                                </th>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Bold">FDX description file parse error - &lt;filename&gt;&lt;data group&gt;&lt;data item&gt;: invalid item data type "&lt;data type&gt;"</p>
+                                    <p class="Table">An invalid value was specified for the <span class="bold">type</span> attribute for the <span class="bold">&lt;item&gt;</span> element defined in the indicated FDX description file.</p>
+                                    <p class="Table">Valid data types are <span class="bold">int8</span>, <span class="bold">uint8</span>, <span class="bold">int16</span>, <span class="bold">uint16</span>, <span class="bold">int32</span>, <span class="bold">uint32</span>, <span class="bold">int64</span>, <span class="bold">uint64</span>, <span class="bold">float</span>, <span class="bold">double</span>, <span class="bold">string</span> and <span class="bold">bytearray</span>.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a name="Code16-0010" id="Code16-0010"></a>16-0010</p>
+                                </th>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Bold">FDX description file parse error - &lt;filename&gt;&lt;data group&gt;&lt;data item&gt;: undefined item size</p>
+                                    <p class="Table">The <span class="bold">size</span> attribute is not specified for the <span class="bold">&lt;item&gt;</span> element defined in the indicated FDX description file.</p>
+                                    <p class="Table">Please note that this specification is required for the <span class="bold">string</span> and <span class="bold">bytearray</span> data types, while the default size can be derived directly for the other data types.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a name="Code16-0011" id="Code16-0011"></a>16-0011</p>
+                                </th>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Bold">FDX description file parse error - &lt;filename&gt;&lt;data group&gt;&lt;data item&gt;: invalid item size "&lt;item size&gt;"</p>
+                                    <p class="Table">An invalid value was specified for the <span class="bold">size</span> attribute for the <span class="bold">&lt;item&gt;</span> element defined in the indicated FDX description file.</p>
+                                    <p class="Table">Valid values are between 0 and 65535 bytes. Note here that the total transmitted IP packet must not exceed 65535 bytes.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a name="Code16-0012" id="Code16-0012"></a>16-0012</p>
+                                </th>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Bold">FDX description file parse error - &lt;filename&gt;&lt;data group&gt;&lt;data item&gt;: undefined item offset</p>
+                                    <p class="Table">The <span class="bold">offset</span> attribute is not specified for the <span class="bold">&lt;item&gt;</span> element defined in the indicated FDX description file.</p>
+                                    <p class="Table">The offset defines the position of the element within the data group (distance in bytes from the start of the data group).</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a name="Code16-0013" id="Code16-0013"></a>16-0013</p>
+                                </th>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Bold">FDX description file parse error - &lt;filename&gt;&lt;data group&gt;&lt;data item&gt;: invalid item offset "&lt;offset&gt;"</p>
+                                    <p class="Table">An invalid value was specified for the <span class="bold">offset</span> attribute for the <span class="bold">&lt;item&gt;</span> element defined in the indicated FDX description file.</p>
+                                    <p class="Table">Values between 0 and 65535 are valid, in principle. Note here that the total IP packet ultimately transmitted must not exceed 65535 bytes.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a name="Code16-0014" id="Code16-0014"></a>16-0014</p>
+                                </th>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Bold">FDX description file parse error - &lt;filename&gt;&lt;data group&gt;&lt;data item&gt;: item is overlapping with other items</p>
+                                    <p class="Table">The indicated <span class="bold">&lt;item&gt;</span> element in one FDX description file overlaps with other elements in the same group.</p>
+                                    <p class="Table">Please adjust the values for <span class="bold">offset</span> or <span class="bold">size</span> in the indicated element or in another element of the data group.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a name="Code16-0015" id="Code16-0015"></a>16-0015</p>
+                                </th>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Bold">FDX description file parse error - &lt;filename&gt;&lt;data group&gt;&lt;data item&gt;: item exceeds group size</p>
+                                    <p class="Table">The <span class="bold">&lt;item&gt;</span> element defined in the indicated FDX description file falls outside (in part or in whole) of the scope defined by the group size.</p>
+                                    <p class="Table">Please adjust the values for <span class="bold">offset</span> or <span class="bold">size</span> in the indicated element or the value for the group size.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a name="Code16-0016" id="Code16-0016"></a>16-0016</p>
+                                </th>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Bold">FDX description file parse error - &lt;filename&gt;&lt;data group&gt;&lt;data item&gt;: no signal or variable defined</p>
+                                    <p class="Table">The <span class="bold">&lt;item&gt;</span> element defined in the indicated FDX description file does not contain a definition of a signal, an environment variable, or a system variable.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a name="Code16-0017" id="Code16-0017"></a>16-0017</p>
+                                </th>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Bold">FDX description file parse error - &lt;filename&gt;&lt;data group&gt;&lt;data item&gt;: multiple signal or variable definitions in a single item</p>
+                                    <p class="Table">The <span class="bold">&lt;item&gt;</span> element defined in the indicated FDX description file contains several definitions of signals, environment variables, or system variables. Only one definition is permitted.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a name="Code16-0018" id="Code16-0018"></a>16-0018</p>
+                                </th>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Bold">FDX description file parse error - &lt;filename&gt;&lt;data group&gt;&lt;data item&gt;: undefined signal name</p>
+                                    <p class="Table">A signal name (<span class="bold">name</span> attribute) was not defined for the signal defined in the indicated FDX description file.</p>
+                                    <p class="Table">Please specify the name of a signal that is contained in one of the databases used in the <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> configuration.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a name="Code16-0019" id="Code16-0019"></a>16-0019</p>
+                                </th>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Bold">FDX description file parse error - &lt;filename&gt;&lt;data group&gt;&lt;data item&gt;: undefined system variable name</p>
+                                    <p class="Table">A variable name (<span class="bold">name</span> attribute) was not defined for the system variable defined in the indicated FDX description file.</p>
+                                    <p class="Table">Please specify the name of a system variable contained in the <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> configuration.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a name="Code16-0020" id="Code16-0020"></a>16-0020</p>
+                                </th>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Bold">FDX description file parse error - &lt;filename&gt;&lt;data group&gt;&lt;data item&gt;: undefined environment variable name</p>
+                                    <p class="Table">A variable name (<span class="bold">name</span> attribute) was not defined for the environment variable defined in the indicated FDX description file.</p>
+                                    <p class="Table">Please specify the name of an environment variable that is contained in one of the databases used in the <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> configuration.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a name="Code16-0021" id="Code16-0021"></a>16-0021</p>
+                                </th>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Bold">FDX description file parse error - &lt;filename&gt;&lt;data group&gt;&lt;data item&gt;: invalid signal direction "&lt;signal direction&gt;"</p>
+                                    <p class="Table">An invalid value for the signal direction (<span class="bold">direction</span> attribute) was specified for the signal defined in the indicated FDX description file.</p>
+                                    <p class="Table">Valid values are <span class="bold">auto</span> and <span class="bold">TXrq</span>.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a name="Code16-0022" id="Code16-0022"></a>16-0022</p>
+                                </th>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Bold">FDX description file parse error - &lt;filename&gt;&lt;data group&gt;&lt;data item&gt;: undefined signal value type</p>
+                                    <p class="Table">The signal value type (<span class="bold">value</span> attribute) is not specified for the signal defined in the indicated FDX description file.</p>
+                                    <p class="Table">The signal value type distinguishes between a raw value (<span class="bold">raw</span>) and a physical value (<span class="bold">phys</span>).</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a name="Code16-0023" id="Code16-0023"></a>16-0023</p>
+                                </th>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Bold">FDX description file parse error - &lt;filename&gt;&lt;data group&gt;&lt;data item&gt;: invalid signal value type "&lt;signal value type&gt;"</p>
+                                    <p class="Table">An invalid value for the signal value type (<span class="bold">value</span> attribute) was specified for the signal defined in the indicated FDX description file.</p>
+                                    <p class="Table">Valid values are <span class="bold">raw</span> (raw value) and <span class="bold">phys</span> (physical value).</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a name="Code16-0024" id="Code16-0024"></a>16-0024</p>
+                                </th>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Bold">FDX description file parse error - &lt;filename&gt;&lt;data group&gt;&lt;data item&gt;: description must be included in a single "&lt;name&gt;" block</p>
+                                    <p class="Table">The root element <span class="bold">&lt;canoefdxdescription&gt;</span> within which all data groups must be defined is missing in the indicated FDX description file.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a name="Code16-0025" id="Code16-0025"></a>16-0025</p>
+                                </th>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Bold">FDX description file parse error - &lt;filename&gt;&lt;data group&gt;&lt;data item&gt;: undefined file version</p>
+                                    <p class="Table">A file version (<span class="bold">version</span> attribute) was not specified in the root element <span class="bold">&lt;canoefdxdescription&gt;</span> in the indicated FDX description file.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a name="Code16-0026" id="Code16-0026"></a>16-0026</p>
+                                </th>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Bold">FDX description file parse error - &lt;filename&gt;&lt;data group&gt;&lt;data item&gt;: incompatible file version ("&lt;version number&gt;")</p>
+                                    <p class="Table">A file version (<span class="bold">version</span> attribute) that is incompatible with the FDX protocol version implemented in your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> is specified in the root element <span class="bold">&lt;canoefdxdescription&gt;</span> in the indicated FDX description file.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a name="Code16-0027" id="Code16-0027"></a>16-0027</p>
+                                </th>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Bold">FDX: conversion of data parsed from description file failed</p>
+                                    <p class="Table">An error occurred during conversion of the data groups read from the FDX description files.</p>
+                                    <p class="Table">Please contact <a href="../../../../Shared/ContactCopyrightLicense.htm">Vector Support</a>.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a name="Code16-0100" id="Code16-0100"></a>16-0100</p>
+                                </th>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Bold">FDX: environment variable "&lt;environment variable name&gt;" in group &lt;ID&gt; is not defined</p>
+                                    <p class="Table">The environment variable defined in the FDX description is not contained in any database used in the configuration.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a name="Code16-0101" id="Code16-0101"></a>16-0101</p>
+                                </th>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Bold">FDX: unable to determine type of environment variable "&lt;environment variable name&gt;" in group &lt;ID&gt;</p>
+                                    <p class="Table">An internal error occurred with the indicated environment variable when adjusting the data types from the FDX description and the database.</p>
+                                    <p class="Table">Please contact <a href="../../../../Shared/ContactCopyrightLicense.htm">Vector Support</a>.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a name="Code16-0102" id="Code16-0102"></a>16-0102</p>
+                                </th>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Bold">FDX: data type "&lt;data type&gt;" of environment variable "&lt;environment variable name&gt;" in group &lt;ID&gt; is incompatible to data type "&lt;data type&gt;" from FDX description</p>
+                                    <p class="Table">A data type that is incompatible with the data type defined in the database was specified for the indicated environment variable in the FDX description file.</p>
+                                    <p class="Table">Please note that an automatic conversion is performed in the case of different number types, but this conversion is not possible between numbers, strings, and byte arrays.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a name="Code16-0110" id="Code16-0110"></a>16-0110</p>
+                                </th>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Bold">FDX: system variable "&lt;system variable name&gt;" in group &lt;ID&gt; is not defined</p>
+                                    <p class="Table">The system variable defined in the FDX description is not contained in the <a href="../../../../Shared/SystemVariables/SystemVariablesConfiguration.htm">system variable configuration</a>.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a name="Code16-0111" id="Code16-0111"></a>16-0111</p>
+                                </th>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Bold">FDX: data type "&lt;data type&gt;" of system variable "&lt;system variable name&gt;" in group &lt;ID&gt; is incompatible to data type "&lt;data type&gt;" from FDX description</p>
+                                    <p class="Table">A data type that is incompatible with the data type defined in the <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> configuration was specified for the indicated system variable in the FDX description file.</p>
+                                    <p class="Table">Please note that an automatic conversion is performed in the case of different number types, but this conversion is not possible between numbers, strings, and byte arrays.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a name="Code16-0120" id="Code16-0120"></a>16-0120</p>
+                                </th>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Bold">FDX: signal "&lt;signal name&gt;" in group &lt;ID&gt; is qualified using an invalid application channel "&lt;channel number&gt;"</p>
+                                    <p class="Table">An application channel (<span class="bold">channel</span> attribute) was specified during definition of the indicated signal for a more detailed specification. However, the name of the channel is invalid or the channel is not used in the configuration.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a name="Code16-0121" id="Code16-0121"></a>16-0121</p>
+                                </th>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Bold">FDX: signal "&lt;signal name&gt;" in group &lt;ID&gt; is not defined (specified bus "&lt;bus name&gt;" is not defined or inactive)</p>
+                                    <p class="Table">A network name (<span class="bold">bus</span> attribute) was specified during definition of the indicated signal for a more detailed specification. However, the indicated network is not contained in the <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> configuration or has been deactivated.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a name="Code16-0122" id="Code16-0122"></a>16-0122</p>
+                                </th>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Bold">FDX: signal "&lt;signal name&gt;" in group &lt;ID&gt;: Specified bus "&lt;bus name&gt;" is not assigned to specified channel "&lt;channel number&gt;"</p>
+                                    <p class="Table">A network name (<span class="bold">bus</span> attribute) and an application channel (<span class="bold">channel</span> attribute) was specified during definition of the indicated signal for a more detailed specification. However, the specified values are not compatible.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a name="Code16-0123" id="Code16-0123"></a>16-0123</p>
+                                </th>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Bold">FDX: signal "&lt;signal name&gt;" in group &lt;ID&gt; is not defined (unknown database "&lt;database name&gt;")</p>
+                                    <p class="Table">The database (<span class="bold">database</span> attribute) specified in the FDX description during definition of the indicated signal is not contained in the <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> configuration.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a name="Code16-0124" id="Code16-0124"></a>16-0124</p>
+                                </th>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Bold">FDX: signal "&lt;signal name&gt;" in group &lt;ID&gt; is not defined or ambiguous</p>
+                                    <p class="Table">The indicated signal is not contained in the databases of the <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> configuration or the specified value is not unique.</p>
+                                    <p class="Table">Please note that a signal name can be assembled from the following components:<br /><span class="bold">&lt;Network&gt;::&lt;Database&gt;::&lt;Node&gt;::&lt;Message&gt;::&lt;Signal&gt;</span>.</p>
+                                    <p class="Table">The individual suffixes can be added in the FDX description using certain attributes during the signal definition.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a name="Code16-0125" id="Code16-0125"></a>16-0125</p>
+                                </th>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Bold">FDX: signal "&lt;signal name&gt;" (application channel "&lt;channel number&gt;") in group &lt;ID&gt; is not defined or ambiguous</p>
+                                    <p class="Table">The indicated signal for which an application channel (<span class="bold">channel</span> attribute) was specified in the FDX description for a more detailed specification is not contained in the databases of the <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> configuration or the specified value is not unique.</p>
+                                    <p class="Table">Please note that a signal name can be assembled from the following components:<br /><span class="bold">&lt;Network&gt;::&lt;Database&gt;::&lt;Node&gt;::&lt;Message&gt;::&lt;Signal&gt;</span>.</p>
+                                    <p class="Table">The individual suffixes can be added in the FDX description using certain attributes during the signal definition.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a name="Code16-0126" id="Code16-0126"></a>16-0126</p>
+                                </th>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Bold">FDX: data type "&lt;data type&gt;" of signal "&lt;signal name&gt;" in group &lt;ID&gt; is incompatible to data type "&lt;data type&gt;" from FDX description</p>
+                                    <p class="Table">A data type that is incompatible with the data type defined in the database was specified for the indicated signal in the FDX description file.</p>
+                                    <p class="Table">Please note that an automatic conversion is performed in the case of different number types, but this conversion is not possible between numbers, strings, and byte arrays.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a name="Code16-0127" id="Code16-0127"></a>16-0127</p>
+                                </th>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Bold">FDX: data type "&lt;data type&gt;" of physical value in signal "&lt;signal name&gt;" in group &lt;ID&gt; is incompatible to data type "&lt;data type&gt;" from FDX description</p>
+                                    <p class="Table">A data type that is incompatible with the data type of a physical signal value (corresponds to <span class="bold">double</span>) was specified for the indicated signal in the FDX description file.</p>
+                                    <p class="Table">Please note that an automatic conversion is performed in the case of different number types, but this conversion is not possible between numbers, strings, and byte arrays.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a name="Code16-0200" id="Code16-0200"></a>16-0200</p>
+                                </th>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Bold">FDX: invalid datagram size (&lt;datagram size&gt; bytes)</p>
+                                    <p class="Table">A datagram whose size is incorrect was received in the <a href="../../../Interfaces/FDXProtocol.htm">FDX interface</a>. This can be caused by any of the following:</p>
+                                    <ul>
+                                        <li>The datagram is too small for the FDX header.</li>
+                                        <li>The datagram does not have enough space for the number of FDX commands specified in the FDX header.</li>
+                                        <li>The datagram contains surplus bytes after the last FDX command.</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a name="Code16-0201" id="Code16-0201"></a>16-0201</p>
+                                </th>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Bold">FDX: invalid datagram signature</p>
+                                    <p class="Table">A datagram in which the FDX header contains an invalid signature was received in the <a href="../../../Interfaces/FDXProtocol.htm">FDX interface</a>.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a name="Code16-0202" id="Code16-0202"></a>16-0202</p>
+                                </th>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Bold">FDX: version specified in datagram &lt;version number&gt; is incompatible to current version of protocol engine &lt;protocol version number&gt;</p>
+                                    <p class="Table">A datagram in which a version not supported by this version is specified in the FDX header was received in the <a href="../../../Interfaces/FDXProtocol.htm">FDX interface</a>.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a name="Code16-0203" id="Code16-0203"></a>16-0203</p>
+                                </th>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Bold">FDX: invalid group id &lt;ID&gt; in &lt;command name&gt; command</p>
+                                    <p class="Table">A group ID that is not contained in any of the configured FDX description files was specified for the data exchange.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a name="Code16-0204" id="Code16-0204"></a>16-0204</p>
+                                </th>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Bold">FDX: group size (&lt;group size&gt; bytes) defined for group id &lt;ID&gt; exceeds upper limit (&lt;limit value&gt; bytes)</p>
+                                    <p class="Table">A data group size was defined for the data exchange such that the maximum size for the resulting UDP datagram is exceeded.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a name="Code16-0205" id="Code16-0205"></a>16-0205</p>
+                                </th>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Bold">FDX: data size (&lt;data size&gt; bytes) given in incoming DataExchange command for group id &lt;ID&gt; exceeds specified group size (&lt;group size&gt; bytes)</p>
+                                    <p class="Table">A <span class="bold">DataExchange</span> command received in the <a href="../../../Interfaces/FDXProtocol.htm">FDX interface</a> contains a payload whose size is less than the size specified in the FDX description file.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a name="Code16-0206" id="Code16-0206"></a>16-0206</p>
+                                </th>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Bold">FDX: invalid command size (&lt;size&gt;bytes) in &lt;command name&gt; command</p>
+                                    <p class="Table">A datagram containing a command whose size is too small was received in the <a href="../../../Interfaces/FDXProtocol.htm">FDX interface</a>.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a name="Code16-0207" id="Code16-0207"></a>16-0207</p>
+                                </th>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Bold">FDX: DataRequest is only allowed during measurement</p>
+                                    <p class="Table">A <span class="bold">DataRequest</span> command was received in the <a href="../../../Interfaces/FDXProtocol.htm">FDX interface</a>, but your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> is not ready to transmit data.</p>
+                                    <p class="Table"><span class="bold">DataRequest</span> commands can only be processed during a running measurement.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a name="Code16-0208" id="Code16-0208"></a>16-0208</p>
+                                </th>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Bold">FDX: sending datagram failed with WSA error code &lt;error code number&gt;</p>
+                                    <p class="Table">An error occurred while transmitting a datagram in the <a href="../../../Interfaces/FDXProtocol.htm">FDX interface</a>. The specified error number refers to the Microsoft Windows <a href="../../../../CAPLFunctions/TCPIPAPI/CAPLfunctionsTCPIPWinsock2ErrorCodes.htm">socket error codes</a>.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a name="Code16-0209" id="Code16-0209"></a>16-0209</p>
+                                </th>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Bold">FDX: receiving datagram failed with WSA error code &lt;error code number&gt;</p>
+                                    <p class="Table">An error occurred while receiving a datagram in the <a href="../../../Interfaces/FDXProtocol.htm">FDX interface</a>. The specified error number refers to the Microsoft Windows <a href="../../../../CAPLFunctions/TCPIPAPI/CAPLfunctionsTCPIPWinsock2ErrorCodes.htm">socket error codes</a>.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a name="Code16-0210" id="Code16-0210"></a>16-0210</p>
+                                </th>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Bold">FDX: receiving datagram with sequence number &lt;sequence number&gt;, but number &lt;sequence number&gt; was expected</p>
+                                    <p class="Table">The transmitted datagrams in the <a href="../../../Interfaces/FDXProtocol.htm">FDX interface</a> are numbered consecutively in order to allow detection of data losses. On receipt of a datagram, an error was detected in the numbering of the datagrams.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a name="Code16-0211" id="Code16-0211"></a>16-0211</p>
+                                </th>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Bold">FDX: UDP connection reset by peer &lt;peer name&gt;</p>
+                                    <p class="Table">The receiver has closed the UDP port for the <a href="../../../Interfaces/FDXProtocol.htm">FDX interface</a> unexpectedly. (Microsoft Windows <a href="../../../../CAPLFunctions/TCPIPAPI/CAPLfunctionsTCPIPWinsock2ErrorCodes.htm">socket error code</a> WSAECONNRESET 10054 'Connection reset by peer').</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a name="Code16-0212" id="Code16-0212"></a>16-0212</p>
+                                </th>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Bold">FDX: too many FDX errors have occurred, further FDX messages are skipped til end of measurement</p>
+                                    <p class="Table">To prevent flooding the Write Window with error messages from the <a href="../../../Interfaces/FDXProtocol.htm">FDX interface</a>, if more than 50 FDX errors occur, the further output of FDX error messages is suppressed until the next measurement end.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a name="Code16-0213" id="Code16-0213"></a>16-0213</p>
+                                </th>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Bold">FDX: &lt;error number&gt; FDX errors occurred while measurement was running, &lt;error number&gt; of them are sequence number errors</p>
+                                    <p class="Table">Error occurrences in the <a href="../../../Interfaces/FDXProtocol.htm">FDX interface</a> are numbered consecutively. At each measurement end in your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText>, if corresponding errors have occurred, the number of errors is displayed in the Write Window and the error counter is reset. The portion that are sequential number errors (see <a href="#Code16-0210">16-0210</a>) is listed separately here.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a name="Code16-0214" id="Code16-0214"></a>16-0214</p>
+                                </th>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Bold">Stop command received from &lt;IP Address&gt;</p>
+                                    <p class="Table">A Stop command from the denoted remote station has been received by <a href="../../../Interfaces/FDXProtocol.htm">FDX interface</a>.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a name="Code16-0215" id="Code16-0215"></a>16-0215</p>
+                                </th>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Bold">FDX: DataExchange command is only allowed during measurement</p>
+                                    <p class="Table">A <span class="bold">DataExchange</span> command was received at the FDX interface, but no measurement is currently running in your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText>.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a name="Code16-0216" id="Code16-0216"></a>16-0216</p>
+                                </th>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Bold">FDX: Too many FDX warnings have occurred, further FDX warning messages are skipped until end of measurement</p>
+                                    <p class="Table">In order to avoid flooding the Write Window with too many messages, further error notifications for the FDX feature will be suppressed until the end of the measurement.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a name="Code16-0217" id="Code16-0217"></a>16-0217</p>
+                                </th>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Bold">FDX: The port for the FDX communication (UDP or TCP) is closed</p>
+                                    <p class="Table">Note that communication with the FDX interface is not possible.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a name="Code16-0218" id="Code16-0218"></a>16-0218</p>
+                                </th>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Bold">FDX: IncrementTime command is only allowed during measurement</p>
+                                    <p class="Table">        An <span class="bold">IncrementTime</span> command was received at the FDX interface, but no measurement is currently running in your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText>.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a name="Code16-0219" id="Code16-0219"></a>16-0219</p>
+                                </th>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Bold">FDX: IncrementTime command is only allowed in slave mode</p>
+                                    <p class="Table">An IncrementTime command was received at the FDX interface, but your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText> is not configured for slave mode.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a name="Code16-0220" id="Code16-0220"></a>16-0220</p>
+                                </th>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Bold">FDX: accepting a tcp connection failed with WSA error code &lt;Error-Code-Number&gt;</p>
+                                    <p class="Table">An error occurred when establishing a TCP connection at the FDX interface of your <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE product</MadCap:conditionalText>.
+The error number given refers to the <span class="bold">Microsoft Windows Socket Error Codes</span>.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a name="Code16-0221" id="Code16-0221"></a>16-0221</p>
+                                </th>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Bold">FDX: version specified in datagram &lt;FDX version number&gt; is invalid, version 2.1 or newer is required for FDX over TCP</p>
+                                    <p class="Table">The use of TCP as a transport layer requires FDX version 2.1.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a name="Code16-0222" id="Code16-0222"></a>16-0222</p>
+                                </th>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Bold">FDX: The configured &lt;TCP|UPD&gt; port &lt;port number&gt; is reserved for another service</p>
+                                    <p class="Table">The port number specified for the FDX feature is reserved for use by another service. In the <span class="GUI">Options</span> dialog reconfigure the port number for the FDX feature.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a name="Code16-0223" id="Code16-0223"></a>16-0223</p>
+                                </th>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Bold">FDX: opening &lt;TCP|UPD&gt; port failed failed with WSA error code &lt;Error-Code-Number&gt;</p>
+                                    <p class="Table">An error occurred when opening the TCP or UDP port. The specified error number refers to the <span class="bold">Microsoft Windows Socket Error Codes</span>.
+							</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <th class="TableStyle_vTable_Body_0_0_RowSep_ColSep">
+                                    <p class="Table"><a name="Code16-0224" id="Code16-0224"></a>16-0224</p>
+                                </th>
+                                <td class="TableStyle_vTable_Body_0_0_RowSep_ColEnd">
+                                    <p class="Bold">FDX: binding &lt;TCP|UPD&gt; port failed failed with WSA error code &lt;Error-Code-Number&gt;</p>
+                                    <p class="Table">An error occurred when binding the TCP or UDP port to its address. The error number given refers to the <span class="bold">Microsoft Windows Socket Error Codes</span>.
+							</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-vTable-Body-Body1">
+                                <th class="TableStyle_vTable_Body_0_0_RowEnd_ColSep">
+                                    <p class="Table"><a name="Code16-0300" id="Code16-0300"></a>16-0300</p>
+                                </th>
+                                <td class="TableStyle_vTable_Body_0_0_RowEnd_ColEnd">
+                                    <p class="Bold">FDX Performance Warning: FDX-Frame-Update is used for one or more frames without registration from an up-to-date interaction layer dll. Usage of an up-to-date version of the interaction layer DLL can increase the performance of CANoe.</p>
+                                    <p class="Table">Note that a newer interaction layer DLL can improve performance.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="LinkList"><a href="../../../Interfaces/FDXProtocol.htm" class="LinkList MCXref xref xrefLinkList" data-mc-conditions="Targets.CANoe-DE-Family">FDX Protocol</a> </p>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="FooterWhite">
+                <table class="FooterWhite" style="border-collapse: collapse;margin-left: auto;margin-right: auto;">
+                    <col style="width: 70px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col style="width: 16px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="buttons popup-container clearfix topicToolbarProxy topicToolbarProxyFooter _Skins_HTML5TopicToolbar mc-component nocontent">
+                                    <div class="button-group-container-left">
+                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo"><a href="../../../../Shared/HowToUseOnlineHelp.htm" title="Tips for using the help" alt="Tips for using the help"><img src="../../../../../Resources/vImages/vBackstage/vHelpInfo.png" /></a>
+                                </p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo" style="text-align: right;"><span class="mc-variable Vector.BuildTime variable">2024-04-8T20:56:42</span>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <table style="width: 100%;border-collapse: separate;border-spacing: 3px 0px;margin-left: auto;margin-right: auto;caption-side: top;">
+                <col />
+                <col />
+                <col />
+                <col data-mc-conditions="BuildProcess.HTML5Link" />
+                <tbody>
+                    <tr>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;">
+                            <p class="vec_Footer">©&#160;Vector Informatik GmbH</p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;text-align: right;">
+                            <p class="vec_FooterBold">
+                                <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE&#160;Product Families</MadCap:conditionalText> Version <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.VectorTestUnitRunner">18</MadCap:conditionalText></p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="../../../../Shared/ContactCopyrightLicense.htm" class="vec_Footer MCXref xref xrefvec_Footer">Contact/Copyright/License</a>
+                            </p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="https://www.vector.com/int/en/company/get-info/privacy-policy/" target="_blank" class="vec_Footer">Data Privacy Notice</a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="" data-mc-search-type="Stem" data-mc-help-system-file-name="CANoeDEFamily.xml" data-mc-path-to-help-system="../../../../" data-mc-conditions="Targets.CANoe-DE-Family" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../Skins/Favicons/favicon-16x16.png" /><title>Create a CAPL Program</title>
+        <link href="../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Resources/Stylesheets/vTableMasterPageHeader.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../Resources/Stylesheets/vStylesheet.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ffffff);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../Resources/Stylesheets/vTableSymbol.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../Skins/Favicons/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="96x96" href="../../../../Skins/Favicons/favicon-96x96.png" />
+        <link rel="icon" sizes="32x32" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapGlobal.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapDom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapUtilities.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapXhr.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTextEffects.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSlideshow.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMessageBus.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMessageBus.CrossFrame.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapDefault.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMediaQueries.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAccessibility.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapHelpSystem.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAliasFile.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopicFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapFeedbackHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSkinHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.Breadcrumbs.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.MiniToc.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapToc.SideMenu.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapIndex.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapGlossary.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapParser.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSearch.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapNavigateTopics.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapLms.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapELearning.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopic.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapFeedback.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapMicroContentComponent.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapSearchHelper.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTopicElements.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapTriPane.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/jscript" src="../../../Resources/vScripts/SyntaxHighlighting.js">
+        </script>
+        <script type="text/jscript" src="../../../Resources/vScripts/TabSwitch.js">
+        </script>
+        <script type="text/javascript" src="../../../Resources/vScripts/Vector.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../../CANoeDEFamily.htm#Topics/QuickStartGuide/11CreatingCAPLProgramm/11CreatingCAPLProgramm.htm">Open topic with navigation</a>
+        </p>
+        <div class="Body">
+            <div role="main" id="mc-main-content">
+                <p class="StructurePath" data-mc-conditions="BuildProcess.PrintExcluded"><a href="../01Introduction/01Overview.htm" class="StructurePath">Quick Start Guide</a> » <span class="mc-variable System.Title variable">Create a CAPL Program</span></p>
+                <h1><span class="mc-variable System.Title variable">Create a CAPL Program</span>
+                </h1>
+                <div data-mc-conditions="BuildProcess.PrintExcluded">
+                    <p class="MenuPath">&#160;</p>
+                    <p class="ToolAvailability" data-mc-conditions="BuildProcess.ToolAvailability"><a href="../../Shared/FeatureAvailability.htm" class="red" title="Feature availabilty for your product">Valid&#160;for</a>:&#160;&#160;CANoe&#160;DE<a name="aanchor1610"></a><MadCap:concept term="SFCANoeDE" /></p>
+                    <p class="AutoSearchFilterConcepts"><a name="aanchor1611"></a>
+                        <MadCap:concept term="SFCore" />
+                    </p>
+                </div>
+                <p>CAPL is an event based programming language. Each CAPL program consists of event procedures, with which you can react to external events (e.g. occurrence of specific messages on the CAN bus or activation of keys on the computer keyboard). The CAPL Browser is described in detail in the help of <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE</MadCap:conditionalText>. With its sub windows ("Panes") it allows you to create and edit CAPL programs quickly and easily.</p>
+                <p>In principle, you can also use your own text editor to create CAPL programs. CAPL programs are normal ASCII files with the default name extension <span class="Syntax">*.can</span>, which must be compiled before the start of measurement using the compiler provided with the <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE</MadCap:conditionalText> product.</p>
+                <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                    <col class="TableStyle-vTableSymbol-Column-Column1" />
+                    <col class="TableStyle-vTableSymbol-Column-Column2" />
+                    <tbody>
+                        <tr>
+                            <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                <p class="Table">
+                                    <img src="../../../Resources/vImages/vCrossRef.png" style="width: 48px;height: 45px;" alt="Cross Reference" title="Cross Reference" />
+                                </p>
+                            </td>
+                            <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                <p class="TableSymbolHead">Cross&#160;Reference</p>
+                                <p>You will find a complete description of the programming language together with numerous detailed examples in the help of <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE</MadCap:conditionalText>.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h2 class="SectionMain" data-mc-conditions="BuildProcess.PrintExcluded">Unit 7: Create a CAPL Program</h2>
+                <div>
+                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                        <col class="TableStyle-vTableSymbol-Column-Column1" />
+                        <col class="TableStyle-vTableSymbol-Column-Column2" />
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                    <p class="Table">
+                                        <img src="../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                    </p>
+                                </td>
+                                <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                    <p class="TableSymbolHead">Task</p>
+                                    <p>Create a CAPL program with which you can count the number of messages of the type <span class="bold">EngineData</span> (ID 64 hex) and output the counted number of messages to the Write Window in response to a key press.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h3 class="SectionSub" data-mc-conditions="BuildProcess.PrintExcluded">Preparation</h3>
+                <ul>
+                    <li>
+                        <p class="ListItem">First, switch <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE</MadCap:conditionalText> back to online mode.</p>
+                    </li>
+                    <li>
+                        <p class="ListItem">With the sequence <span class="bold">Message 1</span> the <span class="bold">EngineData</span> messages is cyclically sent to the bus.</p>
+                    </li>
+                </ul>
+                <h3 class="SectionSub" data-mc-conditions="BuildProcess.PrintExcluded">Insert a CAPL Node</h3>
+                <p>First you must decide where you wish to insert your CAPL program in the data flow plan. Because this program is only for analysis purposes and does not generate any messages itself, but only counts them, it is advisable to insert the program in the Measurement Setup, perhaps before the Trace Window. In the hot spot context menu choose the function <span class="GUI">Insert Program Node</span>. A function block with the program symbol <span class="bold">P</span> now appears at the selected point in the Measurement Setup.</p>
+                <h3 class="SectionSub" data-mc-conditions="BuildProcess.PrintExcluded">Configure the CAPL Node</h3>
+                <p>You can also access the node configuration dialog via the context menu <span class="GUI">Configuration…</span>. First, select a program name, e.g. COUNTER.can.</p>
+                <h3 class="SectionSub" data-mc-conditions="BuildProcess.PrintExcluded">Start the CAPL Browser</h3>
+                <p>Start the CAPL Browser either from the configuration dialog <span class="GUI">[Edit...]</span> button or directly by double clicking the program block <span class="GUI">P</span> in the Measurement Setup.</p>
+                <h3 class="SectionSub" data-mc-conditions="BuildProcess.PrintExcluded">Insert a Variable</h3>
+                <p>For your program you will first need an integer variable which counts the messages. For example, you could name it <span class="Syntax">counter</span>. Go to the editor pane and enter this name in the variables block. The following should now appear in this pane:</p>
+                <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                    <col class="TableStyle-vTableSymbol-Column-Column1" />
+                    <col class="TableStyle-vTableSymbol-Column-Column2" />
+                    <tbody>
+                        <tr>
+                            <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                <p class="Table">
+                                    <img src="../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                </p>
+                            </td>
+                            <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                <p class="TableSymbolHead">Example</p>
+                                <p class="TableSyntax">variables<br />{<br />&#160;&#160;int counter;<br />}</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>Like all global variables, this variable is automatically initialized to zero at the start of measurement.</p>
+                <h3 class="SectionSub" data-mc-conditions="BuildProcess.PrintExcluded">Create an <span class="Syntax">on message</span> Event Procedure</h3>
+                <p>In the next step, this variable should be incremented whenever an <span class="bold">EngineData </span>message is registered. For this, you must expand the CAPL program to include an event procedure of the type <span class="Syntax">on message</span> ("React to message event"). To do this, click the <span class="GUI">CAN</span> entry in the left tree view pressing the right mouse button. Open the submenu <span class="GUI">New Event Handler</span>. Then select the <span class="GUI">on message &lt;new message&gt;</span> command.</p>
+                <p>Now a procedure template appears in the Procedures Text Editor. First replace the text <span class="Syntax">&lt;newMessage&gt;</span> by the symbolic name <span class="Syntax">EngineData</span>, which you could also overtake directly from the database via the context menu command <span class="GUI">Message from Database…</span>. During compilation the CAPL compiler replaces the symbolic name by the corresponding identifier 0x64.</p>
+                <p>Now you only need to define which actions should be performed when the event occurs. Since the program is to count messages, the variable counter must be incremented whenever a message is registered. The complete procedure appears as follows:</p>
+                <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                    <col class="TableStyle-vTableSymbol-Column-Column1" />
+                    <col class="TableStyle-vTableSymbol-Column-Column2" />
+                    <tbody>
+                        <tr>
+                            <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                <p class="Table">
+                                    <img src="../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                </p>
+                            </td>
+                            <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                <p class="TableSymbolHead" style="page-break-before: avoid;page-break-after: avoid;page-break-inside: avoid;column-break-before: avoid;column-break-after: avoid;column-break-inside: avoid;">Example</p>
+                                <p class="TableSyntax" style="page-break-before: avoid;page-break-after: avoid;page-break-inside: avoid;column-break-before: avoid;column-break-after: avoid;column-break-inside: avoid;frame-break-before: avoid;frame-break-after: avoid;frame-break-inside: avoid;">on message EngineData<br />{<br />&#160;&#160;counter++;<br />&#160;&#160;output(this); // The EngineData value is displayed in the<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;// Trace Window<br />}</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h3 class="SectionSub" data-mc-conditions="BuildProcess.PrintExcluded">Create a Second <span class="Syntax">on message</span> Event Procedure</h3>
+                <p>To display all other measurement values in the Trace Window, insert the following procedure:</p>
+                <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                    <col class="TableStyle-vTableSymbol-Column-Column1" />
+                    <col class="TableStyle-vTableSymbol-Column-Column2" />
+                    <tbody>
+                        <tr>
+                            <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                <p class="Table">
+                                    <img src="../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                </p>
+                            </td>
+                            <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                <p class="TableSymbolHead">Example</p>
+                                <p class="TableSyntax">on message*<br />{<br />&#160;&#160;output(this);<br />}</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                    <col class="TableStyle-vTableSymbol-Column-Column1" />
+                    <col class="TableStyle-vTableSymbol-Column-Column2" />
+                    <tbody>
+                        <tr>
+                            <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                <p class="Table">
+                                    <img src="../../../Resources/vImages/vInfo.png" style="width: 48px;height: 45px;" title="Note" alt="Note" />
+                                </p>
+                            </td>
+                            <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                <p class="TableSymbolHead">Note</p>
+                                <p>Without this procedure the CAPL program would have the effect of a filter because only the message <span class="bold">EngineData </span>would be transmitted to the Trace Window in the Measurement Setup.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h3 class="SectionSub" data-mc-conditions="BuildProcess.PrintExcluded">Create an <span class="Syntax">on key</span> Event Procedure</h3>
+                <p>As a last step, the output to the Write Window must still be implemented. Finally, the program should not just count messages, but also keep track of how many messages have been counted.</p>
+                <p>The output to the Write Window should occur when the &lt;a&gt; key is pressed. For this, you must define another event procedure for the event <span class="bold">Press key &lt;a&gt;</span>.</p>
+                <p>Now insert a Keyboard event in the CAPL program. To do this, click the <span class="bold">System </span>entry in the left tree view pressing the right mouse button. Open the menu path <span class="GUI">New Event Handler</span>|<span class="GUI">on key &lt;newKey&gt;</span>. A new procedure template will appear in the Procedures Text Editor, which you fill out as follows:</p>
+                <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/Stylesheets/vTableSymbol.css');" class="TableStyle-vTableSymbol" cellspacing="0">
+                    <col class="TableStyle-vTableSymbol-Column-Column1" />
+                    <col class="TableStyle-vTableSymbol-Column-Column2" />
+                    <tbody>
+                        <tr>
+                            <td class="TableStyle-vTableSymbol-BodyB-Column1-">
+                                <p class="Table">
+                                    <img src="../../../Resources/vImages/vExample.png" style="width: 48px;height: 45px;" title="Example" alt="Example" />
+                                </p>
+                            </td>
+                            <td class="TableStyle-vTableSymbol-BodyA-Column2-">
+                                <p class="TableSymbolHead">Example</p>
+                                <p class="TableSyntax">on key 'a'<br />{<br />&#160;&#160;write("%d EngineData messages counted ",counter);<br />}</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>The format entry <span class="bold">%d</span> refers to the integer variable <span class="Syntax">counter</span>, which is entered after the comma. For the most part, this format string conforms to the C function <span class="Syntax">printf()</span>.</p>
+                <h3 class="SectionSub" data-mc-conditions="BuildProcess.PrintExcluded">Save and Compile the Program</h3>
+                <p>That completes the program. Save it and then start the compiler either with the <span class="bold">&lt;F9&gt;</span> key, or the menu path <span class="GUI">Compiler</span>│<span class="GUI">Compile</span> or by the button on the toolbar.</p>
+                <p>If you have made an error in creating the program, a message window will open showing you the error. Double click this error notification to go to the location where the error occurred. After you have corrected it and saved the program file again, recompile the program. Once the program has compiled without errors, the message <span class="GUI">Compilation succeeded</span> appears in the <span class="GUI">Output Window</span>.</p>
+                <h3 class="SectionSub" data-mc-conditions="BuildProcess.PrintExcluded">Display in the Write Window</h3>
+                <p>Now start the measurement. The sequence <span class="bold">Message 1</span> begins to cyclically transmit messages of the type <span class="bold">EngineData</span>, which are now counted by your program. Whenever you press the <span class="bold">&lt;a&gt;</span> key the text <span class="bold">n EngineData messages counted</span> can be seen in the Write Window, where <span class="GUI">n</span> represents the number of messages counted.</p>
+                <p class="LinkList" data-mc-conditions="BuildProcess.PrintExcluded"><a href="javascript:startDemoLoader('CANoe_QuickStartExport_EN.pdf')" class="ExecuteLink" data-mc-conditions="Targets.CANoe-DE-Family">CANoe Quick Start Guide (PDF Version)</a>
+                </p>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="FooterWhite">
+                <table class="FooterWhite" style="border-collapse: collapse;margin-left: auto;margin-right: auto;">
+                    <col style="width: 70px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col style="width: 16px;" data-mc-conditions="BuildProcess.HTML5Link" />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="buttons popup-container clearfix topicToolbarProxy topicToolbarProxyFooter _Skins_HTML5TopicToolbar mc-component nocontent">
+                                    <div class="button-group-container-left">
+                                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                            <div>
+                                                <div role="img" class="button-icon-wrapper">
+                                                    <div class="button-icon"> </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo"><a href="../../Shared/HowToUseOnlineHelp.htm" title="Tips for using the help" alt="Tips for using the help"><img src="../../../Resources/vImages/vBackstage/vHelpInfo.png" /></a>
+                                </p>
+                            </td>
+                            <td>
+                                <p class="vec_BuildInfo" style="text-align: right;"><span class="mc-variable Vector.BuildTime variable">2024-04-8T20:56:42</span>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <table style="width: 100%;border-collapse: separate;border-spacing: 3px 0px;margin-left: auto;margin-right: auto;caption-side: top;">
+                <col />
+                <col />
+                <col />
+                <col data-mc-conditions="BuildProcess.HTML5Link" />
+                <tbody>
+                    <tr>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;">
+                            <p class="vec_Footer">©&#160;Vector Informatik GmbH</p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 5pt;text-align: right;">
+                            <p class="vec_FooterBold">
+                                <MadCap:conditionalText data-mc-conditions="Targets.CANoe-DE-Family">CANoe&#160;DE&#160;Product Families</MadCap:conditionalText> Version <MadCap:conditionalText data-mc-conditions="Targets.CANalyzer,Targets.CANoe-DE-Family,Targets.CANoe-SE-Family,Targets.VectorTestUnitRunner">18</MadCap:conditionalText></p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="../../Shared/ContactCopyrightLicense.htm" class="vec_Footer MCXref xref xrefvec_Footer">Contact/Copyright/License</a>
+                            </p>
+                        </td>
+                        <td style="background-color: #b70032;padding-left: 5pt;padding-right: 5pt;padding-top: 5pt;padding-bottom: 0pt;text-align: right;">
+                            <p class="vec_Footer"><a href="https://www.vector.com/int/en/company/get-info/privacy-policy/" target="_blank" class="vec_Footer">Data Privacy Notice</a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>
